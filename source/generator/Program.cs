@@ -29,7 +29,7 @@ void Render(string lang)
         projCard = new(Read("projects/card"));
 
     string payDetails = Read("partners-pay"),
-        slides = Join(new(ReadComm("slide")), slides_),
+        slides = Join(new(Read("slide")), slides_),
         otherNews = Join(newsCard, news.Take(2)),
         topProjects = Join(projCard, projects.Take(3)),
         partners = Join(new(ReadComm("partner")), partners_),

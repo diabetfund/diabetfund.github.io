@@ -138,6 +138,19 @@
       }
    },
    {
+      "Pic": "card-56.jpg",
+      "Avatar": "card-56-ava.png",
+      "HRank": 2,
+      "Ua": {
+         "Title": "Людмила",
+         "Descr": "Добрий день. Сьогодні отримала лібри2. Щастя не має меж. Хочу подякувати Едуарду, Ігору і всім всім, кожній людині, хто допомагає цьому благодійному проекту.В наш нелегкий час, коли все більше дітей потребує матеріальної допомоги стає важко знайти людей, які здатні сприймати чужі проблеми, як свої, і як чудово що такі люди все таки є. Величезне дякую і низький уклін Вам!!! Для нас це велике щастя мати змогу контролювати цукри у дітей. Хтось радіє новій іграшці, платтячку, а для нас самий кращий подарунок- це лібра, бо від цього залежить життя і здоров'я моїх дітей. Сьогодні всесвітній день боротьби з діабетом. Бажаю всім, щоб діабет став виліковний!!! А поки що тримаймося на підтримуючих здоров'я препаратах. Дякую що створили цю групу! І дай Бог щоб Ваше добро, яке Ви даруєте людям, поверталось до вас стократно!!!"
+      },
+      "En": {
+         "Title": "Ludmila",
+         "Descr": "Good day. Today I received 2 pounds. Happiness has no limits. I want to thank Eduard, Igor and everyone, every person who helps this charitable project. In our difficult time, when more and more children need financial help, it is difficult to find people who are able to perceive other people's problems as their own, and how wonderful that such people are still there is. A huge thank you and a low bow to you!!! It is a great happiness for us to be able to control sugars in children. Someone is happy with a new toy, a dress, but for us the best gift is a libra, because the life and health of my children depend on it. Today is World Diabetes Day. I wish everyone that diabetes becomes curable!!! For now, let's stick to health-supporting drugs. Thanks for creating this group! And may God grant that the good that you give to people will return to you a hundredfold!!!"
+      }
+   },
+   {
       "Pic":"card-52.jpg",
       "Avatar":"card-52-ava.png",
       "HRank":0,

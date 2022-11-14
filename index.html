@@ -8,27 +8,45 @@
           return parts.pop().split(";").shift() == 'true';
         return false;
       }
-
       var qrUrls = {
-        "1": "https://diabet.fund/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi/",
-        "2": "https://diabet.fund/ua/fundraising/dopomogti-insulinom/",
-        "3": "https://diabet.fund/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih/",
-        "4": "https://diabet.fund/ua/fundraising/help-rehab/",
-        "5": "https://diabet.fund/ua/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888/",
-        "6": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426283053226_28686834_QpUPSZkPcnpiTWZvPfoH",
-        "7": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426285138286_29095842_N1XMQTGjv1MbuDvbQYL4",
-        "8": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426307441687_27241939_5IcyesgdiA1GcwmWjt9i",
-        "9": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426315803145_27243555_jnFfbAVORU3KGDi6BKit",
-        "a": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426354911132_29210114_0M7xvDTILa3j4EKcnl3w"
+        "1": "/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi/",
+        "2": "/ua/fundraising/dopomogti-insulinom/",
+        "3": "/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih/",
+        "4": "/ua/fundraising/help-rehab/",
+        "5": "/ua/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888/",
+        "6": ["lhGU6LQ/H3VPnWlvd96Xw781jC8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"],
+        "7": ["fdAVNnlOBh3296alXSKwaO9qt8w=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="],
+        "8": ["BsZrgWraD6Wy5UETctesYEDGVs0=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzM1x1MDQzYlx1MDQ0ZVx1MDQzYVx1MDQzZVx1MDQzY1x1MDQzNVx1MDQ0Mlx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzkgXHUwNDQyXHUwNDM1XHUwNDQxXHUwNDQyLVx1MDQ0MVx1MDQzY1x1MDQ0M1x1MDQzNlx1MDQzYVx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzRcdTA0M2UgXHUwNDNkXHUwNDM4XHUwNDQ1IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"],
+        "9": ["TVNsm5bs8KyxZhkpsexBFHb8Mb8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="],
+        "a": ["tukxOEm1DF4MRR+HGAXM7PST9wM=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]
       };
 
-      if (location.search.startsWith("?q=")){
+(() => {
+  if (location.search.startsWith("?q=")){
         var url = qrUrls[location.search.split("?q=")[1]];
-        if (url)
+        if (typeof url == "string") {
           location.href = url;
+          return;
+        }
+        else if (Array.isArray(url)) {
+          var form = document.createElement("form");
+          form.method = "POST";
+          form.action = "https://www.liqpay.ua/api/3/checkout";
+          form.innerHTML = `<input type="hidden" name="data" value="${url[1]}">
+                <input type="hidden" name="signature" value="${url[0]}">
+                <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">`;
+          document.getElementsByTagName("body")[0].appendChild(form);
+          form.target = "_blank";
+          form.submit();
+          form.remove();
+          return;
+        }
       }
 
       location.href= isEnglish() ? "/en" : "/ua"
+})();
+     
+    
     </script>
 </head>
 <body >
