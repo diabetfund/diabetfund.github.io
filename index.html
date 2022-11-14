@@ -9,6 +9,25 @@
         return false;
       }
 
+      var qrUrls = {
+        "1": "https://diabet.fund/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi/",
+        "2": "https://diabet.fund/ua/fundraising/dopomogti-insulinom/",
+        "3": "https://diabet.fund/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih/",
+        "4": "https://diabet.fund/ua/fundraising/help-rehab/",
+        "5": "https://diabet.fund/ua/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888/",
+        "6": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426283053226_28686834_QpUPSZkPcnpiTWZvPfoH",
+        "7": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426285138286_29095842_N1XMQTGjv1MbuDvbQYL4",
+        "8": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426307441687_27241939_5IcyesgdiA1GcwmWjt9i",
+        "9": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426315803145_27243555_jnFfbAVORU3KGDi6BKit",
+        "a": "https://www.liqpay.ua/uk/checkout/card/checkout_1668426354911132_29210114_0M7xvDTILa3j4EKcnl3w"
+      };
+
+      if (location.search.startsWith("?q=")){
+        var url = qrUrls[location.search.split("?q=")[1]];
+        if (url)
+          location.href = url;
+      }
+
       location.href= isEnglish() ? "/en" : "/ua"
     </script>
 </head>

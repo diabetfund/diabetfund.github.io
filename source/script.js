@@ -341,7 +341,7 @@ if (needsDonateBtns)
     curYear = document.getElementById('cur-year'),
     now = new Date(),
     ageDifMs = now - new Date("06/06/2005"),
-    ageDate = new Date(ageDifMs); 
+    ageDate = new Date(ageDifMs),
     piskunovDiseaseAges = Math.abs(ageDate.getUTCFullYear() - 1970);
 
     if (curYear)
