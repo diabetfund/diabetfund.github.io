@@ -16,8 +16,8 @@ Render("en");
 
 void Render(string lang)
 {
-    string ReadComm(string path) => File.ReadAllText($"{rootPath}source/{path}.html");
-    string Read(string path) => ReadComm(lang+ "/" +path);
+    string ReadComm(string path, string folder = "common") => File.ReadAllText($"{rootPath}source/{folder}/{path}.html");
+    string Read(string path) => ReadComm(path, lang);
 
     string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
         string.Join("\n", xs.Select(entity => view.Run(entity, entity.Entry(lang)!)));

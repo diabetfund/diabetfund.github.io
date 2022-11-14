@@ -36,9 +36,7 @@
                 <input type="hidden" name="signature" value="${url[0]}">
                 <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">`;
           document.getElementsByTagName("body")[0].appendChild(form);
-          form.target = "_blank";
           form.submit();
-          form.remove();
           return;
         }
       }

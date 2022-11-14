@@ -304,7 +304,7 @@ if (needsDonateBtns)
     return;
     var current = { index: 0 };
     function appStyles() {
-        for(var i =0 ; i < images.length; i++){
+        for(var i=0 ; i < images.length; i++){
             var { classList, style, dataset: {val} } = images[i];
             if (i == current.index) {
                 classList.add('main-partner-sel');

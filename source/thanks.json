@@ -87,15 +87,16 @@
       }
    },
    {
-      "Pic":"card-38.jpg",
-      "HRank":0,
+      "Pic":"card-57.jpg",
+      "Avatar": "card-57-ava.png",
+      "HRank": 0,
       "Ua": {
-         "Title": "Наталiя Бугвiна",
-         "Descr": "Доброго дня! І велике спасибі за ліки!"
+         "Title": "Тетяна Стефанович",
+         "Descr": "Добрий вечір. Хотілось подякувати Вашому фонду, Вашій всій команді за таку величезну і щиру допомогу.Дуже віриться, що скоро все закінчиться, перемога буде нашою."
       },
       "En": {
-         "Title": "Natalya Bugvina",
-         "Descr": "Hello! And thank you very much for the medicine!"
+         "Title": "Tatiana Stefanovich",
+         "Descr": "Good evening. I wanted to thank your foundation, your entire team for such a huge and sincere help. We strongly believe that everything will end soon, victory will be ours."
       }
    },
    {
@@ -388,6 +389,18 @@
       "En": {
          "Title": "Julia",
          "Descr": "Thank you very much for your help, may God protect you and your entire family🙏🙏🙏"
+      }
+   },
+   {
+      "Pic":"card-38.jpg",
+      "HRank":0,
+      "Ua": {
+         "Title": "Наталiя Бугвiна",
+         "Descr": "Доброго дня! І велике спасибі за ліки!"
+      },
+      "En": {
+         "Title": "Natalya Bugvina",
+         "Descr": "Hello! And thank you very much for the medicine!"
       }
    },
    {
