@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+node_modules
+build
+*.DotSettings.user
+*.DS_Store
+TempController.cs
+
+*.idea
+appsettings.json
+launchSettings.json

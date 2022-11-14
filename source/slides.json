@@ -1,0 +1,87 @@
+[
+   {
+      "Index": 0,
+      "Pic": "slide-1.jpg",
+      "Mini": "slide-1-mini.jpg",
+      "Url":"center",
+      "En": {
+         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+      },
+      "Ua": {
+         "Title": "Реабілітаційний центр у Словаччині"
+      }
+   },
+   {
+      "Index": 1,
+      "Pic": "slide-2.jpg",
+      "Mini": "slide-2-mini.jpg",
+      "Url":"center",
+      "En": {
+         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+      },
+      "Ua": {
+         "Title": "Реабілітаційний центр у Словаччині"
+      }
+   },
+   {
+      "Index": 2,
+      "Pic": "slide-3.jpg",
+      "Mini": "slide-3-mini.jpg",
+      "Url":"center",
+      "En": {
+         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+      },
+      "Ua": {
+         "Title": "Реабілітаційний центр у Словаччині"
+      }
+   },
+   {
+      "Index": 3,
+      "Pic": "slide-4.jpg",
+      "Mini": "slide-4-mini.jpg",
+      "Url":"fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi",
+      "En": {
+         "Title": "Helping with glucose sensors"
+      },
+      "Ua": {
+         "Title": "Допомога сенсорами вимірювання глюкози"
+      }
+   },
+   {
+      "Index": 4,
+      "Pic": "slide-6.jpg",
+      "Mini": "slide-6-mini.jpg",
+      "Url":"fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
+      "En": {
+         "Title": "Helping with glucometers and test strips to them"
+      },
+      "Ua": {
+         "Title": "Допомога глюкометрами й тест-смужками до них"
+      }
+   },
+   {
+      "Index": 5,
+      "Pic": "slide-5.jpg",
+      "Mini": "slide-5-mini.jpg",
+      "Url":"fundraising/dopomogti-insulinom",
+      "En": {
+         "Title": "Helping with insulin"
+      },
+      "Ua": {
+         "Title": "Допомога інсуліном"
+      }
+   },
+
+   {
+      "Index": 6,
+      "Pic": "slide-7.jpg",
+      "Mini": "slide-7-mini.jpg",
+      "Url":"fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
+      "En": {
+         "Title": "Assistance to military units A5617; A0998"
+      },
+      "Ua": {
+         "Title": "Допомога ЗСУ"
+      }
+   }
+]

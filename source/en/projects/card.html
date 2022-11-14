@@ -1,0 +1,42 @@
+<div class="col-md-6 col-lg-4 is-military-{{IsMilitary}}">
+   <div class="card needs__list-item">
+      <img lclass="card__img" src="/img/{{Image}}"/>
+      <div class="card__content">
+          <div class="card__content_top">
+              <a class="card__title" href="/en/fundraising/{{Id}}">
+               {{Title}}
+              </a>
+              <p class="card__text">
+               {{Descr}}
+              </p>
+          </div>
+          <div class="card__content_middle card_content_middle-{{IsFull}}">
+              <div class="required-amount">
+                  Are needed:
+                  <span>
+                    <span class="numf">{{Need}}000</span> UAH
+                  </span>
+              </div>
+              <div>
+                  Already collected
+                  <span style="color: #0C9A56;">
+                      {{FundPerc}}%
+                      <img  style="display: inline;" src="/img/fullness_{{Fullness}}.svg" >
+                  </span>
+              </div>
+          </div>
+          <div class="card__content_bottom hide_{{IsFull}}">
+              <a class="card__donate-btn needs-donate-btn need-donate" href="/">
+                  Donate
+              </a>
+              <div class="fundraising-item__donate-form" style="display: none">
+<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
+<input type="hidden" name="data" value="{{Data}}">
+<input type="hidden" name="signature" value="{{Signature}}">
+<input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
+</form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

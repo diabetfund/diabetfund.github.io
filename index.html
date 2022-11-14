@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script>
+      function isEnglish() {
+        var parts = ("; " + document.cookie).split("; is_english=");
+        if (parts.length == 2)
+          return parts.pop().split(";").shift() == 'true';
+        return false;
+      }
+
+      location.href= isEnglish() ? "/en" : "/ua"
+    </script>
+</head>
+<body >
+</body>
+</html>

@@ -1,0 +1,134 @@
+[
+  {
+     "Pic": "/img/main/ava-piskunov.jpg",
+     "En": { 
+        "Title": "Eduard O. Piskunov",
+        "Descr": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
+      },
+      "Ua": {
+        "Title": "Эдуард Олександрович Піскунов",
+        "Descr": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
+      }
+  },
+  {
+   "Pic": "/img/main/ava-piskariova.png",
+   "En": { 
+      "Title": "Piskaryova Marina",
+      "Descr": "Foundation board member, administrator of the social canteen SET CATERING with the support of World Central Kitchen, designer of social, environmental and commercial projects"
+    },
+    "Ua": {
+      "Title": "Піскарьова Марина",
+      "Descr": "Член правління фонду, адміністратор соціальної їдальні SET CATERING при підтримці World Central Kitchen, дизайнерка соціальних, екологічних та комерційних проєктів"
+    }
+ },
+  {
+   "Pic": "/img/main/ava-AAA.jpg",
+   "En": { 
+     "Title": "Andrii Andriyovych Andreev",
+     "Descr": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
+   },
+   "Ua": {
+     "Title": "Андрій Андрійович Андрєєв",
+     "Descr": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
+   }
+ },
+  {
+     "Pic": "/img/main/ava-boiko.jpg",
+     "En": { 
+        "Title": "Tamara M. Boyko",
+        "Descr": "Honorary member of the board, representative of a charitable foundation in Slovakia"
+      },
+      "Ua": {
+        "Title": "Тамара Миколаївна Бойко",
+        "Descr": "Почесний член правління, представник Фонду на території Словаччини"
+      }
+  },
+  {
+   "Pic": "/img/main/ava-yanochkov.jpg",
+   "En": { 
+      "Title": "Peter G. Yanachkov",
+      "Descr": "Managing director, Pierce Capital Partners"
+    },
+    "Ua": {
+      "Title": "Peter G. Yanachkov",
+      "Descr": "Керуючий директор Pierce Capital Partners"
+    }
+},
+  {
+     "Pic": "/img/main/ava-LUNTER.jpg",
+     "En": { 
+        "Title": "Ondrej Lunter",
+        "Descr": "Deputy head of the Banská Bystrica region in Slovakia"
+      },
+      "Ua": {
+        "Title": "Ondrej Lunter",
+        "Descr": "Голова Банськобистрицького краю в Словаччині"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-bagacka.jpg",
+     "En": { 
+        "Title": "Michal Bagacka",
+        "Descr": "Deputy and member of the board of the autonomous region of Banska Bystrica"
+      },
+      "Ua": {
+        "Title": "Michal Bagacka",
+        "Descr": "Депутат і член правління автономного регіону Банська Бистриця"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-hnusta.jpg",
+     "En": { 
+        "Title": "Hnusta Grigorij Samin",
+        "Descr": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
+      },
+      "Ua": {
+        "Title": "Hnusta Grigorij Samin",
+        "Descr": "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-dimplomati.jpg",
+     "En": { 
+        "Title": "Diplomats",
+        "Descr": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
+      },
+      "Ua": {
+        "Title": "Дипломати",
+        "Descr": "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-diabete.jpg",
+     "En": { 
+        "Title": "Diabite",
+        "Descr": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
+      },
+      "Ua": {
+        "Title": "Diabite",
+        "Descr": "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-vyru.jpg",
+     "En": { 
+        "Title": "Vyrų fondas",
+        "Descr": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
+      },
+      "Ua": {
+        "Title": "Vyrų fondas",
+        "Descr": "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
+      }
+  },
+  {
+     "Pic": "/img/main/ava-pcoket.jpg",
+     "En": { 
+        "Title": "Pocket Hero",
+        "Descr": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
+      },
+      "Ua": {
+        "Title": "Pocket Hero",
+        "Descr": "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
+      }
+  }
+]
