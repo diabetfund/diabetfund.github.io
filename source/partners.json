@@ -11,6 +11,17 @@
       }
   },
   {
+    "Pic": "/img/main/ava-logvin.jpg",
+    "En": { 
+       "Title": "Anna Logvin",
+       "Descr": "Head of the project to help children and low-income families"
+     },
+     "Ua": {
+       "Title": "Логвін Анна Володимирівна",
+       "Descr": "Керівник проектів допомоги дітям та малозабезпеченим сім'ям"
+     }
+ },
+  {
    "Pic": "/img/main/ava-piskariova.png",
    "En": { 
       "Title": "Piskaryova Marina",
