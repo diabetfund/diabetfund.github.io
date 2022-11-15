@@ -491,3 +491,11 @@ ul {
       margin:10px;
     }
   }
+
+  .admin-table{
+    font-family: Rubik,sans-serif;
+  }
+  .admin-table td {
+    padding: 20px;
+    
+  }
