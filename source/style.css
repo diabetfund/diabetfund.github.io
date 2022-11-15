@@ -319,6 +319,9 @@ ul {
   .hide_True{
     display: none;
   }
+  .visible_False{
+    display: none;
+  }
 
   .card_content_middle-True {
     border-bottom: 0px;

@@ -25,18 +25,28 @@
                   </span>
               </div>
           </div>
-          <div class="card__content_bottom hide_{{IsFull}}">
-              <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                  Donate
-              </a>
-              <div class="fundraising-item__donate-form" style="display: none">
-    <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-        <input type="hidden" name="data" value="{{Data}}">
-        <input type="hidden" name="signature" value="{{Signature}}">
-        <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-    </form>
-              </div>
-          </div>
+          <div class="card__content_bottom">
+            <table class="visible_{{IsFull}}"><tbody>
+              <tr>
+                  <td>
+                      <img src="/img/header/heart-check.svg"/>
+                  </td>
+                  <td style="padding-left: 30px; font-size: 18px;">
+                      Project closed!
+                  </td>
+              </tr>
+            </tbody></table>
+            <a class="card__donate-btn needs-donate-btn need-donate hide_{{IsFull}}" href="/">
+                Donate
+            </a>
+            <div class="fundraising-item__donate-form" style="display: none">
+<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
+<input type="hidden" name="data" value="{{Data}}">
+<input type="hidden" name="signature" value="{{Signature}}">
+<input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
+</form>
+            </div>
+        </div>
       </div>
   </div>
 </div>
