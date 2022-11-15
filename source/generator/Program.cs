@@ -20,7 +20,7 @@ void Render(string lang)
     string Read(string path) => ReadComm(path, lang);
 
     string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
-        string.Join("\n", xs.Select(entity => view.Run(entity, entity.Entry(lang)!)));
+        string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
 
     View master = new(Read("master")),
         newsCard = new(Read("news/card")),
