@@ -21,27 +21,6 @@
       }
    },
    { 
-      "Id": "dopomogti-insulinom",
-      "IsMilitary": false,
-      "Need": 300, 
-      "Fund": 281,
-      "Image": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
-      "En": {
-         "Title": "Helping with insulin",
-         "Descr": "Charitable foundation helps people who suffer from diabetes and need urgent medical care. We understand the importance of public support, and therefore encourage everyone to join the fundraiser and provide patients with the opportunity to live a full life.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
-         "Signature": "RwuqxeGZbEcqvZ/eCexT/ZutlRQ=",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      },
-      "Ua": {
-         "Title": "Допомога інсуліном",
-         "Descr": "Благодійний фонд допомагає людям, які страждають на цукровий діабет та потребують невідкладної медичної допомоги. Ми розуміємо важливість підтримки громадськості, а тому закликаємо всіх охочих долучитися до збору коштів і забезпечити хворих можливістю жити повноцінно.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "fdAVNnlOBh3296alXSKwaO9qt8w=",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      }
-   },
-   { 
       "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
       "IsMilitary": false,
       "Need": 1000, 
@@ -63,27 +42,6 @@
       }
    },
    {
-      "Id": "help-rehab",
-      "IsMilitary": false,
-      "Need": 4000,
-      "Fund":1254,
-      "Image":"July2022/center.jpg",
-      "En": {
-         "Title": "Help children with diabetes to go to rehabilitation",
-         "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
-         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
-      "Ua": {
-         "Title": "Допомога хворим на діабет дітям пройти курс реабілітації",
-         "Descr": "Ви маєте змогу допомогти оплатити поїздку до Центру людині з діабетом та її супроводжуючим. Більшу частину витрат на перебування пацієнтів в нашому Центрі фонд покриває самостійно, та з вашою підтримкою ми можемо зібрати достатню кількість грошей та забезпечити нашим громадянам повний курс оздоровчої програми.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      }
-   },
-   {
       "Id": "kherson-pallets",
       "IsMilitary": false,
       "Need": 246,
@@ -99,6 +57,48 @@
       "Ua": {
          "Title": "Допомогти Херсону обігрівом",
          "Descr": "Зігріти Херсон! Проект спрямований на збирання коштів для купівлі пелетів для опалення. Об'єм 20 тонн, 12300 грн за одну тонну.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      }
+   },
+   { 
+      "Id": "dopomogti-insulinom",
+      "IsMilitary": false,
+      "Need": 300, 
+      "Fund": 281,
+      "Image": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
+      "En": {
+         "Title": "Helping with insulin",
+         "Descr": "Charitable foundation helps people who suffer from diabetes and need urgent medical care. We understand the importance of public support, and therefore encourage everyone to join the fundraiser and provide patients with the opportunity to live a full life.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+         "Signature": "RwuqxeGZbEcqvZ/eCexT/ZutlRQ=",
+         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
+      },
+      "Ua": {
+         "Title": "Допомога інсуліном",
+         "Descr": "Благодійний фонд допомагає людям, які страждають на цукровий діабет та потребують невідкладної медичної допомоги. Ми розуміємо важливість підтримки громадськості, а тому закликаємо всіх охочих долучитися до збору коштів і забезпечити хворих можливістю жити повноцінно.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "fdAVNnlOBh3296alXSKwaO9qt8w=",
+         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
+      }
+   },
+   {
+      "Id": "help-rehab",
+      "IsMilitary": false,
+      "Need": 4000,
+      "Fund":1254,
+      "Image":"July2022/center.jpg",
+      "En": {
+         "Title": "Help children with diabetes to go to rehabilitation",
+         "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      },
+      "Ua": {
+         "Title": "Допомога хворим на діабет дітям пройти курс реабілітації",
+         "Descr": "Ви маєте змогу допомогти оплатити поїздку до Центру людині з діабетом та її супроводжуючим. Більшу частину витрат на перебування пацієнтів в нашому Центрі фонд покриває самостійно, та з вашою підтримкою ми можемо зібрати достатню кількість грошей та забезпечити нашим громадянам повний курс оздоровчої програми.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"

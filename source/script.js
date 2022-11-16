@@ -289,7 +289,7 @@ if (needsDonateBtns)
         if (curSlideIndex >= slideArray.length) {
             curSlideIndex = 0;
         }
-        let url = slideArray[curSlideIndex][window.screen.width > 400 ? 0 : 1];
+        let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
         slider.style.cssText = 'background: url("' + url + '") no-repeat center center; background-size: cover;';
 
         const elems = document.getElementsByClassName('caption');
