@@ -2,22 +2,22 @@
   {
      "Pic": "/img/main/ava-piskunov.jpg",
      "En": { 
-        "Title": "Eduard O. Piskunov",
+        "Title": "Eduard Piskunov",
         "Descr": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
       },
       "Ua": {
-        "Title": "Эдуард Олександрович Піскунов",
+        "Title": "Эдуард Піскунов",
         "Descr": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
       }
   },
   {
     "Pic": "/img/main/ava-boiko.jpg",
     "En": { 
-       "Title": "Tamara M. Boyko",
+       "Title": "Tamara Boyko",
        "Descr": "Honorary member of the board, representative of a charitable foundation in Slovakia"
      },
      "Ua": {
-       "Title": "Тамара Миколаївна Бойко",
+       "Title": "Тамара Бойко",
        "Descr": "Почесний член правління, представник Фонду на території Словаччини"
      }
  },
@@ -35,11 +35,11 @@
   {
    "Pic": "/img/main/ava-AAA.jpg",
    "En": { 
-     "Title": "Andrii Andriyovych Andreev",
+     "Title": "Andrii Andreev",
      "Descr": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
    },
    "Ua": {
-     "Title": "Андрій Андрійович Андрєєв",
+     "Title": "Андрій Андрєєв",
      "Descr": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
    }
  },
@@ -50,18 +50,18 @@
      "Descr": "Head of the project to help children and low-income families"
    },
    "Ua": {
-     "Title": "Логвін Анна Володимирівна",
+     "Title": "Анна Логвін",
      "Descr": "Керівник проектів допомоги дітям та малозабезпеченим сім'ям"
    }
 },
   {
    "Pic": "/img/main/ava-yanochkov.jpg",
    "En": { 
-      "Title": "Peter G. Yanachkov",
+      "Title": "Peter Yanachkov",
       "Descr": "Managing director, Pierce Capital Partners"
     },
     "Ua": {
-      "Title": "Peter G. Yanachkov",
+      "Title": "Peter Yanachkov",
       "Descr": "Керуючий директор Pierce Capital Partners"
     }
 },
