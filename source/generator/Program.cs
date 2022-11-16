@@ -1,15 +1,13 @@
 ﻿using System.Text.Json;
 
+var version = 21;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-T[] LoadJson<T>(string subp) => JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/{subp}.json"))!;
+var (projects, news, partners, thanks, slides_) = 
+    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Partner>("partners"), ReadJ<Thanks>("thanks"), 
+     ReadJ<Slide>("slides"));
 
-var version = 21;
-var projects = LoadJson<Proj>("projects");
-var news = LoadJson<News>("news");
-var partners_ = LoadJson<Partner>("partners");
-var thanks = LoadJson<Thanks>("thanks");
-var slides_ = LoadJson<Slide>("slides");
+T[] ReadJ<T>(string subp) => JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/{subp}.json"))!;
 
 Render("ua");
 Render("en");
@@ -22,18 +20,14 @@ void Render(string lang)
     string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
         string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
 
-    View master = new(Read("master")),
-        newsCard = new(Read("news/card")),
-        newsPage = new(Read("news/page")),
-        projPage = new(Read("projects/page")),
-        projCard = new(Read("projects/card"));
+    View master = new(Read("master")), 
+        newsCard = new(Read("news/card")), newsPage = new(Read("news/page")),
+        projPage = new(Read("projects/page")), projCard = new(Read("projects/card"));
 
     string payDetails = Read("partners-pay"),
         slides = Join(new(Read("slide")), slides_),
         otherNews = Join(newsCard, news.Take(2)),
-        topProjects = Join(projCard, projects.Take(3)),
-        partners = Join(new(ReadComm("partner")), partners_),
-        founders = new View(Read("founders")).Run(new { partners });
+        topProjects = Join(projCard, projects.Take(3));
 
     void Out(string content, string enPath, object? arg = null, string? uaPath = null)
     {
@@ -49,6 +43,10 @@ void Render(string lang)
         File.WriteAllText(path, master.Run(new { content, enPath, uaPath, version }));
     }
 
+    var founders = new View(Read("founders")).Run(new
+    {
+        partners = Join(new(ReadComm("partner")), partners)
+    });
     Out("index", "", new{ topProjects, payDetails, slides, founders });
     Out("center", "/center", new { payDetails, founders, skipAbout = true });
     Out("aboutus", "/aboutus", new { payDetails, founders });
@@ -89,6 +87,7 @@ record Entry
 }
 
 record NewsEntry(string Id) : Entry;
+
 record News(string Image, string Date) : Entity<NewsEntry>;
 
 record ProjEntry(string Data, string Signature, string Pdf, string? Report): Entry;

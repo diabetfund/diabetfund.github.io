@@ -83,6 +83,27 @@
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
       }
    },
+   {
+      "Id": "kherson-pallets",
+      "IsMilitary": false,
+      "Need": 246,
+      "Fund": 10,
+      "Image":"July2022/palettes.jpg",
+      "En": {
+         "Title": "Help Kherson with heating",
+         "Descr": "Warm up Kherson! The project is aimed at raising funds for the purchase of pellets for heating. The volume is 20 tons, UAH 12,300 per ton.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      },
+      "Ua": {
+         "Title": "Допомогти Херсону обігрівом",
+         "Descr": "Зігріти Херсон! Проект спрямований на збирання коштів для купівлі пелетів для опалення. Об'єм 20 тонн, 12300 грн за одну тонну.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      }
+   },
    { 
       "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
       "IsMilitary": true,

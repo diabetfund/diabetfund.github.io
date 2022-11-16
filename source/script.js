@@ -50,8 +50,13 @@ if (location.href.indexOf("/fundraising") > -1) {
     var tabs = [...document.querySelectorAll(".needs-filter__item")];
     var tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1));
     if (tabIndex > -1 && tabIndex < tabs.length)
-        tabs[tabIndex].classList.add("needs-filter__item_active");
-    
+        for(var i =0; i<tabs.length; i++)
+            if (i == tabIndex)
+                tabs[i].classList.add("needs-filter__item_active");
+            else {
+                tabs[i].style.textDecoration = "underline";
+            }
+
     var suffix = ["none", "True", "False"][tabIndex];
     [...document.getElementsByClassName(`is-military-${suffix}`)].forEach(c => c.style.display = "none");
 }
@@ -209,28 +214,29 @@ const tabsTriggers = document.querySelectorAll('.tabs-triggers__item')
 const tabsContents = document.querySelectorAll('.tabs-content__item')
 
 function activateTab (item, id) {
-    tabsTriggers.forEach(child => {
-        child.classList.remove('tabs-triggers__item_active')
-    })
-
-    tabsContents.forEach(child => {
-        child.classList.remove('tabs-content__item_active')
-    })
-
-    item.classList.add('tabs-triggers__item_active')
-    document.getElementById(id).classList.add('tabs-content__item_active')
+    for(var i=0; i<tabsTriggers.length; i++){
+        if (tabsContents[i].id == item.getAttribute('href').replace('#', '')){
+            tabsTriggers[i].classList.add('tabs-triggers__item_active');
+            tabsContents[i].classList.add('tabs-content__item_active');
+            tabsTriggers[i].style.color = "#0c9a56";
+            tabsTriggers[i].style.textDecoration = 'none';
+        }
+        else {
+            tabsTriggers[i].classList.remove('tabs-triggers__item_active');
+            tabsContents[i].classList.remove('tabs-content__item_active');
+            tabsTriggers[i].style.textDecoration = 'underline';
+            tabsTriggers[i].style.color = "black";
+        }
+    }
 }
 
-if (tabsTriggers) {
-    tabsTriggers.forEach(item => {
+if (tabsTriggers) 
+    tabsTriggers.forEach(item =>
         item.addEventListener('click', function (e) {
             e.preventDefault()
             const id = e.target.getAttribute('href').replace('#', '')
             activateTab(item, id);
-        })
-    })
-
-}
+        }))
 
 if (document.querySelector('.tabs-triggers__item')) {
     var items = [...document.getElementsByClassName("tabs-triggers__item")]

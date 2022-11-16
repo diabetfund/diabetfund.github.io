@@ -1,6 +1,6 @@
 [
   {
-     "Pic": "/img/main/ava-piskunov.jpg",
+     "Pic": "ava-piskunov.jpg",
      "En": { 
         "Title": "Eduard Piskunov",
         "Descr": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
@@ -11,7 +11,7 @@
       }
   },
   {
-    "Pic": "/img/main/ava-boiko.jpg",
+    "Pic": "ava-boiko.jpg",
     "En": { 
        "Title": "Tamara Boyko",
        "Descr": "Honorary member of the board, representative of a charitable foundation in Slovakia"
@@ -22,7 +22,7 @@
      }
  },
  {
-  "Pic": "/img/main/ava-piskariova.png",
+  "Pic": "ava-piskariova.png",
   "En": { 
      "Title": "Piskaryova Marina",
      "Descr": "Foundation board member, administrator of the social canteen SET CATERING with the support of World Central Kitchen, designer of social, environmental and commercial projects"
@@ -33,7 +33,7 @@
    }
 },
   {
-   "Pic": "/img/main/ava-AAA.jpg",
+   "Pic": "ava-AAA.jpg",
    "En": { 
      "Title": "Andrii Andreev",
      "Descr": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
@@ -44,7 +44,7 @@
    }
  },
  {
-  "Pic": "/img/main/ava-logvin.jpg",
+  "Pic": "ava-logvin.jpg",
   "En": { 
      "Title": "Anna Logvin",
      "Descr": "Head of the project to help children and low-income families"
@@ -55,7 +55,7 @@
    }
 },
   {
-   "Pic": "/img/main/ava-yanochkov.jpg",
+   "Pic": "ava-yanochkov.jpg",
    "En": { 
       "Title": "Peter Yanachkov",
       "Descr": "Managing director, Pierce Capital Partners"
@@ -66,7 +66,7 @@
     }
 },
   {
-     "Pic": "/img/main/ava-LUNTER.jpg",
+     "Pic": "ava-LUNTER.jpg",
      "En": { 
         "Title": "Ondrej Lunter",
         "Descr": "Deputy head of the Banská Bystrica region in Slovakia"
@@ -77,7 +77,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-bagacka.jpg",
+     "Pic": "ava-bagacka.jpg",
      "En": { 
         "Title": "Michal Bagacka",
         "Descr": "Deputy and member of the board of the autonomous region of Banska Bystrica"
@@ -88,7 +88,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-hnusta.jpg",
+     "Pic": "ava-hnusta.jpg",
      "En": { 
         "Title": "Hnusta Grigorij Samin",
         "Descr": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
@@ -99,7 +99,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-dimplomati.jpg",
+     "Pic": "ava-dimplomati.jpg",
      "En": { 
         "Title": "Diplomats",
         "Descr": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
@@ -110,7 +110,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-diabete.jpg",
+     "Pic": "ava-diabete.jpg",
      "En": { 
         "Title": "Diabite",
         "Descr": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
@@ -121,7 +121,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-vyru.jpg",
+     "Pic": "ava-vyru.jpg",
      "En": { 
         "Title": "Vyrų fondas",
         "Descr": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
@@ -132,7 +132,7 @@
       }
   },
   {
-     "Pic": "/img/main/ava-pcoket.jpg",
+     "Pic": "ava-pcoket.jpg",
      "En": { 
         "Title": "Pocket Hero",
         "Descr": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
