@@ -21,5 +21,5 @@ record View(string Template)
                 arg)
             .Compile()
         )(model))
-        .Aggregate(Template, (t, kv) => t.Replace("{{" + kv.Item1 + "}}", kv.Item2?.ToString() ?? ""));
+        .Aggregate(Template, (t, kv) => t.Replace("{{" + kv.Item1 + "}}", kv.Item2?.ToString() ?? "null"));
 }

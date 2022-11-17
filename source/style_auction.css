@@ -1,0 +1,130 @@
+
+
+
+.collection-items .blog-box .collection-image {
+   padding: 20px;
+   background-color: #f8f9fc;
+   border-radius: 20px
+ }
+ 
+ .collection-items .blog-box .collection-image .blog-image {
+   border-radius: 20px;
+   overflow: hidden
+ }
+ 
+ .collection-items .blog-box .collection-image .blog-image .top-image img {
+   width: 31%;
+   height: 100%
+ }
+ 
+ .collection-items .blog-box .collection-content {
+   padding: 0 20px
+ }
+ 
+ .collection-items .blog-box .collection-content .collection-title a {
+   color: #183b56;
+   transition: all .5s
+ }
+ 
+ .collection-items .blog-box .collection-content .collection-title a:hover {
+   color: #ee574c
+ }
+ 
+ .collection-items .blog-box .collection-content .collection-like-icon p {
+   color: rgba(107,110,111,.7)
+ }
+ 
+ .collection-items .blog-box .collection-content .collection-like-icon p a {
+   color: rgba(107,110,111,.7);
+   position: absolute;
+   right: 80px;
+   transition: all .5s
+ }
+ 
+ .align-items-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row
+ }
+ 
+ .d-flex {
+   display: flex!important
+ }
+ .justify-content-between {
+   justify-content: space-between!important
+ }
+ .img-fluid {
+   max-width: 100%;
+   height: auto
+ }
+ .mt-4 {
+   margin-top: 1.5rem!important
+ }
+ .mt-3 {
+   margin-top: 1rem!important;
+ }
+ .mt-5 {
+   margin-top: 3rem!important;
+ }
+ .ms-auto {
+   margin-left: auto!important;
+ }
+ .mb-0 {
+   margin-bottom: 0!important;
+ }
+ .w-100 {
+   width: 100%!important
+ }
+ .fw-bold {
+   font-weight: 700!important;
+ }
+ .h5 {
+   font-size: 1.25rem;
+ }
+ 
+ .fw-bold {
+   font-weight: 700!important
+ }
+ 
+ .row {
+   --bs-gutter-x: 1.5rem;
+   --bs-gutter-y: 0;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: calc(-1 * var(--bs-gutter-y));
+   margin-right: calc(-.5 * var(--bs-gutter-x));
+   margin-left: calc(-.5 * var(--bs-gutter-x));
+ }
+ .row>* {
+   position: relative;
+ }
+ .f-14 {
+   font-size: 14px;
+ }
+ .text-muted {
+   color: #6b6e6f !important;
+ }
+ .avatar-xs {
+   height: 2rem;
+   width: 2rem;
+ }
+ .avatar-xs {
+   height: 2rem;
+   width: 2rem;
+ }
+ .mx-2 {
+   margin-right: 0.5rem!important;
+   margin-left: 0.5rem!important;
+ }
+ 
+ @media (min-width: 992px){
+   .col-lg-12 {
+       flex: 0 0 auto;
+       width: 100%;
+   }
+   .col-lg-4 {
+     flex: 0 0 auto;
+     width: 33.33333333%;
+ }
+ }

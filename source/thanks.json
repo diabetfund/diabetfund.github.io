@@ -253,40 +253,40 @@
       }
    },
    {
-      "Pic":"card-9.jpg",
-      "Avatar": "card-9-ava.png",
+      "Pic":"card-59.jpg",
+      "Avatar": "card-22-ava.png",
       "HRank":0,
       "Ua": {
-         "Title": "Альона",
-         "Descr": "Отримали посилку. Дякуємо за допомогу, за Вашу працю! Миру та злагоди!"
+         "Title": "Таня",
+         "Descr": "Добрий вечір.Величезне Дякую Вам за допомогу, за підтримку, мирного неба над головою 💛💙 дякую вам."
       },
       "En": {
-         "Title": "Alyona",
-         "Descr": "Received the package. Thank you for your help, for your work! Peace and harmony!"
+         "Title": "Tanya",
+         "Descr": "Good evening. Thank you very much for your help, support, peaceful sky above my head 💛💙 thank you."
       }
    },
    {
-      "Pic":"card-36.jpg",
+      "Pic":"card-58.jpg",
       "HRank":0,
       "Ua": {
-         "Title": "Діана Марініна",
-         "Descr": "Доброго дня! Сьогодні отримали посилку. Велике вам дякую за допомогу в цей нелегкий для нас усіх час! Здоров'я та сил вам на довгі роки! Бережи вас Бог!❤️"
+         "Title": "Анатолій",
+         "Descr": "Величезна подяка Едуарду за надану допомогу!"
       },
       "En": {
-         "Title": "Diana Marinina",
-         "Descr": "Good afternoon! Today we received a parcel. Thank you all so much for your help at this difficult time for us all! Health and strength to you for many years! God bless you!❤️"
+         "Title": "Anatoly",
+         "Descr": "Many thanks to Edward for the help!"
       }
    },
    {
-      "Pic":"card-37.jpg",
+      "Pic":"card-30.jpg",
       "HRank":0,
       "Ua": {
-         "Title": "Віктор Денисюк",
-         "Descr": "Дуже дякую вам за вашу допомогу і не легка праця"
+         "Title": "Наталія Дорецька",
+         "Descr": "Доброго дня! Дякую за допомогу! Миру нам усім. Зі святом Успіння пресвятої Богородиці! Божих усім благословінь!"
       },
       "En": {
-         "Title": "Victor Denisyuk",
-         "Descr": "Thank you very much for your help and hard work"
+         "Title": "Natalia Doretska",
+         "Descr": "Hello! Thanks for the help! Peace to us all. Happy Assumption of the Blessed Virgin Mary! God's blessings to all!"
       }
    },
    {
@@ -350,6 +350,19 @@
       "En": {
          "Title": "Olga",
          "Descr": "Hello! Parcel received. A big thank you to everyone involved in this great cause! Strength, inspiration and good health to all. God's blessing and a peaceful sky💙💛"
+      }
+   },
+   {
+      "Pic":"card-9.jpg",
+      "Avatar": "card-9-ava.png",
+      "HRank":0,
+      "Ua": {
+         "Title": "Альона",
+         "Descr": "Отримали посилку. Дякуємо за допомогу, за Вашу працю! Миру та злагоди!"
+      },
+      "En": {
+         "Title": "Alyona",
+         "Descr": "Received the package. Thank you for your help, for your work! Peace and harmony!"
       }
    },
    {
@@ -494,6 +507,18 @@
       }
    },
    {
+      "Pic":"card-37.jpg",
+      "HRank":0,
+      "Ua": {
+         "Title": "Віктор Денисюк",
+         "Descr": "Дуже дякую вам за вашу допомогу і не легка праця"
+      },
+      "En": {
+         "Title": "Victor Denisyuk",
+         "Descr": "Thank you very much for your help and hard work"
+      }
+   },
+   {
       "Pic":"card-14.jpg",
       "Avatar": "card-14-ava.png",
       "HRank":0,
@@ -556,6 +581,18 @@
       "En": {
          "Title": "Svitlana Tereshchenko",
          "Descr": "Thank you very much for your help"
+      }
+   },
+   {
+      "Pic":"card-36.jpg",
+      "HRank":0,
+      "Ua": {
+         "Title": "Діана Марініна",
+         "Descr": "Доброго дня! Сьогодні отримали посилку. Велике вам дякую за допомогу в цей нелегкий для нас усіх час! Здоров'я та сил вам на довгі роки! Бережи вас Бог!❤️"
+      },
+      "En": {
+         "Title": "Diana Marinina",
+         "Descr": "Good afternoon! Today we received a parcel. Thank you all so much for your help at this difficult time for us all! Health and strength to you for many years! God bless you!❤️"
       }
    },
    {
@@ -624,6 +661,19 @@
       }
    },
    {
+      "Pic":"card-60.jpg",
+      "Avatar": "card-35-ava.png",
+      "HRank":0,
+      "Ua": {
+         "Title": "Саша",
+         "Descr": "Дуже дякую за вашу роботу 🍀 З Сенсорами для нашої помпи зараз проблеми. Велика подяка за допомогу! Мирного дня."
+      },
+      "En": {
+         "Title": "Sasha",
+         "Descr": "Thank you very much for your work 🍀 Sensors for our pump are currently having problems. Many thanks for the help! Have a peaceful day."
+      }
+   },
+   {
       "Pic":"card-27.jpg",
       "Avatar": "card-27-ava.png",
       "HRank":0,
@@ -660,18 +710,6 @@
       "En": {
          "Title": "Tanyunechka",
          "Descr": "Thank you so much for your invaluable work! Thank you for all you do for our children during this difficult time!"
-      }
-   },
-   {
-      "Pic":"card-30.jpg",
-      "HRank":0,
-      "Ua": {
-         "Title": "Наталія Дорецька",
-         "Descr": "Доброго дня! Дякую за допомогу! Миру нам усім. Зі святом Успіння пресвятої Богородиці! Божих усім благословінь!"
-      },
-      "En": {
-         "Title": "Natalia Doretska",
-         "Descr": "Hello! Thanks for the help! Peace to us all. Happy Assumption of the Blessed Virgin Mary! God's blessings to all!"
       }
    },
    {
@@ -723,6 +761,32 @@
       "En": {
          "Title": "Hanna Lutsenko",
          "Descr": "From the bottom of my heart, I want to thank you very much for your help. You did not turn your back on me and did not spare your strength, your time, to help me and my son. I ask you to accept my sincere gratitude and good wishes for health, peace above your head, comfort in the house, good things in the family and incredible happiness in each new day. Thank you very much, when the money comes I will send you a big thank you."
+      }
+   },
+   {
+      "Pic":"card-61.jpg",
+      "Avatar":"card-61-ava.png",
+      "HRank":0,
+      "Ua": {
+         "Title": "Лiза",
+         "Descr": "Величезна подяка, забрали сенсори і багато всього"
+      },
+      "En": {
+         "Title": "Lisa",
+         "Descr": "A huge thank you, they took away the sensors and a lot of things"
+      }
+   },
+   {
+      "Pic":"card-62.jpg",
+      "Avatar":"card-62-ava.png",
+      "HRank":0,
+      "Ua": {
+         "Title": "Олена",
+         "Descr": "Забрали інсулін та голочки. Дякую, за допомогу 🙏❤"
+      },
+      "En": {
+         "Title": "Olena",
+         "Descr": "They took insulin and needles. Thank you very much for your help 🙏❤"
       }
    }
 ]

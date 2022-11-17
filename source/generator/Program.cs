@@ -4,8 +4,7 @@ var version = 21;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 var (projects, news, partners, thanks, slides_) = 
-    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Partner>("partners"), ReadJ<Thanks>("thanks"), 
-     ReadJ<Slide>("slides"));
+    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Entity>("partners"), ReadJ<Thanks>("thanks"), ReadJ<Slide>("slides"));
 
 T[] ReadJ<T>(string subp) => JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/{subp}.json"))!;
 
@@ -24,8 +23,8 @@ void Render(string lang)
         newsCard = new(Read("news/card")), newsPage = new(Read("news/page")),
         projPage = new(Read("projects/page")), projCard = new(Read("projects/card"));
 
-    string payDetails = Read("partners-pay"),
-        slides = Join(new(Read("slide")), slides_),
+    string slides = Join(new(Read("slide")), slides_),
+        payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
         topProjects = Join(projCard, projects.Take(3));
 
@@ -59,8 +58,11 @@ void Render(string lang)
     Out("projects/index", "/fundraising", new { FundsList = Join(projCard, projects) });
 
     foreach (var proj in projects)
-        Out(projPage.Run(new { Content = Read("projects/" + proj.Id) }, proj, proj.Entry(lang)),
-            "/fundraising/" + proj.Id);
+        if (Read("projects/" + proj.Id).Split("{{projDoc}}") is [var contentF, var contentS])
+        {
+            var args = new { contentF, contentS, report = proj.ReportId is { } id ? Read("projects/"+id) : null };
+            Out(projPage.Run(args, proj, proj.Entry(lang)), "/fundraising/" + proj.Id);
+        }
     
     Out("news/index", "/news", new { Cards = Join(newsCard, news) });
 
@@ -76,6 +78,8 @@ record Entity<TEntry>()
 {
     public required TEntry En { get; init; }
     public required TEntry Ua { get; init; }
+    public string? Pic { get; init; }
+
     public TEntry Entry(string lang) => lang is "en" ? En : Ua;
 }
 record Entity : Entity<Entry>;
@@ -88,23 +92,17 @@ record Entry
 
 record NewsEntry(string Id) : Entry;
 
-record News(string Image, string Date) : Entity<NewsEntry>;
+record News(string Date) : Entity<NewsEntry>;
 
-record ProjEntry(string Data, string Signature, string Pdf, string? Report): Entry;
+record ProjEntry(string Data, string Signature, string Pdf): Entry;
 
-record Proj(string Id, string Image, int Need, int Fund, bool IsMilitary, string? ReportImage): Entity<ProjEntry>
+record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId): Entity<ProjEntry>
 {
     public int FundPerc => (int)((double)Fund / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
     public bool IsFull => Need == Fund;
 }
 
-record Partner(string Pic) : Entity;
+record Thanks(string? Avatar, int HRank) : Entity;
 
-record Thanks(string? Pic, string? Avatar, int HRank) : Entity
-{
-    public bool HideAvatar => Avatar is null;
-    public bool HidePic => Pic is null;
-}
-
-record Slide(string Pic, string Mini, int Index, string Url) : Entity;
+record Slide(string Mini, int Index, string Url) : Entity;

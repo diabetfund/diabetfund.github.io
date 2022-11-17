@@ -208,43 +208,28 @@ donateButtons.forEach(b => {
         hiddenForm.setAttribute('target', '_blank')
         hiddenForm.submit()
     })
-})
+});
 
-const tabsTriggers = document.querySelectorAll('.tabs-triggers__item')
-const tabsContents = document.querySelectorAll('.tabs-content__item')
-
-function activateTab (item, id) {
-    for(var i=0; i<tabsTriggers.length; i++){
-        if (tabsContents[i].id == item.getAttribute('href').replace('#', '')){
-            tabsTriggers[i].classList.add('tabs-triggers__item_active');
-            tabsContents[i].classList.add('tabs-content__item_active');
-            tabsTriggers[i].style.color = "#0c9a56";
-            tabsTriggers[i].style.textDecoration = 'none';
-        }
-        else {
-            tabsTriggers[i].classList.remove('tabs-triggers__item_active');
-            tabsContents[i].classList.remove('tabs-content__item_active');
-            tabsTriggers[i].style.textDecoration = 'underline';
-            tabsTriggers[i].style.color = "black";
-        }
-    }
-}
-
-if (tabsTriggers) 
-    tabsTriggers.forEach(item =>
+(([triggers, contents]) => {
+    triggers.forEach(item =>
         item.addEventListener('click', function (e) {
             e.preventDefault()
             const id = e.target.getAttribute('href').replace('#', '')
-            activateTab(item, id);
+            for(var i=0; i<triggers.length; i++){
+                var meth = contents[i].id == id ? "add" : "remove";
+                triggers[i].classList[meth]('tabs-triggers__item_active');
+                contents[i].classList[meth]('tabs-content__item_active');
+            }
         }))
+    
+    var current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
+    if (current)
+        current.click();
+})([document.querySelectorAll('.tabs-triggers__item'), document.querySelectorAll('.tabs-content__item')]);
 
-if (document.querySelector('.tabs-triggers__item')) {
-    var items = [...document.getElementsByClassName("tabs-triggers__item")]
-    var current = items.find(_=> location.search.indexOf(_.href.split('#')[1]) > -1) || items[0];
-    current.click();
-}
 
-const articleContent = document.getElementById('article__content')
+
+const articleContent = document.getElementById('article__content');
 if (articleContent) {
     const allImages = articleContent.querySelectorAll('img')
     allImages.forEach(img => {

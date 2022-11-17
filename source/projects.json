@@ -4,7 +4,7 @@
       "IsMilitary": false,
       "Need": 1200, 
       "Fund": 52,
-      "Image": "June2022/snuUfMlETiFUHqUYJpf8.jpg",
+      "Pic": "June2022/snuUfMlETiFUHqUYJpf8.jpg",
       "En": {
          "Title": "Helping with glucose sensors",
          "Descr": "According to official data, 2.5 million diabetics are registered in Ukraine. 1 million people are insulin dependent, 100,000 of whom are children. the number of people with this disease has increased significantly since the beginning of the war. Our ultimate goal is to purchase innovative developments for diabetics.",
@@ -25,7 +25,8 @@
       "IsMilitary": false,
       "Need": 1000, 
       "Fund": 643,
-      "Image": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
+      "Pic": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
+      "ReportId": "report-glukometers",
       "En": {
          "Title": "Helping with glucometers and test strips to them",
          "Descr": "One of the activities of the charity fund is medical care for the most vulnerable categories of the population. Our team buys the necessary devices and medicines and gives them to diabetics who do not have the opportunity to buy the necessary devices themselves.",
@@ -46,7 +47,7 @@
       "IsMilitary": false,
       "Need": 246,
       "Fund": 10,
-      "Image":"July2022/palettes.jpg",
+      "Pic":"July2022/palettes.jpg",
       "En": {
          "Title": "Help Kherson with heating",
          "Descr": "Warm up Kherson! The project is aimed at raising funds for the purchase of pellets for heating. The volume is 20 tons, UAH 12,300 per ton.",
@@ -67,7 +68,8 @@
       "IsMilitary": false,
       "Need": 300, 
       "Fund": 281,
-      "Image": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
+      "Pic": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
+      "ReportId": "report-insulin",
       "En": {
          "Title": "Helping with insulin",
          "Descr": "Charitable foundation helps people who suffer from diabetes and need urgent medical care. We understand the importance of public support, and therefore encourage everyone to join the fundraiser and provide patients with the opportunity to live a full life.",
@@ -88,7 +90,7 @@
       "IsMilitary": false,
       "Need": 4000,
       "Fund":1254,
-      "Image":"July2022/center.jpg",
+      "Pic":"July2022/center.jpg",
       "En": {
          "Title": "Help children with diabetes to go to rehabilitation",
          "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program.",
@@ -109,7 +111,8 @@
       "IsMilitary": true,
       "Need": 720, 
       "Fund": 720,
-      "Image": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
+      "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
+      "ReportId":"report-zsu",
       "En": {
          "Title": "Assistance to ZSU",
          "Descr": "The campaign to raise funds for the needs of fighters of military units A5717; A0998; A0284; A1277; A1108; of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
