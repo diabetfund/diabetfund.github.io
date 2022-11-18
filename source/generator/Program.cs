@@ -26,7 +26,8 @@ void Render(string lang)
     string slides = Join(new(Read("slide")), slides_),
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
-        topProjects = Join(projCard, projects.Take(3));
+
+        topProjects = Join(projCard, projects.Take(5).Select((p, i) => i > 2 ? p with { MobOnly = true } : p));
 
     void Out(string content, string enPath, object? arg = null, string? uaPath = null)
     {
@@ -96,7 +97,7 @@ record News(string Date) : Entity<NewsEntry>;
 
 record ProjEntry(string Data, string Signature, string Pdf): Entry;
 
-record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId): Entity<ProjEntry>
+record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId, bool MobOnly = false): Entity<ProjEntry>
 {
     public int FundPerc => (int)((double)Fund / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };

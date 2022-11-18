@@ -1,7 +1,7 @@
 .support-btn {
     background: #0c9a56;
     border: 0px solid #0c9a56;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     font-family: Rubik,sans-serif;
     font-weight: 500;
@@ -10,6 +10,33 @@
     color: white;
     padding: 12px 20px;
     margin-left: 60px
+}
+
+.proj-card-amoun-title {
+  font-weight: 700 !important;
+  color:#88928d;
+  font-size: 12px !important;
+}
+
+.proj-card-bottom-bts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__read-btn{
+  border: 2px solid #0c9a56;
+  border-radius: 4px;
+  max-width: 174px;
+    display: block;
+    background: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #0c9a56;
+    text-align: center;
+    padding: 6px;
+    margin: 0 auto;
 }
 
 @media (max-width: 575px){
@@ -331,6 +358,12 @@ ul {
   }
 
   @media (min-width: 600px) {
+    .mob-only_True {
+      display: none;
+    }
+  }
+
+  @media (min-width: 600px) {
     .center-docs { grid-template-columns: repeat(2, 1fr); }
 
     .center-invs { grid-template-columns: repeat(2, 1fr); }
@@ -344,7 +377,9 @@ ul {
 
     .thanks{grid-template-columns: 1fr 1fr 1fr 1fr;}
   }
-
+.main-slider-add{
+  max-width:1200px; width:100%; margin-top: 5px !important;
+}
   .main-title-slides {
     margin-top: 49px;
     margin-bottom: -20px;
@@ -368,7 +403,6 @@ ul {
   .main-needs-list{
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 100px;
   }
   .main-title-about{
     text-align: center;

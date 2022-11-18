@@ -249,7 +249,7 @@ if (articleContent) {
 function subscribeNeedsDonate(b){
     b.addEventListener('click', function (e) {
         e.preventDefault()
-        const form = b.nextElementSibling.querySelector('form')
+        const form = b.parentNode.nextElementSibling.querySelector('form')
         form.setAttribute('target', '_blank')
         form.submit()
     })

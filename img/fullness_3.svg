@@ -1,24 +1,5 @@
 <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 11C0 10.4477 0.447715 10 1 10H5C5.55228 10 6 10.4477 6 11V21C6 21.5523 5.55228 22 5 22H1C0.447715 22 0 21.5523 0 21V11Z" fill="url(#paint0_linear_271_192)"/>
-<path d="M8 5C8 4.44772 8.44772 4 9 4H13C13.5523 4 14 4.44772 14 5V21C14 21.5523 13.5523 22 13 22H9C8.44772 22 8 21.5523 8 21V5Z" fill="url(#paint1_linear_271_192)"/>
-<path d="M16 1C16 0.447716 16.4477 0 17 0H21C21.5523 0 22 0.447715 22 1V21C22 21.5523 21.5523 22 21 22H17C16.4477 22 16 21.5523 16 21V1Z" fill="url(#paint2_linear_271_192)"/>
-<path d="M16 1C16 0.447716 16.4477 0 17 0H21C21.5523 0 22 0.447715 22 1V21C22 21.5523 21.5523 22 21 22H17C16.4477 22 16 21.5523 16 21V1Z" fill="url(#paint3_linear_271_192)"/>
-<defs>
-<linearGradient id="paint0_linear_271_192" x1="-1.5" y1="22" x2="26.5" y2="4.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00FF57"/>
-<stop offset="1" stop-color="#00A337"/>
-</linearGradient>
-<linearGradient id="paint1_linear_271_192" x1="-1.5" y1="22" x2="26.5" y2="4.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00FF57"/>
-<stop offset="1" stop-color="#00A337"/>
-</linearGradient>
-<linearGradient id="paint2_linear_271_192" x1="-1.5" y1="22" x2="26.5" y2="4.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00FF57"/>
-<stop offset="1" stop-color="#00A337"/>
-</linearGradient>
-<linearGradient id="paint3_linear_271_192" x1="-1.5" y1="22" x2="26.5" y2="4.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#00FF57"/>
-<stop offset="1" stop-color="#00A337"/>
-</linearGradient>
-</defs>
+<path style="fill:#0c9a56;" d="M0 11C0 10.4477 0.447715 10 1 10H5C5.55228 10 6 10.4477 6 11V21C6 21.5523 5.55228 22 5 22H1C0.447715 22 0 21.5523 0 21V11Z" />
+<path style="fill:#0c9a56;" d="M8 5C8 4.44772 8.44772 4 9 4H13C13.5523 4 14 4.44772 14 5V21C14 21.5523 13.5523 22 13 22H9C8.44772 22 8 21.5523 8 21V5Z" />
+<path style="fill:#0c9a56;" d="M16 1C16 0.447716 16.4477 0 17 0H21C21.5523 0 22 0.447715 22 1V21C22 21.5523 21.5523 22 21 22H17C16.4477 22 16 21.5523 16 21V1Z" />
 </svg>

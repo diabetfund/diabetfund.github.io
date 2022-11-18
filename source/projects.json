@@ -1,4 +1,68 @@
 [
+   {
+      "Id": "kherson-pallets",
+      "IsMilitary": false,
+      "Need": 246,
+      "Fund": 15,
+      "Pic":"July2022/palettes.jpg",
+      "En": {
+         "Title": "Help Kherson with heating",
+         "Descr": "Warm up Kherson! The project is aimed at raising funds for the purchase of pellets for heating. The volume is 20 tons, UAH 12,300 per ton.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      },
+      "Ua": {
+         "Title": "Зігріємо Херсон разом",
+         "Descr": "Зігріти Херсон! Проект спрямований на збирання коштів для купівлі пелетів для опалення. Об'єм 20 тонн, 12300 грн за одну тонну.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      }
+   },
+   { 
+      "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
+      "IsMilitary": true,
+      "Need": 2600, 
+      "Fund": 820,
+      "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
+      "ReportId":"report-zsu",
+      "En": {
+         "Title": "Assistance to ZSU unit 4456",
+         "Descr": "The campaign to raise funds for the needs of fighters of military units 4456 of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "zrs2rYqsIUkHcDpHjuNTbE3a1A8=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      },
+      "Ua": {
+         "Title": "Допомога ВЧ 4456 ЗСУ",
+         "Descr": "Кампанія зі збору коштів на потреби бійців військових частин 4456 Збройних сил України дозволить придбати нашим захисникам медикаменти та інші необхідні речі, які покращать їх повсякденний побут, дозволять власними силами надати побратимам першу медичну допомогу та бути захищеними під час виконання бойових завдань.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "tukxOEm1DF4MRR+HGAXM7PST9wM=",
+         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
+      }
+   },
+   {
+      "Id": "help-rehab",
+      "IsMilitary": false,
+      "Need": 4800,
+      "Fund": 1464,
+      "Pic":"July2022/center.jpg",
+      "En": {
+         "Title": "Rehabilitation course for children with diabetes",
+         "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      },
+      "Ua": {
+         "Title": "Курс реабілітації для хворих на діабет дітей",
+         "Descr": "Ви маєте змогу допомогти оплатити поїздку до Центру людині з діабетом та її супроводжуючим. Більшу частину витрат на перебування пацієнтів в нашому Центрі фонд покриває самостійно, та з вашою підтримкою ми можемо зібрати достатню кількість грошей та забезпечити нашим громадянам повний курс оздоровчої програми.",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
+         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
+      }
+   },
    { 
       "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
       "IsMilitary": false,
@@ -42,27 +106,6 @@
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       }
    },
-   {
-      "Id": "kherson-pallets",
-      "IsMilitary": false,
-      "Need": 246,
-      "Fund": 10,
-      "Pic":"July2022/palettes.jpg",
-      "En": {
-         "Title": "Help Kherson with heating",
-         "Descr": "Warm up Kherson! The project is aimed at raising funds for the purchase of pellets for heating. The volume is 20 tons, UAH 12,300 per ton.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
-         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
-      "Ua": {
-         "Title": "Зігріємо Херсон разом",
-         "Descr": "Зігріти Херсон! Проект спрямований на збирання коштів для купівлі пелетів для опалення. Об'єм 20 тонн, 12300 грн за одну тонну.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      }
-   },
    { 
       "Id": "dopomogti-insulinom",
       "IsMilitary": false,
@@ -82,49 +125,6 @@
          "Descr": "Благодійний фонд допомагає людям, які страждають на цукровий діабет та потребують невідкладної медичної допомоги. Ми розуміємо важливість підтримки громадськості, а тому закликаємо всіх охочих долучитися до збору коштів і забезпечити хворих можливістю жити повноцінно.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "fdAVNnlOBh3296alXSKwaO9qt8w=",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      }
-   },
-   {
-      "Id": "help-rehab",
-      "IsMilitary": false,
-      "Need": 4000,
-      "Fund":1254,
-      "Pic":"July2022/center.jpg",
-      "En": {
-         "Title": "Help children with diabetes to go to rehabilitation",
-         "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
-         "Signature": "8FCafqMc//6iKe9wB+eqZWs3FPc=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
-      "Ua": {
-         "Title": "Допомога хворим на діабет дітям пройти курс реабілітації",
-         "Descr": "Ви маєте змогу допомогти оплатити поїздку до Центру людині з діабетом та її супроводжуючим. Більшу частину витрат на перебування пацієнтів в нашому Центрі фонд покриває самостійно, та з вашою підтримкою ми можемо зібрати достатню кількість грошей та забезпечити нашим громадянам повний курс оздоровчої програми.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "TVNsm5bs8KyxZhkpsexBFHb8Mb8=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      }
-   },
-   { 
-      "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
-      "IsMilitary": true,
-      "Need": 720, 
-      "Fund": 720,
-      "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
-      "ReportId":"report-zsu",
-      "En": {
-         "Title": "Assistance to ZSU",
-         "Descr": "The campaign to raise funds for the needs of fighters of military units A5717; A0998; A0284; A1277; A1108; of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "zrs2rYqsIUkHcDpHjuNTbE3a1A8=",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
-      "Ua": {
-         "Title": "Допомога ЗСУ",
-         "Descr": "Кампанія зі збору коштів на потреби бійців військових частин А5717; А0998; А0284; А1277; А1108; Збройних сил України дозволить придбати нашим захисникам медикаменти та інші необхідні речі, які покращать їх повсякденний побут, дозволять власними силами надати побратимам першу медичну допомогу та бути захищеними під час виконання бойових завдань.",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "tukxOEm1DF4MRR+HGAXM7PST9wM=",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       }
    }

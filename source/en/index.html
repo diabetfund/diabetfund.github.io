@@ -1,8 +1,8 @@
 <main>
-    <h2 class="our-activity__title title main-title-slides">
+    <!--<h2 class="our-activity__title title main-title-slides">
         Major Projects
-     </h2>
-    <div class="slider" style="max-width:1200px; width:100%;">
+     </h2>-->
+    <div class="slider main-slider-add" >
       {{slides}}
     </div>
        
@@ -59,11 +59,16 @@
       </div>
   </section>
     <h2 class="our-activity__title title maint-title-proj" >
-        Fundraising
+        Current projects
      </h2>
      <div class="needs__list row main-needs-list">
         {{topProjects}}
      </div>
+     <div class="proj-card-bottom-bts" >
+        <a class="card__read-btn" href="/en/fundraising/" style="max-width:300px !important;margin-top:10px;">
+            View all projects
+        </a>
+    </div>
     {{founders}}
    {{payDetails}}
 </main>
