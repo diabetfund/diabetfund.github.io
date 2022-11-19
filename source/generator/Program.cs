@@ -27,7 +27,7 @@ void Render(string lang)
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
 
-        topProjects = Join(projCard, projects.Take(5).Select((p, i) => i > 2 ? p with { MobOnly = true } : p));
+        topProjects = Join(projCard, projects.Take(3));
 
     void Out(string content, string enPath, object? arg = null, string? uaPath = null)
     {

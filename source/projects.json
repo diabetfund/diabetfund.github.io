@@ -23,8 +23,8 @@
    {
       "Id": "help-rehab",
       "IsMilitary": false,
-      "Need": 4800,
-      "Fund": 1464,
+      "Need": 4000,
+      "Fund": 1254,
       "Pic":"July2022/center.jpg",
       "En": {
          "Title": "Rehabilitation course for children with diabetes",
@@ -109,20 +109,20 @@
    { 
       "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
       "IsMilitary": true,
-      "Need": 2600, 
-      "Fund": 2600,
+      "Need": 720, 
+      "Fund": 720,
       "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
       "ReportId":"report-zsu",
       "En": {
-         "Title": "Assistance to ZSU unit 4456",
-         "Descr": "The campaign to raise funds for the needs of fighters of military units 4456 of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
+         "Title": "Assistance to ZSU",
+         "Descr": "The campaign to raise funds for the needs of fighters of military units A5717; A0998; A0284; A1277; A1108; of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "zrs2rYqsIUkHcDpHjuNTbE3a1A8=",
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
       },
       "Ua": {
-         "Title": "Допомога ВЧ 4456 ЗСУ",
-         "Descr": "Кампанія зі збору коштів на потреби бійців військових частин 4456 Збройних сил України дозволить придбати нашим захисникам медикаменти та інші необхідні речі, які покращать їх повсякденний побут, дозволять власними силами надати побратимам першу медичну допомогу та бути захищеними під час виконання бойових завдань.",
+         "Title": "Допомога ЗСУ",
+         "Descr": "Кампанія зі збору коштів на потреби бійців військових частин А5717; А0998; А0284; А1277; А1108; Збройних сил України дозволить придбати нашим захисникам медикаменти та інші необхідні речі, які покращать їх повсякденний побут, дозволять власними силами надати побратимам першу медичну допомогу та бути захищеними під час виконання бойових завдань.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "tukxOEm1DF4MRR+HGAXM7PST9wM=",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
