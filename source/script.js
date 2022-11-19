@@ -214,8 +214,8 @@ donateButtons.forEach(b => {
     triggers.forEach(item =>
         item.addEventListener('click', function (e) {
             e.preventDefault()
-            const id = e.target.getAttribute('href').replace('#', '')
-            for(var i=0; i<triggers.length; i++){
+            const id = e.target.getAttribute('href').replace('#', '');
+            for (var i = 0; i < triggers.length; i++) {
                 var meth = contents[i].id == id ? "add" : "remove";
                 triggers[i].classList[meth]('tabs-triggers__item_active');
                 contents[i].classList[meth]('tabs-content__item_active');

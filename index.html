@@ -33,9 +33,9 @@
           var form = document.createElement("form");
           form.method = "POST";
           form.action = "https://www.liqpay.ua/api/3/checkout";
-          form.innerHTML = `<input type="hidden" name="data" value="${url[1]}">
-                <input type="hidden" name="signature" value="${url[0]}">
-                <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">`;
+          form.innerHTML = `<input type="hidden" name="data" value="${url[1]}"/>
+                <input type="hidden" name="signature" value="${url[0]}"/>
+                <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text"/>`;
           document.getElementsByTagName("body")[0].appendChild(form);
           form.submit();
           return;

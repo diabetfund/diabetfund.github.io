@@ -348,6 +348,12 @@ ul {
   font-size: 13px;
 }
 
+.thank-card-wrap{
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
   .hide_True {
     display: none;
   }
