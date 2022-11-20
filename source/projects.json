@@ -16,6 +16,22 @@
       }
    },
    {
+      "Id": "assistance-to-zsu",
+      "IsMilitary": true,
+      "Need": 2600, 
+      "Fund": 720,
+      "Pic": "June2022/zsu.jpg",
+      "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
+      "En": {
+         "Title": "Assistance to ZSU",
+         "Descr": "A fundraising company for the everyday needs of soldiers of military units 4457 of the Armed Forces of Ukraine, which protects us from Russian invaders on the front line."
+      },
+      "Ua": {
+         "Title": "Допомога ЗСУ",
+         "Descr": "Компанія зі збору коштів на побутові потреби бійців військових частин 4457 Збройних сил України, яка на передовій захищає нас від російських загарбників."
+      }
+   },
+   {
       "Id": "help-rehab",
       "IsMilitary": false,
       "Need": 4000,
@@ -102,13 +118,13 @@
       "ReportId":"report-zsu",
       "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
-         "Title": "Assistance to ZSU",
+         "Title": "Assistance to military units A5717; A0998; A0284; A1277; A1108",
          "Descr": "The campaign to raise funds for the needs of fighters of military units A5717; A0998; A0284; A1277; A1108; of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "zrs2rYqsIUkHcDpHjuNTbE3a1A8="
       },
       "Ua": {
-         "Title": "Допомога ЗСУ",
+         "Title": "Допомога військовим частам А5717; А0998; А0284; А1277; А1108",
          "Descr": "Кампанія зі збору коштів на потреби бійців військових частин А5717; А0998; А0284; А1277; А1108; Збройних сил України дозволить придбати нашим захисникам медикаменти та інші необхідні речі, які покращать їх повсякденний побут, дозволять власними силами надати побратимам першу медичну допомогу та бути захищеними під час виконання бойових завдань.",
          "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
          "Signature": "tukxOEm1DF4MRR+HGAXM7PST9wM="

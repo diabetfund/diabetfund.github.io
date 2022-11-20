@@ -26,8 +26,10 @@ void Render(string lang)
     string slides = Join(new(Read("slide")), slides_),
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
+
         topThanks = Join(thank, thanks.Take(4).Select((t, i) => t with { HideCaption = true, DesctopOnly = i == 3 })),
-        topProjects = Join(projCard, projects.Take(3));
+        
+        topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { DesctopOnly = i > 3 }));
 
     void Out(string content, string enPath, object? arg = null, string? uaPath = null)
     {
@@ -80,6 +82,7 @@ record Entity<TEntry>()
     public required TEntry En { get; init; }
     public required TEntry Ua { get; init; }
     public string? Pic { get; init; }
+    public bool DesctopOnly { get; set; }
 
     public TEntry Entry(string lang) => lang is "en" ? En : Ua;
 }
@@ -107,7 +110,7 @@ record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId, st
     public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(string? Avatar, int HRank, bool HideCaption = false, bool DesctopOnly = false) : Entity;
+record Thanks(string? Avatar, int HRank, bool HideCaption = false) : Entity;
 
 record Slide(string Mini, int Index, string ProjectId) : Entity<PayEntry>
 {
