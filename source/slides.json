@@ -3,9 +3,9 @@
       "Index": 0,
       "Pic": "slide-1.jpg",
       "Mini": "slide-1-mini.jpg",
-      "Url":"center",
+      "ProjectId": "help-rehab",
       "En": {
-         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+         "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
       },
       "Ua": {
          "Title": "Реабілітаційний центр у Словаччині"
@@ -15,9 +15,9 @@
       "Index": 1,
       "Pic": "slide-2.jpg",
       "Mini": "slide-2-mini.jpg",
-      "Url":"center",
+      "ProjectId": "help-rehab",
       "En": {
-         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+         "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
       },
       "Ua": {
          "Title": "Реабілітаційний центр у Словаччині"
@@ -27,9 +27,9 @@
       "Index": 2,
       "Pic": "slide-3.jpg",
       "Mini": "slide-3-mini.jpg",
-      "Url":"center",
+      "ProjectId": "help-rehab",
       "En": {
-         "Title": "HEALTH AND REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
+         "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
       },
       "Ua": {
          "Title": "Реабілітаційний центр у Словаччині"
@@ -39,31 +39,39 @@
       "Index": 3,
       "Pic": "slide-4.jpg",
       "Mini": "slide-4-mini.jpg",
-      "Url":"fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi",
+      "Project": "dopomogti-sensorami-vimiryuvannya-glyukozi",
       "En": {
-         "Title": "Helping with glucose sensors"
+         "Title": "Helping with glucose sensors",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
+         "Signature": "VXu0hr9MoeVuKUmlpUUCShG2nGY="
       },
       "Ua": {
-         "Title": "Допомога сенсорами вимірювання глюкози"
+         "Title": "Допомога сенсорами вимірювання глюкози",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
+         "Signature": "lhGU6LQ/H3VPnWlvd96Xw781jC8="
       }
    },
    {
       "Index": 4,
       "Pic": "slide-6.jpg",
       "Mini": "slide-6-mini.jpg",
-      "Url":"fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
+      "Project": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
       "En": {
-         "Title": "Helping with glucometers and test strips to them"
+         "Title": "Helping with glucometers and test strips to them",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
+         "Signature": "Of0cYVqPwu2qRI6E5eaCDl1DmrI="
       },
       "Ua": {
-         "Title": "Допомога глюкометрами й тест-смужками до них"
+         "Title": "Допомога глюкометрами й тест-смужками до них",
+         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzM1x1MDQzYlx1MDQ0ZVx1MDQzYVx1MDQzZVx1MDQzY1x1MDQzNVx1MDQ0Mlx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzkgXHUwNDQyXHUwNDM1XHUwNDQxXHUwNDQyLVx1MDQ0MVx1MDQzY1x1MDQ0M1x1MDQzNlx1MDQzYVx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzRcdTA0M2UgXHUwNDNkXHUwNDM4XHUwNDQ1IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
+         "Signature": "BsZrgWraD6Wy5UETctesYEDGVs0="
       }
    },
    {
       "Index": 5,
       "Pic": "slide-8.jpg",
       "Mini": "slide-8-mini.jpg",
-      "Url":"fundraising/kherson-pallets",
+      "ProjectId":"kherson-pallets",
       "En": {
          "Title": "Let's warm Kherson together"
       },
@@ -75,7 +83,7 @@
       "Index": 6,
       "Pic": "slide-7.jpg",
       "Mini": "slide-7-mini.jpg",
-      "Url":"fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
+      "ProjectId": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
       "En": {
          "Title": "Assistance to military units A5617; A0998"
       },

@@ -165,8 +165,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=22"/>
-    <link rel="stylesheet" href="/source/style.css?_=22"/>
+    <link rel="stylesheet" href="/source/app.css?_=23"/>
+    <link rel="stylesheet" href="/source/style.css?_=23"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -248,9 +248,8 @@
                 <a class="menu__item " href="/ua/about-diabetes">Про діабет</a>
                 <a class="menu__item " href="/ua/fundraising">Проєкти</a>
                 <a class="menu__item " href="/ua/thanks">Вiдгуки</a>
-                <a class="menu__item " href="/ua/fun">Позитивник</a>
             </nav>
-            <button class="support-btn donate-button">
+            <button class="support-btn donate-button" data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
@@ -260,7 +259,6 @@
                     <a class="menu_mobile__item" href="/ua/about-diabetes">Про діабет</a>
                     <a class="menu_mobile__item" href="/ua/fundraising">Проєкти</a>
                     <a class="menu_mobile__item" href="/ua/thanks">Вiдгуки</a>
-                    <a class="menu_mobile__item" href="/ua/fun">Позитивник</a>
                 </nav>
                 <div class="phones">
                     <img class="header-icon phone-icon" src="/img/header/phone.png"/>
@@ -345,7 +343,7 @@
                </a>
            </div>
            <div class="needs__list row">
-                <div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+                <div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/July2022/palettes.jpg" >
       <div class="card__content">
@@ -384,26 +382,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/kherson-pallets">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["null", "null"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/July2022/center.jpg" >
       <div class="card__content">
@@ -442,26 +434,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
-                <a class="card__read-btn" href="/ua/fundraising/help-rehab">
+                <a class="card__read-btn" href="/ua/center">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["null", "null"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/June2022/snuUfMlETiFUHqUYJpf8.jpg" >
       <div class="card__content">
@@ -500,26 +486,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9">
-                    <input type="hidden" name="signature" value="lhGU6LQ/H3VPnWlvd96Xw781jC8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["lhGU6LQ/H3VPnWlvd96Xw781jC8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/June2022/PASVJwVWxFZsPdLuZYPR.jpg" >
       <div class="card__content">
@@ -558,26 +538,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzM1x1MDQzYlx1MDQ0ZVx1MDQzYVx1MDQzZVx1MDQzY1x1MDQzNVx1MDQ0Mlx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzkgXHUwNDQyXHUwNDM1XHUwNDQxXHUwNDQyLVx1MDQ0MVx1MDQzY1x1MDQ0M1x1MDQzNlx1MDQzYVx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzRcdTA0M2UgXHUwNDNkXHUwNDM4XHUwNDQ1IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9">
-                    <input type="hidden" name="signature" value="BsZrgWraD6Wy5UETctesYEDGVs0=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["BsZrgWraD6Wy5UETctesYEDGVs0=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzM1x1MDQzYlx1MDQ0ZVx1MDQzYVx1MDQzZVx1MDQzY1x1MDQzNVx1MDQ0Mlx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzkgXHUwNDQyXHUwNDM1XHUwNDQxXHUwNDQyLVx1MDQ0MVx1MDQzY1x1MDQ0M1x1MDQzNlx1MDQzYVx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzRcdTA0M2UgXHUwNDNkXHUwNDM4XHUwNDQ1IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/June2022/cJZfLvj8zTw30z70Q32h.jpg" >
       <div class="card__content">
@@ -616,26 +590,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/dopomogti-insulinom">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="fdAVNnlOBh3296alXSKwaO9qt8w=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["fdAVNnlOBh3296alXSKwaO9qt8w=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ1Nlx1MDQzZFx1MDQ0MVx1MDQ0M1x1MDQzYlx1MDQ1Nlx1MDQzZFx1MDQzZVx1MDQzYyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-True mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-True mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/June2022/mca05r3OzAFLp2IAqXY8.jpg" >
       <div class="card__content">
@@ -674,20 +642,14 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_True">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="tukxOEm1DF4MRR+HGAXM7PST9wM=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["tukxOEm1DF4MRR+HGAXM7PST9wM=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzMlx1MDQ1Nlx1MDQzOVx1MDQ0MVx1MDQ0Y1x1MDQzYVx1MDQzZVx1MDQzMlx1MDQzOFx1MDQzYyBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0MzhcdTA0M2RcdTA0MzBcdTA0M2MgXHUwNDEwNTYxNzsgXHUwNDEwMDk5ODsgXHUwNDEwMDI4NDsgXHUwNDEwMTI3NzsgXHUwNDEwMTEwOCIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL3VhXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
@@ -710,9 +672,8 @@
                 <a class='footer__nav-item' href='/ua/about-diabetes'>Про діабет</a>
                 <a class='footer__nav-item' href='/ua/fundraising'>Проєкти</a>
                 <a class='footer__nav-item' href='/ua/thanks'>Вiдгуки</a>
-                <a class='footer__nav-item ' href='/ua/fun'>Позитивник</a>
             </nav>
-            <button class='footer__support-btn donate-button'>
+            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
         </div>
@@ -785,21 +746,13 @@
                 <img src='/img/header/whatsapp_line.png'>
             </a>
         </div>
-        <button class='modal__support-btn donate-button'>
+        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
             Підтримати фонд
         </button>
     </div>
-</div>
-<div id="hidden-form" style="display: none;">
-    
-<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==" />
-    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=" />
-    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text" />
-</form>
-            
+</div>   
 </div>
 
-<script src="/source/script.js?_=22"></script>
+<script src="/source/script.js?_=23"></script>
 </body>
 </html>

@@ -164,8 +164,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=22"/>
-    <link rel="stylesheet" href="/source/style.css?_=22"/>
+    <link rel="stylesheet" href="/source/app.css?_=23"/>
+    <link rel="stylesheet" href="/source/style.css?_=23"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -238,7 +238,7 @@
     </div>
     <div class="header__bottom">
         <div class="container header__bottom-content">
-            <a class="logo" href="/">
+            <a class="logo" href="/en">
                 <img src="/img/header/logo_en.png"/>
             </a>
             <nav class="menu">
@@ -259,11 +259,8 @@
                 <a class="menu__item" href="/en/thanks">
                     Gratitudes
                 </a>
-                <a class="menu__item" href="/en/fun">
-                    Live goes on!
-                </a>
             </nav>
-            <button class="support-btn donate-button">
+            <button class="support-btn donate-button" data-liqpay='[null, null]'>
                 Donate
             </button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
@@ -282,9 +279,6 @@
                     </a>
                     <a class="menu_mobile__item" href="/en/thanks">
                         Gratitudes
-                    </a>
-                    <a class="menu_mobile__item" href="/en/fun">
-                        Live goes on!
                     </a>
                 </nav>
                 <div class="phones">
@@ -753,11 +747,8 @@
                 <a class='footer__nav-item' href='/en/thanks'>
                     Gratitudes
                 </a>
-                <a class='footer__nav-item' href='/en/fun'>
-                    Live goes on!
-                </a>
             </nav>
-            <button class='footer__support-btn donate-button'>
+            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
                 Donate
             </button>
         </div>
@@ -836,19 +827,12 @@
                 </svg>
             </a>
         </div>
-        <button class='modal__support-btn donate-button'>
+        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
             Donate
         </button>
     </div>
 </div>
-<div id="hidden-form" style="display: none;">
-   <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-      <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=" />
-      <input type="hidden" name="signature" value="8FCafqMc//6iKe9wB+eqZWs3FPc=" />
-      <input type="image" src="//static.liqpay.ua/buttons/p1en.radius.png" name="btn_text" />
-   </form>
-</div>
 
-<script src="/source/script.js?_=22"></script>
+<script src="/source/script.js?_=23"></script>
 </body>
 </html>

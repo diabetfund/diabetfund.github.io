@@ -165,8 +165,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=22"/>
-    <link rel="stylesheet" href="/source/style.css?_=22"/>
+    <link rel="stylesheet" href="/source/app.css?_=23"/>
+    <link rel="stylesheet" href="/source/style.css?_=23"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -248,9 +248,8 @@
                 <a class="menu__item " href="/ua/about-diabetes">Про діабет</a>
                 <a class="menu__item " href="/ua/fundraising">Проєкти</a>
                 <a class="menu__item " href="/ua/thanks">Вiдгуки</a>
-                <a class="menu__item " href="/ua/fun">Позитивник</a>
             </nav>
-            <button class="support-btn donate-button">
+            <button class="support-btn donate-button" data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
@@ -260,7 +259,6 @@
                     <a class="menu_mobile__item" href="/ua/about-diabetes">Про діабет</a>
                     <a class="menu_mobile__item" href="/ua/fundraising">Проєкти</a>
                     <a class="menu_mobile__item" href="/ua/thanks">Вiдгуки</a>
-                    <a class="menu_mobile__item" href="/ua/fun">Позитивник</a>
                 </nav>
                 <div class="phones">
                     <img class="header-icon phone-icon" src="/img/header/phone.png"/>
@@ -345,11 +343,11 @@
    Реабілітаційний центр у Словаччині
 </p>
 <div class="slide" data-background="/img/slides/slide-4.jpg" data-backgroundmini="/img/slides/slide-4-mini.jpg"></div>
-<p class="caption caption-3"  data-href='/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi'>
+<p class="caption caption-3"  data-href='/ua/fundraising/'>
    Допомога сенсорами вимірювання глюкози
 </p>
 <div class="slide" data-background="/img/slides/slide-6.jpg" data-backgroundmini="/img/slides/slide-6-mini.jpg"></div>
-<p class="caption caption-4"  data-href='/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih'>
+<p class="caption caption-4"  data-href='/ua/fundraising/'>
    Допомога глюкометрами й тест-смужками до них
 </p>
 <div class="slide" data-background="/img/slides/slide-8.jpg" data-backgroundmini="/img/slides/slide-8-mini.jpg"></div>
@@ -361,63 +359,68 @@
    Допомога ЗСУ
 </p>
     </div>
-    <section >
-        <h2 class="our-activity__title title main-title-rehub">
-            Реабілітаційний центр у Словаччині
-        </h2>
-       <div class="our-activity__content container">
-           <div style="margin-top:30px; " class="txt-block">
-               <p>
-                   Маємо чудову новину — невдовзі планується відкриття унікального Оздоровчо-Реабілітаційний Центру (ОРЦ) для діабетиків у Словаччині.
-                  </p> 
-                  <p>
-                   За підтримки Благодійного Фонду та всіх небайдужих громадян Центр надаватиме комплексну допомогу українцям з цукровим діабетом, як діточкам, так і дорослим. Головний корпус дозволяє поселити до 125 осіб, тож місця всім вистачить.
-                  </p>
-                  <b>
-                   Збір донатів вже відкрито!
-                  </b>
-                  <br/>
-                  <p>
-                   Ви маєте змогу допомогти оплатити поїздку до Центру людині з діабетом та її супроводжуючим. Більшу частину витрат на перебування пацієнтів в нашому Центрі фонд покриває самостійно, та з вашою підтримкою ми можемо зібрати достатню кількість грошей та забезпечити нашим громадянам повний курс оздоровчої програми.
-                  </p>
-                  <p>
-                   Кожен донат має значення. Ви можете подарувати 1 день або оплатити весь курс реабілітації в Центрі.
-                  </p>
-                  <p>
-                   <B>1 день = 96€</B> (вся програма оздоровлення, проживання-годування, екскурсії, трансфер)
-                  </p>
-                  <p>
-                   мінімальний термін програми оздоровлення = <b>15 днів</b>
-                  </p>
-           </div>
-           <div class="our-activity__img-wr">
-               <img src="/img/main/mini-1.png" class="promo-mini-1-pic">
-           </div>
-       </div>
-       <br/>
-       <h1 class="main-title-problems">Проблема діабету в Україні</h1>
-       <div class="our-activity__content container">
-           <div class="our-activity__img-wr">
-               <img src="/img/main/mini-2.jpg">
-           </div>
-           <div class="txt-block main-text-problems">
-               <p>
-                   Поширеність діабету у всьому світі та в Україні швидко та невпинно збільшується. Кожен день людини з діабетом є постійним балансуванням між рівнем цукру, ацетона, небезпечними ризиками коми та загрозами: серцевого нападу, інсульту, сліпоти, ниркової недостатності та ампутації кінцівок тощо.
-                  </p> 
-                  <p>
-                   При цьому завжди існували перебої із поставкою якісного інсуліну, не було програм допомоги для людей з діабетом, було відсутнє забезпечення інсуліновими помпами та системами моніторингу рівня глюкози в крові, а виплати за державною соціальною допомогою сягали вкрай низького рівня. З моменту повномасштабного вторгнення Росії всі ці проблеми збільшились та помножились, став критичними.
-                  </p>
-                  <b>
-                   На сьогоднішній день точних даних по кількості хворих в Україні немає, адже статистика не ведеться вже п'ять років. Спираючись на те, як швидко кількість хворих збільшується по всьому світу, можна зазначити, що цифра сягає кілька мільйонів українців. До того ж, фактор стресу, який переживають наші громадяни останній час, є одним з головних чинників виникнення діабету.
-                  </b>
-           </div>
-       </div>
-   </section>
+    <section>
+        <div class="our-activity__content container" style="margin-bottom: 50px;">
+            <table class="main-intro-logo">
+                <tr>
+                    <td style="width:20%;"></td>
+                    <td style="min-width:200px;"><img src="/img/main/logo200.png"/></td>
+                    <td style="width:20%;"></td>
+                    <td style="min-width:400px;"><img src="/img/main/solo_r400.png"/></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+            <table class="main-intro-logo-mb">
+                <tr>
+                    <td style="width:20%;"></td>
+                    <td style="min-width:100px;"><img src="/img/main/logo100x116.png"/></td>
+                    <td style="width:20%;"></td>
+                    <td style="min-width:200px;"><img src="/img/main/logo_r200x116.png"/></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="our-activity__content container" style="margin-bottom: 50px;">
+            <table class="main-intro-logo">
+                <tr>
+                    <td style="min-width:200px; font-size: 30px;  line-height: 1;">
+                        «Благодійний фонд допомоги та реабілітації хворих на цукровий діабет» — це міжнародна некомерційна організація, яка підтримує людей із цим діагнозом по всій Україні.
+                    </td>
+                    <td style="width:5%;"></td>
+                    <td style="min-width:200px;"><img src="/img/main/nam8rokiv200.png"/></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+            <table class="main-intro-logo-mb">
+                <tr>
+                    <td style="">
+                        «Благодійний фонд допомоги та реабілітації хворих на цукровий діабет» — це міжнародна некомерційна організація, яка підтримує людей із цим діагнозом по всій Україні.
+                    </td>
+                    <td style="width:5%;"></td>
+                    <td style="min-width:100px;"><img src="/img/main/nam8rokiv100.png"/></td>
+                    <td style="width:10%;"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="our-activity__content container">
+            З початком широмасштабного росiйського вторгнення в Україну в лютому 2022р. ми розширили зону нашої допомоги також i на постачання критично важливої гуманитарної допомоги для захисникiв України та цивiльного населення. Приєднуйтесь та долучайтесь до наших проєктiв. Разом до перемоги!
+        </div>
+        <div class="our-activity__content container">
+             <a class="card__read-btn" href="/ua/aboutus" style="display: inline-block; margin-top: 10px; margin-left: 20px; margin-bottom: 20px;">
+            Про фонд
+        </a>
+        </div>
+       
+    </section>
     <h2 class="our-activity__title title maint-title-proj">
         Поточнi проекти
     </h2>
         <div class="needs__list row main-needs-list" >
-            <div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+            <div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/July2022/palettes.jpg" >
       <div class="card__content">
@@ -456,26 +459,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/kherson-pallets">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["null", "null"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/July2022/center.jpg" >
       <div class="card__content">
@@ -514,26 +511,20 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
-                <a class="card__read-btn" href="/ua/fundraising/help-rehab">
+                <a class="card__read-btn" href="/ua/center">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==">
-                    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["null", "null"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
   </div>
 </div>
-<div class="col-md-6 col-lg-4 is-military-False mob-only_False">
+<div class="col-md-6 col-lg-4 is-military-False mob-only_{{MobOnly}}">
    <div class="card needs__list-item">
       <img class="card__img" src="/img/June2022/snuUfMlETiFUHqUYJpf8.jpg" >
       <div class="card__content">
@@ -572,20 +563,14 @@
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_False">
-                <a class="card__donate-btn needs-donate-btn need-donate" href="/">
-                    Підтримати
-                </a>
                 <a class="card__read-btn" href="/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi">
                     Дiзнатись бiльше
+                    <img src="/img/header/chevron-right.svg"/>
                 </a>
-              </div>
-              
-              <div class="fundraising-item__donate-form" style="display: none">
-                <form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-                    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9">
-                    <input type="hidden" name="signature" value="lhGU6LQ/H3VPnWlvd96Xw781jC8=">
-                    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-                </form>
+                <a class="card__donate-btn needs-donate-btn need-donate" href="/" data-liqpay='["lhGU6LQ/H3VPnWlvd96Xw781jC8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
+                    Підтримати
+                    <img src="/img/header/credit-card.svg"/>
+                </a>
               </div>
           </div>
       </div>
@@ -593,242 +578,151 @@
 </div>
         </div>
         <div class="proj-card-bottom-bts" >
-            <a class="card__read-btn" href="/ua/fundraising/" style="max-width:300px !important;margin-top:10px;">
+            <a class="card__read-btn" href="/ua/fundraising/" style="max-width:300px !important;margin-top: 10px; margin-bottom: 20px;">
                 Переглянути всі проекти
             </a>
         </div>
-
-  <section id="about-fund" class="about-fund hide_{{skipAbout}} ">
-    <div class="container about-fund__content">
-        <div>
-            <h2 class="about-fund__title title">
-                Про фонд
-            </h2>
-            <p class="about-fund__text">
-                «Благодійний фонд допомоги та реабілітації хворих на цукровий діабет» — це міжнародна некомерційна організація, яка підтримує людей із цим діагнозом по всій Україні.
+    <h2 class="our-activity__title title maint-title-proj">
+        Відгуки та звіти
+    </h2>
+    <div class="thanks" >
+        <div class="ht0 thank-card-wrap desc-only_False">
+   <table class="tanks_sign hide_True">
+      <tr>
+         <td><img src="/img/viber/card-64-ava.png" width="43" height="43" class="thank-ava visible_card-64-ava.png"></td>
+         <td><span  class="thanks-sign-text">&nbsp;Полiна Карпан&nbsp;</span></td>
+      </tr>
+   </table>
+   <img src="/img/viber/card-64.jpg" style="width:275px" class="visible_card-64.jpg"/>
+   <div style="padding: 10px;">Дуже вам дякуємо Едуард та вашiй командi 💛💙</div>
+</div>
+<div class="ht2 thank-card-wrap desc-only_False">
+   <table class="tanks_sign hide_True">
+      <tr>
+         <td><img src="/img/viber/card-12-ava.png" width="43" height="43" class="thank-ava visible_card-12-ava.png"></td>
+         <td><span  class="thanks-sign-text">&nbsp;Тарасенко Дарина&nbsp;</span></td>
+      </tr>
+   </table>
+   <img src="/img/viber/card-65.jpg" style="width:275px" class="visible_card-65.jpg"/>
+   <div style="padding: 10px;">Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️</div>
+</div>
+<div class="ht0 thank-card-wrap desc-only_False">
+   <table class="tanks_sign hide_True">
+      <tr>
+         <td><img src="/img/viber/card-61-ava.png" width="43" height="43" class="thank-ava visible_card-61-ava.png"></td>
+         <td><span  class="thanks-sign-text">&nbsp;Лiза&nbsp;</span></td>
+      </tr>
+   </table>
+   <img src="/img/viber/card-61.jpg" style="width:275px" class="visible_card-61.jpg"/>
+   <div style="padding: 10px;">Величезна подяка, забрали сенсори і багато всього</div>
+</div>
+<div class="ht0 thank-card-wrap desc-only_True">
+   <table class="tanks_sign hide_True">
+      <tr>
+         <td><img src="/img/viber/null" width="43" height="43" class="thank-ava visible_null"></td>
+         <td><span  class="thanks-sign-text">&nbsp;Юлiя&nbsp;</span></td>
+      </tr>
+   </table>
+   <img src="/img/viber/card-45.jpg" style="width:275px" class="visible_card-45.jpg"/>
+   <div style="padding: 10px;">Посилочку  отримали, дуже вдячні Вам за допомогу та Вашу працю в такий важкий час! Усім миру, здоров'я і добра!!!</div>
+</div>
+    </div>
+    <div class="proj-card-bottom-bts" >
+        <a class="card__read-btn" href="/ua/thanks" style="max-width:300px !important;margin-top: 5px; margin-bottom: 50px;">
+            Читати всі відгуки та звіти
+        </a>
+    </div>
+    <div class="our-activity__content container" style="margin-bottom: 50px;">
+        <table>
+            <tr>
+                <td style="width:30%"></td>
+                <td style="min-width: 300px;"><img src="/img/main/balls.png"/></td>
+                <td style="width:30%"></td>
+            </tr>
+        </table>
+    </div>
+    <section>
+        <h1 class="main-title-problems" style="margin-bottom: 20px;">
+            Проблема діабету в Україні
+        </h1>
+        <div class="our-activity__content container">
+            <div class="txt-block main-text-problems">
+            <p>
+                Поширеність діабету у всьому світі та в Україні швидко та невпинно збільшується. Кожен день людини з діабетом є постійним балансуванням між рівнем цукру, ацетона, небезпечними ризиками коми та загрозами: серцевого нападу, інсульту, сліпоти, ниркової недостатності та ампутації кінцівок тощо.
+            </p> 
+            <p>
+                При цьому завжди існували перебої із поставкою якісного інсуліну, не було програм допомоги для людей з діабетом, було відсутнє забезпечення інсуліновими помпами та системами моніторингу рівня глюкози в крові, а виплати за державною соціальною допомогою сягали вкрай низького рівня. З моменту повномасштабного вторгнення pосії всі ці проблеми збільшились та помножились, став критичними.
             </p>
-            <p class="about-fund__text">
-                Фонд збирає кошти і спрямовує їх на інформування та практичну допомогу усім, хто її потребує.
-                Ми надаємо життєво необхідні медикаменти та прилади: інсулін, тест-смужки, глюкометри, системи безперебійного контролю рівня цукру в крові, а також можливість користуватись унікальною системою загоєння ран німецької компанії Curasonix.
+            <p style="font-weight:700;">
+                На сьогоднішній день точних даних по кількості хворих в Україні немає, адже статистика не ведеться вже п'ять років. 
             </p>
-            
+            <p style="font-style:italic;">
+                Спираючись на те, як швидко кількість хворих збільшується по всьому світу, можна зазначити, що цифра сягає кілька мільйонів.
+            </p>
+            <p style="font-weight:700;">
+                До того ж, фактор стресу, який переживають наші громадяни останній час, є одним з головних чинників виникнення діабету.
+            </p>
+            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:10px; margin-bottom: 50px;">
+                Дізнатись більше про діабет
+            </a>
         </div>
-        <div class="about-fund__extended-info">
-            <div class="about-fund__info">
-                <div>
-                    <div class="about-fund__name">
-                        Эдуард Олександрович Піскунов
-                    </div>
-                    <div class="about-fund__position">
-                        Засновник фонду
-                    </div>
-                </div>
-                <img class="about-fund__signature" src="/img/signature.png">
+        </div>
+    </section>
+    <section class='support-details' >
+        <h2 class='support-details__title title'>
+            Зв’язатися з нами
+        </h2>
+        <div class='our-activity__content container'>
+            <div class='our-activity__img-wr'>
+                <img  class='support-details__img' src='/img/main/call_to_us.jpg' style="border-radius: 20px;" />
+            </div>
+            <div class='support-details__details'>
+                <h3 class='support-details__local-title'>
+                    Адреса та контакти
+                </h3>
+                <p class='support-details__local-text'>
+                    Ви можете написати свій запит нам на пошту або у Viber. Наразі у нас дуже багато запитів та прохань, тож відповідь може зайняти певний час. Дякуємо за розуміння!
+                </p>
+                <table >
+                    <tr>
+                        <td><img src="/img/header/phone-alt.svg"/></td>
+                        <td style="padding: 5px;">+380 (63) 536-42-54 (+Viber)</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/img/header/envelope.svg"/></td>
+                        <td style="padding: 5px;">
+                            <a class="contacts-info__link" href="mailto:info@diabet.fund">
+                            info@diabet.fund
+                        </a>
+                        </td>
+                        
+                    </tr>
+                </table>
+                <h3 class='support-details__local-title' style="margin-top: 10px;">Юридична адреса</h3>
+                <p>01001, м. Київ, вул. Велика Звіринецька, 63</p>
+                <p>ЄДРПОУ: 39909206</p>
+
+                <h3 class='support-details__local-title' style="margin-top: 10px;">
+                    Банківські рахунки
+                </h3>
+                <p id="copyText" class='support-details__local-text'>
+                    АТ КБ &quot;ПРИВАТБАНК&quot; <br/>
+                    SWIFT: PBANUA2X <br/>
+                    UAH: <span id="uahAccount">UA123052990000026005050305667</span> <br/>
+                    USD: <span id="usdAccount">UA113052990000026008050316738</span> <br/>
+                    EUR: UA343052990000026006050334046
+                </p>
+                <button id="copyBtn" class='support-details__copy-btn'>
+                    <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+                        <path
+                            d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+                    </svg>
+                    Копіювати
+                </button>
             </div>
         </div>
-    </div>
-</section>
-<h1 class="hide_{{skipAbout}} main-title-about">Засновники та партнери</h1>
-<div class="partners-grid">
-    <table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-piskunov.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Эдуард Піскунов</H2>
-           <br/>
-           <p>Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-boiko.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Тамара Бойко</H2>
-           <br/>
-           <p>Почесний член правління, представник Фонду на території Словаччини</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-piskariova.png">
-       </td>
-       <td class="parners-s">
-           <H2>Піскарьова Марина</H2>
-           <br/>
-           <p>Член правління фонду, адміністратор соціальної їдальні SET CATERING при підтримці World Central Kitchen, дизайнерка соціальних, екологічних та комерційних проєктів</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-AAA.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Андрій Андрєєв</H2>
-           <br/>
-           <p>Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-logvin.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Анна Логвін</H2>
-           <br/>
-           <p>Керівник проектів допомоги дітям та малозабезпеченим сім'ям</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-yanochkov.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Peter Yanachkov</H2>
-           <br/>
-           <p>Керуючий директор Pierce Capital Partners</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-LUNTER.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Ondrej Lunter</H2>
-           <br/>
-           <p>Голова Банськобистрицького краю в Словаччині</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-bagacka.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Michal Bagacka</H2>
-           <br/>
-           <p>Депутат і член правління автономного регіону Банська Бистриця</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-hnusta.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Hnusta Grigorij Samin</H2>
-           <br/>
-           <p>Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-dimplomati.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Дипломати</H2>
-           <br/>
-           <p>Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-diabete.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Diabite</H2>
-           <br/>
-           <p>Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-vyru.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Vyrų fondas</H2>
-           <br/>
-           <p>Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості</p>
-       </td>
-   </tr>
-</table>
-<table class="partners-tbl">
-   <tr>
-       <td class="parners-f">
-           <img  src="/img/main/ava-pcoket.jpg">
-       </td>
-       <td class="parners-s">
-           <H2>Pocket Hero</H2>
-           <br/>
-           <p>Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи.</p>
-       </td>
-   </tr>
-</table>
-</div>
+     </section>
 
-   <section class='support-details' >
-   <h2 class='support-details__title title'>
-       Реквізити для підтримки
-   </h2>
-   <div class='support-details__content container'>
-       <div class='support-details__img-wr'>
-           <img  class='support-details__img' src='/img/sidePicture.png' />
-       </div>
-       <div class='support-details__details'>
-           <h3 class='support-details__local-title'>
-               Адреса та контакти
-           </h3>
-           <p class='support-details__local-text'>
-               E-mail: <a
-                   href="mailto:info@diabet.fund">info@diabet.fund</a>
-               <br/>
-               Телефон/Viber: +380 (63) 536-42-54 <br/>
-               Юридична адреса: 01001, м. Київ, вул. Велика Звіринецька, 63 <br/>
-               ЄДРПОУ: 39909206
-           </p>
-           <hr/>
-           <h3 class='support-details__local-title'>
-               Банківські рахунки
-           </h3>
-           <p id="copyText" class='support-details__local-text'>
-               АТ КБ &quot;ПРИВАТБАНК&quot; <br/>
-               SWIFT: PBANUA2X <br/>
-               Розрахункові рахунки: <br/>
-               UAH: <span id="uahAccount">UA123052990000026005050305667</span> <br/>
-               USD: <span id="usdAccount">UA113052990000026008050316738</span> <br/>
-               EUR: UA343052990000026006050334046
-           </p>
-           <button id="copyBtn" class='support-details__copy-btn'>
-               <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
-                   <path
-                       d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
-               </svg>
-               Копіювати
-           </button>
-       </div>
-   </div>
 </main>
 <!-- FOOTER -->
 <footer>
@@ -843,9 +737,8 @@
                 <a class='footer__nav-item' href='/ua/about-diabetes'>Про діабет</a>
                 <a class='footer__nav-item' href='/ua/fundraising'>Проєкти</a>
                 <a class='footer__nav-item' href='/ua/thanks'>Вiдгуки</a>
-                <a class='footer__nav-item ' href='/ua/fun'>Позитивник</a>
             </nav>
-            <button class='footer__support-btn donate-button'>
+            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
         </div>
@@ -918,21 +811,13 @@
                 <img src='/img/header/whatsapp_line.png'>
             </a>
         </div>
-        <button class='modal__support-btn donate-button'>
+        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
             Підтримати фонд
         </button>
     </div>
-</div>
-<div id="hidden-form" style="display: none;">
-    
-<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==" />
-    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=" />
-    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text" />
-</form>
-            
+</div>   
 </div>
 
-<script src="/source/script.js?_=22"></script>
+<script src="/source/script.js?_=23"></script>
 </body>
 </html>

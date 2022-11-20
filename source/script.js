@@ -1,27 +1,63 @@
 
-const isEnglish = {
-    get val() {
-       var parts = ("; " + document.cookie).split("; is_english=");
-       if (parts.length == 2)
-         return parts.pop().split(";").shift() == 'true';
- 
-       return location.href.indexOf('/ua') < 0
+const lib = {
+    get isEnglish() {
+        var parts = ("; " + document.cookie).split("; is_english=");
+        if (parts.length == 2)
+            return parts.pop().split(";").shift() == 'true';
+  
+        return location.href.indexOf('/ua') < 0;
     },
-    set val(v) {
-       document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
+    set isEnglish(v) {
+        document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
+    },
+
+    _lang: null,
+    get lang() {
+        let {_lang} = this
+        if (_lang == null)
+            this._lang = _lang = this.isEnglish ? "en" : "ua";
+        return _lang;
+    },
+
+    sendLiqpay(sign, data, isNewWindow) {
+        var form = document.createElement("form");
+        if (!sign || sign == "null")
+            sign = this.isEnglish ? "8FCafqMc//6iKe9wB+eqZWs3FPc=" : "TVNsm5bs8KyxZhkpsexBFHb8Mb8=";
+        if (!data || data == "null")
+            data = this.isEnglish 
+            ? "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="
+            : "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==";
+
+        form.method = "POST";
+        form.action = "https://www.liqpay.ua/api/3/checkout";
+        form.innerHTML = `<input type="hidden" name="data" value="${data}"/>
+                <input type="hidden" name="signature" value="${sign}"/>
+                <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text"/>`;
+        if (isNewWindow === true)
+            form.target = "_blank";
+
+        document.getElementsByTagName("body")[0].appendChild(form);
+        form.submit();
+        form.remove();
     }
- };
+};
 
 [...document.querySelectorAll(".lang-switcher a")].forEach(a => 
     a.addEventListener("click", e => {
         e.preventDefault();
-        isEnglish.val = e.currentTarget.href.indexOf('/en') > -1;
+        lib.isEnglish = e.currentTarget.href.indexOf('/en') > -1;
         location.href = e.currentTarget.href;
-    })
-);
+    }));
+
+[...document.querySelectorAll('[data-liqpay]')].forEach(link => 
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        var [sign, data] = JSON.parse(e.currentTarget.dataset.liqpay);
+        lib.sendLiqpay(sign, data, true);
+    }));
 
  
-var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
+var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks" ];
 
 var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
 
@@ -40,12 +76,10 @@ var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
         a.classList.add("footer__nav-item_active");
 });
 
-if (!isEnglish.val)
+if (!lib.isEnglish)
     document.querySelector(".lang-switcher").classList.add("lang-switcher__active");
 
 if (location.href.indexOf("/fundraising") > -1) {
-    [...document.getElementsByClassName("need-donate")].forEach(subscribeNeedsDonate)
-
     var search = location.search;
     var tabs = [...document.querySelectorAll(".needs-filter__item")];
     var tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1));
@@ -62,8 +96,7 @@ if (location.href.indexOf("/fundraising") > -1) {
 }
 
 function pageArrow(clas, path, linkPage) {
-    var lang = isEnglish.val ? 'en' : 'ua';
-    var [tag, color, href] = linkPage == null ? ["span", "#ccc", ""] : ["a", "#01B53E", `/${lang}/news/?page=${linkPage}`];
+    var [tag, color, href] = linkPage == null ? ["span", "#ccc", ""] : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
     return `<${tag} class="${clas}" href="${href}">
         <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
             <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -79,11 +112,9 @@ if (paginationPane){
     [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) =>
         card.style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
 
-    var lang = isEnglish.val ? 'en' : 'ua';
-
     var items = pages.map(p => p-1 == curIdx
         ? `<span class="pagination__item pagination__item_active">${p}</span>`
-        : `<a class="pagination__item" href="/${lang}/news/?page=${p}">${p}</a>`);
+        : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
 
     paginationPane.innerHTML = `${pageArrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
     <div class="pagination__items-wr">${items.join('')}</div>
@@ -101,7 +132,7 @@ if (copyBtn) {
 }
 
 function copyToClipboard() {
-    const copyText = document.getElementById(`${isEnglish.val ? "usd" : "uah"}Account`).innerText
+    const copyText = document.getElementById(`${lib.isEnglish ? "usd" : "uah"}Account`).innerText
     navigator.clipboard.writeText(copyText).then(() => {
         alert("Copied to clipboard")
     })
@@ -188,28 +219,6 @@ if (documentModal && showDocumentBtn) {
     })
 }
 
-const fundraisingItemsDonateBtns = [...document.getElementsByClassName('fundraising-item__donate-btn')]
-const fundraisingItemsDonateForm = document.getElementById('fundraising-item__donate-form')
-fundraisingItemsDonateBtns.forEach(b => {
-    b.addEventListener('click', function (e) {
-        fundraisingItemsDonateForm.querySelector('form').setAttribute('target', '_blank')
-        fundraisingItemsDonateForm.querySelector('form').submit()
-    })
-})
-
-/*donate-button*/
-const donateButtons = [...document.getElementsByClassName('donate-button')]
-const hiddenFormWr = document.getElementById('hidden-form')
-const hiddenForm = hiddenFormWr.querySelector('form')
-
-donateButtons.forEach(b => {
-    b.addEventListener('click', function (e) {
-        e.preventDefault()
-        hiddenForm.setAttribute('target', '_blank')
-        hiddenForm.submit()
-    })
-});
-
 (([triggers, contents]) => {
     triggers.forEach(item =>
         item.addEventListener('click', function (e) {
@@ -246,22 +255,9 @@ if (articleContent) {
     })
 }
 
-function subscribeNeedsDonate(b){
-    b.addEventListener('click', function (e) {
-        e.preventDefault()
-        const form = b.parentNode.nextElementSibling.querySelector('form')
-        form.setAttribute('target', '_blank')
-        form.submit()
-    })
-}
-
-const needsDonateBtns = [...document.getElementsByClassName('needs-donate-btn')]
-if (needsDonateBtns)
-    needsDonateBtns.forEach(subscribeNeedsDonate);
-
 (slider => {
     if (!slider)
-    return;
+        return;
     const slideArray = 
         [...document.querySelectorAll('.slider div')].map(({dataset: set}) => [set.background, set.backgroundmini]);
 
@@ -271,9 +267,9 @@ if (needsDonateBtns)
     function advanceSliderItem() {
         curSlideIndex++;
 
-        if (curSlideIndex >= slideArray.length) {
+        if (curSlideIndex >= slideArray.length)
             curSlideIndex = 0;
-        }
+            
         let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
         slider.style.cssText = 'background: url("' + url + '") no-repeat center center; background-size: cover;';
 

@@ -165,8 +165,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=22"/>
-    <link rel="stylesheet" href="/source/style.css?_=22"/>
+    <link rel="stylesheet" href="/source/app.css?_=23"/>
+    <link rel="stylesheet" href="/source/style.css?_=23"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -248,9 +248,8 @@
                 <a class="menu__item " href="/ua/about-diabetes">Про діабет</a>
                 <a class="menu__item " href="/ua/fundraising">Проєкти</a>
                 <a class="menu__item " href="/ua/thanks">Вiдгуки</a>
-                <a class="menu__item " href="/ua/fun">Позитивник</a>
             </nav>
-            <button class="support-btn donate-button">
+            <button class="support-btn donate-button" data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
@@ -260,7 +259,6 @@
                     <a class="menu_mobile__item" href="/ua/about-diabetes">Про діабет</a>
                     <a class="menu_mobile__item" href="/ua/fundraising">Проєкти</a>
                     <a class="menu_mobile__item" href="/ua/thanks">Вiдгуки</a>
-                    <a class="menu_mobile__item" href="/ua/fun">Позитивник</a>
                 </nav>
                 <div class="phones">
                     <img class="header-icon phone-icon" src="/img/header/phone.png"/>
@@ -432,9 +430,8 @@
                 <a class='footer__nav-item' href='/ua/about-diabetes'>Про діабет</a>
                 <a class='footer__nav-item' href='/ua/fundraising'>Проєкти</a>
                 <a class='footer__nav-item' href='/ua/thanks'>Вiдгуки</a>
-                <a class='footer__nav-item ' href='/ua/fun'>Позитивник</a>
             </nav>
-            <button class='footer__support-btn donate-button'>
+            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
                 Підтримати фонд
             </button>
         </div>
@@ -507,21 +504,13 @@
                 <img src='/img/header/whatsapp_line.png'>
             </a>
         </div>
-        <button class='modal__support-btn donate-button'>
+        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
             Підтримати фонд
         </button>
     </div>
-</div>
-<div id="hidden-form" style="display: none;">
-    
-<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-    <input type="hidden" name="data" value="eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==" />
-    <input type="hidden" name="signature" value="TVNsm5bs8KyxZhkpsexBFHb8Mb8=" />
-    <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text" />
-</form>
-            
+</div>   
 </div>
 
-<script src="/source/script.js?_=22"></script>
+<script src="/source/script.js?_=23"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 22;
+var version = 23;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 var (projects, news, partners, thanks, slides_) = 
@@ -19,14 +19,14 @@ void Render(string lang)
     string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
         string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
 
-    View master = new(Read("master")), 
+    View master = new(Read("master")), thank = new(ReadComm("thankCard")),
         newsCard = new(Read("news/card")), newsPage = new(Read("news/page")),
         projPage = new(Read("projects/page")), projCard = new(Read("projects/card"));
 
     string slides = Join(new(Read("slide")), slides_),
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
-
+        topThanks = Join(thank, thanks.Take(4).Select((t, i) => t with { HideCaption = true, DesctopOnly = i == 3 })),
         topProjects = Join(projCard, projects.Take(3));
 
     void Out(string content, string enPath, object? arg = null, string? uaPath = null)
@@ -47,13 +47,13 @@ void Render(string lang)
     {
         partners = Join(new(ReadComm("partner")), partners)
     });
-    Out("index", "", new{ topProjects, payDetails, slides, founders });
+    Out("index", "", new { topProjects, payDetails, slides, topThanks });
     Out("center", "/center", new { payDetails, founders, skipAbout = true });
     Out("aboutus", "/aboutus", new { payDetails, founders });
 
-    Out("thanks", "/thanks", new { content = Join(new(ReadComm("thankCard")), thanks) });
+    Out("thanks", "/thanks", new { content = Join(thank, thanks) });
 
-    foreach (var page in "about-diabetes contacts fun founding-documents".Split(' '))
+    foreach (var page in "about-diabetes contacts founding-documents".Split(' '))
         Out(page, "/" + page);
 
     Out("projects/index", "/fundraising", new { FundsList = Join(projCard, projects) });
@@ -61,7 +61,7 @@ void Render(string lang)
     foreach (var proj in projects)
         if (Read("projects/" + proj.Id).Split("{{projDoc}}") is [var contentF, var contentS])
         {
-            var args = new { contentF, contentS, report = proj.ReportId is { } id ? Read("projects/"+id) : null };
+            var args = new { contentF, contentS, report = proj.ReportId is {} id ? Read("projects/"+id) : null };
             Out(projPage.Run(args, proj, proj.Entry(lang)), "/fundraising/" + proj.Id);
         }
     
@@ -95,15 +95,21 @@ record NewsEntry(string Id) : Entry;
 
 record News(string Date) : Entity<NewsEntry>;
 
-record ProjEntry(string Data, string Signature, string Pdf): Entry;
+record PayEntry(string? Data, string? Signature): Entry;
 
-record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId, bool MobOnly = false): Entity<ProjEntry>
+record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId, string Pdf) : Entity<PayEntry>
 {
     public int FundPerc => (int)((double)Fund / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
     public bool IsFull => Need == Fund;
+    public string Url => Uri(Id);
+
+    public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(string? Avatar, int HRank) : Entity;
+record Thanks(string? Avatar, int HRank, bool HideCaption = false, bool DesctopOnly = false) : Entity;
 
-record Slide(string Mini, int Index, string Url) : Entity;
+record Slide(string Mini, int Index, string ProjectId) : Entity<PayEntry>
+{
+    public string Url => Proj.Uri(ProjectId);
+}

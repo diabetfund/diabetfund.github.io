@@ -24,6 +24,17 @@
   align-items: center;
 }
 
+.slide-cap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+.slide-cap a {
+  font-size: 14px !important;
+  padding: 3px !important;
+}
+
 .needs__list-item{
   border-radius: 10px;
   overflow: hidden;
@@ -44,11 +55,24 @@
     margin: 0 auto;
 }
 
+.card__read-btn img {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left:5px;
+}
+
+.card__donate-btn img {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left:5px;
+}
+
 @media (max-width: 575px){
     .support-btn{
         font-size: 12px;
         padding: 5px;
     }
+
 }
 
 ul {
@@ -144,6 +168,16 @@ ul {
     box-shadow: 0.20rem 0.20rem #0c9a56, -0.20rem -0.20rem #0c9a56;
 }
 
+.main-intro-logo {
+  display: none;
+}
+.main-intro-logo-mb {
+  display: block;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+  margin-top: -80px;
+}
 
 .slider {
     position: relative;
@@ -186,11 +220,19 @@ ul {
 
   
 @media(min-width : 768px) {
-    
-    .partners-grid {
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .main-intro-logo {
+    display: block;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+  .main-intro-logo-mb {
+    display: none;
+  }
+  .partners-grid {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+  }
         
     .promo-1-pic {
         display: block;
@@ -267,7 +309,6 @@ ul {
     padding: 0px;
     margin: 0px;
   }
-
   .center-invs {
     max-width: 1200px;
     margin: 0 auto;
@@ -396,7 +437,7 @@ ul {
     margin-bottom: -20px;
   }
   .main-title-rehub {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
   .main-title-problems {
     margin-left: 50px;
@@ -427,6 +468,9 @@ ul {
   }
 
   @media (max-width: 600px) {
+    .desc-only_True {
+      display: none;
+    }
     .main-title-slides {
       margin-top: 0px;
       margin-bottom: -30px;

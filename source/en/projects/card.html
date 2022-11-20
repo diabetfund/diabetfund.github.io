@@ -37,19 +37,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_{{IsFull}}">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/">
-                  Donate
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/{{Id}}">
+              <a class="card__read-btn" href="/en/{{Url}}">
                   Read more
+                  <img src="/img/header/chevron-right.svg"/>
               </a>
-            </div>
-            <div class="fundraising-item__donate-form" style="display: none">
-<form method="POST" action="https://www.liqpay.ua/api/3/checkout" accept-charset="utf-8">
-<input type="hidden" name="data" value="{{Data}}">
-<input type="hidden" name="signature" value="{{Signature}}">
-<input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text">
-</form>
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["{{Signature}}", "{{Data}}"]'>
+                Donate
+                <img src="/img/header/credit-card.svg"/>
+            </a>
             </div>
         </div>
       </div>
