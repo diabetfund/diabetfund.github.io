@@ -336,3 +336,28 @@ if (articleContent) {
     if (piskunovDisease)
         piskunovDisease.innerHTML = piskunovDiseaseAges.toString();
 })();
+
+(([form, butt]) => {
+    if (!form || !butt)
+        return;
+    var setStatus = text=> 
+        document.getElementById("my-form-status").innerHTML =text;
+    
+    butt.addEventListener("click", e => {
+        e.preventDefault();
+        fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
+        .then(response => {
+          if (response.ok) {
+            setStatus(lib.isEnglish ? "Your message has been sent": "Ваше повідомлення відправлено!");
+            form.reset()
+          } 
+          else
+            response.json().then(data =>
+              setStatus(Object.hasOwn(data, 'errors')
+                ? data.errors.map(_=>_.message).join(", ")
+                : lib.isEnglish ? "Something went wrong": "щось пішло не так"))
+        })
+        .catch(error => setStatus(lib.isEnglish ? "Something went wrong": "щось пішло не так"));
+    });
+
+})([document.getElementsByClassName("user-form")[0], document.getElementById("email-submit")]);

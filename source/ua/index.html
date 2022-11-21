@@ -120,7 +120,7 @@
         </div>
         </div>
     </section>
-    <section class='support-details' >
+    <section style="margin-bottom: 50px;" >
         <h2 class='support-details__title title'>
             Зв’язатися з нами
         </h2>
@@ -174,5 +174,31 @@
             </div>
         </div>
      </section>
-
+    <section>
+        <h2 class="main-title-problems">Якщо у вас є пропозиції та їдеї, напишіть нам:</h2>
+        <div class='our-activity__content container' style="margin-top:20px;">
+            <form class="form user-form" action="https://formspree.io/f/mjvzzrvr">
+                <div style="display: flex; flex-wrap: wrap;">
+                    <div class="col-lg-6">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iм'я
+                        <input class="form__field" type="text" name="name" placeholder="Напишіть, як до вас звертатися"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email
+                        <input class="form__field" type="email" name="email" placeholder="user@gmail.com"/>
+                    </div>
+                    <div class="col-lg-6">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Повiдомлення
+                        <textarea class="form__field form__message" name="message" placeholder="Напишiть ваше повiдомлення"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-12">
+                        <button id="email-submit" class="email__submit" type="button">
+                            Вiдправити
+                        </button>
+                    </div>
+                    <p id="my-form-status" style="margin-left: 100px;"></p>
+                </div>
+            </form>
+        </div>
+    </section>
 </main>

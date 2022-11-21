@@ -599,3 +599,73 @@ ul {
     color: #0c9a56;
   }
 
+
+  .user-form .form__field {
+    margin-bottom: 30px;
+}
+.user-form .form__message {
+  height: 155px;
+}
+.form__message {
+  padding: 12px 30px;
+  border-radius: 25px;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form input, .form textarea {
+  -webkit-appearance: none;
+}
+.form__field {
+  font-size: 14px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  padding: 0 30px;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s;
+  outline: 0;
+}
+
+.col-lg-6{
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.email__submit{
+  border-radius: 6px;
+  max-width: 174px;
+  border: 0px solid red;
+  background: #0c9a56;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  float: left;
+  margin-left: 20px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+@media (min-width: 992px){
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
