@@ -340,8 +340,7 @@ if (articleContent) {
 (([form, butt]) => {
     if (!form || !butt)
         return;
-    var setStatus = text=> 
-        document.getElementById("my-form-status").innerHTML =text;
+    var setStatus = text => document.getElementById("my-form-status").innerHTML =text;
     
     butt.addEventListener("click", e => {
         e.preventDefault();
