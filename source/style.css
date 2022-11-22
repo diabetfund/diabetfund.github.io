@@ -430,7 +430,9 @@ ul {
     .thanks{grid-template-columns: 1fr 1fr 1fr 1fr;}
   }
 .main-slider-add{
-  max-width:1200px; width:100%; margin-top: 5px !important;
+  max-width:1200px;
+  width:100%;
+  margin-top: 0px !important;
 }
   .main-title-slides {
     margin-top: 49px;
@@ -601,10 +603,10 @@ ul {
 
 
   .user-form .form__field {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .user-form .form__message {
-  height: 155px;
+  height: 132px;
 }
 .form__message {
   padding: 12px 30px;
@@ -629,7 +631,7 @@ textarea {
   width: 100%;
   border-radius: 10px;
   border: 2px solid lightgray;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-transition: background .3s;
   -o-transition: background .3s;
   transition: background .3s;
@@ -656,7 +658,7 @@ textarea {
   padding: 10px;
   float: left;
   margin-left: 20px;
-  margin-top: -20px;
+  margin-top: 0px;
   margin-bottom: 50px;
   cursor: pointer;
 }
