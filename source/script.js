@@ -5,7 +5,9 @@ const lib = {
         if (parts.length == 2)
             return parts.pop().split(";").shift() == 'true';
   
-        return location.href.indexOf('/ua') < 0;
+        var val = location.href.indexOf('/en') > -1;
+        setTimeout(() => lib.isEnglish = val, 50);
+        return val;
     },
     set isEnglish(v) {
         document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";

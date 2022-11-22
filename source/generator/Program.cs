@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 25;
+var version = 26;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 var (projects, news, partners, thanks, slides_) = 
