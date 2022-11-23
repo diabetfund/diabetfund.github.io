@@ -59,7 +59,7 @@ const lib = {
     }));
 
  
-var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks" ];
+var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
 
 var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
 

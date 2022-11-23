@@ -55,7 +55,7 @@ void Render(string lang)
 
     Out("thanks", "/thanks", new { content = Join(thank, thanks) });
 
-    foreach (var page in "about-diabetes contacts founding-documents".Split(' '))
+    foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
 
     Out("projects/index", "/fundraising", new { FundsList = Join(projCard, projects) });
