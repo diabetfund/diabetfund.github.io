@@ -50,6 +50,57 @@
          "Descr": "Good evening. I wanted to thank your foundation, your entire team for such a huge and sincere help. We strongly believe that everything will end soon, victory will be ours."
       }
    },
+
+   {
+      "Pic": "card-68.jpg",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Оля",
+         "Descr": "Щиро ДЯКУЄМО  Едуарду та команді за підтримку, за допомогу нашим діткам , за доброту та людяність. Здоров'я та мирного неба Вам!!!!!"
+      },
+      "En": {
+         "Title": "Olja",
+         "Descr": "We sincerely THANK Eduard and the team for their support, for helping our children, for their kindness and humanity. Health and a peaceful sky to you!!!!!"
+      }
+   },
+   {
+      "Pic": "card-69.jpg",
+      "Avatar": "card-56-ava.png",
+      "HRank": 1,
+      "Ua": {
+         "Title": "Людмила",
+         "Descr": "Добрий день. Велика подяка за лібри Едуарду, Ігору і вашому фонду що допомагаєте нашим дітям!!! Для нас лібри- це наші очі, ми можемо бачити цукор без кожен день проколів по декілька разів пальчиків, а від цукрів напряму залежить здоров'я і життя"
+      },
+      "En": {
+         "Title": "Ludmila",
+         "Descr": "Good day. Many thanks for the libra to Eduard, Igor and your foundation that helps our children!!! For us, Libra is our eyes, we can see sugar without pricking our fingers several times every day, and health and life directly depend on sugar."
+      }
+   },
+   {
+      "Pic": "card-70.jpg",
+      "Avatar": "card-70-ava.png",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Анастасія Коваленко",
+         "Descr": "Дрброго здоров'я.Рибак отримала.Дякую 💛💙"
+      },
+      "En": {
+         "Title": "Anastasia Kovalenko",
+         "Descr": "Good health. Rybak got it. Thank you 💛💙"
+      }
+   },
+   {
+      "Pic": "card-71.jpg",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Ірина Ільчук",
+         "Descr": "Доброго дня дякуемо за допомогу!!"
+      },
+      "En": {
+         "Title": "Irina Ilchuk",
+         "Descr": "Good day, thank you for your help!!"
+      }
+   },
    {
       "HRank":2,
       "Ua": {
@@ -59,6 +110,57 @@
       "En": {
          "Title": "Larisa",
          "Descr": "Eduard, and your entire team! Thank you all so much. For the fact that during the war, when it is hard for everyone, you really help. Do incredible things. Spending your strength and health to help others. Looking for and seeking help. Such people will raise Ukraine. Good always comes back a hundredfold. Good attracts good. We Ukrainians are strong and self-sufficient, strong-willed. When you look at our defenders, you are full of pride. These are our brave boys and girls. Look at the volunteers. These are strong-minded and purposeful boys and girls. Well, there is no other nation like us in the whole world. The whole universe is blue-yellow. We are strong, indomitable, strong-willed. And we will defeat that poor army. And God willing, we will defeat that damned diabetes. And whoever doesn't like it, let him go another way. There are things, actions - priceless. Every person has a gift. The gift of being human. But not all people keep it, it gets lost somewhere... and you haven't lost it. Hold fast this gift. To the evil of all enemies!))) Good health and success in all your endeavors. Glory to Ukraine!"
+      }
+   },
+   {
+      "Pic": "card-72.jpg",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Наталія Дорецька",
+         "Descr": "Доброго дня! Дякую за таку необхідну нам усім допомогу."
+      },
+      "En": {
+         "Title": "Natalia Doretska",
+         "Descr": "Hello! Thank you for the much needed help we all need."
+      }
+   },
+   {
+      "Pic": "card-73.jpg",
+      "Avatar": "card-73-ava.png",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Кувичко Оксана",
+         "Descr": "Дякую велике всім, хто бере участь у допомозі)) не тільки для дітей, а й для дорослих😊🥰"
+      },
+      "En": {
+         "Title": "Kuvichko Oksana",
+         "Descr": "Thank you so much to everyone who participates in helping)) not only for children, but also for adults😊🥰"
+      }
+   },
+   {
+      "Pic": "card-74.jpg",
+      "Avatar": "card-74-ava.png",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Єсікова Світлана",
+         "Descr": "Щира подяка фонду за допомогу тест-смужками🥰"
+      },
+      "En": {
+         "Title": "Yesikova Svitlana",
+         "Descr": "Sincere thanks to the foundation for the help with the test strips🥰"
+      }
+   },
+   {
+      "Pic": "card-75.jpg",
+      "Avatar": "card-75-ava.png",
+      "HRank": 0,
+      "Ua": {
+         "Title": "Ольга Снаговська",
+         "Descr": "Від щирого серця, хочемо подякувати фонду за надану допомогу! Бажаємо процвітання, сил, терпіння та міцного здоров'я!🙏"
+      },
+      "En": {
+         "Title": "Olga Snagovska",
+         "Descr": "From the bottom of our hearts, we want to thank the foundation for the assistance provided! We wish prosperity, strength, patience and good health!🙏"
       }
    },
    {
