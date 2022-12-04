@@ -14,7 +14,7 @@ record View(string Template)
             Lambda<Func<object, (string, object)[]>>(
                 NewArrayInit(typeof((string, object)),
                     from prop in type.GetProperties()
-                    where Type.GetTypeCode(prop.PropertyType) is not TypeCode.Object
+                    where prop.Name is not ("En" or "Ua")
                     select New(tupleCtor,
                         Constant(prop.Name),
                         Convert(Property(Convert(arg, type), prop), typeof(object)))),

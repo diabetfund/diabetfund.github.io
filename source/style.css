@@ -660,6 +660,7 @@ ul {
 .form__message {
   padding: 12px 30px;
   border-radius: 25px;
+  padding-top: 10px;
 }
 
 textarea {
