@@ -246,6 +246,7 @@ ul {
     transition: all 0.8s ease-in-out;
     text-shadow: 1px 1px 2px black;
     padding-bottom: 80px;
+    min-width: 400px;
   }
   
   .caption small {
@@ -431,7 +432,7 @@ ul {
 }
 
 .thank-descr-main {
-  padding: 10px;
+  padding: 10px 0px;
   color: #88928D;
   height: 6.7em;
   overflow-y: hidden;
