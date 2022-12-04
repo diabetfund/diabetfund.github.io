@@ -215,16 +215,16 @@
       }
    },
    {
-      "Pic":"card-4.jpg",
+      "Pic":"card-76.jpg",
       "Avatar": "card-4-ava.png",
-      "HRank":1,
+      "HRank":0,
       "Ua": {
          "Title": "Тетяна Мінець",
-         "Descr": "Добрий вечір. Вибачаюсь, що так пізно, але до завтра вже не зможу дочекатися. Хотілось подякувати Вашому фонду, Вашій всій команді за таку величезну і щиру допомогу. Программа 50/50, яку Ви запустили, це як спасіння на сьогоднішній час. Дитина щаслива і ми, батьки разом з нею. Ми дуже вдячні...Дуже віриться, що скоро все закінчиться, перемога буде нашою і у всіх все налагодиться, і тоді ми зможемо допомагати більше фонду для реабілітаційного центру."
+         "Descr": "Хотіли подякувати Вашому фонду за допомогу та швидку реакцію. Наш як раз відпрацював і сьогодні ставити новий. Хочеться, щоб всі, кому Ваш фонд допомагає, також швидко реагували на зустрічну допомогу по можливості. Ви круті та щирі, дуже Вам дякуємо! Все буде Україна!"
       },
       "En": {
          "Title": "Tatyana Minets",
-         "Descr": "Good evening. I'm sorry it's so late, but I can't wait until tomorrow. I wanted to thank your foundation, your entire team for such a huge and sincere help. The 50/50 program that you launched is like salvation for today. The child is happy and we, the parents, are with her. We are very grateful...Hopefully it will all be over soon, victory will be ours and everyone will be fine, and then we will be able to contribute more to the rehabilitation center fund."
+         "Descr": "We wanted to thank your foundation for the help and quick response. Ours just worked and today we are installing a new one. We would like everyone who is helped by your foundation to respond quickly to counter-assistance if possible. You are cool and sincere, thank you very much! Everything will be Ukraine!"
       }
    },
    {
@@ -328,6 +328,19 @@
       "En": {
          "Title": "Viktor Tsvil",
          "Descr": "Thanks for the help! Got."
+      }
+   },
+   {
+      "Pic":"card-4.jpg",
+      "Avatar": "card-4-ava.png",
+      "HRank":1,
+      "Ua": {
+         "Title": "Тетяна Мінець",
+         "Descr": "Добрий вечір. Вибачаюсь, що так пізно, але до завтра вже не зможу дочекатися. Хотілось подякувати Вашому фонду, Вашій всій команді за таку величезну і щиру допомогу. Программа 50/50, яку Ви запустили, це як спасіння на сьогоднішній час. Дитина щаслива і ми, батьки разом з нею. Ми дуже вдячні...Дуже віриться, що скоро все закінчиться, перемога буде нашою і у всіх все налагодиться, і тоді ми зможемо допомагати більше фонду для реабілітаційного центру."
+      },
+      "En": {
+         "Title": "Tatyana Minets",
+         "Descr": "Good evening. I'm sorry it's so late, but I can't wait until tomorrow. I wanted to thank your foundation, your entire team for such a huge and sincere help. The 50/50 program that you launched is like salvation for today. The child is happy and we, the parents, are with her. We are very grateful...Hopefully it will all be over soon, victory will be ours and everyone will be fine, and then we will be able to contribute more to the rehabilitation center fund."
       }
    },
    {

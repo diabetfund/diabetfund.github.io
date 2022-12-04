@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=26"/>
-    <link rel="stylesheet" href="/source/style.css?_=26"/>
+    <link rel="stylesheet" href="/source/app.css?_=27"/>
+    <link rel="stylesheet" href="/source/style.css?_=27"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -262,9 +262,7 @@
                     Fun
                 </a>
             </nav>
-            <button class="support-btn donate-button" data-liqpay='[null, null]'>
-                Donate
-            </button>
+            <button class="support-btn donate-button" data-liqpay='[null, null]'>Donate</button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
                 <nav id="menu_mobile" class="menu_mobile">
                     <a class="menu_mobile__item" href="/en/center">
@@ -385,9 +383,19 @@
 <p class="caption caption-6"  data-href='/en/fundraising/assistance-to-zsu'>
    Assistance to ZSU
 </p>
+      <table style="position: absolute;display: inline-block; bottom: 0; margin:0;">
+        <tr>
+            <td style="padding:20px;">
+                <button id="supp-slide" class="support-btn_comm donate-button">Підтримати</button>
+            </td>
+            <td>
+                <a id="more-slide" class="support-btn_comm_rev" href="/">Дізнатись більше</a>
+            </td>
+        </tr>
+      </table>
     </div>
     <section>
-        <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
+        <div class="our-activity__content container container_small" style="margin-bottom: 20px;">
             <table class="main-intro-logo">
                 <tr>
                     <td style="width:20%;"></td>
@@ -407,8 +415,6 @@
                 </tr>
             </table>
         </div>
-    </section>
-    <section>
         <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
             <table class="main-intro-logo">
                 <tr>
@@ -437,16 +443,18 @@
             With the beginning of the large-scale Russian invasion of Ukraine in February 2022. we expanded the area of our assistance also to supply critically important humanitarian aid for the defenders of Ukraine and the civilian population. Join and participate in our projects. Together to victory!
         </div>
         <div class="our-activity__content container container_small">
-            <a class="card__read-btn" href="/en/aboutus" style="display: inline-block; margin-top: 10px; margin-left: 20px; margin-bottom: 20px;">
+            <a class="card__read-btn" href="/en/aboutus" style="display: inline-block; margin-top: 30px; margin-left: 20px; margin-bottom: 20px;">
                 About the fund
             </a>
         </div>
     </section>
-    <h2 class="our-activity__title title maint-title-proj" >
-        Current projects
-     </h2>
-     <div class="needs__list row main-needs-list">
-        <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
+    <section>
+        <div class="container">
+            <h1 class="our-activity__title title maint-title-proj" >
+                Current projects
+            </h1>
+            <div class="needs__list row main-needs-list">
+                <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
       <img lclass="card__img" src="/img/July2022/palettes.jpg"/>
       <div class="card__content">
@@ -485,14 +493,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/fundraising/kherson-pallets">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
@@ -537,14 +545,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/fundraising/assistance-to-zsu">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
@@ -589,14 +597,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/center">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
@@ -641,14 +649,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
@@ -693,14 +701,14 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
@@ -745,73 +753,54 @@
               </tr>
             </tbody></table>
             <div class="proj-card-bottom-bts hide_False">
+              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["RwuqxeGZbEcqvZ/eCexT/ZutlRQ=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="]'>
+                Donate
+                <!--<img src="/img/header/credit-card.svg"/>-->
+              </a>
               <a class="card__read-btn" href="/en/fundraising/dopomogti-insulinom">
                   Read more
                   <!--<img src="/img/header/chevron-right.svg"/>-->
               </a>
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["RwuqxeGZbEcqvZ/eCexT/ZutlRQ=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-            </a>
             </div>
         </div>
       </div>
   </div>
 </div>
-     </div>
-     <div class="proj-card-bottom-bts" >
-        <a class="card__read-btn" href="/en/fundraising/" style="max-width:300px !important;margin-top:10px;">
-            View all projects
-        </a>
-    </div>
-
-    <h2 class="our-activity__title title maint-title-proj">
+            </div>
+            <div class="proj-card-bottom-bts" >
+                <a class="card__read-btn" href="/en/fundraising/" style="max-width:300px !important; margin-top:30px;">
+                    View all projects
+                </a>
+            </div>
+        </div>
+    </section>
+    <h2 class="our-activity__title title maint-title-proj" style="margin-bottom: 20px;">
         Reviews and reports
     </h2>
     <div class="thanks" >
-        <div class="ht0 thank-card-wrap desc-only_False">
-   <table class="tanks_sign hide_True">
-      <tr>
-         <td><img src="/img/viber/card-64-ava.png" width="43" height="43" class="thank-ava visible_card-64-ava.png"></td>
-         <td><span  class="thanks-sign-text">&nbsp;Polina Karpan&nbsp;</span></td>
-      </tr>
-   </table>
-   <img src="/img/viber/card-64.jpg" style="width:275px" class="visible_card-64.jpg"/>
-   <div style="padding: 10px;">Thank you very much Eduard and your team 💛💙</div>
-</div>
-<div class="ht1 thank-card-wrap desc-only_False">
-   <table class="tanks_sign hide_True">
-      <tr>
-         <td><img src="/img/viber/null" width="43" height="43" class="thank-ava visible_null"></td>
-         <td><span  class="thanks-sign-text">&nbsp;Alina&nbsp;</span></td>
-      </tr>
-   </table>
-   <img src="/img/viber/card-53.jpg" style="width:275px" class="visible_card-53.jpg"/>
-   <div style="padding: 10px;">Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!</div>
-</div>
-<div class="ht2 thank-card-wrap desc-only_False">
-   <table class="tanks_sign hide_True">
-      <tr>
-         <td><img src="/img/viber/card-12-ava.png" width="43" height="43" class="thank-ava visible_card-12-ava.png"></td>
-         <td><span  class="thanks-sign-text">&nbsp;Tarasenko Darina&nbsp;</span></td>
-      </tr>
-   </table>
-   <img src="/img/viber/card-65.jpg" style="width:275px" class="visible_card-65.jpg"/>
-   <div style="padding: 10px;">Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️</div>
-</div>
-<div class="ht0 thank-card-wrap desc-only_True">
-   <table class="tanks_sign hide_True">
-      <tr>
-         <td><img src="/img/viber/card-57-ava.png" width="43" height="43" class="thank-ava visible_card-57-ava.png"></td>
-         <td><span  class="thanks-sign-text">&nbsp;Tatiana Stefanovich&nbsp;</span></td>
-      </tr>
-   </table>
-   <img src="/img/viber/card-57.jpg" style="width:275px" class="visible_card-57.jpg"/>
-   <div style="padding: 10px;">Good evening. I wanted to thank your foundation, your entire team for such a huge and sincere help. We strongly believe that everything will end soon, victory will be ours.</div>
-</div>
+         <div class="ht0 desc-only_False" style="background-color: transparent !important;">
+    
+    <img src="/img/viber/card-64.jpg" style="width:275px; border-radius: 10px; overflow: hidden;" />
+    <div class="thank-descr-main">Thank you very much Eduard and your team 💛💙</div>
+ </div>
+ <div class="ht1 desc-only_False" style="background-color: transparent !important;">
+    
+    <img src="/img/viber/card-53.jpg" style="width:275px; border-radius: 10px; overflow: hidden;" />
+    <div class="thank-descr-main">Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!</div>
+ </div>
+ <div class="ht2 desc-only_False" style="background-color: transparent !important;">
+    
+    <img src="/img/viber/card-65.jpg" style="width:275px; border-radius: 10px; overflow: hidden;" />
+    <div class="thank-descr-main">Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️</div>
+ </div>
+ <div class="ht0 desc-only_True" style="background-color: transparent !important;">
+    
+    <img src="/img/viber/card-57.jpg" style="width:275px; border-radius: 10px; overflow: hidden;" />
+    <div class="thank-descr-main">Good evening. I wanted to thank your foundation, your entire team for such a huge and sincere help. We strongly believe that everything will end soon, victory will be ours.</div>
+ </div>
     </div>
     <div class="proj-card-bottom-bts" >
-        <a class="card__read-btn" href="/en/thanks" style="max-width:300px !important;margin-top: 5px; margin-bottom: 50px;">
+        <a class="card__read-btn" href="/en/thanks" style="max-width:300px !important;margin-top: 30px; margin-bottom: 70px;">
             Read all reviews and reports
         </a>
     </div>
@@ -825,7 +814,7 @@
         </table>
     </div>
     <section>
-        <h1 class="main-title-problems" style="margin-bottom: 20px;">
+        <h1 class="our-activity__title title maint-title-proj" style="margin-bottom: 30px;">
             The problem of diabetes in Ukraine
         </h1>
         <div class="our-activity__content container container_small">
@@ -845,7 +834,7 @@
             <p style="font-weight:700;">
                 In addition, the stress factor experienced by our citizens recently is one of the main factors in the occurrence of diabetes.
             </p>
-            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:10px; margin-bottom: 50px;">
+            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:30px; margin-bottom: 50px;">
                 Learn more about diabetes
             </a>
             </div>
@@ -1045,6 +1034,6 @@
     </div>
 </div>
 
-<script src="/source/script.js?_=26"></script>
+<script src="/source/script.js?_=27"></script>
 </body>
 </html>

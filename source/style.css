@@ -1,15 +1,41 @@
 .support-btn {
     background: #0c9a56;
     border: 0px solid #0c9a56;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-family: Rubik,sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6em;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     margin-left: 60px
+}
+
+.support-btn_comm {
+  background: #0c9a56;
+  border: 0px solid #0c9a56;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Rubik,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: white;
+  padding: 10px 20px;
+}
+
+.support-btn_comm_rev {
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Rubik,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: white;
+  padding: 10px 17px;
+  background-color: transparent;
 }
 
 .proj-card-amoun-title {
@@ -35,8 +61,8 @@
   padding: 3px !important;
 }
 
-.needs__list-item{
-  border-radius: 10px;
+.needs__list-item {
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -45,13 +71,13 @@
   border-radius: 4px;
   max-width: 174px;
     display: block;
-    background: white;
+    background: transparent;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4em;
     color: #0c9a56;
     text-align: center;
-    padding: 4px 8px 4px 8px;
+    padding: 8px 12px 8px 12px;
     margin: 0 auto;
 }
 
@@ -69,10 +95,18 @@
 
 @media (max-width: 575px){
     .support-btn{
-        font-size: 12px;
-        padding: 5px;
+        font-size: 15px;
+        padding: 9px;
+        margin-left: 35px;
     }
-
+    .support-btn_comm{
+      font-size: 15px;
+      padding: 9px;
+  }
+  .support-btn_comm_rev {
+    font-size: 15px;
+    padding: 9px 17px;
+  }
 }
 
 ul {
@@ -211,6 +245,7 @@ ul {
     font-weight: 500;
     transition: all 0.8s ease-in-out;
     text-shadow: 1px 1px 2px black;
+    padding-bottom: 80px;
   }
   
   .caption small {
@@ -395,6 +430,17 @@ ul {
   overflow: hidden;
 }
 
+.thank-descr-main {
+  padding: 10px;
+  color: #88928D;
+  height: 6.7em;
+  overflow-y: hidden;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+
   .hide_True {
     display: none;
   }
@@ -453,6 +499,8 @@ ul {
   }
   .maint-title-proj{
     margin-top:50px;
+    font-size: 40px;
+    font-weight: 700;
   }
   .main-needs-list{
     margin-left: 0px;
@@ -492,7 +540,9 @@ ul {
       margin-top: -20px;
     }
     .maint-title-proj{
-      margin-top:20px;
+      margin-top:40px;
+      font-size: 40px;
+    font-weight: 700;
     }
     .main-needs-list{
       margin-left: 0px;

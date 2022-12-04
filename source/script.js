@@ -236,8 +236,10 @@ if (documentModal && showDocumentBtn) {
     var current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
     if (current)
         current.click();
-})([document.querySelectorAll('.tabs-triggers__item'), document.querySelectorAll('.tabs-content__item')]);
-
+})([
+    document.querySelectorAll('.tabs-triggers__item'),
+    document.querySelectorAll('.tabs-content__item')
+]);
 
 
 const articleContent = document.getElementById('article__content');
@@ -257,11 +259,11 @@ if (articleContent) {
     })
 }
 
-(slider => {
+(([slider, suppButton, moreButton]) => {
     if (!slider)
         return;
     const slideArray = 
-        [...document.querySelectorAll('.slider div')].map(({dataset: set}) => [set.background, set.backgroundmini]);
+        [...document.querySelectorAll('.slider div')].map(({dataset: set}) => [set.background, set.backgroundmini, JSON.parse(set.liqpay)]);
 
     let curSlideIndex = -1;
     const curCaption = () => document.querySelector('.caption-' + (curSlideIndex));
@@ -284,9 +286,22 @@ if (articleContent) {
     advanceSliderItem();
     setInterval(advanceSliderItem, 5000);
 
-    slider.addEventListener("click", () => location.href = curCaption().dataset.href);
+    suppButton.addEventListener("click", e => {
+        e.preventDefault();
+        var [sign, data] = slideArray[curSlideIndex][2];
+        lib.sendLiqpay(sign, data, true);
+    })
 
-})(document.querySelector('.slider'));
+    moreButton.addEventListener("click", e => {
+        e.preventDefault();
+        location.href = curCaption().dataset.href;
+    })
+
+})([
+    document.querySelector('.slider'),
+    document.getElementById('supp-slide'),
+    document.getElementById('more-slide')
+]);
 
 (images => {
     if (images.length < 3)
@@ -361,4 +376,7 @@ if (articleContent) {
         .catch(error => setStatus(lib.isEnglish ? "Something went wrong": "щось пішло не так"));
     });
 
-})([document.getElementsByClassName("user-form")[0], document.getElementById("email-submit")]);
+})([
+    document.getElementsByClassName("user-form")[0],
+    document.getElementById("email-submit")
+]);

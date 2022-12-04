@@ -4,7 +4,18 @@
      </h2>-->
     <div class="slider main-slider-add">
       {{slides}}
+      <table style="position: absolute;display: inline-block; bottom: 0; margin:0;">
+        <tr>
+            <td style="padding:20px;">
+                <button id="supp-slide" class="support-btn_comm donate-button">Підтримати</button>
+            </td>
+            <td>
+                <a id="more-slide" class="support-btn_comm_rev" href="/">Дізнатись більше</a>
+            </td>
+        </tr>
+      </table>
     </div>
+    
     <section>
         <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
             <table class="main-intro-logo">
@@ -28,7 +39,7 @@
         </div>
     </section>
     <section>
-        <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
+        <div class="our-activity__content container container_small" style="margin-bottom: 20px;">
             <table class="main-intro-logo">
                 <tr>
                     <td style="min-width:200px; font-size: 30px;  line-height: 1;">
@@ -41,7 +52,7 @@
             </table>
             <table class="main-intro-logo-mb">
                 <tr>
-                    <td style="">
+                    <td>
                         «Благодійний фонд допомоги та реабілітації хворих на цукровий діабет» — це міжнародна некомерційна організація, яка підтримує людей із цим діагнозом по всій Україні.
                     </td>
                     <td style="width:5%;"></td>
@@ -50,37 +61,39 @@
                 </tr>
             </table>
         </div>
-    </section>
-    <section>
         <div class="our-activity__content container container_small">
             З початком широмасштабного росiйського вторгнення в Україну в лютому 2022р. ми розширили зону нашої допомоги також i на постачання критично важливої гуманитарної допомоги для захисникiв України та цивiльного населення. Приєднуйтесь та долучайтесь до наших проєктiв. Разом до перемоги!
         </div>
         <div class="our-activity__content container container_small">
-             <a class="card__read-btn" href="/ua/aboutus" style="display: inline-block; margin-top: 10px; margin-left: 20px; margin-bottom: 20px;">
-            Про фонд
-        </a>
-        </div>
-       
-    </section>
-    <h2 class="our-activity__title title maint-title-proj">
-        Поточнi проекти
-    </h2>
-        <div class="needs__list row main-needs-list" >
-            {{topProjects}}
-        </div>
-        <div class="proj-card-bottom-bts" >
-            <a class="card__read-btn" href="/ua/fundraising/" style="max-width:300px !important;margin-top: 10px; margin-bottom: 20px;">
-                Переглянути всі проекти
+            <a class="card__read-btn" href="/ua/aboutus" style="display: inline-block; margin-top: 30px; margin-left: 20px; margin-bottom: 20px;">
+                Про фонд
             </a>
         </div>
-    <h2 class="our-activity__title title maint-title-proj">
+    </section>
+    <section>
+        <div class="container">
+            <h1 class="our-activity__title title maint-title-proj">
+                Поточнi проекти
+            </h1>
+            <div class="needs__list row main-needs-list" >
+                {{topProjects}}
+            </div>
+            <div class="proj-card-bottom-bts" >
+                <a class="card__read-btn" href="/ua/fundraising/" style="max-width:300px !important; margin-top: 30px; margin-bottom: 20px;">
+                    Переглянути всі проекти
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="our-activity__title title maint-title-proj" style="margin-bottom: 20px;">
         Відгуки та звіти
     </h2>
     <div class="thanks" >
         {{topThanks}}
     </div>
     <div class="proj-card-bottom-bts" >
-        <a class="card__read-btn" href="/ua/thanks" style="max-width:300px !important;margin-top: 5px; margin-bottom: 50px;">
+        <a class="card__read-btn" href="/ua/thanks" style="max-width:300px !important;margin-top: 30px; margin-bottom: 70px;">
             Читати всі відгуки та звіти
         </a>
     </div>
@@ -94,7 +107,7 @@
         </table>
     </div>
     <section>
-        <h1 class="main-title-problems" style="margin-bottom: 20px;">
+        <h1 class="our-activity__title title maint-title-proj" style="margin-bottom: 30px;">
             Проблема діабету в Україні
         </h1>
         <div class="our-activity__content container container_small">
@@ -114,7 +127,7 @@
             <p style="font-weight:700;">
                 До того ж, фактор стресу, який переживають наші громадяни останній час, є одним з головних чинників виникнення діабету.
             </p>
-            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:10px; margin-bottom: 50px;">
+            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:30px; margin-bottom: 50px;">
                 Дізнатись більше про діабет
             </a>
         </div>

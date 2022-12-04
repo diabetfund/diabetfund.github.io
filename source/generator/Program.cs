@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 26;
+var version = 27;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 var (projects, news, partners, thanks, slides_) = 
@@ -19,7 +19,7 @@ void Render(string lang)
     string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
         string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
 
-    View master = new(Read("master")), thank = new(ReadComm("thankCard")),
+    View master = new(Read("master")), thank = new(ReadComm("thankCard")), thankMain = new(ReadComm("thankCardMain")),
         newsCard = new(Read("news/card")), newsPage = new(Read("news/page")),
         projPage = new(Read("projects/page")), projCard = new(Read("projects/card"));
 
@@ -27,7 +27,7 @@ void Render(string lang)
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
 
-        topThanks = Join(thank, thanks.Take(4).Select((t, i) => t with { HideCaption = true, DesctopOnly = i == 3 })),
+        topThanks = Join(thankMain, thanks.Take(4).Select((t, i) => t with { DesctopOnly = i == 3 })),
         
         topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { DesctopOnly = i > 3 }));
 
@@ -110,7 +110,7 @@ record Proj(string Id, int Need, int Fund, bool IsMilitary, string? ReportId, st
     public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(string? Avatar, int HRank, bool HideCaption = false) : Entity;
+record Thanks(string? Avatar, int HRank) : Entity;
 
 record Slide(string Mini, int Index, string ProjectId) : Entity<PayEntry>
 {

@@ -4,9 +4,19 @@
      </h2>-->
     <div class="slider main-slider-add" >
       {{slides}}
+      <table style="position: absolute;display: inline-block; bottom: 0; margin:0;">
+        <tr>
+            <td style="padding:20px;">
+                <button id="supp-slide" class="support-btn_comm donate-button">Підтримати</button>
+            </td>
+            <td>
+                <a id="more-slide" class="support-btn_comm_rev" href="/">Дізнатись більше</a>
+            </td>
+        </tr>
+      </table>
     </div>
     <section>
-        <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
+        <div class="our-activity__content container container_small" style="margin-bottom: 20px;">
             <table class="main-intro-logo">
                 <tr>
                     <td style="width:20%;"></td>
@@ -26,8 +36,6 @@
                 </tr>
             </table>
         </div>
-    </section>
-    <section>
         <div class="our-activity__content container container_small" style="margin-bottom: 50px;">
             <table class="main-intro-logo">
                 <tr>
@@ -56,31 +64,34 @@
             With the beginning of the large-scale Russian invasion of Ukraine in February 2022. we expanded the area of our assistance also to supply critically important humanitarian aid for the defenders of Ukraine and the civilian population. Join and participate in our projects. Together to victory!
         </div>
         <div class="our-activity__content container container_small">
-            <a class="card__read-btn" href="/en/aboutus" style="display: inline-block; margin-top: 10px; margin-left: 20px; margin-bottom: 20px;">
+            <a class="card__read-btn" href="/en/aboutus" style="display: inline-block; margin-top: 30px; margin-left: 20px; margin-bottom: 20px;">
                 About the fund
             </a>
         </div>
     </section>
-    <h2 class="our-activity__title title maint-title-proj" >
-        Current projects
-     </h2>
-     <div class="needs__list row main-needs-list">
-        {{topProjects}}
-     </div>
-     <div class="proj-card-bottom-bts" >
-        <a class="card__read-btn" href="/en/fundraising/" style="max-width:300px !important;margin-top:10px;">
-            View all projects
-        </a>
-    </div>
-
-    <h2 class="our-activity__title title maint-title-proj">
+    <section>
+        <div class="container">
+            <h1 class="our-activity__title title maint-title-proj" >
+                Current projects
+            </h1>
+            <div class="needs__list row main-needs-list">
+                {{topProjects}}
+            </div>
+            <div class="proj-card-bottom-bts" >
+                <a class="card__read-btn" href="/en/fundraising/" style="max-width:300px !important; margin-top:30px;">
+                    View all projects
+                </a>
+            </div>
+        </div>
+    </section>
+    <h2 class="our-activity__title title maint-title-proj" style="margin-bottom: 20px;">
         Reviews and reports
     </h2>
     <div class="thanks" >
         {{topThanks}}
     </div>
     <div class="proj-card-bottom-bts" >
-        <a class="card__read-btn" href="/en/thanks" style="max-width:300px !important;margin-top: 5px; margin-bottom: 50px;">
+        <a class="card__read-btn" href="/en/thanks" style="max-width:300px !important;margin-top: 30px; margin-bottom: 70px;">
             Read all reviews and reports
         </a>
     </div>
@@ -94,7 +105,7 @@
         </table>
     </div>
     <section>
-        <h1 class="main-title-problems" style="margin-bottom: 20px;">
+        <h1 class="our-activity__title title maint-title-proj" style="margin-bottom: 30px;">
             The problem of diabetes in Ukraine
         </h1>
         <div class="our-activity__content container container_small">
@@ -114,7 +125,7 @@
             <p style="font-weight:700;">
                 In addition, the stress factor experienced by our citizens recently is one of the main factors in the occurrence of diabetes.
             </p>
-            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:10px; margin-bottom: 50px;">
+            <a class="card__read-btn" href="/ua/about-diabetes" style="max-width:300px !important;margin-top:30px; margin-bottom: 50px;">
                 Learn more about diabetes
             </a>
             </div>
