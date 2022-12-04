@@ -224,7 +224,6 @@ ul {
     border-radius: 3px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     transition: background-image 0.8s ease-in-out;
-    cursor: pointer;
   }
   
   .slider .slide {
@@ -233,7 +232,6 @@ ul {
   
   .caption {
     position: absolute;
-    cursor: pointer;
     bottom: 0;
     opacity: 0;
     display: inline-block;
@@ -381,7 +379,7 @@ ul {
   margin: 15px;
 }
 
-.ht0 { grid-row-end: span 2; }
+.htnull { grid-row-end: span 2; }
 .ht1 { grid-row-end: span 3; }
 .ht2 { grid-row-end: span 4; }
 .ht3 { grid-row-end: span 5; }

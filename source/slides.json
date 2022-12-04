@@ -2,7 +2,7 @@
    {
       "Index": 0,
       "Pic": "slide-1.jpg",
-      "Mini": "slide-1-mini.jpg",
+      "MiniPic": "slide-1-mini.jpg",
       "ProjectId": "help-rehab",
       "En": {
          "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
@@ -14,7 +14,7 @@
    {
       "Index": 1,
       "Pic": "slide-2.jpg",
-      "Mini": "slide-2-mini.jpg",
+      "MiniPic": "slide-2-mini.jpg",
       "ProjectId": "help-rehab",
       "En": {
          "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
@@ -26,7 +26,7 @@
    {
       "Index": 2,
       "Pic": "slide-3.jpg",
-      "Mini": "slide-3-mini.jpg",
+      "MiniPic": "slide-3-mini.jpg",
       "ProjectId": "help-rehab",
       "En": {
          "Title": "REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA"
@@ -38,7 +38,7 @@
    {
       "Index": 3,
       "Pic": "slide-4.jpg",
-      "Mini": "slide-4-mini.jpg",
+      "MiniPic": "slide-4-mini.jpg",
       "ProjectId": "dopomogti-sensorami-vimiryuvannya-glyukozi",
       "En": {
          "Title": "Helping with glucose sensors",
@@ -54,7 +54,7 @@
    {
       "Index": 4,
       "Pic": "slide-6.jpg",
-      "Mini": "slide-6-mini.jpg",
+      "MiniPic": "slide-6-mini.jpg",
       "ProjectId": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
       "En": {
          "Title": "Helping with glucometers and test strips to them",
@@ -70,7 +70,7 @@
    {
       "Index": 5,
       "Pic": "slide-8.jpg",
-      "Mini": "slide-8-mini.jpg",
+      "MiniPic": "slide-8-mini.jpg",
       "ProjectId":"kherson-pallets",
       "En": {
          "Title": "Let's warm Kherson together"
@@ -82,7 +82,7 @@
    {
       "Index": 6,
       "Pic": "slide-7.jpg",
-      "Mini": "slide-7-mini.jpg",
+      "MiniPic": "slide-7-mini.jpg",
       "ProjectId": "assistance-to-zsu",
       "En": {
          "Title": "Assistance to ZSU"

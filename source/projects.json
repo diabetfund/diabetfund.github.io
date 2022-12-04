@@ -5,6 +5,7 @@
       "Need": 246,
       "Fund": 15,
       "Pic":"July2022/palettes.jpg",
+      "MiniPic": "July2022/palettes-mini.jpg",
       "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
          "Title": "Help Kherson with heating",
@@ -21,6 +22,7 @@
       "Need": 2600, 
       "Fund": 720,
       "Pic": "June2022/zsu.jpg",
+      "MiniPic": "July2022/zsu-mini.jpg",
       "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
          "Title": "Assistance to ZSU",
@@ -37,6 +39,7 @@
       "Need": 4000,
       "Fund": 1254,
       "Pic":"July2022/center.jpg",
+      "MiniPic": "July2022/center-mini.jpg",
       "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
          "Title": "Rehabilitation course for children with diabetes",
@@ -53,6 +56,7 @@
       "Need": 1200, 
       "Fund": 52,
       "Pic": "June2022/snuUfMlETiFUHqUYJpf8.jpg",
+      "MiniPic": "July2022/sensors-mini.jpg",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Title": "Helping with glucose sensors",
@@ -73,6 +77,7 @@
       "Need": 1000, 
       "Fund": 643,
       "Pic": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
+      "MiniPic": "July2022/glukometers-mini.jpg",
       "ReportId": "report-glukometers",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
@@ -94,6 +99,7 @@
       "Need": 300, 
       "Fund": 281,
       "Pic": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
+      "MiniPic": "July2022/insulin-mini.jpg",
       "ReportId": "report-insulin",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
@@ -115,6 +121,7 @@
       "Need": 720, 
       "Fund": 720,
       "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
+      "MiniPic": "July2022/dopomogti-chastinam-a5717-mini.jpg",
       "ReportId":"report-zsu",
       "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {

@@ -58,7 +58,9 @@ const lib = {
         lib.sendLiqpay(sign, data, true);
     }));
 
- 
+[...document.querySelectorAll('[data-loc]')].forEach(el => 
+    el.innerHTML = JSON.parse(el.dataset.loc)[lib.isEnglish ? 1 : 0]);
+
 var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
 
 var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);

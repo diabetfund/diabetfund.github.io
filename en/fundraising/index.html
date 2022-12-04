@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=28"/>
-    <link rel="stylesheet" href="/source/style.css?_=28"/>
+    <link rel="stylesheet" href="/source/app.css?_=29"/>
+    <link rel="stylesheet" href="/source/style.css?_=29"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -353,27 +353,26 @@
 <main>
    <section class="needs">
        <div class="container">
-           <h1 class="needs__title title">
-            Projects
+           <h1 class="needs__title title" data-loc='["Проєкти", "Projects"]'>
            </h1>
            <div class="needs-filter">
                <a class="needs-filter__item" href="/en/fundraising">
-                   <span>All</span>
+                   <span data-loc='["Всі", "All"]'></span>
                </a>
                <a class="needs-filter__item" href="/en/fundraising/?type=1">
-                   <span>Social</span>
+                   <span data-loc='["Соціальні", "Social"]'></span>
                </a>
                <a class="needs-filter__item" href="/en/fundraising/?type=2">
-                   <span>Military</span>
+                   <span data-loc='["Військові", "Military"]'></span>
                </a>
            </div>
            <div class="needs__list row">
-            <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
+                <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/July2022/palettes.jpg"/>
+      <img class="card__img" src="/img/July2022/palettes-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Help Kherson with heating
               </span>
               <p class="card__text">
@@ -382,50 +381,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">246000</span> UAH
+                      <span class="numf">246000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       6%
-                      <img  style="display: inline;" src="/img/fullness_1.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_1.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/kherson-pallets">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["null", "null"]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/kherson-pallets" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-True desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/June2022/zsu.jpg"/>
+      <img class="card__img" src="/img/July2022/zsu-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Assistance to ZSU
               </span>
               <p class="card__text">
@@ -434,50 +437,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">2600000</span> UAH
+                      <span class="numf">2600000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       27%
-                      <img  style="display: inline;" src="/img/fullness_1.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_1.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/assistance-to-zsu">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["null", "null"]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/assistance-to-zsu" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/July2022/center.jpg"/>
+      <img class="card__img" src="/img/July2022/center-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Rehabilitation course for children with diabetes
               </span>
               <p class="card__text">
@@ -486,50 +493,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">4000000</span> UAH
+                      <span class="numf">4000000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       31%
-                      <img  style="display: inline;" src="/img/fullness_2.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_2.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["null", "null"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/center">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["null", "null"]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/center" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/June2022/snuUfMlETiFUHqUYJpf8.jpg"/>
+      <img class="card__img" src="/img/July2022/sensors-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Helping with glucose sensors
               </span>
               <p class="card__text">
@@ -538,50 +549,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">1200000</span> UAH
+                      <span class="numf">1200000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       4%
-                      <img  style="display: inline;" src="/img/fullness_1.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_1.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/June2022/PASVJwVWxFZsPdLuZYPR.jpg"/>
+      <img class="card__img" src="/img/July2022/glukometers-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Helping with glucometers and test strips to them
               </span>
               <p class="card__text">
@@ -590,50 +605,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">1000000</span> UAH
+                      <span class="numf">1000000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       64%
-                      <img  style="display: inline;" src="/img/fullness_2.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_2.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-False desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/June2022/cJZfLvj8zTw30z70Q32h.jpg"/>
+      <img class="card__img" src="/img/July2022/insulin-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Helping with insulin
               </span>
               <p class="card__text">
@@ -642,50 +661,54 @@
           </div>
           <div class="card__content_middle card_content_middle-False">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">300000</span> UAH
+                      <span class="numf">300000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       93%
-                      <img  style="display: inline;" src="/img/fullness_3.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_3.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_False"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_False">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["RwuqxeGZbEcqvZ/eCexT/ZutlRQ=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/dopomogti-insulinom">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_False"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_False">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["RwuqxeGZbEcqvZ/eCexT/ZutlRQ=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGluc3VsaW4gdm9sLjEiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC9lblwvZnVuZHJhaXNpbmciLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/dopomogti-insulinom" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
 <div class="col-md-6 col-lg-4 is-military-True desc-only_False">
    <div class="card needs__list-item">
-      <img lclass="card__img" src="/img/June2022/mca05r3OzAFLp2IAqXY8.jpg"/>
+      <img class="card__img" src="/img/July2022/dopomogti-chastinam-a5717-mini.jpg" >
       <div class="card__content">
           <div class="card__content_top">
-              <span class="card__title">
+              <span class="card__title" >
                Assistance to military units A5717; A0998; A0284; A1277; A1108
               </span>
               <p class="card__text">
@@ -694,41 +717,45 @@
           </div>
           <div class="card__content_middle card_content_middle-True">
               <div class="required-amount">
-                <span class="proj-card-amoun-title">Are needed:</span>
+                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
                   <span>
-                    <span class="numf">720000</span> UAH
+                      <span class="numf">720000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
                   </span>
               </div>
               <div>
-                <span class="proj-card-amoun-title">Already collected</span>
+                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">
                       100%
-                      <img  style="display: inline;" src="/img/fullness_3.svg" >
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_3.svg" >
                   </span>
               </div>
           </div>
           <div class="card__content_bottom">
-            <table class="visible_True"><tbody>
-              <tr>
-                  <td>
-                      <img src="/img/header/box-heart.svg"/>
-                  </td>
-                  <td style="padding-left: 30px; font-size: 18px;">
-                      Project closed!
-                  </td>
-              </tr>
-            </tbody></table>
-            <div class="proj-card-bottom-bts hide_True">
-              <a class="card__donate-btn needs-donate-btn need-donate"  href="/" data-liqpay='["zrs2rYqsIUkHcDpHjuNTbE3a1A8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'>
-                Donate
-                <!--<img src="/img/header/credit-card.svg"/>-->
-              </a>
-              <a class="card__read-btn" href="/en/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888">
-                  Read more
-                  <!--<img src="/img/header/chevron-right.svg"/>-->
-              </a>
-            </div>
-        </div>
+              <table class="visible_True"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
+                        
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_True">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate" 
+                    data-liqpay='["zrs2rYqsIUkHcDpHjuNTbE3a1A8=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiQXNzaXN0YW5jZSB0byBtaWxpdGFyeSB1bml0cyBBNTYxNzsgQTA5OTg7IEEwMjg0OyBBMTI3NzsgQTExMDg7ICIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'
+                    data-loc='["Підтримати", "Donate"]'
+                    >
+                    
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/ua/fundraising/dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888" data-loc='["Дiзнатись бiльше", "Read more"]'>
+                    
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
       </div>
   </div>
 </div>
@@ -848,6 +875,6 @@
     </div>
 </div>
 
-<script src="/source/script.js?_=28"></script>
+<script src="/source/script.js?_=29"></script>
 </body>
 </html>

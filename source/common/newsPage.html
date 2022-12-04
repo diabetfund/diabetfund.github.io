@@ -1,3 +1,4 @@
+
 <main>
    <article class="article expanded-news-item">
        <div class="container container_small">
@@ -5,7 +6,7 @@
                <h1 class="article-intro__title title">
                    {{Title}}
                </h1>
-               <img  class="article-intro__img"  src="/img/{{Pic}}" >
+               <img class="article-intro__img" src="/img/{{Pic}}">
                <div class="article-intro__additional-info">
                    <time class="expanded-news-item__date">
                        <svg class="expanded-news-item__date-icon" viewBox="0 0 18 20">
@@ -16,17 +17,17 @@
                </div>
            </div>
            <div class="article__content">
-            <p><span style="white-space: pre-wrap;">{{Descr}}</span></p>
-            {{content}}
+               <p>{{Descr}}</p>
+               {{content}}
            </div>
        </div>
 
        <div class="other-news container">
-           <h3 class="other-news__title title">
-               Інші новини фонду
+           <h3 class="other-news__title title" data-loc='["Інші новини фонду", "Other Foundation news"]'>
+               
            </h3>
            <div class="other-news__list row">
-                   {{otherNews}}
+                 {{otherNews}}
            </div>
        </div>
 
