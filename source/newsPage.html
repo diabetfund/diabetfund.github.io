@@ -1,0 +1,34 @@
+<main>
+   <article class="article expanded-news-item">
+       <div class="container container_small">
+           <div class="article-intro">
+               <h1 class="article-intro__title title">
+                   @Title
+               </h1>
+               <img class="article-intro__img" src="/img/@Pic">
+               <div class="article-intro__additional-info">
+                   <time class="expanded-news-item__date">
+                       <svg class="expanded-news-item__date-icon" viewBox="0 0 18 20">
+                           <path d="M14 9H4V11H14V9ZM16 2H15V0H13V2H5V0H3V2H2C0.89 2 0.00999999 2.9 0.00999999 4L0 18C0 19.1 0.89 20 2 20H16C17.1 20 18 19.1 18 18V4C18 2.9 17.1 2 16 2ZM16 18H2V7H16V18ZM11 13H4V15H11V13Z"></path>
+                       </svg>
+                       @Date
+                   </time>
+               </div>
+           </div>
+           <div class="article__content">
+               <p>@Descr</p>
+               @content
+           </div>
+       </div>
+
+       <div class="other-news container">
+           <h3 class="other-news__title title" data-loc='["Інші новини фонду", "Other Foundation news"]'>
+               
+           </h3>
+           <div class="other-news__list row">
+                 @otherNews
+           </div>
+       </div>
+
+   </article>
+</main>

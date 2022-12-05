@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=29"/>
-    <link rel="stylesheet" href="/source/style.css?_=29"/>
+    <link rel="stylesheet" href="/source/app.css?_=30"/>
+    <link rel="stylesheet" href="/source/style.css?_=30"/>
         <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,600|Lato:500,700|Roboto:400|Roboto+Condensed:400,700&amp;display=swap"
@@ -295,9 +295,7 @@
                         </a>
                     </div>
                     <div class="phones__item">
-                       
-                                <a class="phones__link" href="https://api.whatsapp.com/send?phone=+380 (96) 887-38-74" target="_blank"
-                        target="_blank">
+                        <a class="phones__link" href="https://api.whatsapp.com/send?phone=+380 (96) 887-38-74" target="_blank" target="_blank">
                             <img class="header-icon" src="/img/header/whatsapp_line.png"/>
                         </a>
                         <a class="phones__link" title="telegram" href="https://www.instagram.com/diabet.fund/" target="_blank" >
@@ -322,7 +320,6 @@
                 <div class="social-networks">
                     Join
                     <div class="social-networks__links">
-                        
                         <a class="social-networks__link" href="https://www.facebook.com/diabet.fund/" target="_blank" title="facebook">
                             <img class='header-icon' src="/img/header/facebook.png"/>
                         </a>
@@ -355,10 +352,22 @@
         Major Projects
      </h2>-->
     <div class="slider main-slider-add" >
-      <div class="slide" 
+        <table style="position: absolute;display: inline-block; bottom: 0; margin:0; z-index: 1;">
+            <tr>
+                <td style="padding:20px;">
+                    <button id="supp-slide" class="support-btn_comm donate-button">Donate</button>
+                </td>
+                <td>
+                    <a id="more-slide" class="support-btn_comm_rev" href="/">Read More</a>
+                </td>
+            </tr>
+          </table>
+          <span id="slide-mask" style="position: absolute; display: inline-block; width: 100%; height: 100%;"></span>
+          <div class="slide" 
    data-background="/img/slides/slide-1.jpg"
    data-backgroundmini="/img/slides/slide-1-mini.jpg"
    data-liqpay='["null", "null"]'
+   data-dark="15"
    >
 </div>
 <p class="caption caption-0"  data-href='/en/center'>
@@ -368,6 +377,7 @@
    data-background="/img/slides/slide-2.jpg"
    data-backgroundmini="/img/slides/slide-2-mini.jpg"
    data-liqpay='["null", "null"]'
+   data-dark="15"
    >
 </div>
 <p class="caption caption-1"  data-href='/en/center'>
@@ -377,6 +387,7 @@
    data-background="/img/slides/slide-3.jpg"
    data-backgroundmini="/img/slides/slide-3-mini.jpg"
    data-liqpay='["null", "null"]'
+   data-dark="35"
    >
 </div>
 <p class="caption caption-2"  data-href='/en/center'>
@@ -386,6 +397,7 @@
    data-background="/img/slides/slide-4.jpg"
    data-backgroundmini="/img/slides/slide-4-mini.jpg"
    data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'
+   data-dark="25"
    >
 </div>
 <p class="caption caption-3"  data-href='/en/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi'>
@@ -395,6 +407,7 @@
    data-background="/img/slides/slide-6.jpg"
    data-backgroundmini="/img/slides/slide-6-mini.jpg"
    data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'
+   data-dark="45"
    >
 </div>
 <p class="caption caption-4"  data-href='/en/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih'>
@@ -404,6 +417,7 @@
    data-background="/img/slides/slide-8.jpg"
    data-backgroundmini="/img/slides/slide-8-mini.jpg"
    data-liqpay='["null", "null"]'
+   data-dark="25"
    >
 </div>
 <p class="caption caption-5"  data-href='/en/fundraising/kherson-pallets'>
@@ -413,21 +427,14 @@
    data-background="/img/slides/slide-7.jpg"
    data-backgroundmini="/img/slides/slide-7-mini.jpg"
    data-liqpay='["null", "null"]'
+   data-dark="25"
    >
 </div>
 <p class="caption caption-6"  data-href='/en/fundraising/assistance-to-zsu'>
    Assistance to ZSU
 </p>
-      <table style="position: absolute;display: inline-block; bottom: 0; margin:0;">
-        <tr>
-            <td style="padding:20px;">
-                <button id="supp-slide" class="support-btn_comm donate-button">Підтримати</button>
-            </td>
-            <td>
-                <a id="more-slide" class="support-btn_comm_rev" href="/">Дізнатись більше</a>
-            </td>
-        </tr>
-      </table>
+
+          
     </div>
     <section>
         <div class="our-activity__content container container_small" style="margin-bottom: 20px;">
@@ -1093,6 +1100,6 @@
     </div>
 </div>
 
-<script src="/source/script.js?_=29"></script>
+<script src="/source/script.js?_=30"></script>
 </body>
 </html>

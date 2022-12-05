@@ -261,32 +261,39 @@ if (articleContent) {
     })
 }
 
-(([slider, suppButton, moreButton]) => {
+var sliderLib = (([slider, suppButton, moreButton, mask]) => {
     if (!slider)
-        return;
+        return {};
     const slideArray = 
-        [...document.querySelectorAll('.slider div')].map(({dataset: set}) => [set.background, set.backgroundmini, JSON.parse(set.liqpay)]);
+        [...document.querySelectorAll('.slider div')].map(({dataset: set}) =>
+        [set.background, set.backgroundmini, JSON.parse(set.liqpay), set.dark]);
 
     let curSlideIndex = -1;
     const curCaption = () => document.querySelector('.caption-' + (curSlideIndex));
     
-    function advanceSliderItem() {
-        curSlideIndex++;
-
-        if (curSlideIndex >= slideArray.length)
-            curSlideIndex = 0;
-            
-        let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
-        slider.style.cssText = 'background: url("' + url + '") no-repeat center center; background-size: cover;';
-
-        const elems = document.getElementsByClassName('caption');
-        for (let i = 0; i < elems.length; i++) 
-            elems[i].style.cssText = 'opacity: 0;';
-
-        curCaption().style.cssText = 'opacity: 1;';
+    var result = { 
+        interval: null,
+        advance() {
+            curSlideIndex++;
+    
+            if (curSlideIndex >= slideArray.length)
+                curSlideIndex = 0;
+                
+            let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
+            slider.style.cssText = `background: url("${url}") no-repeat center center; background-size: cover;`;
+    
+            const elems = document.getElementsByClassName('caption');
+            for (let i = 0; i < elems.length; i++) 
+                elems[i].style.cssText = 'opacity: 0;';
+    
+            curCaption().style.cssText = 'opacity: 1;';
+            mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
+        }, 
+        stop(){ clearInterval(this.interval) },
+        start(){ this.interval = setInterval(this.advance, 5000)}
     }
-    advanceSliderItem();
-    setInterval(advanceSliderItem, 5000);
+    result.advance();
+    result.start();
 
     suppButton.addEventListener("click", e => {
         e.preventDefault();
@@ -298,11 +305,13 @@ if (articleContent) {
         e.preventDefault();
         location.href = curCaption().dataset.href;
     })
-
+    return result;
+    
 })([
     document.querySelector('.slider'),
     document.getElementById('supp-slide'),
-    document.getElementById('more-slide')
+    document.getElementById('more-slide'),
+    document.getElementById('slide-mask')
 ]);
 
 (images => {
