@@ -287,7 +287,7 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
                 elems[i].style.cssText = 'opacity: 0;';
     
             curCaption().style.cssText = 'opacity: 1;';
-            mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
+            //mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
         }, 
         stop(){ clearInterval(this.interval) },
         start(){ this.interval = setInterval(this.advance, 5000)}
