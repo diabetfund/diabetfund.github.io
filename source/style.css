@@ -128,7 +128,6 @@ ul {
 .partners-grid {
     display: inline-grid;
     grid-template-columns: 1fr;
-    margin-bottom: 50px;
 }
 .partners-tbl {
     margin:10px;
@@ -312,7 +311,7 @@ ul {
         color:white;
     }
     .promo-mini-4-pic{
-        margin-top: 50px;
+        margin-top: 10px;
     }
     .promo-mini-4-content{
         margin-top: 30px;
@@ -489,10 +488,10 @@ ul {
     text-align: center;
   }
   .our-activity__img-wr {
-    margin-top: 60px;
+    margin-top: 0px;
   }
   .main-text-problems {
-    margin-top:30px;
+    margin-top:0px;
   }
   .maint-title-proj{
     margin-top:50px;
@@ -508,7 +507,7 @@ ul {
     margin-bottom: 20px;
   }
   .center-text-promberms{
-    margin-top:30px;
+    margin-top:0px;
   }
   .about-hero{
 
@@ -531,7 +530,7 @@ ul {
       text-align: center;
     }
     .our-activity__img-wr {
-      margin-top: 10px;
+      margin-top: 0px;
     }
     .main-text-problems {
       margin-top: -20px;
@@ -704,7 +703,7 @@ textarea {
   line-height: 1.4em;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   float: left;
   margin-left: 20px;
   margin-top: 0px;
