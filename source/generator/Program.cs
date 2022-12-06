@@ -19,18 +19,20 @@ void Render(string lang)
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}.{path}.html");
     }
 
-    string Join<E>(View view, IEnumerable<Entity<E>> xs) =>
+    FastView View(string path) => new(Read(path));
+
+    string Join<E>(FastView view, IEnumerable<Entity<E>> xs) =>
         string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
 
-    View master = new(Read("master")), thank = new(Read("thankCard")), thankMain = new(Read("thankCardMain")),
-        newsCard = new(Read("newsCard")), newsPage = new(Read("newsPage")),
-        projPage = new(Read("projPage")), projCard = new(Read("projectCard"));
+    FastView master = View("master"), thank = View("thankCard"),
+        newsCard = View("newsCard"), newsPage = View("newsPage"),
+        projPage = View("projPage"), projCard = View("projectCard");
 
-    string slides = Join(new(Read("slide")), slides_),
+    string slides = Join(View("slide"), slides_),
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
 
-        topThanks = Join(thankMain, thanks.Take(4).Select((t, i) => t with { DesctopOnly = i == 3 })),
+        topThanks = Join(View("thankCardMain"), thanks.Take(4).Select((t, i) => t with { DesctopOnly = i == 3 })),
         
         topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { DesctopOnly = i > 3 }));
 
@@ -39,7 +41,7 @@ void Render(string lang)
         if (content.Length < 30)
             content = Read(content);
         if (arg is not null)
-            content = new View(content).Run(arg);
+            content = new FastView(content).Run(arg);
 
         uaPath ??= enPath;
         var path = $"{rootPath}/{lang}{(lang is "en" ? enPath : uaPath)}/index.html";
@@ -48,34 +50,31 @@ void Render(string lang)
         File.WriteAllText(path, master.Run(new { content, enPath, uaPath, version, lang }));
     }
 
-    var founders = new View(Read("founders")).Run(new
-    {
-        partners = Join(new(Read("partner")), partners)
-    });
+    var founders = View("founders").Run(new { partners = Join(View("partner"), partners) });
     Out("index", "", new { topProjects, payDetails, slides, topThanks });
     Out("center", "/center", new { payDetails, founders, skipAbout = true });
     Out("aboutus", "/aboutus", new { payDetails, founders });
 
-    Out(Read("thanks"), "/thanks", new { content = Join(thank, thanks) });
+    Out("thanks", "/thanks", new { content = Join(thank, thanks) });
 
     foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
 
-    Out(Read("projects"), "/fundraising", new { FundsList = Join(projCard, projects) });
+    Out("projects", "/fundraising", new { FundsList = Join(projCard, projects) });
 
     foreach (var proj in projects)
-        if (Read("projects/" + proj.Id).Split("@projDoc") is [var contentF, var contentS])
+        if (Read("projects/"+ proj.Id)!.Split("@projDoc") is [var contentF, var contentS])
         {
             var args = new { contentF, contentS, report = proj.ReportId is {} id ? Read("projects/"+id) : null };
             Out(projPage.Run(args, proj, proj.Entry(lang)), "/fundraising/" + proj.Id);
         }
     
-    Out(Read("news"), "/news", new { Cards = Join(newsCard, news) });
+    Out("news", "/news", new { Cards = Join(newsCard, news) });
 
     foreach (var nw in news)
     {
         var loc = nw.Entry(lang);
-        var content = Read("news/" + loc.Id);
+        var content = Read("news/"+ loc.Id);
         Out(newsPage.Run(nw, loc), "/news/"+nw.En.Id, new { otherNews, content }, "/news/"+nw.Ua.Id);
     }
 }
@@ -85,7 +84,7 @@ record Entity<TEntry>()
     public required TEntry En { get; set; }
     public required TEntry Ua { get; set; }
     public string? Pic { get; set; }
-    public string? MiniPic { get; init; }
+    public string? MiniPic { get; set; }
     public bool DesctopOnly { get; set; }
 
     public TEntry Entry(string lang) => lang is "en" ? En : Ua;
@@ -94,8 +93,8 @@ record Entity : Entity<Entry>;
 
 record Entry
 {
-    public required string Title { get; init; }
-    public string? Descr { get; init; }
+    public required string Title { get; set; }
+    public string? Descr { get; set; }
 }
 
 record NewsEntry(string Id) : Entry;

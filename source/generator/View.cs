@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using static System.Linq.Expressions.Expression;
 
-record View(string Template)
+record FastView(string Template)
 {
     static readonly ConcurrentDictionary<Type, Func<object, (string Name, object Val)[]>> exposes = new();
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
@@ -14,7 +14,7 @@ record View(string Template)
             Lambda<Func<object, (string, object)[]>>(
                 NewArrayInit(typeof((string, object)),
                     from prop in type.GetProperties()
-                    where prop.PropertyType.Name.StartsWith("Nullable") ||
+                    where prop.PropertyType.Name.StartsWith(nameof(Nullable)) ||
                           Type.GetTypeCode(prop.PropertyType) is not TypeCode.Object
                     select New(tupleCtor,
                         Constant(prop.Name),
