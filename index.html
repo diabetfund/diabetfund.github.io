@@ -3,25 +3,15 @@
 <head>
     <script>
 
-
 const lib = {
-    get isEnglish() {
+    get cookEnglish() {
         var parts = ("; " + document.cookie).split("; is_english=");
         if (parts.length == 2)
             return parts.pop().split(";").shift() == 'true';
-  
-        return location.href.indexOf('/en') > -1;
+        return null;
     },
-    set isEnglish(v) {
+    set cookEnglish(v) {
         document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
-    },
-
-    _lang: null,
-    get lang() {
-        let {_lang} = this
-        if (_lang == null)
-            this._lang = _lang = this.isEnglish ? "en" : "ua";
-        return _lang;
     },
 
     sendLiqpay(sign, data, isNewWindow) {
@@ -68,8 +58,8 @@ const lib = {
           
         else if (Array.isArray(url))
           return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 500);
-      }
-      location.href= "/" + lib.lang;
+  }
+  location.href= "/" + (lib.cookEnglish ? "en": "ua");
 })();
      
     </script>

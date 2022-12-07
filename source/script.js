@@ -1,25 +1,25 @@
 
 const lib = {
+
+    _isEnglish: null,
     get isEnglish() {
+        var {_isEnglish} = this;
+        if (_isEnglish == null)
+            this._isEnglish = _isEnglish = location.href.indexOf('/en') > -1;
+        return _isEnglish; 
+    },
+
+    get cookEnglish() {
         var parts = ("; " + document.cookie).split("; is_english=");
         if (parts.length == 2)
             return parts.pop().split(";").shift() == 'true';
-  
-        var val = location.href.indexOf('/en') > -1;
-        setTimeout(() => lib.isEnglish = val, 50);
-        return val;
+        return null;
     },
-    set isEnglish(v) {
+    set cookEnglish(v) {
         document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
     },
 
-    _lang: null,
-    get lang() {
-        let {_lang} = this
-        if (_lang == null)
-            this._lang = _lang = this.isEnglish ? "en" : "ua";
-        return _lang;
-    },
+    get lang() { return this.isEnglish ? "en" : "ua"; },
 
     sendLiqpay(sign, data, isNewWindow) {
         var form = document.createElement("form");
@@ -44,10 +44,15 @@ const lib = {
     }
 };
 
+setTimeout(() => {
+    if (lib.cookEnglish != lib.isEnglish)
+        lib.cookEnglish = lib.isEnglish;
+}, 100);
+
 [...document.querySelectorAll(".lang-switcher a")].forEach(a => 
     a.addEventListener("click", e => {
         e.preventDefault();
-        lib.isEnglish = e.currentTarget.href.indexOf('/en') > -1;
+        lib.cookEnglish = e.currentTarget.href.indexOf('/en') > -1;
         location.href = e.currentTarget.href;
     }));
 
