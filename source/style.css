@@ -220,7 +220,6 @@ ul {
     max-width: 1200px;
     margin: 48px auto;
     background-size: cover;
-    border-radius: 3px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
     transition: background-image 0.8s ease-in-out;
   }
@@ -613,9 +612,14 @@ ul {
   }
 
   @media(max-width: 600px){
+    
     .testimonials-slider__item{
       margin-top:30px;
       max-width: 360px;
+    }
+
+    .card__content_bottom {
+        padding: 22px 0px !important;
     }
   }
 
@@ -712,12 +716,14 @@ textarea {
 }
 
 @media (min-width: 992px){
-.col-lg-6 {
-    -ms-flex: 0 0 50%;
-    -webkit-box-flex: 0;
-    flex: 0 0 50%;
-    max-width: 50%;
-}
+  .col-lg-6 {
+      -ms-flex: 0 0 50%;
+      -webkit-box-flex: 0;
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+
+
 }
 
 

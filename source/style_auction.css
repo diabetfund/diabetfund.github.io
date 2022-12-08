@@ -1,9 +1,40 @@
 
 
 
+.btn-primary {
+  background: #ee574c !important;
+  color: #fff;
+  border-color: #ee574c !important;
+  border: 1px solid;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  transition: all .5s;
+  border: 1px solid #ee574c;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-outline-primary {
+  color: #ee574c;
+  border-color: #ee574c;
+  border: 1px solid;
+}
+
+
+.box-shadow {
+  box-shadow: 0px 3px 10px 0px rgb(24 59 86 / 8%);
+}
+
+
 .collection-items .blog-box .collection-image {
    padding: 20px;
-   background-color: #f8f9fc;
+   background-color: #fff;
    border-radius: 20px
  }
  
@@ -40,6 +71,113 @@
    right: 80px;
    transition: all .5s
  }
+
+.back-home-image .image-fill {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.backhome-content .tab-box {
+  box-shadow: 0px 3px 10px 0px rgb(24 59 86 / 8%);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.backhome-content .tab-box .nav-item {
+  margin: 0 5px;
+  box-shadow: 0px 3px 10px 0px rgb(24 59 86 / 8%);
+  border-radius: 30px;
+}
+
+.backhome-content .tab-box .nav-item .nav-link {
+  border-radius: 30px;
+  color: #183b56;
+}
+
+.nav-pills .nav-link {
+  background: 0 0;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.backhome-content .tab-box .nav-item .nav-link:active,  .backhome-content .tab-box .nav-item .nav-link.active, .backhome-content .tab-box .nav-item .nav-link:focus {
+  background-color: #183b56 !important;
+  border-radius: 30px !important;
+  color: #fff;
+}
+
+.backhome-content .tab-box .tab-content .tab-pane .nav-in-box {
+  border-radius: 20px !important;
+  width: 80%;
+}
+
+.backhome-content .countdown ul li span {
+  display: block;
+  font-size: 18px;
+  color: #6b6e6f;
+  font-weight: 500;
+}
+
+.backhome-content .form-select {
+  background-color: rgba(107,110,111,.2) !important;
+  color: #183b56;
+  border-radius: 30px;
+  display: inline;
+  width: 50%;
+  box-shadow: none;
+  border: none;
+  box-shadow: 0px 3px 10px 0px rgb(24 59 86 / 8%);
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0!important;
+}
+
+.rounded-circle {
+  border-radius: 50%!important;
+}
+.avatar-md {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem!important;
+  margin-bottom: 1.5rem!important;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.tab-content>.active {
+  display: block;
+}
+
+
+.tab-content>.tab-pane {
+  display: none;
+}
+
+.fade {
+  transition: opacity .15s linear;
+}
+
+.fade:not(.show) {
+  opacity: 0;
+}
  
  .align-items-center {
    display: flex;
@@ -47,6 +185,43 @@
    justify-content: center;
    flex-direction: row
  }
+ .align-middle {
+  vertical-align: middle!important;
+}
+
+.icon .like, .icon .menu {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  box-shadow: 0px 3px 10px 0px rgb(31 134 239 / 30%);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.icon .like a, .icon .menu a {
+  color: #ee574c !important;
+}
+
+.dropdown, .dropend, .dropstart, .dropup {
+  position: relative;
+}
+.icon .like .dropdown-menu .dropdown-item, .icon .menu .dropdown-menu .dropdown-item {
+  color: #183b56 !important;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
  
  .d-flex {
    display: flex!important
@@ -70,9 +245,28 @@
  .ms-auto {
    margin-left: auto!important;
  }
+
+ .ms-2 {
+  margin-left: 0.5rem!important;
+}
+ .ms-3 {
+  margin-left: 1rem!important;
+}
+.me-2 {
+  margin-right: 0.5rem!important;
+}
  .mb-0 {
    margin-bottom: 0!important;
  }
+ .mb-1 {
+  margin-bottom: 0.25rem!important;
+}
+
+.ps-0 {
+  padding-left: 0!important;
+}
+
+
  .w-100 {
    width: 100%!important
  }
@@ -82,11 +276,23 @@
  .h5 {
    font-size: 1.25rem;
  }
+
+ .text-dark {
+  color: #183b56 !important;
+}
+
+.text-primary {
+  color: #ee574c !important;
+}
+
+ .flex-grow-1 {
+  flex-grow: 1!important;
+}
  
- .fw-bold {
-   font-weight: 700!important
- }
- 
+.rounded-pill {
+  border-radius: 50rem!important;
+}
+
  .row {
    --bs-gutter-x: 1.5rem;
    --bs-gutter-y: 0;
@@ -102,6 +308,27 @@
  .f-14 {
    font-size: 14px;
  }
+ .f-16 {
+  font-size: 16px;
+}
+.f-18 {
+  font-size: 18px;
+}
+
+
+.py-2 {
+  padding-top: 0.5rem!important;
+  padding-bottom: 0.5rem!important;
+}
+.px-3 {
+  padding-right: 1rem!important;
+  padding-left: 1rem!important;
+}
+
+
+.fw-normal {
+  font-weight: 400!important;
+}
  .text-muted {
    color: #6b6e6f !important;
  }
@@ -109,15 +336,37 @@
    height: 2rem;
    width: 2rem;
  }
- .avatar-xs {
-   height: 2rem;
-   width: 2rem;
- }
+
  .mx-2 {
    margin-right: 0.5rem!important;
    margin-left: 0.5rem!important;
  }
  
+ .pe-4 {
+  padding-right: 1.5rem!important;
+}
+
+.ps-3 {
+  padding-left: 1rem!important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 0.25rem;
+}
+
  @media (min-width: 992px){
    .col-lg-12 {
        flex: 0 0 auto;
@@ -127,4 +376,44 @@
      flex: 0 0 auto;
      width: 33.33333333%;
  }
+
+ .col-lg-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.mt-lg-0 {
+  margin-top: 0!important;
+}
+.dropdown-menu {
+  animation-name: DropDownSlide;
+  animation-duration: .3s;
+  animation-fill-mode: both;
+}
  }
+
+ p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+
+
+.mdi-heart::before {
+  content: "\F02D1";
+}
+.mdi:before, .mdi-set {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

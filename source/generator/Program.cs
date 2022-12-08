@@ -1,10 +1,10 @@
 ﻿using System.Text.Json;
 
-var version = 33;
+var version = 34;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-var (projects, news, partners, thanks, slides_) = 
-    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Entity>("partners"), ReadJ<Thanks>("thanks"), ReadJ<Slide>("slides"));
+var (projects, news, partners, thanks, slides_, stones) = 
+    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Entity>("partners"), ReadJ<Thanks>("thanks"), ReadJ<Slide>("slides"), ReadJ<Stone>("auction"));
 
 T[] ReadJ<T>(string table) => JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
@@ -21,8 +21,8 @@ void Render(string lang)
 
     FastView View(string path) => new(Read(path));
 
-    string Join<E>(FastView view, IEnumerable<Entity<E>> xs) =>
-        string.Join("\n", xs.Select(e => view.Run(e, e.Entry(lang)!)));
+    string Join<E>(FastView view, IEnumerable<Entity<E>> xs) => 
+        string.Join("\n", xs.Select(e => view.Run(e, e.Loc(lang)!)));
 
     FastView master = View("master"), thank = View("thankCard"),
         newsCard = View("newsCard"), newsPage = View("newsPage"),
@@ -66,44 +66,46 @@ void Render(string lang)
         if (Read("projects/"+ proj.Id)!.Split("@projDoc") is [var contentF, var contentS])
         {
             var args = new { contentF, contentS, report = proj.ReportId is {} id ? Read("projects/"+id) : null };
-            Out(projPage.Run(args, proj, proj.Entry(lang)), "/fundraising/" + proj.Id);
+            Out(projPage.Run(args, proj, proj.Loc(lang)), "/fundraising/" + proj.Id);
         }
-    
-    Out("news", "/news", new { Cards = Join(newsCard, news) });
 
+    Out("news", "/news", new { Cards = Join(newsCard, news) });
     foreach (var nw in news)
     {
-        var loc = nw.Entry(lang);
+        var loc = nw.Loc(lang);
         var content = Read("news/"+ loc.Id);
         Out(newsPage.Run(nw, loc), "/news/"+nw.En.Id, new { otherNews, content }, "/news/"+nw.Ua.Id);
     }
+
+    //Out("auction", "/auction", new { items = Join(View("auctionCard"), stones) });
+    //Out("auctionDetail", "/detail");
 }
 
-record Entity<TEntry>()
+record Entity<TLocale>()
 {
-    public required TEntry En { get; set; }
-    public required TEntry Ua { get; set; }
+    public required TLocale En { get; set; }
+    public required TLocale Ua { get; set; }
     public string? Pic { get; set; }
     public string? MiniPic { get; set; }
     public bool DesctopOnly { get; set; }
 
-    public TEntry Entry(string lang) => lang is "en" ? En : Ua;
+    public TLocale Loc(string lang) => lang is "en" ? En : Ua;
 }
-record Entity : Entity<Entry>;
+record Entity : Entity<Locale>;
 
-record Entry
+record Locale
 {
     public required string Title { get; set; }
     public string? Descr { get; set; }
 }
 
-record NewsEntry(string Id) : Entry;
+record NewsLoc(string Id) : Locale;
 
-record News(string Date) : Entity<NewsEntry>;
+record News(string Date) : Entity<NewsLoc>;
 
-record PayEntry(string? Data, string? Signature): Entry;
+record PayLoc(string? Data, string? Signature): Locale;
 
-record Proj(string Id, int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Entity<PayEntry>
+record Proj(string Id, int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Entity<PayLoc>
 {
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
@@ -115,7 +117,11 @@ record Proj(string Id, int Need, int Funds, bool IsMilitary, string? ReportId, s
 
 record Thanks(int? HRank = null) : Entity;
 
-record Slide(int Index, string ProjectId, int DarkPerc) : Entity<PayEntry>
+record Slide(int Index, string ProjectId, int DarkPerc) : Entity<PayLoc>
 {
     public string Url => Proj.Uri(ProjectId);
 }
+
+record StoneLoc(string CertificateIntro) : Locale;
+
+record Stone(string Id, string MiniLeft, string MiniRight) : Entity<StoneLoc>;
