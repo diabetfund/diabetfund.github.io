@@ -3,10 +3,12 @@
 var version = 34;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-var (projects, news, partners, thanks, slides_, stones) = 
-    (ReadJ<Proj>("projects"), ReadJ<News>("news"), ReadJ<Entity>("partners"), ReadJ<Thanks>("thanks"), ReadJ<Slide>("slides"), ReadJ<Stone>("auction"));
+Item<P, L>[] ReadJ<P, L>(string table) where P : Props =>
+    JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/{table}.json"))!;
 
-T[] ReadJ<T>(string table) => JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
+var (projects, news, partners, thanks, slides_) = 
+    (ReadJ<Proj, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
+     ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"));
 
 Render("ua");
 Render("en");
@@ -16,13 +18,15 @@ void Render(string lang)
     string Read(string path)
     {
         var full = $"{rootPath}source/{path}.html";
-        return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}.{path}.html");
+        return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
-
     FastView View(string path) => new(Read(path));
 
-    string Join<E>(FastView view, IEnumerable<Entity<E>> xs) => 
-        string.Join("\n", xs.Select(e => view.Run(e, e.Loc(lang)!)));
+    string Join<P, L>(FastView view, IEnumerable<Item<P, L>> xs) =>
+        string.Join("\n", xs.Select(e => view.Run(e.Props, lang is "en" ? e.En : e.Ua)));
+
+    (P, string, string) Card<P, L>(Item<P, L> it, FastView view, string cardsParth) =>
+        (it.Props, Read(cardsParth + (it.Props as Props)!.Id!), view.Run(it.Props, lang is "en" ? it.En : it.Ua));
 
     FastView master = View("master"), thank = View("thankCard"),
         newsCard = View("newsCard"), newsPage = View("newsPage"),
@@ -32,66 +36,56 @@ void Render(string lang)
         payDetails = Read("partners-pay"),
         otherNews = Join(newsCard, news.Take(2)),
 
-        topThanks = Join(View("thankCardMain"), thanks.Take(4).Select((t, i) => t with { DesctopOnly = i == 3 })),
+        topThanks = Join(View("thankCardMain"), thanks.Take(4).Select((t, i) => t with { Props = t.Props with { DesctopOnly = i == 3 } })),
         
-        topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { DesctopOnly = i > 3 }));
+        topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } }));
 
-    void Out(string content, string enPath, object? arg = null, string? uaPath = null)
+    void Out(string content, string subPath, object? arg = null)
     {
         if (content.Length < 30)
             content = Read(content);
         if (arg is not null)
             content = new FastView(content).Run(arg);
 
-        uaPath ??= enPath;
-        var path = $"{rootPath}/{lang}{(lang is "en" ? enPath : uaPath)}/index.html";
+        var path = $"{rootPath}/{lang}{subPath}/index.html";
         
         new FileInfo(path).Directory!.Create();
-        File.WriteAllText(path, master.Run(new { content, enPath, uaPath, version, lang }));
+        File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
     }
 
-    var founders = View("founders").Run(new { partners = Join(View("partner"), partners) });
+    var founders = View("founders").Run(Join(View("partner"), partners));
     Out("index", "", new { topProjects, payDetails, slides, topThanks });
     Out("center", "/center", new { payDetails, founders, skipAbout = true });
     Out("aboutus", "/aboutus", new { payDetails, founders });
 
-    Out("thanks", "/thanks", new { content = Join(thank, thanks) });
+    Out("thanks", "/thanks", Join(thank, thanks));
 
     foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
 
-    Out("projects", "/fundraising", new { FundsList = Join(projCard, projects) });
+    Out("projects", "/fundraising", Join(projCard, projects));
 
-    foreach (var proj in projects)
-        if (Read("projects/"+ proj.Id)!.Split("@projDoc") is [var contentF, var contentS])
-        {
-            var args = new { contentF, contentS, report = proj.ReportId is {} id ? Read("projects/"+id) : null };
-            Out(projPage.Run(args, proj, proj.Loc(lang)), "/fundraising/" + proj.Id);
-        }
+    foreach (var (props, content, view) in projects.Select(p => Card(p, projPage, "projects/")))
+        if (content.Split("@projDoc") is [var contentF, var contentS])
+            Out(view, "/fundraising/" + props.Id, new 
+            {
+                contentF, contentS,
+                report = props.ReportId is { } rep ? Read("projects/" + rep) : null
+            });
 
-    Out("news", "/news", new { Cards = Join(newsCard, news) });
-    foreach (var nw in news)
-    {
-        var loc = nw.Loc(lang);
-        var content = Read("news/"+ loc.Id);
-        Out(newsPage.Run(nw, loc), "/news/"+nw.En.Id, new { otherNews, content }, "/news/"+nw.Ua.Id);
-    }
+    Out("news", "/news", Join(newsCard, news));
 
-    //Out("auction", "/auction", new { items = Join(View("auctionCard"), stones) });
-    //Out("auctionDetail", "/detail");
+    foreach (var (props, content, view) in news.Select(n => Card(n, newsPage, "news/")))
+        Out(view, "/news/"+props.Id, new { content, otherNews });
 }
 
-record Entity<TLocale>()
+record Props
 {
-    public required TLocale En { get; set; }
-    public required TLocale Ua { get; set; }
+    public string? Id { get; set; }
     public string? Pic { get; set; }
     public string? MiniPic { get; set; }
     public bool DesctopOnly { get; set; }
-
-    public TLocale Loc(string lang) => lang is "en" ? En : Ua;
 }
-record Entity : Entity<Locale>;
 
 record Locale
 {
@@ -99,29 +93,25 @@ record Locale
     public string? Descr { get; set; }
 }
 
-record NewsLoc(string Id) : Locale;
+record Item<TProps, TLoc>(TProps Props, TLoc En, TLoc Ua);
 
-record News(string Date) : Entity<NewsLoc>;
+record News(string Date) : Props;
 
 record PayLoc(string? Data, string? Signature): Locale;
 
-record Proj(string Id, int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Entity<PayLoc>
+record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
 {
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
     public bool IsFull => Need == Funds;
-    public string Url => Uri(Id);
+    public string Url => Uri(Id!);
 
     public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(int? HRank = null) : Entity;
+record Thanks(int? HRank = null) : Props;
 
-record Slide(int Index, string ProjectId, int DarkPerc) : Entity<PayLoc>
+record Slide(string ProjectId, int DarkPerc) : Props
 {
     public string Url => Proj.Uri(ProjectId);
 }
-
-record StoneLoc(string CertificateIntro) : Locale;
-
-record Stone(string Id, string MiniLeft, string MiniRight) : Entity<StoneLoc>;

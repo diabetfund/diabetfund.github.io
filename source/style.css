@@ -1,10 +1,64 @@
+
+/* fira-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fira-sans-v16-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-v16-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-v16-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-v16-latin_cyrillic-regular.svg#FiraSans') format('svg'); /* Legacy iOS */
+}
+/* fira-sans-italic - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/fira-sans-v16-latin_cyrillic-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-v16-latin_cyrillic-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-v16-latin_cyrillic-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-italic.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-v16-latin_cyrillic-italic.svg#FiraSans') format('svg'); /* Legacy iOS */
+}
+/* fira-sans-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/fira-sans-v16-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-v16-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-v16-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-v16-latin_cyrillic-500.svg#FiraSans') format('svg'); /* Legacy iOS */
+}
+/* fira-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/fira-sans-v16-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/fira-sans-v16-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fira-sans-v16-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/fira-sans-v16-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fira-sans-v16-latin_cyrillic-700.svg#FiraSans') format('svg'); /* Legacy iOS */
+}
+
 .support-btn {
     background: #0c9a56;
     border: 0px solid #0c9a56;
     border-radius: 6px;
     cursor: pointer;
-    font-family: Rubik,sans-serif;
-    font-weight: 500;
+    font-family: 'Fira Sans',sans-serif;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1.6em;
     color: white;
@@ -17,7 +71,7 @@
   border: 0px solid #0c9a56;
   border-radius: 6px;
   cursor: pointer;
-  font-family: Rubik,sans-serif;
+  font-family: 'Fira Sans',sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6em;
@@ -29,8 +83,8 @@
   border: 2px solid white;
   border-radius: 6px;
   cursor: pointer;
-  font-family: Rubik,sans-serif;
-  font-weight: 500;
+  font-family: 'Fira Sans',sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.6em;
   color: white;
@@ -212,6 +266,23 @@ ul {
   margin-top: -80px;
 }
 
+.main-about-fund {
+  border: 2px solid #0c9a56;
+    border-radius: 4px;
+    max-width: 174px;
+    display: block;
+    background: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #0c9a56;
+    text-align: center;
+    padding: 8px 12px 8px 12px;
+    margin: 0 auto;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 .slider {
     position: relative;
     overflow: hidden;
@@ -236,11 +307,12 @@ ul {
     padding: 28px;
     color: white;
     margin: 0;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 700;
     transition: all 0.8s ease-in-out;
     padding-bottom: 80px;
     min-width: 400px;
+    line-height: 30px;
   }
   
   .caption small {
@@ -250,6 +322,24 @@ ul {
 
   
 @media(min-width : 768px) {
+
+  .main-about-fund {
+    border: 2px solid #0c9a56;
+    border-radius: 4px;
+    max-width: 174px;
+    display: block;
+    background: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #0c9a56;
+    text-align: center;
+    padding: 8px 12px 8px 12px;
+    
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+
   .main-intro-logo {
     display: block;
     align-items: center;
@@ -394,34 +484,36 @@ ul {
 
 /* cosmetics only from here on down */
 .thanks > * {
-  background-color: #f3f6f5;
+  background-color: transparent;
   
   font-size: 15px;
 }
 .thanks > * img {
   max-width: 100%;
-  
+  border-radius: 10px;
 }
 .thank-ava{
-  filter: drop-shadow(3px 3px 0px #6a9c84);
+  filter: drop-shadow(3px 3px 0px #F2F3F3);
+  width: 43px;
+  height: 43px;
 }
 .tanks_sign {
   
-  color: white;
+  color: #88928D;
   position: absolute;
   transform: translate(-2%,-50%);
   
   
 }
 .thanks-sign-text{
-  background: #6a9c84;
-  text-shadow: 1px 1px 1px black;
+  background: #F2F3F3;
   font-size: 13px;
+  font-weight: 600;
 }
 
 .thank-card-wrap{
   margin-bottom: 20px;
-  border-radius: 10px;
+  
   overflow: hidden;
 }
 
@@ -435,6 +527,11 @@ ul {
   -webkit-box-orient: vertical;
 }
 
+.thank-descr {
+  padding: 5px 8px;
+  color: #88928D;
+  height: 6.7em;
+}
 
   .hide_True {
     display: none;
@@ -492,10 +589,12 @@ ul {
   .main-text-problems {
     margin-top:0px;
   }
-  .maint-title-proj{
+  .maint-title-proj {
     margin-top:50px;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .main-needs-list{
     margin-left: 0px;
@@ -538,6 +637,8 @@ ul {
       margin-top:40px;
       font-size: 40px;
     font-weight: 700;
+    padding-left: 10px;
+    padding-right: 10px;
     }
     .main-needs-list{
       margin-left: 0px;
@@ -611,6 +712,14 @@ ul {
     text-align: left;
   }
 
+
+  @media(max-width: 330px){
+    #supp-slide {
+      display: none;
+    }
+  }
+
+
   @media(max-width: 600px){
     
     .testimonials-slider__item{
@@ -640,7 +749,7 @@ ul {
   }
 
   .admin-table{
-    font-family: Rubik,sans-serif;
+    font-family: 'Fira Sans',sans-serif;
   }
   .admin-table td {
     padding: 20px;
