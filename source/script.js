@@ -104,17 +104,18 @@ if (location.href.indexOf("/fundraising") > -1) {
     [...document.getElementsByClassName(`is-military-${suffix}`)].forEach(c => c.style.display = "none");
 }
 
-function pageArrow(clas, path, linkPage) {
-    var [tag, color, href] = linkPage == null ? ["span", "#ccc", ""] : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
-    return `<${tag} class="${clas}" href="${href}">
-        <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-            <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-    </${tag}>`;
-}
-
-var paginationPane = document.querySelector(".news__pagination")
-if (paginationPane){
+(pane => {
+    if (!pane)
+        return;
+    
+    function arrow(clas, path, linkPage) {
+        var [tag, color, href] = linkPage == null ? ["span", "#ccc", ""] : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
+        return `<${tag} class="${clas}" href="${href}">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+                <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </${tag}>`;
+    }
     var pages = [1, 2, 3];
     var curIdx = Math.max(0, pages.findIndex(p => location.search.indexOf(`page=${p}`) > -1));
 
@@ -125,10 +126,12 @@ if (paginationPane){
         ? `<span class="pagination__item pagination__item_active">${p}</span>`
         : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
 
-    paginationPane.innerHTML = `${pageArrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
+    pane.innerHTML = `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
     <div class="pagination__items-wr">${items.join('')}</div>
-    ${pageArrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`;
-}
+    ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`;
+
+})
+(document.querySelector(".news__pagination"));
 
 const header = document.querySelector('header')
 const burgerBtn = document.getElementById('burger-btn')
@@ -276,33 +279,27 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
     let curSlideIndex = -1;
     const curCaption = () => document.querySelector('.caption-' + (curSlideIndex));
     
-    var result = { 
-        interval: null,
-        advance() {
-            curSlideIndex++;
-    
-            if (curSlideIndex >= slideArray.length)
-                curSlideIndex = 0;
-                
-            let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
-            slider.style.cssText = `background: url("${url}") no-repeat center center; background-size: cover;`;
-    
-            const elems = document.getElementsByClassName('caption');
-            for (let i = 0; i < elems.length; i++) 
-                elems[i].style.cssText = 'opacity: 0;';
-    
-            curCaption().style.cssText = 'opacity: 1;';
-            //mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
-        }, 
-        stop() { 
-            clearInterval(this.interval)
-        },
-        start() {
-            this.interval = setInterval(this.advance, 5000)
-        }
+    var interval = null;
+    function advance() {
+        curSlideIndex++;
+
+        if (curSlideIndex >= slideArray.length)
+            curSlideIndex = 0;
+            
+        let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
+        slider.style.cssText = `background: url("${url}") no-repeat center center; background-size: cover;`;
+
+        const elems = document.getElementsByClassName('caption');
+        for (let i = 0; i < elems.length; i++) 
+            elems[i].style.cssText = 'opacity: 0;';
+
+        curCaption().style.cssText = 'opacity: 1;';
+        //mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
     }
-    result.advance();
-    result.start();
+    var stop = () => clearInterval(interval);
+    var start = () => interval = setInterval(advance, 5000);
+    advance();
+    start();
 
     suppButton.addEventListener("click", e => {
         e.preventDefault();
@@ -314,7 +311,7 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         e.preventDefault();
         location.href = curCaption().dataset.href;
     })
-    return result;
+    return { start, stop };
     
 })([
     document.querySelector('.slider'),

@@ -3,10 +3,10 @@
 var version = 34;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-Item<P, L>[] ReadJ<P, L>(string table) where P : Props =>
+Item<P, L>[] ReadJ<P, L>(string table) =>
     JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/{table}.json"))!;
 
-var (projects, news, partners, thanks, slides_) = 
+var (projects, news, partners, thanks, slides) = 
     (ReadJ<Proj, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
      ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"));
 
@@ -20,32 +20,14 @@ void Render(string lang)
         var full = $"{rootPath}source/{path}.html";
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
-    FastView View(string path) => new(Read(path));
-
-    string Join<P, L>(FastView view, IEnumerable<Item<P, L>> xs) =>
-        string.Join("\n", xs.Select(e => view.Run(e.Props, lang is "en" ? e.En : e.Ua)));
-
-    (P, string, string) Card<P, L>(Item<P, L> it, FastView view, string cardsParth) =>
-        (it.Props, Read(cardsParth + (it.Props as Props)!.Id!), view.Run(it.Props, lang is "en" ? it.En : it.Ua));
-
-    FastView master = View("master"), thank = View("thankCard"),
-        newsCard = View("newsCard"), newsPage = View("newsPage"),
-        projPage = View("projPage"), projCard = View("projectCard");
-
-    string slides = Join(View("slide"), slides_),
-        payDetails = Read("partners-pay"),
-        otherNews = Join(newsCard, news.Take(2)),
-
-        topThanks = Join(View("thankCardMain"), thanks.Take(4).Select((t, i) => t with { Props = t.Props with { DesctopOnly = i == 3 } })),
-        
-        topProjects = Join(projCard, projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } }));
+    View master = new(Read("master"));
 
     void Out(string content, string subPath, object? arg = null)
     {
         if (content.Length < 30)
             content = Read(content);
         if (arg is not null)
-            content = new FastView(content).Run(arg);
+            content = new View(content).Run(arg);
 
         var path = $"{rootPath}/{lang}{subPath}/index.html";
         
@@ -53,29 +35,49 @@ void Render(string lang)
         File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
     }
 
-    var founders = View("founders").Run(Join(View("partner"), partners));
-    Out("index", "", new { topProjects, payDetails, slides, topThanks });
-    Out("center", "/center", new { payDetails, founders, skipAbout = true });
-    Out("aboutus", "/aboutus", new { payDetails, founders });
+    string Join<P, L>(string viewPath, IEnumerable<Item<P, L>> xs)
+    {
+        View view = new(Read(viewPath));
+        return string.Join("\n", xs.Select(it => view.Run(it.Props, lang is "en" ? it.En : it.Ua)));
+    }
 
-    Out("thanks", "/thanks", Join(thank, thanks));
+    var common = new 
+    {
+        founders = new View(Read("founders")).Run(Join("partner", partners)),
+        payDetails = Read("partners-pay"),
+        topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } })),
+        slides = Join("slide", slides),
+        topThanks = Join("thankCardMain", thanks.Take(4).Select((t, i) => t with { Props = t.Props with { DesctopOnly = i == 3 } })),
+        skipAbout = false
+    };
+    Out("center", "/center", common with { skipAbout = true });
+    Out("aboutus", "/aboutus", common);
+    Out("index", "", common);
+    Out("projects", "/fundraising", Join("projectCard", projects));
+    Out("thanks", "/thanks", Join("thankCard", thanks));
+    Out("news", "/news", Join("newsCard", news));
 
     foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
 
-    Out("projects", "/fundraising", Join(projCard, projects));
+    (P, string, string)[] DetailPages<P, L>(Item<P, L>[] items, string viewPath, string cardsParth) where P: Props
+    {
+        View view = new(Read(viewPath));
+        return Array.ConvertAll(items, it =>
+            (it.Props, Read(cardsParth+ it.Props.Id!), view.Run(it.Props, lang is "en" ? it.En : it.Ua)));
+    }
 
-    foreach (var (props, content, view) in projects.Select(p => Card(p, projPage, "projects/")))
-        if (content.Split("@projDoc") is [var contentF, var contentS])
+    foreach (var (props, content, view) in DetailPages(projects, "projPage", "projects/"))
+        if (content.Split("<hr/>") is [var contentF, var contentS])
             Out(view, "/fundraising/" + props.Id, new 
             {
-                contentF, contentS,
+                contentF, contentS, 
                 report = props.ReportId is { } rep ? Read("projects/" + rep) : null
             });
 
-    Out("news", "/news", Join(newsCard, news));
+    var otherNews = Join("newsCard", news.Take(2));
 
-    foreach (var (props, content, view) in news.Select(n => Card(n, newsPage, "news/")))
+    foreach (var (props, content, view) in DetailPages(news, "newsPage", "news/"))
         Out(view, "/news/"+props.Id, new { content, otherNews });
 }
 

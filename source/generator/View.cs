@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using static System.Linq.Expressions.Expression;
 
-record FastView(string Template)
+record View(string Template)
 {
     static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> exposes = new();
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
