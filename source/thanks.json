@@ -29,17 +29,15 @@
    },
    {
       "Props": {
-         "Pic": "card-65.jpg",
-         "MiniPic": "card-12-ava.png"
+         "Pic": "card-77.jpg"
       },
-      "HRank": 2,
       "Ua": {
-         "Title": "Тарасенко Дарина",
-         "Descr": "Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️"
+         "Title": "Віталій Франкевич",
+         "Descr": "Дуже дякую"
       },
       "En": {
-         "Title": "Tarasenko Darina",
-         "Descr": "Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️"
+         "Title": "Vitaly Frankevich",
+         "Descr": "Djakuyu"
       }
    },
    {
@@ -58,6 +56,21 @@
    },
    {
       "Props": {
+         "Pic": "card-65.jpg",
+         "MiniPic": "card-12-ava.png"
+      },
+      "HRank": 2,
+      "Ua": {
+         "Title": "Тарасенко Дарина",
+         "Descr": "Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️"
+      },
+      "En": {
+         "Title": "Tarasenko Darina",
+         "Descr": "Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️"
+      }
+   },
+   {
+      "Props": {
          "Pic": "card-68.jpg"
       },
       "Ua": {
@@ -67,6 +80,96 @@
       "En": {
          "Title": "Olja",
          "Descr": "We sincerely THANK Eduard and the team for their support, for helping our children, for their kindness and humanity. Health and a peaceful sky to you!!!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-78.jpg",
+         "MiniPic": "card-13-ava.png"
+      },
+      "HRank": 0,
+      "Ua": {
+         "Title": "Тетяна",
+         "Descr": "Щиро дякуємо за допомогу для наших діток. Дякуємо всім причетним! Здоров'я всім працівникам фонду!"
+      },
+      "En": {
+         "Title": "Tatiana",
+         "Descr": "Thank you very much for helping our children. Thanks to everyone involved! Health to all employees of the fund!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-79.jpg",
+         "MiniPic": "card-79-ava.png"
+      },
+      "HRank": 0,
+      "Ua": {
+         "Title": "Марiя П.",
+         "Descr": "Дякуєм щиро за допомогу фонду,ВСІМ хто долучився,до цієї справи,дівчатам які займалися відправкою!Процвітання,подяки і миру всім."
+      },
+      "En": {
+         "Title": "Marya P.",
+         "Descr": "I sincerely thank you for the help of the fund, to ALL who participated in this case, to the girls who were engaged in sending! Prosperity, thanks and peace to all."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-80.jpg",
+         "MiniPic": "card-80-ava.png"
+      },
+      "HRank": 0,
+      "Ua": {
+         "Title": "Анна",
+         "Descr": "Велика вдячність фонду! Хай всім нам допомагає Господь!"
+      },
+      "En": {
+         "Title": "Anna",
+         "Descr": "Many thanks to the foundation! May the Lord help us all!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-81.jpg",
+         "MiniPic": "card-81-ava.png"
+      },
+      "HRank": 0,
+      "Ua": {
+         "Title": "Прiходько Юлiя",
+         "Descr": "Доброго дня! Щиро дякуємо фонду і усім причетним за допомогу! Дякую, що турбуєтеся про наших дітей! Ви неймовірні!!!"
+      },
+      "En": {
+         "Title": "Prikhodko Julia",
+         "Descr": "Hello! We sincerely thank the foundation and everyone involved for their help! Thank you for caring about our children! You are incredible!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-82.jpg",
+         "MiniPic": "card-82-ava.png"
+      },
+      "HRank": 1,
+      "Ua": {
+         "Title": "Надія",
+         "Descr": "Доброго дня! Сьогодні отримали подарунок від Вашої благодійної організації. Дуже дякую Вам,що даруєте нашім дітлахам смаколики,яких вони нажаль позбавлені в тій кількості,як би їм хотілося! Зараз спробую зробити брауні,щоб дитина вже наїлась. ;))) Дуже дякую усім за допомогу!!!"
+      },
+      "En": {
+         "Title": "Nadija",
+         "Descr": "Hello! Today we received a gift from your charitable organization. Thank you very much for giving our children goodies, which, unfortunately, they are deprived of in the amount they would like! Now I will try to make brownies so that the child is already full. ;))) Thank you all very much for your help!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-83.jpg",
+         "MiniPic": "card-83-ava.png"
+      },
+      "HRank": 1,
+      "Ua": {
+         "Title": "Анастасія Перелигіна",
+         "Descr": "Дуже вдячна фонду за допомогу. Оперативно,якісно та дуже вчасно!!!"
+      },
+      "En": {
+         "Title": "Anastasia Perelygina",
+         "Descr": "I am very grateful to the foundation for the help. Prompt, high-quality and very timely!!!"
       }
    },
    {
