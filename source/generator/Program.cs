@@ -63,7 +63,6 @@ void Render(string lang)
     Out("projects", "/fundraising", Join("projectCard", projects));
     Out("thanks", "/thanks", Join("thankCard", thanks));
     Out("news", "/news", Join("newsCard", news));
-
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
