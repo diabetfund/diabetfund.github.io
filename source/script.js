@@ -56,6 +56,11 @@ setTimeout(() => {
         location.href = e.currentTarget.href;
     }));
 
+    
+if (!lib.isEnglish)
+    document.querySelector(".lang-switcher").classList.add("lang-switcher__active");
+
+
 [...document.querySelectorAll('[data-liqpay]')].forEach(link => 
     link.addEventListener("click", e => {
         e.preventDefault();
@@ -66,27 +71,27 @@ setTimeout(() => {
 [...document.querySelectorAll('[data-loc]')].forEach(el => 
     el.innerHTML = JSON.parse(el.dataset.loc)[lib.isEnglish ? 1 : 0]);
 
-var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
+(() => {
+    var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
 
-var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
+    var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
+    
+    [...document.querySelectorAll(".menu > a")].forEach((a, i) => {
+        if (i == curFolder)
+            a.classList.add("menu__item_active");
+    });
+    
+    [...document.querySelectorAll(".menu_mobile > a")].forEach((a, i) => {
+        if (i == curFolder)
+            a.classList.add("menu_mobile__item_active");
+    });
+    
+    [...document.querySelectorAll(".footer__nav > a")].forEach((a, i) => {
+        if (i == curFolder)
+            a.classList.add("footer__nav-item_active");
+    });
+})();
 
-[...document.querySelectorAll(".menu > a")].forEach((a, i) => {
-    if (i == curFolder)
-        a.classList.add("menu__item_active");
-});
-
-[...document.querySelectorAll(".menu_mobile > a")].forEach((a, i) => {
-    if (i == curFolder)
-        a.classList.add("menu_mobile__item_active");
-});
-
-[...document.querySelectorAll(".footer__nav > a")].forEach((a, i) => {
-    if (i == curFolder)
-        a.classList.add("footer__nav-item_active");
-});
-
-if (!lib.isEnglish)
-    document.querySelector(".lang-switcher").classList.add("lang-switcher__active");
 
 if (location.href.indexOf("/fundraising") > -1) {
     var search = location.search;
@@ -136,19 +141,16 @@ if (location.href.indexOf("/fundraising") > -1) {
 const header = document.querySelector('header')
 const burgerBtn = document.getElementById('burger-btn')
 const mobileMenuWr = document.getElementById('menu_mobile-wr')
-const mobileMenu = document.getElementById('menu_mobile')
+const mobileMenu = document.getElementById('menu_mobile');
 
-const copyBtn = document.getElementById('copyBtn')
-if (copyBtn) {
-    copyBtn.addEventListener('click', copyToClipboard)
-}
-
-function copyToClipboard() {
-    const copyText = document.getElementById(`${lib.isEnglish ? "usd" : "uah"}Account`).innerText
-    navigator.clipboard.writeText(copyText).then(() => {
-        alert("Copied to clipboard")
-    })
-}
+[...document.querySelectorAll(".copy-wallet")].forEach(btn => 
+    btn.addEventListener("click", e => {
+        e.preventDefault();
+        var copyText = document.getElementById(e.currentTarget.dataset.walletid).innerText
+        navigator.clipboard.writeText(copyText).then(() => {
+            alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано")
+        })
+    }));
 
 window.addEventListener('resize', function () {
     mobileMenuWr.style.top = `${header.offsetHeight}px`
@@ -165,28 +167,27 @@ burgerBtn.addEventListener('click', function () {
 });
 
 [...mobileMenu.children].forEach(i => {
-    if (i.classList.contains('dropdown')) {
+    if (i.classList.contains('dropdown'))
         i.addEventListener('click', function (e) {
             e.preventDefault()
             this.classList.toggle('dropdown_open')
         })
-    }
-})
+});
 
-const heroBg = document.getElementById('hero__background')
-const heroContent = document.getElementById('hero__content')
-window.onload = calcHeroBgOffset
-window.onresize = calcHeroBgOffset
-
-function calcHeroBgOffset() {
-    if (heroBg && window.matchMedia('(max-width: 575px)').matches) {
-        heroBg.style.top = `${heroContent.offsetHeight}px`
-    } else {
-        if (heroBg) {
-            heroBg.style.top = `0px`
-        }
+(([heroBg, heroContent]) => {
+    if (heroBg && heroContent) {
+        window.onload = calcHeroBgOffset
+        window.onresize = calcHeroBgOffset
     }
-}
+    const calcHeroBgOffset = () =>
+        heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
+            ? `${heroContent.offsetHeight}px`
+            : `0px`;
+})([
+    document.getElementById('hero__background'),
+    document.getElementById('hero__content')
+]);
+
 
 const modalTrigger = document.getElementById('modal-trigger')
 const modal = document.getElementById('modal')

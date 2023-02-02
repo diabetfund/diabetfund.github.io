@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=34"/>
-    <link rel="stylesheet" href="/source/style.css?_=34"/>
+    <link rel="stylesheet" href="/source/app.css?_=35"/>
+    <link rel="stylesheet" href="/source/style.css?_=35"/>
    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
@@ -613,22 +613,101 @@
               </p>
               <hr/>
               <h3 class='support-details__local-title' data-loc='["Банківські рахунки", "Bank accounts"]'>
-              </h3>
-              <p id="copyText" class='support-details__local-text'>
-                <span data-loc='["АТ КБ \"ПРИВАТБАНК\"", "JSC CB \"PRIVATBANK\""]'></span> <br>
-                SWIFT: PBANUA2X <br>
-                <span data-loc='["Розрахункові рахунки", "Current accounts"]'></span>: <br>
-                UAH: <span id="uahAccount">UA123052990000026005050305667</span> <br>
-                USD: <span id="usdAccount">UA113052990000026008050316738</span> <br>
-                EUR: UA343052990000026006050334046
-              </p>
-              <button id="copyBtn" class='support-details__copy-btn'>
-                  <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
-                      <path
-                          d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
-                  </svg>
-                  <span data-loc='["Копіювати", "Copy"]'></span>
-              </button>
+</h3>
+<p class='support-details__local-text'>
+  <span data-loc='["АТ КБ \"ПРИВАТБАНК\"", "JSC CB \"PRIVATBANK\""]'></span> <br>
+  SWIFT: PBANUA2X <br>
+  <table  style="margin-top: 10px;">
+    <tr>
+      <td style="padding-right: 10px;">
+        <img src="/img/header/credit-card.svg" />
+      </td>
+      <td data-loc='["Розрахункові рахунки:", "Current accounts:"]'></td>
+    </tr>
+  </table>
+  <table>
+      <tr>
+   <td class="wallet-t1-False">UAH:</td>
+   <td >
+      <div id="walletUAH" class="wallet-t2-False">UA123052990000026005050305667</div>
+   </td>
+   <td>
+      <button class='support-details__copy-btn copy-wallet' data-walletid="walletUAH" style="font-size: 12px; column-gap: 5px;margin-top: 0px; margin-left: 15px;">
+         <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+             <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+         </svg>
+         <span data-loc='["Копіювати", "Copy"]'></span>
+     </button>
+   </td>
+</tr>
+<tr>
+   <td class="wallet-t1-False">USD:</td>
+   <td >
+      <div id="walletUSD" class="wallet-t2-False">UA113052990000026008050316738</div>
+   </td>
+   <td>
+      <button class='support-details__copy-btn copy-wallet' data-walletid="walletUSD" style="font-size: 12px; column-gap: 5px;margin-top: 0px; margin-left: 15px;">
+         <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+             <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+         </svg>
+         <span data-loc='["Копіювати", "Copy"]'></span>
+     </button>
+   </td>
+</tr>
+<tr>
+   <td class="wallet-t1-False">EUR:</td>
+   <td >
+      <div id="walletEUR" class="wallet-t2-False">UA343052990000026006050334046</div>
+   </td>
+   <td>
+      <button class='support-details__copy-btn copy-wallet' data-walletid="walletEUR" style="font-size: 12px; column-gap: 5px;margin-top: 0px; margin-left: 15px;">
+         <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+             <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+         </svg>
+         <span data-loc='["Копіювати", "Copy"]'></span>
+     </button>
+   </td>
+</tr>
+  </table>
+  <table  style="margin-top: 10px;">
+    <tr>
+      <td style="padding-right: 10px;">
+        <img src="/img/header/coin.svg" />
+      </td>
+      <td data-loc='["Гарманцi крипровалют:", "Cryptocurrency wallets:"]'></td>
+    </tr>
+  </table>
+  <table>
+      <tr>
+   <td class="wallet-t1-True">Ethereum:</td>
+   <td >
+      <div id="walletETH" class="wallet-t2-True">0xd365D6aeec70412B806e28C6648c5b8d59668745</div>
+   </td>
+   <td>
+      <button class='support-details__copy-btn copy-wallet' data-walletid="walletETH" style="font-size: 12px; column-gap: 5px;margin-top: 0px; margin-left: 15px;">
+         <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+             <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+         </svg>
+         <span data-loc='["Копіювати", "Copy"]'></span>
+     </button>
+   </td>
+</tr>
+<tr>
+   <td class="wallet-t1-True">Bitcoin:</td>
+   <td >
+      <div id="walletBTC" class="wallet-t2-True">bc1q6p9nsuzanggxypg4x0dafjtdp2mm5t6nuvfhdx</div>
+   </td>
+   <td>
+      <button class='support-details__copy-btn copy-wallet' data-walletid="walletBTC" style="font-size: 12px; column-gap: 5px;margin-top: 0px; margin-left: 15px;">
+         <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
+             <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
+         </svg>
+         <span data-loc='["Копіювати", "Copy"]'></span>
+     </button>
+   </td>
+</tr>
+  </table>
+</p>
           </div>
       </div>
   </section>
@@ -745,6 +824,6 @@
     </div>
 </div>
 
-<script src="/source/script.js?_=34"></script>
+<script src="/source/script.js?_=35"></script>
 </body>
 </html>

@@ -92,6 +92,32 @@
   background-color: transparent;
 }
 
+.wallet-t1-True {
+  padding-right:3px;
+  width: 74px;
+  max-width:74px;
+}
+
+.wallet-t1-False {
+  padding-right:3px;
+  width: 34px;
+  max-width:34px;
+}
+
+.wallet-t2-True {
+  width: 200px;
+  max-width:200px;
+  overflow-x: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.wallet-t2-False {
+  width: 200px;
+  max-width:200px;
+  overflow-x: hidden;
+  -webkit-line-clamp: 3;
+}
+
 .proj-card-amoun-title {
   font-weight: 700 !important;
   color:#88928d;
@@ -160,6 +186,21 @@
   .support-btn_comm_rev {
     font-size: 15px;
     padding: 9px 17px;
+  }
+
+  
+  .wallet-t2-True {
+    width: 60px;
+    max-width:60px;
+    overflow-x: hidden;
+    -webkit-line-clamp: 3;
+  }
+
+  .wallet-t2-False {
+    width: 100px;
+    max-width:100px;
+    overflow-x: hidden;
+    -webkit-line-clamp: 3;
   }
 }
 

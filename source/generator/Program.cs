@@ -1,14 +1,15 @@
 ﻿using System.Text.Json;
 
-var version = 34;
+var version = 35;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
     JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/{table}.json"))!;
 
-var (projects, news, partners, thanks, slides) = 
+var (projects, news, partners, thanks, slides, wallets, stones) =
     (ReadJ<Proj, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
-     ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"));
+     ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
+     ReadJ<Stone, StoneLoc>("auction"));
 
 Render("ua");
 Render("en");
@@ -41,14 +42,20 @@ void Render(string lang)
         return string.Join("\n", xs.Select(it => view.Run(it.Props, lang is "en" ? it.En : it.Ua)));
     }
 
-    var common = new 
+    var walletsTable = new View(Read("wallets")).Run(new
+    {
+        bank = Join("wallet-line", wallets.Where(_ => !_.Props.IsCrypto)),
+        crypto = Join("wallet-line", wallets.Where(_ => _.Props.IsCrypto))
+    });
+    var common = new
     {
         founders = new View(Read("founders")).Run(Join("partner", partners)),
-        payDetails = Read("partners-pay"),
+        payDetails = new View(Read("partners-pay")).Run(walletsTable),
         topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } })),
         slides = Join("slide", slides),
         topThanks = Join("thankCardMain", thanks.Take(4).Select((t, i) => t with { Props = t.Props with { DesctopOnly = i == 3 } })),
-        skipAbout = false
+        skipAbout = false,
+        walletsTable
     };
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
@@ -56,6 +63,9 @@ void Render(string lang)
     Out("projects", "/fundraising", Join("projectCard", projects));
     Out("thanks", "/thanks", Join("thankCard", thanks));
     Out("news", "/news", Join("newsCard", news));
+
+    Out("auction", "/auction", Join("auctionCard", stones));
+    Out("auctionDetail", "/detail");
 
     foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
@@ -117,3 +127,9 @@ record Slide(string ProjectId, int DarkPerc) : Props
 {
     public string Url => Proj.Uri(ProjectId);
 }
+
+record Wallet(string Address, bool IsCrypto) : Props;
+
+record StoneLoc(string CertificateIntro) : Locale;
+
+record Stone(string MiniLeft, string MiniRight) : Props;
