@@ -176,13 +176,14 @@ burgerBtn.addEventListener('click', function () {
 
 (([heroBg, heroContent]) => {
     if (heroBg && heroContent) {
+        const calcHeroBgOffset = () =>
+            heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
+                ? `${heroContent.offsetHeight}px`
+                : `0px`;
+
         window.onload = calcHeroBgOffset
         window.onresize = calcHeroBgOffset
     }
-    const calcHeroBgOffset = () =>
-        heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
-            ? `${heroContent.offsetHeight}px`
-            : `0px`;
 })([
     document.getElementById('hero__background'),
     document.getElementById('hero__content')
