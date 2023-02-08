@@ -90,6 +90,8 @@ void Render(string lang)
         Out(view, "/news/"+props.Id, new { content, otherNews });
 }
 
+record Item<P, L>(P Props, L En, L Ua) where P : notnull where L : notnull;
+
 record Props
 {
     public string? Id { get; set; }
@@ -103,8 +105,6 @@ record Locale
     public required string Title { get; set; }
     public string? Descr { get; set; }
 }
-
-record Item<TProps, TLoc>(TProps Props, TLoc En, TLoc Ua);
 
 record News(string Date) : Props;
 
