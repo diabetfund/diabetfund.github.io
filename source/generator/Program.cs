@@ -4,7 +4,7 @@ var version = 36;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
-    JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/{table}.json"))!;
+    JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
     (ReadJ<Proj, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
@@ -39,7 +39,7 @@ void Render(string lang)
     string Join<P, L>(string viewPath, IEnumerable<Item<P, L>> xs)
     {
         View view = new(Read(viewPath));
-        return string.Join("\n", xs.Select(it => view.Run(it.Props, lang is "en" ? it.En : it.Ua)));
+        return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En! : it.Ua)));
     }
 
     var walletsTable = new View(Read("wallets")).Run(new
@@ -90,7 +90,7 @@ void Render(string lang)
         Out(view, "/news/"+props.Id, new { content, otherNews });
 }
 
-record Item<P, L>(P Props, L En, L Ua) where P : notnull where L : notnull;
+record Item<P, L>(P Props, L En, L Ua);
 
 record Props
 {
