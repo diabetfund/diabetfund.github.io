@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 36;
+var version = 37;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -39,7 +39,7 @@ void Render(string lang)
     string Join<P, L>(string viewPath, IEnumerable<Item<P, L>> xs)
     {
         View view = new(Read(viewPath));
-        return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En! : it.Ua)));
+        return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En : it.Ua)));
     }
 
     var walletsTable = new View(Read("wallets")).Run(new

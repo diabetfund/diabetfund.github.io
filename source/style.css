@@ -100,8 +100,8 @@
 
 .wallet-t1-False {
   padding-right:3px;
-  width: 34px;
-  max-width:34px;
+  width: 58px;
+  max-width:58px;
 }
 
 .wallet-t2-True {
@@ -109,6 +109,7 @@
   max-width:200px;
   overflow-x: hidden;
   -webkit-line-clamp: 3;
+  white-space: nowrap;
 }
 
 .wallet-t2-False {
@@ -116,6 +117,7 @@
   max-width:200px;
   overflow-x: hidden;
   -webkit-line-clamp: 3;
+  white-space: nowrap;
 }
 
 .proj-card-amoun-title {
@@ -194,6 +196,7 @@
     max-width:60px;
     overflow-x: hidden;
     -webkit-line-clamp: 3;
+    white-space: nowrap;
   }
 
   .wallet-t2-False {
@@ -201,6 +204,7 @@
     max-width:100px;
     overflow-x: hidden;
     -webkit-line-clamp: 3;
+    white-space: nowrap;
   }
 }
 

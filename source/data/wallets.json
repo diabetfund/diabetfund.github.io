@@ -1,6 +1,15 @@
 [
    {
       "Props": {
+         "Id": "PrivatUAH",
+         "Address": "5169 3351 0093 7594",
+         "IsCrypto": false
+      },
+      "En": { "Title": "Card" },
+      "Ua": { "Title": "Приват" }
+   },
+   {
+      "Props": {
          "Id": "UAH",
          "Address": "UA123052990000026005050305667",
          "IsCrypto": false

@@ -9,10 +9,10 @@ record View(string Template)
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
     static readonly ParameterExpression arg = Parameter(typeof(object));
     
-    public string Run(params object[] models) =>
+    public string Run(params object?[] models) =>
         models.SelectMany(model =>
             model is string ? new[] { ("content", model) }
-            : exposes.GetOrAdd(model.GetType(), static type =>
+            : exposes.GetOrAdd(model!.GetType(), static type =>
                 Lambda<Func<object, (string, object)[]>>(
                     NewArrayInit(typeof((string, object)),
                         from prop in type.GetProperties()
