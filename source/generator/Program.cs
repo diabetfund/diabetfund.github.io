@@ -31,7 +31,6 @@ void Render(string lang)
             content = new View(content).Run(arg);
 
         var path = $"{rootPath}/{lang}{subPath}/index.html";
-        
         new FileInfo(path).Directory!.Create();
         File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
     }
@@ -69,14 +68,14 @@ void Render(string lang)
     foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
         Out(page, "/" + page);
 
-    (P, string, string)[] DetailPages<P, L>(Item<P, L>[] items, string viewPath, string cardsParth) where P: Props
+    IEnumerable<(P, string, string)> ItemPages<P, L>(Item<P, L>[] items, string viewPath, string cardsParth) where P: Props
     {
         View view = new(Read(viewPath));
-        return Array.ConvertAll(items, it =>
-            (it.Props, Read(cardsParth+ it.Props.Id!), view.Run(it.Props, lang is "en" ? it.En : it.Ua)));
+        foreach(var (props, en, ua) in items)
+            yield return (props, Read(cardsParth+ props.Id!), view.Run(props, lang is "en" ? en : ua));
     }
 
-    foreach (var (props, content, view) in DetailPages(projects, "projPage", "projects/"))
+    foreach (var (props, content, view) in ItemPages(projects, "projPage", "projects/"))
         if (content.Split("<hr/>") is [var contentF, var contentS])
             Out(view, "/fundraising/" + props.Id, new 
             {
@@ -86,7 +85,7 @@ void Render(string lang)
 
     var otherNews = Join("newsCard", news.Take(2));
 
-    foreach (var (props, content, view) in DetailPages(news, "newsPage", "news/"))
+    foreach (var (props, content, view) in ItemPages(news, "newsPage", "news/"))
         Out(view, "/news/"+props.Id, new { content, otherNews });
 }
 
@@ -120,7 +119,7 @@ record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) 
     public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(int? HRank = null) : Props;
+record Thanks(int? HRank = null, string? Video = null) : Props;
 
 record Slide(string ProjectId, int DarkPerc) : Props
 {

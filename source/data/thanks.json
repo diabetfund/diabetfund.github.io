@@ -1,6 +1,538 @@
 [
    {
       "Props": {
+         "Pic": "card-84.jpg",
+         "MiniPic": "card-84-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Наталiя",
+         "Descr": "Доброго ранку. Велике спасибі Фонду та Ігорю, Едуарду,Людмилі,Наталі, і всім хто допомагає  хворим. Здоров'я всім, благополуччя,наснаги.Миру та  Перемоги!!"
+      },
+      "En": {
+         "Title": "Natalia",
+         "Descr": "Good morning. Many thanks to the Fund and Igor, Eduard, Lyudmila, Natalia, and everyone who helps the sick. Health to all, well-being, good luck. Peace and Victory!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-85.jpg",
+         "MiniPic": "card-85-ava.png"
+      },
+      "Ua": {
+         "Title": "Iрина Семенюк",
+         "Descr": "Дуже дякую за допомогу"
+      },
+      "En": {
+         "Title": "Iryna Semenyuk",
+         "Descr": "Thank you very much for your help"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-116.jpg",
+         "MiniPic": "card-116-ava.png",
+         "Video": "/img/fun/116_960_540.mp4",
+         "HRank": 3
+      },
+      "Ua": {
+         "Title": "Вiкторiя",
+         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
+      },
+      "En": {
+         "Title": "Viktoria",
+         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-86.jpg",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Наталiя",
+         "Descr": "Доброго вечора! Щиро дякую за допомогу  всій камані фонду а також партнерам які в таку тяжку хвилину допомогли моєму синочку. Низький вам уклін, Здоров'я, Наснаги, Успіху у всіх ваших  справах. Дякую, Дякую, Дякую."
+      },
+      "En": {
+         "Title": "Natalia",
+         "Descr": "Good evening! I sincerely thank all the members of the foundation for their help, as well as the partners who helped my son in such a difficult moment. A low bow to you, Health, Strength, Success in all your endeavors. Thank you, thank you, thank you."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-87.jpg",
+         "MiniPic": "card-87-ava.png"
+      },
+      "Ua": {
+         "Title": "Анастасія",
+         "Descr": "Безмежно дякуємо Вам за допомогу для наших діточок! Миру усім та рівних цукрів!"
+      },
+      "En": {
+         "Title": "Anastasia",
+         "Descr": "Thank you so much for helping our children! Peace to all and equal sugars!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-88.jpg",
+         "MiniPic": "card-88-ava.png"
+      },
+      "Ua": {
+         "Title": "Свiтлана",
+         "Descr": "Дуже дякуємо за допомогу,за турботу в цей не легкий час.😘😘😘"
+      },
+      "En": {
+         "Title": "Svitlana",
+         "Descr": "Thank you very much for your help and care during this difficult time.😘😘😘"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-89.jpg",
+         "MiniPic": "card-89-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Світлана Овдієнко",
+         "Descr": "Дуже дякую за допомогу. Бажаю , щоб все зроблене вами повернулося сторицею. Здоров'я, сили і благополуччя. Миру всім. Ви наші супер герої !!! Дякую!!!"
+      },
+      "En": {
+         "Title": "Svitlana Ovdienko",
+         "Descr": "Thank you very much for your help. I wish that everything you have done will return a hundredfold. Health, strength and well-being. Peace to all. You are our super heroes!!! Thank you!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-90.jpg",
+         "MiniPic": "card-90-ava.png"
+      },
+      "Ua": {
+         "Title": "Тетяна",
+         "Descr": "Висловлюємо велику подяку за такі потрібні для нас речі. Дякуємо Вам за турботу! Миру та добра!"
+      },
+      "En": {
+         "Title": "Tatiana",
+         "Descr": "We express our gratitude for such necessary things for us. Thank you for your concern! Peace and goodness!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-91.jpg",
+         "MiniPic": "card-91-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Надія Рекубратська",
+         "Descr": "Дякую велике за все. Мені хочеться стільки всього хорошого, доброго, світлого Вам побажати. Дякую . від щирого серця бажаю Вам здоров’я, миру над головою, достатку в домі, внутрішньої гармонії і радості для серця."
+      },
+      "En": {
+         "Title": "Nadija Rekubratskaya",
+         "Descr": "Thank you very much for everything. I want to wish you so many good, kind, bright things. Thank you . from the bottom of my heart, I wish you health, peace above your head, abundance in the house, inner harmony and joy for the heart."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-92.jpg",
+         "MiniPic": "card-92-ava.png"
+      },
+      "Ua": {
+         "Title": "Алёнка",
+         "Descr": "Посилочку отримали 🤩Дякую Вам за допомогу! 🙏🏼🤗Дякую за Ваші зусилля, підтримку та витрачений час💙💛"
+      },
+      "En": {
+         "Title": "Alionka",
+         "Descr": "We received the parcel 🤩 Thank you for your help! 🙏🏼🤗Thank you for your efforts, support and time spent💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-93.jpg",
+         "MiniPic": "card-93-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Iрина",
+         "Descr": "Щиро вдячні за отриману допомогу, дуже безцінну у наш час. Миру, натхнення, сил у вашій непростій справі Бережи Вас Боже, за вашу доброту, добре серце"
+      },
+      "En": {
+         "Title": "Iryna",
+         "Descr": "We are sincerely grateful for the help received, which is very invaluable in our time. Peace, inspiration, strength in your difficult task, God bless you, for your kindness, good heart"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-94.jpg",
+         "MiniPic": "card-94-ava.png"
+      },
+      "Ua": {
+         "Title": "Анна",
+         "Descr": "Величезна подяка фонду та всім хто в ньому працює!"
+      },
+      "En": {
+         "Title": "Anna",
+         "Descr": "Many thanks to the foundation and everyone who works in it!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-95.jpg",
+         "MiniPic": "card-95-ava.png"
+      },
+      "Ua": {
+         "Title": "Ксюша",
+         "Descr": "Отримали посилку. Велике спасибі Фонду за допомогу."
+      },
+      "En": {
+         "Title": "Ksiusha",
+         "Descr": "Received the parcel. Many thanks to the Foundation for the help."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-96.jpg",
+         "MiniPic": "card-56-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Людмила",
+         "Descr": "Добрий вечір. Тільки що отримали лібри і спішимо сказати Едуарду І всім хто допомагає нашим дітям: Величезне Дякую!!! В цей не легкий для нас час ви наші Ангели охоронці, допомагаєте нашим дітям не залишитись без приладів для життя. Щире дякую і низький уклін за ваші добрі серця!!!"
+      },
+      "En": {
+         "Title": "Ludmila",
+         "Descr": "Good evening. We just received the libra and we are in a hurry to say to Eduard And to all those who help our children: Thank you very much!!! In this difficult time for us, you are our Guardian Angels, helping our children not to be left without tools for life. Thank you very much and bow down for your kind hearts!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-97.jpg",
+         "MiniPic": "card-97-ava.png"
+      },
+      "Ua": {
+         "Title": "Таня",
+         "Descr": "Щиро вдячні за допомогу фонду та міжнародним організаціям,всім зичу миру"
+      },
+      "En": {
+         "Title": "Tanya",
+         "Descr": "I am sincerely grateful for the help of the foundation and international organizations, I wish everyone peace"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-98.jpg",
+         "MiniPic": "card-98-ava.png"
+      },
+      "Ua": {
+         "Title": "Олена Дорошенко",
+         "Descr": "Велика вдячність фонду і всім хто причетний до цієї доброї справи!!! Дякуємо і бажаємо здоров‘я та миру"
+      },
+      "En": {
+         "Title": "Olena Doroshenko",
+         "Descr": "Great gratitude to the foundation and everyone involved in this good cause!!! Thank you and we wish you health and peace"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-99.jpg",
+         "MiniPic": "card-73-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Кувичко Оксана",
+         "Descr": "Велика подяка ВСІМ ВСІМ, хто брав участь у такій важливій допомозі😊😊😊<br/>Окрема подяка Едуарду, Ігорю та всім дівчаткам🥰🥰<br/>Також велика подяка різним фондам, які допомагають ♥️♥️♥️<br/>Мирного неба та вдячних людей вам усім у вашій роботі 😊😊😊"
+      },
+      "En": {
+         "Title": "Kuvichko Oksana",
+         "Descr": "A big thank you to EVERYONE who participated in such an important help😊😊😊<br/>Special thanks to Eduard, Igor and all the girls<br/>Also, many thanks to various foundations that help ♥️♥️♥️<br/>Peaceful skies and grateful people to all of you in your work 😊😊😊"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-100.jpg"
+      },
+      "Ua": {
+         "Title": "Олена Краснян",
+         "Descr": "Дякуємо фонду за допомогу! Здоров'я та мирного неба всій вашій команді! Дякуємо за таку потрібну допомогу!"
+      },
+      "En": {
+         "Title": "Olena Krasnian",
+         "Descr": "Thanks to the foundation for the help! Health and peaceful skies to your entire team! Thank you for the much needed help!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-101.jpg",
+         "MiniPic": "card-101-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Тетяна Орда",
+         "Descr": "Щиро дякуємо фонду за допомогу! Здоров'я,наснаги,терпіння та мирного неба всій вашій команді!Дякуємо,що ви є!"
+      },
+      "En": {
+         "Title": "Tetiana Orda",
+         "Descr": "We sincerely thank the foundation for the help! Health, strength, patience and a peaceful sky to your entire team! Thank you for being you!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-102.jpg",
+         "MiniPic": "card-102-ava.png"
+      },
+      "Ua": {
+         "Title": "Пелагея",
+         "Descr": "Велике дякую за допомогу. Ваша команда це велика підтримка для діабетиків 💙💛"
+      },
+      "En": {
+         "Title": "Pelagia",
+         "Descr": "Thank you very much for your help. Your team is a great support for diabetics 💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-103.jpg",
+         "MiniPic": "card-103-ava.png"
+      },
+      "Ua": {
+         "Title": "Дар'я Масцева",
+         "Descr": "Дякуємо 😬"
+      },
+      "En": {
+         "Title": "Daria Masceva",
+         "Descr": "Thank you 😬"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-104.jpg",
+         "MiniPic": "card-104-ava.png",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Свiтлана Сакулiна",
+         "Descr": "Доброго вечора! Дякую фонду «Допомоги та реалізації хворих на цукровий діабет» Ігорю, Едуарду та всій команді за допомогу. Ви робите дуже важливу справу. Окремо дякую за вашу небайдужість. Взаємно хочу побажати Вам здоров'я та мирного неба і Божого благословення"
+      },
+      "En": {
+         "Title": "Svitlana Sakulina",
+         "Descr": "Good evening! I would like to thank Igor, Eduard and the entire team for the help of the \"Help and implementation of diabetes patients\" foundation. You are doing a very important thing. Thank you very much for your concern. I would like to mutually wish you health and a peaceful sky and God's blessing"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-105.jpg",
+         "MiniPic": "card-105-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Юлiя",
+         "Descr": "Щиро дякуємо за допомогу всім членам фонду! Приємно, коли тобі дарують своє тепло! Нехай повертаються до Вас міцним здоров'ям, миром та злагодою усі добрі вчинки!"
+      },
+      "En": {
+         "Title": "Julia",
+         "Descr": "We sincerely thank all fund members for their help! It's nice when they give you their warmth! May all good deeds return to you with good health, peace and harmony!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-106.jpg",
+         "MiniPic": "card-106-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Катерина Демидова",
+         "Descr": "Хочу висловити Вашому фонду та всій Вашій команді глибоку подяку за отриманну допомогу та побажати всім Вам міцного здоров'я, витримки та миру ❤️"
+      },
+      "En": {
+         "Title": "Katerina Demidova",
+         "Descr": "I want to express my deep gratitude to your foundation and your entire team for the help received and wish you all good health, endurance and peace ❤️"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-107.jpg"
+      },
+      "Ua": {
+         "Title": "Таня Максук",
+         "Descr": "Дякуємо за допомогу. За Вашу працю, турботу."
+      },
+      "En": {
+         "Title": "Tania Maksuk",
+         "Descr": "Thank you for your help. For your work, care."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-108.jpg",
+         "MiniPic": "card-80-ava.png"
+      },
+      "Ua": {
+         "Title": "Анна Соколова",
+         "Descr": "Гарно дякуємо! Ви чарівники!"
+      },
+      "En": {
+         "Title": "Anna Sokolova",
+         "Descr": "Thank you very much! You are wizards!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-109.jpg",
+         "MiniPic": "card-109-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Iннуся",
+         "Descr": "Доброго вечора.  Велика і щира подяка вашому фонду та усім хто допомогає вашому фонду.  Нехай усе те  добро, що ви робите повернеться вам сторицею. Дякуємо"
+      },
+      "En": {
+         "Title": "Innusia",
+         "Descr": "Good evening. A big and sincere thanks to your foundation and everyone who helps your foundation. May all the good that you do return to you a hundredfold. Thank you"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-110.jpg",
+         "MiniPic": "card-110-ava.png"
+      },
+      "Ua": {
+         "Title": "Макс",
+         "Descr": "Велике Дякую !"
+      },
+      "En": {
+         "Title": "Max",
+         "Descr": "Thank you very much !"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-111.jpg",
+         "MiniPic": "card-81-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Прiходько Юлiя",
+         "Descr": "Щиро дякуємо за піклування, допомогу для наших діток!!! Дай Боже усім причетним міцного здоров'я та мирного неба над головою! Нехай Ваше добро повертається до Вас стократно!!!"
+      },
+      "En": {
+         "Title": "Prikhodko Julia",
+         "Descr": "Thank you very much for your care and help for our children!!! May God grant everyone involved good health and a peaceful sky above their heads! Let your goodness return to you a hundredfold!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-112.jpg"
+      },
+      "Ua": {
+         "Title": "Оля",
+         "Descr": "Дякую всім велике за допомогу нашим діткам)))💪👍"
+      },
+      "En": {
+         "Title": "Olia",
+         "Descr": "Thank you all very much for helping our children)))💪👍"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-113.jpg"
+      },
+      "Ua": {
+         "Title": "Анна",
+         "Descr": "Щиро дякую Всім за допомогу. Процвітання, витримки, миру. 🤗❤️💙💛"
+      },
+      "En": {
+         "Title": "Anna",
+         "Descr": "Thank you all very much for your help. Prosperity, patience, peace. 🤗❤️💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-114.jpg",
+         "MiniPic": "card-114-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Оленка",
+         "Descr": "Дуже дякуємо за допомогу 🙏🙏🙏 за ваші старання для наших діток,і тим хто так потребує у цей нелегкий час.Хай Бог обарігає."
+      },
+      "En": {
+         "Title": "Olenka",
+         "Descr": "Thank you very much for your help 🙏🙏🙏 for your efforts for our children and those who are in need in this difficult time. May God protect you."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-115.jpg",
+         "MiniPic": "card-83-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Анастасія Перелигіна",
+         "Descr": "Щиро дякую фонду та усім небайдужим волонтерам за допомогу у такі важкі часи. Дуже тішить коли  відчуваєш що ти не один на один зі хворобою. Дуже доречна та своєчасна допомога"
+      },
+      "En": {
+         "Title": "Anastasia Perelygina",
+         "Descr": "I sincerely thank the foundation and all caring volunteers for their help in such difficult times. It is very gratifying when you feel that you are not alone with the disease. Very relevant and timely help"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-117.jpg",
+         "MiniPic": "card-117-ava.png",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Катя Столпакова",
+         "Descr": "Доброго вечора! Щиро дякуємо Благодійному Фонду і Спонсорам за допомогу в такий нелегкий час. Дякуємо що є такі люди не байдужі . Бережіть себе та своїх близьких 🌷💐🌷"
+      },
+      "En": {
+         "Title": "Katya Stolpakova",
+         "Descr": "Good evening! We sincerely thank the Charitable Foundation and Sponsors for their help in such a difficult time. Thank you that there are such people who are not indifferent. Take care of yourself and your loved ones 🌷💐🌷"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-118.jpg",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Юлiана",
+         "Descr": "Щира вдячність та шана за таку допомогу благодійному фонду допомоги та реабілітації хворим на цукровий діабет та STICHTING VLUCHTELING. Сили та наснаги Вам у роботі,миру і довголіття..!"
+      },
+      "En": {
+         "Title": "Juliana",
+         "Descr": "Sincere gratitude and respect for such help to the charity fund for the assistance and rehabilitation of patients with diabetes and STICHTING VLUCHTELING. Strength and inspiration to you in your work, peace and longevity...!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-119.jpg",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Райковська Олена",
+         "Descr": "Добрий вечір, щиро дякую за допомогу. Цукрозамінник дуже класний - не підвищує цукор. Бажаю здоров'я,миру та удачі усій команді фонду. Для нашої сім'ї ваша допомога дуже, дуже важлива."
+      },
+      "En": {
+         "Title": "Raikovska Olena",
+         "Descr": "Good evening, thank you very much for your help. Sugar substitute is very cool - does not increase sugar. I wish health, peace and luck to the entire team of the foundation. For our family, your help is very, very important."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-120.jpg",
+         "MiniPic": "card-120-ava.png",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Марина",
+         "Descr": "Доброго дня! Дуже дякуємо організації Stichting Vluchteling, фонду diabet.fund, а також Ігореві, Едуарду та дівчатам, які допомагали у пакуванні, за посилку! Ми вже отримали. Малеча дуже радий! Вдячні за еритритол, глюкометр і тест-смужки. Це величезна допомога для нас. Дякуємо за вашу турботу! Бажаємо наснаги у праці та миру у серці!"
+      },
+      "En": {
+         "Title": "Marina",
+         "Descr": "Good day! Many thanks to the organization Stichting Vluchteling, the diabet.fund, as well as Igor, Eduard and the girls who helped with the packaging, for the package! We have already received. The little one is very happy! Grateful for the erythritol, glucometer and test strips. This is a huge help for us. Thank you for your concern! We wish you success in your work and peace in your heart!"
+      }
+   },
+   {
+      "Props": {
          "Pic": "card-64.jpg",
          "MiniPic": "card-64-ava.png"
       },

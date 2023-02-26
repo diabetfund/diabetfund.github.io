@@ -399,3 +399,32 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
     document.getElementsByClassName("user-form")[0],
     document.getElementById("email-submit")
 ]);
+
+(images => {
+    if (images.length == 0)
+        return;
+    Array.prototype.filter.call(images,({dataset: {video}}) => video && video != "null")
+        .forEach(img => {
+            img.style.cursor = "pointer";
+            
+            img.addEventListener("click", e => {
+                e.preventDefault();
+                var parent = img.parentNode;
+                var name = parent.querySelector(".thanks-sign-text")?.innerText ?? parent.dataset.title;
+                var [w1, w2] = (parent.querySelector(".thank-descr") ?? parent.querySelector(".thank-descr-main")).innerText.split(' ');
+                var link = img.dataset.video;
+                var [, width, height] = link.split('_');
+
+                var wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+
+                wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
+                    <title>${name}: ${w1} ${w2}...</title></head><body>
+                    <div data-new-window>
+                        <video controls style="width: 100%; height: auto;">
+                            <source src="//${location.host}${link}" type="video/mp4" />
+                        </video>
+                    </div>
+                </body></html>`);
+            });
+        });
+})(document.querySelectorAll(".thank-card-common img"));
