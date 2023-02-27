@@ -1,0 +1,147 @@
+<main class="founding-docs">
+   <section class="founding-docs__section">
+       <div class="container">
+           <h2 class="founding-docs__title title">Форма на отримання допомоги по діабету</h2>
+           <div class="article__content">
+            Друзі, ми бажаємо допомогти вам всім, чим можемо. Для того, щоб ми могли це зробити, будь ласка, заповніть дані про пацієнта у формі нижче. Ці дані будуть внесені до нашої Бази пацієнтів. База допоможе нам вести звітність та звітувати перед нашими партнерами. 
+           </div>
+           <div class="article__content">
+                <table style="margin-top: 40px; margin-bottom: 10px;">
+                    <tr>
+                        <td class="recepient-radio-title">
+                            Пацієнт з діагнозом "діабет"
+                        </td>
+                        <td>
+                            <button class="btn-recipient btn-pressed" type="button" data-radioval="0" name="recipient-type">Дорослий</button>
+                        </td>
+                        <td>
+                            <button class="btn-recipient" type="button" data-radioval="1" name="recipient-type">Дитина</button>
+                        </td>
+                    </tr>
+                </table>
+                <div style="display: flex; flex-wrap: wrap;" data-radioval="recipient-type:0">
+                    <div class="col-lg-6">
+                        Прізвище пацієнта із діагнозом "діабет"
+                        <input class="form__field rep-field" type="text" name="surname" placeholder="Зеленський">
+                        Iм'я
+                        <input class="form__field rep-field" type="text" name="name" placeholder="Володимир">
+                        Ім'я по-батькові
+                        <input class="form__field rep-field" type="text" name="parto" placeholder="Олександрович">
+                        Дата народження пацієнта
+                        <input class="form__field rep-field" type="date" name="birth" placeholder="25.01.1978">
+                        Скільки років
+                        <input class="form__field rep-field" type="number" name="ages" placeholder="45">
+                        Контактний номер телефона
+                        <table>
+                            <tr>
+                                <td>+380</td>
+                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-lg-6">
+                        Дані паспорта
+                        <table>
+                            <tr>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                </td>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                </td>
+                            </tr>
+                        </table>
+                        Kим виданий
+                        <input class="form__field rep-field" type="text" name="passtaker" placeholder="7115 УДМС УКРАЇНИ в Черкаськiй областi">
+                        Дата видачі
+                        <input class="form__field rep-field" type="date" name="passdate" placeholder="25.01.2010">
+                    </div>
+                </div>
+                <div style="display: none; flex-wrap: wrap;" data-radioval="recipient-type:1">
+                    <div class="col-lg-6">
+                        Прізвище дитини із діагнозом "діабет"
+                        <input class="form__field rep-field" type="text" name="surname" placeholder="Зеленський">
+                        Iм'я дитини
+                        <input class="form__field rep-field" type="text" name="name" placeholder="Володимир">
+                        Ім'я по-батькові
+                        <input class="form__field rep-field" type="text" name="parto" placeholder="Олександрович">
+                        Дата народження дитини
+                        <input class="form__field rep-field" type="date" name="birth" placeholder="25.01.2018">
+                        Скільки років
+                        <input class="form__field rep-field" type="number" name="ages" placeholder="5">
+                        Контактний номер батька
+                        <table>
+                            <tr>
+                                <td>+380</td>
+                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                            </tr>
+                        </table>
+                        Iм'я батька
+                        <input class="form__field rep-field" type="text" name="phonename" placeholder="">
+                    </div>
+                    <div class="col-lg-6">
+                        Місце народження в свідоцтві дитини
+                        <input class="form__field rep-field" type="text" name="birthplace" placeholder="Україна, Харківська обл., Ізюмський р-н, селище Донець">
+                        Данні паспорту одного з батьків
+                        <table>
+                            <tr>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                </td>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                </td>
+                            </tr>
+                        </table>
+                        Ким видано паспорт батька
+                        <input class="form__field rep-field" type="text" name="passtaker" placeholder="7115 УДМС УКРАЇНИ в Черкаськiй областi">
+                        Дата видачі
+                        <input class="form__field rep-field" type="date" name="passdate" placeholder="25.01.2010">
+                    </div>
+                </div>
+                <table style="margin-top: 20px; margin-bottom: 10px;">
+                    <tr>
+                        <td class="recepient-radio-title">Отримувач посилки</td>
+                        <td style="min-width: 123px;">
+                            <button class="btn-recipient btn-pressed" type="button" data-radioval="0" name="contact-type">Я особисто</button>
+                        </td>
+                        <td style="min-width: 138px;">
+                            <button class="btn-recipient" type="button" data-radioval="1" name="contact-type">Інша людина</button>
+                        </td>
+                    </tr>
+                </table>
+                <div style="display: flex; flex-wrap: wrap;" data-radioval="contact-type:0">
+                    <div class="col-lg-6">
+                        Відділення Нової Пошти або Укрпошти, куди висилати гуманітарну допомогу
+                        <input class="form__field rep-field" type="text" name="postaddress" placeholder="вулиуця Гоголя, 12, Ізюм, Харківська область, 64309">
+                    </div>
+                </div>
+                <div style="display: none; flex-wrap: wrap;" data-radioval="contact-type:1">
+                    <div class="col-lg-6">
+                        Відділення Нової Пошти або Укрпошти, куди висилати гуманітарну допомогу
+                        <input class="form__field rep-field" type="text" name="postaddress" placeholder="вулиуця Гоголя, 12, Ізюм, Харківська область, 64309">
+                        Номер телефона отримувача посилки
+                        <table>
+                            <tr>
+                                <td>+380</td>
+                                <td><input class="form__field rep-field" type="text" name="postphone" placeholder=""></td>
+                            </tr>
+                        </table>
+                        Прізвище отримувача посилки
+                        <input class="form__field rep-field" type="text" name="postsurname">
+                        Iм'я
+                        <input class="form__field rep-field" type="text" name="postname">
+                        Ім'я по-батькові
+                        <input class="form__field rep-field" type="text" name="postparto">
+                    </div>
+                </div>
+                <form  action="https://formspree.io/f/mjvzzrvr">
+                <button class="btn-recipient" type="button" id="seld-recipiet" style="margin-top: 40px; margin-bottom: 20px; margin-left: 20px;">
+                    Відправити
+                </button>
+                <input type="hidden" name="message"/>
+                </form>
+           </div>
+       </div>
+   </section>
+</main>

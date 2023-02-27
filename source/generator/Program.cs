@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 38;
+var version = 39;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -65,7 +65,7 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    foreach (var page in "about-diabetes contacts founding-documents fun".Split(' '))
+    foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
     IEnumerable<(P, string, string)> ItemPages<P, L>(Item<P, L>[] items, string viewPath, string cardsParth) where P: Props

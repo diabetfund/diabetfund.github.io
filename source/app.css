@@ -521,7 +521,7 @@ footer hr {
 
 .footer__bottom {
     display: grid;
-    grid-template-columns: 1fr auto auto auto;
+    grid-template-columns: 1fr auto auto auto auto;
     align-items: center;
     grid-column-gap: 6px
 }

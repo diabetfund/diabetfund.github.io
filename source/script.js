@@ -144,12 +144,11 @@ const mobileMenuWr = document.getElementById('menu_mobile-wr')
 const mobileMenu = document.getElementById('menu_mobile');
 
 [...document.querySelectorAll(".copy-wallet")].forEach(btn => 
-    btn.addEventListener("click", e => {
+    btn.addEventListener("click", async e => {
         e.preventDefault();
         var copyText = document.getElementById(e.currentTarget.dataset.walletid).innerText
-        navigator.clipboard.writeText(copyText).then(() => {
-            alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано")
-        })
+        await navigator.clipboard.writeText(copyText);
+        alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано");
     }));
 
 window.addEventListener('resize', function () {
@@ -359,18 +358,18 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         span.innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 });
 
+function calcAges(tdate){
+    var now = new Date(), ageDifMs = now - tdate, ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
 (() => {
     let piskunovDisease = document.getElementById('piskunov-disease'),
-    curYear = document.getElementById('cur-year'),
-    now = new Date(),
-    ageDifMs = now - new Date("06/06/2005"),
-    ageDate = new Date(ageDifMs),
-    piskunovDiseaseAges = Math.abs(ageDate.getUTCFullYear() - 1970);
-
+    curYear = document.getElementById('cur-year');
     if (curYear)
-       curYear.innerHTML = now.getFullYear().toString();
+       curYear.innerHTML = (new Date()).getFullYear().toString();
     if (piskunovDisease)
-        piskunovDisease.innerHTML = piskunovDiseaseAges.toString();
+        piskunovDisease.innerHTML = calcAges(new Date("06/06/2005")).toString();
 })();
 
 (([form, butt]) => {
@@ -378,21 +377,24 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         return;
     var setStatus = text => document.getElementById("my-form-status").innerHTML =text;
     
-    butt.addEventListener("click", e => {
+    butt.addEventListener("click", async e => {
         e.preventDefault();
-        fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(response => {
-          if (response.ok) {
-            setStatus(lib.isEnglish ? "Your message has been sent": "Ваше повідомлення відправлено!");
-            form.reset()
-          } 
-          else
-            response.json().then(data =>
-              setStatus(Object.hasOwn(data, 'errors')
+        try {
+            var response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
+            if (response.ok) {
+                setStatus(lib.isEnglish ? "Your message has been sent": "Ваше повідомлення відправлено!");
+                form.reset()
+            } 
+            else {
+                var data = await response.json()
+                setStatus(Object.hasOwn(data, 'errors')
                 ? data.errors.map(_=>_.message).join(", ")
-                : lib.isEnglish ? "Something went wrong": "щось пішло не так"))
-        })
-        .catch(error => setStatus(lib.isEnglish ? "Something went wrong": "щось пішло не так"));
+                : lib.isEnglish ? "Something went wrong": "щось пішло не так")
+            }
+        }
+        catch(error) { 
+            setStatus(lib.isEnglish ? "Something went wrong": "щось пішло не так");
+        }
     });
 
 })([
@@ -429,3 +431,119 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
             });
         });
 })(document.querySelectorAll(".thank-card-common img"));
+
+(radios => {
+    if (radios.length == 0)
+        return;
+        
+    var lookup = {};
+    Array.prototype.forEach.call(radios, item => {
+        var [v1, v2] = item.dataset.radioval.split(":");
+        var [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
+        if (!(name in lookup))
+        lookup[name] = {};
+        if (!(val in lookup[name]))
+        lookup[name][val] = [null, null];
+
+        if (item.tagName == "BUTTON") {
+            lookup[name][val][0] = item;
+
+            item.addEventListener("click", e => {
+                e.preventDefault();
+                Object.entries(lookup[name]).forEach(([keyval, [butt, div]]) => {
+                    if (keyval == val) {
+                        div.style.display = "flex";
+                        butt.classList.add("btn-pressed");
+                    }
+                    else {
+                        div.style.display = "none";
+                        butt.classList.remove("btn-pressed");
+                    }
+                });
+            });
+        }
+        else {
+            lookup[name][val][1] = item;
+
+            Array.prototype.forEach.call(item.querySelectorAll("input"), inp => 
+                inp.addEventListener("change", e => e.currentTarget.classList.remove("inp-err")));
+        }
+    });
+
+
+})(document.querySelectorAll("[data-radioval]"));
+
+(sendButt => {
+    if (!sendButt)
+    return;
+
+    function invalidate(form, fieldLine) {
+        var res = {};
+        var isvalid = true;
+        fieldLine.split(" ").forEach(field => {
+            var inp = form.querySelector(`[name="${field}"]`);
+            if (inp) 
+                if (!inp.value) {
+                    isvalid = false;
+                    inp.classList.add("inp-err");
+                }
+                else
+                    res[field] = inp.value
+        });
+        return [isvalid, res];
+    }
+
+    sendButt.addEventListener("click", async e => {
+        e.preventDefault();
+        var form = e.currentTarget.parentNode;
+        var [form1, form2] = "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1"
+                        .split(" ")
+                        .map(key => document.querySelector(`[data-radioval="${key}"]`))
+                        .filter(_ => _.style.display != "none");
+
+        var [isvalid1, {
+            surname, name, parto, birth, ages, phone, 
+            passserial, passnumber, passtaker, passdate, 
+            phonename = "мой номер", birthplace = "дорослий"
+        }] = invalidate(form1, "surname name parto birth ages phone passserial passnumber passtaker passdate surname phonename");
+
+        var [isvalid2, {postaddress, postsurname = "", postname= "", postparto= ""} ] = 
+            invalidate(form2, "postaddress postsurname postname postparto");
+
+        if (isvalid1 && isvalid2) {
+            try {
+                form.querySelector("[name='message']").value =  `${surname} ${name} ${parto}
+
+                ${birth}, ${ages} рокiв, ${birthplace}
+                
+                ${passserial} ${passnumber}, ${passdate}, ${passtaker}
+                ${phone} (${phonename})
+                ==========
+                ${postaddress}
+                ${postsurname} ${postname} ${postparto}`;
+
+
+
+                var response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
+                if (response.ok) {
+                    if (confirm("Ваше повідомлення відправлено!"))
+                        location.href="/";
+                    else
+                        location.href="/";
+                } 
+                else {
+                    var data = await response.json()
+                    alert(Object.hasOwn(data, 'errors')
+                    ? data.errors.map(_=>_.message).join(", ")
+                    : lib.isEnglish ? "Something went wrong": "щось пішло не так")
+                }
+            }
+            catch(error) { 
+                alert(lib.isEnglish ? "Something went wrong": "щось пішло не так");
+            }
+        }
+        else {
+            alert("Не всі дані заповнені");
+        }
+    });
+})(document.getElementById("seld-recipiet"));
