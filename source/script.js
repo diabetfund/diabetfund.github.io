@@ -418,12 +418,11 @@ function calcAges(tdate){
                 var [, width, height] = link.split('_');
 
                 var wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
-
                 wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                     <title>${name}: ${w1} ${w2}...</title></head><body>
                     <style>body { margin: 0; text-align: center; }</style>
                     <div data-new-window>
-                        <video controls style="width: 100%; height: auto;">
+                        <video controls autoplay style="width: 100%; height: auto;">
                             <source src="//${location.host}${link}" type="video/mp4" />
                         </video>
                     </div>
