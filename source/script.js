@@ -419,6 +419,7 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
 
                 wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                     <title>${name}: ${w1} ${w2}...</title></head><body>
+                    <style>body { margin: 0; text-align: center; }</style>
                     <div data-new-window>
                         <video controls style="width: 100%; height: auto;">
                             <source src="//${location.host}${link}" type="video/mp4" />

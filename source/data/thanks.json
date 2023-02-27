@@ -46,6 +46,21 @@
    },
    {
       "Props": {
+         "Pic": "card-121.jpg",
+         "MiniPic": "card-121-ava.png",
+         "Video": "/img/fun/121_540_960.mp4"
+      },
+      "Ua": {
+         "Title": "Юлiя",
+         "Descr": "Добрий день. Дякуємо Вам за допомогу ❤️"
+      },
+      "En": {
+         "Title": "Julia",
+         "Descr": "Good day. Thank you for your help ❤️"
+      }
+   },
+   {
+      "Props": {
          "Pic": "card-86.jpg",
          "HRank": 1
       },

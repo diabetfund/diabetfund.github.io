@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 37;
+var version = 38;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
