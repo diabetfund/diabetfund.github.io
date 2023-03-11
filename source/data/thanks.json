@@ -1,6 +1,66 @@
 [
    {
       "Props": {
+         "Pic": "card-64.jpg",
+         "MiniPic": "card-64-ava.png"
+      },
+      "Ua": {
+         "Title": "Полiна Карпан",
+         "Descr": "Дуже вам дякуємо Едуард та вашiй командi 💛💙"
+      },
+      "En": {
+         "Title": "Polina Karpan",
+         "Descr": "Thank you very much Eduard and your team 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-65.jpg",
+         "MiniPic": "card-12-ava.png"
+      },
+      "HRank": 2,
+      "Ua": {
+         "Title": "Тарасенко Дарина",
+         "Descr": "Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️"
+      },
+      "En": {
+         "Title": "Tarasenko Darina",
+         "Descr": "Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-69.jpg",
+         "MiniPic": "card-56-ava.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Людмила",
+         "Descr": "Добрий день. Велика подяка за лібри Едуарду, Ігору і вашому фонду що допомагаєте нашим дітям!!! Для нас лібри- це наші очі, ми можемо бачити цукор без кожен день проколів по декілька разів пальчиків, а від цукрів напряму залежить здоров'я і життя"
+      },
+      "En": {
+         "Title": "Ludmila",
+         "Descr": "Good day. Many thanks for the libra to Eduard, Igor and your foundation that helps our children!!! For us, Libra is our eyes, we can see sugar without pricking our fingers several times every day, and health and life directly depend on sugar."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-116.jpg",
+         "MiniPic": "card-116-ava.png",
+         "Video": "/img/fun/116_960_540.mp4",
+         "HRank": 3
+      },
+      "Ua": {
+         "Title": "Вiкторiя",
+         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
+      },
+      "En": {
+         "Title": "Viktoria",
+         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
+      }
+   },
+   {
+      "Props": {
          "Pic": "card-84.jpg",
          "MiniPic": "card-84-ava.png",
          "HRank": 1
@@ -26,22 +86,6 @@
       "En": {
          "Title": "Iryna Semenyuk",
          "Descr": "Thank you very much for your help"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-116.jpg",
-         "MiniPic": "card-116-ava.png",
-         "Video": "/img/fun/116_960_540.mp4",
-         "HRank": 3
-      },
-      "Ua": {
-         "Title": "Вiкторiя",
-         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
-      },
-      "En": {
-         "Title": "Viktoria",
-         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
       }
    },
    {
@@ -548,20 +592,6 @@
    },
    {
       "Props": {
-         "Pic": "card-64.jpg",
-         "MiniPic": "card-64-ava.png"
-      },
-      "Ua": {
-         "Title": "Полiна Карпан",
-         "Descr": "Дуже вам дякуємо Едуард та вашiй командi 💛💙"
-      },
-      "En": {
-         "Title": "Polina Karpan",
-         "Descr": "Thank you very much Eduard and your team 💛💙"
-      }
-   },
-   {
-      "Props": {
          "Pic": "card-53.jpg",
          "HRank": 1
       },
@@ -599,21 +629,6 @@
       "En": {
          "Title": "Tatiana Stefanovich",
          "Descr": "Good evening. I wanted to thank your foundation, your entire team for such a huge and sincere help. We strongly believe that everything will end soon, victory will be ours."
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-65.jpg",
-         "MiniPic": "card-12-ava.png"
-      },
-      "HRank": 2,
-      "Ua": {
-         "Title": "Тарасенко Дарина",
-         "Descr": "Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️"
-      },
-      "En": {
-         "Title": "Tarasenko Darina",
-         "Descr": "Hello! Finally, such a long-awaited parcel was handed over to us for occupation! Bought 2 sensors under the 50/50 program) very satisfied! We thank the fund for such an opportunity in such a difficult time! You are incredible people! I have already received help many times, and for free, and through the help of the fund, and under the 50/50 program! Thank you for being you, you are doing a great job! Let all this good return to you twice! Peaceful sky to all! I want to hug everyone, always pleasant communication, good attitude, and also such valuable help❤️❤️❤️"
       }
    },
    {
@@ -717,21 +732,6 @@
       "En": {
          "Title": "Anastasia Perelygina",
          "Descr": "I am very grateful to the foundation for the help. Prompt, high-quality and very timely!!!"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-69.jpg",
-         "MiniPic": "card-56-ava.png",
-         "HRank": 1
-      },
-      "Ua": {
-         "Title": "Людмила",
-         "Descr": "Добрий день. Велика подяка за лібри Едуарду, Ігору і вашому фонду що допомагаєте нашим дітям!!! Для нас лібри- це наші очі, ми можемо бачити цукор без кожен день проколів по декілька разів пальчиків, а від цукрів напряму залежить здоров'я і життя"
-      },
-      "En": {
-         "Title": "Ludmila",
-         "Descr": "Good day. Many thanks for the libra to Eduard, Igor and your foundation that helps our children!!! For us, Libra is our eyes, we can see sugar without pricking our fingers several times every day, and health and life directly depend on sugar."
       }
    },
    {
