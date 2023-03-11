@@ -1,25 +1,6 @@
 [
    {
       "Props": {
-         "Id": "kherson-pallets",
-         "IsMilitary": false,
-         "Need": 246,
-         "Funds": 15,
-         "Pic": "July2022/palettes.jpg",
-         "MiniPic": "July2022/palettes-mini.jpg",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
-      "En": {
-         "Title": "Help Kherson with heating",
-         "Descr": "Warm up Kherson! The project is aimed at raising funds for the purchase of briquettes for heating. The volume is 20 tons."
-      },
-      "Ua": {
-         "Title": "Зігріємо Херсон разом",
-         "Descr": "Зігріти Херсон! Проект спрямований на збирання коштів для купівлі брикетів для опалення. Необхідний обсяг від 20 тонн."
-      }
-   },
-   {
-      "Props": {
          "Id": "assistance-to-zsu",
          "IsMilitary": true,
          "Need": 2600,

@@ -84,21 +84,6 @@
    },
    {
       "Props": {
-         "Id": "5",
-         "Pic": "slide-8.jpg",
-         "MiniPic": "slide-8-mini.jpg",
-         "ProjectId": "kherson-pallets",
-         "DarkPerc": 25
-      },
-      "En": {
-         "Title": "Let's warm Kherson together"
-      },
-      "Ua": {
-         "Title": "Зігріємо Херсон разом"
-      }
-   },
-   {
-      "Props": {
          "Id": "6",
          "Pic": "slide-7.jpg",
          "MiniPic": "slide-7-mini.jpg",
