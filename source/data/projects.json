@@ -60,8 +60,8 @@
       "Props": {
          "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
          "IsMilitary": false,
-         "Need": 1000,
-         "Funds": 643,
+         "Need": 3000,
+         "Funds": 1843,
          "Pic": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
          "MiniPic": "July2022/glukometers-mini.jpg",
          "ReportId": "report-glukometers",
