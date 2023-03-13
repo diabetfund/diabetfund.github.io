@@ -503,8 +503,8 @@ function calcAges(tdate){
         var [isvalid1, {
             surname, name, parto, birth, ages, phone, 
             passserial, passnumber, passtaker, passdate, 
-            phonename = "мой номер", birthplace = "дорослий"
-        }] = invalidate(form1, "surname name parto birth ages phone passserial passnumber passtaker passdate surname phonename");
+            phone, phonename = "мой номер"
+        }] = invalidate(form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename");
 
         var [isvalid2, {postaddress, postsurname = "", postname= "", postparto= ""} ] = 
             invalidate(form2, "postaddress postsurname postname postparto");

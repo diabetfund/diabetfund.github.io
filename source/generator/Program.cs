@@ -114,6 +114,7 @@ record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) 
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
     public bool IsFull => Need == Funds;
+    public bool IsInfinite => Need == 0;
     public string Url => Uri(Id!);
 
     public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";

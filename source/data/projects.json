@@ -41,8 +41,8 @@
       "Props": {
          "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
          "IsMilitary": false,
-         "Need": 1200,
-         "Funds": 52,
+         "Need": 0,
+         "Funds": 507,
          "Pic": "June2022/snuUfMlETiFUHqUYJpf8.jpg",
          "MiniPic": "July2022/sensors-mini.jpg",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
@@ -60,8 +60,8 @@
       "Props": {
          "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
          "IsMilitary": false,
-         "Need": 3000,
-         "Funds": 1843,
+         "Need": 0,
+         "Funds": 2102,
          "Pic": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
          "MiniPic": "July2022/glukometers-mini.jpg",
          "ReportId": "report-glukometers",
@@ -80,8 +80,8 @@
       "Props": {
          "Id": "dopomogti-insulinom",
          "IsMilitary": false,
-         "Need": 300,
-         "Funds": 281,
+         "Need": 0,
+         "Funds": 300,
          "Pic": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
          "MiniPic": "July2022/insulin-mini.jpg",
          "ReportId": "report-insulin",
@@ -94,6 +94,25 @@
       "Ua": {
          "Title": "Допомога інсуліном",
          "Descr": "Благодійний фонд допомагає людям, які страждають на цукровий діабет та потребують невідкладної медичної допомоги. Ми розуміємо важливість підтримки громадськості, а тому закликаємо всіх охочих долучитися до збору коштів і забезпечити хворих можливістю жити повноцінно."
+      }
+   },
+   {
+      "Props": {
+         "Id": "dopomogti-cukrozaminnykom",
+         "IsMilitary": false,
+         "Need": 0,
+         "Funds": 2002,
+         "Pic": "July2022/cukar.jpg",
+         "MiniPic": "July2022/cukar-mini.jpg",
+         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
+      },
+      "En": {
+         "Title": "Helping with sweetener",
+         "Descr": "Artificial sweeteners serve as replacements for natural sugars and sugar alcohols, offering a non-caloric option that is much sweeter than regular sugar."
+      },
+      "Ua": {
+         "Title": "Допомога цукрозамінником",
+         "Descr": "Штучні підсолоджувачі є замінниками цукру та цукрових спиртів, які є некалорійними та значно солодшими за натуральний цукор."
       }
    },
    {
