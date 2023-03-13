@@ -84,6 +84,21 @@
    },
    {
       "Props": {
+         "Id": "5",
+         "Pic": "slide-9.jpg",
+         "MiniPic": "slide-9-mini.jpg",
+         "ProjectId": "dopomogti-cukrozaminnykom",
+         "DarkPerc": 25
+      },
+      "En": {
+         "Title": "Helping with sweetener"
+      },
+      "Ua": {
+         "Title": "Допомога цукрозамінником"
+      }
+   },
+   {
+      "Props": {
          "Id": "6",
          "Pic": "slide-7.jpg",
          "MiniPic": "slide-7-mini.jpg",
