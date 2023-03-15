@@ -19,6 +19,12 @@
                         </td>
                     </tr>
                 </table>
+                <div style="display: flex; flex-wrap: wrap;" id="docform">
+                    <div class="col-lg-6">
+                        Фото документа, який підтверджує діагноз "діабет" у пацієнта. Це може бути: витяг із мед. карти, медичний висновок, епікриз тощо - документ, в якому зазначено ДІАГНОЗ (достатньо одного документа)
+                        <input class="form__field rep-field" type="file" name="doc" title="Фото документа, який підтверджує діагноз">
+                    </div>
+                </div>
                 <div style="display: flex; flex-wrap: wrap;" data-radioval="recipient-type:0">
                     <div class="col-lg-6">
                         Прізвище пацієнта із діагнозом "діабет"
@@ -35,7 +41,9 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="phone" placeholder="" title="Контактний номер телефона">
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -44,10 +52,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія" title="Cерія паспорта">
                                 </td>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер" title="Hомер паспорта">
                                 </td>
                             </tr>
                         </table>
@@ -73,7 +81,7 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                                <td><input class="form__field rep-field" type="text" name="phone" placeholder="" title="Контактний номер батька"></td>
                             </tr>
                         </table>
                         Iм'я батька
@@ -86,10 +94,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія" title="Cерія паспорту одного з батьків">
                                 </td>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер" title="Hомер паспорту одного з батьків">
                                 </td>
                             </tr>
                         </table>
@@ -124,7 +132,7 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="postphone" placeholder=""></td>
+                                <td><input class="form__field rep-field" type="text" name="postphone" placeholder="" title="Номер телефона отримувача посилки"></td>
                             </tr>
                         </table>
                         Прізвище отримувача посилки

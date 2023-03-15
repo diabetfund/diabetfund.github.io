@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 40;
+var version = 41;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -111,20 +111,22 @@ record PayLoc(string? Data, string? Signature): Locale;
 
 record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
 {
-    public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
-    public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
-    public string Url => Uri(Id!);
+    public string Url => UrlSegment(Id!);
 
-    public static string Uri(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
+    public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
+
+    public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
+
+    public static string UrlSegment(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
 record Thanks(int? HRank = null, string? Video = null) : Props;
 
 record Slide(string ProjectId, int DarkPerc) : Props
 {
-    public string Url => Proj.Uri(ProjectId);
+    public string Url => Proj.UrlSegment(ProjectId);
 }
 
 record Wallet(string Address, bool IsCrypto) : Props;

@@ -10,7 +10,7 @@ const lib = {
     },
 
     get cookEnglish() {
-        var parts = ("; " + document.cookie).split("; is_english=");
+        const parts = ("; " + document.cookie).split("; is_english=");
         if (parts.length == 2)
             return parts.pop().split(";").shift() == 'true';
         return null;
@@ -22,7 +22,7 @@ const lib = {
     get lang() { return this.isEnglish ? "en" : "ua"; },
 
     sendLiqpay(sign, data, isNewWindow) {
-        var form = document.createElement("form");
+        const form = document.createElement("form");
         if (!sign || sign == "null")
             sign = this.isEnglish ? "8FCafqMc//6iKe9wB+eqZWs3FPc=" : "TVNsm5bs8KyxZhkpsexBFHb8Mb8=";
         if (!data || data == "null")
@@ -43,32 +43,32 @@ const lib = {
         form.remove();
     },
 
-    invalidate(form, fieldLine) {
-        var res = {};
-        var titles = [];
-        fieldLine.split(" ").forEach(field => {
-            var inp = form.querySelector(`[name="${field}"]`);
-            if (inp) 
-                if (!inp.value) {
-                    titles.push(inp.previousSibling.textContent.trim());
-                    inp.classList.add("inp-err");
-                }
-                else
-                    res[field] = inp.value
-        });
-        if (titles.length > 0)
-            alert("\nНе заповнені дані:\n- " + titles.join("\n- "));
-
-        return [titles.length == 0, res];
-    },
-
     listenInputs(formWrap) {
-        var remError = e => e.currentTarget.classList.remove("inp-err");
-        Array.prototype.forEach.call(formWrap.querySelectorAll("input,textarea"), inp => {
+        const remError = e => e.currentTarget.classList.remove("inp-err");
+        for (const inp of formWrap.querySelectorAll("input,textarea")) {
             inp.addEventListener("keyup", remError);
             inp.addEventListener("change", remError);
-        });
-            
+        }            
+    },
+
+    validateWithAlert(formFiledPairs) {
+        const res = {}, titles = [];
+        for (const [form, fieldLine] of formFiledPairs)
+            for (const field of fieldLine.split(" ")) {
+                const inp = form.querySelector(`[name="${field}"]`);
+                if (inp) 
+                    if (!inp.value) {
+                        titles.push(!inp.title ? inp.previousSibling.textContent.trim() : inp.title);
+                        inp.classList.add("inp-err");
+                    }
+                    else
+                        res[field] = inp.value
+            }
+        if (titles.length > 0) {
+            alert(`\n${lib.isEnglish ? "Data not filled" : "Не заповнені дані"}:\n- ` + titles.join("\n- "));
+            return [false, res];
+        }
+        return [true, res];
     }
 };
 
@@ -77,32 +77,31 @@ setTimeout(() => {
         lib.cookEnglish = lib.isEnglish;
 }, 100);
 
-[...document.querySelectorAll(".lang-switcher a")].forEach(a => 
-    a.addEventListener("click", e => {
-        e.preventDefault();
-        lib.cookEnglish = e.currentTarget.href.indexOf('/en') > -1;
-        location.href = e.currentTarget.href;
-    }));
+(() => {
+    for (const a of document.querySelectorAll(".lang-switcher a")) 
+        a.addEventListener("click", e => {
+            e.preventDefault();
+            lib.cookEnglish = e.currentTarget.href.indexOf('/en') > -1;
+            location.href = e.currentTarget.href;
+        })
 
-    
-if (!lib.isEnglish)
-    document.querySelector(".lang-switcher").classList.add("lang-switcher__active");
+    if (!lib.isEnglish)
+        document.querySelector(".lang-switcher").classList.add("lang-switcher__active");
 
+    for (const link of document.querySelectorAll('[data-liqpay]'))
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const [sign, data] = JSON.parse(e.currentTarget.dataset.liqpay);
+            lib.sendLiqpay(sign, data, true);
+        })
 
-[...document.querySelectorAll('[data-liqpay]')].forEach(link => 
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        var [sign, data] = JSON.parse(e.currentTarget.dataset.liqpay);
-        lib.sendLiqpay(sign, data, true);
-    }));
-
-[...document.querySelectorAll('[data-loc]')].forEach(el => 
-    el.innerHTML = JSON.parse(el.dataset.loc)[lib.isEnglish ? 1 : 0]);
+    for (const el of document.querySelectorAll('[data-loc]'))
+        el.innerHTML = JSON.parse(el.dataset.loc)[lib.isEnglish ? 1 : 0];
+})();
 
 (() => {
-    var folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ];
-
-    var curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
+    const folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ],
+    curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
     
     [...document.querySelectorAll(".menu > a")].forEach((a, i) => {
         if (i == curFolder)
@@ -120,37 +119,43 @@ if (!lib.isEnglish)
     });
 })();
 
+(() => {
+    if (location.href.indexOf("/fundraising") < 1)
+        return;
 
-if (location.href.indexOf("/fundraising") > -1) {
-    var search = location.search;
-    var tabs = [...document.querySelectorAll(".needs-filter__item")];
-    var tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1));
+    const search = location.search,
+    tabs = [...document.querySelectorAll(".needs-filter__item")],
+    tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1)),
+    suffix = ["none", "True", "False"][tabIndex];
+
     if (tabIndex > -1 && tabIndex < tabs.length)
-        for(var i =0; i<tabs.length; i++)
+        for (var i =0; i<tabs.length; i++)
             if (i == tabIndex)
                 tabs[i].classList.add("needs-filter__item_active");
-            else {
+            else 
                 tabs[i].style.textDecoration = "underline";
-            }
 
-    var suffix = ["none", "True", "False"][tabIndex];
-    [...document.getElementsByClassName(`is-military-${suffix}`)].forEach(c => c.style.display = "none");
-}
+    for (const { style } of document.getElementsByClassName(`is-military-${suffix}`))
+        style.display = "none";
+})();
 
 (pane => {
     if (!pane)
         return;
     
     function arrow(clas, path, linkPage) {
-        var [tag, color, href] = linkPage == null ? ["span", "#ccc", ""] : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
+        const [tag, color, href] = linkPage == null 
+            ? ["span", "#ccc", ""]
+            : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
+        
         return `<${tag} class="${clas}" href="${href}">
             <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                 <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
         </${tag}>`;
     }
-    var pages = [1, 2, 3];
-    var curIdx = Math.max(0, pages.findIndex(p => location.search.indexOf(`page=${p}`) > -1));
+    const pages = [1, 2, 3],
+    curIdx = Math.max(0, pages.findIndex(p => location.search.indexOf(`page=${p}`) > -1));
 
     [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) =>
         card.style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
@@ -166,40 +171,36 @@ if (location.href.indexOf("/fundraising") > -1) {
 })
 (document.querySelector(".news__pagination"));
 
-const header = document.querySelector('header')
-const burgerBtn = document.getElementById('burger-btn')
-const mobileMenuWr = document.getElementById('menu_mobile-wr')
-const mobileMenu = document.getElementById('menu_mobile');
-
-[...document.querySelectorAll(".copy-wallet")].forEach(btn => 
-    btn.addEventListener("click", async e => {
-        e.preventDefault();
-        var copyText = document.getElementById(e.currentTarget.dataset.walletid).innerText
-        await navigator.clipboard.writeText(copyText);
-        alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано");
-    }));
-
-window.addEventListener('resize', function () {
-    mobileMenuWr.style.top = `${header.offsetHeight}px`
-})
-
-window.addEventListener('load', function () {
-    mobileMenuWr.style.top = `${header.offsetHeight}px`
-})
-
-burgerBtn.addEventListener('click', function () {
-    this.classList.toggle('burger-btn_active')
-    document.body.classList.toggle('o_h')
-    mobileMenuWr.classList.toggle('menu_mobile_active')
-});
-
-[...mobileMenu.children].forEach(i => {
-    if (i.classList.contains('dropdown'))
-        i.addEventListener('click', function (e) {
-            e.preventDefault()
-            this.classList.toggle('dropdown_open')
-        })
-});
+(() => {
+    const header = document.querySelector('header'),
+    burgerBtn = document.getElementById('burger-btn'),
+    mobileMenuWr = document.getElementById('menu_mobile-wr'),
+    mobileMenu = document.getElementById('menu_mobile');
+    
+    for (const btn of document.querySelectorAll(".copy-wallet")) 
+        btn.addEventListener("click", async e => {
+            e.preventDefault();
+            const { innerText } = document.getElementById(e.currentTarget.dataset.walletid)
+            await navigator.clipboard.writeText(innerText);
+            alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано");
+        });
+    
+    window.addEventListener('resize', () => mobileMenuWr.style.top = `${header.offsetHeight}px`)
+    window.addEventListener('load', () => mobileMenuWr.style.top = `${header.offsetHeight}px`)
+    
+    burgerBtn.addEventListener('click', function () {
+        this.classList.toggle('burger-btn_active')
+        document.body.classList.toggle('o_h')
+        mobileMenuWr.classList.toggle('menu_mobile_active')
+    });
+    
+    for (const item of mobileMenu.children)
+        if (item.classList.contains('dropdown'))
+            item.addEventListener('click', function (e) {
+                e.preventDefault()
+                this.classList.toggle('dropdown_open')
+            })
+})();
 
 (([heroBg, heroContent]) => {
     if (heroBg && heroContent) {
@@ -261,18 +262,18 @@ if (documentModal && showDocumentBtn) {
 }
 
 (([triggers, contents]) => {
-    triggers.forEach(item =>
+    for (const item of triggers)
         item.addEventListener('click', function (e) {
             e.preventDefault()
             const id = e.target.getAttribute('href').replace('#', '');
             for (var i = 0; i < triggers.length; i++) {
-                var meth = contents[i].id == id ? "add" : "remove";
+                const meth = contents[i].id == id ? "add" : "remove";
                 triggers[i].classList[meth]('tabs-triggers__item_active');
                 contents[i].classList[meth]('tabs-content__item_active');
             }
-        }))
+        })
     
-    var current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
+    const current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
     if (current)
         current.click();
 })([
@@ -280,33 +281,33 @@ if (documentModal && showDocumentBtn) {
     document.querySelectorAll('.tabs-content__item')
 ]);
 
-
-const articleContent = document.getElementById('article__content');
-if (articleContent) {
-    const allImages = articleContent.querySelectorAll('img')
-    allImages.forEach(img => {
-        if (img.classList.length === 0 && img.nextSibling?.localName === 'img') {
-            const imagesWr = document.createElement('div')
-            imagesWr.classList.add('article__images-wr')
-
-            img.parentNode.insertBefore(imagesWr, img)
-
-            const secondImg = img.nextSibling
-            imagesWr.appendChild(img)
-            imagesWr.appendChild(secondImg)
+(articleContent => {
+    if (articleContent)
+        for (const img of articleContent.querySelectorAll('img')) {
+            if (img.classList.length === 0 && img.nextSibling?.localName === 'img') {
+                const imagesWr = document.createElement('div')
+                imagesWr.classList.add('article__images-wr')
+    
+                img.parentNode.insertBefore(imagesWr, img)
+    
+                const secondImg = img.nextSibling
+                imagesWr.appendChild(img)
+                imagesWr.appendChild(secondImg)
+            }
         }
-    })
-}
+})(document.getElementById('article__content'));
+
 
 var sliderLib = (([slider, suppButton, moreButton, mask]) => {
     if (!slider)
         return {};
+
     const slideArray = 
-        [...document.querySelectorAll('.slider div')].map(({dataset: set}) =>
-        [set.background, set.backgroundmini, JSON.parse(set.liqpay), set.dark]);
+        Array.prototype.map.call(document.querySelectorAll('.slider div'), ({dataset: set}) =>
+            [set.background, set.backgroundmini, JSON.parse(set.liqpay), set.dark]);
 
     let curSlideIndex = -1;
-    const curCaption = () => document.querySelector('.caption-' + (curSlideIndex));
+    const curCaption = () => document.querySelector('.caption-' + curSlideIndex);
     
     var interval = null;
     function advance() {
@@ -315,7 +316,7 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         if (curSlideIndex >= slideArray.length)
             curSlideIndex = 0;
             
-        let url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
+        const url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
         slider.style.cssText = `background: url("${url}") no-repeat center center; background-size: cover;`;
 
         const elems = document.getElementsByClassName('caption');
@@ -325,14 +326,14 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         curCaption().style.cssText = 'opacity: 1;';
         //mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
     }
-    var stop = () => clearInterval(interval);
-    var start = () => interval = setInterval(advance, 5000);
+    const stop = () => clearInterval(interval),
+    start = () => interval = setInterval(advance, 5000);
     advance();
     start();
 
     suppButton.addEventListener("click", e => {
         e.preventDefault();
-        var [sign, data] = slideArray[curSlideIndex][2];
+        const [sign, data] = slideArray[curSlideIndex][2];
         lib.sendLiqpay(sign, data, true);
     })
 
@@ -351,16 +352,18 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
 
 (images => {
     if (images.length < 3)
-    return;
-    var current = { index: 0 };
+        return;
+
+    const current = { index: 0 };
+    
     function appStyles() {
-        for(var i=0 ; i < images.length; i++){
-            var { classList, style, dataset: {val} } = images[i];
+        for (var i = 0 ; i < images.length; i++){
+            const { classList, style, dataset: {val} } = images[i];
             if (i == current.index) {
                 classList.add('main-partner-sel');
                 style.cursor = null;
 
-                let [name, descr] = JSON.parse(val);
+                const [name, descr] = JSON.parse(val);
                 document.querySelector(".af_name").innerHTML = name;
                 document.querySelector(".af_descr").innerHTML = descr;
             }
@@ -373,26 +376,26 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
     appStyles();
     images.forEach((img, i) =>
         img.addEventListener("click", () => {
-            if (i != current.index){
+            if (i != current.index) {
                 current.index = i;
                 appStyles();
             }
         }));
-})([...document.querySelectorAll('.about-fund__img_rest')]);
-
-[...document.querySelectorAll('.numf')].forEach(span => {
-    var num = parseInt(span.innerText, 10);
-    if (!isNaN(num) && num > -1)
-        span.innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-});
-
-function calcAges(tdate){
-    var now = new Date(), ageDifMs = now - tdate, ageDate = new Date(ageDifMs);
-    return Math.abs(ageDate.getUTCFullYear() - 1970);
-}
+})(document.querySelectorAll('.about-fund__img_rest'));
 
 (() => {
-    let piskunovDisease = document.getElementById('piskunov-disease'),
+    for (const span of document.querySelectorAll('.numf')) {
+        const num = parseInt(span.innerText, 10);
+        if (!isNaN(num) && num > -1)
+            span.innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+    
+    function calcAges(tdate){
+        const now = new Date(), ageDifMs = now - tdate, ageDate = new Date(ageDifMs);
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+
+    const piskunovDisease = document.getElementById('piskunov-disease'),
     curYear = document.getElementById('cur-year');
     if (curYear)
        curYear.innerHTML = (new Date()).getFullYear().toString();
@@ -404,28 +407,27 @@ function calcAges(tdate){
     if (!form || !butt)
         return;
 
-    var setStatus = text => document.getElementById("my-form-status").innerHTML =text;
+    const setStatus = text => document.getElementById("my-form-status").innerHTML =text;
     lib.listenInputs(form);
 
     butt.addEventListener("click", async e => {
         e.preventDefault();
-        var [isvalid] = lib.invalidate(form, "name email message");
-        if (!isvalid)
-        return;
+        const [isValid] = lib.validateWithAlert([[form, "name email message"]]);
+        if (isValid)
         try {
-            var response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
+            const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
             if (response.ok) {
                 setStatus(lib.isEnglish ? "✔️ Your message has been sent": "✔️ Ваше повідомлення відправлено!");
                 form.reset();
             } 
             else {
-                var data = await response.json();
+                const data = await response.json();
                 setStatus(Object.hasOwn(data, 'errors')
                 ? data.errors.map(_=>_.message).join(", ")
                 : lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
             }
         }
-        catch(error) { 
+        catch (error) { 
             setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
         }
     });
@@ -438,50 +440,53 @@ function calcAges(tdate){
 (images => {
     if (images.length == 0)
         return;
-    Array.prototype.filter.call(images,({dataset: {video}}) => video && video != "null")
-        .forEach(img => {
-            img.style.cursor = "pointer";
+    
+    for (const img of images) {
+        const { dataset: {video}, parentNode : parent } = img
+        if (!video || video == "null")
+            continue;
+        img.style.cursor = "pointer";
+        img.addEventListener("click", e => {
+            e.preventDefault();
+            const name = parent.querySelector(".thanks-sign-text")?.innerText ?? parent.dataset.title,
+            [w1, w2] = (parent.querySelector(".thank-descr") ?? parent.querySelector(".thank-descr-main")).innerText.split(' '),
+            [, width, height] = video.split('_'),
             
-            img.addEventListener("click", e => {
-                e.preventDefault();
-                var { parentNode : parent, dataset: { video: link } } = e.currentTarget;
-                var name = parent.querySelector(".thanks-sign-text")?.innerText ?? parent.dataset.title;
-                var [w1, w2] = (parent.querySelector(".thank-descr") ?? parent.querySelector(".thank-descr-main")).innerText.split(' ');
-                var [, width, height] = link.split('_');
-
-                var wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
-                wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
-                    <title>${name}: ${w1} ${w2}...</title></head><body>
-                    <style>body { margin: 0; text-align: center; }</style>
-                    <div data-new-window>
-                        <video controls autoplay style="width: 100%; height: auto;">
-                            <source src="//${location.host}${link}" type="video/mp4" />
-                        </video>
-                    </div>
-                </body></html>`);
-            });
+            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            
+            wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
+                <title>${name}: ${w1} ${w2}...</title></head><body>
+                <style>body { margin: 0; text-align: center; }</style>
+                <div data-new-window>
+                    <video controls autoplay style="width: 100%; height: auto;">
+                        <source src="//${location.host}${video}" type="video/mp4" />
+                    </video>
+                </div>
+            </body></html>`);
         });
+    }
 })(document.querySelectorAll(".thank-card-common img"));
 
 (radios => {
     if (radios.length == 0)
         return;
         
-    var lookup = {};
-    Array.prototype.forEach.call(radios, item => {
-        var [v1, v2] = item.dataset.radioval.split(":");
-        var [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
+    const lookup = {};
+    for (const item of radios) {
+        const [v1, v2] = item.dataset.radioval.split(":"),
+        [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
+        
         if (!(name in lookup))
-        lookup[name] = {};
+            lookup[name] = {};
         if (!(val in lookup[name]))
-        lookup[name][val] = [null, null];
+            lookup[name][val] = [null, null];
 
         if (item.tagName == "BUTTON") {
             lookup[name][val][0] = item;
 
             item.addEventListener("click", e => {
                 e.preventDefault();
-                Object.entries(lookup[name]).forEach(([keyval, [butt, div]]) => {
+                for (const [keyval, [butt, div]] of Object.entries(lookup[name]))
                     if (keyval == val) {
                         div.style.display = "flex";
                         butt.classList.add("btn-pressed");
@@ -490,50 +495,43 @@ function calcAges(tdate){
                         div.style.display = "none";
                         butt.classList.remove("btn-pressed");
                     }
-                });
             });
         }
         else {
             lookup[name][val][1] = item;
             lib.listenInputs(item);
         }
-    });
-
-
+    }
 })(document.querySelectorAll("[data-radioval]"));
 
 (sendButt => {
     if (!sendButt)
-    return;
+        return;
+
+    const docform = document.getElementById("docform");
+    lib.listenInputs(docform);
+
     sendButt.addEventListener("click", async e => {
         e.preventDefault();
-        var form = e.currentTarget.parentNode;
-        var [form1, form2] = 
-            "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
+        
+        const [form1, form2] = "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
                 .map(key => document.querySelector(`[data-radioval="${key}"]`))
-                .filter(_ => _.style.display != "none");
+                .filter(_ => _.style.display != "none"),
 
-        var [isvalid1, { surname, name, parto, birth, ages, phone, passserial,
-            passnumber, passtaker, passdate, phone, phonename = "мой номер" }] =
-            lib.invalidate(form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename");
-
-        var [isvalid2, {postaddress, postsurname = "", postname= "", postparto= ""} ] = 
-            lib.invalidate(form2, "postaddress postsurname postname postparto");
-
-        if (!isvalid1 || !isvalid2) 
+        [isValid, fields] = lib.validateWithAlert([
+            [form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename"],
+            [form2, "postaddress postsurname postname postparto"],
+            [docform, "doc"]
+        ]);
+        if (!isValid) 
             return;
+
+        const body = new FormData()
+        body.append("file", document.querySelector("[name='doc']").files[0])
+        for (const [nam, val] of Object.entries(fields))
+            body.append(nam, val ? val: "");
         try {
-            form.querySelector("[name='message']").value =  `${surname} ${name} ${parto}
-
-                ${birth}, ${ages} рокiв, ${birthplace}
-                
-                ${passserial} ${passnumber}, ${passdate}, ${passtaker}
-                ${phone} (${phonename})
-                ==========
-                ${postaddress}
-                ${postsurname} ${postname} ${postparto}`;
-
-            var response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
+            const response = await fetch("https://minimail2.azurewebsites.net/helpreq", { method: "POST", body })
             if (response.ok) {
                 if (confirm("Ваше повідомлення відправлено!"))
                     location.href="/";
@@ -541,7 +539,7 @@ function calcAges(tdate){
                     location.href="/";
             } 
             else {
-                var data = await response.json()
+                const data = await response.json()
                 alert(Object.hasOwn(data, 'errors')
                     ? data.errors.map(_=>_.message).join(", ")
                     : lib.isEnglish ? "Something went wrong": "щось пішло не так")

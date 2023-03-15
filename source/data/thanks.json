@@ -1,6 +1,20 @@
 [
    {
       "Props": {
+         "Pic": "card-53.jpg",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Алiна",
+         "Descr": "Добрий вечір! Посилку отримали. Ми дуже вдячні Вам Едуард, і вашій команді за вашу безцінну допомогу людям хворим на ЦД і за те, що тепер не потрібно постійно проколювати крихітні пальчики моїй донечці. Мирного неба і нехай Вас береже Господь!!"
+      },
+      "En": {
+         "Title": "Alina",
+         "Descr": "Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!"
+      }
+   },
+   {
+      "Props": {
          "Pic": "card-64.jpg",
          "MiniPic": "card-64-ava.png"
       },
@@ -11,6 +25,35 @@
       "En": {
          "Title": "Polina Karpan",
          "Descr": "Thank you very much Eduard and your team 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-122.jpg"
+      },
+      "Ua": {
+         "Title": "Марина Ященко",
+         "Descr": "Велике дякуєм фонду та їх команді за допомогу, яку ми діабетики так потребуємо. За їх велике серце яке вони відчиняють для інших. Дякуєм !!!💙💛💙💛💙💛"
+      },
+      "En": {
+         "Title": "Maryna Yaschenko",
+         "Descr": "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "card-116.jpg",
+         "MiniPic": "card-116-ava.png",
+         "Video": "/img/fun/116_960_540.mp4",
+         "HRank": 3
+      },
+      "Ua": {
+         "Title": "Вiкторiя",
+         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
+      },
+      "En": {
+         "Title": "Viktoria",
+         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
       }
    },
    {
@@ -41,22 +84,6 @@
       "En": {
          "Title": "Ludmila",
          "Descr": "Good day. Many thanks for the libra to Eduard, Igor and your foundation that helps our children!!! For us, Libra is our eyes, we can see sugar without pricking our fingers several times every day, and health and life directly depend on sugar."
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-116.jpg",
-         "MiniPic": "card-116-ava.png",
-         "Video": "/img/fun/116_960_540.mp4",
-         "HRank": 3
-      },
-      "Ua": {
-         "Title": "Вiкторiя",
-         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
-      },
-      "En": {
-         "Title": "Viktoria",
-         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
       }
    },
    {
@@ -588,20 +615,6 @@
       "En": {
          "Title": "Marina",
          "Descr": "Good day! Many thanks to the organization Stichting Vluchteling, the diabet.fund, as well as Igor, Eduard and the girls who helped with the packaging, for the package! We have already received. The little one is very happy! Grateful for the erythritol, glucometer and test strips. This is a huge help for us. Thank you for your concern! We wish you success in your work and peace in your heart!"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-53.jpg",
-         "HRank": 1
-      },
-      "Ua": {
-         "Title": "Алiна",
-         "Descr": "Добрий вечір! Посилку отримали. Ми дуже вдячні Вам Едуард, і вашій команді за вашу безцінну допомогу людям хворим на ЦД і за те, що тепер не потрібно постійно проколювати крихітні пальчики моїй донечці. Мирного неба і нехай Вас береже Господь!!"
-      },
-      "En": {
-         "Title": "Alina",
-         "Descr": "Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!"
       }
    },
    {

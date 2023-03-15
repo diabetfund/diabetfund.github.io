@@ -579,13 +579,13 @@ ul {
 }
 
   .hide_True {
-    display: none;
+    display: none !important;
   }
   .visible_False {
-    display: none;
+    display: none !important;
   }
   .visible_null {
-    display: none;
+    display: none !important;
   }
 
   .card_content_middle-True {
@@ -894,7 +894,7 @@ textarea {
   border: 0px solid red;
   background: #0c9a56;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.4em;
   color: #fff;
   text-align: center;
@@ -907,6 +907,10 @@ textarea {
   background:  #428867 !important;
   box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,1);
   cursor:default !important;
+}
+.btn-pressed::before {
+  content: '✓';
+  color: white;
 }
 
 @media (min-width: 992px){

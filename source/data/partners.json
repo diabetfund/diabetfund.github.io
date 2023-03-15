@@ -14,6 +14,19 @@
   },
   {
     "Props": {
+      "Pic": "ava-logvin.jpg"
+    },
+    "En": {
+      "Title": "Anna Logvin",
+      "Descr": "Co-founder, head of the project to help children and low-income families"
+    },
+    "Ua": {
+      "Title": "Анна Логвін",
+      "Descr": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
+    }
+  },
+  {
+    "Props": {
       "Pic": "ava-boiko.jpg"
     },
     "En": {
@@ -49,19 +62,6 @@
     "Ua": {
       "Title": "Андрій Андрєєв",
       "Descr": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
-    }
-  },
-  {
-    "Props": {
-      "Pic": "ava-logvin.jpg"
-    },
-    "En": {
-      "Title": "Anna Logvin",
-      "Descr": "Co-founder, head of the project to help children and low-income families"
-    },
-    "Ua": {
-      "Title": "Анна Логвін",
-      "Descr": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
     }
   },
   {

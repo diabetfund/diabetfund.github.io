@@ -11,18 +11,15 @@
               </p>
           </div>
           <div class="card__content_middle card_content_middle-@IsFull">
-              <div class="required-amount hide_@IsInfinite">
+              <div class="required-amount">
                   <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
-                  <span>
+                  <span class="hide_@IsInfinite">
                       <span class="numf">@Need000</span><span data-loc='["грн.", "UAH"]'></span>
                   </span>
+                  <span class="visible_@IsInfinite">
+                    <img src="/img/infinity.svg"/>
+                 </span>
               </div>
-              <div class="required-amount visible_@IsInfinite">
-                <span class="proj-card-amoun-title" data-loc='["Вже зібрали:", "Already collected:"]'></span>
-                <span>
-                    <span class="numf">@Funds000</span><span data-loc='["грн.", "UAH"]'></span>
-                </span>
-            </div>
               <div class="hide_@IsInfinite">
                 <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
                   <span style="color: #0C9A56;">

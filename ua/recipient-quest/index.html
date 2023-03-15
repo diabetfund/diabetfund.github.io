@@ -164,8 +164,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=40"/>
-    <link rel="stylesheet" href="/source/style.css?_=40"/>
+    <link rel="stylesheet" href="/source/app.css?_=41"/>
+    <link rel="stylesheet" href="/source/style.css?_=41"/>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body class='page-wr'>
@@ -243,7 +243,7 @@
                 <a class="menu__item " href="/ua/about-diabetes">Про діабет</a>
                 <a class="menu__item " href="/ua/fundraising">Проєкти</a>
                 <a class="menu__item " href="/ua/thanks">Відгуки та Звіти</a>
-                <a class="menu__item " href="/ua/fun">Позитивник</a>
+                <a class="menu__item " href="/ua/fun">Світлини</a>
             </nav>
             <button class="support-btn donate-button" data-liqpay='[null, null]'>Підтримати</button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
@@ -253,7 +253,7 @@
                     <a class="menu_mobile__item" href="/ua/about-diabetes">Про діабет</a>
                     <a class="menu_mobile__item" href="/ua/fundraising">Проєкти</a>
                     <a class="menu_mobile__item" href="/ua/thanks">Відгуки та Звіти</a>
-                    <a class="menu_mobile__item" href="/ua/fun">Позитивник</a>
+                    <a class="menu_mobile__item" href="/ua/fun">Світлини</a>
                 </nav>
                 <div class="phones">
                     <img class="header-icon phone-icon" src="/img/header/phone.png"/>
@@ -341,6 +341,12 @@
                         </td>
                     </tr>
                 </table>
+                <div style="display: flex; flex-wrap: wrap;" id="docform">
+                    <div class="col-lg-6">
+                        Фото документа, який підтверджує діагноз "діабет" у пацієнта. Це може бути: витяг із мед. карти, медичний висновок, епікриз тощо - документ, в якому зазначено ДІАГНОЗ (достатньо одного документа)
+                        <input class="form__field rep-field" type="file" name="doc" title="Фото документа, який підтверджує діагноз">
+                    </div>
+                </div>
                 <div style="display: flex; flex-wrap: wrap;" data-radioval="recipient-type:0">
                     <div class="col-lg-6">
                         Прізвище пацієнта із діагнозом "діабет"
@@ -357,7 +363,9 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                                <td>
+                                    <input class="form__field rep-field" type="text" name="phone" placeholder="" title="Контактний номер телефона">
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -366,10 +374,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія" title="Cерія паспорта">
                                 </td>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер" title="Hомер паспорта">
                                 </td>
                             </tr>
                         </table>
@@ -395,7 +403,7 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="phone" placeholder=""></td>
+                                <td><input class="form__field rep-field" type="text" name="phone" placeholder="" title="Контактний номер батька"></td>
                             </tr>
                         </table>
                         Iм'я батька
@@ -408,10 +416,10 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія">
+                                    <input class="form__field rep-field" type="text" name="passserial" placeholder="Cерія" title="Cерія паспорту одного з батьків">
                                 </td>
                                 <td>
-                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер">
+                                    <input class="form__field rep-field" type="text" name="passnumber" placeholder="Hомер" title="Hомер паспорту одного з батьків">
                                 </td>
                             </tr>
                         </table>
@@ -446,7 +454,7 @@
                         <table>
                             <tr>
                                 <td>+380</td>
-                                <td><input class="form__field rep-field" type="text" name="postphone" placeholder=""></td>
+                                <td><input class="form__field rep-field" type="text" name="postphone" placeholder="" title="Номер телефона отримувача посилки"></td>
                             </tr>
                         </table>
                         Прізвище отримувача посилки
@@ -480,7 +488,7 @@
                 <a class='footer__nav-item' href='/ua/about-diabetes'>Про діабет</a>
                 <a class='footer__nav-item' href='/ua/fundraising'>Проєкти</a>
                 <a class='footer__nav-item' href='/ua/thanks'>Відгуки та Звіти</a>
-                <a class='footer__nav-item' href='/ua/fun'>Позитивник</a>
+                <a class='footer__nav-item' href='/ua/fun'>Світлини</a>
             </nav>
             <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
                 Підтримати фонд
@@ -563,6 +571,6 @@
 </div>   
 </div>
 
-<script src="/source/script.js?_=40"></script>
+<script src="/source/script.js?_=41"></script>
 </body>
 </html>
