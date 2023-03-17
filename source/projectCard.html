@@ -20,12 +20,15 @@
                     <img src="/img/infinity.svg"/>
                  </span>
               </div>
-              <div class="hide_@IsInfinite">
-                <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
-                  <span style="color: #0C9A56;">
+                <div class="">
+                    <span class="proj-card-amoun-title" data-loc='["Вже зібрали", "Already collected"]'></span>
+                    <span style="color: #0C9A56;" class="hide_@IsInfinite">
                       @FundPerc%
                       <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_@Fullness.svg" >
-                  </span>
+                    </span>
+                    <span class="visible_@IsInfinite">
+                        <span class="numf">@Funds000</span><span data-loc='["грн.", "UAH"]'></span>
+                    </span>
               </div>
           </div>
           <div class="card__content_bottom">

@@ -51,7 +51,7 @@ const lib = {
         }            
     },
 
-    validateWithAlert(formFiledPairs) {
+    validateWithAlert(...formFiledPairs) {
         const res = {}, titles = [];
         for (const [form, fieldLine] of formFiledPairs)
             for (const field of fieldLine.split(" ")) {
@@ -69,6 +69,49 @@ const lib = {
             return [false, res];
         }
         return [true, res];
+    },
+
+    freezeeInputs: (btn, ...forms) => disable => {
+        if (btn) {
+            btn.classList[disable ? "add" : "remove"]("btn-disabled");
+            btn.disabled = disable;
+
+            if (disable) {
+                const {width, height} = btn;
+                btn.setAttribute("title", btn.innerText)
+                btn.innerText = lib.isEnglish ? "Sending.." : "Вiдправка..";
+                btn.width = width;
+                btn.height = height;
+            }
+            else
+                btn.innerText = btn.getAttribute("title")
+        }
+        for (const form of forms)
+            for (const inp of form.querySelectorAll("input,textarea"))
+                inp.disabled = disable;
+    },
+
+    async fetchMiniback(action, req, freezee) {
+        var response;
+        async function aux() {
+            try {
+                freezee(true);
+                response = await fetch("https://minimail2.azurewebsites.net/" + action, req);
+                if (!response.ok) 
+                    return false;
+            }
+            catch (error) { 
+                return false;
+            }
+            finally{
+                freezee(false);
+            }   
+            return true 
+        }
+        if (await aux() || await aux() || await aux())
+            return [true, response];
+        else 
+            return [false, null];
     }
 };
 
@@ -412,24 +455,24 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
 
     butt.addEventListener("click", async e => {
         e.preventDefault();
-        const [isValid] = lib.validateWithAlert([[form, "name email message"]]);
-        if (isValid)
-        try {
-            const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: 'application/json' } })
-            if (response.ok) {
-                setStatus(lib.isEnglish ? "✔️ Your message has been sent": "✔️ Ваше повідомлення відправлено!");
-                form.reset();
-            } 
-            else {
-                const data = await response.json();
-                setStatus(Object.hasOwn(data, 'errors')
-                ? data.errors.map(_=>_.message).join(", ")
-                : lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
-            }
+        const [isValid, { Name, Mail, Message }] = lib.validateWithAlert([form, "Name Mail Message"]);
+        if (!isValid)
+            return;
+        
+        var [isSucc] = await lib.fetchMiniback("feedback", {
+            method: "POST", 
+                body: JSON.stringify({ Name, Mail, Message }), 
+                mode: "cors",
+                headers: { Accept: 'application/json', "Content-Type": 'application/json' }
+        },
+        lib.freezeeInputs(butt, form))
+        
+        if (isSucc) {
+            setStatus(lib.isEnglish ? "✔️ Your message has been sent": "✔️ Ваше повідомлення відправлено!");
+            form.reset();
         }
-        catch (error) { 
+        else 
             setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
-        }
     });
 
 })([
@@ -518,11 +561,10 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
                 .map(key => document.querySelector(`[data-radioval="${key}"]`))
                 .filter(_ => _.style.display != "none"),
 
-        [isValid, fields] = lib.validateWithAlert([
+        [isValid, fields] = lib.validateWithAlert(
             [form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename"],
             [form2, "postaddress postsurname postname postparto"],
-            [docform, "doc"]
-        ]);
+            [docform, "doc"]);
         if (!isValid) 
             return;
 
@@ -530,23 +572,18 @@ var sliderLib = (([slider, suppButton, moreButton, mask]) => {
         body.append("file", document.querySelector("[name='doc']").files[0])
         for (const [nam, val] of Object.entries(fields))
             body.append(nam, val ? val: "");
-        try {
-            const response = await fetch("https://minimail2.azurewebsites.net/helpreq", { method: "POST", body })
-            if (response.ok) {
-                if (confirm("Ваше повідомлення відправлено!"))
-                    location.href="/";
-                else
-                    location.href="/";
-            } 
-            else {
-                const data = await response.json()
-                alert(Object.hasOwn(data, 'errors')
-                    ? data.errors.map(_=>_.message).join(", ")
-                    : lib.isEnglish ? "Something went wrong": "щось пішло не так")
-            }
+        
+        var [isSucc] = await lib.fetchMiniback("helpreq", 
+                        { method: "POST", body, mode: "cors" },
+                        lib.freezeeInputs(sendButt, form1, form2, docform));
+
+        if (isSucc) {
+            if (confirm("Ваше повідомлення відправлено!"))
+                location.href="/";
+            else
+                location.href="/";
         }
-        catch(error) { 
+        else
             alert(lib.isEnglish ? "Something went wrong": "щось пішло не так");
-        }
     });
 })(document.getElementById("seld-recipiet"));

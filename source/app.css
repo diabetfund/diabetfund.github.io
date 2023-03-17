@@ -1623,6 +1623,13 @@ svg {
     color: #565656
 }
 
+.already-collected_more b {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #565656
+}
+
 .donate-btn {
     display: flex;
     justify-content: center;
