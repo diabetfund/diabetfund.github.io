@@ -1858,7 +1858,8 @@ svg {
 
     .article-intro__img {
         height: unset;
-        min-height: 162px
+        min-height: 162px;
+        max-width: 780px;
     }
 
     .article__content iframe {
