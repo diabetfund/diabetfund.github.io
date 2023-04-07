@@ -5,8 +5,8 @@ node_modules
 build
 *.DotSettings.user
 *.DS_Store
-TempController.cs
 
+*.plb
 *.idea
 appsettings.json
 launchSettings.json
