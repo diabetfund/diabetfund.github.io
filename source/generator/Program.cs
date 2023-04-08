@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 41;
+var version = 42;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -124,9 +124,9 @@ record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) 
 
 record Thanks(int? HRank = null, string? Video = null) : Props;
 
-record Slide(string ProjectId, int DarkPerc) : Props
+record Slide : Props
 {
-    public string Url => Proj.UrlSegment(ProjectId);
+    public string Url => Proj.UrlSegment(Id!);
 }
 
 record Wallet(string Address, bool IsCrypto) : Props;

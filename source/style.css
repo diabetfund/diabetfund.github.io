@@ -365,6 +365,38 @@ ul {
     font-weight: 300;
   }
 
+.nslider {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  cursor: pointer;
+}
+.nslider figure {
+  position: relative;
+  transition: all 0.6s linear;
+  opacity: 1;
+}
+.nslider figure.hidd {
+  opacity: 0 !important;
+  height: 0px !important;
+  visibility:hidden !important;
+}
+.nslider figure.hidd figcaption {
+  display:none;
+}
+.nslider figcaption{
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px #000000;
+  color: #FFF; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  padding: 15px; 
+  font-size: 24px;
+  font-weight: 700;
+}
   
 @media(min-width : 768px) {
 

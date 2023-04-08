@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=41"/>
-    <link rel="stylesheet" href="/source/style.css?_=41"/>
+    <link rel="stylesheet" href="/source/app.css?_=42"/>
+    <link rel="stylesheet" href="/source/style.css?_=42"/>
    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
@@ -344,89 +344,78 @@
     </div>
 </header>
 <main>
-    <div class="slider main-slider-add" >
-        <table style="position: absolute;display: inline-block; bottom: 0; margin:0; z-index: 1;">
-            <tr>
-                <td style="padding:20px;">
-                    <button id="supp-slide" class="support-btn_comm donate-button">Donate</button>
-                </td>
-                <td>
-                    <a id="more-slide" class="support-btn_comm_rev" href="/">Read More</a>
-                </td>
-            </tr>
-          </table>
-          <span id="slide-mask" style="position: absolute; display: inline-block; width: 100%; height: 100%;background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0.80) 95%);"></span>
-          <div class="slide" 
-   data-background="/img/slides/slide-1.jpg"
-   data-backgroundmini="/img/slides/slide-1-mini.jpg"
-   data-liqpay='["null", "null"]'
-   data-dark="15"
-   >
-</div>
-<p class="caption caption-0"  data-href='/en/center'>
-   REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-2.jpg"
-   data-backgroundmini="/img/slides/slide-2-mini.jpg"
-   data-liqpay='["null", "null"]'
-   data-dark="15"
-   >
-</div>
-<p class="caption caption-1"  data-href='/en/center'>
-   REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-3.jpg"
-   data-backgroundmini="/img/slides/slide-3-mini.jpg"
-   data-liqpay='["null", "null"]'
-   data-dark="35"
-   >
-</div>
-<p class="caption caption-2"  data-href='/en/center'>
-   REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-4.jpg"
-   data-backgroundmini="/img/slides/slide-4-mini.jpg"
-   data-liqpay='["VXu0hr9MoeVuKUmlpUUCShG2nGY=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="]'
-   data-dark="25"
-   >
-</div>
-<p class="caption caption-3"  data-href='/en/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi'>
-   Helping with glucose sensors
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-6.jpg"
-   data-backgroundmini="/img/slides/slide-6-mini.jpg"
-   data-liqpay='["Of0cYVqPwu2qRI6E5eaCDl1DmrI=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9"]'
-   data-dark="45"
-   >
-</div>
-<p class="caption caption-4"  data-href='/en/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih'>
-   Helping with glucometers and test strips to them
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-9.jpg"
-   data-backgroundmini="/img/slides/slide-9-mini.jpg"
-   data-liqpay='["null", "null"]'
-   data-dark="25"
-   >
-</div>
-<p class="caption caption-5"  data-href='/en/fundraising/dopomogti-cukrozaminnykom'>
-   Helping with sweetener and baking mix
-</p>
-<div class="slide" 
-   data-background="/img/slides/slide-7.jpg"
-   data-backgroundmini="/img/slides/slide-7-mini.jpg"
-   data-liqpay='["null", "null"]'
-   data-dark="25"
-   >
-</div>
-<p class="caption caption-6"  data-href='/en/fundraising/assistance-to-zsu'>
-   Assistance to ZSU
-</p>
-    </div>
+    <div class="nslider">
+        <figure class="hidd" data-url="/en/center">
+   <picture>
+       <source srcset="/img/nslides/c1-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c1-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c1.avif" type="image/avif" />
+       <source srcset="/img/nslides/c1.jpg" type="image/jpeg" />
+       <img src="/img/nslides/c1-mob.jpg" />
+   </picture>
+   <figcaption>REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/center">
+   <picture>
+       <source srcset="/img/nslides/c2-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c2-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c2.avif" type="image/avif" />
+       <source srcset="/img/nslides/c2.jpg" type="image/jpeg" />
+       <img src="/img/nslides/c2-mob.jpg" />
+   </picture>
+   <figcaption>REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/center">
+   <picture>
+       <source srcset="/img/nslides/c3-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c3-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/c3.avif" type="image/avif" />
+       <source srcset="/img/nslides/c3.jpg" type="image/jpeg" />
+       <img src="/img/nslides/c3-mob.jpg" />
+   </picture>
+   <figcaption>REHABILITATION CENTER FOR DIABETICS IN SLOVAKIA</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi">
+   <picture>
+       <source srcset="/img/nslides/sensors-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/sensors-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/sensors.avif" type="image/avif" />
+       <source srcset="/img/nslides/sensors.jpg" type="image/jpeg" />
+       <img src="/img/nslides/sensors-mob.jpg" />
+   </picture>
+   <figcaption>Helping with glucose sensors</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/fundraising/dopomogti-glyukometrami-j-test-smuzhkami-do-nih">
+   <picture>
+       <source srcset="/img/nslides/glokometer-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/glokometer-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/glokometer.avif" type="image/avif" />
+       <source srcset="/img/nslides/glokometer.jpg" type="image/jpeg" />
+       <img src="/img/nslides/glokometer-mob.jpg" />
+   </picture>
+   <figcaption>Helping with glucometers and test strips to them</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/fundraising/dopomogti-cukrozaminnykom">
+   <picture>
+       <source srcset="/img/nslides/sweetener-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/sweetener-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/sweetener.avif" type="image/avif" />
+       <source srcset="/img/nslides/sweetener.jpg" type="image/jpeg" />
+       <img src="/img/nslides/sweetener-mob.jpg" />
+   </picture>
+   <figcaption>Helping with sweetener and baking mix</figcaption>
+</figure>
+<figure class="hidd" data-url="/en/fundraising/assistance-to-zsu">
+   <picture>
+       <source srcset="/img/nslides/zsu-mob.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/zsu-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/zsu.avif" type="image/avif" />
+       <source srcset="/img/nslides/zsu.jpg" type="image/jpeg" />
+       <img src="/img/nslides/zsu-mob.jpg" />
+   </picture>
+   <figcaption>Assistance to ZSU</figcaption>
+</figure>
+      </div>
     <section>
         <div class="our-activity__content container container_small" style="margin-bottom: 20px;">
             <table class="main-intro-logo">
@@ -1191,6 +1180,6 @@
     </div>
 </div>
 
-<script src="/source/script.js?_=41"></script>
+<script src="/source/script.js?_=42"></script>
 </body>
 </html>

@@ -340,58 +340,28 @@ if (documentModal && showDocumentBtn) {
         }
 })(document.getElementById('article__content'));
 
-
-var sliderLib = (([slider, suppButton, moreButton, mask]) => {
+(slider => {
     if (!slider)
-        return {};
+    return;
+    const figures = document.querySelectorAll('.nslider figure');
 
-    const slideArray = 
-        Array.prototype.map.call(document.querySelectorAll('.slider div'), ({dataset: set}) =>
-            [set.background, set.backgroundmini, JSON.parse(set.liqpay), set.dark]);
-
-    let curSlideIndex = -1;
-    const curCaption = () => document.querySelector('.caption-' + curSlideIndex);
-    
+    let index = -1;
     var interval = null;
     function advance() {
-        curSlideIndex++;
-
-        if (curSlideIndex >= slideArray.length)
-            curSlideIndex = 0;
-            
-        const url = slideArray[curSlideIndex][window.screen.width > 600 ? 0 : 1];
-        slider.style.cssText = `background: url("${url}") no-repeat center center; background-size: cover;`;
-
-        const elems = document.getElementsByClassName('caption');
-        for (let i = 0; i < elems.length; i++) 
-            elems[i].style.cssText = 'opacity: 0;';
-
-        curCaption().style.cssText = 'opacity: 1;';
-        //mask.style.background = `rgba(0, 0, 0, 0.${slideArray[curSlideIndex][3]})`;
+        index++;
+        if (index == figures.length)
+            index = 0;
+        
+        for (let i = 0; i < figures.length; i++) 
+            figures[i].classList[i == index ? 'remove' : 'add']('hidd');
     }
-    const stop = () => clearInterval(interval),
-    start = () => interval = setInterval(advance, 5000);
+    slider.addEventListener("click", e => {
+        e.preventDefault();
+        location.href = figures[index].dataset.url;
+    });
+    interval = setInterval(advance, 5000);
     advance();
-    start();
-
-    suppButton.addEventListener("click", e => {
-        e.preventDefault();
-        const [sign, data] = slideArray[curSlideIndex][2];
-        lib.sendLiqpay(sign, data, true);
-    })
-
-    moreButton.addEventListener("click", e => {
-        e.preventDefault();
-        location.href = curCaption().dataset.href;
-    })
-    return { start, stop };
-    
-})([
-    document.querySelector('.slider'),
-    document.getElementById('supp-slide'),
-    document.getElementById('more-slide'),
-    document.getElementById('slide-mask')
-]);
+})(document.querySelector(".nslider"));
 
 (images => {
     if (images.length < 3)

@@ -1,10 +1,10 @@
-<div class="slide" 
-   data-background="/img/slides/@Pic"
-   data-backgroundmini="/img/slides/@MiniPic"
-   data-liqpay='["@Signature", "@Data"]'
-   data-dark="@DarkPerc"
-   >
-</div>
-<p class="caption caption-@Id"  data-href='/@lang/@Url'>
-   @Title
-</p>
+<figure class="hidd" data-url="/@lang/@Url">
+   <picture>
+       <source srcset="/img/nslides/@MiniPic.avif" type="image/avif" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/@MiniPic.jpg" type="image/jpeg" media="(max-width: 768px)" />
+       <source srcset="/img/nslides/@Pic.avif" type="image/avif" />
+       <source srcset="/img/nslides/@Pic.jpg" type="image/jpeg" />
+       <img src="/img/nslides/@MiniPic.jpg" />
+   </picture>
+   <figcaption>@Title</figcaption>
+</figure>
