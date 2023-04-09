@@ -374,7 +374,6 @@ ul {
 }
 .nslider figure {
   position: relative;
-  transition: all 0.6s linear;
   opacity: 1;
 }
 .nslider figure.hidd {

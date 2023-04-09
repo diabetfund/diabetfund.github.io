@@ -1,6 +1,10 @@
 <div class="col-md-6 col-lg-4 is-military-@IsMilitary desc-only_@DesctopOnly">
    <div class="card needs__list-item">
-      <img class="card__img" src="/img/@MiniPic" >
+      <picture>
+        <source srcset="/img/@MiniPic.avif" type="image/avif"  />
+        <source srcset="/img/@MiniPic.jpg" type="image/jpeg"  />
+        <img class="card__img" src="/img/@MiniPic.jpg" >
+      </picture>
       <div class="card__content">
           <div class="card__content_top">
               <span class="card__title">@Title</span>

@@ -5,8 +5,8 @@
          "IsMilitary": true,
          "Need": 2600,
          "Funds": 720,
-         "Pic": "July2022/zsu_big.jpg",
-         "MiniPic": "July2022/zsu-mini.jpg",
+         "Pic": "proj/zsu",
+         "MiniPic": "proj/zsu-card",
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
          "ReportId": "report-zsu-new"
       },
@@ -25,8 +25,8 @@
          "IsMilitary": false,
          "Need": 4000,
          "Funds": 1254,
-         "Pic": "July2022/center.jpg",
-         "MiniPic": "July2022/center-mini.jpg",
+         "Pic": "proj/rehub-center",
+         "MiniPic": "proj/rehub-center-card",
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
       },
       "En": {
@@ -44,8 +44,8 @@
          "IsMilitary": false,
          "Need": 0,
          "Funds": 807,
-         "Pic": "June2022/snuUfMlETiFUHqUYJpf8.jpg",
-         "MiniPic": "July2022/sensors-mini.jpg",
+         "Pic": "proj/sensors",
+         "MiniPic": "proj/sensors-card",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       },
       "En": {
@@ -63,8 +63,8 @@
          "IsMilitary": false,
          "Need": 0,
          "Funds": 5502,
-         "Pic": "June2022/PASVJwVWxFZsPdLuZYPR.jpg",
-         "MiniPic": "July2022/glukometers-mini.jpg",
+         "Pic": "proj/gluk",
+         "MiniPic": "proj/gluk-card",
          "ReportId": "report-glukometers",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       },
@@ -83,8 +83,8 @@
          "IsMilitary": false,
          "Need": 0,
          "Funds": 500,
-         "Pic": "June2022/cJZfLvj8zTw30z70Q32h.jpg",
-         "MiniPic": "July2022/insulin-mini.jpg",
+         "Pic": "proj/insulin",
+         "MiniPic": "proj/insulin-card",
          "ReportId": "report-insulin",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       },
@@ -103,8 +103,8 @@
          "IsMilitary": false,
          "Need": 0,
          "Funds": 2002,
-         "Pic": "July2022/cukar.jpg",
-         "MiniPic": "July2022/cukar-mini.jpg",
+         "Pic": "proj/sweet",
+         "MiniPic": "proj/sweet-card",
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       },
       "En": {
@@ -122,8 +122,8 @@
          "IsMilitary": true,
          "Need": 720,
          "Funds": 720,
-         "Pic": "June2022/mca05r3OzAFLp2IAqXY8.jpg",
-         "MiniPic": "July2022/dopomogti-chastinam-a5717-mini.jpg",
+         "Pic": "proj/zsu-old-card",
+         "MiniPic": "proj/zsu-old-card",
          "ReportId": "report-zsu",
          "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
       },

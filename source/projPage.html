@@ -3,7 +3,13 @@
       <div class="container container_small">
          <div class="article-intro">
             <h1 class="article-intro__title title" sty>@Title</h1>
-            <img class="article-intro__img" src="/img/@Pic">
+            <picture>
+               <source srcset="/img/@Pic-mob.avif" type="image/avif" media="(max-width: 768px)" />
+               <source srcset="/img/@Pic-mob.jpg" type="image/jpeg" media="(max-width: 768px)" />
+               <source srcset="/img/@Pic.avif" type="image/avif" />
+               <source srcset="/img/@Pic.jpg" type="image/jpeg" />
+               <img class="article-intro__img" src="/img/@Pic.jpg">
+            </picture>
             <div class="intro-info">
                 <div class="intro-info__need-to-collect ">
                     <span data-loc='["Необхідно:", "Are needed:"]'></span>
