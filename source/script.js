@@ -343,7 +343,7 @@ if (documentModal && showDocumentBtn) {
 (slider => {
     if (!slider)
     return;
-    const figures = document.querySelectorAll('.nslider figure');
+    const figures = slider.children;
 
     let index = -1;
     var interval = null;
@@ -361,7 +361,7 @@ if (documentModal && showDocumentBtn) {
     });
     interval = setInterval(advance, 5000);
     advance();
-})(document.querySelector(".nslider"));
+})(document.getElementsByClassName("nslider")[0]);
 
 (images => {
     if (images.length < 3)
