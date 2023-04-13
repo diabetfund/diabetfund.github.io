@@ -17,7 +17,7 @@
       "Props": {
          "Pic": "129.avif",
          "MiniPic": "ava-129.webp",
-         "HRank": 1
+         "HRank": 2
       },
       "Ua": {
          "Title": "Свiтлана",
@@ -32,7 +32,7 @@
       "Props": {
          "Pic": "130.avif",
          "MiniPic": "ava-130.webp",
-         "HRank": 1
+         "HRank": 2
       },
       "Ua": {
          "Title": "Лена",
@@ -64,7 +64,7 @@
       "Props": {
          "Pic": "137.avif",
          "MiniPic": "ava-124.webp",
-         "HRank": 2
+         "HRank": 4
       },
       "Ua": {
          "Title": "Оксана Сугак",
@@ -73,49 +73,6 @@
       "En": {
          "Title": "Oksana Sugak",
          "Descr": "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "138.avif",
-         "MiniPic": "ava-138.webp",
-         "HRank": 1
-      },
-      "Ua": {
-         "Title": "Тетяна",
-         "Descr": "Доброго дня. Отримали посилочку від фонду за програмою 50/50. Велике ДЯКУЄМО за таку можливість. Міцного здоров'я всім людям, які допомогають всім нам і усім солоденьким рівних цукрів!!! <span style='color:darkred'>❤❤❤</span>"
-      },
-      "En": {
-         "Title": "Tetiana",
-         "Descr": "Good day. We received a parcel from the fund under the 50/50 program. Thank you very much for this opportunity. Good health to all the people who help all of us and to all the sweet tooths!!! <span style='color:darkred'>❤❤❤</span>"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "131.avif",
-         "MiniPic": "ava-131.webp"
-      },
-      "Ua": {
-         "Title": "Леся",
-         "Descr": "Доброго, тихого дня Вам! Дякуємо фонду, Едуарду, Сергію, Ігорю і всім причетним працівникам. Дякуємо за велику допомогу і терпіння. Здоров'я Вам і сил. Мирного неба і перемоги всім."
-      },
-      "En": {
-         "Title": "Lesya",
-         "Descr": "Good, quiet day to you! We thank the foundation, Eduard, Serhiy, Igor and all the employees involved. Thank you for your great help and patience. Health and strength to you. Peaceful sky and victory to all."
-      }
-   },
-   {
-      "Props": {
-         "Pic": "132.avif",
-         "MiniPic": "ava-132.webp"
-      },
-      "Ua": {
-         "Title": "Юля Очаковська",
-         "Descr": "Добрий день.  Щиро дякуємо за сенсор. Це велика допомога для нас. Ви робите велику добру роботу. Миру, здоров'я,  наснаги вашій великій команді. Цінуємо вашу роботу 💛💙"
-      },
-      "En": {
-         "Title": "Yulia Ochakovska",
-         "Descr": "Good day. Thank you very much for the sensor. This is a big help for us. You are doing great good work. Peace, health, good luck to your great team. We appreciate your work 💛💙"
       }
    },
    {
@@ -161,6 +118,52 @@
          "Descr": "Thank you very much to everyone for helping our children, health to you and all the best💪👍😉"
       }
    },
+   {
+      "Props": {
+         "Pic": "138.avif",
+         "MiniPic": "ava-138.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Тетяна",
+         "Descr": "Доброго дня. Отримали посилочку від фонду за програмою 50/50. Велике ДЯКУЄМО за таку можливість. Міцного здоров'я всім людям, які допомогають всім нам і усім солоденьким рівних цукрів!!! <span style='color:darkred'>❤❤❤</span>"
+      },
+      "En": {
+         "Title": "Tetiana",
+         "Descr": "Good day. We received a parcel from the fund under the 50/50 program. Thank you very much for this opportunity. Good health to all the people who help all of us and to all the sweet tooths!!! <span style='color:darkred'>❤❤❤</span>"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "131.avif",
+         "MiniPic": "ava-131.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Леся",
+         "Descr": "Доброго, тихого дня Вам! Дякуємо фонду, Едуарду, Сергію, Ігорю і всім причетним працівникам. Дякуємо за велику допомогу і терпіння. Здоров'я Вам і сил. Мирного неба і перемоги всім."
+      },
+      "En": {
+         "Title": "Lesya",
+         "Descr": "Good, quiet day to you! We thank the foundation, Eduard, Serhiy, Igor and all the employees involved. Thank you for your great help and patience. Health and strength to you. Peaceful sky and victory to all."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "132.avif",
+         "MiniPic": "ava-132.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Юля Очаковська",
+         "Descr": "Добрий день.  Щиро дякуємо за сенсор. Це велика допомога для нас. Ви робите велику добру роботу. Миру, здоров'я,  наснаги вашій великій команді. Цінуємо вашу роботу 💛💙"
+      },
+      "En": {
+         "Title": "Yulia Ochakovska",
+         "Descr": "Good day. Thank you very much for the sensor. This is a big help for us. You are doing great good work. Peace, health, good luck to your great team. We appreciate your work 💛💙"
+      }
+   },
+   
    {
       "Props": {
          "Pic": "135.avif"
@@ -222,6 +225,7 @@
    {
       "Props": {
          "Pic": "122.avif",
+         "HRank":2,
          "MainIndex": 3
       },
       "Ua": {
@@ -236,7 +240,8 @@
    {
       "Props": {
          "Pic": "card-124.jpg",
-         "MiniPic": "ava-124.webp"
+         "MiniPic": "ava-124.webp",
+         "HRank": 2
       },
       "Ua": {
          "Title": "Оксана Сугак",
@@ -250,7 +255,8 @@
    {
       "Props": {
          "Pic": "card-125.jpg",
-         "MiniPic": "card-125-ava.png"
+         "MiniPic": "card-125-ava.png",
+         "HRank": 2
       },
       "Ua": {
          "Title": "Галина Салтыкова",
