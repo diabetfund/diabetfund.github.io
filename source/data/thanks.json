@@ -1,51 +1,68 @@
 [
    {
       "Props": {
-         "Pic": "card-53.jpg",
+         "Pic": "136.avif",
+         "MiniPic": "ava-136.webp"
+      },
+      "Ua": {
+         "Title": "Iнна Криштопа",
+         "Descr": "Велика подяка фонду та всій команді за можливість отримати сенсор. Дякуємо за вашу працю. Сил вам та натхнення!!💙💛"
+      },
+      "En": {
+         "Title": "Inna Kristopa",
+         "Descr": "Many thanks to the foundation and the entire team for the opportunity to receive the sensor. Thank you for your work. Strength and inspiration to you!!💙💛"
+      }
+   },   
+   {
+      "Props": {
+         "Pic": "129.avif",
+         "MiniPic": "ava-129.webp",
          "HRank": 1
       },
       "Ua": {
-         "Title": "Алiна",
-         "Descr": "Добрий вечір! Посилку отримали. Ми дуже вдячні Вам Едуард, і вашій команді за вашу безцінну допомогу людям хворим на ЦД і за те, що тепер не потрібно постійно проколювати крихітні пальчики моїй донечці. Мирного неба і нехай Вас береже Господь!!"
+         "Title": "Свiтлана",
+         "Descr": "Доброго дня, сьогодні отримали сенсор. ДЯКУЮ фонду за можливість отримати моніторинг!!! Ви робите величезну справу! Дякую працівникам фонду, Сергію, Ігорю, Едуарду та всім причетним!!! Сил Вам та натхнення! Ще раз щира подяка!💛💙"
       },
       "En": {
-         "Title": "Alina",
-         "Descr": "Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!"
+         "Title": "Svitlana",
+         "Descr": "Good afternoon, we received the sensor today. THANKS to the fund for the opportunity to receive monitoring!!! You are doing a great job! Thanks to the employees of the foundation, Sergey, Igor, Eduard and everyone involved!!! Strength and inspiration to you! Once again, sincere thanks!💛💙"
       }
    },
    {
       "Props": {
-         "Pic": "card-64.jpg",
-         "MiniPic": "card-64-ava.png"
+         "Pic": "130.avif",
+         "MiniPic": "ava-130.webp"
       },
       "Ua": {
-         "Title": "Полiна Карпан",
-         "Descr": "Дуже вам дякуємо Едуард та вашiй командi 💛💙"
+         "Title": "Лена",
+         "Descr": "Доброго дня! Хочеться подякувати всім, хто бере участь у такій добрій справі, та допомогає людям з ЦД. Донечка дуже рада сенсору! Неймовірно вдячні вам за допомогу та підтримку в це нелегке врем'я! Бажаємо усього найкращого всім, хто працює у цьому проекті! 🤗"
       },
       "En": {
-         "Title": "Polina Karpan",
-         "Descr": "Thank you very much Eduard and your team 💛💙"
+         "Title": "Lena",
+         "Descr": "Good day! We would like to thank everyone who participates in such a good cause and helps people with diabetes. My daughter is very happy with the sensor! We are incredibly grateful for your help and support during this difficult time! We wish all the best to everyone working on this project! 🤗"
       }
    },
    {
       "Props": {
-         "Pic": "card-122.jpg"
+         "Pic": "131.avif",
+         "MiniPic": "ava-131.webp"
       },
       "Ua": {
-         "Title": "Марина Ященко",
-         "Descr": "Велике дякуєм фонду та їх команді за допомогу, яку ми діабетики так потребуємо. За їх велике серце яке вони відчиняють для інших. Дякуєм !!!💙💛💙💛💙💛"
+         "Title": "Леся",
+         "Descr": "Доброго, тихого дня Вам! Дякуємо фонду, Едуарду, Сергію, Ігорю і всім причетним працівникам. Дякуємо за велику допомогу і терпіння. Здоров'я Вам і сил. Мирного неба і перемоги всім."
       },
       "En": {
-         "Title": "Maryna Yaschenko",
-         "Descr": "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"
+         "Title": "Lesya",
+         "Descr": "Good, quiet day to you! We thank the foundation, Eduard, Serhiy, Igor and all the employees involved. Thank you for your great help and patience. Health and strength to you. Peaceful sky and victory to all."
       }
    },
    {
       "Props": {
-         "Pic": "card-116.jpg",
+         "Pic": "116.avif",
          "MiniPic": "card-116-ava.png",
          "Video": "/img/fun/116_960_540.mp4",
-         "HRank": 3
+         "HRank": 3,
+         "MainIndex": 4
       },
       "Ua": {
          "Title": "Вiкторiя",
@@ -58,7 +75,35 @@
    },
    {
       "Props": {
-         "Pic": "card-123.jpg",
+         "Pic": "132.avif",
+         "MiniPic": "ava-132.webp"
+      },
+      "Ua": {
+         "Title": "Юля Очаковська",
+         "Descr": "Добрий день.  Щиро дякуємо за сенсор. Це велика допомога для нас. Ви робите велику добру роботу. Миру, здоров'я,  наснаги вашій великій команді. Цінуємо вашу роботу 💛💙"
+      },
+      "En": {
+         "Title": "Yulia Ochakovska",
+         "Descr": "Good day. Thank you very much for the sensor. This is a big help for us. You are doing great good work. Peace, health, good luck to your great team. We appreciate your work 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "133.avif",
+         "MiniPic": "ava-133.webp"
+      },
+      "Ua": {
+         "Title": "Таня",
+         "Descr": "Доброго вечора,отримали сенсор! Дуже дякуємо всім працівникам фонду, що в цей нелегкий час ви займаєтесь  доброю справою! 💛💙"
+      },
+      "En": {
+         "Title": "Tanya",
+         "Descr": "Good evening, we received the sensor! Thank you very much to all the employees of the foundation for doing a good job in this difficult time! 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "123.avif",
          "MiniPic": "card-123-ava.png",
          "Video": "/img/fun/123_294_500.mp4",
          "HRank": 1
@@ -70,6 +115,77 @@
       "En": {
          "Title": "Inna",
          "Descr": "Good day)))) many thanks for this opportunity to always control the sugar 🙏🙏🙏🙏🙏 You are doing a good job 🌈🌈🌈🌈 😍😍😍😍😍"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "134.avif"
+      },
+      "Ua": {
+         "Title": "Оля",
+         "Descr": "Дякую велике всім, за допомогу нашим діткам, здоров'я вам і всього найкращого 💪👍😉"
+      },
+      "En": {
+         "Title": "Olya",
+         "Descr": "Thank you very much to everyone for helping our children, health to you and all the best💪👍😉"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "135.avif"
+      },
+      "Ua": {
+         "Title": "Ксюша",
+         "Descr": "Велике Дякую всім працівникам фонду!! Здоров’я, терпіння і Миру!! Ви робите добру справу!! Дякую!!"
+      },
+      "En": {
+         "Title": "Ksiusha",
+         "Descr": "Many thanks to all the employees of the fund!! Health, patience and Peace!! You are doing a good thing!! Thank you!!"
+      }
+   },
+
+   {
+      "Props": {
+         "Pic": "53.avif",
+         "HRank": 1,
+         "MainIndex": 1
+      },
+      "Ua": {
+         "Title": "Алiна",
+         "Descr": "Добрий вечір! Посилку отримали. Ми дуже вдячні Вам Едуард, і вашій команді за вашу безцінну допомогу людям хворим на ЦД і за те, що тепер не потрібно постійно проколювати крихітні пальчики моїй донечці. Мирного неба і нехай Вас береже Господь!!"
+      },
+      "En": {
+         "Title": "Alina",
+         "Descr": "Good evening! We received the parcel. We are very grateful to you Eduard and your team for your invaluable help to people with diabetes and for the fact that now there is no need to constantly pierce my daughter's tiny fingers. Peaceful sky and God bless you!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "64.avif",
+         "MiniPic": "card-64-ava.png",
+         "MainIndex": 2
+      },
+      "Ua": {
+         "Title": "Полiна Карпан",
+         "Descr": "Дуже вам дякуємо Едуард та вашiй командi 💛💙"
+      },
+      "En": {
+         "Title": "Polina Karpan",
+         "Descr": "Thank you very much Eduard and your team 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "122.avif",
+         "MainIndex": 3
+      },
+      "Ua": {
+         "Title": "Марина Ященко",
+         "Descr": "Велике дякуєм фонду та їх команді за допомогу, яку ми діабетики так потребуємо. За їх велике серце яке вони відчиняють для інших. Дякуєм !!!💙💛💙💛💙💛"
+      },
+      "En": {
+         "Title": "Maryna Yaschenko",
+         "Descr": "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"
       }
    },
    {

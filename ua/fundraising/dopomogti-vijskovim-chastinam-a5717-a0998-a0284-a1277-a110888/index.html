@@ -164,8 +164,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=43"/>
-    <link rel="stylesheet" href="/source/style.css?_=43"/>
+    <link rel="stylesheet" href="/source/app.css?_=44"/>
+    <link rel="stylesheet" href="/source/style.css?_=44"/>
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body class='page-wr'>
@@ -266,7 +266,6 @@
                         </a>
                     </div>
                     <div class="phones__item">
-                        
                         <a class="phones__link" title="whatsapp" href="https://api.whatsapp.com/send?phone=+380 (96) 887-38-74" target="_blank"
                         target="_blank">
                             <img class="header-icon" src="/img/header/whatsapp_line.png"/>
@@ -334,37 +333,45 @@
             </picture>
             <div class="intro-info">
                 <div class="intro-info__need-to-collect ">
-                    <span data-loc='["Необхідно:", "Are needed:"]'></span>
+                    <span class="local" data-ua="Необхідно:" data-en="Are needed:">
+                     Are needed:
+                    </span>
                     <div class='intro-info__sum hide_False'>
-                        <span class="numf">720000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>
+                        <span class="numf">720000</span>&nbsp;<span class="local" data-ua="грн." data-en="UAH">UAH</span>
                     </div>
                     <div class='intro-info__sum visible_False'>
                         <img src="/img/infinity.svg"/>
                     </div>
                 </div>
                 <div class='already-collected'>
-                  <span data-loc='["Вже надали допомогу", "Already provided help"]'></span>
+                  <span class="local" data-ua="Вже надали допомогу" data-en="Already provided help">
+                     Already provided help
+                  </span>
                     <div class='already-collected_more hide_False'>
                         100%
                         <img style='display: inline; margin-top: -7px;' src='/img/fullness_3.svg'>
-                        <span>(<span class="numf">720000</span>&nbsp;<span data-loc='["грн.", "UAH"]'></span>) </span>
+                        <span>(<span class="numf">720000</span>&nbsp;<span class="local" data-ua="грн." data-en="UAH">UAH</span>) </span>
                     </div>
                     <div class='already-collected_more visible_False'>
-                        <b class="numf">720000</b>&nbsp;<b data-loc='["грн.", "UAH"]'></b>
+                        <b class="numf">720000</b>&nbsp;<b class="local" data-ua="грн." data-en="UAH">UAH</b>
                     </div>
                 </div>
-                <button class='donate-btn fundraising-item__donate-btn hide_True' data-liqpay='["null", "null"]'>
+                <button class='donate-btn fundraising-item__donate-btn hide_True liqpay' 
+                  data-liqpay-sig="null"
+                  data-liqpay-data="null">
                     <img src='/img/header/credit-card.svg' />
-                    <span data-loc='["Зробити внесок", "To contribute"]'></span>
+                    <span class="local" data-ua="Зробити внесок" data-en="To contribute">To contribute</span>
                 </button>
              </div>
         </div>
         <div id="article__content" class="article__content">
          <div class="tabs">
              <div class="tabs-triggers visible_report-zsu">
-                 <a href="#tab-1" class="tabs-triggers__item tabs-triggers__item_active" data-loc='["Опис", "Description"]'>
-                 </a>
-                 <a href="#tab-2" class="tabs-triggers__item" data-loc='["Звiт", "Report"]'>
+                 <a href="#tab-1" class="tabs-triggers__item tabs-triggers__item_active local" data-ua="Опис" data-en="Description">
+                     Description  
+                  </a>
+                 <a href="#tab-2" class="tabs-triggers__item local" data-ua="Звiт" data-en="Report">
+                  Report
                  </a>
              </div>
              <div class="tabs-content">
@@ -376,21 +383,24 @@
     та бути захищеними під час виконання бойових завдань.</p>
 
                      <div>
-                        <h2 data-loc='["Документ з проханням", "Document with request"]'></h2>
+                        <h2 class="local" data-ua="Документ з проханням" data-en="Document with request">
+                           Document with request
+                        </h2>
                         <div class="article__document">
                             <img  src="/img/document.jpg">
                             <div>
-                                <p data-loc='["Офіційне звернення від благодійної організації \"Благодійний фонд дпомоги та реабілітації хворих на цукровий діабет\"", "An official appeal from the \"Charitable Foundation for Assistance and Rehabilitation of  Persons with Diabetes\""]'>
-                                    
+                                <p class="local" data-ua='Офіційне звернення від благодійної організації "Благодійний фонд дпомоги та реабілітації хворих на цукровий діабет"'
+                                 data-en='An official appeal from the "Charitable Foundation for Assistance and Rehabilitation of  Persons with Diabetes"'>
+                                 An official appeal from the "Charitable Foundation for Assistance and Rehabilitation of  Persons with Diabetes"
                                 </p>
                                 <div class="article__document-buttons">
                                     <button id="show-document-btn" class="see-btn btn">
                                        <img src="/img/header/eye.svg"/>
-                                       <span data-loc='["Подивитись", "Look"]'></span>
+                                       <span class="local" data-ua="Подивитись" data-en="Look">Look</span>
                                     </button>
                                     <a href="/pdf/June2022/BzkgdWL5PvHWZ1AXFtIH.pdf" download="document.pdf" class="download-btn btn">
                                         <img src="/img/header/file-download.svg"/>
-                                        <span data-loc='["Завантажити", "Download"]'></span>
+                                        <span class="local" data-ua="Завантажити" data-en="Download">Download</span>
                                     </a>
                                 </div>
                             </div>
@@ -470,25 +480,33 @@
          </div>
      </div>
          <div class="props">
-            <h3 class="title props__title" data-loc='["Реквізити", "Details"]'></h3>
+            <h3 class="title props__title local" data-ua="Реквізити" data-en="Details">Details</h3>
             <div class="props__content">
                <div>
-                  <strong data-loc='["Адреса та контакти", "Address and contacts"]'></strong>
+                  <strong class="local" data-lua="Адреса та контакти" data-en="Address and contacts">
+                     Address and contacts
+                  </strong>
                   <p>
                      E-mail: <a href="mailto:info@diabet.fund">info@diabet.fund</a>
                      <br>
-                     <span data-loc='["Телефон/Viber: +380 (63) 536-42-54", "Phone/Viber: +380 (63) 536-42-54"]'></span> <br>
-                     <span data-loc='["Юридична адреса: м. Київ, вул. Велика Звіринецька, 63", "Legal address: 63 Zvirinetska street, Kyiv, 01001"]'></span> <br>
-                     <span data-loc='["ЄДРПОУ", "USREOU"]'></span>: 39909206
+                     <span class="local" data-ua="Телефон/Viber: +380 (63) 536-42-54" data-en="Phone/Viber: +380 (63) 536-42-54">
+                        Phone/Viber: +380 (63) 536-42-54
+                     </span> <br>
+                     <span class="local" data-ua="Юридична адреса: м. Київ, вул. Велика Звіринецька, 63" data-en="Legal address: 63 Zvirinetska street, Kyiv, 01001">
+                        Legal address: 63 Zvirinetska street, Kyiv, 01001
+                     </span> <br>
+                     <span class="local" data-ua="ЄДРПОУ" data-en="USREOU">USREOU</span>: 39909206
                   </p>
                </div>
                <hr>
                <div>
-                  <strong data-loc='["Банківські рахунки", "Bank accounts"]'></strong>
+                  <strong class="local" data-ua="Банківські рахунки" data-en="Bank accounts">
+                     Bank accounts
+                  </strong>
                   <p>
-                     <span data-loc='["АТ КБ \"ПРИВАТБАНК\"", "JSC CB \"PRIVATBANK\""]'></span> <br>
+                     <span class="local" data-ua="АТ КБ 'ПРИВАТБАНК'" data-en="JSC CB 'PRIVATBANK'">JSC CB 'PRIVATBANK'</span> <br>
                      SWIFT: PBANUA2X <br>
-                     <span data-loc='["Розрахункові рахунки", "Current accounts"]'></span>: <br>
+                     <span class="local" data-ua="Розрахункові рахунки" data-en="Current accounts">Current accounts</span>: <br>
                      UAH: <span id="uahAccount">UA123052990000026005050305667</span> <br>
                      USD: <span id="usdAccount">UA113052990000026008050316738</span> <br>
                      EUR: UA343052990000026006050334046
@@ -502,11 +520,15 @@
                         d="M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z">
                      </path>
                   </svg>
-                  <span data-loc='["Копіювати", "Copy"]'></span>
+                  <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
                </button>
-               <button class="to-contribute-btn fundraising-item__donate-btn hide_True" data-liqpay='["null", "null"]'>
+               <button class="to-contribute-btn fundraising-item__donate-btn hide_True liqpay" 
+                  data-liqpay-sig="null"
+                  data-liqpay-data="null">
                   <img src="/img/header/credit-card.svg"/>
-                  <span data-loc='["Зробити внесок", "To contribute"]'></span>
+                  <span class="local" data-ua="Зробити внесок" data-en="To contribute">
+                     To contribute
+                  </span>
                </button>
             </div>
          </div>
@@ -538,7 +560,7 @@
                 <a class='footer__nav-item' href='/ua/thanks'>Відгуки та Звіти</a>
                 <a class='footer__nav-item' href='/ua/fun'>Світлини</a>
             </nav>
-            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
+            <button class='footer__support-btn donate-button liqpay'>
                 Підтримати фонд
             </button>
         </div>
@@ -612,13 +634,13 @@
                 <img src='/img/header/whatsapp_line.png'>
             </a>
         </div>
-        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
+        <button class='modal__support-btn donate-button liqpay'>
             Підтримати фонд
         </button>
     </div>
 </div>   
 </div>
 
-<script src="/source/script.js?_=43"></script>
+<script src="/source/script.js?_=44"></script>
 </body>
 </html>

@@ -1,4 +1,8 @@
  <div class="ht@HRank thank-card-common desc-only_@DesctopOnly" style="background-color: transparent !important;" data-title="@Title">
-    <img src="/img/viber/@Pic" style="width:275px; border-radius: 10px; overflow: hidden;" data-video="@Video" />
+   <picture data-video="@Video">
+      <source srcset="/img/viber/@Pic" type="image/avif">
+      <source srcset="/img/viber/@Fallback" type="image/jpeg">
+      <img src="/img/viber/@Fallback" style="width:275px; border-radius: 10px; overflow: hidden;"  />
+   </picture>
     <div class="thank-descr-main">@Descr</div>
  </div>

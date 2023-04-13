@@ -163,8 +163,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
           integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/source/app.css?_=43"/>
-    <link rel="stylesheet" href="/source/style.css?_=43"/>
+    <link rel="stylesheet" href="/source/app.css?_=44"/>
+    <link rel="stylesheet" href="/source/style.css?_=44"/>
    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 
@@ -258,7 +258,7 @@
                     Fun
                 </a>
             </nav>
-            <button class="support-btn donate-button" data-liqpay='[null, null]'>Donate</button>
+            <button class="support-btn donate-button liqpay">Donate</button>
             <div id="menu_mobile-wr" class="menu_mobile-wr">
                 <nav id="menu_mobile" class="menu_mobile">
                     <a class="menu_mobile__item" href="/en/center">
@@ -354,7 +354,7 @@
                        </h1>
                        <br/>
                        <br/>
-                       <button class="support-btn donate-button" style="background: white; color: black" data-liqpay='[null, null]'>
+                       <button class="support-btn donate-button liqpay" style="background: white; color: black">
                            To contribute
                        </button>
                    </div>
@@ -761,35 +761,45 @@
     </div>
 </section>
    <section class='support-details' >
-      <h2 class='our-activity__title title maint-title-proj'  
-          data-loc='["Реквізити для підтримки", "Details for support"]'>
-        </h2>
+      <h2 class='our-activity__title title maint-title-proj local' data-ua="Реквізити для підтримки" data-en="Details for support">
+          Details for support
+      </h2>
       <div class='support-details__content container'>
           <div class='support-details__img-wr'>
               <img class='support-details__img' src='/img/sidePicture.png' />
           </div>
           <div class='support-details__details'>
-              <h3 class='support-details__local-title' data-loc='["Адреса та контакти", "Address and contacts"]'>
+              <h3 class='support-details__local-title local' data-ua="Адреса та контакти" data-en="Address and contacts">
+                Address and contacts  
               </h3>
               <p class='support-details__local-text'>
                   E-mail: <a href="mailto:info@diabet.fund">info@diabet.fund</a>
                   <br/>
-                  <span data-loc='["Телефон/Viber: +380 (63) 536-42-54", "Phone/Viber: +380 (63) 536-42-54"]'></span> <br>
-                  <span data-loc='["Юридична адреса: м. Київ, вул. Велика Звіринецька, 63", "Legal address: 63 Zvirinetska street, Kyiv, 01001"]'></span> <br>
-                  <span data-loc='["ЄДРПОУ", "USREOU"]'></span>: 39909206
+                  <span class="local" data-ua="Телефон/Viber: +380 (63) 536-42-54" data-en="Phone/Viber: +380 (63) 536-42-54">
+                    Phone/Viber: +380 (63) 536-42-54
+                  </span> <br>
+                  <span class="local" data-ua="Юридична адреса: м. Київ, вул. Велика Звіринецька, 63" data-en="Legal address: 63 Zvirinetska street, Kyiv, 01001">
+                    Legal address: 63 Zvirinetska street, Kyiv, 01001
+                  </span> <br>
+                  <span class="local" data-ua="ЄДРПОУ" data-en="USREOU">USREOU</span>: 39909206
               </p>
               <hr/>
-              <h3 class='support-details__local-title' data-loc='["Банківські рахунки", "Bank accounts"]'>
+              <h3 class='support-details__local-title local' data-ua="Банківські рахунки" data-en="Bank accounts">
+  Bank accounts
 </h3>
 <p class='support-details__local-text'>
-  <span data-loc='["АТ КБ \"ПРИВАТБАНК\"", "JSC CB \"PRIVATBANK\""]'></span> <br>
+  <span class="local" data-ua='АТ КБ "ПРИВАТБАНК"' data-en='JSC CB "PRIVATBANK"'>
+    JSC CB "PRIVATBANK"
+  </span> <br>
   SWIFT: PBANUA2X <br>
   <table  style="margin-top: 10px;">
     <tr>
       <td style="padding-right: 10px;">
         <img src="/img/header/credit-card.svg" />
       </td>
-      <td data-loc='["Розрахункові рахунки:", "Current accounts:"]'></td>
+      <td class="local" data-ua="Розрахункові рахунки:" data-en="Current accounts:">
+        Current accounts:
+      </td>
     </tr>
   </table>
   <table>
@@ -803,7 +813,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -817,7 +827,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -831,7 +841,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -845,7 +855,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -855,7 +865,9 @@
       <td style="padding-right: 10px;">
         <img src="/img/header/coin.svg" />
       </td>
-      <td data-loc='["Гаманцi крипровалют:", "Cryptocurrency wallets:"]'></td>
+      <td class="local" data-ua="Гаманцi крипровалют:" data-en="Cryptocurrency wallets:">
+        Cryptocurrency wallets:
+      </td>
     </tr>
   </table>
   <table>
@@ -869,7 +881,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -883,7 +895,7 @@
          <svg class='support-details__copy-icon' viewBox='0 0 17 21'>
              <path d='M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z'/>
          </svg>
-         <span data-loc='["Копіювати", "Copy"]'></span>
+         <span class="local" data-ua="Копіювати" data-en="Copy">Copy</span>
      </button>
    </td>
 </tr>
@@ -920,7 +932,7 @@
                     Fun
                 </a>
             </nav>
-            <button class='footer__support-btn donate-button' data-liqpay='[null, null]'>
+            <button class='footer__support-btn donate-button liqpay'>
                 Donate
             </button>
         </div>
@@ -962,7 +974,6 @@
         <p class='footer__bottom-text'>
             © Charitable Foundation &quot;Care and Rehabilitation of Diabetics&quot;, 2015 - <span id="cur-year"></span>
         </p>
-        
         <a class="footer__bottom-link" href="/en/contacts" style="margin-right: 20px">Contacts Info</a>
         <a class="footer__bottom-link" href="/en/news" style="margin-right: 20px">News</a>
         <a class='footer__bottom-link' href='/en/founding-documents'>Founding documents</a>
@@ -999,12 +1010,12 @@
                 </svg>
             </a>
         </div>
-        <button class='modal__support-btn donate-button' data-liqpay='[null, null]'>
+        <button class='modal__support-btn donate-button liqpay'>
             Donate
         </button>
     </div>
 </div>
 
-<script src="/source/script.js?_=43"></script>
+<script src="/source/script.js?_=44"></script>
 </body>
 </html>

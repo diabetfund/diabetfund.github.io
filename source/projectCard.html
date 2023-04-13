@@ -12,22 +12,26 @@
           </div>
           <div class="card__content_middle card_content_middle-@IsFull">
               <div class="required-amount">
-                  <span class="proj-card-amoun-title" data-loc='["Необхідно:", "Are needed:"]'></span>
+                  <span class="proj-card-amoun-title local" data-ua="Необхідно:" data-en="Are needed:">
+                    Are needed:
+                  </span>
                   <span class="hide_@IsInfinite">
-                      <span class="numf">@Need000</span><span data-loc='["грн.", "UAH"]'></span>
+                      <span class="numf">@Need000</span><span class="local" data-ua="грн." data-en="UAH">UAH</span>
                   </span>
                   <span class="visible_@IsInfinite">
                     <img src="/img/infinity.svg"/>
                  </span>
               </div>
                 <div class="">
-                    <span class="proj-card-amoun-title" data-loc='["Вже надали допомогу", "Already provided help"]'></span>
+                    <span class="proj-card-amoun-title local" data-ua="Вже надали допомогу" data-en="Already provided help">
+                        Already provided help
+                    </span>
                     <span style="color: #0C9A56;" class="hide_@IsInfinite">
                       @FundPerc%
                       <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_@Fullness.svg" >
                     </span>
                     <span class="visible_@IsInfinite">
-                        <span class="numf">@Funds000</span><span data-loc='["грн.", "UAH"]'></span>
+                        <span class="numf">@Funds000</span><span class="local" data-ua="грн." data-en="UAH"></span>
                     </span>
               </div>
           </div>
@@ -37,22 +41,22 @@
                     <td>
                         <img src="/img/header/box-heart.svg"/>
                     </td>
-                    <td style="padding-left: 30px; font-size: 18px;" data-loc='["Проект закритий!", "Project closed!"]'>
-                        
+                    <td style="padding-left: 30px; font-size: 18px;" class="local" data-ua="Проект закритий!" data-en="Project closed!">
+                        Project closed!
                     </td>
                 </tr>
               </tbody></table>
               <div class="proj-card-bottom-bts hide_@IsFull">
                 <a href="/"
-                    class="card__donate-btn needs-donate-btn need-donate" 
-                    data-liqpay='["@Signature", "@Data"]'
-                    data-loc='["Підтримати", "Donate"]'
+                    class="card__donate-btn needs-donate-btn need-donate local liqpay" 
+                    data-liqpay-sig="@Signature" data-liqpay-data="@Data"
+                    data-ua="Підтримати" data-en="Donate"
                     >
-                    
+                    Donate
                     <!--<img src="/img/header/credit-card.svg"/>-->
                 </a>
-                <a class="card__read-btn" href="/@lang/@Url" data-loc='["Дiзнатись бiльше", "Read more"]'>
-                    
+                <a class="card__read-btn local" href="/@lang/@Url" data-ua="Дiзнатись бiльше" data-en="Read more">
+                    Read more
                     <!--<img src="/img/header/chevron-right.svg"/>-->
                 </a>
               </div>

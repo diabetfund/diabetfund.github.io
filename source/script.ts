@@ -56,7 +56,7 @@ const lib = (() => {
          let res = {}, titles: string[] = []
          for (let [form, fieldLine] of formFiledPairs)
              for (let field of fieldLine.split(" ")) {
-                 let inp: HTMLInputElement|null = form.querySelector(`[name="${field}"]`)
+                 let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
                  if (inp) 
                      if (inp && !inp.value) {
                          titles.push(inp.title ?? inp.previousSibling?.textContent?.trim())
@@ -71,6 +71,7 @@ const lib = (() => {
          }
          return [true, res]
       },
+
       freezeeInputs: (btn: HTMLButtonElement, ...forms: HTMLFormElement[]) => (disable: boolean) => {
          if (btn) {
              btn.classList[disable ? "add" : "remove"]("btn-disabled");
@@ -108,6 +109,12 @@ const lib = (() => {
           return [true, response]
       else 
           return [false, null]
+    },
+    
+    go<T extends any[]>(f: (...args: T) => void, ...args: T){
+        if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
+        try { f(...args) }
+        catch(e){ console.log(e); }
     }
    }
 })();
@@ -117,7 +124,7 @@ setTimeout(() => {
        lib.cookEnglish = lib.isEnglish
 }, 100);
 
-(() => {
+lib.go(() => {
    let langSwitch = document.getElementsByClassName("lang-switcher")[0]
    for (let a of langSwitch.getElementsByTagName("a")) 
        a.addEventListener("click", e => {
@@ -129,18 +136,20 @@ setTimeout(() => {
    if (!lib.isEnglish)
        langSwitch.classList.add("lang-switcher__active")
 
-   for (let link of document.querySelectorAll('[data-liqpay]'))
+   for (let link of document.getElementsByClassName('liqpay'))
        link.addEventListener("click", e => {
            e.preventDefault()
-           let [sign, data] = JSON.parse((e.currentTarget as HTMLElement)!.dataset.liqpay!)
-           lib.sendLiqpay(sign, data, true)
+           let d = (e.currentTarget as HTMLElement)!.dataset
+           lib.sendLiqpay(d["liqpay-sig"], d["liqpay-data"], true)
        })
 
-   for (let el of document.querySelectorAll('[data-loc]'))
-       el.innerHTML = JSON.parse((el as HTMLElement).dataset.loc!)[lib.isEnglish ? 1 : 0]
-})();
+   for (let el of document.getElementsByClassName('local')) {
+     let {ua, en} = (el as HTMLElement).dataset;
+     el.innerHTML = lib.isEnglish ? en : ua;
+   }
+});
 
-(() => {
+lib.go(() => {
    let folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ],
    curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
    
@@ -157,15 +166,11 @@ setTimeout(() => {
        if (i == curFolder)
            a.classList.add("footer__nav-item_active");
    });
-})();
+});
 
-(() => {
-   if (location.href.indexOf("/fundraising") < 1)
-       return
-
+lib.go(tabs => {
    let search = location.search,
-   tabs = [...document.querySelectorAll(".needs-filter__item")] as HTMLAnchorElement[],
-   tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1)),
+   tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)),
    suffix = ["none", "True", "False"][tabIndex];
 
    if (tabIndex > -1 && tabIndex < tabs.length)
@@ -177,12 +182,10 @@ setTimeout(() => {
 
    for (let v of document.getElementsByClassName(`is-military-${suffix}`))
        (v as HTMLElement).style.display = "none";
-})();
+},
+document.getElementsByClassName("needs-filter__item") as HTMLCollectionOf<HTMLAnchorElement>);
 
-(pane => {
-   if (!pane)
-       return;
-   
+lib.go(pane => {
    function arrow(clas: string, path: string, linkPage: number | null) {
        const [tag, color, href] = linkPage == null 
            ? ["span", "#ccc", ""]
@@ -208,10 +211,10 @@ setTimeout(() => {
    <div class="pagination__items-wr">${items.join('')}</div>
    ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`;
 
-})
-(document.querySelector(".news__pagination"));
+},
+document.getElementsByClassName("news__pagination")[0]);
 
-(() => {
+lib.go(() => {
    const header = document.querySelector('header') as HTMLElement,
    burgerBtn = document.getElementById('burger-btn') as HTMLButtonElement,
    mobileMenuWr = document.getElementById('menu_mobile-wr') as HTMLElement,
@@ -240,10 +243,9 @@ setTimeout(() => {
                e.preventDefault()
                this.classList.toggle('dropdown_open')
            })
-})();
+});
 
-(([heroBg, heroContent]) => {
-   if (heroBg && heroContent) {
+lib.go((heroBg, heroContent) => {
        const calcHeroBgOffset = () =>
            heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
                ? `${heroContent.offsetHeight}px`
@@ -251,59 +253,59 @@ setTimeout(() => {
 
        window.onload = calcHeroBgOffset
        window.onresize = calcHeroBgOffset
-   }
-})([
+},
    document.getElementById('hero__background'),
    document.getElementById('hero__content')
-]);
+);
 
-
-const modalTrigger = document.getElementById('modal-trigger') as HTMLElement
-const modal = document.getElementById('modal') as HTMLElement
-const modalContent = document.getElementById('modal__content') as HTMLElement
-const modalCloseBtn = document.getElementById('modal__close-btn') as HTMLElement
-modalTrigger.addEventListener('click', function () {
-   modal.classList.toggle('open')
-})
-
-modal.addEventListener('click', function () {
-   this.classList.remove('open')
-})
-
-modalContent.addEventListener('click', function (e) {
-   e.stopPropagation()
-})
-
-modalCloseBtn.addEventListener('click', function (e) {
-   modal.classList.remove('open')
-})
-
-/*needs item modal*/
-const showDocumentBtn = document.getElementById('show-document-btn') as HTMLElement
-const documentModal = document.getElementById('document-modal') as HTMLElement
-const documentModalContent = document.getElementById('document-modal__content') as HTMLElement
-const closeDocumentBtn = document.getElementById('document-modal__close-btn') as HTMLElement
-if (documentModal && showDocumentBtn) {
-   showDocumentBtn.addEventListener('click', function () {
-       documentModal.classList.toggle('open')
-   })
-
-   documentModal.addEventListener('click', function () {
+lib.go(() => {
+    const modalTrigger = document.getElementById('modal-trigger') as HTMLElement
+    const modal = document.getElementById('modal') as HTMLElement
+    const modalContent = document.getElementById('modal__content') as HTMLElement
+    const modalCloseBtn = document.getElementById('modal__close-btn') as HTMLElement
+    modalTrigger.addEventListener('click', function () {
+       modal.classList.toggle('open')
+    })
+    
+    modal.addEventListener('click', function () {
        this.classList.remove('open')
-   })
-
-   documentModalContent.addEventListener('click', function (e) {
+    })
+    
+    modalContent.addEventListener('click', function (e) {
        e.stopPropagation()
-   })
+    })
+    
+    modalCloseBtn.addEventListener('click', function (e) {
+       modal.classList.remove('open')
+    })
+    
+    /*needs item modal*/
+    const showDocumentBtn = document.getElementById('show-document-btn') as HTMLElement
+    const documentModal = document.getElementById('document-modal') as HTMLElement
+    const documentModalContent = document.getElementById('document-modal__content') as HTMLElement
+    const closeDocumentBtn = document.getElementById('document-modal__close-btn') as HTMLElement
+    if (documentModal && showDocumentBtn) {
+       showDocumentBtn.addEventListener('click', function () {
+           documentModal.classList.toggle('open')
+       })
+    
+       documentModal.addEventListener('click', function () {
+           this.classList.remove('open')
+       })
+    
+       documentModalContent.addEventListener('click', function (e) {
+           e.stopPropagation()
+       })
+    
+       closeDocumentBtn.addEventListener('click', function (e) {
+           documentModal.classList.remove('open')
+       })
+    }
+});
 
-   closeDocumentBtn.addEventListener('click', function (e) {
-       documentModal.classList.remove('open')
-   })
-}
-
-(([triggers, contents]) => {
+lib.go((triggers, contents) => {
    for (const item of triggers)
-       item.addEventListener('click', function (e) {
+       item.addEventListener('click', e => {
            e.preventDefault()
            const id = e.currentTarget.getAttribute('href').replace('#', '');
            for (var i = 0; i < triggers.length; i++) {
@@ -316,18 +318,14 @@ if (documentModal && showDocumentBtn) {
    const current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
    if (current)
        current.click();
-})([
-   document.querySelectorAll('.tabs-triggers__item') as NodeListOf<any>,
-   document.querySelectorAll('.tabs-content__item')
-]);
+},
+   document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<any>,
+   document.getElementsByClassName('tabs-content__item'));
 
-(slider => {
-   if (!slider)
-   return;
+lib.go(slider => {
    const figures = slider.getElementsByTagName("figure");
 
    let index = -1;
-   var interval: number | null = null;
    function advance() {
        index++;
        if (index == figures.length)
@@ -342,11 +340,12 @@ if (documentModal && showDocumentBtn) {
        if (url)
          location.href = url
    });
-   interval = setInterval(advance, 5000);
+   var interval = setInterval(advance, 5000);
    advance();
-})(document.getElementsByClassName("nslider")[0]);
+},
+    document.getElementsByClassName("nslider")[0]);
 
-(() => {
+lib.go(() => {
    for (const span of document.getElementsByClassName('numf')) {
        const num = parseInt((span as HTMLElement).innerText, 10);
        if (!isNaN(num) && num > -1)
@@ -364,9 +363,9 @@ if (documentModal && showDocumentBtn) {
       curYear.innerHTML = (new Date()).getFullYear().toString();
    if (piskunovDisease)
        piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").getDate()).toString();
-})();
+});
 
-(([form, butt]) => {
+lib.go((form, butt) => {
    if (!form || !butt)
        return;
 
@@ -395,25 +394,24 @@ if (documentModal && showDocumentBtn) {
            setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
    });
 
-})([
+},
    document.getElementsByClassName("user-form")[0] as HTMLFormElement,
-   document.getElementById("email-submit") as HTMLButtonElement
-] as const);
+   document.getElementById("email-submit") as HTMLButtonElement);
 
-(images => {
-   if (images.length == 0)
-       return;
+lib.go(wraps => {
    
-   for (const img of images) {
-       const { dataset: {video} } = img,
-       parent = img.parentElement as any
+   
+   for (const wrap of wraps) {
+        let img = wrap.getElementsByTagName("picture")[0]
+       const { dataset: {video} } = img
+       
        if (!video || video == "null")
            continue;
        img.style.cursor = "pointer";
        img.addEventListener("click", e => {
            e.preventDefault();
-           const name = parent.querySelector(".thanks-sign-text")?.innerText ?? parent.dataset.title,
-           [w1, w2] = (parent.querySelector(".thank-descr") ?? parent.querySelector(".thank-descr-main")).innerText.split(' '),
+           const name = wrap.getElementsByClassName("thanks-sign-text")[0]?.["innerText"] ?? wrap.dataset.title,
+           [w1, w2] = (wrap.getElementsByClassName("thank-descr")[0] ?? wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '),
            [, width, height] = video.split('_'),
            
            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
@@ -429,12 +427,10 @@ if (documentModal && showDocumentBtn) {
            </body></html>`);
        });
    }
-})(document.querySelectorAll(".thank-card-common img") as NodeListOf<HTMLImageElement>);
+},
+    document.getElementsByClassName("thank-card-common") as HTMLCollectionOf<HTMLElement>);
 
-(radios => {
-   if (radios.length == 0)
-       return;
-       
+lib.go(radios => {
    const lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {};
    for (const item of radios) {
        const [v1, v2] = item.dataset.radioval!.split(":"),
@@ -468,12 +464,10 @@ if (documentModal && showDocumentBtn) {
            lib.listenInputs(item);
        }
    }
-})(document.querySelectorAll("[data-radioval]") as NodeListOf<HTMLButtonElement | HTMLFormElement>);
+},
+document.getElementsByClassName("radioval") as HTMLCollectionOf<HTMLButtonElement | HTMLFormElement>);
 
-(sendButt => {
-   if (!sendButt)
-       return;
-
+lib.go(sendButt => {
    const docform = document.getElementById("docform") as HTMLFormElement;
    lib.listenInputs(docform);
 
@@ -492,7 +486,7 @@ if (documentModal && showDocumentBtn) {
            return;
 
        const body = new FormData()
-       body.append("file", (document.querySelector("[name='doc']") as HTMLInputElement).files![0])
+       body.append("file", (document.getElementsByClassName("inp-doc")[0] as HTMLInputElement).files![0])
        for (const nam in fields)
            body.append(nam, fields[nam] ?? "");
        
@@ -509,4 +503,5 @@ if (documentModal && showDocumentBtn) {
        else
            alert(lib.isEnglish ? "Something went wrong": "щось пішло не так");
    });
-})(document.getElementById("seld-recipiet") as HTMLButtonElement);
+},
+document.getElementById("seld-recipiet") as HTMLButtonElement);

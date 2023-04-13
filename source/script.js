@@ -56,7 +56,7 @@ const lib = (() => {
             let res = {}, titles = [];
             for (let [form, fieldLine] of formFiledPairs)
                 for (let field of fieldLine.split(" ")) {
-                    let inp = form.querySelector(`[name="${field}"]`);
+                    let inp = form.getElementsByClassName(`inp-${field}`)[0];
                     if (inp)
                         if (inp && !inp.value) {
                             titles.push((_a = inp.title) !== null && _a !== void 0 ? _a : (_c = (_b = inp.previousSibling) === null || _b === void 0 ? void 0 : _b.textContent) === null || _c === void 0 ? void 0 : _c.trim());
@@ -114,6 +114,15 @@ const lib = (() => {
                 else
                     return [false, null];
             });
+        },
+        go(f, ...args) {
+            if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
+                try {
+                    f(...args);
+                }
+                catch (e) {
+                    console.log(e);
+                }
         }
     };
 })();
@@ -121,7 +130,7 @@ setTimeout(() => {
     if (lib.cookEnglish != lib.isEnglish)
         lib.cookEnglish = lib.isEnglish;
 }, 100);
-(() => {
+lib.go(() => {
     let langSwitch = document.getElementsByClassName("lang-switcher")[0];
     for (let a of langSwitch.getElementsByTagName("a"))
         a.addEventListener("click", e => {
@@ -131,16 +140,18 @@ setTimeout(() => {
         });
     if (!lib.isEnglish)
         langSwitch.classList.add("lang-switcher__active");
-    for (let link of document.querySelectorAll('[data-liqpay]'))
+    for (let link of document.getElementsByClassName('liqpay'))
         link.addEventListener("click", e => {
             e.preventDefault();
-            let [sign, data] = JSON.parse(e.currentTarget.dataset.liqpay);
-            lib.sendLiqpay(sign, data, true);
+            let d = e.currentTarget.dataset;
+            lib.sendLiqpay(d["liqpay-sig"], d["liqpay-data"], true);
         });
-    for (let el of document.querySelectorAll('[data-loc]'))
-        el.innerHTML = JSON.parse(el.dataset.loc)[lib.isEnglish ? 1 : 0];
-})();
-(() => {
+    for (let el of document.getElementsByClassName('local')) {
+        let { ua, en } = el.dataset;
+        el.innerHTML = lib.isEnglish ? en : ua;
+    }
+});
+lib.go(() => {
     let folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun"], curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
     [...document.querySelectorAll(".menu > a")].forEach((a, i) => {
         if (i == curFolder)
@@ -154,11 +165,9 @@ setTimeout(() => {
         if (i == curFolder)
             a.classList.add("footer__nav-item_active");
     });
-})();
-(() => {
-    if (location.href.indexOf("/fundraising") < 1)
-        return;
-    let search = location.search, tabs = [...document.querySelectorAll(".needs-filter__item")], tabIndex = Math.max(0, tabs.findIndex(a => a.href.indexOf(search) > -1)), suffix = ["none", "True", "False"][tabIndex];
+});
+lib.go(tabs => {
+    let search = location.search, tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)), suffix = ["none", "True", "False"][tabIndex];
     if (tabIndex > -1 && tabIndex < tabs.length)
         for (var i = 0; i < tabs.length; i++)
             if (i == tabIndex)
@@ -167,10 +176,8 @@ setTimeout(() => {
                 tabs[i].style.textDecoration = "underline";
     for (let v of document.getElementsByClassName(`is-military-${suffix}`))
         v.style.display = "none";
-})();
-(pane => {
-    if (!pane)
-        return;
+}, document.getElementsByClassName("needs-filter__item"));
+lib.go(pane => {
     function arrow(clas, path, linkPage) {
         const [tag, color, href] = linkPage == null
             ? ["span", "#ccc", ""]
@@ -189,8 +196,8 @@ setTimeout(() => {
     pane.innerHTML = `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx == 0 ? null : curIdx - 1)}
    <div class="pagination__items-wr">${items.join('')}</div>
    ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx == pages.length - 1 ? null : curIdx + 1)}`;
-})(document.querySelector(".news__pagination"));
-(() => {
+}, document.getElementsByClassName("news__pagination")[0]);
+lib.go(() => {
     const header = document.querySelector('header'), burgerBtn = document.getElementById('burger-btn'), mobileMenuWr = document.getElementById('menu_mobile-wr'), mobileMenu = document.getElementById('menu_mobile');
     for (const btn of document.querySelectorAll(".copy-wallet"))
         btn.addEventListener("click", (e) => __awaiter(this, void 0, void 0, function* () {
@@ -212,57 +219,54 @@ setTimeout(() => {
                 e.preventDefault();
                 this.classList.toggle('dropdown_open');
             });
-})();
-(([heroBg, heroContent]) => {
-    if (heroBg && heroContent) {
-        const calcHeroBgOffset = () => heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
-            ? `${heroContent.offsetHeight}px`
-            : `0px`;
-        window.onload = calcHeroBgOffset;
-        window.onresize = calcHeroBgOffset;
-    }
-})([
-    document.getElementById('hero__background'),
-    document.getElementById('hero__content')
-]);
-const modalTrigger = document.getElementById('modal-trigger');
-const modal = document.getElementById('modal');
-const modalContent = document.getElementById('modal__content');
-const modalCloseBtn = document.getElementById('modal__close-btn');
-modalTrigger.addEventListener('click', function () {
-    modal.classList.toggle('open');
 });
-modal.addEventListener('click', function () {
-    this.classList.remove('open');
-});
-modalContent.addEventListener('click', function (e) {
-    e.stopPropagation();
-});
-modalCloseBtn.addEventListener('click', function (e) {
-    modal.classList.remove('open');
-});
-/*needs item modal*/
-const showDocumentBtn = document.getElementById('show-document-btn');
-const documentModal = document.getElementById('document-modal');
-const documentModalContent = document.getElementById('document-modal__content');
-const closeDocumentBtn = document.getElementById('document-modal__close-btn');
-if (documentModal && showDocumentBtn) {
-    showDocumentBtn.addEventListener('click', function () {
-        documentModal.classList.toggle('open');
+lib.go((heroBg, heroContent) => {
+    const calcHeroBgOffset = () => heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
+        ? `${heroContent.offsetHeight}px`
+        : `0px`;
+    window.onload = calcHeroBgOffset;
+    window.onresize = calcHeroBgOffset;
+}, document.getElementById('hero__background'), document.getElementById('hero__content'));
+lib.go(() => {
+    const modalTrigger = document.getElementById('modal-trigger');
+    const modal = document.getElementById('modal');
+    const modalContent = document.getElementById('modal__content');
+    const modalCloseBtn = document.getElementById('modal__close-btn');
+    modalTrigger.addEventListener('click', function () {
+        modal.classList.toggle('open');
     });
-    documentModal.addEventListener('click', function () {
+    modal.addEventListener('click', function () {
         this.classList.remove('open');
     });
-    documentModalContent.addEventListener('click', function (e) {
+    modalContent.addEventListener('click', function (e) {
         e.stopPropagation();
     });
-    closeDocumentBtn.addEventListener('click', function (e) {
-        documentModal.classList.remove('open');
+    modalCloseBtn.addEventListener('click', function (e) {
+        modal.classList.remove('open');
     });
-}
-(([triggers, contents]) => {
+    /*needs item modal*/
+    const showDocumentBtn = document.getElementById('show-document-btn');
+    const documentModal = document.getElementById('document-modal');
+    const documentModalContent = document.getElementById('document-modal__content');
+    const closeDocumentBtn = document.getElementById('document-modal__close-btn');
+    if (documentModal && showDocumentBtn) {
+        showDocumentBtn.addEventListener('click', function () {
+            documentModal.classList.toggle('open');
+        });
+        documentModal.addEventListener('click', function () {
+            this.classList.remove('open');
+        });
+        documentModalContent.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+        closeDocumentBtn.addEventListener('click', function (e) {
+            documentModal.classList.remove('open');
+        });
+    }
+});
+lib.go((triggers, contents) => {
     for (const item of triggers)
-        item.addEventListener('click', function (e) {
+        item.addEventListener('click', e => {
             e.preventDefault();
             const id = e.currentTarget.getAttribute('href').replace('#', '');
             for (var i = 0; i < triggers.length; i++) {
@@ -274,16 +278,10 @@ if (documentModal && showDocumentBtn) {
     const current = [...triggers].find(_ => location.search.indexOf(_.href.split('#')[1]) > -1);
     if (current)
         current.click();
-})([
-    document.querySelectorAll('.tabs-triggers__item'),
-    document.querySelectorAll('.tabs-content__item')
-]);
-(slider => {
-    if (!slider)
-        return;
+}, document.getElementsByClassName('tabs-triggers__item'), document.getElementsByClassName('tabs-content__item'));
+lib.go(slider => {
     const figures = slider.getElementsByTagName("figure");
     let index = -1;
-    var interval = null;
     function advance() {
         index++;
         if (index == figures.length)
@@ -297,10 +295,10 @@ if (documentModal && showDocumentBtn) {
         if (url)
             location.href = url;
     });
-    interval = setInterval(advance, 5000);
+    var interval = setInterval(advance, 5000);
     advance();
-})(document.getElementsByClassName("nslider")[0]);
-(() => {
+}, document.getElementsByClassName("nslider")[0]);
+lib.go(() => {
     for (const span of document.getElementsByClassName('numf')) {
         const num = parseInt(span.innerText, 10);
         if (!isNaN(num) && num > -1)
@@ -315,8 +313,8 @@ if (documentModal && showDocumentBtn) {
         curYear.innerHTML = (new Date()).getFullYear().toString();
     if (piskunovDisease)
         piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").getDate()).toString();
-})();
-(([form, butt]) => {
+});
+lib.go((form, butt) => {
     if (!form || !butt)
         return;
     const setStatus = text => document.getElementById("my-form-status").innerHTML = text;
@@ -339,22 +337,18 @@ if (documentModal && showDocumentBtn) {
         else
             setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
     }));
-})([
-    document.getElementsByClassName("user-form")[0],
-    document.getElementById("email-submit")
-]);
-(images => {
-    if (images.length == 0)
-        return;
-    for (const img of images) {
-        const { dataset: { video } } = img, parent = img.parentElement;
+}, document.getElementsByClassName("user-form")[0], document.getElementById("email-submit"));
+lib.go(wraps => {
+    for (const wrap of wraps) {
+        let img = wrap.getElementsByTagName("picture")[0];
+        const { dataset: { video } } = img;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
         img.addEventListener("click", e => {
             var _a, _b, _c;
             e.preventDefault();
-            const name = (_b = (_a = parent.querySelector(".thanks-sign-text")) === null || _a === void 0 ? void 0 : _a.innerText) !== null && _b !== void 0 ? _b : parent.dataset.title, [w1, w2] = ((_c = parent.querySelector(".thank-descr")) !== null && _c !== void 0 ? _c : parent.querySelector(".thank-descr-main")).innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            const name = (_b = (_a = wrap.getElementsByClassName("thanks-sign-text")[0]) === null || _a === void 0 ? void 0 : _a["innerText"]) !== null && _b !== void 0 ? _b : wrap.dataset.title, [w1, w2] = ((_c = wrap.getElementsByClassName("thank-descr")[0]) !== null && _c !== void 0 ? _c : wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
@@ -366,10 +360,8 @@ if (documentModal && showDocumentBtn) {
            </body></html>`);
         });
     }
-})(document.querySelectorAll(".thank-card-common img"));
-(radios => {
-    if (radios.length == 0)
-        return;
+}, document.getElementsByClassName("thank-card-common"));
+lib.go(radios => {
     const lookup = {};
     for (const item of radios) {
         const [v1, v2] = item.dataset.radioval.split(":"), [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
@@ -399,10 +391,8 @@ if (documentModal && showDocumentBtn) {
             lib.listenInputs(item);
         }
     }
-})(document.querySelectorAll("[data-radioval]"));
-(sendButt => {
-    if (!sendButt)
-        return;
+}, document.getElementsByClassName("radioval"));
+lib.go(sendButt => {
     const docform = document.getElementById("docform");
     lib.listenInputs(docform);
     sendButt.addEventListener("click", (e) => __awaiter(this, void 0, void 0, function* () {
@@ -414,7 +404,7 @@ if (documentModal && showDocumentBtn) {
         if (!isValid)
             return;
         const body = new FormData();
-        body.append("file", document.querySelector("[name='doc']").files[0]);
+        body.append("file", document.getElementsByClassName("inp-doc")[0].files[0]);
         for (const nam in fields)
             body.append(nam, (_a = fields[nam]) !== null && _a !== void 0 ? _a : "");
         var [isSucc] = yield lib.fetchMiniback("helpreq", { method: "POST", body, mode: "cors" }, lib.freezeeInputs(sendButt, form1, form2, docform));
@@ -427,4 +417,4 @@ if (documentModal && showDocumentBtn) {
         else
             alert(lib.isEnglish ? "Something went wrong" : "щось пішло не так");
     }));
-})(document.getElementById("seld-recipiet"));
+}, document.getElementById("seld-recipiet"));

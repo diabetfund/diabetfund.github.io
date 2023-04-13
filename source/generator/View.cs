@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using static System.Linq.Expressions.Expression;
 
-record View(string Template)
+struct View(string template)
 {
     static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> exposes = new();
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
@@ -22,5 +22,5 @@ record View(string Template)
                     arg)
                 .Compile()
                )(model))
-        .Aggregate(Template, (t, p) => t.Replace("@"+p.Item1, p.Item2?.ToString() ?? "null"));
+        .Aggregate(template, (t, p) => t.Replace("@"+p.Item1, p.Item2?.ToString() ?? "null"));
 }

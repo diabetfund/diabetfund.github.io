@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 43;
+var version = 44;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -52,7 +52,12 @@ void Render(string lang)
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
         topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } })),
         slides = Join("slide", slides),
-        topThanks = Join("thankCardMain", thanks.Take(4).Select((t, i) => t with { Props = t.Props with { DesctopOnly = i == 3 } })),
+        topThanks = Join("thankCardMain", 
+            from th in thanks
+            let index = th.Props.MainIndex
+            where index.HasValue
+            orderby index.Value
+            select th with { Props = th.Props with { DesctopOnly = index.Value > 3 } }),
         skipAbout = false,
         walletsTable
     };
@@ -60,10 +65,13 @@ void Render(string lang)
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
     Out("projects", "/fundraising", Join("projectCard", projects));
-    Out("thanks", "/thanks", Join("thankCard", thanks));
     Out("news", "/news", Join("newsCard", news));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
+
+    var thankParts = thanks.GroupBy(_ => _.Props.HasFormats()).Aggregate("", (acc, chunk) => 
+                        acc + Join(chunk.Key ? "thankCardNew":"thankCard", chunk));
+    Out("thanks", "/thanks", thankParts);
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -122,7 +130,12 @@ record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) 
     public static string UrlSegment(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(int? HRank = null, string? Video = null) : Props;
+record Thanks(int? HRank = null, string? Video = null, int? MainIndex = null) : Props 
+{
+    public bool HasFormats() => Pic?.EndsWith("avif") ?? false;
+    public string? Fallback => Pic?.Replace("avif", "jpg");
+    public bool HasAvatar => MiniPic is { };
+}
 
 record Slide : Props
 {
