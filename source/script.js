@@ -339,9 +339,10 @@ lib.go((form, butt) => {
     }));
 }, document.getElementsByClassName("user-form")[0], document.getElementById("email-submit"));
 lib.go(wraps => {
+    var _a;
     for (const wrap of wraps) {
-        let img = wrap.getElementsByTagName("picture")[0];
-        const { dataset: { video } } = img;
+        const img = wrap.getElementsByTagName("picture")[0];
+        const video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
