@@ -402,8 +402,8 @@ lib.go(wraps => {
    
    
    for (const wrap of wraps) {
-        let img = wrap.getElementsByTagName("picture")[0]
-       const { dataset: {video} } = img
+       const img = wrap.getElementsByTagName("picture")[0]
+       const video = img?.dataset?.video
        
        if (!video || video == "null")
            continue;

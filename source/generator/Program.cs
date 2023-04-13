@@ -52,12 +52,14 @@ void Render(string lang)
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
         topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } })),
         slides = Join("slide", slides),
+
         topThanks = Join("thankCardMain", 
             from th in thanks
             let index = th.Props.MainIndex
             where index.HasValue
             orderby index.Value
             select th with { Props = th.Props with { DesctopOnly = index.Value > 3 } }),
+
         skipAbout = false,
         walletsTable
     };

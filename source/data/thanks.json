@@ -31,7 +31,8 @@
    {
       "Props": {
          "Pic": "130.avif",
-         "MiniPic": "ava-130.webp"
+         "MiniPic": "ava-130.webp",
+         "HRank": 1
       },
       "Ua": {
          "Title": "Лена",
@@ -40,6 +41,53 @@
       "En": {
          "Title": "Lena",
          "Descr": "Good day! We would like to thank everyone who participates in such a good cause and helps people with diabetes. My daughter is very happy with the sensor! We are incredibly grateful for your help and support during this difficult time! We wish all the best to everyone working on this project! 🤗"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "116.avif",
+         "MiniPic": "ava-116.webp",
+         "Video": "/img/fun/116_960_540.mp4",
+         "HRank": 2,
+         "MainIndex": 4
+      },
+      "Ua": {
+         "Title": "Вiкторiя",
+         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
+      },
+      "En": {
+         "Title": "Viktoria",
+         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "137.avif",
+         "MiniPic": "ava-124.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Оксана Сугак",
+         "Descr": "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"
+      },
+      "En": {
+         "Title": "Oksana Sugak",
+         "Descr": "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "138.avif",
+         "MiniPic": "ava-138.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Тетяна",
+         "Descr": "Доброго дня. Отримали посилочку від фонду за програмою 50/50. Велике ДЯКУЄМО за таку можливість. Міцного здоров'я всім людям, які допомогають всім нам і усім солоденьким рівних цукрів!!! <span style='color:darkred'>❤❤❤</span>"
+      },
+      "En": {
+         "Title": "Tetiana",
+         "Descr": "Good day. We received a parcel from the fund under the 50/50 program. Thank you very much for this opportunity. Good health to all the people who help all of us and to all the sweet tooths!!! <span style='color:darkred'>❤❤❤</span>"
       }
    },
    {
@@ -54,23 +102,6 @@
       "En": {
          "Title": "Lesya",
          "Descr": "Good, quiet day to you! We thank the foundation, Eduard, Serhiy, Igor and all the employees involved. Thank you for your great help and patience. Health and strength to you. Peaceful sky and victory to all."
-      }
-   },
-   {
-      "Props": {
-         "Pic": "116.avif",
-         "MiniPic": "card-116-ava.png",
-         "Video": "/img/fun/116_960_540.mp4",
-         "HRank": 3,
-         "MainIndex": 4
-      },
-      "Ua": {
-         "Title": "Вiкторiя",
-         "Descr": "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"
-      },
-      "En": {
-         "Title": "Viktoria",
-         "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
       }
    },
    {
@@ -143,7 +174,21 @@
          "Descr": "Many thanks to all the employees of the fund!! Health, patience and Peace!! You are doing a good thing!! Thank you!!"
       }
    },
-
+   {
+      "Props": {
+         "Pic": "121.avif",
+         "MiniPic": "ava-121.webp",
+         "Video": "/img/fun/121_540_960.mp4"
+      },
+      "Ua": {
+         "Title": "Юлiя",
+         "Descr": "Добрий день. Дякуємо Вам за допомогу ❤️"
+      },
+      "En": {
+         "Title": "Julia",
+         "Descr": "Good day. Thank you for your help ❤️"
+      }
+   },
    {
       "Props": {
          "Pic": "53.avif",
@@ -191,7 +236,7 @@
    {
       "Props": {
          "Pic": "card-124.jpg",
-         "MiniPic": "card-124-ava.png"
+         "MiniPic": "ava-124.webp"
       },
       "Ua": {
          "Title": "Оксана Сугак",
@@ -313,21 +358,6 @@
       "En": {
          "Title": "Iryna Semenyuk",
          "Descr": "Thank you very much for your help"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "card-121.jpg",
-         "MiniPic": "card-121-ava.png",
-         "Video": "/img/fun/121_540_960.mp4"
-      },
-      "Ua": {
-         "Title": "Юлiя",
-         "Descr": "Добрий день. Дякуємо Вам за допомогу ❤️"
-      },
-      "En": {
-         "Title": "Julia",
-         "Descr": "Good day. Thank you for your help ❤️"
       }
    },
    {
