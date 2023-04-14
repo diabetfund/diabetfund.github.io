@@ -3,24 +3,24 @@ using System.Linq.Expressions;
 using System.Reflection;
 using static System.Linq.Expressions.Expression;
 
-struct View(string template)
+readonly struct View(string template)
 {
     static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> exposes = new();
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
     static readonly ParameterExpression arg = Parameter(typeof(object));
-    
+
     public string Run(params object?[] models) =>
         models.SelectMany(model =>
-            model is string ? new[] { ("content", model) }
-            : exposes.GetOrAdd(model!.GetType(), static type =>
+            model is string ? new[] { ("@content", model) }
+            : exposes.GetOrAdd(model!.GetType(), type =>
                 Lambda<Func<object, (string, object)[]>>(
                     NewArrayInit(typeof((string, object)),
                         from prop in type.GetProperties()
                         select New(tupleCtor,
-                            Constant(prop.Name),
+                            Constant("@" + prop.Name),
                             Convert(Property(Convert(arg, type), prop), typeof(object)))),
                     arg)
                 .Compile()
                )(model))
-        .Aggregate(template, (t, p) => t.Replace("@"+p.Item1, p.Item2?.ToString() ?? "null"));
+        .Aggregate(template, (t, p) => t.Replace(p.Item1, p.Item2?.ToString() ?? "null"));
 }

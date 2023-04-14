@@ -54,11 +54,11 @@ void Render(string lang)
         slides = Join("slide", slides),
 
         topThanks = Join("thankCardMain", 
-            from th in thanks
-            let index = th.Props.MainIndex
+            from thank in thanks
+            let index = thank.Props.MainIndex
             where index.HasValue
             orderby index.Value
-            select th with { Props = th.Props with { DesctopOnly = index.Value > 3 } }),
+            select thank with { Props = thank.Props with { DesctopOnly = index.Value > 3 } }),
 
         skipAbout = false,
         walletsTable
@@ -71,9 +71,9 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    var thankParts = thanks.GroupBy(_ => _.Props.HasFormats()).Aggregate("", (acc, chunk) => 
-                        acc + Join(chunk.Key ? "thankCardNew":"thankCard", chunk));
-    Out("thanks", "/thanks", thankParts);
+    Out("thanks", "/thanks", string.Join("\n",
+        from chunk in thanks.GroupBy(_ => _.Props.HasFormats())
+        select Join(chunk.Key ? "thankCardNew" : "thankCard", chunk)));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);

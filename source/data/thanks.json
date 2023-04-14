@@ -1,8 +1,39 @@
 [
    {
       "Props": {
+         "Pic": "139.avif",
+         "MiniPic": "ava-139.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Каріна Шабаліна",
+         "Descr": "Добридень. Величезне дякую за допомогу . З ліброю контроль за цукром крові синочка без проблем 24/7. Усім співробітникам фонду низький уклін!"
+      },
+      "En": {
+         "Title": "Karina Shabalina",
+         "Descr": "Good afternoon. Thank you very much for the help . With my son's good blood sugar control, 24/7 is no problem. Kudos to all employees of the Foundation!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "140.avif",
+         "MiniPic": "ava-140.webp",
+         "HRank": 3
+      },
+      "Ua": {
+         "Title": "Алена Сапольняк",
+         "Descr": "Сьогодні отримала лібру 2, дуже всим дякую за таку підтримку вона потрібна людям із цукровим діабетом, я зі стажем 27 років ніяк не можу справитися з гіпоглікеміями, в мене вони тяжкі до коми, то за вдяки Вам спробую їх контролювати . Дякую, дякую, дякую. Дай Бог Вам сил, терпіння і мирного неба."
+      },
+      "En": {
+         "Title": "Aliona Sapolnyak",
+         "Descr": "Today I received libra 2, thank you all very much for such support, people with diabetes need it, with 27 years of experience, I cannot cope with hypoglycemia, they are severe for me to the point of coma, so thanks to you I will try to control them. Thank you, thank you, thank you. May God give you strength, patience and a peaceful sky."
+      }
+   },
+   {
+      "Props": {
          "Pic": "136.avif",
-         "MiniPic": "ava-136.webp"
+         "MiniPic": "ava-136.webp",
+         "HRank": 2
       },
       "Ua": {
          "Title": "Iнна Криштопа",
@@ -17,7 +48,7 @@
       "Props": {
          "Pic": "129.avif",
          "MiniPic": "ava-129.webp",
-         "HRank": 2
+         "HRank": 3
       },
       "Ua": {
          "Title": "Свiтлана",
@@ -26,6 +57,21 @@
       "En": {
          "Title": "Svitlana",
          "Descr": "Good afternoon, we received the sensor today. THANKS to the fund for the opportunity to receive monitoring!!! You are doing a great job! Thanks to the employees of the foundation, Sergey, Igor, Eduard and everyone involved!!! Strength and inspiration to you! Once again, sincere thanks!💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "137.avif",
+         "MiniPic": "ava-124.webp",
+         "HRank": 4
+      },
+      "Ua": {
+         "Title": "Оксана Сугак",
+         "Descr": "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"
+      },
+      "En": {
+         "Title": "Oksana Sugak",
+         "Descr": "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"
       }
    },
    {
@@ -58,21 +104,6 @@
       "En": {
          "Title": "Viktoria",
          "Descr": "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "137.avif",
-         "MiniPic": "ava-124.webp",
-         "HRank": 4
-      },
-      "Ua": {
-         "Title": "Оксана Сугак",
-         "Descr": "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"
-      },
-      "En": {
-         "Title": "Oksana Sugak",
-         "Descr": "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"
       }
    },
    {
@@ -136,8 +167,7 @@
    {
       "Props": {
          "Pic": "131.avif",
-         "MiniPic": "ava-131.webp",
-         "HRank": 2
+         "MiniPic": "ava-131.webp"
       },
       "Ua": {
          "Title": "Леся",
@@ -151,8 +181,7 @@
    {
       "Props": {
          "Pic": "132.avif",
-         "MiniPic": "ava-132.webp",
-         "HRank": 2
+         "MiniPic": "ava-132.webp"
       },
       "Ua": {
          "Title": "Юля Очаковська",
