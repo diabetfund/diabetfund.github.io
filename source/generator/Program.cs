@@ -1,15 +1,19 @@
 ﻿using System.Text.Json;
 
-var version = 44;
+var version = 45;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
     JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Proj, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
+    (ReadJ<Project, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
      ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
      ReadJ<Stone, StoneLoc>("auction"));
+
+Console.WriteLine(
+    string.Join(" ", thanks.Where(_ => !_.Props.HasFormats()).Select(_ => _.Props.Pic?.Split(".")?[0])
+    ));
 
 Render("ua");
 Render("en");
@@ -50,7 +54,7 @@ void Render(string lang)
     {
         founders = new View(Read("founders")).Run(Join("partner", partners)),
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
-        topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesctopOnly = i > 3 } })),
+        topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesktopOnly = i > 3 } })),
         slides = Join("slide", slides),
 
         topThanks = Join("thankCardMain", 
@@ -58,7 +62,7 @@ void Render(string lang)
             let index = thank.Props.MainIndex
             where index.HasValue
             orderby index.Value
-            select thank with { Props = thank.Props with { DesctopOnly = index.Value > 3 } }),
+            select thank with { Props = thank.Props with { DesktopOnly = index.Value > 3 } }),
 
         skipAbout = false,
         walletsTable
@@ -78,19 +82,19 @@ void Render(string lang)
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
-    IEnumerable<(P, string, string)> ItemPages<P, L>(Item<P, L>[] items, string viewPath, string cardsParth) where P: Props
+    IEnumerable<(P, string, string)> ItemPages<P, L>(Item<P, L>[] items, string viewPath, string cardsPath) where P: Props
     {
         View view = new(Read(viewPath));
-        foreach(var (props, en, ua) in items)
-            yield return (props, Read(cardsParth+ props.Id!), view.Run(props, lang is "en" ? en : ua));
+        foreach (var (props, en, ua) in items)
+            yield return (props, Read(cardsPath + props.Id!), view.Run(props, lang is "en" ? en : ua));
     }
 
-    foreach (var (props, content, view) in ItemPages(projects, "projPage", "projects/"))
+    foreach (var (props, content, view) in ItemPages(projects, "projectPage", "projects/"))
         if (content.Split("<hr/>") is [var contentF, var contentS])
             Out(view, "/fundraising/" + props.Id, new 
             {
                 contentF, contentS, 
-                report = props.ReportId is { } rep ? Read("projects/" + rep) : null
+                report = props.ReportId is {} rep ? Read("projects/" + rep) : null
             });
 
     var otherNews = Join("newsCard", news.Take(2));
@@ -106,7 +110,7 @@ record Props
     public string? Id { get; set; }
     public string? Pic { get; set; }
     public string? MiniPic { get; set; }
-    public bool DesctopOnly { get; set; }
+    public bool DesktopOnly { get; set; }
 }
 
 record Locale
@@ -119,7 +123,7 @@ record News(string Date) : Props;
 
 record PayLoc(string? Data, string? Signature): Locale;
 
-record Proj(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
+record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
 {
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
@@ -136,12 +140,11 @@ record Thanks(int? HRank = null, string? Video = null, int? MainIndex = null) : 
 {
     public bool HasFormats() => Pic?.EndsWith("avif") ?? false;
     public string? Fallback => Pic?.Replace("avif", "jpg");
-    public bool HasAvatar => MiniPic is { };
 }
 
 record Slide : Props
 {
-    public string Url => Proj.UrlSegment(Id!);
+    public string Url => Project.UrlSegment(Id!);
 }
 
 record Wallet(string Address, bool IsCrypto) : Props;

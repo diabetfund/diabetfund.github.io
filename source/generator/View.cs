@@ -22,5 +22,5 @@ readonly struct View(string template)
                     arg)
                 .Compile()
                )(model))
-        .Aggregate(template, (t, p) => t.Replace(p.Item1, p.Item2?.ToString() ?? "null"));
+        .Aggregate(template, (acc, val) => acc.Replace(val.Item1, val.Item2?.ToString() ?? "null"));
 }

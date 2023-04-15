@@ -1,6 +1,124 @@
 [
    {
       "Props": {
+         "Pic": "145.avif",
+         "MiniPic": "ava-145.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Владлена",
+         "Descr": "Не висловити словами наскільки ми вдячні! У маленької виявили діабет у рік. І з того часу я хотіла встановити той сенсор. Але не зрозуміло, чи сможе вона з ним ходити, чи усе буде працювати справно і увесь термін, бо багато нюансів. Не кажучи вже за ціну, щоб на постійній основі їх ставити. Окремо дякую, за те що пальчики нарешті відпочинуть від 8 місяців проколювань по 100 разів на день. Ми три дні з чоловіком відкладали встановлення, бо нервували! І вийшло усе чудово, маленька навіть не помітила і не чіпає його! Тому навіть не уявляю які слова можно підібрати та подякувати Едуарду, Сергію та усім хто допомагає! Велике дякую за програму 50/50 по сенсору та можливість його випробовувати!"
+      },
+      "En": {
+         "Title": "Vladlena",
+         "Descr": "Do not hang out with words like my vdyachni! The little one was diagnosed with diabetes. From that hour I wanted to install that sensor. Alya didn’t realize that you could walk with him, that you would be able to work correctly and weigh the term, more richly nuanced. Not seeming already for the price, to put them on a permanent basis. Okremo dyakuyu, for those scho fingers nareshti vіdpochinit vіd 8 months pierce 100 times a day. We spent three days with the person being restored, more nervous! And everything turned out miraculous, the little one didn’t remember and didn’t eat yoga! I don’t say that, I don’t say words, you can pick up and tell Eduard, Sergius, and we can help someone! Great for the 50/50 program on the sensor and the ability to try it!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "147.avif",
+         "MiniPic": "ava-147.webp"
+      },
+      "Ua": {
+         "Title": "Ганна",
+         "Descr": "В цей святковий день ми отримали допомогу від фонду!!! Дякуємо Вам безмежно!!!"
+      },
+      "En": {
+         "Title": "Hanna",
+         "Descr": "On this holiday, we received help from the fund!!! Thank you very much!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "146.avif",
+         "MiniPic": "ava-146.webp",
+         "HRank": 3
+      },
+      "Ua": {
+         "Title": "Надія Шнейдер",
+         "Descr": "Доброго вечора. Отримали сьогодні сенсор, хочемо подякувати Сергію, Ігорю, Едуарду, фонду і всім хто причетний до такої необхідної допомоги для нашого хлопчика🙏🙏🙏 Ви наші янголи охоронці у цій складній боротьбі за щасливе дитинство. Дякуємо Вам величезне ❤️ Просто не виразити словами подяку 🤗 Ви неймовірні люди, робите стільки добрих справ для всіх нас. Бережіть себе, здоров'я Вам, сил, наснаги і терпіння з нами) Дякуємо ще раз 🙏❤️🙏"
+      },
+      "En": {
+         "Title": "Nadia Schneider",
+         "Descr": "Good evening. We took away this year's sensor, we want to please Sergius, Igor, Eduard, the fund and everyone who is considered to be such a necessary help for our lad🙏🙏🙏 You are our yangoli guarding our folded struggle for a happy childhood. Thank you for your greatness ❤️ Just don’t express yourself with words 🤗 You are the name of the people, work for good help for all of us. Take care of yourself, I'm healthy to you, strength, us naked and patient with us) Dyakuєmo again 🙏❤️🙏"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "148.avif",
+         "MiniPic": "ava-148.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Олена",
+         "Descr": "Доброго вечера! Дякую від усього серця волонтерам. Особисто пану Сергію, у вас велике серце. Низкий вам уклін, таких як ви десятки!!! Особисто від мене:  я не очікувала, я не вірю в казку, але не повірити в мій час ви є..... Дякую вам велике ви чарівники.!!!!!"
+      },
+      "En": {
+         "Title": "Lena",
+         "Descr": "Good evening! Thank you from the bottom of my heart to the volunteers. Personally, Mr. Sergey, you have a big heart. A low bow to you, dozens of you!!! Personally from me: I didn't expect it, I don't believe in a fairy tale, but you are unbelievable in my time..... Thank you so much, you magicians.!!!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "144.avif",
+         "MiniPic": "zero.png"
+      },
+      "Ua": {
+         "Title": "Марина",
+         "Descr": "Дуже дякую фонду за таку безмежну допомогу! Тепер наші пальчики трохи відпочивають)))"
+      },
+      "En": {
+         "Title": "Marina",
+         "Descr": "Many thanks to the foundation for such a great help! Now our fingers will rest a little)))"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "143.avif",
+         "MiniPic": "zero.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Наталія Філіна",
+         "Descr": "Величезна подяка всім співробітникам фонду за самовіддану працю!!!!! Це реально дуже велика допомога, особливо у важкий час."
+      },
+      "En": {
+         "Title": "Natalya Filina",
+         "Descr": "Huge gratitude to all employees of the fund for selfless work!!!!! This is a really BIG help, especially in a difficult time."
+      }
+   },
+   {
+      "Props": {
+         "Pic": "142.avif",
+         "MiniPic": "ava-142.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Алiна",
+         "Descr": "Щира подяка за таку неймовірну можливість отримати сенсор по програмі 50/50.🙏🙏🙏 Це велика допомога у такі часи. Кожен з нас розуміє що таке діабет і як важко, коли він у твоєї кровиночки. 7 років тому, як ми захворіли, такий чудо девайс був наче якась фантастика! А тепер пальчики уже не такі вимучені. 😃😃😃. Низький уклін всій команді , хто працює не покладаючи рук, хто витрачає стільки сил, часу, фінансів, часто нехтуючи своїми справами і сім'ями, але допомагаючи всім нам ♥️. Ви неймовірні люди!!!! Ні, Ви не люди, Ви - супергерої!!! Дякую!"
+      },
+      "En": {
+         "Title": "Alina",
+         "Descr": "Sincere thanks for such an incredible opportunity to get a sensor under the 50/50 program. 🙏🙏🙏 This is a great help in times like this. Each of us understands what diabetes is and how difficult it is when it is in your bloodstream. 7 years ago, when we got sick, such a wonderful device was like some kind of fantasy! And now the fingers are not so tired. 😃😃😃. A low bow to the entire team, who work tirelessly, who spend so much effort, time, and finances, often neglecting their affairs and families, but helping all of us ♥️. You are incredible people!!!! No, you are not people, you are superheroes!!! Thank you!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "141.avif",
+         "MiniPic": "ava-141.webp",
+         "HRank": 2
+      },
+      "Ua": {
+         "Title": "Алiна",
+         "Descr": "ДУЖЕ ВДЯЧНІ ВСІМ, хто допомагає в такий нелегкий час з  діа!!! Всім здоров'я і миру!!!💛💙"
+      },
+      "En": {
+         "Title": "Alina",
+         "Descr": "VERY GRATEFUL TO ALL WHO HELP IN SUCH A DIFFICULT TIME WITH DIA!!! Health and peace to everyone!!!💛💙"
+      }
+   },
+   {
+      "Props": {
          "Pic": "139.avif",
          "MiniPic": "ava-139.webp",
          "HRank": 1
@@ -138,7 +256,8 @@
    },
    {
       "Props": {
-         "Pic": "134.avif"
+         "Pic": "134.avif",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Оля",
@@ -195,7 +314,8 @@
    
    {
       "Props": {
-         "Pic": "135.avif"
+         "Pic": "135.avif",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Ксюша",
@@ -224,6 +344,7 @@
    {
       "Props": {
          "Pic": "53.avif",
+         "MiniPic": "zero.png",
          "HRank": 1,
          "MainIndex": 1
       },
@@ -254,6 +375,7 @@
    {
       "Props": {
          "Pic": "122.avif",
+         "MiniPic": "zero.png",
          "HRank":2,
          "MainIndex": 3
       },
@@ -298,7 +420,8 @@
    },
    {
       "Props": {
-         "Pic": "card-126.jpg"
+         "Pic": "card-126.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Нiна Коваленко",
@@ -311,7 +434,8 @@
    },
    {
       "Props": {
-         "Pic": "card-127.jpg"
+         "Pic": "card-127.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Анастасiя",
@@ -398,6 +522,7 @@
    {
       "Props": {
          "Pic": "card-86.jpg",
+         "MiniPic": "zero.png",
          "HRank": 1
       },
       "Ua": {
@@ -598,7 +723,8 @@
    },
    {
       "Props": {
-         "Pic": "card-100.jpg"
+         "Pic": "card-100.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Олена Краснян",
@@ -699,7 +825,8 @@
    },
    {
       "Props": {
-         "Pic": "card-107.jpg"
+         "Pic": "card-107.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Таня Максук",
@@ -770,7 +897,8 @@
    },
    {
       "Props": {
-         "Pic": "card-112.jpg"
+         "Pic": "card-112.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Оля",
@@ -783,7 +911,8 @@
    },
    {
       "Props": {
-         "Pic": "card-113.jpg"
+         "Pic": "card-113.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Анна",
@@ -842,6 +971,7 @@
    {
       "Props": {
          "Pic": "card-118.jpg",
+         "MiniPic": "zero.png",
          "HRank": 1
       },
       "Ua": {
@@ -856,6 +986,7 @@
    {
       "Props": {
          "Pic": "card-119.jpg",
+         "MiniPic": "zero.png",
          "HRank": 1
       },
       "Ua": {
@@ -884,7 +1015,8 @@
    },
    {
       "Props": {
-         "Pic": "card-77.jpg"
+         "Pic": "card-77.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Віталій Франкевич",
@@ -911,7 +1043,8 @@
    },
    {
       "Props": {
-         "Pic": "card-68.jpg"
+         "Pic": "card-68.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Оля",
@@ -1028,7 +1161,8 @@
    },
    {
       "Props": {
-         "Pic": "card-71.jpg"
+         "Pic": "card-71.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Ірина Ільчук",
@@ -1041,7 +1175,8 @@
    },
    {
       "Props": {
-         "HRank": 2
+         "HRank": 2,
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Лариса",
@@ -1054,7 +1189,8 @@
    },
    {
       "Props": {
-         "Pic": "card-72.jpg"
+         "Pic": "card-72.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Наталія Дорецька",
@@ -1137,7 +1273,8 @@
    },
    {
       "Props": {
-         "Pic": "card-45.jpg"
+         "Pic": "card-45.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Юлiя",
@@ -1265,7 +1402,8 @@
    },
    {
       "Props": {
-         "Pic": "card-1.jpg"
+         "Pic": "card-1.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Любов Василівна",
@@ -1336,7 +1474,8 @@
    },
    {
       "Props": {
-         "Pic": "card-2.jpg"
+         "Pic": "card-2.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Наталія Дорецька",
@@ -1363,7 +1502,8 @@
    },
    {
       "Props": {
-         "Pic": "card-7.jpg"
+         "Pic": "card-7.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Таті Таран",
@@ -1390,7 +1530,8 @@
    },
    {
       "Props": {
-         "Pic": "card-58.jpg"
+         "Pic": "card-58.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Анатолій",
@@ -1403,7 +1544,8 @@
    },
    {
       "Props": {
-         "Pic": "card-30.jpg"
+         "Pic": "card-30.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Наталія Дорецька",
@@ -1430,7 +1572,8 @@
    },
    {
       "Props": {
-         "Pic": "card-40.jpg"
+         "Pic": "card-40.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Леся Карпук",
@@ -1443,7 +1586,8 @@
    },
    {
       "Props": {
-         "Pic": "card-41.jpg"
+         "Pic": "card-41.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Ганна Бражнiк",
@@ -1540,7 +1684,8 @@
    },
    {
       "Props": {
-         "Pic": "card-38.jpg"
+         "Pic": "card-38.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Наталiя Бугвiна",
@@ -1553,7 +1698,8 @@
    },
    {
       "Props": {
-         "Pic": "card-50.jpg"
+         "Pic": "card-50.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Ольга",
@@ -1651,7 +1797,8 @@
    },
    {
       "Props": {
-         "Pic": "card-37.jpg"
+         "Pic": "card-37.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Віктор Денисюк",
@@ -1735,7 +1882,8 @@
    },
    {
       "Props": {
-         "Pic": "card-36.jpg"
+         "Pic": "card-36.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Діана Марініна",
@@ -1889,7 +2037,8 @@
    },
    {
       "Props": {
-         "Pic": "card-32.jpg"
+         "Pic": "card-32.jpg",
+         "MiniPic": "zero.png"
       },
       "Ua": {
          "Title": "Оксана Гайдай",

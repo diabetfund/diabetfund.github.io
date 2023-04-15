@@ -533,12 +533,13 @@ ul {
   justify-content: center;	
 }
 
+
 .thanks > * {
-  width: 275px;
   /* only for older non-grid browsers: */
   float: left;  
   /* only for older non-grid browsers: */
   margin: 15px;
+  width: 275px;
 }
 
 .htnull { grid-row-end: span 2; }
