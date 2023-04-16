@@ -400,8 +400,7 @@ lib.go((form, butt) => {
 
 lib.go(wraps => {
    
-   
-   for (const wrap of wraps) {
+   for (const wrap of wraps.getElementsByTagName("figure")) {
        const img = wrap.getElementsByTagName("picture")[0]
        const video = img?.dataset?.video
        
@@ -410,8 +409,8 @@ lib.go(wraps => {
        img.style.cursor = "pointer";
        img.addEventListener("click", e => {
            e.preventDefault();
-           const name = wrap.getElementsByClassName("thanks-sign-text")[0]?.["innerText"] ?? wrap.dataset.title,
-           [w1, w2] = (wrap.getElementsByClassName("thank-descr")[0] ?? wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '),
+           const name = wrap.getElementsByTagName("span")[0].innerText.trim() ?? wrap.dataset.title,
+           [w1, w2] = (wrap.getElementsByTagName("blockquote")[0] ?? wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '),
            [, width, height] = video.split('_'),
            
            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
@@ -428,7 +427,7 @@ lib.go(wraps => {
        });
    }
 },
-    document.getElementsByClassName("thank-card-common") as HTMLCollectionOf<HTMLElement>);
+document.getElementsByClassName("thanks")[0]);
 
 lib.go(radios => {
    const lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {};

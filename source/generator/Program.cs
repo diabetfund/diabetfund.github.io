@@ -11,9 +11,6 @@ var (projects, news, partners, thanks, slides, wallets, stones) =
      ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
      ReadJ<Stone, StoneLoc>("auction"));
 
-Console.WriteLine(
-    string.Join(" ", thanks.Where(_ => !_.Props.HasFormats()).Select(_ => _.Props.Pic?.Split(".")?[0])
-    ));
 
 Render("ua");
 Render("en");

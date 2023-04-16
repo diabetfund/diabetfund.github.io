@@ -105,8 +105,7 @@
    {
       "Props": {
          "Pic": "141.avif",
-         "MiniPic": "ava-141.webp",
-         "HRank": 2
+         "MiniPic": "ava-141.webp"
       },
       "Ua": {
          "Title": "Алiна",
@@ -241,7 +240,7 @@
    {
       "Props": {
          "Pic": "123.avif",
-         "MiniPic": "card-123-ava.png",
+         "MiniPic": "ava-123.webp",
          "Video": "/img/fun/123_294_500.mp4",
          "HRank": 1
       },
@@ -390,7 +389,7 @@
    },
    {
       "Props": {
-         "Pic": "card-124.jpg",
+         "Pic": "124.avif",
          "MiniPic": "ava-124.webp",
          "HRank": 2
       },
@@ -405,8 +404,8 @@
    },
    {
       "Props": {
-         "Pic": "card-125.jpg",
-         "MiniPic": "card-125-ava.png",
+         "Pic": "125.avif",
+         "MiniPic": "ava-125.webp",
          "HRank": 2
       },
       "Ua": {
@@ -420,7 +419,7 @@
    },
    {
       "Props": {
-         "Pic": "card-126.jpg",
+         "Pic": "126.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -434,7 +433,7 @@
    },
    {
       "Props": {
-         "Pic": "card-127.jpg",
+         "Pic": "127.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -448,8 +447,8 @@
    },
    {
       "Props": {
-         "Pic": "card-128.jpg",
-         "MiniPic": "card-128-ava.png"
+         "Pic": "128.avif",
+         "MiniPic": "ava-128.webp"
       },
       "Ua": {
          "Title": "Лариса",
@@ -462,7 +461,7 @@
    },
    {
       "Props": {
-         "Pic": "card-65.jpg",
+         "Pic": "65.avif",
          "MiniPic": "card-12-ava.png"
       },
       "HRank": 2,
@@ -477,7 +476,7 @@
    },
    {
       "Props": {
-         "Pic": "card-69.jpg",
+         "Pic": "69.avif",
          "MiniPic": "card-56-ava.png",
          "HRank": 1
       },
@@ -492,7 +491,7 @@
    },
    {
       "Props": {
-         "Pic": "card-84.jpg",
+         "Pic": "84.avif",
          "MiniPic": "card-84-ava.png",
          "HRank": 1
       },
@@ -507,7 +506,7 @@
    },
    {
       "Props": {
-         "Pic": "card-85.jpg",
+         "Pic": "85.avif",
          "MiniPic": "card-85-ava.png"
       },
       "Ua": {
@@ -521,7 +520,7 @@
    },
    {
       "Props": {
-         "Pic": "card-86.jpg",
+         "Pic": "86.avif",
          "MiniPic": "zero.png",
          "HRank": 1
       },
@@ -536,7 +535,7 @@
    },
    {
       "Props": {
-         "Pic": "card-87.jpg",
+         "Pic": "87.avif",
          "MiniPic": "card-87-ava.png"
       },
       "Ua": {
@@ -550,7 +549,7 @@
    },
    {
       "Props": {
-         "Pic": "card-88.jpg",
+         "Pic": "88.avif",
          "MiniPic": "card-88-ava.png"
       },
       "Ua": {
@@ -564,7 +563,7 @@
    },
    {
       "Props": {
-         "Pic": "card-89.jpg",
+         "Pic": "89.avif",
          "MiniPic": "card-89-ava.png",
          "HRank": 1
       },
@@ -579,7 +578,7 @@
    },
    {
       "Props": {
-         "Pic": "card-90.jpg",
+         "Pic": "90.avif",
          "MiniPic": "card-90-ava.png"
       },
       "Ua": {
@@ -593,8 +592,8 @@
    },
    {
       "Props": {
-         "Pic": "card-91.jpg",
-         "MiniPic": "card-91-ava.png",
+         "Pic": "91.avif",
+         "MiniPic": "ava-91.webp",
          "HRank": 1
       },
       "Ua": {
@@ -608,7 +607,7 @@
    },
    {
       "Props": {
-         "Pic": "card-92.jpg",
+         "Pic": "92.avif",
          "MiniPic": "card-92-ava.png"
       },
       "Ua": {
@@ -622,7 +621,7 @@
    },
    {
       "Props": {
-         "Pic": "card-93.jpg",
+         "Pic": "93.avif",
          "MiniPic": "card-93-ava.png",
          "HRank": 1
       },
@@ -637,7 +636,7 @@
    },
    {
       "Props": {
-         "Pic": "card-94.jpg",
+         "Pic": "94.avif",
          "MiniPic": "card-94-ava.png"
       },
       "Ua": {
@@ -651,7 +650,7 @@
    },
    {
       "Props": {
-         "Pic": "card-95.jpg",
+         "Pic": "95.avif",
          "MiniPic": "card-95-ava.png"
       },
       "Ua": {
@@ -665,7 +664,7 @@
    },
    {
       "Props": {
-         "Pic": "card-96.jpg",
+         "Pic": "96.avif",
          "MiniPic": "card-56-ava.png",
          "HRank": 1
       },
@@ -680,7 +679,7 @@
    },
    {
       "Props": {
-         "Pic": "card-97.jpg",
+         "Pic": "97.avif",
          "MiniPic": "card-97-ava.png"
       },
       "Ua": {
@@ -694,8 +693,8 @@
    },
    {
       "Props": {
-         "Pic": "card-98.jpg",
-         "MiniPic": "card-98-ava.png"
+         "Pic": "98.avif",
+         "MiniPic": "ava-98.webp"
       },
       "Ua": {
          "Title": "Олена Дорошенко",
@@ -708,7 +707,7 @@
    },
    {
       "Props": {
-         "Pic": "card-99.jpg",
+         "Pic": "99.avif",
          "MiniPic": "card-73-ava.png",
          "HRank": 1
       },
@@ -723,7 +722,7 @@
    },
    {
       "Props": {
-         "Pic": "card-100.jpg",
+         "Pic": "100.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -737,8 +736,8 @@
    },
    {
       "Props": {
-         "Pic": "card-101.jpg",
-         "MiniPic": "card-101-ava.png",
+         "Pic": "101.avif",
+         "MiniPic": "ava-101.webp",
          "HRank": 1
       },
       "Ua": {
@@ -752,8 +751,8 @@
    },
    {
       "Props": {
-         "Pic": "card-102.jpg",
-         "MiniPic": "card-102-ava.png"
+         "Pic": "102.avif",
+         "MiniPic": "ava-102.webp"
       },
       "Ua": {
          "Title": "Пелагея",
@@ -766,8 +765,8 @@
    },
    {
       "Props": {
-         "Pic": "card-103.jpg",
-         "MiniPic": "card-103-ava.png"
+         "Pic": "103.avif",
+         "MiniPic": "ava-103.webp"
       },
       "Ua": {
          "Title": "Дар'я Масцева",
@@ -780,8 +779,8 @@
    },
    {
       "Props": {
-         "Pic": "card-104.jpg",
-         "MiniPic": "card-104-ava.png",
+         "Pic": "104.avif",
+         "MiniPic": "ava-104.webp",
          "HRank": 2
       },
       "Ua": {
@@ -795,8 +794,8 @@
    },
    {
       "Props": {
-         "Pic": "card-105.jpg",
-         "MiniPic": "card-105-ava.png",
+         "Pic": "105.avif",
+         "MiniPic": "ava-105.webp",
          "HRank": 1
       },
       "Ua": {
@@ -810,8 +809,8 @@
    },
    {
       "Props": {
-         "Pic": "card-106.jpg",
-         "MiniPic": "card-106-ava.png",
+         "Pic": "106.avif",
+         "MiniPic": "ava-106.webp",
          "HRank": 1
       },
       "Ua": {
@@ -825,7 +824,7 @@
    },
    {
       "Props": {
-         "Pic": "card-107.jpg",
+         "Pic": "107.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -839,7 +838,7 @@
    },
    {
       "Props": {
-         "Pic": "card-108.jpg",
+         "Pic": "108.avif",
          "MiniPic": "card-80-ava.png"
       },
       "Ua": {
@@ -853,8 +852,8 @@
    },
    {
       "Props": {
-         "Pic": "card-109.jpg",
-         "MiniPic": "card-109-ava.png",
+         "Pic": "109.avif",
+         "MiniPic": "ava-109.webp",
          "HRank": 1
       },
       "Ua": {
@@ -868,8 +867,8 @@
    },
    {
       "Props": {
-         "Pic": "card-110.jpg",
-         "MiniPic": "card-110-ava.png"
+         "Pic": "110.avif",
+         "MiniPic": "ava-110.webp"
       },
       "Ua": {
          "Title": "Макс",
@@ -882,7 +881,7 @@
    },
    {
       "Props": {
-         "Pic": "card-111.jpg",
+         "Pic": "111.avif",
          "MiniPic": "card-81-ava.png",
          "HRank": 1
       },
@@ -897,7 +896,7 @@
    },
    {
       "Props": {
-         "Pic": "card-112.jpg",
+         "Pic": "112.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -911,7 +910,7 @@
    },
    {
       "Props": {
-         "Pic": "card-113.jpg",
+         "Pic": "113.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -925,8 +924,8 @@
    },
    {
       "Props": {
-         "Pic": "card-114.jpg",
-         "MiniPic": "card-114-ava.png",
+         "Pic": "114.avif",
+         "MiniPic": "ava-114.webp",
          "HRank": 1
       },
       "Ua": {
@@ -940,7 +939,7 @@
    },
    {
       "Props": {
-         "Pic": "card-115.jpg",
+         "Pic": "115.avif",
          "MiniPic": "card-83-ava.png",
          "HRank": 1
       },
@@ -955,8 +954,8 @@
    },
    {
       "Props": {
-         "Pic": "card-117.jpg",
-         "MiniPic": "card-117-ava.png",
+         "Pic": "117.avif",
+         "MiniPic": "ava-117.webp",
          "HRank": 2
       },
       "Ua": {
@@ -970,7 +969,7 @@
    },
    {
       "Props": {
-         "Pic": "card-118.jpg",
+         "Pic": "118.avif",
          "MiniPic": "zero.png",
          "HRank": 1
       },
@@ -985,7 +984,7 @@
    },
    {
       "Props": {
-         "Pic": "card-119.jpg",
+         "Pic": "119.avif",
          "MiniPic": "zero.png",
          "HRank": 1
       },
@@ -1000,7 +999,7 @@
    },
    {
       "Props": {
-         "Pic": "card-120.jpg",
+         "Pic": "120.avif",
          "MiniPic": "card-120-ava.png",
          "HRank": 2
       },
@@ -1015,7 +1014,7 @@
    },
    {
       "Props": {
-         "Pic": "card-77.jpg",
+         "Pic": "77.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1029,7 +1028,7 @@
    },
    {
       "Props": {
-         "Pic": "card-57.jpg",
+         "Pic": "57.avif",
          "MiniPic": "card-57-ava.png"
       },
       "Ua": {
@@ -1043,7 +1042,7 @@
    },
    {
       "Props": {
-         "Pic": "card-68.jpg",
+         "Pic": "68.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1057,7 +1056,7 @@
    },
    {
       "Props": {
-         "Pic": "card-78.jpg",
+         "Pic": "78.avif",
          "MiniPic": "card-13-ava.png"
       },
       "HRank": 0,
@@ -1072,7 +1071,7 @@
    },
    {
       "Props": {
-         "Pic": "card-79.jpg",
+         "Pic": "79.avif",
          "MiniPic": "card-79-ava.png"
       },
       "HRank": 0,
@@ -1087,7 +1086,7 @@
    },
    {
       "Props": {
-         "Pic": "card-80.jpg",
+         "Pic": "80.avif",
          "MiniPic": "card-80-ava.png"
       },
       "HRank": 0,
@@ -1102,7 +1101,7 @@
    },
    {
       "Props": {
-         "Pic": "card-81.jpg",
+         "Pic": "81.avif",
          "MiniPic": "card-81-ava.png"
       },
       "HRank": 0,
@@ -1117,7 +1116,7 @@
    },
    {
       "Props": {
-         "Pic": "card-82.jpg",
+         "Pic": "82.avif",
          "MiniPic": "card-82-ava.png"
       },
       "HRank": 1,
@@ -1132,7 +1131,7 @@
    },
    {
       "Props": {
-         "Pic": "card-83.jpg",
+         "Pic": "83.avif",
          "MiniPic": "card-83-ava.png"
       },
       "HRank": 1,
@@ -1147,7 +1146,7 @@
    },
    {
       "Props": {
-         "Pic": "card-70.jpg",
+         "Pic": "70.avif",
          "MiniPic": "card-70-ava.png"
       },
       "Ua": {
@@ -1161,7 +1160,7 @@
    },
    {
       "Props": {
-         "Pic": "card-71.jpg",
+         "Pic": "71.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1189,7 +1188,7 @@
    },
    {
       "Props": {
-         "Pic": "card-72.jpg",
+         "Pic": "72.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1203,7 +1202,7 @@
    },
    {
       "Props": {
-         "Pic": "card-73.jpg",
+         "Pic": "73.avif",
          "MiniPic": "card-73-ava.png"
       },
       "Ua": {
@@ -1217,7 +1216,7 @@
    },
    {
       "Props": {
-         "Pic": "card-74.jpg",
+         "Pic": "74.avif",
          "MiniPic": "card-74-ava.png"
       },
       "Ua": {
@@ -1231,7 +1230,7 @@
    },
    {
       "Props": {
-         "Pic": "card-75.jpg",
+         "Pic": "75.avif",
          "MiniPic": "card-75-ava.png"
       },
       "Ua": {
@@ -1245,7 +1244,7 @@
    },
    {
       "Props": {
-         "Pic": "card-17.jpg",
+         "Pic": "17.avif",
          "MiniPic": "card-17-ava.png"
       },
       "Ua": {
@@ -1259,7 +1258,7 @@
    },
    {
       "Props": {
-         "Pic": "card-42.jpg",
+         "Pic": "42.avif",
          "MiniPic": "card-42-ava.png"
       },
       "Ua": {
@@ -1273,7 +1272,7 @@
    },
    {
       "Props": {
-         "Pic": "card-45.jpg",
+         "Pic": "45.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1287,7 +1286,7 @@
    },
    {
       "Props": {
-         "Pic": "card-61.jpg",
+         "Pic": "61.avif",
          "MiniPic": "card-61-ava.png"
       },
       "Ua": {
@@ -1301,7 +1300,7 @@
    },
    {
       "Props": {
-         "Pic": "card-76.jpg",
+         "Pic": "76.avif",
          "MiniPic": "card-4-ava.png"
       },
       "Ua": {
@@ -1315,7 +1314,7 @@
    },
    {
       "Props": {
-         "Pic": "card-47.jpg",
+         "Pic": "47.avif",
          "MiniPic": "card-47-ava.png"
       },
       "Ua": {
@@ -1329,7 +1328,7 @@
    },
    {
       "Props": {
-         "Pic": "card-35.jpg",
+         "Pic": "35.avif",
          "MiniPic": "card-35-ava.png"
       },
       "Ua": {
@@ -1343,7 +1342,7 @@
    },
    {
       "Props": {
-         "Pic": "card-3.jpg",
+         "Pic": "3.avif",
          "MiniPic": "card-3-ava.png",
          "HRank": 1
       },
@@ -1358,7 +1357,7 @@
    },
    {
       "Props": {
-         "Pic": "card-55.jpg",
+         "Pic": "55.avif",
          "MiniPic": "card-55-ava.png",
          "HRank": 1
       },
@@ -1373,7 +1372,7 @@
    },
    {
       "Props": {
-         "Pic": "card-56.jpg",
+         "Pic": "56.avif",
          "MiniPic": "card-56-ava.png",
          "HRank": 2
       },
@@ -1388,7 +1387,7 @@
    },
    {
       "Props": {
-         "Pic": "card-52.jpg",
+         "Pic": "52.avif",
          "MiniPic": "card-52-ava.png"
       },
       "Ua": {
@@ -1402,7 +1401,7 @@
    },
    {
       "Props": {
-         "Pic": "card-1.jpg",
+         "Pic": "1.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1416,7 +1415,7 @@
    },
    {
       "Props": {
-         "Pic": "card-28.jpg",
+         "Pic": "28.avif",
          "MiniPic": "card-28-ava.png"
       },
       "Ua": {
@@ -1430,7 +1429,7 @@
    },
    {
       "Props": {
-         "Pic": "card-4.jpg",
+         "Pic": "4.avif",
          "MiniPic": "card-4-ava.png",
          "HRank": 1
       },
@@ -1445,7 +1444,7 @@
    },
    {
       "Props": {
-         "Pic": "card-54.jpg",
+         "Pic": "54.avif",
          "MiniPic": "card-54-ava.png",
          "HRank": 1
       },
@@ -1460,7 +1459,7 @@
    },
    {
       "Props": {
-         "Pic": "card-5.jpg",
+         "Pic": "5.avif",
          "MiniPic": "card-5-ava.png"
       },
       "Ua": {
@@ -1474,7 +1473,7 @@
    },
    {
       "Props": {
-         "Pic": "card-2.jpg",
+         "Pic": "2.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1488,7 +1487,7 @@
    },
    {
       "Props": {
-         "Pic": "card-44.jpg",
+         "Pic": "44.avif",
          "MiniPic": "card-44-ava.png"
       },
       "Ua": {
@@ -1502,7 +1501,7 @@
    },
    {
       "Props": {
-         "Pic": "card-7.jpg",
+         "Pic": "7.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1516,7 +1515,7 @@
    },
    {
       "Props": {
-         "Pic": "card-59.jpg",
+         "Pic": "59.avif",
          "MiniPic": "card-22-ava.png"
       },
       "Ua": {
@@ -1530,7 +1529,7 @@
    },
    {
       "Props": {
-         "Pic": "card-58.jpg",
+         "Pic": "58.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1544,7 +1543,7 @@
    },
    {
       "Props": {
-         "Pic": "card-30.jpg",
+         "Pic": "30.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1558,7 +1557,7 @@
    },
    {
       "Props": {
-         "Pic": "card-39.jpg",
+         "Pic": "39.avif",
          "MiniPic": "card-39-ava.png"
       },
       "Ua": {
@@ -1572,7 +1571,7 @@
    },
    {
       "Props": {
-         "Pic": "card-40.jpg",
+         "Pic": "40.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1586,7 +1585,7 @@
    },
    {
       "Props": {
-         "Pic": "card-41.jpg",
+         "Pic": "41.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1600,7 +1599,7 @@
    },
    {
       "Props": {
-         "Pic": "card-43.jpg",
+         "Pic": "43.avif",
          "MiniPic": "card-43-ava.png"
       },
       "Ua": {
@@ -1614,7 +1613,7 @@
    },
    {
       "Props": {
-         "Pic": "card-6.jpg",
+         "Pic": "6.avif",
          "MiniPic": "card-6-ava.png"
       },
       "Ua": {
@@ -1628,7 +1627,7 @@
    },
    {
       "Props": {
-         "Pic": "card-9.jpg",
+         "Pic": "9.avif",
          "MiniPic": "card-9-ava.png"
       },
       "Ua": {
@@ -1642,7 +1641,7 @@
    },
    {
       "Props": {
-         "Pic": "card-46.jpg",
+         "Pic": "46.avif",
          "MiniPic": "card-46-ava.png"
       },
       "Ua": {
@@ -1656,7 +1655,7 @@
    },
    {
       "Props": {
-         "Pic": "card-48.jpg",
+         "Pic": "48.avif",
          "MiniPic": "card-48-ava.png"
       },
       "Ua": {
@@ -1670,7 +1669,7 @@
    },
    {
       "Props": {
-         "Pic": "card-49.jpg",
+         "Pic": "49.avif",
          "MiniPic": "card-49-ava.png"
       },
       "Ua": {
@@ -1684,7 +1683,7 @@
    },
    {
       "Props": {
-         "Pic": "card-38.jpg",
+         "Pic": "38.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1698,7 +1697,7 @@
    },
    {
       "Props": {
-         "Pic": "card-50.jpg",
+         "Pic": "50.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1712,7 +1711,7 @@
    },
    {
       "Props": {
-         "Pic": "card-24.jpg",
+         "Pic": "24.avif",
          "MiniPic": "card-24-ava.png"
       },
       "Ua": {
@@ -1726,7 +1725,7 @@
    },
    {
       "Props": {
-         "Pic": "card-51.jpg",
+         "Pic": "51.avif",
          "MiniPic": "card-51-ava.png"
       },
       "Ua": {
@@ -1740,7 +1739,7 @@
    },
    {
       "Props": {
-         "Pic": "card-10.jpg",
+         "Pic": "10.avif",
          "MiniPic": "card-10-ava.png"
       },
       "Ua": {
@@ -1754,7 +1753,7 @@
    },
    {
       "Props": {
-         "Pic": "card-11.jpg",
+         "Pic": "11.avif",
          "MiniPic": "card-11-ava.png"
       },
       "Ua": {
@@ -1768,7 +1767,7 @@
    },
    {
       "Props": {
-         "Pic": "card-12.jpg",
+         "Pic": "12.avif",
          "MiniPic": "card-12-ava.png"
       },
       "Ua": {
@@ -1782,7 +1781,7 @@
    },
    {
       "Props": {
-         "Pic": "card-13.jpg",
+         "Pic": "13.avif",
          "MiniPic": "card-13-ava.png",
          "HRank": 1
       },
@@ -1797,7 +1796,7 @@
    },
    {
       "Props": {
-         "Pic": "card-37.jpg",
+         "Pic": "37.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1811,7 +1810,7 @@
    },
    {
       "Props": {
-         "Pic": "card-14.jpg",
+         "Pic": "14.avif",
          "MiniPic": "card-14-ava.png"
       },
       "Ua": {
@@ -1825,7 +1824,7 @@
    },
    {
       "Props": {
-         "Pic": "card-15.jpg",
+         "Pic": "15.avif",
          "MiniPic": "card-15-ava.png"
       },
       "Ua": {
@@ -1839,7 +1838,7 @@
    },
    {
       "Props": {
-         "Pic": "card-16.jpg",
+         "Pic": "16.avif",
          "MiniPic": "card-16-ava.png",
          "HRank": 1
       },
@@ -1854,7 +1853,7 @@
    },
    {
       "Props": {
-         "Pic": "card-19.jpg",
+         "Pic": "19.avif",
          "MiniPic": "card-19-ava.png"
       },
       "Ua": {
@@ -1868,7 +1867,7 @@
    },
    {
       "Props": {
-         "Pic": "card-20.jpg",
+         "Pic": "20.avif",
          "MiniPic": "card-20-ava.png"
       },
       "Ua": {
@@ -1882,7 +1881,7 @@
    },
    {
       "Props": {
-         "Pic": "card-36.jpg",
+         "Pic": "36.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -1896,7 +1895,7 @@
    },
    {
       "Props": {
-         "Pic": "card-21.jpg",
+         "Pic": "21.avif",
          "MiniPic": "card-21-ava.png",
          "HRank": 1
       },
@@ -1911,7 +1910,7 @@
    },
    {
       "Props": {
-         "Pic": "card-22.jpg",
+         "Pic": "22.avif",
          "MiniPic": "card-22-ava.png"
       },
       "Ua": {
@@ -1925,7 +1924,7 @@
    },
    {
       "Props": {
-         "Pic": "card-23.jpg",
+         "Pic": "23.avif",
          "MiniPic": "card-23-ava.png"
       },
       "Ua": {
@@ -1939,7 +1938,7 @@
    },
    {
       "Props": {
-         "Pic": "card-25.jpg",
+         "Pic": "25.avif",
          "MiniPic": "card-25-ava.png"
       },
       "Ua": {
@@ -1953,8 +1952,8 @@
    },
    {
       "Props": {
-         "Pic": "card-26.jpg",
-         "MiniPic": "card-26-ava.png"
+         "Pic": "26.avif",
+         "MiniPic": "ava-26.webp"
       },
       "Ua": {
          "Title": "Ольга",
@@ -1967,7 +1966,7 @@
    },
    {
       "Props": {
-         "Pic": "card-60.jpg",
+         "Pic": "60.avif",
          "MiniPic": "card-35-ava.png"
       },
       "Ua": {
@@ -1981,7 +1980,7 @@
    },
    {
       "Props": {
-         "Pic": "card-27.jpg",
+         "Pic": "27.avif",
          "MiniPic": "card-27-ava.png"
       },
       "Ua": {
@@ -1995,7 +1994,7 @@
    },
    {
       "Props": {
-         "Pic": "card-18.jpg",
+         "Pic": "18.avif",
          "MiniPic": "card-18-ava.png"
       },
       "Ua": {
@@ -2009,7 +2008,7 @@
    },
    {
       "Props": {
-         "Pic": "card-29.jpg",
+         "Pic": "29.avif",
          "MiniPic": "card-29-ava.png"
       },
       "Ua": {
@@ -2023,7 +2022,7 @@
    },
    {
       "Props": {
-         "Pic": "card-31.jpg",
+         "Pic": "31.avif",
          "MiniPic": "card-31-ava.png"
       },
       "Ua": {
@@ -2037,7 +2036,7 @@
    },
    {
       "Props": {
-         "Pic": "card-32.jpg",
+         "Pic": "32.avif",
          "MiniPic": "zero.png"
       },
       "Ua": {
@@ -2051,7 +2050,7 @@
    },
    {
       "Props": {
-         "Pic": "card-33.jpg",
+         "Pic": "33.avif",
          "MiniPic": "card-33-ava.png"
       },
       "Ua": {
@@ -2065,7 +2064,7 @@
    },
    {
       "Props": {
-         "Pic": "card-34.jpg",
+         "Pic": "34.avif",
          "MiniPic": "card-34-ava.png",
          "HRank": 1
       },
@@ -2080,7 +2079,7 @@
    },
    {
       "Props": {
-         "Pic": "card-62.jpg",
+         "Pic": "62.avif",
          "MiniPic": "card-62-ava.png"
       },
       "Ua": {
@@ -2094,7 +2093,7 @@
    },
    {
       "Props": {
-         "Pic": "card-63.jpg",
+         "Pic": "63.avif",
          "MiniPic": "card-63-ava.png"
       },
       "Ua": {
@@ -2108,7 +2107,7 @@
    },
    {
       "Props": {
-         "Pic": "card-66.jpg",
+         "Pic": "66.avif",
          "MiniPic": "card-66-ava.png"
       },
       "Ua": {
@@ -2122,7 +2121,7 @@
    },
    {
       "Props": {
-         "Pic": "card-67.jpg",
+         "Pic": "67.avif",
          "MiniPic": "card-15-ava.png",
          "HRank": 1
       },

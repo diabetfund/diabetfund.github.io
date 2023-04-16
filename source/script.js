@@ -340,16 +340,16 @@ lib.go((form, butt) => {
 }, document.getElementsByClassName("user-form")[0], document.getElementById("email-submit"));
 lib.go(wraps => {
     var _a;
-    for (const wrap of wraps) {
+    for (const wrap of wraps.getElementsByTagName("figure")) {
         const img = wrap.getElementsByTagName("picture")[0];
         const video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
         img.addEventListener("click", e => {
-            var _a, _b, _c;
+            var _a, _b;
             e.preventDefault();
-            const name = (_b = (_a = wrap.getElementsByClassName("thanks-sign-text")[0]) === null || _a === void 0 ? void 0 : _a["innerText"]) !== null && _b !== void 0 ? _b : wrap.dataset.title, [w1, w2] = ((_c = wrap.getElementsByClassName("thank-descr")[0]) !== null && _c !== void 0 ? _c : wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            const name = (_a = wrap.getElementsByTagName("span")[0].innerText.trim()) !== null && _a !== void 0 ? _a : wrap.dataset.title, [w1, w2] = ((_b = wrap.getElementsByTagName("blockquote")[0]) !== null && _b !== void 0 ? _b : wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
@@ -361,7 +361,7 @@ lib.go(wraps => {
            </body></html>`);
         });
     }
-}, document.getElementsByClassName("thank-card-common"));
+}, document.getElementsByClassName("thanks")[0]);
 lib.go(radios => {
     const lookup = {};
     for (const item of radios) {

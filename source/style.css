@@ -533,13 +533,50 @@ ul {
   justify-content: center;	
 }
 
-
 .thanks > * {
   /* only for older non-grid browsers: */
   float: left;  
   /* only for older non-grid browsers: */
   margin: 15px;
   width: 275px;
+}
+
+.thanks figure {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.thanks picture img {
+  border-radius: 3px !important;
+  width: 275px;
+}
+
+.thanks blockquote {
+  display: block;
+  padding: 0px 4px;
+  color: #88928D;
+}
+
+.thanks figcaption{
+  color: #4b4b4b;
+    position: absolute;
+    transform: translate(-2%,-50%);
+}
+.thanks figcaption >* {
+  display: inline;
+  float: left;
+}
+.thanks figcaption img {
+  filter: drop-shadow(2px 2px 0px #f2f3f3);
+  max-width: 43px;
+  max-height: 43px;
+}
+.thanks figcaption span {
+  background: #f2f3f3;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-left: -1px;
+  border-bottom-right-radius: 5px;
 }
 
 .htnull { grid-row-end: span 2; }
