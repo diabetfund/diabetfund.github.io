@@ -480,7 +480,7 @@
       "Props": {
          "Pic": "122.avif",
          "MiniPic": "zero.png",
-         "HRank":2,
+         "HRank": 1,
          "MainIndex": 3
       },
       "Ua": {
@@ -511,7 +511,7 @@
       "Props": {
          "Pic": "125.avif",
          "MiniPic": "ava-125.webp",
-         "HRank": 2
+         "HRank": 1
       },
       "Ua": {
          "Title": "Галина Салтыкова",
@@ -582,8 +582,7 @@
    {
       "Props": {
          "Pic": "69.avif",
-         "MiniPic": "card-56-ava.png",
-         "HRank": 1
+         "MiniPic": "card-56-ava.png"
       },
       "Ua": {
          "Title": "Людмила",
@@ -597,8 +596,7 @@
    {
       "Props": {
          "Pic": "84.avif",
-         "MiniPic": "card-84-ava.png",
-         "HRank": 1
+         "MiniPic": "card-84-ava.png"
       },
       "Ua": {
          "Title": "Наталiя",
@@ -842,8 +840,7 @@
    {
       "Props": {
          "Pic": "101.avif",
-         "MiniPic": "ava-101.webp",
-         "HRank": 1
+         "MiniPic": "ava-101.webp"
       },
       "Ua": {
          "Title": "Тетяна Орда",
@@ -987,8 +984,7 @@
    {
       "Props": {
          "Pic": "111.avif",
-         "MiniPic": "card-81-ava.png",
-         "HRank": 1
+         "MiniPic": "card-81-ava.png"
       },
       "Ua": {
          "Title": "Прiходько Юлiя",
