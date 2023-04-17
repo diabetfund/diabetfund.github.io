@@ -72,9 +72,7 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    Out("thanks", "/thanks", string.Join("\n",
-        from chunk in thanks.GroupBy(_ => _.Props.HasFormats())
-        select Join(chunk.Key ? "thankCardNew" : "thankCard", chunk)));
+    Out("thanks", "/thanks", Join("thankCard", thanks));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -135,7 +133,6 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pd
 
 record Thanks(int? HRank = null, string? Video = null, int? MainIndex = null) : Props 
 {
-    public bool HasFormats() => Pic?.EndsWith("avif") ?? false;
     public string? Fallback => Pic?.Replace("avif", "jpg");
 }
 

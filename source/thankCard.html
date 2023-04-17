@@ -1,10 +1,12 @@
-<div class="ht@HRank thank-card-wrap desc-only_@DesktopOnly">
-   <table class="tanks_sign">
-      <tr>
-         <td><img src="/img/viber/@MiniPic" class="thank-ava visible_@MiniPic"></td>
-         <td><span class="thanks-sign-text">&nbsp;@Title&nbsp;</span></td>
-      </tr>
-   </table>
-   <img src="/img/viber/@Pic" style="width:275px" class="visible_@Pic" data-video="@Video" />
-   <div class="thank-descr">@Descr</div>
-</div>
+<figure class="ht@HRank">
+   <figcaption>
+      <img src="/img/viber/@MiniPic">
+      <span>&nbsp;@Title&nbsp;</span>
+   </figcaption>
+   <picture data-video="@Video">
+      <source srcset="/img/viber/@Pic" type="image/avif">
+      <source srcset="/img/viber/@Fallback" type="image/jpeg">
+      <img src="/img/viber/@Fallback" />
+   </picture>
+   <blockquote>@Descr</blockquote>
+</figure>

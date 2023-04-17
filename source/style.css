@@ -577,6 +577,7 @@ ul {
   margin-top: 10px;
   margin-left: -1px;
   border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .htnull { grid-row-end: span 2; }

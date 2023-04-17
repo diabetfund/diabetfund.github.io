@@ -16,23 +16,23 @@
    },
    {
       "Props": {
-         "Pic": "147.avif",
-         "MiniPic": "ava-147.webp"
+         "Pic": "150.avif",
+         "MiniPic": "zero.png"
       },
       "Ua": {
-         "Title": "Ганна",
-         "Descr": "В цей святковий день ми отримали допомогу від фонду!!! Дякуємо Вам безмежно!!!"
+         "Title": "Мiла",
+         "Descr": "Щиро дякуємо добрим людям з фонду за найцінніший подарунок до свята. Особлива подяка пану Сергію! Даруй Боже всім міцного здоров'я!"
       },
       "En": {
-         "Title": "Hanna",
-         "Descr": "On this holiday, we received help from the fund!!! Thank you very much!!!"
+         "Title": "Mila",
+         "Descr": "We sincerely thank the kind people from the foundation for the most valuable gift for the holiday. Special thanks to Mr. Serhiy! God bless everyone with good health!"
       }
    },
    {
       "Props": {
          "Pic": "146.avif",
          "MiniPic": "ava-146.webp",
-         "HRank": 3
+         "HRank": 2
       },
       "Ua": {
          "Title": "Надія Шнейдер",
@@ -56,6 +56,111 @@
       "En": {
          "Title": "Lena",
          "Descr": "Good evening! Thank you from the bottom of my heart to the volunteers. Personally, Mr. Sergey, you have a big heart. A low bow to you, dozens of you!!! Personally from me: I didn't expect it, I don't believe in a fairy tale, but you are unbelievable in my time..... Thank you so much, you magicians.!!!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "149.avif",
+         "MiniPic": "ava-123.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Iнна🌸",
+         "Descr": "Зі світлим святом Великодня! Мирного неба🌈 Дякую, хлопці за повний контроль над цукром 💪😎🥰 сьогодні завдяки сенсору дитина спокійно з'їла пасочку і ми всі проконтролювали і вчасно підкололи. Радість у дитини та спокійні батьки ❤️🌈🌈🌈"
+      },
+      "En": {
+         "Title": "Inna🌸",
+         "Descr": "Happy Easter! Peaceful sky🌈Thank you, guys, for complete control over sugar💪😎🥰 today, thanks to the sensor, the child calmly ate the pasochka and we controlled everything and pinned it up in time. Joy in a child and calm parents ❤️🌈🌈🌈"
+      }
+   },
+
+   {
+      "Props": {
+         "Pic": "147.avif",
+         "MiniPic": "ava-147.webp"
+      },
+      "Ua": {
+         "Title": "Ганна",
+         "Descr": "В цей святковий день ми отримали допомогу від фонду!!! Дякуємо Вам безмежно!!!"
+      },
+      "En": {
+         "Title": "Hanna",
+         "Descr": "On this holiday, we received help from the fund!!! Thank you very much!!!"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "151.avif",
+         "MiniPic": "ava-151.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Свiтлана",
+         "Descr": "Хочу подякувати всій команді Фонду за можливість взяти участь у програмі 50/50. Ви величезні молодці, що незважаючи на всяких не хороших людей, не відпускаєте руки і допомагаєте тим, хто потребує. Нехай Ангели вас оберігають! Величезне спасибі! ❤️💛💙"
+      },
+      "En": {
+         "Title": "Svitlana",
+         "Descr": "I want to thank the entire team of the Foundation for the opportunity to take part in the 50/50 program. You are great fellows, that despite all sorts of not good people, you do not let go of your hands and help those who need it. May the Angels protect you! Thanks a lot! ❤️💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "152.avif",
+         "MiniPic": "ava-152.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Тетяна Прядка",
+         "Descr": "Отримали посилочку. ВЕЛИЧЕЗНЕ ДЯКУЮ  фонду і особисто  Сергію та  його команді за можливість отримати сенсор за програмою 50×50. Тепер ми можемо моніторити і контролювати цукор.  Миру, успіху та благополуччя всім вам. Зі Великоднем. Хай БЕРЕЖЕ ВАС АНГЕЛ 🙏🙏🙏, Ви непевершені. 💙"
+      },
+      "En": {
+         "Title": "Tetiana Prjadka",
+         "Descr": "Received the parcel. A HUGE THANK YOU to the foundation and personally to Serhiy and his team for the opportunity to receive a sensor under the 50×50 program. Now we can monitor and control sugar. Peace, success and prosperity to you all. Happy Easter. May the ANGEL PROTECT YOU 🙏🙏🙏, You are imperfect. 💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "153.avif",
+         "MiniPic": "zero.png",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Iрина",
+         "Descr": "Доброго вечора! Отримали сьогодні посилочку!Неймовірно вдячні за допомогу! Нехай Бог благословить всіх вас за вашу турботу про солоденьких та доброту! Успіху у всіх ваших справах та задумах! І дякуємо тим хто вам підтримує! Ви неймовірні! 💛💙"
+      },
+      "En": {
+         "Title": "Iryna",
+         "Descr": "Good evening! Received the package today! Incredibly grateful for your help! God bless you all for your sweetie concern and kindness! Good luck in all your endeavors and plans! And thank you to those who support you! You are incredible! 💛💙"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "154.avif",
+         "MiniPic": "ava-154.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Волошина Тетяна",
+         "Descr": "Отримали посилочку!!!!🤗Дуже дякуємо фонду,всім працівникам за можливість контролювати діабет за допомогою моніторингу Лібра1. Поважаємо і цінуємо Вашу справу!!!!❤️❤️❤️"
+      },
+      "En": {
+         "Title": "Voloshina Tetiana",
+         "Descr": "Received the parcel!!!!🤗Thank you very much to the foundation, all employees for the opportunity to control diabetes with the help of Libra1 monitoring. We respect and appreciate your business!!!!❤️❤️❤️"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "155.avif",
+         "MiniPic": "ava-155.webp",
+         "HRank": 1
+      },
+      "Ua": {
+         "Title": "Света",
+         "Descr": "Щиро дякуємо фонду, ось і ми отримали сенсор за програмою50/50, великий уклін Вам і всій вашій команді, натхнення та бажання і надалі допомогати хворим на діабет. З Великим святом Вас, здоровья, миру і любові😘"
+      },
+      "En": {
+         "Title": "Sveta",
+         "Descr": "We sincerely thank the foundation, and now we have received a sensor under the 50/50 program, a big bow to you and your entire team, inspiration and desire to continue helping people with diabetes. Happy Holidays to you, health, peace and love😘"
       }
    },
    {
@@ -245,11 +350,11 @@
          "HRank": 1
       },
       "Ua": {
-         "Title": "Iнна",
+         "Title": "Iнна🌸",
          "Descr": "Доброго дня)))) велика подяка за таку можливість завжди контролювати сахара🙏🙏🙏🙏🙏 Ви робите гарну справу 🌈🌈🌈🌈 😍😍😍😍😍"
       },
       "En": {
-         "Title": "Inna",
+         "Title": "Inna🌸",
          "Descr": "Good day)))) many thanks for this opportunity to always control the sugar 🙏🙏🙏🙏🙏 You are doing a good job 🌈🌈🌈🌈 😍😍😍😍😍"
       }
    },
