@@ -128,7 +128,8 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pd
 
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
 
-    public static string UrlSegment(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
+    public static string UrlSegment(string id) =>
+        id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
 record Thanks(int? HRank = null, string? Video = null, int? MainIndex = null) : Props 

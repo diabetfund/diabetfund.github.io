@@ -380,9 +380,9 @@ lib.go((form, butt) => {
        
        var [isSucc] = await lib.fetchMiniback("feedback", {
            method: "POST", 
-               body: JSON.stringify({ Name, Mail, Message }), 
-               mode: "cors",
-               headers: { Accept: 'application/json', "Content-Type": 'application/json' }
+           body: JSON.stringify({ Name, Mail, Message }), 
+           mode: "cors",
+           headers: { Accept: 'application/json', "Content-Type": 'application/json' }
        },
        lib.freezeeInputs(butt, form))
        
@@ -409,8 +409,9 @@ lib.go(wraps => {
        img.style.cursor = "pointer";
        img.addEventListener("click", e => {
            e.preventDefault();
-           const name = wrap.getElementsByTagName("span")[0].innerText.trim() ?? wrap.dataset.title,
-           [w1, w2] = (wrap.getElementsByTagName("blockquote")[0] ?? wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '),
+           const tspan = wrap.getElementsByTagName("span")[0],
+           name = tspan ? tspan.innerText.trim() : wrap.dataset.title,
+           [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
            [, width, height] = video.split('_'),
            
            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
@@ -419,7 +420,7 @@ lib.go(wraps => {
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
                <div data-new-window>
-                   <video controls autoplay style="width: 100%; height: auto;">
+                   <video controls autoplay muted playsinline style="width: 100%; height: auto;">
                        <source src="//${location.host}${video}" type="video/mp4" />
                    </video>
                </div>
@@ -473,7 +474,8 @@ lib.go(sendButt => {
    sendButt.addEventListener("click", async e => {
        e.preventDefault();
        
-       const [form1, form2] = "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
+       const [form1, form2] = 
+             "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
                .map(key => document.querySelector(`[data-radioval="${key}"]`) as HTMLFormElement)
                .filter(_ => _.style.display != "none"),
 

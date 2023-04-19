@@ -347,14 +347,13 @@ lib.go(wraps => {
             continue;
         img.style.cursor = "pointer";
         img.addEventListener("click", e => {
-            var _a, _b;
             e.preventDefault();
-            const name = (_a = wrap.getElementsByTagName("span")[0].innerText.trim()) !== null && _a !== void 0 ? _a : wrap.dataset.title, [w1, w2] = ((_b = wrap.getElementsByTagName("blockquote")[0]) !== null && _b !== void 0 ? _b : wrap.getElementsByClassName("thank-descr-main")[0])["innerText"].split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            const tspan = wrap.getElementsByTagName("span")[0], name = tspan ? tspan.innerText.trim() : wrap.dataset.title, [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
                <div data-new-window>
-                   <video controls autoplay style="width: 100%; height: auto;">
+                   <video controls autoplay muted playsinline style="width: 100%; height: auto;">
                        <source src="//${location.host}${video}" type="video/mp4" />
                    </video>
                </div>
