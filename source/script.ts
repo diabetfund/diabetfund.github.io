@@ -353,7 +353,7 @@ lib.go(() => {
    }
    
    function calcAges(tdate: number){
-       const now = new Date(), ageDifMs = now.getDate() - tdate, ageDate = new Date(ageDifMs);
+       const now = new Date(), ageDifMs = now.valueOf() - tdate, ageDate = new Date(ageDifMs);
        return Math.abs(ageDate.getUTCFullYear() - 1970);
    }
 
@@ -362,7 +362,7 @@ lib.go(() => {
    if (curYear)
       curYear.innerHTML = (new Date()).getFullYear().toString();
    if (piskunovDisease)
-       piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").getDate()).toString();
+       piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").valueOf()).toString();
 });
 
 lib.go((form, butt) => {

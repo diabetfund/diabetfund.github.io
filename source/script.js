@@ -305,14 +305,14 @@ lib.go(() => {
             span.innerHTML = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
     function calcAges(tdate) {
-        const now = new Date(), ageDifMs = now.getDate() - tdate, ageDate = new Date(ageDifMs);
+        const now = new Date(), ageDifMs = now.valueOf() - tdate, ageDate = new Date(ageDifMs);
         return Math.abs(ageDate.getUTCFullYear() - 1970);
     }
     const piskunovDisease = document.getElementById('piskunov-disease'), curYear = document.getElementById('cur-year');
     if (curYear)
         curYear.innerHTML = (new Date()).getFullYear().toString();
     if (piskunovDisease)
-        piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").getDate()).toString();
+        piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").valueOf()).toString();
 });
 lib.go((form, butt) => {
     if (!form || !butt)
