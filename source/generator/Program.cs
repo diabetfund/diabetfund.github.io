@@ -22,7 +22,9 @@ void Render(string lang)
         var full = $"{rootPath}source/{path}.html";
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
-    View master = new(Read("master"));
+    View master = new(Read("master")),
+        projectCard = new(Read("projectCard")),
+        projectPromo = new(Read("projectPromo"));
 
     void Out(string content, string subPath, object? arg = null)
     {
@@ -42,13 +44,11 @@ void Render(string lang)
         return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En : it.Ua)));
     }
 
-    var topProjects =
-        projects.Take(6).Select((p, i) => 
-          {
-              var loc = lang is "en" ? p.En : p.Ua;
-              View view = new(Read(loc.Promo is null ? "projectCard" : "projectPromo"));
-              return view.Run(p.Props with { DesktopOnly = i > 3 }, loc);
-          });
+    string ProjectCard(Item<Project, ProjLoc> p)
+    {
+        var loc = lang is "en" ? p.En : p.Ua;
+        return (loc.Promo is null ? projectCard : projectPromo).Run(p.Props, loc);
+    }
 
     var walletsTable = new View(Read("wallets")).Run(new
     {
@@ -59,9 +59,12 @@ void Render(string lang)
     {
         founders = new View(Read("founders")).Run(Join("partner", partners)),
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
-        topProjects = string.Join("\n", topProjects),
-        slides = Join("slide", slides),
 
+        topProjects = string.Join("\n", 
+            projects.Take(6).Select((p, i) =>
+                ProjectCard(p with { Props = p.Props with { DesktopOnly = i > 3 } }))),
+        
+        slides = Join("slide", slides),
         topThanks = Join("thankCardMain", 
             from thank in thanks
             let index = thank.Props.MainIndex
@@ -75,7 +78,7 @@ void Render(string lang)
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
-    Out("projects", "/fundraising", Join("projectCard", projects));
+    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
     Out("news", "/news", Join("newsCard", news));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
