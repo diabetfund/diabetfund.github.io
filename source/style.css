@@ -175,6 +175,10 @@
   margin-left:5px;
 }
 
+.tabs-content hr{
+  width: 0px !important;
+}
+
 @media (max-width: 575px){
     .support-btn{
         font-size: 15px;
