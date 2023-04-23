@@ -49,10 +49,12 @@
          "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
       },
       "En": {
+         "Promo": "/img/fun/promo1_ua.mp4",
          "Title": "Helping with glucose sensors",
          "Descr": "According to official data, 2.5 million diabetics are registered in Ukraine. 1 million people are insulin dependent, 100,000 of whom are children. the number of people with this disease has increased significantly since the beginning of the war. Our ultimate goal is to purchase innovative developments for diabetics."
       },
       "Ua": {
+         "Promo": "/img/fun/promo1_ua.mp4",
          "Title": "Допомога сенсорами вимірювання глюкози",
          "Descr": "За офіційними даними в Україні зареєстровано 2,5 млн діабетиків. 1 млн людей є інсулінозалежними, 100 тисяч з яких — діти. З початком війни кількість осіб з цим захворюванням значно збільшилася. Наша надважлива мета полягає в закупівлі інноваційних розробок для діабетиків."
       }

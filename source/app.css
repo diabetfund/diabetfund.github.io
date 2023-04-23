@@ -1978,8 +1978,8 @@ svg {
 .to-contribute-btn {
     justify-self: start;
     column-gap: 10px;
-    background: #01b53e;
-    border-radius: 2px;
+    background: #0c9a56;
+    border-radius: 6px;
     color: #fff;
     padding: 14px 24px
 }

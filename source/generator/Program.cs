@@ -7,7 +7,7 @@ Item<P, L>[] ReadJ<P, L>(string table) =>
     JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project, PayLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
+    (ReadJ<Project, ProjLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
      ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
      ReadJ<Stone, StoneLoc>("auction"));
 
@@ -42,6 +42,14 @@ void Render(string lang)
         return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En : it.Ua)));
     }
 
+    var topProjects =
+        projects.Take(6).Select((p, i) => 
+          {
+              var loc = lang is "en" ? p.En : p.Ua;
+              View view = new(Read(loc.Promo is null ? "projectCard" : "projectPromo"));
+              return view.Run(p.Props with { DesktopOnly = i > 3 }, loc);
+          });
+
     var walletsTable = new View(Read("wallets")).Run(new
     {
         bank = Join("wallet-line", wallets.Where(_ => !_.Props.IsCrypto)),
@@ -51,7 +59,7 @@ void Render(string lang)
     {
         founders = new View(Read("founders")).Run(Join("partner", partners)),
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
-        topProjects = Join("projectCard", projects.Take(6).Select((p, i) => p with { Props = p.Props with { DesktopOnly = i > 3 } })),
+        topProjects = string.Join("\n", topProjects),
         slides = Join("slide", slides),
 
         topThanks = Join("thankCardMain", 
@@ -115,7 +123,17 @@ record Locale
 
 record News(string Date) : Props;
 
-record PayLoc(string? Data, string? Signature): Locale;
+record PayLoc: Locale
+{
+    public string? Data { get; set; } 
+    public string? Signature { get; set; } 
+}
+
+
+record ProjLoc(string? Promo = null) : PayLoc
+{
+    public bool HasPromo => Promo != null;
+}
 
 record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
 {
