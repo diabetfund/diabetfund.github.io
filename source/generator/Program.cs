@@ -98,8 +98,9 @@ void Render(string lang)
     foreach (var (props, content, view) in ItemPages(projects, "projectPage", "projects/"))
             Out(view, "/fundraising/" + props.Id, new 
             {
-                content,
-                report = props.ReportId is {} rep ? Read("projects/" + rep) : null
+                content, 
+                walletsTable,
+                report = props.ReportId is {} rep ? Read("projects/" + rep) : null                
             });
 
     var otherNews = Join("newsCard", news.Take(2));
