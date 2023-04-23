@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-var version = 45;
+var version = 47;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 Item<P, L>[] ReadJ<P, L>(string table) =>
@@ -85,10 +85,9 @@ void Render(string lang)
     }
 
     foreach (var (props, content, view) in ItemPages(projects, "projectPage", "projects/"))
-        if (content.Split("<hr/>") is [var contentF, var contentS])
             Out(view, "/fundraising/" + props.Id, new 
             {
-                contentF, contentS, 
+                content,
                 report = props.ReportId is {} rep ? Read("projects/" + rep) : null
             });
 

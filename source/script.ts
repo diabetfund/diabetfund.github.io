@@ -112,9 +112,11 @@ const lib = (() => {
     },
     
     go<T extends any[]>(f: (...args: T) => void, ...args: T){
+        let res
         if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
-        try { f(...args) }
+        try { res = f(...args) }
         catch(e){ console.log(e); }
+        return res
     }
    }
 })();
@@ -322,10 +324,16 @@ lib.go((triggers, contents) => {
    document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<any>,
    document.getElementsByClassName('tabs-content__item'));
 
-lib.go(slider => {
-   const figures = slider.getElementsByTagName("figure");
+const __slider = lib.go(slider => {
+   let figures = slider.getElementsByTagName("figure"),
+   index = -1,
+   interval = null;
 
-   let index = -1;
+   slider.addEventListener("click", e => {
+        e.preventDefault();
+        location.href = figures[index].dataset.url
+    })
+
    function advance() {
        index++;
        if (index == figures.length)
@@ -334,14 +342,13 @@ lib.go(slider => {
        for (let i = 0; i < figures.length; i++) 
            figures[i].classList[i == index ? 'remove' : 'add']('hidd');
    }
-   slider.addEventListener("click", e => {
-       e.preventDefault();
-       let {url} = figures[index].dataset
-       if (url)
-         location.href = url
-   });
-   var interval = setInterval(advance, 5000);
-   advance();
+   const start = () => interval = setInterval(advance, 5000)
+   start()
+   advance()
+   return {
+     start, 
+     stop() { clearInterval(interval) }
+   }
 },
     document.getElementsByClassName("nslider")[0]);
 

@@ -116,13 +116,15 @@ const lib = (() => {
             });
         },
         go(f, ...args) {
+            let res;
             if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
                 try {
-                    f(...args);
+                    res = f(...args);
                 }
                 catch (e) {
                     console.log(e);
                 }
+            return res;
         }
     };
 })();
@@ -279,9 +281,12 @@ lib.go((triggers, contents) => {
     if (current)
         current.click();
 }, document.getElementsByClassName('tabs-triggers__item'), document.getElementsByClassName('tabs-content__item'));
-lib.go(slider => {
-    const figures = slider.getElementsByTagName("figure");
-    let index = -1;
+const __slider = lib.go(slider => {
+    let figures = slider.getElementsByTagName("figure"), index = -1, interval = null;
+    slider.addEventListener("click", e => {
+        e.preventDefault();
+        location.href = figures[index].dataset.url;
+    });
     function advance() {
         index++;
         if (index == figures.length)
@@ -289,14 +294,13 @@ lib.go(slider => {
         for (let i = 0; i < figures.length; i++)
             figures[i].classList[i == index ? 'remove' : 'add']('hidd');
     }
-    slider.addEventListener("click", e => {
-        e.preventDefault();
-        let { url } = figures[index].dataset;
-        if (url)
-            location.href = url;
-    });
-    var interval = setInterval(advance, 5000);
+    const start = () => interval = setInterval(advance, 5000);
+    start();
     advance();
+    return {
+        start,
+        stop() { clearInterval(interval); }
+    };
 }, document.getElementsByClassName("nslider")[0]);
 lib.go(() => {
     for (const span of document.getElementsByClassName('numf')) {

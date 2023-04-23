@@ -35,7 +35,7 @@
                         <b class="numf">@Funds000</b>&nbsp;<b class="local" data-ua="грн." data-en="UAH">UAH</b>
                     </div>
                 </div>
-                <button class='donate-btn fundraising-item__donate-btn hide_@IsFull liqpay' 
+                <button class='to-contribute-btn fundraising-item__donate-btn hide_@IsFull liqpay' 
                   data-liqpay-sig="@Signature"
                   data-liqpay-data="@Data">
                     <img src='/img/header/credit-card.svg' />
@@ -55,32 +55,7 @@
              </div>
              <div class="tabs-content">
                  <div id="tab-1" class="tabs-content__item tabs-content__item_active">
-                     @contentF
-                     <div>
-                        <h2 class="local" data-ua="Документ з проханням" data-en="Document with request">
-                           Document with request
-                        </h2>
-                        <div class="article__document">
-                            <img  src="/img/document.jpg">
-                            <div>
-                                <p class="local" data-ua='Офіційне звернення від благодійної організації "Благодійний фонд дпомоги та реабілітації хворих на цукровий діабет"'
-                                 data-en='An official appeal from the "Charitable Foundation for Assistance and Rehabilitation of  Persons with Diabetes"'>
-                                 An official appeal from the "Charitable Foundation for Assistance and Rehabilitation of  Persons with Diabetes"
-                                </p>
-                                <div class="article__document-buttons">
-                                    <button id="show-document-btn" class="see-btn btn">
-                                       <img src="/img/header/eye.svg"/>
-                                       <span class="local" data-ua="Подивитись" data-en="Look">Look</span>
-                                    </button>
-                                    <a href="/pdf/@Pdf" download="document.pdf" class="download-btn btn">
-                                        <img src="/img/header/file-download.svg"/>
-                                        <span class="local" data-ua="Завантажити" data-en="Download">Download</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                     </div>
-                     @contentS
+                     @content
                  </div>
                  <div id="tab-2" class="tabs-content__item">
                      @report
