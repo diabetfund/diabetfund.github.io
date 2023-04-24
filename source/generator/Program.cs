@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 var version = 50;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
@@ -7,8 +8,8 @@ Item<P, L>[] ReadJ<P, L>(string table) =>
     JsonSerializer.Deserialize<Item<P, L>[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project, ProjLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
-     ReadJ<Thanks, Locale>("thanks"), ReadJ<Slide, PayLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
+    (ReadJ<Project, ProjectLoc>("projects"), ReadJ<News, Locale>("news"), ReadJ<Props, Locale>("partners"),
+     ReadJ<Thanks, ThankLoc>("thanks"), ReadJ<Slide, ProjectLoc>("slides"), ReadJ<Wallet, Locale>("wallets"),
      ReadJ<Stone, StoneLoc>("auction"));
 
 
@@ -44,7 +45,7 @@ void Render(string lang)
         return string.Join("\n", xs.Select(it => view.Run(it.Props!, lang is "en" ? it.En : it.Ua)));
     }
 
-    string ProjectCard(Item<Project, ProjLoc> p)
+    string ProjectCard(Item<Project, ProjectLoc> p)
     {
         var loc = lang is "en" ? p.En : p.Ua;
         return (loc.Promo is null ? projectCard : projectPromo).Run(p.Props, loc);
@@ -60,12 +61,12 @@ void Render(string lang)
         founders = new View(Read("founders")).Run(Join("partner", partners)),
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
 
-        topProjects = string.Join("\n", 
+        topProjects = string.Join("\n",
             projects.Take(6).Select((p, i) =>
                 ProjectCard(p with { Props = p.Props with { DesktopOnly = i > 3 } }))),
-        
+
         slides = Join("slide", slides),
-        topThanks = Join("thankCardMain", 
+        topThanks = Join("thankCardMain",
             from thank in thanks
             let index = thank.Props.MainIndex
             where index.HasValue
@@ -83,7 +84,14 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    Out("thanks", "/thanks", Join("thankCard", thanks));
+    Out("thanks", "/thanks", Join("thankCard",
+        thanks.Where(t => 
+        {
+            if (t.Props.Pic is not { } pic)
+                return true;
+            var span = pic.AsSpan();
+            return int.Parse(span[..span.IndexOf('.')]) < 158;
+        }).Take(110)));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -98,7 +106,7 @@ void Render(string lang)
     foreach (var (props, content, view) in ItemPages(projects, "projectPage", "projects/"))
             Out(view, "/fundraising/" + props.Id, new 
             {
-                content, 
+                content,
                 walletsTable,
                 report = props.ReportId is {} rep ? Read("projects/" + rep) : null                
             });
@@ -127,17 +135,7 @@ record Locale
 
 record News(string Date) : Props;
 
-record PayLoc: Locale
-{
-    public string? Data { get; set; } 
-    public string? Signature { get; set; } 
-}
-
-
-record ProjLoc(string? Promo = null) : PayLoc
-{
-    public bool HasPromo => Promo != null;
-}
+record ProjectLoc(string? Data = null, string? Signature = null, string? Promo = null) : Locale;
 
 record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Props
 {
@@ -153,9 +151,28 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pd
         id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
-record Thanks(int? HRank = null, string? Video = null, int? MainIndex = null) : Props 
+[JsonConverter(typeof(JsonStringEnumConverter))]
+enum ThankTag
+{ 
+    Sweet, Meter, Libre, Medtronic, Insulin, P999,
+    Old, NoHead, Man, NoBody, Adult, Special, Small
+}
+
+record ThankLoc : Locale
+{
+    public string Name => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
+}
+
+record Thanks(
+    DateOnly Date,
+    ThankTag[] Tags,
+    int? HRank = null,
+    string? Video = null,
+    int? MainIndex = null) : Props 
 {
     public string? Fallback => Pic?.Replace("avif", "jpg");
+
+    public string Avatar => MiniPic ?? "zero.png";
 }
 
 record Slide : Props

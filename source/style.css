@@ -180,6 +180,11 @@
 }
 
 @media (max-width: 575px){
+
+  .card__read-btn {
+    padding: 8px 10px 8px 10px;
+  }
+
     .support-btn{
         font-size: 15px;
         padding: 9px;
