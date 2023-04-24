@@ -808,7 +808,8 @@ footer hr {
 
 .about-fund__signature {
     max-width: 222px;
-    margin-right: 50px
+    margin-right: 50px;
+    margin-top:20px;
 }
 
 .about-fund__extended-info {
@@ -1825,7 +1826,7 @@ svg {
     font-weight: 500
 }
 
-@media (max-width:767px) {
+@media (max-width:500px) {
     .intro-info {
         flex-direction: column;
         row-gap: 30px;

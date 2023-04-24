@@ -205,17 +205,17 @@
   .header__bottom-content .menu__item {
     margin-right: 15px;
   }
-}
-
-@media (max-width: 960px){
-  .header__bottom-content .menu__item {
-    margin-right: 15px;
+  .menu{
+    margin-right: auto;
+    margin-left: 20px;
   }
+ 
 }
 
 @media (max-width: 841px){
   .header__bottom-content .menu__item {
     margin-right: 10px;
+    font-size: 13px;
   }
   main section, main .thanks , main .proj-card-bottom-bts, main .our-activity__content{
     padding: 0px 20px;
@@ -342,7 +342,7 @@ ul {
 .promo-mission-target {
     background: #0c9a56;
     color: #fff;
-    padding: 30px;
+    padding: 30px !important;
     width: 100%;
     margin-bottom:40px;
     max-width: 1000px;
@@ -364,7 +364,7 @@ ul {
 .promo-whats-include-green {
     background-color: #0C9A56;
     margin-top:30px;
-    padding: 15px;
+    padding: 15px !important;
     color:white;
     margin-top: -5px;
 }
@@ -753,7 +753,16 @@ ul {
 
     .center-invs { grid-template-columns: repeat(2, 1fr); }
 
-    .thanks {grid-template-columns: 1fr 1fr; grid-gap: 15px; }
+    .thanks {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px; 
+    }
+  }
+  @media (min-width: 920px) {
+    .thanks {
+      grid-template-columns: 1fr 1fr 1fr; 
+      grid-gap: 15px; 
+    }
   }
   @media (min-width: 1200px) {
     .center-docs { grid-template-columns: repeat(4, 1fr); }
