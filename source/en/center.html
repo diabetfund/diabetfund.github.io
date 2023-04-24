@@ -15,11 +15,19 @@
                    </div>
                </td>
                <td>
-                   <img src="/img/main/center.jpg" class="promo-1-pic">
-               </td>
+                    <picture>
+                        <source srcset="/img/center/promo_adapt.webp" type="image/webp" media="(max-width: 1170px)" />
+                        <source srcset="/img/center/promo_adapt.jpg" type="image/jpeg" media="(max-width: 1170px)" />
+                        <source srcset="/img/center/promo.webp" type="image/webp" />
+                        <img src="/img/center/promo.jpg" class="promo-1-pic">
+                    </picture>
+                </td>
            </tr>
        </table>
-       <img class="promo-1-m-pic"src="/img/main/center.jpg"/>
+        <picture>
+            <source srcset="/img/center/promo.webp" type="image/webp" />
+            <img src="/img/center/promo.jpg" class="promo-1-m-pic">
+        </picture>
        
        <div class="our-activity__content container">
            <div style="margin-top:30px; " class="txt-block">

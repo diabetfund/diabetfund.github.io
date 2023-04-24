@@ -195,6 +195,10 @@
   .header__bottom-content .menu__item {
     margin-right: 25px;
   }
+  .promo-1-col .hero__title{
+    font-size: 32px;
+  }
+  
 }
 
 @media (max-width: 960px){
@@ -220,6 +224,15 @@
   .support-details__img {
     width: 100%;
     max-width: 100%;
+  }
+  .center-inv{
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 600px){
+  .center-inv{
+    width: 350px !important;
   }
 }
 
@@ -309,7 +322,6 @@ ul {
 }
 .promo-1-m-pic {
     justify-self: center;
-    max-width: 580px;
     width: 100%;
     margin-top: -20px;
 }
@@ -492,6 +504,7 @@ ul {
         
     .promo-1-pic {
         display: block;
+        min-height: 470px;
     }
 
     .promo-1-col{
@@ -571,7 +584,8 @@ ul {
     display: grid;
     gap: 1rem;
     margin-top:30px;
-    margin-bottom: 30px;;
+    margin-bottom: 30px;
+    margin-left: 20px;
     justify-content: center;
   }
   .center-inv {
