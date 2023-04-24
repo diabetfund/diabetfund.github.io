@@ -183,6 +183,12 @@
   .header__bottom-content .menu__item {
     margin-right: 30px;
   }
+  .footer__nav {
+    column-gap: 10px;
+  }
+  .wallet-t2-True {
+    width: 150px;
+  }
 }
 
 @media (max-width: 1100px){
@@ -206,6 +212,14 @@
 @media (max-width: 841px){
   .header__bottom-content .menu__item {
     margin-right: 10px;
+  }
+  main section, main .thanks , main .proj-card-bottom-bts, main .our-activity__content{
+    padding: 0px 20px;
+  }
+
+  .support-details__img {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
