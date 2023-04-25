@@ -15,7 +15,7 @@ readonly struct View(string template)
             : exposes.GetOrAdd(model!.GetType(), type =>
                 Lambda<Func<object, (string, object)[]>>(
                     NewArrayInit(typeof((string, object)),
-                        from prop in type.GetProperties()
+                        from prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
                         select New(tupleCtor,
                             Constant("@" + prop.Name),
                             Convert(Property(Convert(arg, type), prop), typeof(object)))),

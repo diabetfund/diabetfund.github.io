@@ -90,8 +90,11 @@ void Render(string lang)
             if (t.Props.Pic is not { } pic)
                 return true;
             var span = pic.AsSpan();
-            return int.Parse(span[..span.IndexOf('.')]) < 158;
+            var id = byte.Parse(span[..span.IndexOf('.')]);
+            return id < 154 || Thanks.Olds.Contains(id);
         }).Take(110)));
+
+    
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -154,8 +157,8 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pd
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 { 
-    Sweet, Meter, Libre, Medtronic, Insulin, P999,
-    Old, NoHead, Man, NoBody, Adult, Special, Small
+    Sweet, Meter, Libre, Medtronic, Insulin, P999, Cat,
+    Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small
 }
 
 record ThankLoc : Locale
@@ -166,13 +169,24 @@ record ThankLoc : Locale
 record Thanks(
     DateOnly Date,
     ThankTag[] Tags,
-    int? HRank = null,
+    int? Altitude = null,
     string? Video = null,
     int? MainIndex = null) : Props 
 {
     public string? Fallback => Pic?.Replace("avif", "jpg");
 
     public string Avatar => MiniPic ?? "zero.png";
+
+    public string Alt => string.Join(", ", Alts());
+
+    IEnumerable<string?> Alts()
+    {
+        foreach (var tag in Tags)
+            yield return Enum.GetName(tag);
+        yield return Pic;
+    }
+
+    public static ReadOnlySpan<byte> Olds => new byte[] { 193, 212, 182, 223, 197, 198, 166, 160 };
 }
 
 record Slide : Props

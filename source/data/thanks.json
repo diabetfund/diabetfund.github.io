@@ -5,7 +5,7 @@
          "MiniPic": "ava-145.webp",
          "Date":"2023-04-12",
          "Tags":["Libre", "Small"],
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Владлена",
@@ -37,7 +37,7 @@
          "MiniPic": "ava-146.webp",
          "Date":"2023-04-09",
          "Tags":["Libre", "Small"],
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Надія Шнейдер",
@@ -48,14 +48,13 @@
          "Descr": "Good evening. We took away this year's sensor, we want to please Sergius, Igor, Eduard, the fund and everyone who is considered to be such a necessary help for our lad🙏🙏🙏 You are our yangoli guarding our folded struggle for a happy childhood. Thank you for your greatness ❤️ Just don’t express yourself with words 🤗 You are the name of the people, work for good help for all of us. Take care of yourself, I'm healthy to you, strength, us naked and patient with us) Dyakuєmo again 🙏❤️🙏"
       }
    },
-   
    {
       "Props": {
          "Pic": "148.avif",
          "Date": "2023-04-06",
-         "Tags": ["Libre"],
+         "Tags": ["Libre", "Small"],
          "MiniPic": "ava-148.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Олена",
@@ -68,53 +67,18 @@
    },
    {
       "Props": {
-         "Pic": "149.avif",
-         "Date": "2023-04-16",
-         "Tags": ["Libre"],
-         "MiniPic": "ava-123.webp",
-         "HRank": 1
+         "Pic": "193.avif",
+         "Date": "2023-04-06",
+         "Tags": ["Sweet", "Meter", "Old", "BedRidden"],
+         "Altitude": 1
       },
       "Ua": {
-         "Title": "Iнна🌸",
-         "Descr": "Зі світлим святом Великодня! Мирного неба🌈 Дякую, хлопці за повний контроль над цукром 💪😎🥰 сьогодні завдяки сенсору дитина спокійно з'їла пасочку і ми всі проконтролювали і вчасно підкололи. Радість у дитини та спокійні батьки ❤️🌈🌈🌈"
+         "Title": "Олена Шевченко",
+         "Descr": "Велике дякую за допомогу! Для нас це вкрай важливо - знати свої цукора.... Ви робите велике діло! Ви - найкращі! Жодного благодійного фонду по допомозі діабетикам в Україні не бачила, крім вашого! Ми ВПО, житло окуповане та знищене. Ви нам дуже допомогли. Велике ДЯКУЮ!  Дай Бог вам і надали сил, здоров'я, миру і Перемоги! Не опускайте рук через невдоволених подопічних, ви робите велике діло! Дуже вам вдячні! Бережіть себе! Все буде Україна!"
       },
       "En": {
-         "Title": "Inna🌸",
-         "Descr": "Happy Easter! Peaceful sky🌈Thank you, guys, for complete control over sugar💪😎🥰 today, thanks to the sensor, the child calmly ate the pasochka and we controlled everything and pinned it up in time. Joy in a child and calm parents ❤️🌈🌈🌈"
-      }
-   },
-
-   {
-      "Props": {
-         "Pic": "147.avif",
-         "Date": "2023-04-09",
-         "Tags": ["Libre"],
-         "MiniPic": "ava-147.webp"
-      },
-      "Ua": {
-         "Title": "Ганна",
-         "Descr": "В цей святковий день ми отримали допомогу від фонду!!! Дякуємо Вам безмежно!!!"
-      },
-      "En": {
-         "Title": "Hanna",
-         "Descr": "On this holiday, we received help from the fund!!! Thank you very much!!!"
-      }
-   },
-   {
-      "Props": {
-         "Pic": "151.avif",
-         "MiniPic": "ava-151.webp",
-         "Date": "2023-04-16",
-         "Tags": ["Libre"],
-         "HRank": 1
-      },
-      "Ua": {
-         "Title": "Свiтлана",
-         "Descr": "Хочу подякувати всій команді Фонду за можливість взяти участь у програмі 50/50. Ви величезні молодці, що незважаючи на всяких не хороших людей, не відпускаєте руки і допомагаєте тим, хто потребує. Нехай Ангели вас оберігають! Величезне спасибі! ❤️💛💙"
-      },
-      "En": {
-         "Title": "Svitlana",
-         "Descr": "I want to thank the entire team of the Foundation for the opportunity to take part in the 50/50 program. You are great fellows, that despite all sorts of not good people, you do not let go of your hands and help those who need it. May the Angels protect you! Thanks a lot! ❤️💛💙"
+         "Title": "Olena Shevchenko",
+         "Descr": "Thank you very much for your help! It is extremely important for us to know your sugars.... You are doing a great job! You are the best! I have not seen any charity fund to help diabetics in Ukraine, except yours! We are IDPs, the housing is occupied and destroyed. You have helped us a lot. Thank you very much! May God grant you strength, health, peace and Victory! Do not give up because of disgruntled wards, you are doing a great job! Thank you very much! Keep yourselves! Everything will be Ukraine!"
       }
    },
    {
@@ -122,8 +86,7 @@
          "Pic": "152.avif",
          "MiniPic": "ava-152.webp",
          "Date": "2023-04-15",
-         "Tags": ["Libre"],
-         "HRank": 1
+         "Tags": ["Libre"]
       },
       "Ua": {
          "Title": "Тетяна Прядка",
@@ -136,8 +99,40 @@
    },
    {
       "Props": {
+         "Pic": "149.avif",
+         "Date": "2023-04-16",
+         "Tags": ["Libre"],
+         "MiniPic": "ava-123.webp"
+      },
+      "Ua": {
+         "Title": "Iнна🌸",
+         "Descr": "Зі світлим святом Великодня! Мирного неба🌈 Дякую, хлопці за повний контроль над цукром 💪😎🥰 сьогодні завдяки сенсору дитина спокійно з'їла пасочку і ми всі проконтролювали і вчасно підкололи. Радість у дитини та спокійні батьки ❤️🌈🌈🌈"
+      },
+      "En": {
+         "Title": "Inna🌸",
+         "Descr": "Happy Easter! Peaceful sky🌈Thank you, guys, for complete control over sugar💪😎🥰 today, thanks to the sensor, the child calmly ate the pasochka and we controlled everything and pinned it up in time. Joy in a child and calm parents ❤️🌈🌈🌈"
+      }
+   },
+   {
+      "Props": {
+         "Pic": "122.avif",
+         "Date": "2023-03-13",
+         "Tags": ["Small", "Libre", "Sweet", "Meter"],
+         "MainIndex": 3
+      },
+      "Ua": {
+         "Title": "Марина Ященко",
+         "Descr": "Велике дякуєм фонду та їх команді за допомогу, яку ми діабетики так потребуємо. За їх велике серце яке вони відчиняють для інших. Дякуєм !!!💙💛💙💛💙💛"
+      },
+      "En": {
+         "Title": "Maryna Yaschenko",
+         "Descr": "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"
+      }
+   },
+   {
+      "Props": {
          "Pic": "156.avif",
-         "Tags": ["Sweet", "Meter"],
+         "Tags": ["Sweet", "Meter", "P999"],
          "Date": "2023-04-23"
       },
       "Ua": {
@@ -152,7 +147,7 @@
    {
       "Props": {
          "Pic": "157.avif",
-         "Tags": ["Meter", "NoHead", "Adult"],
+         "Tags": ["Meter", "Libre", "NoHead", "Adult"],
          "Date": "2023-04-23"
       },
       "Ua": {
@@ -167,7 +162,7 @@
    {
       "Props": {
          "Pic": "158.avif",
-         "Tags": ["Sweet", "Meter", "NoHead"],
+         "Tags": ["Meter", "NoHead"],
          "Date": "2023-04-23",
          "MiniPic": "ava-158.webp"
       },
@@ -198,18 +193,18 @@
    },
    {
       "Props": {
-         "Pic": "160.avif",
-         "Tags": ["Sweet", "Meter", "Insulin", "Man", "Old"],
-         "Date": "2023-04-23",
-         "MiniPic": "ava-160.webp"
+         "Pic": "147.avif",
+         "Date": "2023-04-09",
+         "Tags": ["Libre"],
+         "MiniPic": "ava-147.webp"
       },
       "Ua": {
-         "Title": "Янина",
-         "Descr": "Щиро дякую за допомогу .Дай Бог вам здоров'я і миру."
+         "Title": "Ганна",
+         "Descr": "В цей святковий день ми отримали допомогу від фонду!!! Дякуємо Вам безмежно!!!"
       },
       "En": {
-         "Title": "Yanina",
-         "Descr": "Thank you very much for your help. May God give you health and peace."
+         "Title": "Hanna",
+         "Descr": "On this holiday, we received help from the fund!!! Thank you very much!!!"
       }
    },
    {
@@ -336,7 +331,7 @@
    {
       "Props": {
          "Pic": "169.avif",
-         "Tags": ["Sweet", "Meter", "P999", "Old"],
+         "Tags": ["Sweet", "Meter", "P999", "Adult"],
          "Date": "2023-04-16"
       },
       "Ua": {
@@ -398,8 +393,7 @@
       "Props": {
          "Pic": "153.avif",
          "Date": "2023-04-15",
-         "Tags": ["Libre"],
-         "HRank": 1
+         "Tags": ["Libre", "Small"]
       },
       "Ua": {
          "Title": "Iрина",
@@ -416,7 +410,7 @@
          "MiniPic": "ava-154.webp",
          "Date": "2023-04-15",
          "Tags": ["Libre"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Волошина Тетяна",
@@ -433,7 +427,7 @@
          "MiniPic": "ava-155.webp",
          "Date": "2023-04-16",
          "Tags": ["Libre"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Света",
@@ -538,18 +532,17 @@
    },
    {
       "Props": {
-         "Pic": "143.avif",
-         "Date": "2023-03-12",
-         "Tags": ["Libre"],
-         "HRank": 1
+         "Pic": "212.avif",
+         "Date": "2023-03-31",
+         "Tags": ["Meter", "Sweet", "Old"]
       },
       "Ua": {
-         "Title": "Наталія Філіна",
-         "Descr": "Величезна подяка всім співробітникам фонду за самовіддану працю!!!!! Це реально дуже велика допомога, особливо у важкий час."
+         "Title": "",
+         "Descr": "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."
       },
       "En": {
-         "Title": "Natalya Filina",
-         "Descr": "Huge gratitude to all employees of the fund for selfless work!!!!! This is a really BIG help, especially in a difficult time."
+         "Title": "",
+         "Descr": "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."
       }
    },
    {
@@ -558,7 +551,7 @@
          "MiniPic": "ava-142.webp",
          "Date":"2023-04-12",
          "Tags": ["Libre"],
-         "HRank": 2
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Алiна",
@@ -622,8 +615,7 @@
          "Pic": "139.avif",
          "MiniPic": "ava-139.webp",
          "Tags": ["Libre", "Small"],
-         "Date":"2023-04-13",
-         "HRank": 1
+         "Date":"2023-04-13"
       },
       "Ua": {
          "Title": "Каріна Шабаліна",
@@ -636,19 +628,17 @@
    },
    {
       "Props": {
-         "Pic": "140.avif",
-         "MiniPic": "ava-140.webp",
-         "Tags": ["Libre", "Adult"],
-         "Date": "2023-04-12",
-         "HRank": 3
+         "Pic": "143.avif",
+         "Date": "2023-03-12",
+         "Tags": ["Libre"]
       },
       "Ua": {
-         "Title": "Алена Сапольняк",
-         "Descr": "Сьогодні отримала лібру 2, дуже всим дякую за таку підтримку вона потрібна людям із цукровим діабетом, я зі стажем 27 років ніяк не можу справитися з гіпоглікеміями, в мене вони тяжкі до коми, то за вдяки Вам спробую їх контролювати . Дякую, дякую, дякую. Дай Бог Вам сил, терпіння і мирного неба."
+         "Title": "Наталія Філіна",
+         "Descr": "Величезна подяка всім співробітникам фонду за самовіддану працю!!!!! Це реально дуже велика допомога, особливо у важкий час."
       },
       "En": {
-         "Title": "Aliona Sapolnyak",
-         "Descr": "Today I received libra 2, thank you all very much for such support, people with diabetes need it, with 27 years of experience, I cannot cope with hypoglycemia, they are severe for me to the point of coma, so thanks to you I will try to control them. Thank you, thank you, thank you. May God give you strength, patience and a peaceful sky."
+         "Title": "Natalya Filina",
+         "Descr": "Huge gratitude to all employees of the fund for selfless work!!!!! This is a really BIG help, especially in a difficult time."
       }
    },
    {
@@ -687,8 +677,7 @@
          "Pic": "136.avif",
          "MiniPic": "ava-136.webp",
          "Date": "2023-04-10",
-         "Tags": ["Libre"],
-         "HRank": 2
+         "Tags": ["Libre"]
       },
       "Ua": {
          "Title": "Iнна Криштопа",
@@ -698,22 +687,21 @@
          "Title": "Inna Kristopa",
          "Descr": "Many thanks to the foundation and the entire team for the opportunity to receive the sensor. Thank you for your work. Strength and inspiration to you!!💙💛"
       }
-   },   
+   },
    {
       "Props": {
-         "Pic": "129.avif",
-         "MiniPic": "ava-129.webp",
-         "Date":"2023-04-10",
-         "Tags": ["Libre"],
-         "HRank": 3
+         "Pic": "223.avif",
+         "Date": "2023-03-26",
+         "Tags": ["Sweet", "Meter", "Old", "P999", "BedRidden"],
+         "Altitude": 1
       },
       "Ua": {
-         "Title": "Свiтлана",
-         "Descr": "Доброго дня, сьогодні отримали сенсор. ДЯКУЮ фонду за можливість отримати моніторинг!!! Ви робите величезну справу! Дякую працівникам фонду, Сергію, Ігорю, Едуарду та всім причетним!!! Сил Вам та натхнення! Ще раз щира подяка!💛💙"
+         "Title": "",
+         "Descr": "Сьогодні отримали вашу посилку. хлопці, ви не уявляєте, як ми вам вдячні, нам зараз це дуже необхідно, дякую вам за швидкість. Передаю величезну подяку та фонду, який вам допомагає, ви великі розумнички. Едуард, вам .персональний респект,з вами приємно було поспілкуватися,більше таких людей. Терпіння вам і не реагуйте на погані коментарі, на жаль, у родині не без виродків. ДЯКУЄМО"
       },
       "En": {
-         "Title": "Svitlana",
-         "Descr": "Good afternoon, we received the sensor today. THANKS to the fund for the opportunity to receive monitoring!!! You are doing a great job! Thanks to the employees of the foundation, Sergey, Igor, Eduard and everyone involved!!! Strength and inspiration to you! Once again, sincere thanks!💛💙"
+         "Title": "",
+         "Descr": "We received your parcel today. Guys, you have no idea how grateful we are to you, we really need it now, thank you for your speed. I am also very grateful to the foundation that is helping you, you are very smart. Eduard, to you. Personal respect, with you it was nice to chat, I wish there were more people like this. Be patient and don't react to bad comments, unfortunately, there are a lot of ugly people in the family. THANK YOU"
       }
    },
    {
@@ -722,7 +710,7 @@
          "MiniPic": "ava-124.webp",
          "Tags": ["Libre"],
          "Date": "2023-04-13",
-         "HRank": 4
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Оксана Сугак",
@@ -739,7 +727,7 @@
          "Date": "2023-04-10",
          "Tags": ["Libre"],
          "MiniPic": "ava-130.webp",
-         "HRank": 2
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Лена",
@@ -757,7 +745,7 @@
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "ava-116.webp",
          "Video": "/img/fun/116_960_540.mp4",
-         "HRank": 2,
+         "Altitude": 1,
          "MainIndex": 4
       },
       "Ua": {
@@ -789,7 +777,7 @@
       "Props": {
          "Pic": "182.avif",
          "Date":"2023-04-09",
-         "Tags":["Libre", "Old"]
+         "Tags":["Libre", "Old", "Cat"]
       },
       "Ua": {
          "Title": "Лiна",
@@ -1032,17 +1020,19 @@
    },
    {
       "Props": {
-         "Pic": "193.avif",
-         "Date": "2023-04-06",
-         "Tags": ["Sweet", "Meter", "Old"]
+         "Pic": "151.avif",
+         "MiniPic": "ava-151.webp",
+         "Date": "2023-04-16",
+         "Tags": ["Libre", "Adult"],
+         "Altitude": 1
       },
       "Ua": {
-         "Title": "Олена Шевченко",
-         "Descr": "Велике дякую за допомогу! Для нас це вкрай важливо - знати свої цукора.... Ви робите велике діло! Ви - найкращі! Жодного благодійного фонду по допомозі діабетикам в Україні не бачила, крім вашого! Ми ВПО, житло окуповане та знищене. Ви нам дуже допомогли. Велике ДЯКУЮ!  Дай Бог вам і надали сил, здоров'я, миру і Перемоги! Не опускайте рук через невдоволених подопічних, ви робите велике діло! Дуже вам вдячні! Бережіть себе! Все буде Україна!"
+         "Title": "Свiтлана",
+         "Descr": "Хочу подякувати всій команді Фонду за можливість взяти участь у програмі 50/50. Ви величезні молодці, що незважаючи на всяких не хороших людей, не відпускаєте руки і допомагаєте тим, хто потребує. Нехай Ангели вас оберігають! Величезне спасибі! ❤️💛💙"
       },
       "En": {
-         "Title": "Olena Shevchenko",
-         "Descr": "Thank you very much for your help! It is extremely important for us to know your sugars.... You are doing a great job! You are the best! I have not seen any charity fund to help diabetics in Ukraine, except yours! We are IDPs, the housing is occupied and destroyed. You have helped us a lot. Thank you very much! May God grant you strength, health, peace and Victory! Do not give up because of disgruntled wards, you are doing a great job! Thank you very much! Keep yourselves! Everything will be Ukraine!"
+         "Title": "Svitlana",
+         "Descr": "I want to thank the entire team of the Foundation for the opportunity to take part in the 50/50 program. You are great fellows, that despite all sorts of not good people, you do not let go of your hands and help those who need it. May the Angels protect you! Thanks a lot! ❤️💛💙"
       }
    },
    {
@@ -1340,17 +1330,19 @@
    },
    {
       "Props": {
-         "Pic": "212.avif",
-         "Date": "2023-03-31",
-         "Tags": ["Meter", "Sweet", "Old"]
+         "Pic": "140.avif",
+         "MiniPic": "ava-140.webp",
+         "Tags": ["Libre", "Adult"],
+         "Date": "2023-04-12",
+         "Altitude": 1
       },
       "Ua": {
-         "Title": "",
-         "Descr": "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."
+         "Title": "Алена Сапольняк",
+         "Descr": "Сьогодні отримала лібру 2, дуже всим дякую за таку підтримку вона потрібна людям із цукровим діабетом, я зі стажем 27 років ніяк не можу справитися з гіпоглікеміями, в мене вони тяжкі до коми, то за вдяки Вам спробую їх контролювати . Дякую, дякую, дякую. Дай Бог Вам сил, терпіння і мирного неба."
       },
       "En": {
-         "Title": "",
-         "Descr": "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."
+         "Title": "Aliona Sapolnyak",
+         "Descr": "Today I received libra 2, thank you all very much for such support, people with diabetes need it, with 27 years of experience, I cannot cope with hypoglycemia, they are severe for me to the point of coma, so thanks to you I will try to control them. Thank you, thank you, thank you. May God give you strength, patience and a peaceful sky."
       }
    },
    {
@@ -1509,17 +1501,18 @@
    },
    {
       "Props": {
-         "Pic": "223.avif",
-         "Date": "2023-03-26",
-         "Tags": ["Sweet", "Meter", "Old", "P999"]
+         "Pic": "129.avif",
+         "MiniPic": "ava-129.webp",
+         "Date":"2023-04-10",
+         "Tags": ["Libre"]
       },
       "Ua": {
-         "Title": "",
-         "Descr": "Сьогодні отримали вашу посилку. хлопці, ви не уявляєте, як ми вам вдячні, нам зараз це дуже необхідно, дякую вам за швидкість. Передаю величезну подяку та фонду, який вам допомагає, ви великі розумнички. Едуард, вам .персональний респект,з вами приємно було поспілкуватися,більше таких людей. Терпіння вам і не реагуйте на погані коментарі, на жаль, у родині не без виродків. ДЯКУЄМО"
+         "Title": "Свiтлана",
+         "Descr": "Доброго дня, сьогодні отримали сенсор. ДЯКУЮ фонду за можливість отримати моніторинг!!! Ви робите величезну справу! Дякую працівникам фонду, Сергію, Ігорю, Едуарду та всім причетним!!! Сил Вам та натхнення! Ще раз щира подяка!💛💙"
       },
       "En": {
-         "Title": "",
-         "Descr": "We received your parcel today. Guys, you have no idea how grateful we are to you, we really need it now, thank you for your speed. I am also very grateful to the foundation that is helping you, you are very smart. Eduard, to you. Personal respect, with you it was nice to chat, I wish there were more people like this. Be patient and don't react to bad comments, unfortunately, there are a lot of ugly people in the family. THANK YOU"
+         "Title": "Svitlana",
+         "Descr": "Good afternoon, we received the sensor today. THANKS to the fund for the opportunity to receive monitoring!!! You are doing a great job! Thanks to the employees of the foundation, Sergey, Igor, Eduard and everyone involved!!! Strength and inspiration to you! Once again, sincere thanks!💛💙"
       }
    },
    {
@@ -1528,8 +1521,7 @@
          "Date":"2023-03-24",
          "Tags": ["Libre"],
          "MiniPic": "ava-123.webp",
-         "Video": "/img/fun/123_294_500.mp4",
-         "HRank": 1
+         "Video": "/img/fun/123_294_500.mp4"
       },
       "Ua": {
          "Title": "Iнна🌸",
@@ -1560,8 +1552,7 @@
          "Pic": "138.avif",
          "MiniPic": "ava-138.webp",
          "Date":"2023-04-13",
-         "Tags": ["Libre"],
-         "HRank": 1
+         "Tags": ["Libre"]
       },
       "Ua": {
          "Title": "Тетяна",
@@ -1642,7 +1633,7 @@
          "Pic": "53.avif",
          "Date": "2022-11-18",
          "Tags": ["Libre", "Small"],
-         "HRank": 1,
+         "Altitude": 1,
          "MainIndex": 1
       },
       "Ua": {
@@ -1688,19 +1679,18 @@
    },
    {
       "Props": {
-         "Pic": "122.avif",
-         "Date": "2023-03-13",
-         "Tags": ["Small", "Libre", "Sweet", "Meter"],
-         "HRank": 1,
-         "MainIndex": 3
+         "Pic": "160.avif",
+         "Tags": ["Sweet", "Meter", "Insulin", "Man", "Old"],
+         "Date": "2023-04-23",
+         "MiniPic": "ava-160.webp"
       },
       "Ua": {
-         "Title": "Марина Ященко",
-         "Descr": "Велике дякуєм фонду та їх команді за допомогу, яку ми діабетики так потребуємо. За їх велике серце яке вони відчиняють для інших. Дякуєм !!!💙💛💙💛💙💛"
+         "Title": "Янина",
+         "Descr": "Щиро дякую за допомогу .Дай Бог вам здоров'я і миру."
       },
       "En": {
-         "Title": "Maryna Yaschenko",
-         "Descr": "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"
+         "Title": "Yanina",
+         "Descr": "Thank you very much for your help. May God give you health and peace."
       }
    },
    {
@@ -1709,7 +1699,7 @@
          "MiniPic": "ava-124.webp",
          "Date":"2023-03-23",
          "Tags": ["Sweet", "Meter", "P999"],
-         "HRank": 2
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Оксана Сугак",
@@ -1726,7 +1716,7 @@
          "MiniPic": "ava-125.webp",
          "Date":"2023-03-22",
          "Tags": ["Sweet", "Meter", "P999"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Галина Салтыкова",
@@ -1838,7 +1828,7 @@
          "Tags": ["Libre", "Small"],
          "MiniPic": "card-12-ava.png"
       },
-      "HRank": 2,
+      "Altitude": 2,
       "Ua": {
          "Title": "Тарасенко Дарина",
          "Descr": "Доброго дня! Нарешті нам в окупацію передали таку довгоочікувану посилочку! Придбали 2 сенсори по програмі 50/50) дуже задоволені! Дякуємо фонду за таку можливість в такий важкий час! Ви неймовірні люди! Вже багато разів отримувала допомогу, і безкоштовно, і через допомогу фонду, і по програмі 50/50! Дякую, що Ви є, Ви робите велику справу! Нехай все це добро повернеться Вам вдвічі! Всім мирного неба! Хочеться обійняти кожного, завжди приємне спілкування, гарне ставлення, та ще й така цінна допомога❤️❤️❤️"
@@ -1901,7 +1891,7 @@
          "Pic": "86.avif",
          "Date": "2023-02-24",
          "Tags": ["Sweet", "P999", "Meter"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Наталiя",
@@ -1950,7 +1940,7 @@
          "Date":"2023-02-24",
          "Tags": ["Sweet","Meter","P999"],
          "MiniPic": "card-89-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Світлана Овдієнко",
@@ -1983,7 +1973,7 @@
          "Date": "2023-02-23",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "ava-91.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Надія Рекубратська",
@@ -2016,7 +2006,7 @@
          "Date": "2023-02-23",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "card-93-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Iрина",
@@ -2065,7 +2055,7 @@
          "Date": "2023-02-23",
          "Tags": ["Libre"],
          "MiniPic": "card-56-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Людмила",
@@ -2114,7 +2104,7 @@
          "Date": "2023-02-23",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "card-73-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Кувичко Оксана",
@@ -2160,7 +2150,7 @@
       "Props": {
          "Pic": "102.avif",
          "Date": "2023-02-23",
-         "Tags": ["Medtronic"],
+         "Tags": ["Medtronic", "Small"],
          "MiniPic": "ava-102.webp"
       },
       "Ua": {
@@ -2194,7 +2184,7 @@
          "Date": "2023-02-22",
          "Tags": ["Sweet", "Insulin", "Old", "NoHead"],
          "MiniPic": "ava-104.webp",
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Свiтлана Сакулiна",
@@ -2211,7 +2201,7 @@
          "Date": "2023-02-22",
          "Tags": ["Sweet", "Meter"],
          "MiniPic": "ava-105.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Юлiя",
@@ -2228,7 +2218,7 @@
          "Date": "2023-02-22",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "ava-106.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Катерина Демидова",
@@ -2276,7 +2266,7 @@
          "Date": "2023-02-22",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "ava-109.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Iннуся",
@@ -2355,7 +2345,7 @@
          "Date": "2023-02-22",
          "Tags": ["Sweet", "Meter"],
          "MiniPic": "ava-114.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Оленка",
@@ -2372,7 +2362,7 @@
          "Date": "2023-02-21",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "card-83-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Анастасія Перелигіна",
@@ -2389,7 +2379,7 @@
          "Date": "2023-02-21",
          "Tags": ["Sweet", "Meter"],
          "MiniPic": "ava-117.webp",
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Катя Столпакова",
@@ -2405,7 +2395,7 @@
          "Pic": "118.avif",
          "Date": "2023-02-21",
          "Tags": ["Sweet", "Meter", "P999"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Юлiана",
@@ -2421,7 +2411,7 @@
          "Pic": "119.avif",
          "Date": "2023-02-21",
          "Tags": ["Sweet", "Meter", "P999"],
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Райковська Олена",
@@ -2438,7 +2428,7 @@
          "Date": "2023-02-21",
          "Tags": ["Sweet", "Meter", "P999"],
          "MiniPic": "card-120-ava.png",
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Марина",
@@ -2468,7 +2458,7 @@
       "Props": {
          "Pic": "57.avif",
          "Date": "2022-11-14",
-         "Tags": ["Insulin"],
+         "Tags": ["Insulin", "Old"],
          "MiniPic": "card-57-ava.png"
       },
       "Ua": {
@@ -2502,7 +2492,7 @@
          "Tags": ["Sweet"],
          "MiniPic": "card-13-ava.png"
       },
-      "HRank": 0,
+      "Altitude": 0,
       "Ua": {
          "Title": "Тетяна",
          "Descr": "Щиро дякуємо за допомогу для наших діток. Дякуємо всім причетним! Здоров'я всім працівникам фонду!"
@@ -2519,7 +2509,7 @@
          "Tags": ["Sweet"],
          "MiniPic": "card-79-ava.png"
       },
-      "HRank": 0,
+      "Altitude": 0,
       "Ua": {
          "Title": "Марiя П.",
          "Descr": "Дякуєм щиро за допомогу фонду,ВСІМ хто долучився,до цієї справи,дівчатам які займалися відправкою!Процвітання,подяки і миру всім."
@@ -2536,7 +2526,7 @@
          "Tags": ["Medtronic"],
          "MiniPic": "card-80-ava.png"
       },
-      "HRank": 0,
+      "Altitude": 0,
       "Ua": {
          "Title": "Анна",
          "Descr": "Велика вдячність фонду! Хай всім нам допомагає Господь!"
@@ -2553,7 +2543,7 @@
          "Tags": ["Sweet"],
          "MiniPic": "card-81-ava.png"
       },
-      "HRank": 0,
+      "Altitude": 0,
       "Ua": {
          "Title": "Прiходько Юлiя",
          "Descr": "Доброго дня! Щиро дякуємо фонду і усім причетним за допомогу! Дякую, що турбуєтеся про наших дітей! Ви неймовірні!!!"
@@ -2570,7 +2560,7 @@
          "Tags": ["Sweet"],
          "MiniPic": "card-82-ava.png"
       },
-      "HRank": 1,
+      "Altitude": 1,
       "Ua": {
          "Title": "Надія",
          "Descr": "Доброго дня! Сьогодні отримали подарунок від Вашої благодійної організації. Дуже дякую Вам,що даруєте нашім дітлахам смаколики,яких вони нажаль позбавлені в тій кількості,як би їм хотілося! Зараз спробую зробити брауні,щоб дитина вже наїлась. ;))) Дуже дякую усім за допомогу!!!"
@@ -2587,7 +2577,7 @@
          "Tags": ["Sweet"],
          "MiniPic": "card-83-ava.png"
       },
-      "HRank": 1,
+      "Altitude": 1,
       "Ua": {
          "Title": "Анастасія Перелигіна",
          "Descr": "Дуже вдячна фонду за допомогу. Оперативно,якісно та дуже вчасно!!!"
@@ -2617,7 +2607,7 @@
       "Props": {
          "Pic": "71.avif",
          "Date": "2022-11-29",
-         "Tags": ["Medtronic"]
+         "Tags": ["Medtronic", "Small"]
       },
       "Ua": {
          "Title": "Ірина Ільчук",
@@ -2630,17 +2620,17 @@
    },
    {
       "Props": {
-         "HRank": 2,
+         "Altitude": 2,
          "Date": "2022-10-08",
          "Tags": []
       },
       "Ua": {
          "Title": "Лариса",
-         "Descr": "<div style=\"height:10px\"></div>Величезне дякую всім вам. За те, що ви під час війни, коли всім тяжко, ви реально допомагаєте. Робите неймовірні речі. Витрачаєте свої сили та здоров'я заради допомоги для інших. Шукаєте і добиваєтесь допомоги. Ось такі люди і будуть підіймати Україну. Добро завжди вертається сторицею. Добро притягує добро. Ми, українці сильні і самодостатні, вольові. Коли дивишся на наших захисників-гордість розпирає. Це наші мужні хлопці і дівчата. Дивишся на волонтерів. Це сильні духом і цілеспрямовані хлопці і дівчата. Ну немає в цілому світі більше такої нації як ми. Весь всесвіт синьо-жовтий.Ми сильні,незламні, вольові. І переможемо ми ту недоармію. І дай Боже,переможемо той клятий діабет. А кому не подобається- нехай іде іншою дорогою. Є речі,діяння- безцінні. В кожної людини є дар. Дар бути людиною. Але не всі люди його зберігають, губиться він десь... а Ви не загубили. Тримайте міцно цей дар. На зло всім ворогам!))) Здоров'я вам міцного і успіхів у всіх починаннях. Слава Україні!"
+         "Descr": "<div style=\"height:20px\"></div>Величезне дякую всім вам. За те, що ви під час війни, коли всім тяжко, ви реально допомагаєте. Робите неймовірні речі. Витрачаєте свої сили та здоров'я заради допомоги для інших. Шукаєте і добиваєтесь допомоги. Ось такі люди і будуть підіймати Україну. Добро завжди вертається сторицею. Добро притягує добро. Ми, українці сильні і самодостатні, вольові. Коли дивишся на наших захисників-гордість розпирає. Це наші мужні хлопці і дівчата. Дивишся на волонтерів. Це сильні духом і цілеспрямовані хлопці і дівчата. Ну немає в цілому світі більше такої нації як ми. Весь всесвіт синьо-жовтий.Ми сильні,незламні, вольові. І переможемо ми ту недоармію. І дай Боже,переможемо той клятий діабет. А кому не подобається- нехай іде іншою дорогою. Є речі,діяння- безцінні. В кожної людини є дар. Дар бути людиною. Але не всі люди його зберігають, губиться він десь... а Ви не загубили. Тримайте міцно цей дар. На зло всім ворогам!))) Здоров'я вам міцного і успіхів у всіх починаннях. Слава Україні!"
       },
       "En": {
          "Title": "Larisa",
-         "Descr": "<div style=\"height:10px\"></div>Thank you all so much. For the fact that during the war, when it is hard for everyone, you really help. Do incredible things. Spending your strength and health to help others. Looking for and seeking help. Such people will raise Ukraine. Good always comes back a hundredfold. Good attracts good. We Ukrainians are strong and self-sufficient, strong-willed. When you look at our defenders, you are full of pride. These are our brave boys and girls. Look at the volunteers. These are strong-minded and purposeful boys and girls. Well, there is no other nation like us in the whole world. The whole universe is blue-yellow. We are strong, indomitable, strong-willed. And we will defeat that poor army. And God willing, we will defeat that damned diabetes. And whoever doesn't like it, let him go another way. There are things, actions - priceless. Every person has a gift. The gift of being human. But not all people keep it, it gets lost somewhere... and you haven't lost it. Hold fast this gift. To the evil of all enemies!))) Good health and success in all your endeavors. Glory to Ukraine!"
+         "Descr": "<div style=\"height:20px\"></div>Thank you all so much. For the fact that during the war, when it is hard for everyone, you really help. Do incredible things. Spending your strength and health to help others. Looking for and seeking help. Such people will raise Ukraine. Good always comes back a hundredfold. Good attracts good. We Ukrainians are strong and self-sufficient, strong-willed. When you look at our defenders, you are full of pride. These are our brave boys and girls. Look at the volunteers. These are strong-minded and purposeful boys and girls. Well, there is no other nation like us in the whole world. The whole universe is blue-yellow. We are strong, indomitable, strong-willed. And we will defeat that poor army. And God willing, we will defeat that damned diabetes. And whoever doesn't like it, let him go another way. There are things, actions - priceless. Every person has a gift. The gift of being human. But not all people keep it, it gets lost somewhere... and you haven't lost it. Hold fast this gift. To the evil of all enemies!))) Good health and success in all your endeavors. Glory to Ukraine!"
       }
    },
    {
@@ -2742,7 +2732,7 @@
       "Props": {
          "Pic": "45.avif",
          "Date": "2022-05-11",
-         "Tags": ["Insulin"]
+         "Tags": ["Insulin", "Adult"]
       },
       "Ua": {
          "Title": "Юлiя",
@@ -2823,7 +2813,7 @@
          "Date": "2022-11-02",
          "Tags": ["Insulin"],
          "MiniPic": "card-3-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Люда Данилова",
@@ -2840,7 +2830,7 @@
          "Date": "2022-11-13",
          "Tags": ["Libre"],
          "MiniPic": "card-55-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Юлiя",
@@ -2857,7 +2847,7 @@
          "Date": "2022-11-14",
          "Tags": ["Libre"],
          "MiniPic": "card-56-ava.png",
-         "HRank": 2
+         "Altitude": 2
       },
       "Ua": {
          "Title": "Людмила",
@@ -2921,7 +2911,7 @@
          "Date": "2022-11-02",
          "Tags": ["Libre"],
          "MiniPic": "ava-4.webp",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Тетяна Мінець",
@@ -2938,7 +2928,7 @@
          "Date": "2022-11-12",
          "Tags": ["Libre"],
          "MiniPic": "card-54-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Людмила Жиркова",
@@ -3315,7 +3305,7 @@
          "Date": "2022-08-27",
          "Tags": ["Meter", "Insulin", "NoBody"],
          "MiniPic": "card-13-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Тетяна",
@@ -3379,7 +3369,7 @@
          "Date": "2022-08-27",
          "Tags": ["Meter", "NoBody"],
          "MiniPic": "card-16-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Марина Рудська",
@@ -3443,7 +3433,7 @@
          "Date": "2022-08-27",
          "Tags": ["Meter"],
          "MiniPic": "card-21-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Оксана Гриньова",
@@ -3635,7 +3625,7 @@
          "Date": "2022-07-13",
          "Tags": ["Meter"],
          "MiniPic": "card-34-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Ганна Луценко",
@@ -3700,7 +3690,7 @@
          "Date": "2022-11-20",
          "Tags": ["Libre"],
          "MiniPic": "card-15-ava.png",
-         "HRank": 1
+         "Altitude": 1
       },
       "Ua": {
          "Title": "Ольга",
