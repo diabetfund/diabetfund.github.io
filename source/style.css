@@ -248,6 +248,16 @@
   }
 }
 
+@media (max-width: 400px){
+  .already-collected_more span{
+    display: none;
+  }
+
+  .card__content_middle .numf{
+    font-size: 17px;
+  }
+}
+
 @media (max-width: 575px){
 
 
@@ -388,7 +398,7 @@ ul {
   align-items: center;
   max-width: 600px;
   width: 100%;
-  margin-top: -80px;
+  margin-top: -70px;
 }
 
 .main-about-fund {
