@@ -218,7 +218,7 @@
     font-size: 13px;
   }
   main section, main .thanks , main .proj-card-bottom-bts, main .our-activity__content{
-    padding: 0px 20px;
+    padding: 0px 10px;
   }
 
   .support-details__img {
@@ -242,12 +242,19 @@
   }
 }
 
+@media (max-width: 300px){
+  .card__content_middle span{
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 575px){
 
 
 
   .card__read-btn {
-    padding: 8px 10px 8px 10px;
+    padding: 10px 5px 10px 5px;
+    font-size: 14px;
   }
 
     .support-btn{
@@ -627,7 +634,7 @@ ul {
 
 .thanks blockquote {
   display: block;
-  padding: 0px 4px;
+  padding: 0px 8px;
   color: #88928D;
 }
 
