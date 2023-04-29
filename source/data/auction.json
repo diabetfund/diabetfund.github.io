@@ -1,13 +1,11 @@
 [
    {
-      "Props": {
-         "Id": "rough-ruby",
-         "Pic": "RoughRuby_mini.jpg",
-         "MiniLeft": "RoughRuby_mini1.jpg",
-         "MiniPic": "RoughRuby_mini2.jpg",
-         "MiniRight": "RoughRuby_mini3.jpg",
-         "BigPic": "ruby_main.jpg"
-      },
+      "Id": "rough-ruby",
+      "Pic": "RoughRuby_mini.jpg",
+      "MiniLeft": "RoughRuby_mini1.jpg",
+      "MiniPic": "RoughRuby_mini2.jpg",
+      "MiniRight": "RoughRuby_mini3.jpg",
+      "BigPic": "ruby_main.jpg",
       "En": {
          "Title": "Natural Rough Ruby stone",
          "CertificateIntro": "GEMSTONE REPORT EDELSTEINBERICHT\nRAPPORT DE PIERRE PRÉCIEUSE\nGRS2016-047375\n25th April 2016\nOne rock gemstone"
@@ -18,14 +16,12 @@
       }
    },
    {
-      "Props":{
-         "Id": "rough-ruby",
-         "Pic": "RoughRuby_mini.jpg",
-         "MiniLeft": "RoughRuby_mini1.jpg",
-         "MiniPic": "RoughRuby_mini2.jpg",
-         "MiniRight": "RoughRuby_mini3.jpg",
-         "BigPic": "ruby_main.jpg"
-      },
+      "Id": "rough-ruby",
+      "Pic": "RoughRuby_mini.jpg",
+      "MiniLeft": "RoughRuby_mini1.jpg",
+      "MiniPic": "RoughRuby_mini2.jpg",
+      "MiniRight": "RoughRuby_mini3.jpg",
+      "BigPic": "ruby_main.jpg",
       "En": {
          "Title": "Natural Rough Ruby stone",
          "CertificateIntro": "GEMSTONE REPORT EDELSTEINBERICHT\nRAPPORT DE PIERRE PRÉCIEUSE\nGRS2016-047375\n25th April 2016\nOne rock gemstone"
@@ -36,14 +32,12 @@
       }
    },
    {
-      "Props": {
-         "Id": "rough-ruby",
-         "Pic": "RoughRuby_mini.jpg",
-         "MiniLeft": "RoughRuby_mini1.jpg",
-         "MiniPic": "RoughRuby_mini2.jpg",
-         "MiniRight": "RoughRuby_mini3.jpg",
-         "BigPic": "ruby_main.jpg" 
-      },
+      "Id": "rough-ruby",
+      "Pic": "RoughRuby_mini.jpg",
+      "MiniLeft": "RoughRuby_mini1.jpg",
+      "MiniPic": "RoughRuby_mini2.jpg",
+      "MiniRight": "RoughRuby_mini3.jpg",
+      "BigPic": "ruby_main.jpg",
       "En": {
          "Title": "Natural Rough Ruby stone",
          "CertificateIntro": "GEMSTONE REPORT EDELSTEINBERICHT\nRAPPORT DE PIERRE PRÉCIEUSE\nGRS2016-047375\n25th April 2016\nOne rock gemstone"

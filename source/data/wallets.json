@@ -1,56 +1,68 @@
 [
    {
-      "Props": {
-         "Id": "PrivatUAH",
-         "Address": "5169 3351 0093 7594",
-         "IsCrypto": false
+      "Id": "PrivatUAH",
+      "Address": "5169 3351 0093 7594",
+      "IsCrypto": false,
+      "En": {
+         "Title": "Card"
       },
-      "En": { "Title": "Card" },
-      "Ua": { "Title": "Приват" }
+      "Ua": {
+         "Title": "Приват"
+      }
    },
    {
-      "Props": {
-         "Id": "UAH",
-         "Address": "UA123052990000026005050305667",
-         "IsCrypto": false
+      "Id": "UAH",
+      "Address": "UA123052990000026005050305667",
+      "IsCrypto": false,
+      "En": {
+         "Title": "UAH"
       },
-      "En": { "Title": "UAH" },
-      "Ua": { "Title": "UAH" }
+      "Ua": {
+         "Title": "UAH"
+      }
    },
    {
-      "Props": {
-         "Id": "USD",
-         "Address": "UA113052990000026008050316738",
-         "IsCrypto": false
+      "Id": "USD",
+      "Address": "UA113052990000026008050316738",
+      "IsCrypto": false,
+      "En": {
+         "Title": "USD"
       },
-      "En": { "Title": "USD" },
-      "Ua": { "Title": "USD" }
+      "Ua": {
+         "Title": "USD"
+      }
    },
    {
-      "Props": {
-         "Id": "EUR",
-         "Address": "UA343052990000026006050334046",
-         "IsCrypto": false
+      "Id": "EUR",
+      "Address": "UA343052990000026006050334046",
+      "IsCrypto": false,
+      "En": {
+         "Title": "EUR"
       },
-      "En": { "Title": "EUR" },
-      "Ua": { "Title": "EUR" }
+      "Ua": {
+         "Title": "EUR"
+      }
    },
    {
-      "Props": {
-         "Id": "ETH",
-         "Address": "0xd365D6aeec70412B806e28C6648c5b8d59668745",
-         "IsCrypto": true
+      "Id": "ETH",
+      "Address": "0xd365D6aeec70412B806e28C6648c5b8d59668745",
+      "IsCrypto": true,
+      "En": {
+         "Title": "Ethereum"
       },
-      "En": { "Title": "Ethereum" },
-      "Ua": { "Title": "Ethereum" }
+      "Ua": {
+         "Title": "Ethereum"
+      }
    },
    {
-      "Props": {
-         "Id": "BTC",
-         "Address": "bc1q6p9nsuzanggxypg4x0dafjtdp2mm5t6nuvfhdx",
-         "IsCrypto": true
+      "Id": "BTC",
+      "Address": "bc1q6p9nsuzanggxypg4x0dafjtdp2mm5t6nuvfhdx",
+      "IsCrypto": true,
+      "En": {
+         "Title": "Bitcoin"
       },
-      "En": { "Title": "Bitcoin" },
-      "Ua": { "Title": "Bitcoin" }
+      "Ua": {
+         "Title": "Bitcoin"
+      }
    }
 ]

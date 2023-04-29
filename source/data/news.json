@@ -1,10 +1,8 @@
 [
    {
-      "Props": {
-         "Id": "a-scientist-from-kazakhstan-has-invented-a-unique-method-of-treating-diabetes",
-         "Pic": "June2022/rgrGFwf8OVJvBj2L6oLo.jpg",
-         "Date": "27.06.2022"
-      },
+      "Id": "a-scientist-from-kazakhstan-has-invented-a-unique-method-of-treating-diabetes",
+      "Pic": "June2022/rgrGFwf8OVJvBj2L6oLo.jpg",
+      "Date": "2022-06-27",
       "En": {
          "Title": "A scientist from Kazakhstan has found a unique method for treating diabetes",
          "Descr": "Scientist at the Institute of Molecular Biology and Biochemistry of the Ministry of Education and Science of the Republic of Kazakhstan Bakhitzhan Alzhanuli has developed a special method of treatment of cicatricial diabetes."
@@ -15,11 +13,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "curasonix-a-unique-system-for-solving-problems-in-people-with-difficulty-healing-wounds-soon-in-ukraine",
-         "Pic": "June2022/hmSTFN7OHYSzc86gV0Gn.jpg",
-         "Date": "27.06.2022"
-      },
+      "Id": "curasonix-a-unique-system-for-solving-problems-in-people-with-difficulty-healing-wounds-soon-in-ukraine",
+      "Pic": "June2022/hmSTFN7OHYSzc86gV0Gn.jpg",
+      "Date": "2022-06-27",
       "En": {
          "Title": "Curasonix. A unique system for solving problems in people with difficulty healing wounds, soon in Ukraine",
          "Descr": "Recently, the Foundation's founder, Eduard Piskunov, signed an exclusive agreement with the German company Curasonix to supply Ukraine with an innovative system that can solve the problems of people with difficulty healing wounds."
@@ -30,11 +26,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "10-symptoms-of-diabetes-how-to-recognize-the-first-signs-of-the-disease",
-         "Pic": "June2022/eMZSJOjbleE1dezkWeI2.jpg",
-         "Date": "27.06.2022"
-      },
+      "Id": "10-symptoms-of-diabetes-how-to-recognize-the-first-signs-of-the-disease",
+      "Pic": "June2022/eMZSJOjbleE1dezkWeI2.jpg",
+      "Date": "2022-06-27",
       "En": {
          "Title": "10 symptoms of diabetes: how to spot the first signs of the disease",
          "Descr": "According to the <a href='https://diabetesatlas.com.ua/en'>Diabetes Atlas</a>, the number of diabetic patients in Ukraine reached over 2.3 million by the end of 2021"
@@ -45,11 +39,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "study-of-the-effects-of-omega-3-and-vitamin-d-on-type-1-diabetes",
-         "Pic": "June2022/dSrWw7miQrkAGR7Dt0xz.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "study-of-the-effects-of-omega-3-and-vitamin-d-on-type-1-diabetes",
+      "Pic": "June2022/dSrWw7miQrkAGR7Dt0xz.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Study of the effects of Omega-3 and vitamin D on type 1 diabetes",
          "Descr": "Miami Research Institute conducts clinical trial to evaluate the effects of omega-3 fatty acids and vitamin D on diabetes progression"
@@ -60,11 +52,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "american-developments-bandage-for-rapid-wound-healing",
-         "Pic": "June2022/cq4MkdXNYKnwFMGj1FdJ.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "american-developments-bandage-for-rapid-wound-healing",
+      "Pic": "June2022/cq4MkdXNYKnwFMGj1FdJ.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "American Developments: Bandage for Rapid Wound Healing",
          "Descr": "Researchers from Illinois have developed a bandage that accelerates the healing of wounds and skin lesions in diabetics by 33%"
@@ -75,11 +65,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "studies-by-danish-scientists-show-the-benefits-of-a-low-carbohydrate-diet-for-diabetics",
-         "Pic": "June2022/jV9zTBLeCRufw1ULE93f.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "studies-by-danish-scientists-show-the-benefits-of-a-low-carbohydrate-diet-for-diabetics",
+      "Pic": "June2022/jV9zTBLeCRufw1ULE93f.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Studies by Danish scientists show the benefits of a low-carbohydrate diet for diabetics",
          "Descr": "Copenhagen researchers find low-carb diets reduce total insulin levels by 22%"
@@ -90,11 +78,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "metformin-and-insulin-do-not-affect-beta-cell-function-in-children-with-type-2-diabetes",
-         "Pic": "June2022/AFMVUeoaD8dCXXJISpV0.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "metformin-and-insulin-do-not-affect-beta-cell-function-in-children-with-type-2-diabetes",
+      "Pic": "June2022/AFMVUeoaD8dCXXJISpV0.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Metformin and insulin do not affect beta cell function in children with type 2 diabetes",
          "Descr": "Treatment with children who have recently been diagnosed with type 2 diabetes with metformin or insulin cannot stop the regression of beta cells"
@@ -105,11 +91,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "improving-air-quality-can-prevent-type-2-diabetes",
-         "Pic": "June2022/DyDJxF4QJzPGXufI55eK.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "improving-air-quality-can-prevent-type-2-diabetes",
+      "Pic": "June2022/DyDJxF4QJzPGXufI55eK.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Improving air quality can prevent type 2 diabetes",
          "Descr": "Washington scientists have proposed a theory that reducing air pollution can reduce the number of people with type 2 diabetes"
@@ -120,11 +104,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "radar-technology-for-daily-sugar-control",
-         "Pic": "June2022/iQloPgKaR0G4z0gHsNBI.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "radar-technology-for-daily-sugar-control",
+      "Pic": "June2022/iQloPgKaR0G4z0gHsNBI.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Radar technology for daily sugar control",
          "Descr": "The symbiosis of medicine and modern technology can significantly improve the quality of life of patients with diabetes - as evidenced"
@@ -135,11 +117,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "ascensia-launches-new-cgm-system-for-diabetics-with-china-s-poctech",
-         "Pic": "June2022/XJAeudMXr1nFO1KDQORh.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "ascensia-launches-new-cgm-system-for-diabetics-with-china-s-poctech",
+      "Pic": "June2022/XJAeudMXr1nFO1KDQORh.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Ascensia launches new CGM system for diabetics with China's POCTech",
          "Descr": "Swiss company Ascensia Diabetes Care, founded several years ago as a result of the merger of Bayer Health's diabetes division and Panasonic Healthcare, officially enters the systems market"
@@ -150,11 +130,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "advanced-geneticists-have-stopped-the-development-of-type-2-diabetes-in-mice",
-         "Pic": "June2022/3sUHWcaloLWA0Lejfgom.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "advanced-geneticists-have-stopped-the-development-of-type-2-diabetes-in-mice",
+      "Pic": "June2022/3sUHWcaloLWA0Lejfgom.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Advanced geneticists have stopped the development of type 2 diabetes in mice",
          "Descr": "The first step in the treatment of type 2 diabetes has been made - scientists have reduced insulin resistance in mice. To date, type 2 diabetes has been considered an incurable disease. In medical practice, there was no complete case"
@@ -165,11 +143,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "insulin-patch-instead-of-painful-injections",
-         "Pic": "June2022/Y5iffVDird0R87ow4dmg.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "insulin-patch-instead-of-painful-injections",
+      "Pic": "June2022/Y5iffVDird0R87ow4dmg.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Insulin patch instead of painful injections",
          "Descr": "A smart insulin patch can replace painful injections, which will improve the living standards of patients with diabetes."
@@ -180,11 +156,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "insulin-pump-for-insulin-delivery-24-7",
-         "Pic": "June2022/BiscE1PskYMxpatRkTfX.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "insulin-pump-for-insulin-delivery-24-7",
+      "Pic": "June2022/BiscE1PskYMxpatRkTfX.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Insulin pump for insulin delivery 24/7",
          "Descr": "The pump simulates the process of receiving insulin by the pancreas of a healthy person, is used for continuous supply of insulin 24 hours a day. Jumps in blood sugar can cause both long-term and short-term"
@@ -195,11 +169,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "prolonged-insulin",
-         "Pic": "June2022/3keulQHwiU4mnvOH0686.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "prolonged-insulin",
+      "Pic": "June2022/3keulQHwiU4mnvOH0686.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "Prolonged insulin",
          "Descr": "Prolonged insulin helps to mimic the work of the pancreas and maintains the effect for 24 hours. Long-acting insulin (prolonged) is an analogue of insulin, which is stably released into the blood and which can last more than 24 hours."
@@ -210,11 +182,9 @@
       }
    },
    {
-      "Props": {
-         "Id": "blood-glucose-monitoring-systems",
-         "Pic": "June2022/tN9r3SFSVLwoanmuuPu4.jpg",
-         "Date": "09.06.2022"
-      },
+      "Id": "blood-glucose-monitoring-systems",
+      "Pic": "June2022/tN9r3SFSVLwoanmuuPu4.jpg",
+      "Date": "2022-06-09",
       "En": {
          "Title": "POCTech launches sales of continuous blood glucose monitoring systems in Ukraine",
          "Descr": "The Chinese company POCTech, which in January 2019 signed a cooperation agreement with the Swiss Ascensia Diabetes Care, announced the start of sales of continuous blood glucose monitoring systems in Ukraine from April 10, 2019."

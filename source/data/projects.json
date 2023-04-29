@@ -1,15 +1,13 @@
 [
    {
-      "Props": {
-         "Id": "assistance-to-zsu",
-         "IsMilitary": true,
-         "Need": 2600,
-         "Funds": 720,
-         "Pic": "proj/zsu",
-         "MiniPic": "proj/zsu-card",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
-         "ReportId": "report-zsu-new"
-      },
+      "Id": "assistance-to-zsu",
+      "IsMilitary": true,
+      "Need": 2600,
+      "Funds": 720,
+      "Pic": "proj/zsu",
+      "MiniPic": "proj/zsu-card",
+      "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
+      "ReportId": "report-zsu-new",
       "En": {
          "Title": "Assistance to ZSU",
          "Descr": "A fundraising company for the everyday needs of soldiers of military units 4457 of the Armed Forces of Ukraine, which protects us from Russian invaders on the front line."
@@ -20,15 +18,13 @@
       }
    },
    {
-      "Props": {
-         "Id": "help-rehab",
-         "IsMilitary": false,
-         "Need": 4000,
-         "Funds": 1254,
-         "Pic": "proj/rehub-center",
-         "MiniPic": "proj/rehub-center-card",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
+      "Id": "help-rehab",
+      "IsMilitary": false,
+      "Need": 4000,
+      "Funds": 1254,
+      "Pic": "proj/rehub-center",
+      "MiniPic": "proj/rehub-center-card",
+      "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
          "Title": "Rehabilitation course for children with diabetes",
          "Descr": "You can help pay for a trip to the Center for a person with diabetes and their companion. The foundation covers most of the costs of patients staying in our Center on its own, and with your support we can collect enough money and provide our citizens with a full course of the health program."
@@ -39,15 +35,13 @@
       }
    },
    {
-      "Props": {
-         "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
-         "IsMilitary": false,
-         "Need": 0,
-         "Funds": 807,
-         "Pic": "proj/sensors",
-         "MiniPic": "proj/sensors-card",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      },
+      "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
+      "IsMilitary": false,
+      "Need": 0,
+      "Funds": 807,
+      "Pic": "proj/sensors",
+      "MiniPic": "proj/sensors-card",
+      "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Promo": "/img/fun/promo1_en.mp4",
          "Title": "Helping with glucose sensors",
@@ -60,16 +54,14 @@
       }
    },
    {
-      "Props": {
-         "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
-         "IsMilitary": false,
-         "Need": 0,
-         "Funds": 5502,
-         "Pic": "proj/gluk",
-         "MiniPic": "proj/gluk-card",
-         "ReportId": "report-glukometers",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      },
+      "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
+      "IsMilitary": false,
+      "Need": 0,
+      "Funds": 5502,
+      "Pic": "proj/gluk",
+      "MiniPic": "proj/gluk-card",
+      "ReportId": "report-glukometers",
+      "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Title": "Helping with glucometers and test strips to them",
          "Descr": "One of the activities of the charity fund is medical care for the most vulnerable categories of the population. Our team buys the necessary devices and medicines and gives them to diabetics who do not have the opportunity to buy the necessary devices themselves."
@@ -80,16 +72,14 @@
       }
    },
    {
-      "Props": {
-         "Id": "dopomogti-insulinom",
-         "IsMilitary": false,
-         "Need": 0,
-         "Funds": 500,
-         "Pic": "proj/insulin",
-         "MiniPic": "proj/insulin-card",
-         "ReportId": "report-insulin",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      },
+      "Id": "dopomogti-insulinom",
+      "IsMilitary": false,
+      "Need": 0,
+      "Funds": 500,
+      "Pic": "proj/insulin",
+      "MiniPic": "proj/insulin-card",
+      "ReportId": "report-insulin",
+      "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Title": "Helping with insulin",
          "Descr": "Charitable foundation helps people who suffer from diabetes and need urgent medical care. We understand the importance of public support, and therefore encourage everyone to join the fundraiser and provide patients with the opportunity to live a full life."
@@ -100,15 +90,13 @@
       }
    },
    {
-      "Props": {
-         "Id": "dopomogti-cukrozaminnykom",
-         "IsMilitary": false,
-         "Need": 0,
-         "Funds": 2002,
-         "Pic": "proj/sweet",
-         "MiniPic": "proj/sweet-card",
-         "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf"
-      },
+      "Id": "dopomogti-cukrozaminnykom",
+      "IsMilitary": false,
+      "Need": 0,
+      "Funds": 2002,
+      "Pic": "proj/sweet",
+      "MiniPic": "proj/sweet-card",
+      "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Title": "Helping with sweetener",
          "Descr": "Artificial sweeteners serve as replacements for natural sugars and sugar alcohols, offering a non-caloric option that is much sweeter than regular sugar."
@@ -119,16 +107,14 @@
       }
    },
    {
-      "Props": {
-         "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
-         "IsMilitary": true,
-         "Need": 720,
-         "Funds": 720,
-         "Pic": "proj/zsu-old-card",
-         "MiniPic": "proj/zsu-old-card",
-         "ReportId": "report-zsu",
-         "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf"
-      },
+      "Id": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
+      "IsMilitary": true,
+      "Need": 720,
+      "Funds": 720,
+      "Pic": "proj/zsu-old-card",
+      "MiniPic": "proj/zsu-old-card",
+      "ReportId": "report-zsu",
+      "Pdf": "June2022/BzkgdWL5PvHWZ1AXFtIH.pdf",
       "En": {
          "Title": "Assistance to military units A5717; A0998; A0284; A1277; A1108",
          "Descr": "The campaign to raise funds for the needs of fighters of military units A5717; A0998; A0284; A1277; A1108; of the Armed Forces of Ukraine will allow our defenders to purchase medicines and other personal medicines that will improve their daily life, allow their own strength to provide first aid to their fellows and be protected during combat missions."
