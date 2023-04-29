@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -9,10 +10,8 @@ T[] ReadJ<T>(string table) where T : Item =>
     JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<Item>("news"), ReadJ<Item>("partners"),
-     ReadJ<Thanks>("thanks"), ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"),
-     ReadJ<Stone>("auction"));
-
+    (ReadJ<Project>("projects"), ReadJ<Item>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
+     ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
 
 Render("ua");
 Render("en");
@@ -42,23 +41,18 @@ void Render(string lang)
 
     var culture = CultureInfo.GetCultureInfo(lang)!;
 
-    Func<Item, string> Printer(string viewPath, bool formatDate = false)
+    Func<Item, int, string> Printer(string viewPath, PrinterProps props = default)
     {
         View view = new(Read(viewPath));
-        return it => view.Run(
-            it,
-            it.GetLocale(lang),
-            formatDate ? new { LocaleDate = it.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat) } : null);
+        return (it, i) => view.Run(it, it.Locale(lang), props.LocDate(it, culture), props.DesktopOnly(i));
     }
 
-    string Join<T>(string viewPath, IEnumerable<T> xs, bool formatDate = false) where T: Item =>
-        string.Join("\n", xs.Select(Printer(viewPath, formatDate)));
+    string Join<T>(string viewPath, IEnumerable<T> xs, PrinterProps props = default) where T : Item =>
+        string.Join("\n", xs.Select(Printer(viewPath, props)));
 
-    string ProjectCard(Project p)
-    {
-        var loc = lang is "en" ? p.En : p.Ua;
-        return (loc.Promo is null ? projectCard : projectPromo).Run(p, loc);
-    }
+    Func<Project, int, string> ProjectCard(PrinterProps props = default) => (p, i) =>
+        (p.Locale(lang) is ProjectLoc { Promo: null } ? projectCard : projectPromo)
+            .Run(p, p.Locale(lang), props.DesktopOnly(i, true));
 
     var walletsTable = new View(Read("wallets")).Run(new
     {
@@ -71,16 +65,12 @@ void Render(string lang)
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
 
         topProjects = string.Join("\n",
-            projects.Take(6).Select((p, i) =>
-                ProjectCard(p with { DesktopOnly = i > 3 }))),
+            projects.Take(6).Select(ProjectCard(new(desktopOnly: i => i > 3)))),
 
         slides = Join("slide", slides),
         topThanks = Join("thankCardMain",
-            from thank in thanks
-            let index = thank.MainIndex
-            where index.HasValue
-            orderby index.Value
-            select thank with { DesktopOnly = index.Value > 3 }),
+            thanks.Where(_=>_.MainIndex.HasValue).OrderBy(_ => _.MainIndex),
+            new(desktopOnly: i => i > 2)),
 
         skipAbout = false,
         walletsTable
@@ -88,13 +78,14 @@ void Render(string lang)
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
-    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
-    Out("news", "/news", Join("newsCard", news, true));
+    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard())));
+
+    Out("news", "/news", Join("newsCard", news, new(formatDate: true)));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
     Out("thanks", "/thanks", Join("thankCard",
-        thanks.Where(t => 
+        thanks.Where(t =>
         {
             if (t.Pic is not { } pic)
                 return true;
@@ -103,30 +94,38 @@ void Render(string lang)
             return id < 154 || Thanks.Olds.Contains(id);
         }).Take(110)));
 
-    
-
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
     var projectView = Printer("projectPage");
     foreach (var project in projects)
-            Out(projectView(project), "/fundraising/" + project.Id, new 
-            {
-                content = Read("projects/" + project.Id),
-                walletsTable,
-                report = project.ReportId is {} rep ? Read("projects/" + rep) : null                
-            });
+        Out(projectView(project, 0), "/fundraising/" + project.Id, new
+        {
+            content = Read("projects/" + project.Id),
+            walletsTable,
+            report = project.ReportId is { } rep ? Read("projects/" + rep) : null
+        });
 
-
-    var otherNews = Join("newsCard", news.Take(2), true);
-    var newsView = Printer("newsPage", true);
+    var otherNews = Join("newsCard", news.Take(2), new(formatDate: true));
+    var newsView = Printer("newsPage", new(formatDate: true));
 
     foreach (var props in news)
-        Out(newsView(props), "/news/"+props.Id, new
+        Out(newsView(props, 0), "/news/" + props.Id, new
         {
-            content = Read("news/"+props.Id),
+            content = Read("news/" + props.Id),
             otherNews
         });
+}
+
+readonly struct PrinterProps(bool formatDate = false, Func<int, bool>? desktopOnly = null)
+{
+    public object? LocDate(Item it, CultureInfo culture) =>
+        formatDate ? new { LocaleDate = it.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat) } : null;
+
+    public object? DesktopOnly(int index, bool force = false) =>
+        desktopOnly is null 
+        ? force ? new { DesktopOnly = false } : null
+        : new { DesktopOnly = desktopOnly(index) };
 }
 
 record Locale
@@ -144,20 +143,20 @@ record Item
     public Locale En { get; set; }
     public Locale Ua { get; set; }
 
-    public virtual Locale GetLocale(string lang) => lang is "en" ? En: Ua;
+    public virtual Locale Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<L> : Item where L : Locale 
+record Item<L> : Item where L : Locale
 {
     public required new L En { get; set; }
     public required new L Ua { get; set; }
 
-    public override Locale GetLocale(string lang) => lang is "en" ? En : Ua;
+    public override Locale Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record ProjectLoc(string? Data = null, string? Signature = null, string? Promo = null) : Locale;
+record ProjectLoc(string? Data, string? Signature, string? Promo) : Locale;
 
-record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf, bool DesktopOnly = false) : Item<ProjectLoc>
+record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Item<ProjectLoc>
 {
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
@@ -173,7 +172,7 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pd
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
-{ 
+{
     Sweet, Meter, Libre, Medtronic, Insulin, P999, Cat,
     Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small
 }
@@ -183,18 +182,13 @@ record ThankLoc : Locale
     public string Name => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
-record Thanks(
-    ThankTag[] Tags,
-    int? Altitude = null,
-    string? Video = null,
-    int? MainIndex = null,
-    bool DesktopOnly = false) : Item<ThankLoc>
+record Thanks(ThankTag[] Tags, int? Altitude, string? Video, int? MainIndex) : Item<ThankLoc>
 {
     public string? Fallback => Pic?.Replace("avif", "jpg");
 
     public string Avatar => MiniPic ?? "zero.png";
 
-    public string Alt => string.Join(", ", Alts());
+    //public string Alt => string.Join(", ", Alts());
 
     IEnumerable<string?> Alts()
     {

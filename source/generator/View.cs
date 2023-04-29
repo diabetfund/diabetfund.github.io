@@ -18,20 +18,19 @@ readonly struct View(string template)
                         Convert(Property(Convert(arg, type), prop), typeof(object)))),
                 arg)
             .Compile();
-    
-    public string T => template;
 
-    static IEnumerable<(string, string)> ScalarProperties(object? obj) 
+    public string Run(params object?[] models)
     {
-        if (obj is string content)
-            yield return ("@content", content);
+        var result = template;
+        foreach (var obj in models)
+        {
+            if (obj is string content)
+                result = result.Replace("@content", content);
 
-        else if (obj is { })
-            foreach (var (key, val) in exposes.GetOrAdd(obj.GetType(), PropertiesReader)(obj))
-                yield return (key, val == null ? "null" : val.ToString()!);
+            else if (obj is not null)
+                foreach (var (key, val) in exposes.GetOrAdd(obj.GetType(), PropertiesReader)(obj))
+                    result = result.Replace(key, val is null ? "null" : val.ToString()!);
+        }
+        return result;
     }
-
-    public string Run(params object?[] models) =>
-        models.SelectMany(ScalarProperties).Aggregate(template, (acc, val) =>
-            acc.Replace(val.Item1, val.Item2));
 }
