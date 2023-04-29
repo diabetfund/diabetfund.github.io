@@ -58,7 +58,7 @@ var qrUrls = {
             return location.href = url;
           
         else if (Array.isArray(url))
-            return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 500);
+            return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 300);
     }
     location.href= "/" + (lib.cookEnglish ? "en": "ua");
 })();
