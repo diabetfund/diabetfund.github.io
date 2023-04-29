@@ -1,68 +1,44 @@
 [
    {
-      "Id": "PrivatUAH",
+      "Id": 1,
       "Address": "5169 3351 0093 7594",
       "IsCrypto": false,
-      "En": {
-         "Title": "Card"
-      },
-      "Ua": {
-         "Title": "Приват"
-      }
+      "En": "Card",
+      "Ua": "Приват"
    },
    {
-      "Id": "UAH",
+      "Id": 2,
       "Address": "UA123052990000026005050305667",
       "IsCrypto": false,
-      "En": {
-         "Title": "UAH"
-      },
-      "Ua": {
-         "Title": "UAH"
-      }
+      "En": "UAH",
+      "Ua": "UAH"
    },
    {
-      "Id": "USD",
+      "Id": 3,
       "Address": "UA113052990000026008050316738",
       "IsCrypto": false,
-      "En": {
-         "Title": "USD"
-      },
-      "Ua": {
-         "Title": "USD"
-      }
+      "En": "USD",
+      "Ua": "USD"
    },
    {
-      "Id": "EUR",
+      "Id": 4,
       "Address": "UA343052990000026006050334046",
       "IsCrypto": false,
-      "En": {
-         "Title": "EUR"
-      },
-      "Ua": {
-         "Title": "EUR"
-      }
+      "En": "EUR",
+      "Ua": "EUR"
    },
    {
-      "Id": "ETH",
+      "Id": 5,
       "Address": "0xd365D6aeec70412B806e28C6648c5b8d59668745",
       "IsCrypto": true,
-      "En": {
-         "Title": "Ethereum"
-      },
-      "Ua": {
-         "Title": "Ethereum"
-      }
+      "En": "Ethereum",
+      "Ua": "Ethereum"
    },
    {
-      "Id": "BTC",
+      "Id": 6,
       "Address": "bc1q6p9nsuzanggxypg4x0dafjtdp2mm5t6nuvfhdx",
       "IsCrypto": true,
-      "En": {
-         "Title": "Bitcoin"
-      },
-      "Ua": {
-         "Title": "Bitcoin"
-      }
+      "En": "Bitcoin",
+      "Ua": "Bitcoin"
    }
 ]

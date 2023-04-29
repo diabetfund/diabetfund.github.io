@@ -1,5 +1,4 @@
-﻿using System;
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -10,7 +9,7 @@ T[] ReadJ<T>(string table) where T : Item =>
     JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<Item>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
+    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
      ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
 
 Render("ua");
@@ -39,7 +38,8 @@ void Render(string lang)
         File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
     }
 
-    var culture = CultureInfo.GetCultureInfo(lang)!;
+    PrinterProps newsProps = new(it => (it as News)!.Date);
+    var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
 
     Func<Item, int, string> Printer(string viewPath, PrinterProps props = default)
     {
@@ -51,7 +51,7 @@ void Render(string lang)
         string.Join("\n", xs.Select(Printer(viewPath, props)));
 
     Func<Project, int, string> ProjectCard(PrinterProps props = default) => (p, i) =>
-        (p.Locale(lang) is ProjectLoc { Promo: null } ? projectCard : projectPromo)
+        (p.Locale(lang) is ProjectTopic { Promo: null } ? projectCard : projectPromo)
             .Run(p, p.Locale(lang), props.DesktopOnly(i, true));
 
     var walletsTable = new View(Read("wallets")).Run(new
@@ -80,19 +80,12 @@ void Render(string lang)
     Out("index", "", common);
     Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard())));
 
-    Out("news", "/news", Join("newsCard", news, new(formatDate: true)));
+    Out("news", "/news", Join("newsCard", news, newsProps));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
     Out("thanks", "/thanks", Join("thankCard",
-        thanks.Where(t =>
-        {
-            if (t.Pic is not { } pic)
-                return true;
-            var span = pic.AsSpan();
-            var id = byte.Parse(span[..span.IndexOf('.')]);
-            return id < 154 || Thanks.Olds.Contains(id);
-        }).Take(110)));
+        thanks.Where(t => t.Id.AsNumber() < 154 || Thanks.Olds.Contains((byte)t.Id.AsNumber())).Take(110)));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -106,8 +99,8 @@ void Render(string lang)
             report = project.ReportId is { } rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = Join("newsCard", news.Take(2), new(formatDate: true));
-    var newsView = Printer("newsPage", new(formatDate: true));
+    var otherNews = Join("newsCard", news.Take(2), newsProps);
+    var newsView = Printer("newsPage", newsProps);
 
     foreach (var props in news)
         Out(newsView(props, 0), "/news/" + props.Id, new
@@ -117,10 +110,10 @@ void Render(string lang)
         });
 }
 
-readonly struct PrinterProps(bool formatDate = false, Func<int, bool>? desktopOnly = null)
+readonly struct PrinterProps(Func<Item, DateOnly>? getDate = null, Func<int, bool>? desktopOnly = null)
 {
     public object? LocDate(Item it, CultureInfo culture) =>
-        formatDate ? new { LocaleDate = it.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat) } : null;
+        getDate is null ? null : new { LocaleDate = getDate(it).ToString("dd MMM yyyy", culture!.DateTimeFormat) };
 
     public object? DesktopOnly(int index, bool force = false) =>
         desktopOnly is null 
@@ -128,39 +121,30 @@ readonly struct PrinterProps(bool formatDate = false, Func<int, bool>? desktopOn
         : new { DesktopOnly = desktopOnly(index) };
 }
 
-record Locale
-{
-    public required string Title { get; set; }
-    public string? Descr { get; set; }
-}
-
 record Item
 {
-    public string? Id { get; set; }
-    public string? Pic { get; set; }
-    public string? MiniPic { get; set; }
-    public DateOnly Date { get; set; }
-    public Locale En { get; set; }
-    public Locale Ua { get; set; }
+    public Id Id { get; set; }
+    public Topic En { get; set; }
+    public Topic Ua { get; set; }
 
-    public virtual Locale Locale(string lang) => lang is "en" ? En : Ua;
+    public virtual Topic Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<L> : Item where L : Locale
+record Item<L> : Item where L : Topic
 {
     public required new L En { get; set; }
     public required new L Ua { get; set; }
 
-    public override Locale Locale(string lang) => lang is "en" ? En : Ua;
+    public override Topic Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record ProjectLoc(string? Data, string? Signature, string? Promo) : Locale;
+record ProjectTopic(string? Data, string? Signature, string? Promo) : Topic;
 
-record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string Pdf) : Item<ProjectLoc>
+record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string? Pic, string Pdf) : Item<ProjectTopic>
 {
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
-    public string Url => UrlSegment(Id!);
+    public string Url => UrlSegment(Id.ToString());
 
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
 
@@ -177,16 +161,15 @@ enum ThankTag
     Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small
 }
 
-record ThankLoc : Locale
+[JsonConverter(typeof(TopicConverter<ThankTopic>))]
+record ThankTopic : Topic
 {
     public string Name => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
-record Thanks(ThankTag[] Tags, int? Altitude, string? Video, int? MainIndex) : Item<ThankLoc>
+record Thanks(ThankTag[] Tags, int? Altitude, string? Video, string? Avatar, int? MainIndex, DateOnly Date) : Item<ThankTopic>
 {
-    public string? Fallback => Pic?.Replace("avif", "jpg");
-
-    public string Avatar => MiniPic ?? "zero.png";
+    public string ZeroOrAvatar => Avatar ?? "zero.png";
 
     //public string Alt => string.Join(", ", Alts());
 
@@ -194,19 +177,21 @@ record Thanks(ThankTag[] Tags, int? Altitude, string? Video, int? MainIndex) : I
     {
         foreach (var tag in Tags)
             yield return Enum.GetName(tag);
-        yield return Pic;
+        yield return Id.ToString();
     }
 
     public static ReadOnlySpan<byte> Olds => new byte[] { 193, 212, 182, 223, 197, 198, 166, 160 };
 }
 
-record Slide : Item<ProjectLoc>
+record Slide(string Pic) : Item
 {
-    public string Url => Project.UrlSegment(Id!);
+    public string Url => Project.UrlSegment(Id.ToString());
 }
 
 record Wallet(string Address, bool IsCrypto) : Item;
 
-record StoneLoc(string CertificateIntro) : Locale;
+record News(DateOnly Date): Item;
 
-record Stone(string MiniLeft, string MiniRight) : Item<StoneLoc>;
+record StoneTopic(string CertificateIntro) : Topic;
+
+record Stone(string MiniLeft, string MiniRight) : Item<StoneTopic>;

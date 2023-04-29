@@ -1,87 +1,44 @@
 [
    {
       "Pic": "c1",
-      "MiniPic": "c1-mob",
       "Id": "help-rehab",
-      "En": {
-         "Title": "Rehabilitation center in Slovakia ➜"
-      },
-      "Ua": {
-         "Title": "Реабілітаційний центр у Словаччині ➜"
-      }
+      "En": "Rehabilitation center in Slovakia ➜",
+      "Ua": "Реабілітаційний центр у Словаччині ➜"
    },
    {
       "Pic": "c2",
-      "MiniPic": "c2-mob",
       "Id": "help-rehab",
-      "En": {
-         "Title": "Rehabilitation center in Slovakia ➜"
-      },
-      "Ua": {
-         "Title": "Реабілітаційний центр у Словаччині ➜"
-      }
+      "En": "Rehabilitation center in Slovakia ➜",
+      "Ua": "Реабілітаційний центр у Словаччині ➜"
    },
    {
       "Pic": "c3",
-      "MiniPic": "c3-mob",
       "Id": "help-rehab",
-      "En": {
-         "Title": "Rehabilitation center in Slovakia ➜"
-      },
-      "Ua": {
-         "Title": "Реабілітаційний центр у Словаччині ➜"
-      }
+      "En": "Rehabilitation center in Slovakia ➜",
+      "Ua": "Реабілітаційний центр у Словаччині ➜"
    },
    {
       "Pic": "sensors",
-      "MiniPic": "sensors-mob",
       "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
-      "En": {
-         "Title": "Helping with glucose sensors ➜",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvc2Ugc2Vuc29ycyB2b2wuMSIsInJlc3VsdF91cmwiOiJodHRwczpcL1wvZGlhYmV0LmZ1bmRcL2VuXC9mdW5kcmFpc2luZyIsImxhbmd1YWdlIjoiZW4iLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==",
-         "Signature": "VXu0hr9MoeVuKUmlpUUCShG2nGY="
-      },
-      "Ua": {
-         "Title": "Допомога сенсорами вимірювання глюкози ➜",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQ0MVx1MDQzNVx1MDQzZFx1MDQ0MVx1MDQzZVx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzJcdTA0MzhcdTA0M2NcdTA0NTZcdTA0NDBcdTA0NGVcdTA0MzJcdTA0MzBcdTA0M2RcdTA0M2RcdTA0NGYgXHUwNDMzXHUwNDNiXHUwNDRlXHUwNDNhXHUwNDNlXHUwNDM3XHUwNDM4IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
-         "Signature": "lhGU6LQ/H3VPnWlvd96Xw781jC8="
-      }
+      "En": "Helping with glucose sensors ➜",
+      "Ua": "Допомога сенсорами вимірювання глюкози ➜"
    },
    {
       "Pic": "glokometer",
-      "MiniPic": "glokometer-mob",
       "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
-      "En": {
-         "Title": "Helping with glucometers ➜",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiSGVscGluZyB3aXRoIGdsdWNvbWV0ZXJzIGFuZCB0ZXN0IHN0cmlwcyB0byB0aGVtIHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW5cL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJlbiIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
-         "Signature": "Of0cYVqPwu2qRI6E5eaCDl1DmrI="
-      },
-      "Ua": {
-         "Title": "Допомога глюкометрами й тест-смужками до них",
-         "Data": "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDE0XHUwNDNlXHUwNDNmXHUwNDNlXHUwNDNjXHUwNDNlXHUwNDMzXHUwNDQyXHUwNDM4IFx1MDQzM1x1MDQzYlx1MDQ0ZVx1MDQzYVx1MDQzZVx1MDQzY1x1MDQzNVx1MDQ0Mlx1MDQ0MFx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzkgXHUwNDQyXHUwNDM1XHUwNDQxXHUwNDQyLVx1MDQ0MVx1MDQzY1x1MDQ0M1x1MDQzNlx1MDQzYVx1MDQzMFx1MDQzY1x1MDQzOCBcdTA0MzRcdTA0M2UgXHUwNDNkXHUwNDM4XHUwNDQ1IHZvbC4xIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvdWFcL2Z1bmRyYWlzaW5nIiwibGFuZ3VhZ2UiOiJ1ayIsInZlcnNpb24iOiIzIiwicHVibGljX2tleSI6ImkzMDc4NDgxNTE0MyJ9",
-         "Signature": "BsZrgWraD6Wy5UETctesYEDGVs0="
-      }
+      "En": "Helping with glucometers ➜",
+      "Ua": "Допомога глюкометрами й тест-смужками до них"
    },
    {
       "Pic": "sweetener",
-      "MiniPic": "sweetener-mob",
       "Id": "dopomogti-cukrozaminnykom",
-      "En": {
-         "Title": "Helping with sweetener ➜"
-      },
-      "Ua": {
-         "Title": "Допомога цукрозамінником та сумішшю для випікання"
-      }
+      "En": "Helping with sweetener ➜",
+      "Ua": "Допомога цукрозамінником та сумішшю для випікання"
    },
    {
       "Pic": "zsu",
-      "MiniPic": "zsu-mob",
       "Id": "assistance-to-zsu",
-      "En": {
-         "Title": "Assistance to military ➜"
-      },
-      "Ua": {
-         "Title": "Допомога ЗСУ ➜"
-      }
+      "En": "Assistance to military ➜",
+      "Ua": "Допомога ЗСУ ➜"
    }
 ]
