@@ -509,7 +509,7 @@ lib.go(sendButt => {
                location.href="/";
        }
        else
-           alert(lib.isEnglish ? "Something went wrong": "щось пішло не так");
+           alert("щось пішло не так");
    });
 },
 document.getElementById("seld-recipiet") as HTMLButtonElement);

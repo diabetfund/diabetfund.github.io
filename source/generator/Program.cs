@@ -2,14 +2,14 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-var version = 51;
+var version = 52;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-T[] ReadJ<T>(string table) where T : Item =>
+T[] ReadJ<T>(string table) =>
     JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
+    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item<string>>("partners"), ReadJ<Thanks>("thanks"),
      ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
 
 Render("ua");
@@ -85,7 +85,7 @@ void Render(string lang)
     Out("auctionDetail", "/detail");
 
     Out("thanks", "/thanks", Join("thankCard",
-        thanks.Where(t => t.Id.AsNumber() < 154 || Thanks.Olds.Contains((byte)t.Id.AsNumber())).Take(110)));
+        thanks.Where(t => t.Id < 154 || Thanks.Olds.Contains((byte)t.Id)).Take(110)));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -123,28 +123,32 @@ readonly struct PrinterProps(Func<Item, DateOnly>? getDate = null, Func<int, boo
 
 record Item
 {
-    public Id Id { get; set; }
     public Topic En { get; set; }
     public Topic Ua { get; set; }
 
     public virtual Topic Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<L> : Item where L : Topic
+record Item<TId> : Item 
 {
-    public required new L En { get; set; }
-    public required new L Ua { get; set; }
+    public TId Id { get; set; }
+}
+
+record Item<TId, TTopic> : Item<TId> where TTopic : Topic
+{
+    public new TTopic En { get; set; }
+    public new TTopic Ua { get; set; }
 
     public override Topic Locale(string lang) => lang is "en" ? En : Ua;
 }
 
 record ProjectTopic(string? Data, string? Signature, string? Promo) : Topic;
 
-record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string? Pic, string Pdf) : Item<ProjectTopic>
+record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string? Pic, string Pdf) : Item<string, ProjectTopic>
 {
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
-    public string Url => UrlSegment(Id.ToString());
+    public string Url => UrlSegment(Id);
 
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
 
@@ -167,9 +171,12 @@ record ThankTopic : Topic
     public string Name => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
-record Thanks(ThankTag[] Tags, int? Altitude, string? Video, string? Avatar, int? MainIndex, DateOnly Date) : Item<ThankTopic>
+record Thanks(ThankTag[] Tags, int? Altitude, string? Video, string? Avatar, int? MainIndex, DateOnly Date) : Item<int, ThankTopic>
 {
-    public string ZeroOrAvatar => Avatar ?? "zero.png";
+    public string ZeroOrAvatar =>
+        Avatar is null ? "zero.png" : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png") : Avatar;
+
+    public string ModernAvatar => Avatar ?? "zero.webp";
 
     //public string Alt => string.Join(", ", Alts());
 
@@ -183,15 +190,18 @@ record Thanks(ThankTag[] Tags, int? Altitude, string? Video, string? Avatar, int
     public static ReadOnlySpan<byte> Olds => new byte[] { 193, 212, 182, 223, 197, 198, 166, 160 };
 }
 
-record Slide(string Pic) : Item
+record Slide(string Pic) : Item<string>
 {
-    public string Url => Project.UrlSegment(Id.ToString());
+    public string Url => Project.UrlSegment(Id);
 }
 
-record Wallet(string Address, bool IsCrypto) : Item;
+record Wallet(string Address, bool IsCrypto) : Item<int>;
 
-record News(DateOnly Date): Item;
+record News(DateOnly Date) : Item<string>
+{
+    public string JsonDate => Date.ToString("o");
+}
 
 record StoneTopic(string CertificateIntro) : Topic;
 
-record Stone(string MiniLeft, string MiniRight) : Item<StoneTopic>;
+record Stone(string MiniLeft, string MiniRight) : Item<string, StoneTopic>;

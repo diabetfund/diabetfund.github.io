@@ -31,28 +31,23 @@
       "Avatar": "ava-148.webp",
       "Altitude": 1,
       "Ua": ["Олена", "Доброго вечера! Дякую від усього серця волонтерам. Особисто пану Сергію, у вас велике серце. Низкий вам уклін, таких як ви десятки!!! Особисто від мене:  я не очікувала, я не вірю в казку, але не повірити в мій час ви є..... Дякую вам велике ви чарівники.!!!!!"],
-      "En": ["Lena", "Good evening! Thank you from the bottom of my heart to the volunteers. Personally, Mr. Sergey, you have a big heart. A low bow to you, dozens of you!!! Personally from me: I didn't expect it, I don't believe in a fairy tale, but you are unbelievable in my time..... Thank you so much, you magicians.!!!!!"
-      ]
+      "En": ["Lena", "Good evening! Thank you from the bottom of my heart to the volunteers. Personally, Mr. Sergey, you have a big heart. A low bow to you, dozens of you!!! Personally from me: I didn't expect it, I don't believe in a fairy tale, but you are unbelievable in my time..... Thank you so much, you magicians.!!!!!"]
    },
    {
       "Id": 193,
       "Date": "2023-04-06",
       "Tags": ["Sweet","Meter","Old","BedRidden"],
       "Altitude": 1,
-      "Ua": ["Олена Шевченко", "Велике дякую за допомогу! Для нас це вкрай важливо - знати свої цукора.... Ви робите велике діло! Ви - найкращі! Жодного благодійного фонду по допомозі діабетикам в Україні не бачила, крім вашого! Ми ВПО, житло окуповане та знищене. Ви нам дуже допомогли. Велике ДЯКУЮ!  Дай Бог вам і надали сил, здоров'я, миру і Перемоги! Не опускайте рук через невдоволених подопічних, ви робите велике діло! Дуже вам вдячні! Бережіть себе! Все буде Україна!"
-      ],
-      "En": ["Olena Shevchenko", "Thank you very much for your help! It is extremely important for us to know your sugars.... You are doing a great job! You are the best! I have not seen any charity fund to help diabetics in Ukraine, except yours! We are IDPs, the housing is occupied and destroyed. You have helped us a lot. Thank you very much! May God grant you strength, health, peace and Victory! Do not give up because of disgruntled wards, you are doing a great job! Thank you very much! Keep yourselves! Everything will be Ukraine!"
-      ]
+      "Ua": ["Олена Шевченко", "Велике дякую за допомогу! Для нас це вкрай важливо - знати свої цукора.... Ви робите велике діло! Ви - найкращі! Жодного благодійного фонду по допомозі діабетикам в Україні не бачила, крім вашого! Ми ВПО, житло окуповане та знищене. Ви нам дуже допомогли. Велике ДЯКУЮ!  Дай Бог вам і надали сил, здоров'я, миру і Перемоги! Не опускайте рук через невдоволених подопічних, ви робите велике діло! Дуже вам вдячні! Бережіть себе! Все буде Україна!"],
+      "En": ["Olena Shevchenko", "Thank you very much for your help! It is extremely important for us to know your sugars.... You are doing a great job! You are the best! I have not seen any charity fund to help diabetics in Ukraine, except yours! We are IDPs, the housing is occupied and destroyed. You have helped us a lot. Thank you very much! May God grant you strength, health, peace and Victory! Do not give up because of disgruntled wards, you are doing a great job! Thank you very much! Keep yourselves! Everything will be Ukraine!"]
    },
    {
       "Id": 152,
       "Avatar": "ava-152.webp",
       "Date": "2023-04-15",
       "Tags": ["Libre"],
-      "Ua": ["Тетяна Прядка", "Отримали посилочку. ВЕЛИЧЕЗНЕ ДЯКУЮ  фонду і особисто  Сергію та  його команді за можливість отримати сенсор за програмою 50×50. Тепер ми можемо моніторити і контролювати цукор.  Миру, успіху та благополуччя всім вам. Зі Великоднем. Хай БЕРЕЖЕ ВАС АНГЕЛ 🙏🙏🙏, Ви непевершені. 💙"
-      ],
-      "En": ["Tetiana Prjadka", "Received the parcel. A HUGE THANK YOU to the foundation and personally to Serhiy and his team for the opportunity to receive a sensor under the 50×50 program. Now we can monitor and control sugar. Peace, success and prosperity to you all. Happy Easter. May the ANGEL PROTECT YOU 🙏🙏🙏, You are imperfect. 💙"
-      ]
+      "Ua": ["Тетяна Прядка", "Отримали посилочку. ВЕЛИЧЕЗНЕ ДЯКУЮ  фонду і особисто  Сергію та  його команді за можливість отримати сенсор за програмою 50×50. Тепер ми можемо моніторити і контролювати цукор.  Миру, успіху та благополуччя всім вам. Зі Великоднем. Хай БЕРЕЖЕ ВАС АНГЕЛ 🙏🙏🙏, Ви непевершені. 💙"],
+      "En": ["Tetiana Prjadka", "Received the parcel. A HUGE THANK YOU to the foundation and personally to Serhiy and his team for the opportunity to receive a sensor under the 50×50 program. Now we can monitor and control sugar. Peace, success and prosperity to you all. Happy Easter. May the ANGEL PROTECT YOU 🙏🙏🙏, You are imperfect. 💙"]
    },
    {
       "Id": 149,
@@ -263,11 +258,9 @@
       "Id": 179,
       "Date": "2023-04-10",
       "Tags": ["Meter","Sweet","Old"],
-      "Ua": [
-         "Надiя Сiнiця", "Доброго дня! Щиро дякую працівникам  Благодійного фонду за допомогу. Здоров'я вам та вашим близьким. Дякую ❤️"
+      "Ua": ["Надiя Сiнiця", "Доброго дня! Щиро дякую працівникам  Благодійного фонду за допомогу. Здоров'я вам та вашим близьким. Дякую ❤️"
       ],
-      "En": [
-         "Nadija Sinitsa", "Good day! I sincerely thank the employees of the Charitable Foundation for their help. Health to you and your loved ones. Thank you ❤️"
+      "En": ["Nadija Sinitsa", "Good day! I sincerely thank the employees of the Charitable Foundation for their help. Health to you and your loved ones. Thank you ❤️"
       ]
    },
    {
@@ -275,34 +268,23 @@
       "Avatar": "card-64-ava.png",
       "Date": "2023-04-10",
       "Tags": ["Libre","Small"],
-      "Ua": [
-         "Полiна Карпан", "Дуже дякуємо фонду та благодійникам за можливість краще компенсувати діабет для дітей та дорослих України. Особливе дякую Ігорю, Едуарду та Сергію за їх працю."
-      ],
-      "En": [
-         "Polina Karpan", "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
+      "Ua": ["Полiна Карпан", "Дуже дякуємо фонду та благодійникам за можливість краще компенсувати діабет для дітей та дорослих України. Особливе дякую Ігорю, Едуарду та Сергію за їх працю."],
+      "En": ["Polina Karpan", "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
       ]
    },
    {
       "Id": 181,
       "Date": "2023-04-10",
       "Tags": ["Meter","Sweet"],
-      "Ua": [
-         "Наталiя Делiкатна", "Доброго дня, щиро дякую Всім працівникам Благодійного фонду за отриману допомогу... Бережіть себе та своїх рідних. Дякую 😘"
-      ],
-      "En": [
-         "Natalia Delikatna", "Good afternoon, I sincerely thank all the employees of the Charitable Fund for the help received... Take care of yourself and your relatives. Thank you 😘"
-      ]
+      "Ua": ["Наталiя Делiкатна", "Доброго дня, щиро дякую Всім працівникам Благодійного фонду за отриману допомогу... Бережіть себе та своїх рідних. Дякую 😘"],
+      "En": ["Natalia Delikatna", "Good afternoon, I sincerely thank all the employees of the Charitable Fund for the help received... Take care of yourself and your relatives. Thank you 😘"]
    },
    {
       "Id": 212,
       "Date": "2023-03-31",
       "Tags": ["Meter","Sweet","Old"],
-      "Ua": [
-         "", "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."
-      ],
-      "En": [
-         "", "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."
-      ]
+      "Ua": ["", "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."],
+      "En": ["", "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."]
    },
    {
       "Id": 142,
@@ -310,118 +292,78 @@
       "Date": "2023-04-12",
       "Tags": ["Libre"],
       "Altitude": 1,
-      "Ua": [
-         "Алiна", "Щира подяка за таку неймовірну можливість отримати сенсор по програмі 50/50.🙏🙏🙏 Це велика допомога у такі часи. Кожен з нас розуміє що таке діабет і як важко, коли він у твоєї кровиночки. 7 років тому, як ми захворіли, такий чудо девайс був наче якась фантастика! А тепер пальчики уже не такі вимучені. 😃😃😃. Низький уклін всій команді , хто працює не покладаючи рук, хто витрачає стільки сил, часу, фінансів, часто нехтуючи своїми справами і сім'ями, але допомагаючи всім нам ♥️. Ви неймовірні люди!!!! Ні, Ви не люди, Ви - супергерої!!! Дякую!"
-      ],
-      "En": [
-         "Alina", "Sincere thanks for such an incredible opportunity to get a sensor under the 50/50 program. 🙏🙏🙏 This is a great help in times like this. Each of us understands what diabetes is and how difficult it is when it is in your bloodstream. 7 years ago, when we got sick, such a wonderful device was like some kind of fantasy! And now the fingers are not so tired. 😃😃😃. A low bow to the entire team, who work tirelessly, who spend so much effort, time, and finances, often neglecting their affairs and families, but helping all of us ♥️. You are incredible people!!!! No, you are not people, you are superheroes!!! Thank you!"
-      ]
+      "Ua": ["Алiна", "Щира подяка за таку неймовірну можливість отримати сенсор по програмі 50/50.🙏🙏🙏 Це велика допомога у такі часи. Кожен з нас розуміє що таке діабет і як важко, коли він у твоєї кровиночки. 7 років тому, як ми захворіли, такий чудо девайс був наче якась фантастика! А тепер пальчики уже не такі вимучені. 😃😃😃. Низький уклін всій команді , хто працює не покладаючи рук, хто витрачає стільки сил, часу, фінансів, часто нехтуючи своїми справами і сім'ями, але допомагаючи всім нам ♥️. Ви неймовірні люди!!!! Ні, Ви не люди, Ви - супергерої!!! Дякую!"],
+      "En": ["Alina", "Sincere thanks for such an incredible opportunity to get a sensor under the 50/50 program. 🙏🙏🙏 This is a great help in times like this. Each of us understands what diabetes is and how difficult it is when it is in your bloodstream. 7 years ago, when we got sick, such a wonderful device was like some kind of fantasy! And now the fingers are not so tired. 😃😃😃. A low bow to the entire team, who work tirelessly, who spend so much effort, time, and finances, often neglecting their affairs and families, but helping all of us ♥️. You are incredible people!!!! No, you are not people, you are superheroes!!! Thank you!"]
    },
    {
       "Id": 175,
       "Avatar": "ava-175.webp",
       "Date": "2023-04-12",
       "Tags": ["Libre"],
-      "Ua": [
-         "Таня Догодаева", "Дуже дякуємо фонду та Едуарду, Сергію та всім хто допомогає. Мирного неба нам всім скоріше 💙💛"
-      ],
-      "En": [
-         "Tanya Dogodaeva", "Many thanks to the foundation and Eduard, Serhiy and everyone who helps. Peaceful heaven to all of us soon 💙💛"
-      ]
+      "Ua": ["Таня Догодаева", "Дуже дякуємо фонду та Едуарду, Сергію та всім хто допомогає. Мирного неба нам всім скоріше 💙💛"],
+      "En": ["Tanya Dogodaeva", "Many thanks to the foundation and Eduard, Serhiy and everyone who helps. Peaceful heaven to all of us soon 💙💛"]
    },
    {
       "Id": 176,
       "Avatar": "ava-176.webp",
       "Date": "2023-04-12",
       "Tags": ["Libre"],
-      "Ua": [
-         "Ангелiна", "Доброго дня!Неймовірно вдячні за допомогу!Безперервний моніторинг підлітку життєво необхідний!В такі важкі часи ви знаходите сили допомогати іншим!!!Низький уклін вам!!Ви неймовірні!"
-      ],
-      "En": [
-         "Angelina", "Good day!Thank you so much for your help!Continuous monitoring of a teenager is vital!In such difficult times you find the strength to help others!!!Kudos to you!!You are incredible!"
-      ]
+      "Ua": ["Ангелiна", "Доброго дня!Неймовірно вдячні за допомогу!Безперервний моніторинг підлітку життєво необхідний!В такі важкі часи ви знаходите сили допомогати іншим!!!Низький уклін вам!!Ви неймовірні!"],
+      "En": ["Angelina", "Good day!Thank you so much for your help!Continuous monitoring of a teenager is vital!In such difficult times you find the strength to help others!!!Kudos to you!!You are incredible!"]
    },
    {
       "Id": 141,
       "Tags": ["Libre"],
       "Date": "2023-04-14",
       "Avatar": "ava-141.webp",
-      "Ua": [
-         "Лена", "Отримали сьогодні сенсор!!! ДУЖЕ ВДЯЧНІ ВСІМ, хто допомагає в такий нелегкий час з  діа!!! Всім здоров'я і миру!!!💛💙"
-      ],
-      "En": [
-         "Lena", "Received the sensor today!!! VERY GRATEFUL TO ALL WHO HELP IN SUCH A DIFFICULT TIME WITH DIA!!! Health and peace to everyone!!!💛💙"
-      ]
+      "Ua": ["Лена", "Отримали сьогодні сенсор!!! ДУЖЕ ВДЯЧНІ ВСІМ, хто допомагає в такий нелегкий час з  діа!!! Всім здоров'я і миру!!!💛💙"],
+      "En": ["Lena", "Received the sensor today!!! VERY GRATEFUL TO ALL WHO HELP IN SUCH A DIFFICULT TIME WITH DIA!!! Health and peace to everyone!!!💛💙"]
    },
    {
       "Id": 139,
       "Avatar": "ava-139.webp",
       "Tags": ["Libre", "Small"],
       "Date": "2023-04-13",
-      "Ua": [
-         "Каріна Шабаліна", "Добридень. Величезне дякую за допомогу . З ліброю контроль за цукром крові синочка без проблем 24/7. Усім співробітникам фонду низький уклін!"
-      ],
-      "En": [
-         "Karina Shabalina", "Good afternoon. Thank you very much for the help . With my son's good blood sugar control, 24/7 is no problem. Kudos to all employees of the Foundation!"
-      ]
+      "Ua": ["Каріна Шабаліна", "Добридень. Величезне дякую за допомогу . З ліброю контроль за цукром крові синочка без проблем 24/7. Усім співробітникам фонду низький уклін!"],
+      "En": ["Karina Shabalina", "Good afternoon. Thank you very much for the help . With my son's good blood sugar control, 24/7 is no problem. Kudos to all employees of the Foundation!"]
    },
    {
       "Id": 143,
       "Date": "2023-03-12",
       "Tags": ["Libre"],
-      "Ua": [
-         "Наталія Філіна", "Величезна подяка всім співробітникам фонду за самовіддану працю!!!!! Це реально дуже велика допомога, особливо у важкий час."
-      ],
-      "En": [
-         "Natalya Filina", "Huge gratitude to all employees of the fund for selfless work!!!!! This is a really BIG help, especially in a difficult time."
-      ]
+      "Ua": ["Наталія Філіна", "Величезна подяка всім співробітникам фонду за самовіддану працю!!!!! Це реально дуже велика допомога, особливо у важкий час."],
+      "En": ["Natalya Filina", "Huge gratitude to all employees of the fund for selfless work!!!!! This is a really BIG help, especially in a difficult time."]
    },
    {
       "Id": 173,
       "Avatar": "ava-173.webp",
       "Tags": ["Libre"],
       "Date": "2023-04-12",
-      "Ua": [
-         "Кармазин Людмила", "Доброго вечора. Щиро дякуємо  Сергію, Едуарду , Ігорю і всим працівникам фонду за їхню нелегку роботу, терпіння і таку величезну поміч нашим дітям. Здоров'я Вам і мирного неба 💙💛."
-      ],
-      "En": [
-         "Karmazin Ludmila", "Good evening. We sincerely thank Serhii, Eduard, Igor and all the employees of the foundation for their hard work, patience and such great help to our children. Health to you and a peaceful sky 💙💛."
-      ]
+      "Ua": ["Кармазин Людмила", "Доброго вечора. Щиро дякуємо  Сергію, Едуарду , Ігорю і всим працівникам фонду за їхню нелегку роботу, терпіння і таку величезну поміч нашим дітям. Здоров'я Вам і мирного неба 💙💛."],
+      "En": ["Karmazin Ludmila", "Good evening. We sincerely thank Serhii, Eduard, Igor and all the employees of the foundation for their hard work, patience and such great help to our children. Health to you and a peaceful sky 💙💛."]
    },
    {
       "Id": 174,
       "Tags": ["Libre","Adult"],
       "Date": "2023-04-12",
-      "Ua": [
-         "Iрина", "Доброго дня сьогодні отримала сенсор. Величезна подяка Едуарду, Сергію, Ігорю, всім працівникам Фонду, за небайдужість і допомогу, увагу та підтримку. Всім міцного здоров'я, процвітання та розвитку Вашій шляхетній справі."
-      ],
-      "En": [
-         "Iryna", "Good afternoon, I received the sensor today. Huge thanks to Eduard, Sergey, Igor, all the employees of the Foundation, for their care and help, attention and support. Good health, prosperity and development to your noble cause."
-      ]
+      "Ua": ["Iрина", "Доброго дня сьогодні отримала сенсор. Величезна подяка Едуарду, Сергію, Ігорю, всім працівникам Фонду, за небайдужість і допомогу, увагу та підтримку. Всім міцного здоров'я, процвітання та розвитку Вашій шляхетній справі."],
+      "En": ["Iryna", "Good afternoon, I received the sensor today. Huge thanks to Eduard, Sergey, Igor, all the employees of the Foundation, for their care and help, attention and support. Good health, prosperity and development to your noble cause."]
    },
    {
       "Id": 136,
       "Avatar": "ava-136.webp",
       "Date": "2023-04-10",
       "Tags": ["Libre"],
-      "Ua": [
-         "Iнна Криштопа", "Велика подяка фонду та всій команді за можливість отримати сенсор. Дякуємо за вашу працю. Сил вам та натхнення!!💙💛"
-      ],
-      "En": [
-         "Inna Kristopa", "Many thanks to the foundation and the entire team for the opportunity to receive the sensor. Thank you for your work. Strength and inspiration to you!!💙💛"
-      ]
+      "Ua": ["Iнна Криштопа", "Велика подяка фонду та всій команді за можливість отримати сенсор. Дякуємо за вашу працю. Сил вам та натхнення!!💙💛"],
+      "En": ["Inna Kristopa", "Many thanks to the foundation and the entire team for the opportunity to receive the sensor. Thank you for your work. Strength and inspiration to you!!💙💛"]
    },
    {
       "Id": 223,
       "Date": "2023-03-26",
       "Tags": ["Sweet","Meter","Old","P999","BedRidden"],
       "Altitude": 1,
-      "Ua": [
-         "", "Сьогодні отримали вашу посилку. хлопці, ви не уявляєте, як ми вам вдячні, нам зараз це дуже необхідно, дякую вам за швидкість. Передаю величезну подяку та фонду, який вам допомагає, ви великі розумнички. Едуард, вам .персональний респект,з вами приємно було поспілкуватися,більше таких людей. Терпіння вам і не реагуйте на погані коментарі, на жаль, у родині не без виродків. ДЯКУЄМО"
-      ],
-      "En": [
-         "", "We received your parcel today. Guys, you have no idea how grateful we are to you, we really need it now, thank you for your speed. I am also very grateful to the foundation that is helping you, you are very smart. Eduard, to you. Personal respect, with you it was nice to chat, I wish there were more people like this. Be patient and don't react to bad comments, unfortunately, there are a lot of ugly people in the family. THANK YOU"
-      ]
+      "Ua": ["", "Сьогодні отримали вашу посилку. хлопці, ви не уявляєте, як ми вам вдячні, нам зараз це дуже необхідно, дякую вам за швидкість. Передаю величезну подяку та фонду, який вам допомагає, ви великі розумнички. Едуард, вам .персональний респект,з вами приємно було поспілкуватися,більше таких людей. Терпіння вам і не реагуйте на погані коментарі, на жаль, у родині не без виродків. ДЯКУЄМО"],
+      "En": ["", "We received your parcel today. Guys, you have no idea how grateful we are to you, we really need it now, thank you for your speed. I am also very grateful to the foundation that is helping you, you are very smart. Eduard, to you. Personal respect, with you it was nice to chat, I wish there were more people like this. Be patient and don't react to bad comments, unfortunately, there are a lot of ugly people in the family. THANK YOU"]
    },
    {
       "Id": 137,
@@ -429,12 +371,8 @@
       "Tags": ["Libre"],
       "Date": "2023-04-13",
       "Altitude": 2,
-      "Ua": [
-         "Оксана Сугак", "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"
-      ],
-      "En": [
-         "Oksana Sugak", "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"
-      ]
+      "Ua": ["Оксана Сугак", "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"],
+      "En": ["Oksana Sugak", "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"]
    },
    {
       "Id": 130,
@@ -442,12 +380,8 @@
       "Tags": ["Libre"],
       "Avatar": "ava-130.webp",
       "Altitude": 1,
-      "Ua": [
-         "Лена", "Доброго дня! Хочеться подякувати всім, хто бере участь у такій добрій справі, та допомогає людям з ЦД. Донечка дуже рада сенсору! Неймовірно вдячні вам за допомогу та підтримку в це нелегке врем'я! Бажаємо усього найкращого всім, хто працює у цьому проекті! 🤗"
-      ],
-      "En": [
-         "Lena", "Good day! We would like to thank everyone who participates in such a good cause and helps people with diabetes. My daughter is very happy with the sensor! We are incredibly grateful for your help and support during this difficult time! We wish all the best to everyone working on this project! 🤗"
-      ]
+      "Ua": ["Лена", "Доброго дня! Хочеться подякувати всім, хто бере участь у такій добрій справі, та допомогає людям з ЦД. Донечка дуже рада сенсору! Неймовірно вдячні вам за допомогу та підтримку в це нелегке врем'я! Бажаємо усього найкращого всім, хто працює у цьому проекті! 🤗"],
+      "En": ["Lena", "Good day! We would like to thank everyone who participates in such a good cause and helps people with diabetes. My daughter is very happy with the sensor! We are incredibly grateful for your help and support during this difficult time! We wish all the best to everyone working on this project! 🤗"]
    },
    {
       "Id": 116,

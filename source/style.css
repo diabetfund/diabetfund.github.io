@@ -637,7 +637,7 @@ ul {
   overflow: hidden;
 }
 
-.thanks picture img {
+.thanks > picture img {
   border-radius: 5px !important;
   width: 275px;
 }
