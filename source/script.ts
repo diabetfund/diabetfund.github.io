@@ -408,16 +408,17 @@ lib.go((form, butt) => {
 lib.go(wraps => {
    
    for (const wrap of wraps.getElementsByTagName("figure")) {
-       const img = wrap.getElementsByTagName("picture")[0]
-       const video = img?.dataset?.video
-       
+       const img = wrap.getElementsByTagName("picture")[0],
+       video = img?.dataset?.video,
+       tspan = wrap.getElementsByTagName("span")[0],
+       title = tspan?.innerText
+
        if (!video || video == "null")
            continue;
        img.style.cursor = "pointer";
        img.addEventListener("click", e => {
            e.preventDefault();
-           const tspan = wrap.getElementsByTagName("span")[0],
-           name = tspan ? tspan.innerText.trim() : wrap.dataset.title,
+           const name = title?.trim() || wrap.dataset.title,
            [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
            [, width, height] = video.split('_'),
            

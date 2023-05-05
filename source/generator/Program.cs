@@ -5,11 +5,11 @@ using System.Text.Json.Serialization;
 var version = 52;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-T[] ReadJ<T>(string table) =>
-    JsonSerializer.Deserialize<T[]>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
+List<T> ReadJ<T>(string table) =>
+    JsonSerializer.Deserialize<List<T>>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item<string>>("partners"), ReadJ<Thanks>("thanks"),
+    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item<List<string>>>("partners"), ReadJ<Thanks>("thanks"),
      ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
 
 Render("ua");
@@ -22,6 +22,7 @@ void Render(string lang)
         var full = $"{rootPath}source/{path}.html";
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
+
     View master = new(Read("master")),
         projectCard = new(Read("projectCard")),
         projectPromo = new(Read("projectPromo"));
@@ -38,21 +39,27 @@ void Render(string lang)
         File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
     }
 
-    PrinterProps newsProps = new(it => (it as News)!.Date);
     var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
 
-    Func<Item, int, string> Printer(string viewPath, PrinterProps props = default)
+    void AddLocaleItem<T>(List<T> xs, Func<T, string, string> create) where T : Item
+    {
+        foreach (var item in xs)
+            if (item.Locale(lang) is List<string> loc)
+                loc.Add(create(item, loc[0]));
+    }
+    AddLocaleItem(thanks, (_, name) => name is "" ? "" : "&nbsp;" + name + "&nbsp;");
+
+    AddLocaleItem(news, (nw, _) => nw.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat));
+
+
+    string Join<T>(string viewPath, IEnumerable<T> xs) where T : Item
     {
         View view = new(Read(viewPath));
-        return (it, i) => view.Run(it, it.Locale(lang), props.LocDate(it, culture), props.DesktopOnly(i));
+        return string.Join("\n", xs.Select(x => view.Run(x, x.Locale(lang))));
     }
 
-    string Join<T>(string viewPath, IEnumerable<T> xs, PrinterProps props = default) where T : Item =>
-        string.Join("\n", xs.Select(Printer(viewPath, props)));
-
-    Func<Project, int, string> ProjectCard(PrinterProps props = default) => (p, i) =>
-        (p.Locale(lang) is ProjectTopic { Promo: null } ? projectCard : projectPromo)
-            .Run(p, p.Locale(lang), props.DesktopOnly(i, true));
+    string ProjectCard(Project p) =>
+        (p.Locale(lang) is ProjectTopic { Promo: null } ? projectCard : projectPromo).Run(p, p.Locale(lang));
 
     var walletsTable = new View(Read("wallets")).Run(new
     {
@@ -65,12 +72,13 @@ void Render(string lang)
         payDetails = new View(Read("partners-pay")).Run(walletsTable),
 
         topProjects = string.Join("\n",
-            projects.Take(6).Select(ProjectCard(new(desktopOnly: i => i > 3)))),
+            projects.Take(6).Select((p, i) => ProjectCard(p with { DesktopOnly = i > 3 }))),
 
         slides = Join("slide", slides),
         topThanks = Join("thankCardMain",
-            thanks.Where(_=>_.MainIndex.HasValue).OrderBy(_ => _.MainIndex),
-            new(desktopOnly: i => i > 2)),
+            thanks.Where(_ => _.MainIndex.HasValue)
+                  .OrderBy(_ => _.MainIndex)
+                  .Select((t, i) => t with { DesktopOnly = i > 2 })),
 
         skipAbout = false,
         walletsTable
@@ -78,73 +86,64 @@ void Render(string lang)
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
-    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard())));
+    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
 
-    Out("news", "/news", Join("newsCard", news, newsProps));
+    Out("news", "/news", Join("newsCard", news));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
+    
     Out("thanks", "/thanks", Join("thankCard",
-        thanks.Where(t => t.Id < 154 || Thanks.Olds.Contains((byte)t.Id)).Take(110)));
+        thanks.Select((t, i) => (t, i))
+              .Where(_=>_.i < 115 || Thanks.Olds.Contains((byte)_.t.Id))
+              .Select(_=>_.t)
+              .Take(110)));
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
-    var projectView = Printer("projectPage");
-    foreach (var project in projects)
-        Out(projectView(project, 0), "/fundraising/" + project.Id, new
+    View projectView = new(Read("projectPage"));
+    foreach (var p in projects)
+        Out(projectView.Run(p, p.Locale(lang)), "/fundraising/" + p.Id, new
         {
-            content = Read("projects/" + project.Id),
+            content = Read("projects/" + p.Id),
             walletsTable,
-            report = project.ReportId is { } rep ? Read("projects/" + rep) : null
+            report = p.ReportId is { } rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = Join("newsCard", news.Take(2), newsProps);
-    var newsView = Printer("newsPage", newsProps);
+    var otherNews = Join("newsCard", news.Take(2));
+    View newsView = new(Read("newsPage"));
 
     foreach (var props in news)
-        Out(newsView(props, 0), "/news/" + props.Id, new
+        Out(newsView.Run(props, props.Locale(lang)), "/news/" + props.Id, new
         {
             content = Read("news/" + props.Id),
             otherNews
         });
 }
 
-readonly struct PrinterProps(Func<Item, DateOnly>? getDate = null, Func<int, bool>? desktopOnly = null)
-{
-    public object? LocDate(Item it, CultureInfo culture) =>
-        getDate is null ? null : new { LocaleDate = getDate(it).ToString("dd MMM yyyy", culture!.DateTimeFormat) };
-
-    public object? DesktopOnly(int index, bool force = false) =>
-        desktopOnly is null 
-        ? force ? new { DesktopOnly = false } : null
-        : new { DesktopOnly = desktopOnly(index) };
-}
-
 record Item
 {
-    public Topic En { get; set; }
-    public Topic Ua { get; set; }
+    public object? En { get; set; }
+    public object? Ua { get; set; }
 
-    public virtual Topic Locale(string lang) => lang is "en" ? En : Ua;
+    public virtual object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<TId> : Item 
+record Item<TId, TLocale> : Item 
 {
     public TId Id { get; set; }
+    public new TLocale En { get; set; }
+    public new TLocale Ua { get; set; }
+
+    public override object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<TId, TTopic> : Item<TId> where TTopic : Topic
-{
-    public new TTopic En { get; set; }
-    public new TTopic Ua { get; set; }
+record Item<TTopic> : Item<string, TTopic>;
 
-    public override Topic Locale(string lang) => lang is "en" ? En : Ua;
-}
+record ProjectTopic(string Title, string Text, string? Data, string? Signature, string? Promo);
 
-record ProjectTopic(string? Data, string? Signature, string? Promo) : Topic;
-
-record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string? Pic, string Pdf) : Item<string, ProjectTopic>
+record Project(int Need, int Funds, bool IsMilitary, bool DesktopOnly, string? ReportId, string? Pic, string Pdf) : Item<ProjectTopic>
 {
     public bool IsFull => Need == Funds;
     public bool IsInfinite => Need == 0;
@@ -161,17 +160,18 @@ record Project(int Need, int Funds, bool IsMilitary, string? ReportId, string? P
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
-    Sweet, Meter, Libre, Medtronic, Insulin, P999, Cat,
+    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Cat,
     Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small
 }
 
-[JsonConverter(typeof(TopicConverter<ThankTopic>))]
-record ThankTopic : Topic
-{
-    public string Name => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
-}
-
-record Thanks(ThankTag[] Tags, int? Altitude, string? Video, string? Avatar, int? MainIndex, DateOnly Date) : Item<int, ThankTopic>
+record Thanks(
+    ThankTag[] Tags,
+    int? Altitude,
+    string? Video,
+    string? Avatar,
+    int? MainIndex,
+    DateOnly Date,
+    bool DesktopOnly) : Item<int, List<string>>
 {
     public string ZeroOrAvatar =>
         Avatar is null ? "zero.png" : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png") : Avatar;
@@ -195,13 +195,13 @@ record Slide(string Pic) : Item<string>
     public string Url => Project.UrlSegment(Id);
 }
 
-record Wallet(string Address, bool IsCrypto) : Item<int>;
+record Wallet(string Address, bool IsCrypto) : Item<int, string>;
 
-record News(DateOnly Date) : Item<string>
+record News(DateOnly Date) : Item<List<string>>
 {
     public string JsonDate => Date.ToString("o");
 }
 
-record StoneTopic(string CertificateIntro) : Topic;
+record StoneTopic(string Title, string Text, string CertificateIntro);
 
 record Stone(string MiniLeft, string MiniRight) : Item<string, StoneTopic>;

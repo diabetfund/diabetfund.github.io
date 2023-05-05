@@ -1,8 +1,6 @@
 ﻿using System.Collections.Concurrent;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using static System.Linq.Expressions.Expression;
 
 readonly struct View(string template)
@@ -30,67 +28,14 @@ readonly struct View(string template)
             if (obj is string content)
                 result = result.Replace("@content", content);
 
+            else if (obj is List<string> list)
+                for (int i = 0; i < list.Count; i++)
+                    result = result.Replace(i switch { 0 => "@first", 1 => "@second", _ => "@third"}, list[i]);
+
             else if (obj is not null)
                 foreach (var (key, val) in exposes.GetOrAdd(obj.GetType(), PropertiesReader)(obj))
                     result = result.Replace(key, val is null ? "null" : val.ToString()!);
         }
         return result;
-    }
-}
-
-[JsonConverter(typeof(TopicConverter<Topic>))]
-record Topic
-{
-    public string? Title { get; set; }
-    public string? Text { get; set; }
-}
-
-sealed class TopicConverter<T> : JsonConverter<T> where T : Topic, new()
-{
-    public override T? Read(ref Utf8JsonReader reader, Type _, JsonSerializerOptions options)
-    {
-        string? title = null, text = null;
-        switch (reader.TokenType)
-        {
-            case JsonTokenType.String:
-                title = reader.GetString();
-                break;
-
-            case JsonTokenType.StartArray:
-                reader.Read();
-                if (reader.TokenType is JsonTokenType.String)
-                {
-                    title = reader.GetString();
-                    reader.Read();
-                    if (reader.TokenType is JsonTokenType.String)
-                        text = reader.GetString();
-                }
-                while (reader.TokenType != JsonTokenType.EndArray)
-                    reader.Read();
-                break;
-
-            case JsonTokenType.StartObject:
-                while (reader.Read() && reader.TokenType != JsonTokenType.EndObject)
-                {
-                    var isTitle = reader.ValueSpan.SequenceEqual("Title"u8);
-                    reader.Read();
-                    if (reader.TokenType is JsonTokenType.String)
-                        if (isTitle)
-                            title = reader.GetString();
-                        else 
-                            text = reader.GetString();
-                }
-                break;
-        }
-        return new() { Text = text, Title = title ?? throw new JsonException() };
-    }
-
-    public override void Write(Utf8JsonWriter w, T value, JsonSerializerOptions options)
-    {
-        w.WriteStartObject();
-        w.WriteString("Title"u8, value.Title);
-        if (value.Text is { } text)
-            w.WriteString("Text"u8, value.Text);
-        w.WriteEndObject();
     }
 }

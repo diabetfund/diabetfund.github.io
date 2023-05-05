@@ -50,6 +50,91 @@
       "En": ["Tetiana Prjadka", "Received the parcel. A HUGE THANK YOU to the foundation and personally to Serhiy and his team for the opportunity to receive a sensor under the 50×50 program. Now we can monitor and control sugar. Peace, success and prosperity to you all. Happy Easter. May the ANGEL PROTECT YOU 🙏🙏🙏, You are imperfect. 💙"]
    },
    {
+      "Id": 234,
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "Strips", "Vitamin", "Old", "P999"],
+      "Ua": ["Галя", "Дякуемо за допомогу! Вашому фонду,і ваше добре серце,самовіддану працю для хворих людей. Божих вам благословіння!!!"],
+      "En": ["Galya", "Thank you for your help! To your foundation, and your good heart, selfless work for sick people. God bless you!!!"]
+   },
+   {
+      "Id": 235,
+      "Avatar": "ava-235.webp",
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "Vitamin", "Strips", "P999"],
+      "Ua": ["Олеся", "Сьогодні отримали від Фонду посилку. Дуже Вам дякуємо за допомогу діткам в такий нелегкий час. Дай Бог Вам здоров'я, сил і наснаги! Ще раз дякую!"],
+      "En": ["Alesia", "Today we received a parcel from the Foundation. Thank you very much for helping the children in such a difficult time. May God give you health, strength and strength! Thank you again!"]
+   },
+   {
+      "Id": 236,
+      "Date": "2023-05-04",
+      "Tags": ["Adult", "Sweet", "Vitamin", "P999"],
+      "Ua": ["Нiна", "Щойно  отримала від Вашого фонду посилочку. Щіро дякую Вам Едуардо та всієї команді, усім співробітникам Благодійного Фонду,  a також STICHTING VLUCHTELING, за допомогу! ВЕЛИЧЕЗНА ПОДЯКА за Вашу працю, за допомогу і підтримку. . Божого Благословіння Вам і Вашім родинам. Дякую"],
+      "En": ["Nina", "I just received a parcel from your fund. I sincerely thank you Eduardo and the whole team, all the employees of the Charitable Foundation, as well as STICHTING VLUCHTELING, for your help! A HUGE THANK YOU for your work, help and support. . God's Blessings to you and your families. thank you"]
+   },
+   {
+      "Id": 237,
+      "Avatar":"ava-159.webp",
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "P999", "Vitamin"],
+      "Ua": ["Люда🌼", "Дякуємо фонду за надану  допомогу і підтримку, висловлюємо Вам свою повагу і вдячність за небайдужість та доброту❤️."],
+      "En": ["Luda🌼", "We thank the foundation for the help and support provided, we express our respect and gratitude for your care and kindness."]
+   },
+   {
+      "Id": 238,
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "P999", "Vitamin", "Strips", "Adult"],
+      "Ua": ["Лариса", "Щиро вдячна усім співробітникам Благодійного Фонду,  a також STICHTING VLUCHTELING, за допомогу! ВЕЛИЧЕЗНА ПОДЯКА за Вашу працю!"],
+      "En": ["Larisa", "I am sincerely grateful to all the employees of the Charitable Foundation, as well as STICHTING VLUCHTELING, for their help! A HUGE THANK YOU for your work!"]
+   },
+   {
+      "Id": 239,
+      "Altitude":1,
+      "Avatar":"ava-142.webp",
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "P999", "Vitamin"],
+      "Ua": ["Алiна", "Щира подяка Фонду за підтримку! Ви неймовірні і праця Ваша вартує мільйона подяк!!! Ви завжди намагаєтеся допомогти і підтримати. Навіть не уявляю де Ви берете сили, натхнення і час😵‍💫. Ви прекрасні! Нехай добро повертається до Вас сторицею ♥️♥️♥️"],
+      "En": ["Alina", "Sincere thanks to the Foundation for its support! You are incredible and your work is worth a million thanks!!! You always try to help and support. I can't even imagine where you get your strength, inspiration and time😵‍💫. You're beautiful! Let goodness return to you a hundredfold ♥️♥️♥️"]
+   },
+   {
+      "Id": 240,
+      "Date": "2023-05-04",
+      "Tags": ["Insulin"],
+      "Ua": ["Nelly", "Дякуємо людям з великим серцем. Велика вдячність за підтримку"],
+      "En": ["Nelly", "Thanks to people with big hearts. Many thanks for the support"]
+   },
+   {
+      "Id": 241,
+      "Avatar":"ava-241.webp",
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "P999", "Vitamin"],
+      "Ua": ["Таня", "Щиро дякуємо !!! + підтримка фонду"],
+      "En": ["Tanya", "Thank you very much!!! + fund support"]
+   },
+   {
+      "Id": 242,
+      "Avatar":"ava-242.webp",
+      "Date": "2023-05-04",
+      "Altitude":1,
+      "Tags": ["Sweet", "P999", "Vitamin"],
+      "Ua": ["Свiтлана Кебкал", "вчасно й доречно🕊️ донька якраз захворіла й віримо, що вітаміни допоможуть зміцнити імунітет та покращити загальний стан здоров'я. А з підсолоджувачем смачніший чай з лимоном, який вона наразі багато п'є. Бажаємо всім міцного здоров'я, миру та якнайшвидшої Перемоги!!!"],
+      "En": ["Svitlana Kebkal", "timely and appropriate🕊️ my daughter just got sick and we believe that vitamins will help strengthen immunity and improve the general state of health. And with a sweetener, tea with lemon, which she drinks a lot at the moment, is tastier. We wish everyone good health, peace and a speedy Victory!!!"]
+   },
+   {
+      "Id": 243,
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "Strips"],
+      "Ua": ["Таня Донець", "Щиро дякуємо фонду за допомогу!!!"],
+      "En": ["Tanya Donets", "We sincerely thank the fund for the help!!!"]
+   },
+   {
+      "Id": 244,
+      "Avatar":"ava-242.webp",
+      "Date": "2023-05-04",
+      "Tags": ["Sweet", "Strips"],
+      "Ua": ["Таня Донець", "Щиро дякуємо фонду за допомогу!!!"],
+      "En": ["Tanya Donets", "We sincerely thank the fund for the help!!!"]
+   },
+   {
       "Id": 149,
       "Date": "2023-04-16",
       "Tags": ["Libre"],
@@ -159,9 +244,9 @@
       "Id": 168,
       "Tags": ["Libre"],
       "Date": "2023-04-17",
-      "Ua": ["Алеся", "Щіро дякуємо вашому фонду за Лібру 1.Завдяки вашим зусиллям контролювати діабет стає легше.Здоров'я Вам і Мирного неба!"
+      "Ua": ["Олеся", "Щіро дякуємо вашому фонду за Лібру 1.Завдяки вашим зусиллям контролювати діабет стає легше.Здоров'я Вам і Мирного неба!"
       ],
-      "En": ["Alesia", "We sincerely thank your foundation for Libra 1. Thanks to your efforts, controlling diabetes is becoming easier. Health and Peaceful Heaven!"
+      "En": ["Olesia", "We sincerely thank your foundation for Libra 1. Thanks to your efforts, controlling diabetes is becoming easier. Health and Peaceful Heaven!"
       ]
    },
    {
@@ -887,7 +972,7 @@
       "Tags": ["Sweet","Meter","Old"],
       "Avatar": "ava-128.webp",
       "Ua": ["Лариса", "Дуже дякую за допомогу хворим на цукровий діабет,це полегшує нам життя.отримали глюкометр зі смужками та цукрозамінник,все добре працює"],
-      "En": ["Larysa", "Thank you very much for helping people with diabetes, it makes our lives easier. We received a glucometer with strips and a sugar substitute, everything works well"]
+      "En": ["Larisa", "Thank you very much for helping people with diabetes, it makes our lives easier. We received a glucometer with strips and a sugar substitute, everything works well"]
    },
    {
       "Id": 224,
