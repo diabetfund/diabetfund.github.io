@@ -24,6 +24,20 @@
       "Ua": ["Надія Шнейдер", "Доброго вечора. Отримали сьогодні сенсор, хочемо подякувати Сергію, Ігорю, Едуарду, фонду і всім хто причетний до такої необхідної допомоги для нашого хлопчика🙏🙏🙏 Ви наші янголи охоронці у цій складній боротьбі за щасливе дитинство. Дякуємо Вам величезне ❤️ Просто не виразити словами подяку 🤗 Ви неймовірні люди, робите стільки добрих справ для всіх нас. Бережіть себе, здоров'я Вам, сил, наснаги і терпіння з нами) Дякуємо ще раз 🙏❤️🙏"],
       "En": ["Nadia Schneider", "Good evening. We took away this year's sensor, we want to please Sergius, Igor, Eduard, the fund and everyone who is considered to be such a necessary help for our lad🙏🙏🙏 You are our yangoli guarding our folded struggle for a happy childhood. Thank you for your greatness ❤️ Just don’t express yourself with words 🤗 You are the name of the people, work for good help for all of us. Take care of yourself, I'm healthy to you, strength, us naked and patient with us) Dyakuєmo again 🙏❤️🙏"]
    },
+      {
+      "Id": 259,
+      "Date": "2023-05-06",
+      "Tags": ["Sweet","Meter"],
+      "Ua": ["Маша", "Дякуємо фонду за допомогу."],
+      "En": ["Masha", "We thank the foundation for the help."]
+   },
+   {
+      "Id": 260,
+      "Date": "2023-05-06",
+      "Tags": ["Sweet","Meter", "P999"],
+      "Ua": ["Сiкора Оксана", "Щиро дякуємо фонду за допомогу!!!"],
+      "En": ["Sikora Oksana", "We sincerely thank the fund for the help!!!"]
+   },
    {
       "Id": 148,
       "Date": "2023-04-06",
@@ -42,8 +56,122 @@
       "En": ["Olena Shevchenko", "Thank you very much for your help! It is extremely important for us to know your sugars.... You are doing a great job! You are the best! I have not seen any charity fund to help diabetics in Ukraine, except yours! We are IDPs, the housing is occupied and destroyed. You have helped us a lot. Thank you very much! May God grant you strength, health, peace and Victory! Do not give up because of disgruntled wards, you are doing a great job! Thank you very much! Keep yourselves! Everything will be Ukraine!"]
    },
    {
+      "Id": 245,
+      "Date": "2023-05-03",
+      "Avatar":"ava-245.webp",
+      "Tags": ["Libre"],
+      "Altitude": 1,
+      "Ua": ["Оксана", "Отримали нашу лібру, тижнів зо два тому. Замовляла 3 штуки, але прийшло поки що лише 2. Так само, вкотре вже, хочу подякувати команді фонду за можливість купувати моніторинг за дуже приємною ціною. Бажаю вам процвітання у вашій нелегкій праці, бажаю знайти розуміння в апараті влади та легалізувати (сертифікувати) у нашій країні моніторинг цукру, і не лише лібри."],
+      "En": ["Oksana", "We received our libra, about two weeks ago. I ordered 3 pieces, but so far only 2 have arrived. Also, for the umpteenth time, I want to thank the fund team for the opportunity to buy monitoring at a very nice price. I wish you prosperity in your hard work, I wish you to find understanding in the apparatus of power and legalize (certify) sugar monitoring in our country, and not only libra."]
+   },
+   {
+      "Id": 246,
+      "Date": "2023-04-30",
+      "Tags": ["Libre", "Small"],
+      "Ua": ["Марина Ященко", "Дуже дякуєм за допомогу сенсором, фонду, засновникам, помічникам. Ви робите велику справу допомагаючи людям в скрутний час.💙💛💙💛💙💛"],
+      "En": ["Maryna Yaschenko", "We will also thank you for the help of the sensor, the fund, the co-founders, the helpers. You work great on the right to help people at a difficult hour.💙💛💙💛💙💛"]
+   },
+   {
+      "Id": 247,
+      "Date": "2023-04-30",
+      "Tags": ["Libre", "Adult"],
+      "Altitude": 1,
+      "Ua": ["Надія", "Сьогодні отримала сенсор.Щиро дякую усім працівникам фонду,за те , що ви є,за вашу працю,за ваше терпіння,за ваші переживання,за недоспані ночі,за те,що не залишайте діабетиків і допомагаєте їм,ваша праця неоціненна.\nЗа 27 р стажу діабету було всяке,але завжди на шляху траплялися люди,які протягали руку допомоги. Тепер Ваш фонд дуже допоміг мені.\nМіцного здоров'я Вам ,та Божої ласки.\nВЕЛИКЕ ДЯКУЮ"],
+      "En": ["Nadija", "I received a sensor today. I sincerely thank all the employees of the foundation for what you are, for your work, for your patience, for your worries, for the sleepless nights, for not leaving diabetics and helping them, your work is invaluable. During the 27 years of experience with diabetes, there were many things, but there were always people on the way who extended a helping hand. Now your fund has helped me a lot. Good health to you and God's grace. THANK YOU VERY MUCH"]
+   },
+   {
+      "Id": 248,
+      "Date": "2023-04-28",
+      "Avatar":"ava-248.webp",
+      "Tags": ["Libre"],
+      "Ua": ["Вiта Кузмин", "Щиро дякую за сенсор.Вчора вечором отримали Лібра1.Міцного здоров'я всім працівникам фонду .Хай береже Вас Бог.Дуже дякуємо!!!"],
+      "En": ["Vita Kizmyn", "Thank you very much for the sensor. We received Libra1 yesterday evening. Good health to all the employees of the fund. May God protect you. Thank you very much!!!"]
+   },
+   {
+      "Id": 249,
+      "Avatar":"ava-80.webp",
+      "Date": "2023-04-28",
+      "Tags": ["Sweet","Meter"],
+      "Ua": ["Анна Соколова", "Дякуємо фонду за сенсор. Сьогодні закінчився завчасно строк старого. Сил Вам усім та наснаги для подальших кроків. Ви ті, хто зрушить гори з місця! Хай буде у Вас на все зелене світло! Міцного Вам здоровья, щастя Вашим сім'ям! Дякую, що Ви з нами"],
+      "En": ["Anna Sokolova", "Thanks to the foundation for the sensor. Today, the term of the old man expired prematurely. Strength to you all and inspiration for further steps. You are the ones who will move mountains! May you have a green light! Good health to you, happiness to your families! Thank you for being with us"]
+   },
+   {
+      "Id": 250,
+      "Date": "2023-04-28",
+      "Tags": ["Libre", "Adult"],
+      "Ua": ["Ковальчук Софiя", "Дуже дякую Сергію, Едуарду і всій команді фонду за таку важливу, у цей нелегкий час, допомогу. Міцного здоров'я всім, щастя і мирного неба над головою."],
+      "En": ["Kovalchuk Sofia", "I would like to thank Sergey, Eduard and the entire team of the foundation for such important help during this difficult time. Good health to all, happiness and a peaceful sky above your head."]
+   },
+   {
+      "Id": 251,
+      "Avatar": "ava-251.webp",
+      "Date": "2023-04-25",
+      "Tags": ["Libre"],
+      "Ua": ["Юля", "Дякуємо за підтримку в такий не легкий час😇 Бажаємо вашій команді здоров'я, та вашим родинам. Ви найкращі 😘"],
+      "En": ["Julia", "Thank you for your support in such a difficult time😇 I wish your team health and your families. You are the best 😘"]
+   },
+   {
+      "Id": 252,
+      "Date": "2023-04-25",
+      "Avatar":"ava-252.webp",
+      "Tags": ["Libre"],
+      "Ua": ["Тетяна Костенко", "ДЯКУЄМО!!! За допомогу!!!!!! Едуарду, Сергію та всій команді фонду за можливість отримати по \"підйомній\" ціні для сенсора. Хочу мати надію, що ще буде можливість купити сенсор 50/50. Дякую!!!!!"],
+      "En": ["Tetiana Kostenko", "THANK YOU!!! For help!!!!!! Eduard, Serhiy and the whole team of the foundation for the opportunity to get the sensor at a \"raised\" price. I want to hope that there will still be an opportunity to buy a 50/50 sensor. Thank you!!!!!"]
+   },
+   {
+      "Id": 253,
+      "Date": "2023-04-25",
+      "Tags": ["Libre"],
+      "Ua": ["Дiана Н", "Велика подяка Фонду за допомогу, яка така необхідна людям з діабетом! Вибачте за те, що фотозвіт із запізненням (тиждень син хворів). Дякую!"],
+      "En": ["Diana N", "Many thanks to the Foundation for the help that people with diabetes need so much! Sorry for the late photo report (my son was sick for a week). Thank you!"]
+   },
+   {
+      "Id": 254,
+      "Date": "2023-04-24",
+      "Avatar":"ava-254.webp",
+      "Tags": ["Libre", "Old"],
+      "Ua": ["Олена", "Добрий вечір, дякуємо фонду та всім організаторам за таку потрібну допомогу. Сил, терпіння, натхнення, здоров'я, миру всім нам та Перемоги нашій країні! 💙💛"],
+      "En": ["Olena", "Good evening, thank you to the foundation and all the organizers for such necessary help. Strength, patience, inspiration, health, peace to all of us and Victory to our country! 💙💛"]
+   },
+   {
+      "Id": 255,
+      "Date": "2023-04-24",
+      "Avatar":"ava-255.webp",
+      "Tags": ["Libre"],
+      "Ua": ["Христина", "Щиро вдячні фонду за лібру !!міцного здоров'я Вам і Мирного неба ,Перемоги !!!!"],
+      "En": ["Christina", "We are sincerely grateful to the fund for the libra!! good health to you and a peaceful sky, victories !!!!"]
+   },
+   {
+      "Id": 256,
+      "Date": "2023-05-08",
+      "Tags": ["Sweet","Meter"],
+      "Ua": ["Алiна", "Щиро вдячні фонду за допомогу, що даєте змогу, хоч трішки зробити життя діток кращим. Здоров'я вам, терпіння і натхнення для подальших добрих справ 💛💙"],
+      "En": ["Alina", "We are sincerely grateful to the foundation for the help that makes it possible, even a little, to make the lives of children better. Health to you, patience and inspiration for further good deeds 💛💙"]
+   },
+   {
+      "Id": 257,
+      "Date": "2023-05-08",
+      "Tags": ["Sweet","P999", "Vitamin", "Old"],
+      "Ua": ["Оксана Усачова", "Щиро дякуємо за таку доречну й необхідну допомогу!Вітаміни підтримають організм виснажений хворобою,а підсолоджувач трохи прикрасить сурову дієту!"],
+      "En": ["Oksana Usachova", "Thank you very much for such appropriate and necessary help! Vitamins will support the body exhausted by the disease, and the sweetener will brighten up the harsh diet a little!"]
+   },
+   {
+      "Id": 258,
+      "Date": "2023-05-07",
+      "Tags": ["Sweet","Vitamin", "P999", "Old"],
+      "Ua": ["Юлiя", "Добрий день. Щиро дякую Едуарду, Ігорю та всьому фонду за надану допомогу. Дай Бог Вам здоров'я, сил та наснаги.💛💙"],
+      "En": ["Julia", "Good day. I sincerely thank Eduard, Igor and the entire foundation for the help provided. May God give you health, strength and strength.💛💙"]
+   },
+   {
+      "Id": 261,
+      "Date": "2023-05-06",
+      "Avatar":"ava-261.webp",
+      "Tags": ["Sweet","Vitamin", "P999"],
+      "Ua": ["Вiталина", "Щира подяка фонду за допомогу!!!  Ігорю та Едуарду, людям які працюють на благо фонду особлива подяка!!! Нехай Господь посилає Вам міцне здоров'я та щасливе успішне життя 💙💛❤️"],
+      "En": ["Vitalina", "Sincere thanks to the foundation for the help!!! Special thanks to Igor and Eduard, people who work for the benefit of the fund!!! May the Lord send you good health and a happy successful life 💙💛❤️"]
+   },
+   {
       "Id": 152,
-      "Avatar": "ava-152.webp",
       "Date": "2023-04-15",
       "Tags": ["Libre"],
       "Ua": ["Тетяна Прядка", "Отримали посилочку. ВЕЛИЧЕЗНЕ ДЯКУЮ  фонду і особисто  Сергію та  його команді за можливість отримати сенсор за програмою 50×50. Тепер ми можемо моніторити і контролювати цукор.  Миру, успіху та благополуччя всім вам. Зі Великоднем. Хай БЕРЕЖЕ ВАС АНГЕЛ 🙏🙏🙏, Ви непевершені. 💙"],
@@ -116,8 +244,8 @@
       "Date": "2023-05-04",
       "Altitude":1,
       "Tags": ["Sweet", "P999", "Vitamin"],
-      "Ua": ["Свiтлана Кебкал", "вчасно й доречно🕊️ донька якраз захворіла й віримо, що вітаміни допоможуть зміцнити імунітет та покращити загальний стан здоров'я. А з підсолоджувачем смачніший чай з лимоном, який вона наразі багато п'є. Бажаємо всім міцного здоров'я, миру та якнайшвидшої Перемоги!!!"],
-      "En": ["Svitlana Kebkal", "timely and appropriate🕊️ my daughter just got sick and we believe that vitamins will help strengthen immunity and improve the general state of health. And with a sweetener, tea with lemon, which she drinks a lot at the moment, is tastier. We wish everyone good health, peace and a speedy Victory!!!"]
+      "Ua": ["Свiтлана Кебкал", "вчасно й доречно 🕊️ донька якраз захворіла й віримо, що вітаміни допоможуть зміцнити імунітет та покращити загальний стан здоров'я. А з підсолоджувачем смачніший чай з лимоном, який вона наразі багато п'є. Бажаємо всім міцного здоров'я, миру та якнайшвидшої Перемоги!!!"],
+      "En": ["Svitlana Kebkal", "timely and appropriate 🕊️ my daughter just got sick and we believe that vitamins will help strengthen immunity and improve the general state of health. And with a sweetener, tea with lemon, which she drinks a lot at the moment, is tastier. We wish everyone good health, peace and a speedy Victory!!!"]
    },
    {
       "Id": 243,
@@ -130,9 +258,9 @@
       "Id": 244,
       "Avatar":"ava-242.webp",
       "Date": "2023-05-04",
-      "Tags": ["Sweet", "Strips"],
-      "Ua": ["Таня Донець", "Щиро дякуємо фонду за допомогу!!!"],
-      "En": ["Tanya Donets", "We sincerely thank the fund for the help!!!"]
+      "Tags": ["Sweet", "Strips", "Vitamin", "P999"],
+      "Ua": ["Катерина", "Дякую великому фонду за допомогу. За вашу працю та підтримку для наших діток."],
+      "En": ["Kateryna", "Thank you very much for your help fund. Thank you for your hard work and support for our children."]
    },
    {
       "Id": 149,
@@ -151,11 +279,12 @@
       "En": ["Maryna Yaschenko", "Many thanks to the foundation and their team for the help that we diabetics need so much. For their big heart which they open for others. Thank you !!!💙💛💙💛💙💛"]
    },
    {
-      "Id": 156,
-      "Tags": ["Sweet","Meter","P999"],
-      "Date": "2023-04-23",
-      "Ua": ["Свiтлана", "Щиро дякуємо Фонду і усім співробітникам за таку підтримку!"],
-      "En": ["Svitlana", "We sincerely thank the Foundation and all employees for such support!"]
+      "Id": 182,
+      "Date": "2023-04-09",
+      "Tags": ["Libre","Old","Cat"],
+      "Altitude":1,
+      "Ua": ["Лiна", "Вибачте за пролог. Але так душа оповідає. Люди похилого віку, вони як діти, і на жаль це чекає всіх нас (( . Це питання часу. Така вже наша фізіологія). Сенсор дуже необхідний, т.к. мамі вже потрібно підібрати інсулін. Початківцям це завжди страшно. Потрібно бачити реакцію організму на інсуліни. Я дуже вдячна @diabet.fund Едуарду за існування цього фонду. Вдячна тим спонсорам, які допомагають цьому фонду. Дякую всім хто бере участь у зборі посилок на допомогу нам. Вірю, що добра справа продовжуватиме своє життя."],
+      "En": ["Lina", "Sorry for the prologue. But that's how the soul tells. Elderly people are like children, and unfortunately this awaits all of us (( . It’s a matter of time. This is our physiology). The sensor is very necessary, because mom already needs to pick up insulin. It’s always scary for beginners. You need to see the reaction body for insulins. I am very grateful to @diabet.fund Eduard for the existence of this fund. I am grateful to those sponsors who help this fund. Thank you to everyone who participates in collecting parcels to help us. I believe that a good cause will continue its life."]
    },
    {
       "Id": 157,
@@ -277,12 +406,13 @@
       "En": ["Olena", "I received the sensor today and I am very, very happy. I want to express my gratitude for such help, because no one has helped me except you/your foundation. A huge thank you!"
       ]
    },
-   {
-      "Id": 172,
-      "Tags": ["Libre"],
-      "Date": "2023-04-14",
-      "Ua": ["Ігор Іванович", "Доброго вечора! Сьогоднi отримали  сенсор. Дякую всiм  за допомогу!"],
-      "En": ["Igor Ivanovich", "Good evening! Received the sensor today. Thank you all for your help!"]
+      {
+      "Id": 212,
+      "Date": "2023-03-31",
+      "Altitude":1,
+      "Tags": ["Meter","Sweet","Old"],
+      "Ua": ["", "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."],
+      "En": ["", "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."]
    },
    {
       "Id": 153,
@@ -294,15 +424,13 @@
       ]
    },
    {
-      "Id": 154,
-      "Avatar": "ava-154.webp",
-      "Date": "2023-04-15",
+      "Id": 137,
+      "Avatar": "ava-124.webp",
       "Tags": ["Libre"],
+      "Date": "2023-04-13",
       "Altitude": 1,
-      "Ua": ["Волошина Тетяна", "Отримали посилочку!!!!🤗Дуже дякуємо фонду,всім працівникам за можливість контролювати діабет за допомогою моніторингу Лібра1. Поважаємо і цінуємо Вашу справу!!!!❤️❤️❤️"
-      ],
-      "En": ["Voloshina Tetiana", "Received the parcel!!!!🤗Thank you very much to the foundation, all employees for the opportunity to control diabetes with the help of Libra1 monitoring. We respect and appreciate your business!!!!❤️❤️❤️"
-      ]
+      "Ua": ["Оксана Сугак", "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"],
+      "En": ["Oksana Sugak", "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"]
    },
    {
       "Id": 155,
@@ -365,11 +493,11 @@
       "En": ["Natalia Delikatna", "Good afternoon, I sincerely thank all the employees of the Charitable Fund for the help received... Take care of yourself and your relatives. Thank you 😘"]
    },
    {
-      "Id": 212,
-      "Date": "2023-03-31",
-      "Tags": ["Meter","Sweet","Old"],
-      "Ua": ["", "Доброго дня. Отримали посилочку з глюкометром, смужками і цурокозамінником. Ляшенко Петро Іванович дуже зрадів. Швидко отримали. Пройшло меньше тиждня від заповнення форми. Хочемо висловити подяку усім вашим працівникам. Ви додаєте капельку світла у ці мрачні часи. Дай бог вам здоров'я і натхнення і далі допомогати людям. Хочемо побажати вам отримувати задоволення від праці. Добро завжди повертається. Велике спасибі вам і низький уклін за людяність і небайдужість."],
-      "En": ["", "Good day. We received a parcel with a glucometer, strips and a sugar substitute. Petro Ivanovych Lyashenko was very happy. Received quickly. Less than a week has passed since filling out the form. We would like to express our gratitude to all your employees. You add a little light to these dark times. May God give you health and inspiration to continue helping people. We wish you to enjoy your work. Good always returns. Many thanks to you and a low bow for humanity and care."]
+      "Id": 172,
+      "Tags": ["Libre"],
+      "Date": "2023-04-14",
+      "Ua": ["Ігор Іванович", "Доброго вечора! Сьогоднi отримали  сенсор. Дякую всiм  за допомогу!"],
+      "En": ["Igor Ivanovich", "Good evening! Received the sensor today. Thank you all for your help!"]
    },
    {
       "Id": 142,
@@ -450,14 +578,16 @@
       "Ua": ["", "Сьогодні отримали вашу посилку. хлопці, ви не уявляєте, як ми вам вдячні, нам зараз це дуже необхідно, дякую вам за швидкість. Передаю величезну подяку та фонду, який вам допомагає, ви великі розумнички. Едуард, вам .персональний респект,з вами приємно було поспілкуватися,більше таких людей. Терпіння вам і не реагуйте на погані коментарі, на жаль, у родині не без виродків. ДЯКУЄМО"],
       "En": ["", "We received your parcel today. Guys, you have no idea how grateful we are to you, we really need it now, thank you for your speed. I am also very grateful to the foundation that is helping you, you are very smart. Eduard, to you. Personal respect, with you it was nice to chat, I wish there were more people like this. Be patient and don't react to bad comments, unfortunately, there are a lot of ugly people in the family. THANK YOU"]
    },
-   {
-      "Id": 137,
-      "Avatar": "ava-124.webp",
+      {
+      "Id": 154,
+      "Avatar": "ava-154.webp",
+      "Date": "2023-04-15",
       "Tags": ["Libre"],
-      "Date": "2023-04-13",
-      "Altitude": 2,
-      "Ua": ["Оксана Сугак", "Доброго дня. Отримали посилочку з Ліброю 2, за програмою 50/50. Щиро дякуємо фонду та всім співробітникам за таку можливість придбати сенсор. Завдяки йому ми можемо бачити чітку картину своїх цукрів і швидко та вчасно відреагувати на ситуацію, будь то гіпо- чи гіперглікемія. З Ліброю 2 дитина спокійно може спати вночі, якщо що, то прозвучить сигнал тривоги і її розбудить. Дякуємо Едуарду, Сергію та всім працівникам, які причетні до такої доброї справи. Бажаємо всім здоров'я та мирного неба над головою. 💛💙"],
-      "En": ["Oksana Sugak", "Good day. We received a package with Libra 2, according to the 50/50 program. We sincerely thank the foundation and all employees for this opportunity to purchase a sensor. Thanks to it, we can see a clear picture of our sugars and react quickly and in time to the situation, be it hypoglycemia or hyperglycemia. With Libra 2, the child can sleep peacefully at night, if anything, the alarm will sound and wake him up. We thank Eduard, Serhiy and all the employees who are involved in such a good cause. We wish everyone good health and a peaceful sky above our heads. 💛💙"]
+      "Altitude": 1,
+      "Ua": ["Волошина Тетяна", "Отримали посилочку!!!!🤗Дуже дякуємо фонду,всім працівникам за можливість контролювати діабет за допомогою моніторингу Лібра1. Поважаємо і цінуємо Вашу справу!!!!❤️❤️❤️"
+      ],
+      "En": ["Voloshina Tetiana", "Received the parcel!!!!🤗Thank you very much to the foundation, all employees for the opportunity to control diabetes with the help of Libra1 monitoring. We respect and appreciate your business!!!!❤️❤️❤️"
+      ]
    },
    {
       "Id": 130,
@@ -488,11 +618,11 @@
       "En": ["Tanya", "Good evening, we received the sensor! Thank you very much to all the employees of the foundation for doing a good job in this difficult time! 💛💙"]
    },
    {
-      "Id": 182,
-      "Date": "2023-04-09",
-      "Tags": ["Libre","Old","Cat"],
-      "Ua": ["Лiна", "Вибачте за пролог. Але так душа оповідає. Люди похилого віку, вони як діти, і на жаль це чекає всіх нас (( . Це питання часу. Така вже наша фізіологія). Сенсор дуже необхідний, т.к. мамі вже потрібно підібрати інсулін. Початківцям це завжди страшно. Потрібно бачити реакцію організму на інсуліни. Я дуже вдячна @diabet.fund Едуарду за існування цього фонду. Вдячна тим спонсорам, які допомагають цьому фонду. Дякую всім хто бере участь у зборі посилок на допомогу нам. Вірю, що добра справа продовжуватиме своє життя."],
-      "En": ["Lina", "Sorry for the prologue. But that's how the soul tells. Elderly people are like children, and unfortunately this awaits all of us (( . It’s a matter of time. This is our physiology). The sensor is very necessary, because mom already needs to pick up insulin. It’s always scary for beginners. You need to see the reaction body for insulins. I am very grateful to @diabet.fund Eduard for the existence of this fund. I am grateful to those sponsors who help this fund. Thank you to everyone who participates in collecting parcels to help us. I believe that a good cause will continue its life."]
+      "Id": 156,
+      "Tags": ["Sweet","Meter","P999"],
+      "Date": "2023-04-23",
+      "Ua": ["Свiтлана", "Щиро дякуємо Фонду і усім співробітникам за таку підтримку!"],
+      "En": ["Svitlana", "We sincerely thank the Foundation and all employees for such support!"]
    },
    {
       "Id": 183,
@@ -619,7 +749,7 @@
       "Date": "2023-04-06",
       "Tags": ["Sweet","Meter","Man","P999"],
       "Ua": ["Катерина Маслiй", "Добрий день. Отримали від Вас допомогу. Дуже Вам вдячні ! Терпіння і сил Вам як можна більше і  процвітання Вашому фонду .Ви робите велику роботу для  людей які опинилися в тяжких обставинах.  Ви великі молодці.  Великий Вам уклін за Ваші добрі сердця."],
-      "En": ["Katerina Maslii", "Good day. We received help from you. Thank you very much! Patience and strength to you as much as possible and prosperity to your fund. You are doing a great job for people who are in difficult circumstances. You are great guys. A big bow to you for your kind hearts."]
+      "En": ["Kateryna Maslii", "Good day. We received help from you. Thank you very much! Patience and strength to you as much as possible and prosperity to your fund. You are doing a great job for people who are in difficult circumstances. You are great guys. A big bow to you for your kind hearts."]
    },
    {
       "Id": 195,
@@ -797,7 +927,7 @@
       "Date": "2023-03-29",
       "Tags": ["Sweet","Meter"],
       "Ua": ["Катерина", "Величезне ДЯКУЮ Благодійному фонду і усій його команді!!! Отримали посилку. Дякуємо за вашу роботу та турботу."],
-      "En": ["Katerina", "A huge THANK YOU to the Charitable Foundation and its entire team!!! Received the parcel. Thank you for your work and care."]
+      "En": ["Kateryna", "A huge THANK YOU to the Charitable Foundation and its entire team!!! Received the parcel. Thank you for your work and care."]
    },
    {
       "Id": 218,
@@ -1204,7 +1334,7 @@
       "Avatar": "ava-106.webp",
       "Altitude": 1,
       "Ua": ["Катерина Демидова", "Хочу висловити Вашому фонду та всій Вашій команді глибоку подяку за отриманну допомогу та побажати всім Вам міцного здоров'я, витримки та миру ❤️"],
-      "En": ["Katerina Demidova", "I want to express my deep gratitude to your foundation and your entire team for the help received and wish you all good health, endurance and peace ❤️"]
+      "En": ["Kateryna Demidova", "I want to express my deep gratitude to your foundation and your entire team for the help received and wish you all good health, endurance and peace ❤️"]
    },
    {
       "Id": 107,
@@ -1217,7 +1347,7 @@
       "Id": 108,
       "Date": "2023-02-22",
       "Tags": ["Sweet","Meter","P999"],
-      "Avatar": "card-80-ava.png",
+      "Avatar": "ava-80.webp",
       "Ua": ["Анна Соколова", "Гарно дякуємо! Ви чарівники!"],
       "En": ["Anna Sokolova", "Thank you very much! You are wizards!"]
    },

@@ -30,7 +30,7 @@ readonly struct View(string template)
 
             else if (obj is List<string> list)
                 for (int i = 0; i < list.Count; i++)
-                    result = result.Replace(i switch { 0 => "@first", 1 => "@second", _ => "@third"}, list[i]);
+                    result = result.Replace(i switch { 0 => "@first", 1 => "@second", _ => "@third" }, list[i]);
 
             else if (obj is not null)
                 foreach (var (key, val) in exposes.GetOrAdd(obj.GetType(), PropertiesReader)(obj))
