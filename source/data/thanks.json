@@ -216,7 +216,6 @@
    },
    {
       "Id": 239,
-      "Altitude":1,
       "Avatar":"ava-142.webp",
       "Date": "2023-05-04",
       "Tags": ["Sweet", "P999", "Vitamin"],
@@ -424,6 +423,185 @@
       ]
    },
    {
+      "Id": 262,
+      "Date": "2023-05-09",
+      "Tags": ["P999", "Strips", "Adult", "Sweet"],
+      "Ua": ["Катерина", "Велике дякую фонду за допомогу!Бажаю всім працівникам фонду,Ігорю та Едуарду і  їх родинам  здоров’я та процвітання!Хай Бог вас оберігає !♥️♥️♥️"],
+      "En": ["Kateryna", "Many thanks to the foundation for the help! I wish all the employees of the foundation, Igor and Eduard and their families health and prosperity! May God protect you!♥️♥️♥️"]
+   },
+   {
+      "Id": 263,
+      "Date": "2023-05-06",
+      "Tags": ["P999", "Old", "Vitamin", "Sweet"],
+      "Ua": ["", "Вітаємо та висловлюємо щиру вдячність всім співробітникам Благодійного фонду допомоги та реабілітації хворих на цукровий діабет та фундації Stichting Vluchteling за допомогу під час війни.Миру, щастя та міцного здоров'я всім українцям! Дякуємо."],
+      "En": ["", "We congratulate and express our sincere gratitude to all employees of the Charitable Fund for the Assistance and Rehabilitation of Diabetes Patients and the Stichting Vluchteling Foundation for their help during the war. Peace, happiness and good health to all Ukrainians! Thank you"]
+   },
+   {
+      "Id": 264,
+      "Date": "2023-05-05",
+      "Tags": ["Sweet", "Meter", "Strips", "Old", "Vitamin"],
+      "Ua": ["Азалiя", "Величезне спасибі фонду за підтримку хворим!! Здоров'я всім Вам!"],
+      "En": ["Azalia", "Huge thanks to the foundation for supporting the sick!!!! Health to all of you!!!"]
+   },
+   {
+      "Id": 265,
+      "Avatar":"ava-175.webp",
+      "Date": "2023-05-05",
+      "Tags": ["P999", "Sweet", "Strips", "Vitamin"],
+      "Ua": ["Таня Догодаева", "Дякуємо фонду, Едуарду, Ігорю та всім хто допомогає за вашу роботу, за вашу допомогу нам в цей дуже складний час"],
+      "En": ["Tanya Dogodaeva", "Thank you to the foundation, Eduard, Igor and everyone who helps for your work, for your help to us in this very difficult time"]
+   },
+   {
+      "Id": 266,
+      "Date": "2023-05-05",
+      "Tags": ["P999", "Strips", "Sweet", "Meter", "Vitamin", "Adult"],
+      "Ua": ["Оксана", "Дуже дякую,за допомогу, в такий тяжкий час,волонтерам та окреме дякую Ігорю, низький Вам уклін,що допомагаєте нам.Дай Бог Вам здоров'я,хай Ангел Охоронець Вас береже,та Ваші родини."],
+      "En": ["Oksana", "Thank you very much for the help, in such a difficult time, to the volunteers and special thanks to Igor, I bow to you for helping us. May God give you health, may the Guardian Angel protect you and your families."]
+   },
+   {
+      "Id": 267,
+      "Date": "2023-05-05",
+      "Tags": ["P999", "Sweet", "Vitamin", "Strips", "Adult", "NoHead"],
+      "Ua": ["Лана", "Дуже вдячна фонду та волонтерам. За працю та той час ,який вони витрачають для допомоги людям з діабетом. Здоров'я Вам. Та миру нам всім."],
+      "En": ["Lana", "I am very grateful to the foundation and volunteers. For the work and the time they spend helping people with diabetes. Health to you. But peace to us all."]
+   },
+   {
+      "Id": 268,
+      "Date": "2023-05-05",
+      "Tags": ["Sweet", "Vitamin", "Strips", "NoHead", "Old"],
+      "Ua": ["Анна", "Дуже дякуємо за допомогу! Здоров'я вам та миру"],
+      "En": ["Anna", "Thank you very much for your help! Health and peace to you"]
+   },
+   {
+      "Id": 269,
+      "Avatar":"ava-269.webp",
+      "Date": "2023-04-23",
+      "Tags": ["Libre"],
+      "Ua": ["Олена Сутормiна", "Дякую за сенсор)Вже носимо все Ок!Большое спасибі спонсорам та окреме Дякуємо Едуарду за його виконану роботу,старання та бажання допомогти нужденним!!!"],
+      "En": ["Olena Sutormina", "Thank you for the sensor) We are already wearing everything OK! Many thanks to the sponsors and special thanks to Eduard for his work, efforts and desire to help those in need!!!"]
+   },
+   {
+      "Id": 116,
+      "Date": "2023-02-21",
+      "Tags": ["Sweet", "Meter", "P999"],
+      "Avatar": "ava-116.webp",
+      "Video": "/img/fun/116_960_540.mp4",
+      "Altitude": 1,
+      "MainIndex": 4,
+      "Ua": ["Вiкторiя", "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"],
+      "En": ["Viktoria", "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"]
+   },
+   {
+      "Id": 271,
+      "Avatar":"ava-271.webp",
+      "Date": "2023-04-19",
+      "Tags": ["Libre"],
+      "Ua": ["Софiя Голота", "Величезна подяка за сенсор Едуарду, Ганні, Сергію, Ігорю. Щиро дякую вам за вашу працю і ваші добрі серця. Завдяки вам і ми стаємо добрішими. Усім миру та здоров'я. Дякую 🙏"],
+      "En": ["sofia Golota", "Many thanks for the sensor to Edward, Anna, Sergey, Igor. I sincerely thank you for your work and your kind hearts. Thanks to you, we become kinder. All peace and health. Thank you 🙏"]
+   },
+   {
+      "Id": 272,
+      "Date": "2023-04-16",
+      "Tags": ["Libre"],
+      "Ua": ["Наталiя", "Христос Воскрес!Щиро вдячна фонду за сенсор.Це дуже суттєва допомога у наш нелегкий час.Сергію та Едуарду бажаю якнайшвидше одужати і більше не хворіти🙂"],
+      "En": ["Natalia", "Christ is Risen! I am sincerely grateful to the foundation for the sensor. This is a very important help in our difficult time. I wish Sergey and Eduard to recover as soon as possible and not get sick again 🙂"]
+   },
+   {
+      "Id": 273,
+      "Date": "2023-05-04",
+      "Tags": ["P999", "Sweet", "Vitamin"],
+      "Ua": ["Юлiя Тарабаса", "Щиро вдячні фонду і їх партнерам за таку допомогу! Дякуємо співробітникам фонду за невтомну працю- здоров'я вам усім і наснаги!"],
+      "En": ["Julia Tarabasa", "We are sincerely grateful to the foundation and their partners for such help! We thank the employees of the foundation for their tireless work - good health to all of you and good luck!"]
+   },
+   {
+      "Id": 274,
+      "Date": "2023-05-04",
+      "Tags": ["Adult", "Sweet", "Vitamin"],
+      "Ua": ["Олена Бояровська", "Дякую. Дякую, що підтримуєте хворих на цукровий діабет в ці важкі часи. Дякую. Слава Україні."],
+      "En": ["Olena Bojarovska", "Thank you. Thank you for supporting people with diabetes during these difficult times. Thank you. Glory to Ukraine."]
+   },
+   {
+      "Id": 275,
+      "Date": "2023-05-03",
+      "Avatar":"ava-275.webp",
+      "Tags": ["Sweet", "Vitamin"],
+      "Ua": ["Вiта Пульмановська", "Щиро вдячні фонду та спонсорам за допомогу! Всіх благ вам!"],
+      "En": ["Vita Polmanovska", "We sincerely thank the fund and sponsors for their help! All the best to you!"]
+   },
+   {
+      "Id": 276,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet"],
+      "Ua": ["", "Весна - пора розмаїтих барв. Нашій життю барв додає милосердя ваше та ваших спонсорів. Щиро вдячні! 🙏"],
+      "En": ["", "Spring is a time of various colors. Our life is colored by your charity and that of your sponsors. Thank you very much! 🙏"]
+   },
+   {
+      "Id": 277,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Vitamin", "P999", "Special"],
+      "Ua": ["Iрина Савченко", "Дякую фонду, та усій групі за допомогу, ця допомога безцінна"],
+      "En": ["Iryna Savchenko", "Thanks to the foundation and the whole group for their help, this help is invaluable"]
+   },
+   {
+      "Id": 278,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Vitamin", "P999", "Strips", "Adult"],
+      "Ua": ["Iрина", "Дуже дякую Вам,за таку величезну допомогу в наш час,ви неймовірні!!!Сил Вам, наснаги,добра і миру!!! Ще раз величезне дякую 🤗"],
+      "En": ["Iryna", "Thank you very much, for such a huge help in our time, you are incredible!!! Strength to you, strength, goodness and peace!!! Once again, thank you very much 🤗"]
+   },
+   {
+      "Id": 279,
+      "Avatar": "ava-279.webp",
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Strips"],
+      "Ua": ["Наталiя", "Щиро дякуємо вам за вашу турботу,допомогу в такий не легкий час, міцного здоров'я і терпіння вам та вашій команді. Мирного неба."],
+      "En": ["Natalia", "We sincerely thank you for your concern, help in such a difficult time, good health and patience to you and your team. Peaceful sky."]
+   },
+   {
+      "Id": 280,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Vitamin", "P999"],
+      "Ua": ["Райковська Олена", "Сьогодні отримали посилочку від фонду. ВЕЛИЧЕЗНЕ ДЯКУЮ, що у такі складні часи не залишаєте дітей діабетиків наодинці з цією хворобою.Дякуючи Вам донька зможе смакувати солоденьке, тримаючи цукри у нормі та підтримати організм вітамінами. Всім працівникам фонду бажаю міцного здоров'я. Щиро дякую."],
+      "En": ["Raikovska Olena", "Today we received a package from the fund. A HUGE THANK YOU for not leaving diabetic children alone with this disease in such difficult times. Thanks to you, my daughter will be able to taste sweets, keeping her sugars in the normal range and support her body with vitamins. I wish good health to all employees of the foundation. Thank you."]
+   },
+   {
+      "Id": 281,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Vitamin", "P999", "Adult"],
+      "Ua": ["Вiкаторiя Шпак", "Дякуємо команді фонду та всім, хто допомагає за смачний та корисний подарунок. Хочемо побажати вам здоров'я, терпіння і вдячних учасників. І щоб всі ваші починання мали позитивний результат. Мирного неба над головою"],
+      "En": ["Viktoria Shpak", "Thank you to the foundation team and everyone who helps for a tasty and useful gift. We wish you health, patience and grateful participants. And that all your endeavors have a positive result. Peaceful sky above your head"]
+   },
+   {
+      "Id": 282,
+      "Avatar":"ava-282.webp",
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Vitamin", "P999"],
+      "Ua": ["Соболта Оля", "Щиро дякуємо за допомогу, яку сьогодні отримали!!! Дякуємо за вашу працю. Нехай вдаються усі ваші задуми. Нехай вас береже та  благословляє Бог.💙💛"],
+      "En": ["Sobolta Olia", "Thank you very much for the help we received today!!! Thank you for your work. May all your plans come true. May God protect and bless you.💙💛"]
+   },
+   {
+      "Id": 283,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Adult", "P999"],
+      "Ua": ["Тетяна", "Безмежно вдячна за допомогу фонду, Ігорю, Едуарду та всім хто допомагає допомагати.  Здоров'я і Божої допомоги вам  у всіх справах."],
+      "En": ["Tetiana", "I am infinitely grateful for the help of the foundation, Igor, Eduard and everyone who helps to help. Health and God's help to you in all your affairs."]
+   },
+   {
+      "Id": 284,
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Strips", "Small"],
+      "Ua": ["Наталi", "Висловлюємо Вам свою повагу та вдячність за надану допомогу .Дякуємо за доброту та небайдужість.Миру та здоров'я всій Вашій команді."],
+      "En": ["Natali", "We express our respect and gratitude for the help provided. Thank you for your kindness and concern. Peace and health to your entire team."]
+   },
+   {
+      "Id": 285,
+      "Avatar":"ava-285.webp",
+      "Date": "2023-05-03",
+      "Tags": ["Sweet", "Strips"],
+      "Ua": ["Юлiя Головтюк", "Господи стань у допомозі 🙏Відкрий усі дороги, двері і серця ,  вищі сили допоможіть  у всіх намірах і сподіваннях🙏 Благослови Боже у всіх починаннях , сили небесні захистіть і допоможіть. І нехай на все буде Божа воля 🙏🙏🙏"],
+      "En": ["Julia Golovatiuk", "Lord, help me 🙏 Open all roads, doors and hearts, higher forces help in all intentions and hopes 🙏 God bless in all undertakings, heavenly forces protect and help. And let God's will be for everything 🙏🙏🙏"]
+   },
+   {
       "Id": 137,
       "Avatar": "ava-124.webp",
       "Tags": ["Libre"],
@@ -599,15 +777,11 @@
       "En": ["Lena", "Good day! We would like to thank everyone who participates in such a good cause and helps people with diabetes. My daughter is very happy with the sensor! We are incredibly grateful for your help and support during this difficult time! We wish all the best to everyone working on this project! 🤗"]
    },
    {
-      "Id": 116,
-      "Date": "2023-02-21",
-      "Tags": ["Sweet", "Meter", "P999"],
-      "Avatar": "ava-116.webp",
-      "Video": "/img/fun/116_960_540.mp4",
-      "Altitude": 1,
-      "MainIndex": 4,
-      "Ua": ["Вiкторiя", "Велика подяка Едуарду, Ігорю й всім співробітникам БФ \"Допомоги та реабілітації хворих на цукровий діабет\" та организації \"Stichting Vluchteling\" за надану допомогу нашим солоденьким діткам 🙌🙌🙌<br/>Це надзвичайно допомагає нам у цей складний час!!! Дякуємо за те, що робите наших діток більш щасливими та радісними🤗🤗🤗<br/>Миру, злагоди, натхнення, сил у вашій непростій справі🙌<br/> Бережи Вас Бог за вашу доброту й велике серце🙏💙💛"],
-      "En": ["Viktoria", "Many thanks to Eduard, Igor and all the employees of the BF \"Help and Rehabilitation of Diabetic Patients\" and the \"Stichting Vluchteling\" organization for the help provided to our sweet children 🙌🙌🙌<br/>It helps us tremendously in this difficult time!!! Thank you for making our children happier and more joyful.🤗🤗🤗<br> Peace, harmony, inspiration, strength in your difficult work🙌 May God protect you for your kindness and big heart 🙏💙💛"]
+      "Id": 270,
+      "Date": "2023-04-22",
+      "Tags": ["Libre"],
+      "Ua": ["Олена", "Щиро дякую всі працівникам фонду за отриманий сенсор. Здоров‘я, терпіння всім працівникам фонду. Дякую вам за те що піклуєтесь про дітей і дорослих с ЦД. Процвітання фонду , ваша допомога дуже потрібна нам. Мірного неба всім."],
+      "En": ["Olena", "I sincerely thank all the employees of the foundation for the received sensor. Health and patience to all employees of the fund. Thank you for taking care of children and adults with diabetes. Prosperity of the fund, we really need your help. Peaceful sky to all."]
    },
    {
       "Id": 133,
