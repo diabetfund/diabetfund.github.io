@@ -92,7 +92,7 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    if (false)//debug
+    if (Thanks.Debug)
         Out("thanks", "/thanks", Join("thankCard", thanks));
     else
     {
@@ -191,7 +191,7 @@ record Thanks(
 
     public string ModernAvatar => Avatar ?? "zero.webp";
 
-    public string Alt => string.Join(", ", Alts());
+    public string? Alt => Debug ?  string.Join(", ", Alts()): "";
 
     IEnumerable<string?> Alts()
     {
@@ -199,6 +199,8 @@ record Thanks(
             yield return Enum.GetName(tag);
         yield return Id.ToString();
     }
+
+    public static bool Debug = false;
 
     public static ReadOnlySpan<byte> Olds => new byte[] { 193, 212, 182, 223, 197, 198, 166, 160 };
 }
