@@ -170,6 +170,30 @@ lib.go(() => {
    });
 });
 
+lib.go((link: HTMLAnchorElement) => {
+  let page = parseInt(link.dataset.thanknext)
+  let footH = document.getElementsByTagName("footer")[0].clientHeight
+
+  async function handleScroll() {
+    const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
+    if (endOfPage && page < 10) {
+       link.style.display = "none"
+       var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
+       if (html.ok){
+        var span = document.createElement("span")
+        span.innerHTML = await html.text()
+        document.getElementsByClassName("thanks")[0].append(...span.childNodes)
+        page++
+        if(page < 10)
+            link.style.display= "block"
+       }
+
+    }
+  }
+  window.addEventListener("scroll", handleScroll)
+},
+document.getElementsByClassName("thanks-next-link")[0])
+
 lib.go(tabs => {
    let search = location.search,
    tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)),

@@ -168,6 +168,28 @@ lib.go(() => {
             a.classList.add("footer__nav-item_active");
     });
 });
+lib.go((link) => {
+    let page = parseInt(link.dataset.thanknext);
+    let footH = document.getElementsByTagName("footer")[0].clientHeight;
+    function handleScroll() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
+            if (endOfPage && page < 10) {
+                link.style.display = "none";
+                var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
+                if (html.ok) {
+                    var span = document.createElement("span");
+                    span.innerHTML = yield html.text();
+                    document.getElementsByClassName("thanks")[0].append(...span.childNodes);
+                    page++;
+                    if (page < 10)
+                        link.style.display = "block";
+                }
+            }
+        });
+    }
+    window.addEventListener("scroll", handleScroll);
+}, document.getElementsByClassName("thanks-next-link")[0]);
 lib.go(tabs => {
     let search = location.search, tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)), suffix = ["none", "True", "False"][tabIndex];
     if (tabIndex > -1 && tabIndex < tabs.length)
@@ -345,14 +367,13 @@ lib.go((form, butt) => {
 lib.go(wraps => {
     var _a;
     for (const wrap of wraps.getElementsByTagName("figure")) {
-        const img = wrap.getElementsByTagName("picture")[0];
-        const video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video;
+        const img = wrap.getElementsByTagName("picture")[0], video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video, tspan = wrap.getElementsByTagName("span")[0], title = tspan === null || tspan === void 0 ? void 0 : tspan.innerText;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
         img.addEventListener("click", e => {
             e.preventDefault();
-            const tspan = wrap.getElementsByTagName("span")[0], name = tspan ? tspan.innerText.trim() : wrap.dataset.title, [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            const name = (title === null || title === void 0 ? void 0 : title.trim()) || wrap.dataset.title, [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
@@ -419,6 +440,6 @@ lib.go(sendButt => {
                 location.href = "/";
         }
         else
-            alert(lib.isEnglish ? "Something went wrong" : "щось пішло не так");
+            alert("щось пішло не так");
     }));
 }, document.getElementById("seld-recipiet"));

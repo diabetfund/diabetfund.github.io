@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-var version = 52;
+var version = 53;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 List<T> ReadJ<T>(string table) =>
@@ -92,12 +92,25 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
-    
-    Out("thanks", "/thanks", Join("thankCard",
-        thanks.Select((t, i) => (t, i))
-              .Where(_=>_.i < 115 || Thanks.Olds.Contains((byte)_.t.Id))
-              .Select(_=>_.t)
-              .Take(110)));
+    if (false)//debug
+        Out("thanks", "/thanks", Join("thankCard", thanks));
+    else
+    {
+        var thanksPages = thanks.Chunk(40).ToArray();
+        for (var i = 0; i < thanksPages.Length; i++)
+        {
+            var content = Join("thankCard", thanksPages[i]);
+            File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
+
+            var hasNext = i < thanksPages.Length - 1;
+            int? nextPage = hasNext ? i + 2 : null;
+
+            if (i == 0)
+                Out("thanks", "/thanks", new { content, nextPage, hasNext });
+            else
+                Out("thanks", $"/thanks-{i + 1}", new { content, nextPage, hasNext });
+        }
+    }
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
@@ -160,8 +173,8 @@ record Project(int Need, int Funds, bool IsMilitary, bool DesktopOnly, string? R
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
-    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Cat,
-    Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small
+    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Quality,
+    Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small, Collage
 }
 
 record Thanks(
@@ -178,7 +191,7 @@ record Thanks(
 
     public string ModernAvatar => Avatar ?? "zero.webp";
 
-    //public string Alt => string.Join(", ", Alts());
+    public string Alt => string.Join(", ", Alts());
 
     IEnumerable<string?> Alts()
     {

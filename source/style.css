@@ -671,6 +671,12 @@ ul {
   border-top-right-radius: 5px;
 }
 
+.thanks-next-link{
+  margin-left: 40%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .htnull { grid-row-end: span 2; }
 .ht1 { grid-row-end: span 3; }
 .ht2 { grid-row-end: span 4; }
