@@ -333,11 +333,11 @@ lib.go((triggers, contents) => {
    for (const item of triggers)
        item.addEventListener('click', e => {
            e.preventDefault()
-           const id = e.currentTarget.getAttribute('href').replace('#', '');
+           const id = e.currentTarget.getAttribute('href').replace('#', '')
            for (var i = 0; i < triggers.length; i++) {
-               const meth = contents[i].id == id ? "add" : "remove";
-               triggers[i].classList[meth]('tabs-triggers__item_active');
-               contents[i].classList[meth]('tabs-content__item_active');
+               const meth = contents[i].id == id ? "add" : "remove"
+               triggers[i].classList[meth]('tabs-triggers__item_active')
+               contents[i].classList[meth]('tabs-content__item_active')
            }
        })
    
@@ -441,13 +441,13 @@ lib.go(wraps => {
            continue;
        img.style.cursor = "pointer";
        img.addEventListener("click", e => {
-           e.preventDefault();
+           e.preventDefault()
            const name = title?.trim() || wrap.dataset.title,
            [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
            [, width, height] = video.split('_'),
            
-           wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
-           
+           wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
+  
            wind?.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
                <title>${name}: ${w1} ${w2}...</title></head><body>
                <style>body { margin: 0; text-align: center; }</style>
@@ -456,8 +456,8 @@ lib.go(wraps => {
                        <source src="//${location.host}${video}" type="video/mp4" />
                    </video>
                </div>
-           </body></html>`);
-       });
+           </body></html>`)
+       })
    }
 },
 document.getElementsByClassName("thanks")[0]);

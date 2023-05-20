@@ -92,26 +92,22 @@ void Render(string lang)
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
+    var thanksPages = thanks.Chunk(40).ToArray();
     if (Thanks.Debug)
         Out("thanks", "/thanks", Join("thankCard", thanks));
     else
-    {
-        var thanksPages = thanks.Chunk(40).ToArray();
         for (var i = 0; i < thanksPages.Length; i++)
         {
             var content = Join("thankCard", thanksPages[i]);
+            var hasNext = i < thanksPages.Length - 1;
+            var nextPage = hasNext ? i + 2 : (int?)null;
+
             File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
 
-            var hasNext = i < thanksPages.Length - 1;
-            int? nextPage = hasNext ? i + 2 : null;
-
-            if (i == 0)
-                Out("thanks", "/thanks", new { content, nextPage, hasNext });
-            else
-                Out("thanks", $"/thanks-{i + 1}", new { content, nextPage, hasNext });
+            Out("thanks", i == 0 ? "/thanks" : $"/thanks-{i + 1}", 
+                new { content, nextPage, hasNext });
         }
-    }
-
+    
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
@@ -156,25 +152,34 @@ record Item<TTopic> : Item<string, TTopic>;
 
 record ProjectTopic(string Title, string Text, string? Data, string? Signature, string? Promo);
 
-record Project(int Need, int Funds, bool IsMilitary, bool DesktopOnly, string? ReportId, string? Pic, string Pdf) : Item<ProjectTopic>
+record Project(
+    int Need,
+    int Funds,
+    bool IsMilitary,
+    bool DesktopOnly,
+    string? ReportId,
+    string? Pic,
+    string Pdf) : Item<ProjectTopic>
 {
     public bool IsFull => Need == Funds;
+
     public bool IsInfinite => Need == 0;
+
     public string Url => UrlSegment(Id);
 
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
 
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
 
-    public static string UrlSegment(string id) =>
-        id is "help-rehab" ? "center" : $"fundraising/{id}";
+    public static string UrlSegment(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
-    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Quality,
-    Old, BedRidden, NoHead, Man, NoBody, Adult, Special, Small, Collage
+    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999,
+    Old, Man, Teen, Adult, Infant,
+    Cat, Compose, AnimaAnimus, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
 }
 
 record Thanks(
@@ -191,7 +196,7 @@ record Thanks(
 
     public string ModernAvatar => Avatar ?? "zero.webp";
 
-    public string? Alt => Debug ?  string.Join(", ", Alts()): "";
+    public string Alt => Debug ?  string.Join(", ", Alts()): "";
 
     IEnumerable<string?> Alts()
     {
@@ -201,8 +206,6 @@ record Thanks(
     }
 
     public static bool Debug = false;
-
-    public static ReadOnlySpan<byte> Olds => new byte[] { 193, 212, 182, 223, 197, 198, 166, 160 };
 }
 
 record Slide(string Pic) : Item<string>
