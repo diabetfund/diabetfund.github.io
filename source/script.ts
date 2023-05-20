@@ -176,7 +176,7 @@ lib.go((link: HTMLAnchorElement) => {
 
   async function handleScroll() {
     const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
-    if (endOfPage && page < 10) {
+    if (endOfPage && page < 11) {
        link.style.display = "none"
        var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
        if (html.ok){
@@ -184,7 +184,7 @@ lib.go((link: HTMLAnchorElement) => {
         span.innerHTML = await html.text()
         document.getElementsByClassName("thanks")[0].append(...span.childNodes)
         page++
-        if(page < 10)
+        if(page < 11)
             link.style.display= "block"
        }
 

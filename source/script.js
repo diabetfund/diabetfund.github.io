@@ -174,7 +174,7 @@ lib.go((link) => {
     function handleScroll() {
         return __awaiter(this, void 0, void 0, function* () {
             const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
-            if (endOfPage && page < 10) {
+            if (endOfPage && page < 11) {
                 link.style.display = "none";
                 var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
                 if (html.ok) {
@@ -182,7 +182,7 @@ lib.go((link) => {
                     span.innerHTML = yield html.text();
                     document.getElementsByClassName("thanks")[0].append(...span.childNodes);
                     page++;
-                    if (page < 10)
+                    if (page < 11)
                         link.style.display = "block";
                 }
             }

@@ -177,7 +177,7 @@ record Project(
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
-    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999,
+    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Reservoir, Pods,
     Old, Man, Teen, Adult, Infant,
     Cat, Compose, AnimaAnimus, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
 }
