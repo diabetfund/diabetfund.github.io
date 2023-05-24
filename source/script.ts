@@ -170,30 +170,6 @@ lib.go(() => {
    });
 });
 
-lib.go((link: HTMLAnchorElement) => {
-  let page = parseInt(link.dataset.thanknext)
-  let footH = document.getElementsByTagName("footer")[0].clientHeight
-
-  async function handleScroll() {
-    const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
-    if (endOfPage && page < 11) {
-       link.style.display = "none"
-       var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
-       if (html.ok){
-        var span = document.createElement("span")
-        span.innerHTML = await html.text()
-        document.getElementsByClassName("thanks")[0].append(...span.childNodes)
-        page++
-        if(page < 11)
-            link.style.display= "block"
-       }
-
-    }
-  }
-  window.addEventListener("scroll", handleScroll)
-},
-document.getElementsByClassName("thanks-next-link")[0])
-
 lib.go(tabs => {
    let search = location.search,
    tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)),
@@ -404,96 +380,138 @@ lib.go((form, butt) => {
    lib.listenInputs(form);
 
    butt.addEventListener("click", async e => {
-       e.preventDefault();
-       const [isValid, { Name, Mail, Message }] = lib.validateWithAlert([form, "Name Mail Message"]);
+       e.preventDefault()
+       const [isValid, { Name, Mail, Message }] = lib.validateWithAlert([form, "Name Mail Message"])
        if (!isValid)
-           return;
+           return
+
+        butt.disabled = true
+        try {
+            var resp = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            })
+            if (resp.ok)
+                setStatus(lib.isEnglish ? "✔️ Your message has been sent": "✔️ Ваше повідомлення відправлено!")
+            else
+                setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так")
+        }
+        catch (e){
+            setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так")
+            console.log(e.message)
+        }
+        finally {
+            butt.disabled = false
+            form.reset()
+        }
+      /* var [isSucc] =
+            await lib.fetchMiniback("feedback", {
+                method: "POST", 
+                body: JSON.stringify({ Name, Mail, Message }), 
+                mode: "cors",
+                headers: { Accept: 'application/json', "Content-Type": 'application/json' }
+            },
+            lib.freezeeInputs(butt, form))
+       */
        
-       var [isSucc] = await lib.fetchMiniback("feedback", {
-           method: "POST", 
-           body: JSON.stringify({ Name, Mail, Message }), 
-           mode: "cors",
-           headers: { Accept: 'application/json', "Content-Type": 'application/json' }
-       },
-       lib.freezeeInputs(butt, form))
-       
-       if (isSucc) {
-           setStatus(lib.isEnglish ? "✔️ Your message has been sent": "✔️ Ваше повідомлення відправлено!");
-           form.reset();
-       }
-       else 
-           setStatus(lib.isEnglish ? "❌ Something went wrong": "❌ щось пішло не так");
    });
 
 },
    document.getElementsByClassName("user-form")[0] as HTMLFormElement,
    document.getElementById("email-submit") as HTMLButtonElement);
 
-lib.go(wraps => {
+function handleThankVideo(wraps: HTMLElement) {
+    for (const wrap of wraps.getElementsByTagName("figure")) {
+        const pics = wrap.getElementsByTagName("picture"),
+        img = pics[pics.length-1],
+        video = img?.dataset?.video,
+        tspan = wrap.getElementsByTagName("span")[0],
+        title = tspan?.innerText
+ 
+        if (!video || video == "null")
+            continue;
+        img.style.cursor = "pointer";
+        img.addEventListener("click", e => {
+            e.preventDefault()
+            const name = title?.trim() || wrap.dataset.title,
+            [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
+            [, width, height] = video.split('_'),
+            
+            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
    
-   for (const wrap of wraps.getElementsByTagName("figure")) {
-       const img = wrap.getElementsByTagName("picture")[0],
-       video = img?.dataset?.video,
-       tspan = wrap.getElementsByTagName("span")[0],
-       title = tspan?.innerText
+            wind?.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
+                <title>${name}: ${w1} ${w2}...</title></head><body>
+                <style>body { margin: 0; text-align: center; }</style>
+                <div data-new-window>
+                    <video controls autoplay muted playsinline style="width: 100%; height: auto;">
+                        <source src="//${location.host}${video}" type="video/mp4" />
+                    </video>
+                </div>
+            </body></html>`)
+        })
+    }
+}
 
-       if (!video || video == "null")
-           continue;
-       img.style.cursor = "pointer";
-       img.addEventListener("click", e => {
-           e.preventDefault()
-           const name = title?.trim() || wrap.dataset.title,
-           [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
-           [, width, height] = video.split('_'),
-           
-           wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
+lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
+    handleThankVideo(wraps)
+    if (!link)
+        return;
+    let page = parseInt(link.dataset.thanknext)
+    let footH = document.getElementsByTagName("footer")[0].clientHeight
   
-           wind?.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
-               <title>${name}: ${w1} ${w2}...</title></head><body>
-               <style>body { margin: 0; text-align: center; }</style>
-               <div data-new-window>
-                   <video controls autoplay muted playsinline style="width: 100%; height: auto;">
-                       <source src="//${location.host}${video}" type="video/mp4" />
-                   </video>
-               </div>
-           </body></html>`)
-       })
-   }
+    window.addEventListener("scroll", async () => {
+        const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
+        if (endOfPage && page != null) {
+            link.style.display = "none"
+            var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
+            if (html.ok) {
+                var span = document.createElement("span")
+                span.innerHTML = await html.text()
+                handleThankVideo(span)
+                wraps.append(...span.childNodes)
+                page++
+            }
+            else
+                page = null
+        }
+    })
 },
-document.getElementsByClassName("thanks")[0]);
+document.getElementsByClassName("thanks")[0],
+document.getElementsByClassName("thanks-next-link")[0]);
 
 lib.go(radios => {
    const lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {};
    for (const item of radios) {
        const [v1, v2] = item.dataset.radioval!.split(":"),
-       [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
+       [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2]
        
        if (!(name in lookup))
            lookup[name] = {};
        if (!(val in lookup[name]))
-           lookup[name][val] = [null, null];
+           lookup[name][val] = [null, null]
 
        if (item instanceof HTMLButtonElement) {
-           lookup[name][val][0] = item;
+           lookup[name][val][0] = item
 
            item.addEventListener("click", e => {
-               e.preventDefault();
+               e.preventDefault()
                for (const keyval in lookup[name]) {
                   let [butt, div] = lookup[name][keyval]
                    if (keyval == val) {
-                       div!.style.display = "flex";
-                       butt!.classList.add("btn-pressed");
+                       div!.style.display = "flex"
+                       butt!.classList.add("btn-pressed")
                    }
                    else {
-                       div!.style.display = "none";
-                       butt!.classList.remove("btn-pressed");
+                       div!.style.display = "none"
+                       butt!.classList.remove("btn-pressed")
                    }
                }
-           });
+           })
        }
        else {
-           lookup[name][val][1] = item;
-           lib.listenInputs(item);
+           lookup[name][val][1] = item
+           lib.listenInputs(item)
        }
    }
 },

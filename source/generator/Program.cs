@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-var version = 53;
+var version = 55;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 List<T> ReadJ<T>(string table) =>

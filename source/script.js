@@ -168,28 +168,6 @@ lib.go(() => {
             a.classList.add("footer__nav-item_active");
     });
 });
-lib.go((link) => {
-    let page = parseInt(link.dataset.thanknext);
-    let footH = document.getElementsByTagName("footer")[0].clientHeight;
-    function handleScroll() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
-            if (endOfPage && page < 11) {
-                link.style.display = "none";
-                var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
-                if (html.ok) {
-                    var span = document.createElement("span");
-                    span.innerHTML = yield html.text();
-                    document.getElementsByClassName("thanks")[0].append(...span.childNodes);
-                    page++;
-                    if (page < 11)
-                        link.style.display = "block";
-                }
-            }
-        });
-    }
-    window.addEventListener("scroll", handleScroll);
-}, document.getElementsByClassName("thanks-next-link")[0]);
 lib.go(tabs => {
     let search = location.search, tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)), suffix = ["none", "True", "False"][tabIndex];
     if (tabIndex > -1 && tabIndex < tabs.length)
@@ -350,24 +328,40 @@ lib.go((form, butt) => {
         const [isValid, { Name, Mail, Message }] = lib.validateWithAlert([form, "Name Mail Message"]);
         if (!isValid)
             return;
-        var [isSucc] = yield lib.fetchMiniback("feedback", {
-            method: "POST",
-            body: JSON.stringify({ Name, Mail, Message }),
-            mode: "cors",
-            headers: { Accept: 'application/json', "Content-Type": 'application/json' }
-        }, lib.freezeeInputs(butt, form));
-        if (isSucc) {
-            setStatus(lib.isEnglish ? "✔️ Your message has been sent" : "✔️ Ваше повідомлення відправлено!");
+        butt.disabled = true;
+        try {
+            var resp = yield fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (resp.ok)
+                setStatus(lib.isEnglish ? "✔️ Your message has been sent" : "✔️ Ваше повідомлення відправлено!");
+            else
+                setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
+        }
+        catch (e) {
+            setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
+        }
+        finally {
+            butt.disabled = false;
             form.reset();
         }
-        else
-            setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
+        /* var [isSucc] =
+              await lib.fetchMiniback("feedback", {
+                  method: "POST",
+                  body: JSON.stringify({ Name, Mail, Message }),
+                  mode: "cors",
+                  headers: { Accept: 'application/json', "Content-Type": 'application/json' }
+              },
+              lib.freezeeInputs(butt, form))
+         */
     }));
 }, document.getElementsByClassName("user-form")[0], document.getElementById("email-submit"));
-lib.go(wraps => {
+function handleThankVideo(wraps) {
     var _a;
     for (const wrap of wraps.getElementsByTagName("figure")) {
-        const img = wrap.getElementsByTagName("picture")[0], video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video, tspan = wrap.getElementsByTagName("span")[0], title = tspan === null || tspan === void 0 ? void 0 : tspan.innerText;
+        const pics = wrap.getElementsByTagName("picture"), img = pics[pics.length - 1], video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video, tspan = wrap.getElementsByTagName("span")[0], title = tspan === null || tspan === void 0 ? void 0 : tspan.innerText;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
@@ -375,17 +369,40 @@ lib.go(wraps => {
             e.preventDefault();
             const name = (title === null || title === void 0 ? void 0 : title.trim()) || wrap.dataset.title, [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
-               <title>${name}: ${w1} ${w2}...</title></head><body>
-               <style>body { margin: 0; text-align: center; }</style>
-               <div data-new-window>
-                   <video controls autoplay muted playsinline style="width: 100%; height: auto;">
-                       <source src="//${location.host}${video}" type="video/mp4" />
-                   </video>
-               </div>
-           </body></html>`);
+                <title>${name}: ${w1} ${w2}...</title></head><body>
+                <style>body { margin: 0; text-align: center; }</style>
+                <div data-new-window>
+                    <video controls autoplay muted playsinline style="width: 100%; height: auto;">
+                        <source src="//${location.host}${video}" type="video/mp4" />
+                    </video>
+                </div>
+            </body></html>`);
         });
     }
-}, document.getElementsByClassName("thanks")[0]);
+}
+lib.go((wraps, link) => {
+    handleThankVideo(wraps);
+    if (!link)
+        return;
+    let page = parseInt(link.dataset.thanknext);
+    let footH = document.getElementsByTagName("footer")[0].clientHeight;
+    window.addEventListener("scroll", () => __awaiter(this, void 0, void 0, function* () {
+        const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
+        if (endOfPage && page != null) {
+            link.style.display = "none";
+            var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
+            if (html.ok) {
+                var span = document.createElement("span");
+                span.innerHTML = yield html.text();
+                handleThankVideo(span);
+                wraps.append(...span.childNodes);
+                page++;
+            }
+            else
+                page = null;
+        }
+    }));
+}, document.getElementsByClassName("thanks")[0], document.getElementsByClassName("thanks-next-link")[0]);
 lib.go(radios => {
     const lookup = {};
     for (const item of radios) {
