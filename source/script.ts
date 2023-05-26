@@ -459,12 +459,15 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
         return;
     let page = parseInt(link.dataset.thanknext)
     let footH = document.getElementsByTagName("footer")[0].clientHeight
+    let fetching = false
   
     window.addEventListener("scroll", async () => {
         const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
-        if (endOfPage && page != null) {
+        if (endOfPage && page != null && !fetching) {
             link.style.display = "none"
+            fetching = true
             var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
+            fetching = false
             if (html.ok) {
                 var span = document.createElement("span")
                 span.innerHTML = await html.text()
