@@ -1,156 +1,156 @@
 [
   {
     "Id": "piskunov",
-    "En": [
-      "Eduard Piskunov",
-      "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
-    ],
-    "Ua": [
-      "Эдуард Піскунов",
-      "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
-    ]
+    "Ua": {
+      "Title": "Эдуард Піскунов",
+      "Text": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
+    },
+    "En": {
+      "Title": "Eduard Piskunov",
+      "Text": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
+    }
   },
   {
     "Id": "logvin",
-    "En": [
-      "Anna Logvin",
-      "Co-founder, head of the project to help children and low-income families"
-    ],
-    "Ua": [
-      "Анна Логвін",
-      "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
-    ]
+    "Ua": {
+      "Title": "Анна Логвін",
+      "Text": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
+    },
+    "En": {
+      "Title": "Anna Logvin",
+      "Text": "Co-founder, head of the project to help children and low-income families"
+    }
   },
   {
     "Id": "boiko",
-    "En": [
-      "Tamara Boyko",
-      "Honorary member of the board, representative of a charitable foundation in Slovakia"
-    ],
-    "Ua": [
-      "Тамара Бойко",
-      "Почесний член правління, представник Фонду на території Словаччини"
-    ]
+    "Ua": {
+      "Title": "Тамара Бойко",
+      "Text": "Почесний член правління, представник Фонду на території Словаччини"
+    },
+    "En": {
+      "Title": "Tamara Boyko",
+      "Text": "Honorary member of the board, representative of a charitable foundation in Slovakia"
+    }
   },
   {
     "Id": "piskariova",
-    "En": [
-      "Piskaryova Marina",
-      "Foundation board member, administrator of the social canteen SET CATERING with the support of World Central Kitchen, designer of social, environmental and commercial projects"
-    ],
-    "Ua": [
-      "Піскарьова Марина",
-      "Член правління фонду, адміністратор соціальної їдальні SET CATERING при підтримці World Central Kitchen, дизайнерка соціальних, екологічних та комерційних проєктів"
-    ]
+    "Ua": {
+      "Title": "Піскарьова Марина",
+      "Text": "Член правління фонду, адміністратор соціальної їдальні SET CATERING при підтримці World Central Kitchen, дизайнерка соціальних, екологічних та комерційних проєктів"
+    },
+    "En": {
+      "Title": "Piskaryova Marina",
+      "Text": "Foundation board member, administrator of the social canteen SET CATERING with the support of World Central Kitchen, designer of social, environmental and commercial projects"
+    }
   },
   {
     "Id": "AAA",
-    "En": [
-      "Andrii Andrieiev",
-      "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
-    ],
-    "Ua": [
-      "Андрій Андрєєв",
-      "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
-    ]
+    "Ua": {
+      "Title": "Андрій Андрєєв",
+      "Text": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
+    },
+    "En": {
+      "Title": "Andrii Andrieiev",
+      "Text": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
+    }
   },
   {
     "Id": "yanochkov",
-    "En": [
-      "Peter Yanachkov",
-      "Managing director, Pierce Capital Partners"
-    ],
-    "Ua": [
-      "Peter Yanachkov",
-      "Керуючий директор Pierce Capital Partners"
-    ]
+    "Ua": {
+      "Title": "Peter Yanachkov",
+      "Text": "Керуючий директор Pierce Capital Partners"
+    },
+    "En": {
+      "Title": "Peter Yanachkov",
+      "Text": "Managing director, Pierce Capital Partners"
+    }
   },
   {
     "Id": "LUNTER",
-    "En": [
-      "Ondrej Lunter",
-      "Deputy head of the Banská Bystrica region in Slovakia"
-    ],
-    "Ua": [
-      "Ondrej Lunter",
-      "Голова Банськобистрицького краю в Словаччині"
-    ]
+    "Ua": {
+      "Title": "Ondrej Lunter",
+      "Text": "Голова Банськобистрицького краю в Словаччині"
+    },
+    "En": {
+      "Title": "Ondrej Lunter",
+      "Text": "Deputy head of the Banská Bystrica region in Slovakia"
+    }
   },
   {
     "Id": "bagacka",
-    "En": [
-      "Michal Bagacka",
-      "Deputy and member of the board of the autonomous region of Banska Bystrica"
-    ],
-    "Ua": [
-      "Michal Bagacka",
-      "Депутат і член правління автономного регіону Банська Бистриця"
-    ]
+    "Ua": {
+      "Title": "Michal Bagacka",
+      "Text": "Депутат і член правління автономного регіону Банська Бистриця"
+    },
+    "En": {
+      "Title": "Michal Bagacka",
+      "Text": "Deputy and member of the board of the autonomous region of Banska Bystrica"
+    }
   },
   {
     "Id": "hnusta",
-    "En": [
-      "Hnusta Grigorij Samin",
-      "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
-    ],
-    "Ua": [
-      "Hnusta Grigorij Samin",
-      "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
-    ]
+    "Ua": {
+      "Title": "Hnusta Grigorij Samin",
+      "Text": "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
+    },
+    "En": {
+      "Title": "Hnusta Grigorij Samin",
+      "Text": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
+    }
   },
   {
     "Id": "dimplomati",
-    "En": [
-      "Diplomats",
-      "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
-    ],
-    "Ua": [
-      "Дипломати",
-      "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
-    ]
+    "Ua": {
+      "Title": "Дипломати",
+      "Text": "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
+    },
+    "En": {
+      "Title": "Diplomats",
+      "Text": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
+    }
   },
   {
     "Id": "diabete",
-    "En": [
-      "Diabite",
-      "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
-    ],
-    "Ua": [
-      "Diabite",
-      "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
-    ]
+    "Ua": {
+      "Title": "Diabite",
+      "Text": "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
+    },
+    "En": {
+      "Title": "Diabite",
+      "Text": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
+    }
   },
   {
     "Id": "vyru",
-    "En": [
-      "Vyrų fondas",
-      "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
-    ],
-    "Ua": [
-      "Vyrų fondas",
-      "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
-    ]
+    "Ua": {
+      "Title": "Vyrų fondas",
+      "Text": "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
+    },
+    "En": {
+      "Title": "Vyrų fondas",
+      "Text": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
+    }
   },
   {
     "Id": "pcoket",
-    "En": [
-      "Pocket Hero",
-      "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
-    ],
-    "Ua": [
-      "Pocket Hero",
-      "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
-    ]
+    "Ua": {
+      "Title": "Pocket Hero",
+      "Text": "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
+    },
+    "En": {
+      "Title": "Pocket Hero",
+      "Text": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
+    }
   },
   {
     "Id": "mandri",
-    "En": [
-      "Mandrivnyk",
-      "Charity Fund"
-    ],
-    "Ua": [
-      "Мандрівник",
-      "Благодійний фонд"
-    ]
+    "Ua": {
+      "Title": "Мандрівник",
+      "Text": "Благодійний фонд"
+    },
+    "En": {
+      "Title": "Mandrivnyk",
+      "Text": "Charity Fund"
+    }
   }
 ]

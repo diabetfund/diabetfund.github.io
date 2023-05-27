@@ -9,7 +9,7 @@ List<T> ReadJ<T>(string table) =>
     JsonSerializer.Deserialize<List<T>>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item<List<string>>>("partners"), ReadJ<Thanks>("thanks"),
+    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
      ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
 
 Render("ua");
@@ -41,17 +41,8 @@ void Render(string lang)
 
     var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
 
-    void AddLocaleItem<T>(List<T> xs, Func<T, string, string> create) where T : Item
-    {
-        foreach (var item in xs)
-            if (item.Locale(lang) is List<string> loc)
-                loc.Add(create(item, loc[0]));
-    }
-    AddLocaleItem(thanks, (_, name) => name is "" ? "" : "&nbsp;" + name + "&nbsp;");
-
-    AddLocaleItem(news, (nw, _) => nw.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat));
-
-
+    var localNews = news.ConvertAll(_ => _ with { LocaleDate = _.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat) });
+    
     string Join<T>(string viewPath, IEnumerable<T> xs) where T : Item
     {
         View view = new(Read(viewPath));
@@ -88,7 +79,7 @@ void Render(string lang)
     Out("index", "", common);
     Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
 
-    Out("news", "/news", Join("newsCard", news));
+    Out("news", "/news", Join("newsCard", localNews));
     Out("auction", "/auction", Join("auctionCard", stones));
     Out("auctionDetail", "/detail");
 
@@ -120,10 +111,10 @@ void Render(string lang)
             report = p.ReportId is { } rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = Join("newsCard", news.Take(2));
+    var otherNews = Join("newsCard", localNews.Take(2));
     View newsView = new(Read("newsPage"));
 
-    foreach (var props in news)
+    foreach (var props in localNews)
         Out(newsView.Run(props, props.Locale(lang)), "/news/" + props.Id, new
         {
             content = Read("news/" + props.Id),
@@ -131,26 +122,30 @@ void Render(string lang)
         });
 }
 
+record Topic
+{
+    public required string Title { get; set; }
+    public required string Text { get; set; }
+}
+
 record Item
 {
-    public object? En { get; set; }
-    public object? Ua { get; set; }
+    public required string Id { get; set; }
+    public Topic? En { get; set; }
+    public Topic? Ua { get; set; }
 
     public virtual object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<TId, TLocale> : Item 
+record Item<TTopic> : Item 
 {
-    public TId Id { get; set; }
-    public new TLocale En { get; set; }
-    public new TLocale Ua { get; set; }
+    public new TTopic En { get; set; }
+    public new TTopic Ua { get; set; }
 
     public override object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<TTopic> : Item<string, TTopic>;
-
-record ProjectTopic(string Title, string Text, string? Data, string? Signature, string? Promo);
+record ProjectTopic(string? Data, string? Signature, string? Promo): Topic;
 
 record Project(
     int Need,
@@ -182,6 +177,11 @@ enum ThankTag
     Cat, Compose, AnimaAnimus, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
 }
 
+record ThankTopic : Topic
+{
+    public string Sign => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
+}
+
 record Thanks(
     ThankTag[] Tags,
     int? Altitude,
@@ -189,7 +189,7 @@ record Thanks(
     string? Avatar,
     int? MainIndex,
     DateOnly Date,
-    bool DesktopOnly) : Item<int, List<string>>
+    bool DesktopOnly) : Item<ThankTopic>
 {
     public string ZeroOrAvatar =>
         Avatar is null ? "zero.png" : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png") : Avatar;
@@ -213,13 +213,14 @@ record Slide(string Pic) : Item<string>
     public string Url => Project.UrlSegment(Id);
 }
 
-record Wallet(string Address, bool IsCrypto) : Item<int, string>;
+record Wallet(string Address, bool IsCrypto) : Item<string>;
 
-record News(DateOnly Date) : Item<List<string>>
+record News(DateOnly Date) : Item
 {
     public string JsonDate => Date.ToString("o");
+    public string? LocaleDate { get; set; }
 }
 
-record StoneTopic(string Title, string Text, string CertificateIntro);
+record StoneTopic(string CertificateIntro): Topic;
 
-record Stone(string MiniLeft, string MiniRight) : Item<string, StoneTopic>;
+record Stone(string MiniLeft, string MiniRight) : Item<StoneTopic>;

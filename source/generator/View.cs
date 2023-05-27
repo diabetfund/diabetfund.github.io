@@ -23,19 +23,14 @@ readonly struct View(string template)
     public string Run(params object?[] models)
     {
         var result = template;
+
         foreach (var obj in models)
-        {
             if (obj is string content)
                 result = result.Replace("@content", content);
-
-            else if (obj is List<string> list)
-                for (int i = 0; i < list.Count; i++)
-                    result = result.Replace(i switch { 0 => "@first", 1 => "@second", _ => "@third" }, list[i]);
-
             else if (obj is not null)
                 foreach (var (key, val) in exposes.GetOrAdd(obj.GetType(), PropertiesReader)(obj))
                     result = result.Replace(key, val is null ? "null" : val.ToString()!);
-        }
+
         return result;
     }
 }

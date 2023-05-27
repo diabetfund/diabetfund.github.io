@@ -1,41 +1,41 @@
 [
    {
-      "Id": 1,
+      "Id": "1",
       "Address": "5169 3351 0093 7594",
       "IsCrypto": false,
       "En": "Card",
       "Ua": "Приват"
    },
    {
-      "Id": 2,
+      "Id": "2",
       "Address": "UA123052990000026005050305667",
       "IsCrypto": false,
       "En": "UAH",
       "Ua": "UAH"
    },
    {
-      "Id": 3,
+      "Id": "3",
       "Address": "UA113052990000026008050316738",
       "IsCrypto": false,
       "En": "USD",
       "Ua": "USD"
    },
    {
-      "Id": 4,
+      "Id": "4",
       "Address": "UA343052990000026006050334046",
       "IsCrypto": false,
       "En": "EUR",
       "Ua": "EUR"
    },
    {
-      "Id": 5,
+      "Id": "5",
       "Address": "0xd365D6aeec70412B806e28C6648c5b8d59668745",
       "IsCrypto": true,
       "En": "Ethereum",
       "Ua": "Ethereum"
    },
    {
-      "Id": 6,
+      "Id": "6",
       "Address": "bc1q6p9nsuzanggxypg4x0dafjtdp2mm5t6nuvfhdx",
       "IsCrypto": true,
       "En": "Bitcoin",
