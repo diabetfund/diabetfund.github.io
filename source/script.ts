@@ -467,7 +467,6 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
             link.style.display = "none"
             fetching = true
             var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
-            fetching = false
             if (html.ok) {
                 var span = document.createElement("span")
                 span.innerHTML = await html.text()
@@ -477,6 +476,7 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
             }
             else
                 page = null
+            fetching = false
         }
     })
 },
@@ -542,20 +542,20 @@ lib.go(sendButt => {
        const body = new FormData()
        body.append("file", (document.getElementsByClassName("inp-doc")[0] as HTMLInputElement).files![0])
        for (const nam in fields)
-           body.append(nam, fields[nam] ?? "");
+           body.append(nam, fields[nam] ?? "")
        
        var [isSucc] = await lib.fetchMiniback("helpreq", 
                        { method: "POST", body, mode: "cors" },
-                       lib.freezeeInputs(sendButt, form1, form2, docform));
+                       lib.freezeeInputs(sendButt, form1, form2, docform))
 
        if (isSucc) {
            if (confirm("Ваше повідомлення відправлено!"))
-               location.href="/";
+               location.href="/"
            else
-               location.href="/";
+               location.href="/"
        }
        else
-           alert("щось пішло не так");
+           alert("щось пішло не так")
    });
 },
-document.getElementById("seld-recipiet") as HTMLButtonElement);
+document.getElementById("seld-recipiet") as HTMLButtonElement)
