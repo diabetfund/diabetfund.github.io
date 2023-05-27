@@ -391,10 +391,9 @@ lib.go((wraps, link) => {
     window.addEventListener("scroll", () => __awaiter(this, void 0, void 0, function* () {
         const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
         if (endOfPage && page != null && !fetching) {
-            link.style.display = "none";
             fetching = true;
+            link.style.display = "none";
             var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
-            fetching = false;
             if (html.ok) {
                 var span = document.createElement("span");
                 span.innerHTML = yield html.text();
@@ -404,6 +403,7 @@ lib.go((wraps, link) => {
             }
             else
                 page = null;
+            fetching = false;
         }
     }));
 }, document.getElementsByClassName("thanks")[0], document.getElementsByClassName("thanks-next-link")[0]);

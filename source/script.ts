@@ -464,8 +464,8 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
     window.addEventListener("scroll", async () => {
         const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
         if (endOfPage && page != null && !fetching) {
-            link.style.display = "none"
             fetching = true
+            link.style.display = "none"
             var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
             if (html.ok) {
                 var span = document.createElement("span")
