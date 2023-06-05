@@ -23,53 +23,43 @@ void Render(string lang)
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
 
-    View master = new(Read("master")),
-        projectCard = new(Read("projectCard")),
-        projectPromo = new(Read("projectPromo"));
+    var print = new Printer(Read, lang);
 
-    void Out(string content, string subPath, object? arg = null)
-    {
-        if (content.Length < 30)
-            content = Read(content);
-        if (arg is not null)
-            content = new View(content).Run(arg);
-
-        var path = $"{rootPath}/{lang}{subPath}/index.html";
-        new FileInfo(path).Directory!.Create();
-        File.WriteAllText(path, master.Run(new { content, subPath, version, lang }));
-    }
+    void Out(string arg, string subPath, object? model = null) =>
+        Printer.WriteFile(
+            $"{rootPath}/{lang}{subPath}/index.html",
+            print["master", new { content = print[arg, model], subPath, version, lang }]);
 
     var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
-
-    var localNews = news.ConvertAll(_ => _ with { LocaleDate = _.Date.ToString("dd MMM yyyy", culture!.DateTimeFormat) });
-    
-    string Join<T>(string viewPath, IEnumerable<T> xs) where T : Item
+    var localNews = news.ConvertAll(nw => nw with
     {
-        View view = new(Read(viewPath));
-        return string.Join("\n", xs.Select(x => view.Run(x, x.Locale(lang))));
-    }
-
-    string ProjectCard(Project p) =>
-        (p.Locale(lang) is ProjectTopic { Promo: null } ? projectCard : projectPromo).Run(p, p.Locale(lang));
-
-    var walletsTable = new View(Read("wallets")).Run(new
-    {
-        bank = Join("wallet-line", wallets.Where(_ => !_.IsCrypto)),
-        crypto = Join("wallet-line", wallets.Where(_ => _.IsCrypto))
+        LocaleDate = nw.Date.ToString("dd MMM yyyy", culture.DateTimeFormat)
     });
+
+    string ProjectCard(Project project) =>
+        print[
+            project.Locale(lang) is ProjectTopic { Promo: null } ? "projectCard" : "projectPromo", 
+            project
+        ];
+
+    var walletsTable = print["wallets", new
+    {
+        bank = print["wallet-line", wallets.Where(_ => !_.IsCrypto)],
+        crypto = print["wallet-line", wallets.Where(_ => _.IsCrypto)]
+    }];
     var common = new
     {
-        founders = new View(Read("founders")).Run(Join("partner", partners)),
-        payDetails = new View(Read("partners-pay")).Run(walletsTable),
+        founders = print["founders", print["partner", partners]],
+        payDetails = print["partners-pay", walletsTable],
 
         topProjects = string.Join("\n",
             projects.Take(6).Select((p, i) => ProjectCard(p with { DesktopOnly = i > 3 }))),
 
-        slides = Join("slide", slides),
-        topThanks = Join("thankCardMain",
+        slides = print["slide", slides],
+        topThanks = print["thankCardMain",
             thanks.Where(_ => _.MainIndex.HasValue)
                   .OrderBy(_ => _.MainIndex)
-                  .Select((t, i) => t with { DesktopOnly = i > 2 })),
+                  .Select((thank, i) => thank with { DesktopOnly = i > 2 })],
 
         skipAbout = false,
         walletsTable
@@ -79,43 +69,40 @@ void Render(string lang)
     Out("index", "", common);
     Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
 
-    Out("news", "/news", Join("newsCard", localNews));
-    Out("auction", "/auction", Join("auctionCard", stones));
+    Out("news", "/news", print["newsCard", localNews]);
+    Out("auction", "/auction", print["auctionCard", stones]);
     Out("auctionDetail", "/detail");
 
     var thanksPages = thanks.Chunk(40).ToArray();
     if (Thanks.Debug)
-        Out("thanks", "/thanks", Join("thankCard", thanks));
+        Out("thanks", "/thanks", print["thankCard", thanks]);
     else
         for (var i = 0; i < thanksPages.Length; i++)
         {
-            var content = Join("thankCard", thanksPages[i]);
+            var content = Printer.WriteFile(
+                $"{rootPath}/{lang}/thanksChunk{i + 1}.html",
+                print["thankCard", thanksPages[i]]);
+
             var hasNext = i < thanksPages.Length - 1;
             var nextPage = hasNext ? i + 2 : (int?)null;
-
-            File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
-
-            Out("thanks", i == 0 ? "/thanks" : $"/thanks-{i + 1}", 
-                new { content, nextPage, hasNext });
+            Out("thanks", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
         }
     
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
-    View projectView = new(Read("projectPage"));
-    foreach (var p in projects)
-        Out(projectView.Run(p, p.Locale(lang)), "/fundraising/" + p.Id, new
+    foreach (var project in projects)
+        Out(print["projectPage", project], "/fundraising/" + project.Id, new
         {
-            content = Read("projects/" + p.Id),
+            content = Read("projects/" + project.Id),
             walletsTable,
-            report = p.ReportId is { } rep ? Read("projects/" + rep) : null
+            report = project.ReportId is {} rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = Join("newsCard", localNews.Take(2));
-    View newsView = new(Read("newsPage"));
-
+    var otherNews = print["newsCard", localNews.Take(2)];
+    
     foreach (var props in localNews)
-        Out(newsView.Run(props, props.Locale(lang)), "/news/" + props.Id, new
+        Out(print["newsPage", props], "/news/" + props.Id, new
         {
             content = Read("news/" + props.Id),
             otherNews
@@ -124,26 +111,20 @@ void Render(string lang)
 
 record Topic
 {
-    public required string Title { get; set; }
-    public required string Text { get; set; }
+    public string? Title { get; set; }
+    public string? Text { get; set; }
 }
 
-record Item
+record Item<TTopic> : ILocalized
 {
     public required string Id { get; set; }
-    public Topic? En { get; set; }
-    public Topic? Ua { get; set; }
+    public TTopic? En { get; set; }
+    public TTopic? Ua { get; set; }
 
-    public virtual object? Locale(string lang) => lang is "en" ? En : Ua;
+    public object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
-record Item<TTopic> : Item 
-{
-    public new TTopic En { get; set; }
-    public new TTopic Ua { get; set; }
-
-    public override object? Locale(string lang) => lang is "en" ? En : Ua;
-}
+record Item : Item<Topic>;
 
 record ProjectTopic(string? Data, string? Signature, string? Promo): Topic;
 
@@ -166,7 +147,8 @@ record Project(
 
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
 
-    public static string UrlSegment(string id) => id is "help-rehab" ? "center" : $"fundraising/{id}";
+    public static string UrlSegment(string id) =>
+        id is "help-rehab" ? "center" : $"fundraising/{id}";
 }
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -179,7 +161,8 @@ enum ThankTag
 
 record ThankTopic : Topic
 {
-    public string Sign => Title is "" ? "" : "&nbsp;" + Title + "&nbsp;";
+    public string Sign => 
+        string.IsNullOrEmpty(Title) ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
 record Thanks(
@@ -192,7 +175,9 @@ record Thanks(
     bool DesktopOnly) : Item<ThankTopic>
 {
     public string ZeroOrAvatar =>
-        Avatar is null ? "zero.png" : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png") : Avatar;
+        Avatar is null ? "zero.png"
+        : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png")
+        : Avatar;
 
     public string ModernAvatar => Avatar ?? "zero.webp";
 
