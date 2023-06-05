@@ -5,12 +5,13 @@ using System.Text.Json.Serialization;
 var version = 56;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
-List<T> ReadJ<T>(string table) =>
-    JsonSerializer.Deserialize<List<T>>(File.ReadAllText($"{rootPath}source/data/{table}.json"))!;
+List<T> ReadJ<T>(string? table = null) =>
+    JsonSerializer.Deserialize<List<T>>(
+        File.ReadAllText($"{rootPath}source/data/{table ?? typeof(T).Name.ToLower() + "s"}.json"))!;
 
 var (projects, news, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("projects"), ReadJ<News>("news"), ReadJ<Item>("partners"), ReadJ<Thanks>("thanks"),
-     ReadJ<Slide>("slides"), ReadJ<Wallet>("wallets"), ReadJ<Stone>("auction"));
+    (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(), ReadJ<Thank>(),
+     ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
 Render("ua");
 Render("en");
@@ -25,10 +26,14 @@ void Render(string lang)
 
     var print = new Printer(Read, lang);
 
-    void Out(string arg, string subPath, object? model = null) =>
-        Printer.WriteFile(
-            $"{rootPath}/{lang}{subPath}/index.html",
-            print["master", new { content = print[arg, model], subPath, version, lang }]);
+    void Out(string arg, string subPath, object? model = null)
+    {
+        var path = $"{rootPath}/{lang}{subPath}/index.html";
+        new FileInfo(path).Directory!.Create();
+
+        var master = new { content = print[model, arg], subPath, version, lang };
+        File.WriteAllText(path, print[master]);
+    }
 
     var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
     var localNews = news.ConvertAll(nw => nw with
@@ -38,50 +43,53 @@ void Render(string lang)
 
     string ProjectCard(Project project) =>
         print[
-            project.Locale(lang) is ProjectTopic { Promo: null } ? "projectCard" : "projectPromo", 
-            project
+            project,
+            project.Locale(lang) is ProjectTopic { Promo: null } ? "projectCard" : "projectPromo"
         ];
 
-    var walletsTable = print["wallets", new
+    var walletsTableContent = new
     {
-        bank = print["wallet-line", wallets.Where(_ => !_.IsCrypto)],
-        crypto = print["wallet-line", wallets.Where(_ => _.IsCrypto)]
-    }];
+        bank = print[wallets.Where(_ => !_.IsCrypto)],
+        crypto = print[wallets.Where(_ => _.IsCrypto)]
+    };
+    var walletsTable = print[walletsTableContent];
+    var founders = print[partners];
+    
+    var thankCardMain =
+        thanks.Where(_ => _.MainIndex.HasValue)
+              .OrderBy(_ => _.MainIndex)
+              .Select((thank, i) => thank with { DesktopOnly = i > 2 });
+
     var common = new
     {
-        founders = print["founders", print["partner", partners]],
-        payDetails = print["partners-pay", walletsTable],
+        founders = print[founders],
+        payDetails = print[walletsTable],
+        slides = print[slides],
+        topThanks = print[thankCardMain],
+        skipAbout = false,
+        walletsTable,
 
         topProjects = string.Join("\n",
-            projects.Take(6).Select((p, i) => ProjectCard(p with { DesktopOnly = i > 3 }))),
-
-        slides = print["slide", slides],
-        topThanks = print["thankCardMain",
-            thanks.Where(_ => _.MainIndex.HasValue)
-                  .OrderBy(_ => _.MainIndex)
-                  .Select((thank, i) => thank with { DesktopOnly = i > 2 })],
-
-        skipAbout = false,
-        walletsTable
+            projects.Take(6).Select((p, i) => ProjectCard(p with { DesktopOnly = i > 3 })))
     };
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
     Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
 
-    Out("news", "/news", print["newsCard", localNews]);
-    Out("auction", "/auction", print["auctionCard", stones]);
+    Out("news", "/news", print[localNews]);
+    Out("auction", "/auction", print[stones]);
     Out("auctionDetail", "/detail");
 
     var thanksPages = thanks.Chunk(40).ToArray();
-    if (Thanks.Debug)
-        Out("thanks", "/thanks", print["thankCard", thanks]);
+    if (Thank.Debug)
+        Out("thanks", "/thanks", print[thanks, "thankCard"]);
     else
         for (var i = 0; i < thanksPages.Length; i++)
         {
-            var content = Printer.WriteFile(
-                $"{rootPath}/{lang}/thanksChunk{i + 1}.html",
-                print["thankCard", thanksPages[i]]);
+            var content = print[thanksPages[i], "thankCard"];
+            
+            File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
 
             var hasNext = i < thanksPages.Length - 1;
             var nextPage = hasNext ? i + 2 : (int?)null;
@@ -91,22 +99,31 @@ void Render(string lang)
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
-    foreach (var project in projects)
-        Out(print["projectPage", project], "/fundraising/" + project.Id, new
+    foreach (var projectPage in projects)
+        Out(print[projectPage], "/fundraising/" + projectPage.Id, new
         {
-            content = Read("projects/" + project.Id),
+            content = Read("projects/" + projectPage.Id),
             walletsTable,
-            report = project.ReportId is {} rep ? Read("projects/" + rep) : null
+            report = projectPage.ReportId is {} rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = print["newsCard", localNews.Take(2)];
+    var otherNews = print[localNews.Take(2)];
     
-    foreach (var props in localNews)
-        Out(print["newsPage", props], "/news/" + props.Id, new
+    foreach (var newsPage in localNews)
+        Out(print[newsPage], "/news/" + newsPage.Id, new
         {
-            content = Read("news/" + props.Id),
+            content = Read("news/" + newsPage.Id),
             otherNews
         });
+}
+
+record Item<T> : ILocalized
+{
+    public required string Id { get; set; }
+    public T? En { get; set; }
+    public T? Ua { get; set; }
+
+    public object? Locale(string lang) => lang is "en" ? En : Ua;
 }
 
 record Topic
@@ -115,16 +132,7 @@ record Topic
     public string? Text { get; set; }
 }
 
-record Item<TTopic> : ILocalized
-{
-    public required string Id { get; set; }
-    public TTopic? En { get; set; }
-    public TTopic? Ua { get; set; }
-
-    public object? Locale(string lang) => lang is "en" ? En : Ua;
-}
-
-record Item : Item<Topic>;
+record Partner : Item<Topic>;
 
 record ProjectTopic(string? Data, string? Signature, string? Promo): Topic;
 
@@ -165,7 +173,7 @@ record ThankTopic : Topic
         string.IsNullOrEmpty(Title) ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
-record Thanks(
+record Thank(
     ThankTag[] Tags,
     int? Altitude,
     string? Video,
@@ -200,7 +208,7 @@ record Slide(string Pic) : Item<string>
 
 record Wallet(string Address, bool IsCrypto) : Item<string>;
 
-record News(DateOnly Date) : Item
+record News(DateOnly Date) : Item<Topic>
 {
     public string JsonDate => Date.ToString("o");
     public string? LocaleDate { get; set; }
