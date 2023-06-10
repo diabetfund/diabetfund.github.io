@@ -9,38 +9,30 @@ interface ILocalized
     object? Locale(string lang);
 }
 
-sealed class Printer(Func<string, string> readTemplate, string lang = "en")
+public delegate string Printer(object? model, [CallerArgumentExpression(nameof(model))] string nameOrTemplate = "");
+
+public sealed class PrinterFactory
 {
-    readonly ConcurrentDictionary<string, string> templates = new();
-
-    public string this[object? model, [CallerArgumentExpression(nameof(model))] string pathOrTemplate = ""]
+    public static Printer Create(Func<string, string> readTemplate, string lang = "en")
     {
-        get
-        {
-            if (pathOrTemplate.Length < 50)
-            {
-                if (pathOrTemplate.IndexOf('.') is > -1 and var index)
-                    pathOrTemplate = pathOrTemplate[..index];
+        ConcurrentDictionary<string, string> templates = new();
 
-                pathOrTemplate = templates.GetOrAdd(pathOrTemplate, (path, read) => read(path), readTemplate);
-            }
-            return Print(model, pathOrTemplate);
-        }
-    }
-
-    string Print(object? box, string template) =>
-        box switch
+        string Render(object? box, string template) => box switch
         {
             null => template,
-
             string content => template.Replace("@content", content),
-            
-            IEnumerable<object> items => string.Join("\n", items.Select(it => Print(it, template))),
 
-            ILocalized item => PrintModel(Print(item.Locale(lang), template), item),
+            IEnumerable<object> items => string.Join("\n", items.Select(it => Render(it, template))),
 
+            ILocalized item => PrintModel(Render(item.Locale(lang), template), item),
             _ => PrintModel(template, box)
         };
+
+        return (model, name) => Render(model,
+                name.Length > 50 ? name : templates.GetOrAdd(
+                    name.IndexOf('.') is > -1 and var i ? name[..i] : name,
+                    (path, read) => read(path), readTemplate));
+    }
 
     static string PrintModel(string result, object model)
     {

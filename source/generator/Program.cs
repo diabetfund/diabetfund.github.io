@@ -13,10 +13,10 @@ var (projects, news, partners, thanks, slides, wallets, stones) =
     (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(), ReadJ<Thank>(),
      ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
-Render("ua");
-Render("en");
+WriteFolder("ua");
+WriteFolder("en");
 
-void Render(string lang)
+void WriteFolder(string lang)
 {
     string Read(string path)
     {
@@ -24,15 +24,15 @@ void Render(string lang)
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
 
-    var print = new Printer(Read, lang);
+    var print = PrinterFactory.Create(Read, lang);
 
     void Out(string arg, string subPath, object? model = null)
     {
         var path = $"{rootPath}/{lang}{subPath}/index.html";
         new FileInfo(path).Directory!.Create();
 
-        var master = new { content = print[model, arg], subPath, version, lang };
-        File.WriteAllText(path, print[master]);
+        var master = new { content = print(model, arg), subPath, version, lang };
+        File.WriteAllText(path, print(master));
     }
 
     var culture = CultureInfo.GetCultureInfo(lang is "ua" ? "uk" : "en")!;
@@ -41,76 +41,75 @@ void Render(string lang)
         LocaleDate = nw.Date.ToString("dd MMM yyyy", culture.DateTimeFormat)
     });
 
-    string ProjectCard(Project project) =>
-        print[
-            project,
-            project.Locale(lang) is ProjectTopic { Promo: null } ? "projectCard" : "projectPromo"
-        ];
+    string ProjectCards(IEnumerable<Project> projects, bool setDesktop) =>
+        string.Join('\n', projects.Select((project, i) =>
+            print(
+                project with { DesktopOnly = setDesktop && i > 3 },
+                "project" + (project.Locale(lang) is ProjectTopic { Promo: null } ? "Card" : "Promo")
+            )));
 
     var walletsTableContent = new
     {
-        bank = print[wallets.Where(_ => !_.IsCrypto)],
-        crypto = print[wallets.Where(_ => _.IsCrypto)]
+        bank = print(wallets.Where(_ => !_.IsCrypto)),
+        crypto = print(wallets.Where(_ => _.IsCrypto))
     };
-    var walletsTable = print[walletsTableContent];
-    var founders = print[partners];
+    var walletsTable = print(walletsTableContent);
+    var founders = print(partners);
     
-    var thankCardMain =
+    var thanksMain =
         thanks.Where(_ => _.MainIndex.HasValue)
               .OrderBy(_ => _.MainIndex)
               .Select((thank, i) => thank with { DesktopOnly = i > 2 });
 
     var common = new
     {
-        founders = print[founders],
-        payDetails = print[walletsTable],
-        slides = print[slides],
-        topThanks = print[thankCardMain],
+        founders = print(founders),
+        payDetails = print(walletsTable),
+        slides = print(slides),
+        topThanks = print(thanksMain),
         skipAbout = false,
         walletsTable,
-
-        topProjects = string.Join("\n",
-            projects.Take(6).Select((p, i) => ProjectCard(p with { DesktopOnly = i > 3 })))
+        topProjects = ProjectCards(projects.Take(6), true)
     };
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
-    Out("projects", "/fundraising", string.Join("\n", projects.Select(ProjectCard)));
+    Out("projects", "/fundraising", ProjectCards(projects, false));
 
-    Out("news", "/news", print[localNews]);
-    Out("auction", "/auction", print[stones]);
+    Out("news", "/news", print(localNews));
+    Out("auction", "/auction", print(stones));
     Out("auctionDetail", "/detail");
 
-    var thanksPages = thanks.Chunk(40).ToArray();
     if (Thank.Debug)
-        Out("thanks", "/thanks", print[thanks, "thankCard"]);
+        Out("thankList", "/thanks", print(thanks));
     else
-        for (var i = 0; i < thanksPages.Length; i++)
+        _ = thanks.Chunk(40).Select((thanks, i) =>
         {
-            var content = print[thanksPages[i], "thankCard"];
-            
+            var content = print(thanks);
             File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
 
-            var hasNext = i < thanksPages.Length - 1;
+            var hasNext = thanks.Length == 40;
             var nextPage = hasNext ? i + 2 : (int?)null;
-            Out("thanks", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
-        }
-    
+            Out("thankList", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
+            return i;
+        })
+        .ToList();
+
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
     foreach (var projectPage in projects)
-        Out(print[projectPage], "/fundraising/" + projectPage.Id, new
+        Out(print(projectPage), "/fundraising/" + projectPage.Id, new
         {
             content = Read("projects/" + projectPage.Id),
             walletsTable,
             report = projectPage.ReportId is {} rep ? Read("projects/" + rep) : null
         });
 
-    var otherNews = print[localNews.Take(2)];
+    var otherNews = print(localNews.Take(2));
     
     foreach (var newsPage in localNews)
-        Out(print[newsPage], "/news/" + newsPage.Id, new
+        Out(print(newsPage), "/news/" + newsPage.Id, new
         {
             content = Read("news/" + newsPage.Id),
             otherNews
@@ -162,7 +161,7 @@ record Project(
 [JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
-    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Reservoir, Pods,
+    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, P999, Reservoir, Pods, Candies,
     Old, Man, Teen, Adult, Infant,
     Cat, Compose, AnimaAnimus, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
 }
@@ -174,7 +173,7 @@ record ThankTopic : Topic
 }
 
 record Thank(
-    ThankTag[] Tags,
+    List<ThankTag> Tags,
     int? Altitude,
     string? Video,
     string? Avatar,
@@ -183,9 +182,9 @@ record Thank(
     bool DesktopOnly) : Item<ThankTopic>
 {
     public string ZeroOrAvatar =>
-        Avatar is null ? "zero.png"
-        : Avatar.EndsWith("webp") ? Avatar.Replace("webp", "png")
-        : Avatar;
+        Avatar is { } avatar
+        ? avatar.EndsWith("webp") ? avatar.Replace("webp", "png") : avatar
+        : "zero.png";
 
     public string ModernAvatar => Avatar ?? "zero.webp";
 

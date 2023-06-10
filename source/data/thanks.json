@@ -74,6 +74,54 @@
     "En": {"Title": "Galina Saltykova", "Text": "There are not enough words of thanks, tears of joy and emotions tear from the inside. I am proud of you PEOPLE who, despite all obstacles, illnesses, mistrust, even insults, do not fold your hands and help those who have faced this terrible disease. A huge THANK YOU from me and my son To EDUARD, IHOR, SERGI and all the PEOPLE involved in this HUGE CASE. Unfortunately, we do not know everyone by name, but I ask God for all those who help. Special thanks to Ms. Schmidt-Schmiedebach for the help provided and concern for each of us. May you 100 times more good will come back."}
   },
   {
+    "Id": "390",
+    "Date": "2023-06-10",
+    "Tags": ["Libre", "Vitamin", "HighQuality", "Candies"],
+    "Altitude": 1,
+    "Ua": {"Title": "Людмiла", "Text": "Дякуємо дуже Едуарду і всій команді, яка допомагає нашим діткам з необхідним для нормального життя. Дякуємо, страшно уявити наше життя без сучасних пристроїв виміру цукру(лібри), особливо коли дитина не відчуває високі і низькі цукри. Лібра- це наші очі. Дякуємо, що ми можемо бачити цукор безболісно. Хай збуваються всі Ваші задумані великі плани!!! І Бог завжди оберігає!!!"},
+    "En": {"Title": "Ludmila", "Text": "Many thanks to Eduard and the entire team, which helps our children with what is necessary for a normal life. Thank you, it is scary to imagine our life without modern devices for measuring sugar (pounds), especially when a child does not feel high and low sugars. Libra is our eyes. Thank goodness we can see sugar painlessly. May all your big plans come true!!! And God always protects!!!"}
+  },
+  {
+    "Id": "391",
+    "Avatar":"ava-391.webp",
+    "Date": "2023-06-09",
+    "Tags": ["Libre", "Vitamin", "HighQuality", "Sweet", "Teen"],
+    "Ua": {"Title": "Iра", "Text": "Безмежно вдячні Вам за працю, за допомогу дітям та дорослим з ЦД. 💛💙  Нехай Ваша доброта і щедрість повернуться до Вас сторицею. 🌻"},
+    "En": {"Title": "Ira", "Text": "We are infinitely grateful to you for your work, for helping children and adults with diabetes. 💛💙 Let your kindness and generosity return to you a hundredfold. 🌻"}
+  },
+  {
+    "Id": "392",
+    "Avatar":"ava-145.webp",
+    "Date": "2023-06-09",
+    "Altitude": 2,
+    "Tags": ["Libre", "Vitamin", "HighQuality", "Infant"],
+    "Ua": {"Title": "Владлена", "Text": "Безмежно вдячна вся родина 🧡 За сенсор, за краплі, цукрозамінник та за минулу допомогу рідером Лібра 2! Тому що відразу так і не оціниш усі переваги, на це потрібен час) Багатьох лякає вимірювання мг/дл і цифри за 100. Кілька днів і ми чітко орієнтувалися! Така незамінна річ саме з дуже маленькою дитиною, бо тепер є можливість залишити онуку з бабусею та не залишати свій телефон! Тому що маленька його просто не має… Звичайно окрема «Вишенька на торті» це сповіщення про низький або надто високий рівень глюкози, бо маленька не скаже, особливо коли спить! І жодних калібрувань! Все показує одразу точно 👍 Пальчики крихітки Лілі справді відпочивають 🧡 Просто ВЕЛИЧЕЗНЕ спасибі всьому фонду і звичайно особисто Сергію та Едуарду! Просто за те, що Ви є! І так допомагаєте нашим діабетикам, маленьким та дорослим незважаючи на весь негатив!🙏"},
+    "En": {"Title": "Vladlena", "Text": "The whole family is infinitely grateful 🧡 For the sensor, for the drops, the sugar substitute and for the past help as a Libra 2 reader! Because you won't appreciate all the benefits right away, it takes time) Many people are scared of measuring mg/dL and numbers per 100. A few days and we were clearly oriented! Such an irreplaceable thing especially with a very young child, because now it is possible to leave the grandchild with the grandmother and not leave your phone! Because the little one just doesn't have it... Of course, a separate \"cherry on the cake\" is a notification about a low or too high glucose level, because the little one won't tell, especially when she's sleeping! And no calibrations! Everything shows right away 👍 Little Lily's fingers are really resting 🧡 Just a HUGE thank you to the entire foundation and of course to Sergey and Eduard personally! Just because you are! And this is how you help our diabetics, young and old, despite all the negativity!🙏"}
+  },
+  {
+    "Id": "393",
+    "Avatar":"ava-393.webp",
+    "Date": "2023-06-09",
+    "Tags": ["Libre", "Sweet", "Teen"],
+    "Ua": {"Title": "Дiана Н", "Text": "Дякую великому Фонду та всім, хто причетний до такої потрібної та важливої справи, - допомоги людям з діабетом! Ваша праця безцінна, і немає, напевно, таких слів, щоби висловити нашу безмірну подяку за все, що ви для нас робите!"},
+    "En": {"Title": "Diana N", "Text": "Thank you very much to the Foundation and everyone who is involved in such a necessary and important cause - helping people with diabetes! Your work is priceless, and there are probably no such words to express our immense gratitude for everything you do for us!"}
+  },
+  {
+    "Id": "394",
+    "Avatar":"ava-394.webp",
+    "Date": "2023-06-09",
+    "Tags": ["Libre", "Sweet"],
+    "Ua": {"Title": "Iриша", "Text": "Дякуємо Вам за допомогу в наш нелегкий час .Хай Господь Вас береже"},
+    "En": {"Title": "Irysha", "Text": "Thank you for your help in our difficult time. May the Lord protect you"}
+  },
+  {
+    "Id": "395",
+    "Date": "2023-06-09",
+    "Tags": ["Libre", "Sweet", "Vitamin", "Teen"],
+    "Ua": {"Title": "Ляшенко Веронiка", "Text": "Хочу скласти слова вдячності та висловити свою щиру подяку усій команді та пані Шмідт-Шміедебах за надану допомогу. Ваша підтримка дуже цінна для нас, і словами важко описати, наскільки важливо для нашої спільноти мати таких небайдужих людей поряд. Ви не лише полегшили наше тягарчення, а й зробили життя трохи кращим і безпечнішим. Ваша людяність та емпатія надихають і підтримують віру в доброту і допомогу один одному. Глибоко вдячна за те, що ви даруєте нам надію та забезпечуєте необхідну медичну допомогу."},
+    "En": {"Title": "Lyashenko Veronika", "Text": "I would like to express my gratitude and express my sincere thanks to the entire team and Ms. Schmidt-Schmiedebach for their assistance. Your support is very valuable to us, and words cannot describe how important it is for our community to have such caring people around. You not only lightened our burden, but also made life a little better and safer. Your humanity and empathy inspire and support faith in kindness and helping each other. Thank you so much for giving us hope and providing the medical care we need."}
+  },
+  {
     "Id": "367",
     "Date": "2023-05-20",
     "Tags": ["Libre", "Vitamin", "HighQuality", "Compose", "Meter"],
@@ -348,6 +396,7 @@
   {
     "Id": "253",
     "Date": "2023-04-25",
+    "Avatar":"ava-393.webp",
     "Tags": ["Libre", "Teen", "AnimaAnimus"],
     "Ua": {"Title": "Дiана Н", "Text": "Велика подяка Фонду за допомогу, яка така необхідна людям з діабетом! Вибачте за те, що фотозвіт із запізненням (тиждень син хворів). Дякую!"},
     "En": {"Title": "Diana N", "Text": "Many thanks to the Foundation for the help that people with diabetes need so much! Sorry for the late photo report (my son was sick for a week). Thank you!"}
