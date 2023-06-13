@@ -38,6 +38,7 @@
       "Need": 0,
       "Funds": 807,
       "Pic": "sensors",
+      "Poster": "promo1_place.jpg",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
          "Promo": "/img/fun/promo1_en.mp4",
@@ -82,6 +83,25 @@
       "Ua": {
          "Title": "Допомога інсуліном",
          "Text": "Благодійний фонд допомагає людям, які страждають на цукровий діабет та потребують невідкладної медичної допомоги. Ми розуміємо важливість підтримки громадськості, а тому закликаємо всіх охочих долучитися до збору коштів і забезпечити хворих можливістю жити повноцінно."
+      }
+   },
+   {
+      "Id": "kherson-pallets",
+      "IsMilitary": false,
+      "Need": 0,
+      "Funds": 3020,
+      "Pic": "palettes",
+      "Poster":"kupiansk_poster.jpg",
+      "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
+      "En": {
+         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "Title": "Humanitarian aid to Kherson and Kupyansk",
+         "Text": "The project aims to raise funds for essentials for cities on the brink of a humanitarian catastrophe."
+      },
+      "Ua": {
+         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "Title": "Гуманітарна допомога Херсону та Куп'янську",
+         "Text": "Проект спрямований на збирання коштів на предмети першої необхідності для міст на межі гуманітарної катастрофи"
       }
    },
    {

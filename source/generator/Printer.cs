@@ -53,6 +53,8 @@ public sealed class PrinterFactory
     }
 
     static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> scalarGetters = new();
+
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
+
     static readonly ParameterExpression arg = Parameter(typeof(object));  
 }

@@ -57,9 +57,10 @@ void WriteFolder(string lang)
     var founders = print(partners);
     
     var thanksMain =
-        thanks.Where(_ => _.MainIndex.HasValue)
-              .OrderBy(_ => _.MainIndex)
-              .Select((thank, i) => thank with { DesktopOnly = i > 2 });
+        from thank in thanks
+        let index = thank.MainIndex.GetValueOrDefault()
+        where index > 0 orderby index
+        select thank with { DesktopOnly = index > 3 };
 
     var common = new
     {
@@ -142,6 +143,7 @@ record Project(
     bool DesktopOnly,
     string? ReportId,
     string? Pic,
+    string? Poster,
     string Pdf) : Item<ProjectTopic>
 {
     public bool IsFull => Need == Funds;
