@@ -3,42 +3,63 @@
       "Pic": "c1",
       "Id": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜"
+      "Ua": "Реабілітаційний центр у Словаччині ➜",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "c2",
       "Id": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜"
+      "Ua": "Реабілітаційний центр у Словаччині ➜",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "c3",
       "Id": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜"
+      "Ua": "Реабілітаційний центр у Словаччині ➜",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "sensors",
       "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
       "En": "Helping with glucose sensors ➜",
-      "Ua": "Допомога сенсорами вимірювання глюкози ➜"
+      "Ua": "Допомога сенсорами вимірювання глюкози ➜",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "glokometer",
       "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
       "En": "Helping with glucometers ➜",
-      "Ua": "Допомога глюкометрами й тест-смужками до них"
+      "Ua": "Допомога глюкометрами й тест-смужками до них",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "sweetener",
       "Id": "dopomogti-cukrozaminnykom",
       "En": "Helping with sweetener ➜",
-      "Ua": "Допомога цукрозамінником та сумішшю для випікання"
+      "Ua": "Допомога цукрозамінником та сумішшю для випікання",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    },
    {
       "Pic": "zsu",
       "Id": "assistance-to-zsu",
       "En": "Assistance to military ➜",
-      "Ua": "Допомога ЗСУ ➜"
+      "Ua": "Допомога ЗСУ ➜",
+      "De": " ➜",
+      "It": " ➜",
+      "Pl": " ➜"
    }
 ]

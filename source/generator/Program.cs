@@ -122,8 +122,13 @@ record Item<T> : ILocalized
     public required string Id { get; set; }
     public T? En { get; set; }
     public T? Ua { get; set; }
+    public T? De { get; set; }
+    public T? It { get; set; }
+    public T? Pl { get; set; }
 
-    public object? Locale(string lang) => lang is "en" ? En : Ua;
+    public object? Locale(string lang) =>
+        lang switch { "ua" => Ua, "it" => It, "de" => De, "pl" => Pl, _=> default }
+        ?? En;
 }
 
 record Topic
