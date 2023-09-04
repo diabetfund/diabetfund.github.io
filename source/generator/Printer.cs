@@ -9,13 +9,13 @@ interface ILocalized
     object? Locale(string lang);
 }
 
-public delegate string Printer(object? model, [CallerArgumentExpression(nameof(model))] string nameOrTemplate = "");
+public delegate string Printer(object? model, [CallerArgumentExpression("model")] string nameOrTemplate = "");
 
 public sealed class PrinterFactory
 {
     public static Printer Create(Func<string, string> readTemplate, string lang = "en")
     {
-        ConcurrentDictionary<string, string> templates = new();
+        ConcurrentDictionary<string, string> templates = [];
 
         string Render(object? box, string template) => box switch
         {
@@ -49,10 +49,11 @@ public sealed class PrinterFactory
 
         foreach (var (key, val) in getScalars(model))
             result = result.Replace(key, val is null ? "null" : val.ToString());
+
         return result;
     }
 
-    static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> scalarGetters = new();
+    static readonly ConcurrentDictionary<Type, Func<object, (string, object)[]>> scalarGetters = [];
 
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
 

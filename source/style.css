@@ -991,6 +991,21 @@ ul {
     }
   }
 
+  .fun-nav {
+    margin: -20px 20px 10px 20px !important;
+    height: 30px !important;
+    padding: 4px 12px 0px 12px !important;
+    font-size: 14px !important;
+    max-width: 50% !important;
+  }
+
+  @media(max-width: 600px){
+    .fun-nav {
+      margin: -10px 20px 10px 20px !important;
+      max-width: 100% !important;
+    }
+  }
+
   .admin-table{
     font-family: 'Fira Sans',sans-serif;
   }

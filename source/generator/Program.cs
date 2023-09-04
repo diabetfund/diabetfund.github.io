@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-var version = 56;
+var version = 57;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
 
 List<T> ReadJ<T>(string? table = null) =>
@@ -175,8 +175,7 @@ enum ThankTag
 
 record ThankTopic : Topic
 {
-    public string Sign => 
-        string.IsNullOrEmpty(Title) ? "" : "&nbsp;" + Title + "&nbsp;";
+    public string Sign => string.IsNullOrEmpty(Title) ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
 record Thank(
