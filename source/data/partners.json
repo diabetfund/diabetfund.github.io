@@ -69,6 +69,29 @@
     }
   },
   {
+    "Id": "viktor",
+    "Ua": {
+      "Title": "Кавунник Віктор",
+      "Text": "Координатор гуманітарних вантажів"
+    },
+    "En": {
+      "Title": "Kavunnyk Victor",
+      "Text": "Humanitarian cargo coordinator"
+    },
+    "De": {
+      "Title": "",
+      "Text": ""
+    },
+    "It": {
+      "Title": "",
+      "Text": ""
+    },
+    "Pl": {
+      "Title": "",
+      "Text": ""
+    }
+  },
+  {
     "Id": "AAA",
     "Ua": {
       "Title": "Андрій Андрєєв",
