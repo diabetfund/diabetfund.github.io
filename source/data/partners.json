@@ -68,15 +68,16 @@
       "Text": ""
     }
   },
+  
   {
-    "Id": "viktor",
+    "Id": "AAA",
     "Ua": {
-      "Title": "Кавунник Віктор",
-      "Text": "Координатор гуманітарних вантажів"
+      "Title": "Андрій Андрєєв",
+      "Text": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
     },
     "En": {
-      "Title": "Kavunnyk Victor",
-      "Text": "Humanitarian cargo coordinator"
+      "Title": "Andrii Andrieiev",
+      "Text": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
     },
     "De": {
       "Title": "",
@@ -92,14 +93,14 @@
     }
   },
   {
-    "Id": "AAA",
+    "Id": "viktor",
     "Ua": {
-      "Title": "Андрій Андрєєв",
-      "Text": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
+      "Title": "Кавунник Віктор",
+      "Text": "Координатор гуманітарних вантажів"
     },
     "En": {
-      "Title": "Andrii Andrieiev",
-      "Text": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
+      "Title": "Kavunnyk Victor",
+      "Text": "Humanitarian cargo coordinator"
     },
     "De": {
       "Title": "",
