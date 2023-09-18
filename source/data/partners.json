@@ -68,30 +68,6 @@
       "Text": ""
     }
   },
-  
-  {
-    "Id": "AAA",
-    "Ua": {
-      "Title": "Андрій Андрєєв",
-      "Text": "Член правління фонду, власник ІТ-школи 'Academy Hacker', меценат, волонтер"
-    },
-    "En": {
-      "Title": "Andrii Andrieiev",
-      "Text": "Member of the Board of the Foundation, owner of the IT school 'Academy Hacker', philanthropist, volunteer"
-    },
-    "De": {
-      "Title": "",
-      "Text": ""
-    },
-    "It": {
-      "Title": "",
-      "Text": ""
-    },
-    "Pl": {
-      "Title": "",
-      "Text": ""
-    }
-  },
   {
     "Id": "viktor",
     "Ua": {

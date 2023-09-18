@@ -53,7 +53,7 @@ enum ThankTag
 {
     Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, Modulax, P999, Reservoir, Pods, Candies,
     Old, Man, Teen, Adult, Infant,
-    Cat, Compose, AnimaAnimus, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
+    Cat, Compose, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
 }
 
 record ThankTopic : Topic
