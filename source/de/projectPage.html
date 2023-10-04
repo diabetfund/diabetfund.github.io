@@ -1,0 +1,118 @@
+<main>
+   <article class="article need">
+      <div class="container container_small">
+         <div class="article-intro">
+            <h1 class="article-intro__title title">@Title</h1>
+            <picture>
+               <source srcset="@MobilePic" type="image/webp" media="(max-width: 500px)" />
+               <img class="article-intro__img" src="@Pic">
+            </picture>
+            <div class="intro-info">
+                <div class="intro-info__need-to-collect ">
+                    <span>
+                     Erforderlich:
+                    </span>
+                    <div class='intro-info__sum hide_@IsInfinite'>
+                        <span class="numf">@Need000</span>&nbsp;<span>UAH</span>
+                    </div>
+                    <div class='intro-info__sum visible_@IsInfinite'>
+                        <img src="/img/infinity.svg"/>
+                    </div>
+                </div>
+                <div class='already-collected'>
+                  <span>
+                     Hilfe wurde bereits geleistet
+                  </span>
+                    <div class='already-collected_more hide_@IsInfinite'>
+                        @FundPerc%
+                        <img style='display: inline; margin-top: -7px;' src='/img/fullness_@Fullness.svg'>
+                        <span>(<span class="numf">@Funds000</span>&nbsp;UAH) </span>
+                    </div>
+                    <div class='already-collected_more visible_@IsInfinite'>
+                        <b class="numf">@Funds000</b>&nbsp;<b>UAH</b>
+                    </div>
+                </div>
+                <button class="to-contribute-btn fundraising-item__donate-btn hide_@IsFull liqpay" 
+                        data-liqpay-sig="@Signature"
+                        data-liqpay-data="@Data">
+                    <img src="/img/header/credit-card.svg">
+                    <span>Beitragen</span>
+                </button>
+             </div>
+        </div>
+        <div id="article__content" class="article__content">
+         <div class="tabs">
+             <div class="tabs-triggers visible_@HasResult">
+                 <a href="#tab-1" class="tabs-triggers__item tabs-triggers__item_active">
+                  Beschreibung  
+                  </a>
+                 <a href="#tab-2" class="tabs-triggers__item">
+                  Bericht
+                 </a>
+             </div>
+             <div class="tabs-content">
+                 <div id="tab-1" class="tabs-content__item tabs-content__item_active">
+                     @Content
+                 </div>
+                 <div id="tab-2" class="tabs-content__item">
+                     @Result
+                 </div>
+             </div>
+         </div>
+     </div>
+         <div class="props">
+            <h3 class="title props__title">Requisiten</h3>
+            <div class="props__content">
+               <div>
+                  <strong>
+                     Adresse und Kontakte
+                  </strong>
+                  <p>
+                     E-mail: <a href="mailto:info@diabet.fund">info@diabet.fund</a>
+                     <br>
+                     <span>
+                        Telefon/Viber: +380 (63) 536-42-54
+                     </span> <br>
+                     <span>
+                        Rechtsadresse: Kiew, str. Velyka Zvirynetska, 63
+                     </span> <br>
+                     <span>EDRPOU</span>: 39909206
+                  </p>
+               </div>
+               <hr>
+               <div>
+                  @walletsTable
+               </div>
+            </div>
+            <div class="props__buttons">
+               <button id="copyBtn" class="copy-btn">
+                  <svg viewBox="0 0 17 21">
+                     <path
+                        d="M4.5 17.975C4.1 17.975 3.75 17.825 3.45 17.525C3.15 17.225 3 16.875 3 16.475V2.47498C3 2.07498 3.15 1.72498 3.45 1.42498C3.75 1.12498 4.1 0.974976 4.5 0.974976H15.5C15.9 0.974976 16.25 1.12498 16.55 1.42498C16.85 1.72498 17 2.07498 17 2.47498V16.475C17 16.875 16.85 17.225 16.55 17.525C16.25 17.825 15.9 17.975 15.5 17.975H4.5ZM4.5 16.475H15.5V2.47498H4.5V16.475ZM1.5 20.975C1.1 20.975 0.75 20.825 0.45 20.525C0.15 20.225 0 19.875 0 19.475V4.39998H1.5V19.475H13.35V20.975H1.5ZM4.5 2.47498V16.475V2.47498Z">
+                     </path>
+                  </svg>
+                  <span>Kopieren</span>
+               </button>
+               <button class="to-contribute-btn fundraising-item__donate-btn hide_@IsFull liqpay" 
+                  data-liqpay-sig="@Signature"
+                  data-liqpay-data="@Data">
+                  <img src="/img/header/credit-card.svg">
+                  <span>
+                     Beitragen
+                  </span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </article>
+</main>
+<div id="document-modal" class="document-modal">
+   <div id="document-modal__content" class="document-modal__content">
+      <button id="document-modal__close-btn" class="document-modal__close-btn">
+         <svg width="19" height="19" viewBox="0 0 19 19">
+            <path fill="white" d="M15.9099 18.6098L2.5288e-07 2.69986L2.69986 1.01152e-06L18.6098 15.9099L15.9099 18.6098ZM2.69986 18.6098L0 15.9099L15.9099 0L18.6098 2.69986L2.69986 18.6098Z"/>
+         </svg>
+      </button>
+      <iframe src="/pdf/@Pdf"></iframe>
+   </div>
+</div>

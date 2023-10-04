@@ -23,6 +23,7 @@ var (projects, news, partners, thanks, slides, wallets, stones) =
 WriteFolder(Lang.Id.Українська);
 WriteFolder(Lang.Id.English);
 WriteFolder(Lang.Id.Polski);
+WriteFolder(Lang.Id.Deutsche);
 
 void WriteFolder(Lang.Id langId)
 {
