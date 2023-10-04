@@ -1,65 +1,65 @@
 [
    {
       "Pic": "c1",
-      "Id": "help-rehab",
+      "Key": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
       "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Rehabilitationszentrum in der Slowakei ➜",
+      "It": "Centro di riabilitazione in Slovacchia ➜",
+      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "c2",
-      "Id": "help-rehab",
+      "Key": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
       "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Rehabilitationszentrum in der Slowakei ➜",
+      "It": "Centro di riabilitazione in Slovacchia ➜",
+      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "c3",
-      "Id": "help-rehab",
+      "Key": "help-rehab",
       "En": "Rehabilitation center in Slovakia ➜",
       "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Rehabilitationszentrum in der Slowakei ➜",
+      "It": "Centro di riabilitazione in Slovacchia ➜",
+      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "sensors",
-      "Id": "dopomogti-sensorami-vimiryuvannya-glyukozi",
-      "En": "Helping with glucose sensors ➜",
-      "Ua": "Допомога сенсорами вимірювання глюкози ➜",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "Key": "dopomogti-sensorami-vimiryuvannya-glyukozi",
+      "En": "Helping with glucose sensors",
+      "Ua": "Допомога сенсорами вимірювання глюкози",
+      "De": "Hilfe zu Glukosemesssensoren",
+      "It": "Aiuto con i sensori di misurazione del glucosio",
+      "Pl": "Pomoc dotycząca czujników pomiaru glukozy"
    },
    {
       "Pic": "glokometer",
-      "Id": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
-      "En": "Helping with glucometers ➜",
+      "Key": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
+      "En": "Helping with glucometers",
       "Ua": "Допомога глюкометрами й тест-смужками до них",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Helfen Sie ihnen mit Blutzuckermessgeräten und Teststreifen",
+      "It": "Aiutali con glucometri e strisce reattive per loro",
+      "Pl": "Pomoc z glukometrami i paskami testowymi do nich"
    },
    {
       "Pic": "sweetener",
-      "Id": "dopomogti-cukrozaminnykom",
+      "Key": "dopomogti-cukrozaminnykom",
       "En": "Helping with sweetener ➜",
       "Ua": "Допомога цукрозамінником та сумішшю для випікання",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Hilfe mit Zuckerersatz und Backmischung",
+      "It": "Aiutatevi con il sostituto dello zucchero e la miscela per dolci",
+      "Pl": "Pomoc z substytutem cukru i mieszanką do pieczenia"
    },
    {
       "Pic": "zsu",
-      "Id": "assistance-to-zsu",
+      "Key": "assistance-to-zsu",
       "En": "Assistance to military ➜",
       "Ua": "Допомога ЗСУ ➜",
-      "De": " ➜",
-      "It": " ➜",
-      "Pl": " ➜"
+      "De": "Hilfeleistung der Bundeswehr ➜",
+      "It": "Assistenza delle Forze Armate ➜",
+      "Pl": "Pomoc Sił Zbrojnych ➜"
    }
 ]

@@ -4,22 +4,33 @@
 <script>
 
 const lib = {
-    get cookEnglish() {
-        var parts = ("; " + document.cookie).split("; is_english=");
-        if (parts.length == 2)
-            return parts.pop().split(";").shift() == 'true';
-        return null;
+    get cookLang() {
+            var _a;
+            let parts = ("; " + document.cookie).split("; lang=");
+            if (parts.length == 2) {
+                let w = (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
+                return ["ua", "en", "de", "it", "pl"].indexOf(w) > -1 ? w : null;
+            }
+            return null;
     },
-    set cookEnglish(v) {
-        document.cookie =  "is_english=" + (v ? 'true': 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
+    set cookLang(v) {
+        document.cookie = "lang=" + v + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
     },
+
+    inferLang(href) {
+            return href.indexOf('/en') > -1 ? "en"
+                : href.indexOf('/de') > -1 ? "de"
+                    : href.indexOf('/it') > -1 ? "it"
+                        : href.indexOf('/pl') > -1 ? "pl" : "ua";
+        },
+    get lang() { return this.inferLang(location.href); },
 
     sendLiqpay(sign, data, isNewWindow) {
         var form = document.createElement("form");
         if (!sign || sign == "null")
-            sign = this.isEnglish ? "8FCafqMc//6iKe9wB+eqZWs3FPc=" : "TVNsm5bs8KyxZhkpsexBFHb8Mb8=";
+            sign = this.lang == "en" ? "8FCafqMc//6iKe9wB+eqZWs3FPc=" : "TVNsm5bs8KyxZhkpsexBFHb8Mb8=";
         if (!data || data == "null")
-            data = this.isEnglish 
+            data = this.lang == "en" 
             ? "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="
             : "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==";
 
@@ -60,7 +71,7 @@ var qrUrls = {
         else if (Array.isArray(url))
             return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 500);
     }
-    location.href= "/" + (lib.cookEnglish ? "en": "ua");
+    location.href= "/" + lib.cookLang;
 })();
      
     </script>

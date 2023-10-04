@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Globalization;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -6,14 +7,14 @@ using static System.Linq.Expressions.Expression;
 
 interface ILocalized
 {
-    object? Locale(string lang);
+    object? GetLocalized(CultureInfo? culture);
 }
 
 public delegate string Printer(object? model, [CallerArgumentExpression("model")] string nameOrTemplate = "");
 
 public sealed class PrinterFactory
 {
-    public static Printer Create(Func<string, string> readTemplate, string lang = "en")
+    public static Printer Create(Func<string, string> readTemplate, CultureInfo? culture = null)
     {
         ConcurrentDictionary<string, string> templates = [];
 
@@ -24,7 +25,8 @@ public sealed class PrinterFactory
 
             IEnumerable<object> items => string.Join("\n", items.Select(it => Render(it, template))),
 
-            ILocalized item => PrintModel(Render(item.Locale(lang), template), item),
+            ILocalized item => PrintModel(Render(item.GetLocalized(culture), template), item),
+
             _ => PrintModel(template, box)
         };
 

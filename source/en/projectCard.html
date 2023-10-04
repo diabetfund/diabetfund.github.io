@@ -1,0 +1,60 @@
+<div class="col-md-6 col-lg-4 is-military-@IsMilitary desc-only_@DesktopOnly">
+   <div class="card needs__list-item">
+      <img class="card__img" src="@CardPic" >
+      <div class="card__content">
+          <div class="card__content_top">
+              <span class="card__title">@Title</span>
+              <p class="card__text">@Brief</p>
+          </div>
+          <div class="card__content_middle card_content_middle-@IsFull">
+              <div class="required-amount">
+                  <span class="proj-card-amoun-title">
+                    Are needed:
+                  </span>
+                  <span class="hide_@IsInfinite">
+                      <span class="numf">@Need000</span>UAH
+                  </span>
+                  <span class="visible_@IsInfinite">
+                    <img src="/img/infinity.svg"/>
+                 </span>
+              </div>
+                <div class="">
+                    <span class="proj-card-amoun-title">
+                        Already provided help
+                    </span>
+                    <span style="color: #0C9A56;" class="hide_@IsInfinite">
+                      @FundPerc%
+                      <img  style="display: inline;margin-left: 10px; margin-top: -4px;" src="/img/fullness_@Fullness.svg" >
+                    </span>
+                    <span class="visible_@IsInfinite">
+                        <span class="numf">@Funds000</span>UAH
+                    </span>
+              </div>
+          </div>
+          <div class="card__content_bottom">
+              <table class="visible_@IsFull"><tbody>
+                <tr>
+                    <td>
+                        <img src="/img/header/box-heart.svg"/>
+                    </td>
+                    <td style="padding-left: 30px; font-size: 18px;">
+                        Project closed!
+                    </td>
+                </tr>
+              </tbody></table>
+              <div class="proj-card-bottom-bts hide_@IsFull">
+                <a href="/"
+                    class="card__donate-btn needs-donate-btn need-donate liqpay" 
+                    data-liqpay-sig="@Signature" data-liqpay-data="@Data">
+                    Donate
+                    <!--<img src="/img/header/credit-card.svg"/>-->
+                </a>
+                <a class="card__read-btn" href="/@lang/@Url">
+                    Read more
+                    <!--<img src="/img/header/chevron-right.svg"/>-->
+                </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

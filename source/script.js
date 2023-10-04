@@ -8,31 +8,43 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 const lib = (() => {
-    let _isEnglish = null;
+    let _lang = null;
     let allInputs = (form) => [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")];
     return {
-        get isEnglish() {
-            return _isEnglish !== null && _isEnglish !== void 0 ? _isEnglish : (_isEnglish = location.href.indexOf('/en') > -1);
+        inferLang(href) {
+            return href.indexOf('/en') > -1 ? "en"
+                : href.indexOf('/de') > -1 ? "de"
+                    : href.indexOf('/it') > -1 ? "it"
+                        : href.indexOf('/pl') > -1 ? "pl" : "ua";
         },
-        get cookEnglish() {
+        get lang() { return _lang !== null && _lang !== void 0 ? _lang : (_lang = lib.inferLang(location.href)); },
+        translate(en, ua, de, it, pl) {
+            switch (lib.lang) {
+                case "ua": return ua !== null && ua !== void 0 ? ua : en;
+                case "de": return de !== null && de !== void 0 ? de : en;
+                case "it": return it !== null && it !== void 0 ? it : en;
+                case "pl": return pl !== null && pl !== void 0 ? pl : en;
+                default: return en;
+            }
+        },
+        get cookLang() {
             var _a;
-            let parts = ("; " + document.cookie).split("; is_english=");
-            if (parts.length == 2)
-                return ((_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift()) == 'true';
+            let parts = ("; " + document.cookie).split("; lang=");
+            if (parts.length == 2) {
+                let w = (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
+                return ["ua", "en", "de", "it", "pl"].indexOf(w) > -1 ? w : null;
+            }
             return null;
         },
-        set cookEnglish(v) {
-            document.cookie = "is_english=" + (v ? 'true' : 'false') + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
+        set cookLang(v) {
+            document.cookie = "lang=" + v + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
         },
-        get lang() { return lib.isEnglish ? "en" : "ua"; },
         sendLiqpay(sign, data, isNewWindow = false) {
             let form = document.createElement("form");
             if (!sign || sign == "null")
-                sign = lib.isEnglish ? "8FCafqMc//6iKe9wB+eqZWs3FPc=" : "TVNsm5bs8KyxZhkpsexBFHb8Mb8=";
+                sign = lib.translate("8FCafqMc//6iKe9wB+eqZWs3FPc=", "TVNsm5bs8KyxZhkpsexBFHb8Mb8=");
             if (!data || data == "null")
-                data = lib.isEnglish
-                    ? "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0="
-                    : "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==";
+                data = lib.translate("eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=", "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ==");
             form.method = "POST";
             form.action = "https://www.liqpay.ua/api/3/checkout";
             form.innerHTML = `<input type="hidden" name="data" value="${data}"/>
@@ -66,7 +78,8 @@ const lib = (() => {
                             res[field] = inp.value;
                 }
             if (titles.length > 0) {
-                alert(`\n${lib.isEnglish ? "Data not filled" : "Не заповнені дані"}:\n- ` + titles.join("\n- "));
+                let message = lib.translate("Data not filled", "Не заповнені дані", "Daten nicht ausgefüllt", "Dati non compilati", "Dane nie zostały wypełnione");
+                alert(`\n${message}:\n- ` + titles.join("\n- "));
                 return [false, res];
             }
             return [true, res];
@@ -78,7 +91,7 @@ const lib = (() => {
                 if (disable) {
                     let { width, height } = btn.style;
                     btn.setAttribute("title", btn.innerText);
-                    btn.innerText = lib.isEnglish ? "Sending.." : "Вiдправка..";
+                    btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..");
                     btn.style.width = width;
                     btn.style.height = height;
                 }
@@ -129,18 +142,19 @@ const lib = (() => {
     };
 })();
 setTimeout(() => {
-    if (lib.cookEnglish != lib.isEnglish)
-        lib.cookEnglish = lib.isEnglish;
+    if (lib.cookLang != lib.lang)
+        lib.cookLang = lib.lang;
 }, 100);
 lib.go(() => {
     let langSwitch = document.getElementsByClassName("lang-switcher")[0];
     for (let a of langSwitch.getElementsByTagName("a"))
         a.addEventListener("click", e => {
             e.preventDefault();
-            lib.cookEnglish = a.href.indexOf('/en') > -1;
+            lib.cookLang = lib.inferLang(a.href);
             location.href = a.href;
         });
-    if (!lib.isEnglish)
+    //! local
+    if (lib.lang != "en")
         langSwitch.classList.add("lang-switcher__active");
     for (let link of document.getElementsByClassName('liqpay'))
         link.addEventListener("click", e => {
@@ -149,8 +163,24 @@ lib.go(() => {
             lib.sendLiqpay(d["liqpay-sig"], d["liqpay-data"], true);
         });
     for (let el of document.getElementsByClassName('local')) {
-        let { ua, en } = el.dataset;
-        el.innerHTML = lib.isEnglish ? en : ua;
+        let { ua, en, de, pl, it } = el.dataset;
+        switch (lib.lang) {
+            case "ua":
+                el.innerHTML = ua;
+                break;
+            case "de":
+                el.innerHTML = de !== null && de !== void 0 ? de : en;
+                break;
+            case "it":
+                el.innerHTML = it !== null && it !== void 0 ? it : en;
+                break;
+            case "pl":
+                el.innerHTML = pl !== null && pl !== void 0 ? pl : en;
+                break;
+            default:
+                el.innerHTML = en;
+                break;
+        }
     }
 });
 lib.go(() => {
@@ -206,7 +236,7 @@ lib.go(() => {
             e.preventDefault();
             const { innerText } = document.getElementById(e.currentTarget.dataset.walletid);
             yield navigator.clipboard.writeText(innerText);
-            alert(lib.isEnglish ? "Copied to clipboard" : "Скопійовано");
+            alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"));
         }));
     window.addEventListener('resize', () => mobileMenuWr.style.top = `${header.offsetHeight}px`);
     window.addEventListener('load', () => mobileMenuWr.style.top = `${header.offsetHeight}px`);
@@ -329,6 +359,7 @@ lib.go((form, butt) => {
         if (!isValid)
             return;
         butt.disabled = true;
+        let wrongMessage = lib.translate("Something went wrong", "щось пішло не так", "etwas ist schief gelaufen", "qualcosa è andato storto", "coś poszło nie tak");
         try {
             var resp = yield fetch(form.action, {
                 method: "POST",
@@ -336,12 +367,12 @@ lib.go((form, butt) => {
                 headers: { 'Accept': 'application/json' }
             });
             if (resp.ok)
-                setStatus(lib.isEnglish ? "✔️ Your message has been sent" : "✔️ Ваше повідомлення відправлено!");
+                setStatus("✔️ " + lib.translate("Your message has been sent", "Ваше повідомлення відправлено!", "Ihre Nachricht wurde gesendet!", "Il tuo messaggio è stato inviato!", "Twoja wiadomość została wysłana!"));
             else
-                setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
+                setStatus("❌ " + wrongMessage);
         }
         catch (e) {
-            setStatus(lib.isEnglish ? "❌ Something went wrong" : "❌ щось пішло не так");
+            setStatus("❌ " + wrongMessage);
             console.log(e.message);
         }
         finally {
@@ -374,7 +405,7 @@ function handleThankVideo(wraps) {
                 <style>body { margin: 0; text-align: center; }</style>
                 <div data-new-window>
                     <video controls autoplay muted playsinline style="width: 100%; height: auto;">
-                        <source src="//${location.host}${video}" type="video/mp4" />
+                        <source src="${video}" type="video/mp4" />
                     </video>
                 </div>
             </body></html>`);

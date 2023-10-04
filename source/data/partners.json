@@ -1,301 +1,301 @@
 [
   {
-    "Id": "piskunov",
+    "Key": "piskunov",
     "Ua": {
       "Title": "Едуард Піскунов",
-      "Text": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
+      "Brief": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
     },
     "En": {
       "Title": "Eduard Piskunov",
-      "Text": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
+      "Brief": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Eduard Piskunow",
+      "Brief": "Der Gründer des Fonds, Geschäftsmann und Philanthrop <span id='piskunov-disease'>17</span> lebt mit der Diagnose „insulinabhängig“"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Eduard Piskunov",
+      "Brief": "Il fondatore del fondo, uomo d'affari e filantropo, <span id='piskunov-disease'>17</span> convive con la diagnosi di \"insulino-dipendente\""
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Eduard Piskunow",
+      "Brief": "Założyciel funduszu, biznesmen i filantrop, <span id='piskunov-disease'>17</span> żyje z diagnozą „insulinozależność”"
     }
   },
   {
-    "Id": "logvin",
+    "Key": "logvin",
     "Ua": {
       "Title": "Анна Логвін",
-      "Text": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
+      "Brief": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
     },
     "En": {
       "Title": "Anna Logvin",
-      "Text": "Co-founder, head of the project to help children and low-income families"
+      "Brief": "Co-founder, head of the project to help children and low-income families"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Anna Logvin",
+      "Brief": "Mitbegründer und Leiter von Projekten zur Unterstützung von Kindern und Familien mit niedrigem Einkommen"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Anna Logvin",
+      "Brief": "Co-fondatore, responsabile di progetti a favore dei bambini e delle famiglie a basso reddito"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Anna Logwin",
+      "Brief": "Współzałożyciel, kierownik projektów pomocy dzieciom i rodzinom o niskich dochodach"
     }
   },
   {
-    "Id": "boiko",
+    "Key": "boiko",
     "Ua": {
       "Title": "Тамара Бойко",
-      "Text": "Почесний член правління, представник Фонду на території Словаччини"
+      "Brief": "Почесний член правління, представник Фонду на території Словаччини"
     },
     "En": {
       "Title": "Tamara Boyko",
-      "Text": "Honorary member of the board, representative of a charitable foundation in Slovakia"
+      "Brief": "Honorary member of the board, representative of a charitable foundation in Slovakia"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Tamara Boyko",
+      "Brief": "Ehrenmitglied des Vorstands, Vertreter des Fonds auf dem Gebiet der Slowakei"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Tamara Boyko",
+      "Brief": "Membro onorario del consiglio, rappresentante del Fondo sul territorio della Slovacchia"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Tamara Bojko",
+      "Brief": "Honorowy członek zarządu, przedstawiciel Funduszu na terenie Słowacji"
     }
   },
   {
-    "Id": "viktor",
+    "Key": "viktor",
     "Ua": {
       "Title": "Кавунник Віктор",
-      "Text": "Координатор гуманітарних вантажів"
+      "Brief": "Координатор гуманітарних вантажів"
     },
     "En": {
       "Title": "Kavunnyk Victor",
-      "Text": "Humanitarian cargo coordinator"
+      "Brief": "Humanitarian cargo coordinator"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Kawunnyk Victor",
+      "Brief": "Koordinator für humanitäre Fracht"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Kavunnyk Victor",
+      "Brief": "Coordinatore del carico umanitario"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Kawunnyk Wiktor",
+      "Brief": "Koordynator ładunków humanitarnych"
     }
   },
   {
-    "Id": "yanochkov",
+    "Key": "yanochkov",
     "Ua": {
       "Title": "Peter Yanachkov",
-      "Text": "Керуючий директор Pierce Capital Partners"
+      "Brief": "Керуючий директор Pierce Capital Partners"
     },
     "En": {
       "Title": "Peter Yanachkov",
-      "Text": "Managing director, Pierce Capital Partners"
+      "Brief": "Managing director, Pierce Capital Partners"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Peter Yanachkov",
+      "Brief": "Geschäftsführer Pierce Capital Partners"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Peter Yanachkov",
+      "Brief": "Consigliere delegato Pierce Capital Partners"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Peter Yanachkov",
+      "Brief": "Dyrektor zarządzający Pierce Capital Partners"
     }
   },
   {
-    "Id": "LUNTER",
+    "Key": "LUNTER",
     "Ua": {
       "Title": "Ondrej Lunter",
-      "Text": "Голова Банськобистрицького краю в Словаччині"
+      "Brief": "Голова Банськобистрицького краю в Словаччині"
     },
     "En": {
       "Title": "Ondrej Lunter",
-      "Text": "Deputy head of the Banská Bystrica region in Slovakia"
+      "Brief": "Deputy head of the Banská Bystrica region in Slovakia"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Ondrej Lunter",
+      "Brief": "Leiter der Region Banská Bystrica in der Slowakei"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Ondrej Lunter",
+      "Brief": "Responsabile della regione di Banská Bystrica in Slovacchia"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Ondrej Lunter",
+      "Brief": "Szef regionu Bańska Bystrzyca na Słowacji"
     }
   },
   {
-    "Id": "bagacka",
+    "Key": "bagacka",
     "Ua": {
       "Title": "Michal Bagacka",
-      "Text": "Депутат і член правління автономного регіону Банська Бистриця"
+      "Brief": "Депутат і член правління автономного регіону Банська Бистриця"
     },
     "En": {
       "Title": "Michal Bagacka",
-      "Text": "Deputy and member of the board of the autonomous region of Banska Bystrica"
+      "Brief": "Deputy and member of the board of the autonomous region of Banska Bystrica"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Michal Bagacka",
+      "Brief": "Stellvertreter und Vorstandsmitglied der Autonomen Region Banská Bystrica"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Michal Bagacka",
+      "Brief": "Deputato e membro del consiglio della regione autonoma di Banska Bystrica"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Michal Bagacka",
+      "Brief": "Zastępca i członek zarządu obwodu autonomicznego Bańska Bystrzyca"
     }
   },
   {
-    "Id": "hnusta",
+    "Key": "hnusta",
     "Ua": {
       "Title": "Hnusta Grigorij Samin",
-      "Text": "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
+      "Brief": "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
     },
     "En": {
       "Title": "Hnusta Grigorij Samin",
-      "Text": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
+      "Brief": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Hnusta Grigorij Samin",
+      "Brief": "Abgeordneter des Stadtrats der Stadt Gnushtia, Gebiet Bansko-bystrytskyi und stellvertretender Bürgermeister der Stadt"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Hnusta Grigorij Samin",
+      "Brief": "Deputato del consiglio comunale della città di Gnushtia, regione di Bansko-bystrytskyi e vicesindaco della città"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Hnusta Grigorij Samin",
+      "Brief": "Zastępca rady miejskiej miasta Gnuszta, obwód bansko-bystrycki i zastępca burmistrza miasta"
     }
   },
   {
-    "Id": "dimplomati",
+    "Key": "dimplomati",
     "Ua": {
       "Title": "Дипломати",
-      "Text": "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
+      "Brief": "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
     },
     "En": {
       "Title": "Diplomats",
-      "Text": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
+      "Brief": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Diplomaten",
+      "Brief": "Die öffentliche Organisation engagiert sich in der Schaffung von Wohltätigkeitsprojekten, um den vom Krieg betroffenen Bürgern zu helfen"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Diplomatici",
+      "Brief": "L'organizzazione pubblica è impegnata nella realizzazione di progetti di beneficenza per aiutare i cittadini colpiti dalla guerra"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Dyplomaci",
+      "Brief": "Organizacja społeczna zajmuje się tworzeniem projektów charytatywnych na rzecz pomocy obywatelom dotkniętym wojną"
     }
   },
   {
-    "Id": "diabete",
+    "Key": "diabete",
     "Ua": {
       "Title": "Diabite",
-      "Text": "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
+      "Brief": "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
     },
     "En": {
       "Title": "Diabite",
-      "Text": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
+      "Brief": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Diabite",
+      "Brief": "Das Kinder- und Jugendrehabilitationszentrum richtet seine Aktivitäten auf die Behandlung und Freizeitgestaltung von Kindern mit Diabetes aus"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Diabite",
+      "Brief": "Il Centro di Riabilitazione per Bambini e Giovani indirizza le proprie attività al trattamento e all'organizzazione del tempo libero dei bambini affetti da diabete"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Diabite",
+      "Brief": "Centrum Rehabilitacji Dzieci i Młodzieży ukierunkowuje swoją działalność na leczenie i organizację czasu wolnego dzieci chorych na cukrzycę"
     }
   },
   {
-    "Id": "vyru",
+    "Key": "vyru",
     "Ua": {
       "Title": "Vyrų fondas",
-      "Text": "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
+      "Brief": "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
     },
     "En": {
       "Title": "Vyrų fondas",
-      "Text": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
+      "Brief": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Vyrų fondas",
+      "Brief": "Der gemeinnützige Verein unterstützt insbesondere Kinder und Jugendliche aus Waisenhäusern und organisiert Schulungen zur Persönlichkeitsentwicklung"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Vyrų fondas",
+      "Brief": "L'associazione di beneficenza aiuta i bambini e i giovani degli orfanotrofi, in particolare, organizza corsi di formazione per lo sviluppo della personalità"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Vyrų fondas",
+      "Brief": "Stowarzyszenie charytatywne pomaga dzieciom i młodzieży z domów dziecka, w szczególności organizuje szkolenia z zakresu rozwoju osobowości"
     }
   },
   {
-    "Id": "pcoket",
+    "Key": "pcoket",
     "Ua": {
       "Title": "Pocket Hero",
-      "Text": "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
+      "Brief": "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
     },
     "En": {
       "Title": "Pocket Hero",
-      "Text": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
+      "Brief": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Pocket Hero",
+      "Brief": "Die gemeinnützige Organisation stellt Kinderkleidung mit funktionellen Taschen für persönliche Gegenstände und dem sicheren Tragen einer Insulinpumpe her."
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Pocket Hero",
+      "Brief": "L'organizzazione no-profit crea abbigliamento per bambini con tasche funzionali per oggetti personali e per il trasporto sicuro di una pompa per insulina."
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Pocket Hero",
+      "Brief": "Organizacja non-profit tworzy odzież dziecięcą z funkcjonalnymi kieszeniami na przedmioty osobiste i bezpiecznym przenoszeniem pompy insulinowej."
     }
   },
   {
-    "Id": "mandri",
+    "Key": "mandri",
     "Ua": {
       "Title": "Мандрівник",
-      "Text": "Благодійний фонд"
+      "Brief": "Благодійний фонд"
     },
     "En": {
       "Title": "Mandrivnyk",
-      "Text": "Charity Fund"
+      "Brief": "Charity Fund"
     },
     "De": {
-      "Title": "",
-      "Text": ""
+      "Title": "Mandriwnyk",
+      "Brief": "Gemeinnützige Stiftung"
     },
     "It": {
-      "Title": "",
-      "Text": ""
+      "Title": "Mandrivnyk",
+      "Brief": "Fondazione caritatevole"
     },
     "Pl": {
-      "Title": "",
-      "Text": ""
+      "Title": "Mandriwnyk",
+      "Brief": "Fundacja Charytatywna"
     }
   }
 ]
