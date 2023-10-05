@@ -71,7 +71,7 @@ var qrUrls = {
         else if (Array.isArray(url))
             return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 500);
     }
-    location.href= "/" + lib.cookLang;
+    location.href= "/" + (lib.cookLang??"en");
 })();
      
     </script>
