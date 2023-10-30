@@ -62,30 +62,30 @@
       "Need": 0,
       "Funds": 807,
       "Pic": "sensors",
-      "Poster": "promo1_place.jpg",
+      "PromoPoster": "promo1_place.jpg",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
-         "Promo": "/img/fun/promo1_en.mp4",
+         "PromoVideo": "/img/fun/promo1_en.mp4",
          "Title": "Helping with glucose sensors",
          "Text": "According to official data, 2.5 million diabetics are registered in Ukraine. 1 million people are insulin dependent, 100,000 of whom are children. the number of people with this disease has increased significantly since the beginning of the war. Our ultimate goal is to purchase innovative developments for diabetics."
       },
       "Ua": {
-         "Promo": "/img/fun/promo1_ua.mp4",
+         "PromoVideo": "/img/fun/promo1_ua.mp4",
          "Title": "Допомога сенсорами вимірювання глюкози",
          "Text": "За офіційними даними в Україні зареєстровано 2,5 млн діабетиків. 1 млн людей є інсулінозалежними, 100 тисяч з яких — діти. З початком війни кількість осіб з цим захворюванням значно збільшилася. Наша надважлива мета полягає в закупівлі інноваційних розробок для діабетиків."
       },
       "De": {
-         "Promo": "/img/fun/promo1_en.mp4",
+         "PromoVideo": "/img/fun/promo1_en.mp4",
          "Title": "Hilfe zu Glukosemesssensoren",
          "Text": "Nach offiziellen Angaben sind in der Ukraine 2,5 Millionen Diabetiker registriert. 1 Million Menschen sind insulinabhängig, 100.000 davon sind Kinder. Seit Beginn des Krieges ist die Zahl der Menschen mit dieser Krankheit deutlich gestiegen. Unser oberstes Ziel ist die Bereitstellung innovativer Entwicklungen für Diabetiker."
        },
        "It": {
-         "Promo": "/img/fun/promo1_en.mp4",
+         "PromoVideo": "/img/fun/promo1_en.mp4",
          "Title": "Aiuto con i sensori di misurazione del glucosio",
          "Text": "Secondo i dati ufficiali, in Ucraina sono registrati 2,5 milioni di diabetici. 1 milione di persone sono insulino-dipendenti, di cui 100mila bambini. Dall'inizio della guerra, il numero di persone affette da questa malattia è aumentato in modo significativo. Il nostro obiettivo principale è fornire sviluppi innovativi per i diabetici."
        },
        "Pl": {
-         "Promo": "/img/fun/promo1_en.mp4",
+         "PromoVideo": "/img/fun/promo1_en.mp4",
          "Title": "Pomoc dotycząca czujników pomiaru glukozy",
          "Text": "Według oficjalnych danych na Ukrainie zarejestrowanych jest 2,5 miliona diabetyków. 1 milion osób jest uzależnionych od insuliny, z czego 100 tysięcy to dzieci. Od początku wojny liczba osób chorych na tę chorobę znacznie wzrosła. Naszym nadrzędnym celem jest dostarczanie innowacyjnych rozwiązań dla diabetyków."
        }
@@ -154,30 +154,30 @@
       "Need": 0,
       "Funds": 3020,
       "Pic": "palettes",
-      "Poster":"kupiansk_poster.jpg",
+      "PromoPoster":"kupiansk_poster.jpg",
       "Pdf": "June2022/3vS6RWZVUkx9iRlbWFbc.pdf",
       "En": {
-         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "PromoVideo": "/img/fun/kupiansk_ua.mp4",
          "Title": "Humanitarian aid to Kherson and Kupyansk",
          "Text": "The project aims to raise funds for essentials for cities on the brink of a humanitarian catastrophe."
       },
       "Ua": {
-         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "PromoVideo": "/img/fun/kupiansk_ua.mp4",
          "Title": "Гуманітарна допомога Херсону та Куп'янську",
          "Text": "Проект спрямований на збирання коштів на предмети першої необхідності для міст на межі гуманітарної катастрофи"
       },
       "De": {
-         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "PromoVideo": "/img/fun/kupiansk_ua.mp4",
          "Title": "Humanitäre Hilfe für Cherson und Kupjansk",
          "Text": "Ziel des Projekts ist es, Gelder für die Grundversorgung von Städten am Rande einer humanitären Katastrophe zu sammeln"
        },
        "It": {
-         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "PromoVideo": "/img/fun/kupiansk_ua.mp4",
          "Title": "Aiuti umanitari a Kherson e Kupyansk",
          "Text": "Il progetto mira a raccogliere fondi per i beni di prima necessità per le città sull’orlo di una catastrofe umanitaria"
        },
        "Pl": {
-         "Promo": "/img/fun/kupiansk_ua.mp4",
+         "PromoVideo": "/img/fun/kupiansk_ua.mp4",
          "Title": "Pomoc humanitarna dla Chersonia i Kupiańska",
          "Text": "Celem projektu jest zbiórka środków na podstawowe potrzeby miast stojących na krawędzi katastrofy humanitarnej"
        }

@@ -3,27 +3,38 @@
 <head>
 <script>
 
-const lib = {
-    get cookLang() {
-            var _a;
-            let parts = ("; " + document.cookie).split("; lang=");
-            if (parts.length == 2) {
-                let w = (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
-                return ["ua", "en", "de", "it", "pl"].indexOf(w) > -1 ? w : null;
-            }
-            return null;
-    },
-    set cookLang(v) {
-        document.cookie = "lang=" + v + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
-    },
+const lib = (() => {
+    const cookie = (key) => ({
+        get val() {
+            let parts = ("; " + document.cookie).split(`; ${key}=`)
+            if (parts.length == 2)
+                return parts.pop()?.split(";").shift()
+            return null
+        },
+        set val(v) {
+            document.cookie =  `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`
+        }
+    });
+    let cookLang = cookie("lang");
 
-    inferLang(href) {
+    return {
+        get cookLang() {
+            let w = cookLang.val
+            return w && ["ua","en","de","it","pl"].indexOf(w) > -1 ? w : null
+        },
+        set cookLang(v) { cookLang.val = v },
+
+        euroLang: cookie("eulang"),
+
+        inferLang(href) {
             return href.indexOf('/en') > -1 ? "en"
                 : href.indexOf('/de') > -1 ? "de"
                     : href.indexOf('/it') > -1 ? "it"
                         : href.indexOf('/pl') > -1 ? "pl" : "ua";
         },
-    get lang() { return this.inferLang(location.href); },
+    get lang() {
+        return this.inferLang(location.href)
+    },
 
     sendLiqpay(sign, data, isNewWindow) {
         var form = document.createElement("form");
@@ -46,7 +57,8 @@ const lib = {
         form.submit();
         form.remove();
     }
-};
+    };
+})();
 
 var qrUrls = {
     "1": "/ua/fundraising/dopomogti-sensorami-vimiryuvannya-glyukozi/",
@@ -71,11 +83,25 @@ var qrUrls = {
         else if (Array.isArray(url))
             return setTimeout(() => lib.sendLiqpay(url[0], url[1]), 500);
     }
-    location.href= "/" + (lib.cookLang||"en");
+    location.href= "/" + (lib.euroLang.val || lib.cookLang||"en");
 })();
      
     </script>
 </head>
 <body >
+    <ul>
+        <li>
+            <a href="/en/">English version: <cite>Charitable Foundation for Diabetes Care and Rehabilitation</cite></a>
+        </li>
+        <li>
+            <a href="/ua/">Українська версія: <cite>Благодійний фонд допомоги та реабілітації хворих на цукровий діабет</cite></a>
+        </li>
+        <li>
+            <a href="/de/">Deutsche Version: <cite>Wohltätigkeitsfonds zur Unterstützung und Rehabilitation von Patienten mit Diabetes</cite></a>
+        </li>
+        <li>
+            <a href="/pl/">wersja polska: <cite>Fundusz charytatywny na rzecz pomocy i rehabilitacji chorych na cukrzycę</cite></a>
+        </li>
+    </ul>
 </body>
 </html>

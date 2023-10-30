@@ -1,11 +1,25 @@
 
 type Lang = "en" | "ua" | "pl" | "de" | "it" 
 
+const cookie = (key: string) => ({
+    get val(): string| null {
+        let parts = ("; " + document.cookie).split(`; ${key}=`)
+        if (parts.length == 2)
+           return parts.pop()?.split(";").shift()
+        return null
+     },
+     set val(v) {
+        document.cookie =  `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`
+     }
+});
+
 const lib = (() => {
    let _lang: Lang | null = null
 
    let allInputs = (form: HTMLElement) => 
       [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")] as HTMLInputElement[]
+
+    let cookLang = cookie("lang")
 
    return {
      inferLang(href: string): Lang {
@@ -15,7 +29,9 @@ const lib = (() => {
         : href.indexOf('/pl') > -1 ? "pl" : "ua"
      },
     
-     get lang(): Lang { return _lang ??= lib.inferLang(location.href) },
+     get lang(): Lang {
+        return _lang ??= lib.inferLang(location.href)
+     },
 
       translate(en: string, ua: string|null, de?: string|null, it?: string|null, pl?: string|null) {
          switch (lib.lang) {
@@ -28,21 +44,18 @@ const lib = (() => {
       },
 
       get cookLang(): Lang | null {
-         let parts = ("; " + document.cookie).split("; lang=")
-         if (parts.length == 2) {
-            let w = parts.pop()?.split(";").shift()
-            return ["ua","en","de","it","pl"].indexOf(w) > -1 ? <Lang>w : null
-         }
-         return null
+        let w = cookLang.val
+        return w && ["ua","en","de","it","pl"].indexOf(w) > -1 ? <Lang>w : null
       },
-      set cookLang(v) {
-         document.cookie =  "lang=" + v + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
-      },
+      set cookLang(v) { cookLang.val = v },
+
+      euroLang: cookie("eulang"),
   
       sendLiqpay(sign: string, data: string, isNewWindow = false) {
          let form = document.createElement("form")
          if (!sign || sign == "null")
              sign = lib.translate("8FCafqMc//6iKe9wB+eqZWs3FPc=", "TVNsm5bs8KyxZhkpsexBFHb8Mb8=")
+
          if (!data || data == "null")
              data = lib.translate( 
                 "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
@@ -141,24 +154,44 @@ const lib = (() => {
 })();
 
 setTimeout(() => {
-   if (lib.cookLang != lib.lang)
-       lib.cookLang = lib.lang
+   let { lang } = lib
+
+   if (lib.cookLang != lang)
+       lib.cookLang = lang
+
+   if (!lib.euroLang.val && lang  && lang != "en")
+     lib.euroLang.val = lang
 }, 100);
 
+lib.go(
+    l => l.style.display = "none",
+    document.getElementById("eu-lang-links"));
+
 lib.go(() => {
-   let langSwitch = document.getElementsByClassName("lang-switcher")[0]
-   for (let a of langSwitch.getElementsByTagName("a")) 
-       a.addEventListener("click", e => {
-           e.preventDefault()
-           lib.cookLang = lib.inferLang(a.href)
-           location.href = a.href
-       })
+    let [langSwitch] = document.getElementsByClassName("lang-switcher")
 
-       //! local
-   if (lib.lang != "en")
-       langSwitch.classList.add("lang-switcher__active")
+    let { euroLang: { val: eulang } } = lib
 
-   for (let link of document.getElementsByClassName('liqpay'))
+    for (let a of langSwitch.getElementsByTagName("a")) {
+        
+        if (!a.href.includes('en') && eulang && !a.href.includes(eulang)) {
+            let title = { pl: "POL", de: "DEU", it: "ITA" }[eulang] ?? "УКР"
+            a.href = '/' + eulang
+            if (a.classList.contains("lang-switcher__link"))
+                a.innerHTML = ` ${title} `
+        }
+        a.addEventListener("click", e => {
+            e.preventDefault()
+            lib.cookLang = lib.inferLang(a.href)
+            location.href = a.href
+        })
+    }
+
+    //! local
+    if (lib.lang != "en")
+        langSwitch.classList.add("lang-switcher__active")
+
+    for (let link of document.getElementsByClassName('liqpay'))
        link.addEventListener("click", e => {
            e.preventDefault()
            let d = (e.currentTarget as HTMLElement)!.dataset

@@ -7,9 +7,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+const cookie = (key) => ({
+    get val() {
+        var _a;
+        let parts = ("; " + document.cookie).split(`; ${key}=`);
+        if (parts.length == 2)
+            return (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
+        return null;
+    },
+    set val(v) {
+        document.cookie = `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`;
+    }
+});
 const lib = (() => {
     let _lang = null;
     let allInputs = (form) => [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")];
+    let cookLang = cookie("lang");
     return {
         inferLang(href) {
             return href.indexOf('/en') > -1 ? "en"
@@ -17,7 +30,9 @@ const lib = (() => {
                     : href.indexOf('/it') > -1 ? "it"
                         : href.indexOf('/pl') > -1 ? "pl" : "ua";
         },
-        get lang() { return _lang !== null && _lang !== void 0 ? _lang : (_lang = lib.inferLang(location.href)); },
+        get lang() {
+            return _lang !== null && _lang !== void 0 ? _lang : (_lang = lib.inferLang(location.href));
+        },
         translate(en, ua, de, it, pl) {
             switch (lib.lang) {
                 case "ua": return ua !== null && ua !== void 0 ? ua : en;
@@ -28,17 +43,11 @@ const lib = (() => {
             }
         },
         get cookLang() {
-            var _a;
-            let parts = ("; " + document.cookie).split("; lang=");
-            if (parts.length == 2) {
-                let w = (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
-                return ["ua", "en", "de", "it", "pl"].indexOf(w) > -1 ? w : null;
-            }
-            return null;
+            let w = cookLang.val;
+            return w && ["ua", "en", "de", "it", "pl"].indexOf(w) > -1 ? w : null;
         },
-        set cookLang(v) {
-            document.cookie = "lang=" + v + "; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/";
-        },
+        set cookLang(v) { cookLang.val = v; },
+        euroLang: cookie("eulang"),
         sendLiqpay(sign, data, isNewWindow = false) {
             let form = document.createElement("form");
             if (!sign || sign == "null")
@@ -142,17 +151,30 @@ const lib = (() => {
     };
 })();
 setTimeout(() => {
-    if (lib.cookLang != lib.lang)
-        lib.cookLang = lib.lang;
+    let { lang } = lib;
+    if (lib.cookLang != lang)
+        lib.cookLang = lang;
+    if (!lib.euroLang.val && lang && lang != "en")
+        lib.euroLang.val = lang;
 }, 100);
+lib.go(l => l.style.display = "none", document.getElementById("eu-lang-links"));
 lib.go(() => {
-    let langSwitch = document.getElementsByClassName("lang-switcher")[0];
-    for (let a of langSwitch.getElementsByTagName("a"))
+    var _a;
+    let [langSwitch] = document.getElementsByClassName("lang-switcher");
+    let { euroLang: { val: eulang } } = lib;
+    for (let a of langSwitch.getElementsByTagName("a")) {
+        if (!a.href.includes('en') && eulang && !a.href.includes(eulang)) {
+            let title = (_a = { pl: "POL", de: "DEU", it: "ITA" }[eulang]) !== null && _a !== void 0 ? _a : "УКР";
+            a.href = '/' + eulang;
+            if (a.classList.contains("lang-switcher__link"))
+                a.innerHTML = ` ${title} `;
+        }
         a.addEventListener("click", e => {
             e.preventDefault();
             lib.cookLang = lib.inferLang(a.href);
             location.href = a.href;
         });
+    }
     //! local
     if (lib.lang != "en")
         langSwitch.classList.add("lang-switcher__active");
