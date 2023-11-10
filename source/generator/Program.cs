@@ -16,7 +16,7 @@ List<T> ReadJ<T>(string? path = null) =>
         File.ReadAllText($"{rootPath}source/data/{path ?? typeof(T).Name}s.json"),
         jsonOptions)!;
 
-var (projects, news, partners, thanks, slides, wallets, stones) =
+var (projects, news_, partners, thanks, slides, wallets, stones) =
     (ReadJ<Project>("source-project"), ReadJ<News>("source-new"), ReadJ<Partner>(),
      ReadJ<Thank>("source-thank"), ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
@@ -35,31 +35,36 @@ void WriteFolder(Lang.Id langId)
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
 
-    var print = PrinterFactory.Create(Read, culture);
+    var print = new Printer(Read, culture);
 
     void Out(string arg, string subPath, object? model = null)
     {
         var path = $"{rootPath}/{lang}{subPath}/index.html";
         new FileInfo(path).Directory!.Create();
 
-        var master = new { content = print(model, arg), subPath, version, lang };
-        File.WriteAllText(path, print(master));
+        var master = new { content = print[model, arg], subPath, version, lang };
+        File.WriteAllText(path, print[master]);
     }
 
     string ProjectCards(IEnumerable<Project> projects, bool setDesktop) =>
         string.Join('\n', projects.Select((project, i) =>
-            print(
+            print[
                 project with { DesktopOnly = setDesktop && i > 3 },
                 "project" + (project.GetLocalized(culture) is ProjectTopic { PromoVideo: null } ? "Card" : "Promo")
-            )));
+            ]));
+
+    var news = news_.ConvertAll(item => item with
+    {
+        LocaleDate = item.Date.ToString("dd MMM yyyy", culture.DateTimeFormat)
+    });
 
     var walletsTableContent = new
     {
-        bank = print(wallets.Where(_ => !_.IsCrypto)),
-        crypto = print(wallets.Where(_ => _.IsCrypto))
+        bank = print[wallets.Where(_ => !_.IsCrypto)],
+        crypto = print[wallets.Where(_ => _.IsCrypto)]
     };
-    var walletsTable = print(walletsTableContent);
-    var founders = print(partners);
+    var walletsTable = print[walletsTableContent];
+    var founders = print[partners];
     
     var thanksMain =
         from thank in thanks
@@ -69,10 +74,10 @@ void WriteFolder(Lang.Id langId)
 
     var common = new
     {
-        founders = print(founders),
-        payDetails = print(walletsTable),
-        slides = print(slides),
-        topThanks = print(thanksMain),
+        founders = print[founders],
+        payDetails = print[walletsTable],
+        slides = print[slides],
+        topThanks = print[thanksMain],
         skipAbout = false,
         walletsTable,
         topProjects = ProjectCards(projects.Take(6), true)
@@ -82,33 +87,30 @@ void WriteFolder(Lang.Id langId)
     Out("index", "", common);
     Out("projects", "/fundraising", ProjectCards(projects, false));
 
-    Out("newsList", "/news", print(news));
-    Out("auction", "/auction", print(stones));
+    Out("newsList", "/news", print[news]);
+    Out("auction", "/auction", print[stones]);
     Out("auctionDetail", "/detail");
 
-    if (Thank.Debug)
-        Out("thankList", "/thanks", print(thanks));
-    else
-        _ = thanks.Chunk(40).Select((thanks, i) =>
-        {
-            var content = print(thanks);
-            File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
+    _ = thanks.Chunk(40).Select((thanks, i) =>
+    {
+        var content = print[thanks];
+        File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
 
-            var hasNext = thanks.Length == 40;
-            var nextPage = hasNext ? i + 2 : (int?)null;
-            Out("thankList", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
-            return i;
-        })
-        .ToList();
+        var hasNext = thanks.Length == 40;
+        var nextPage = hasNext ? i + 2 : (int?)null;
+        Out("thankList", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
+        return i;
+    })
+    .ToList();
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);
 
     foreach (var projectPage in projects)
-        Out(print(projectPage), "/fundraising/" + projectPage.Key, new { walletsTable});
+        Out(print[projectPage], "/fundraising/" + projectPage.Key, new { walletsTable});
 
-    var otherNews = print(news.Take(2));
+    var otherNews = print[news.Take(2)];
     
     foreach (var newsPage in news)
-        Out(print(newsPage), "/news/" + newsPage.Key, new { otherNews });
+        Out(print[newsPage], "/news/" + newsPage.Key, new { otherNews });
 }

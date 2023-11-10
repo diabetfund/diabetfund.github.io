@@ -150,13 +150,13 @@ const lib = (() => {
         }
     };
 })();
-setTimeout(() => {
-    let { lang } = lib;
+lib.go(() => {
+    let { lang, euroLang: { val: eulang } } = lib;
     if (lib.cookLang != lang)
         lib.cookLang = lang;
-    if (!lib.euroLang.val && lang && lang != "en")
+    if (lang && lang != "en" && (!eulang || lang != eulang))
         lib.euroLang.val = lang;
-}, 100);
+});
 lib.go(l => l.style.display = "none", document.getElementById("eu-lang-links"));
 lib.go(() => {
     var _a;

@@ -2,36 +2,32 @@
 type Lang = "en" | "ua" | "pl" | "de" | "it" 
 
 const cookie = (key: string) => ({
-    get val(): string| null {
-        let parts = ("; " + document.cookie).split(`; ${key}=`)
-        if (parts.length == 2)
-           return parts.pop()?.split(";").shift()
-        return null
-     },
-     set val(v) {
-        document.cookie =  `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`
-     }
+   get val(): string| null {
+      let parts = ("; " + document.cookie).split(`; ${key}=`)
+      if (parts.length == 2)
+         return parts.pop()?.split(";").shift()
+      return null
+   },
+   set val(v) {
+      document.cookie =  `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`
+   }
 });
 
 const lib = (() => {
-   let _lang: Lang | null = null
+   let _lang: Lang | null = null,
+   cookLang = cookie("lang"),
 
-   let allInputs = (form: HTMLElement) => 
+   allInputs = (form: HTMLElement) => 
       [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")] as HTMLInputElement[]
 
-    let cookLang = cookie("lang")
-
    return {
-     inferLang(href: string): Lang {
-        return href.indexOf('/en') > -1 ? "en"
-        : href.indexOf('/de') > -1 ? "de"
-        : href.indexOf('/it') > -1 ? "it"
-        : href.indexOf('/pl') > -1 ? "pl" : "ua"
-     },
+      inferLang: (href: string): Lang =>
+         href.indexOf('/en') > -1 ? "en"
+         : href.indexOf('/de') > -1 ? "de"
+         : href.indexOf('/it') > -1 ? "it"
+         : href.indexOf('/pl') > -1 ? "pl" : "ua",
     
-     get lang(): Lang {
-        return _lang ??= lib.inferLang(location.href)
-     },
+      get lang() { return _lang ??= lib.inferLang(location.href) },
 
       translate(en: string, ua: string|null, de?: string|null, it?: string|null, pl?: string|null) {
          switch (lib.lang) {
@@ -43,10 +39,11 @@ const lib = (() => {
          }
       },
 
-      get cookLang(): Lang | null {
-        let w = cookLang.val
-        return w && ["ua","en","de","it","pl"].indexOf(w) > -1 ? <Lang>w : null
+      get cookLang() {
+         let w = cookLang.val
+         return w && ["ua","en","de","it","pl"].indexOf(w) > -1 ? <Lang>w : null
       },
+
       set cookLang(v) { cookLang.val = v },
 
       euroLang: cookie("eulang"),
@@ -85,6 +82,7 @@ const lib = (() => {
   
       validateWithAlert(...formFiledPairs: [HTMLFormElement, string][]): [boolean, Record<string, string>] {
          let res = {}, titles: string[] = []
+
          for (let [form, fieldLine] of formFiledPairs)
              for (let field of fieldLine.split(" ")) {
                  let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
@@ -106,112 +104,103 @@ const lib = (() => {
 
       freezeeInputs: (btn: HTMLButtonElement, ...forms: HTMLFormElement[]) => (disable: boolean) => {
          if (btn) {
-             btn.classList[disable ? "add" : "remove"]("btn-disabled");
-             btn.disabled = disable;
-  
-             if (disable) {
-                 let {width, height} = btn.style
-                 btn.setAttribute("title", btn.innerText)
-                 btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..")
-                 btn.style.width = width
-                 btn.style.height = height
-             }
-             else
-                 btn.innerText = btn.getAttribute("title")!
+            if (btn.disabled = disable) {
+               let {width, height} = btn.style
+               btn.setAttribute("title", btn.innerText)
+               btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..")
+               btn.style.width = width
+               btn.style.height = height
+            }
+            else
+               btn.innerText = btn.getAttribute("title")!
+
+            btn.classList[disable ? "add" : "remove"]("btn-disabled")
          }
          for (let form of forms)
-             for (let inp of allInputs(form))
-                 inp.disabled = disable
-     },
+            for (let inp of allInputs(form))
+               inp.disabled = disable
+      },
 
-     async fetchMiniback(action: string, req: any, freezee: (v: boolean) => void) {
-      let response: any
-      async function aux() {
-          try {
-              freezee(true)
-              response = await fetch("https://minimail2.azurewebsites.net/" + action, req)
-              if (!response.ok) 
+      async fetchMiniback(action: string, req: any, freezee: (v: boolean) => void) {
+         let response: any
+         async function aux() {
+            try {
+               freezee(true)
+               response = await fetch("https://minimail2.azurewebsites.net/" + action, req)
+               if (!response.ok) 
                   return false
-          }
-          catch (error) { return false }
-          finally { freezee(false) }   
-          return true 
+            }
+            catch (error) { return false }
+            finally { freezee(false) }   
+            return true 
+         }
+         return await aux() || await aux() || await aux()
+            ? [true, response]
+            : [false, null]
+      },
+
+      go<T extends any[]>(f: (...args: T) => void, ...args: T) {
+         let res
+         if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
+         try { res = f(...args) }
+         catch(e){ console.log(e); }
+         return res
       }
-      if (await aux() || await aux() || await aux())
-          return [true, response]
-      else 
-          return [false, null]
-    },
-    
-    go<T extends any[]>(f: (...args: T) => void, ...args: T){
-        let res
-        if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
-        try { res = f(...args) }
-        catch(e){ console.log(e); }
-        return res
-    }
    }
 })();
 
-setTimeout(() => {
-   let { lang } = lib
+lib.go(() => {
+   let { lang, euroLang: {val: eulang} } = lib
 
    if (lib.cookLang != lang)
        lib.cookLang = lang
 
-   if (!lib.euroLang.val && lang  && lang != "en")
-     lib.euroLang.val = lang
-}, 100);
+   if (lang  && lang != "en" && (!eulang || lang != eulang))
+        lib.euroLang.val = lang
+});
 
 lib.go(
     l => l.style.display = "none",
     document.getElementById("eu-lang-links"));
 
 lib.go(() => {
-    let [langSwitch] = document.getElementsByClassName("lang-switcher")
+   let [langSwitch] = document.getElementsByClassName("lang-switcher"),
+   { lang, euroLang: { val: eulang } } = lib,
+   title = { pl: "POL", de: "DEU", it: "ITA" }[eulang] ?? "УКР"
 
-    let { euroLang: { val: eulang } } = lib
+   for (let anchor of langSwitch.getElementsByTagName("a")) {
+      anchor.addEventListener("click", e => {
+         e.preventDefault()
+         lib.cookLang = lib.inferLang(anchor.href)
+         location.href = anchor.href
+      })  
+      if (!anchor.href.includes('en') && eulang && !anchor.href.includes(eulang)) {
+         anchor.href = '/' + eulang
+         if (anchor.classList.contains("lang-switcher__link"))
+         anchor.innerHTML = ` ${title} `
+      }
+   }
 
-    for (let a of langSwitch.getElementsByTagName("a")) {
-        
-        if (!a.href.includes('en') && eulang && !a.href.includes(eulang)) {
-            let title = { pl: "POL", de: "DEU", it: "ITA" }[eulang] ?? "УКР"
-            a.href = '/' + eulang
-            if (a.classList.contains("lang-switcher__link"))
-                a.innerHTML = ` ${title} `
-        }
-        a.addEventListener("click", e => {
-            e.preventDefault()
-            lib.cookLang = lib.inferLang(a.href)
-            location.href = a.href
-        })
-    }
+   //! local
+   if (lang != "en")
+      langSwitch.classList.add("lang-switcher__active")
 
-    //! local
-    if (lib.lang != "en")
-        langSwitch.classList.add("lang-switcher__active")
-
-    for (let link of document.getElementsByClassName('liqpay'))
-       link.addEventListener("click", e => {
-           e.preventDefault()
-           let d = (e.currentTarget as HTMLElement)!.dataset
-           lib.sendLiqpay(d["liqpay-sig"], d["liqpay-data"], true)
-       })
+   for (let link of document.getElementsByClassName('liqpay'))
+      link.addEventListener("click", e => {
+         e.preventDefault()
+         let data = (e.currentTarget as HTMLElement)!.dataset
+         lib.sendLiqpay(data["liqpay-sig"], data["liqpay-data"], true)
+      })
 
    for (let el of document.getElementsByClassName('local')) {
-     let {ua, en, de, pl, it} = (el as HTMLElement).dataset
-     switch (lib.lang) {
-        case "ua": el.innerHTML = ua; break;
-        case "de": el.innerHTML = de ?? en; break;
-        case "it": el.innerHTML = it ?? en; break;
-        case "pl": el.innerHTML = pl ?? en; break;
-        default: el.innerHTML = en; break;
-     }
+      let data = (el as HTMLElement).dataset
+      el.innerHTML = data[lang] ?? data.en
    }
 });
 
 lib.go(() => {
    let folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ],
+
    curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
    
    [...document.querySelectorAll(".menu > a")].forEach((a, i) => {
@@ -231,99 +220,99 @@ lib.go(() => {
 
 lib.go(tabs => {
    let search = location.search,
+
    tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)),
-   suffix = ["none", "True", "False"][tabIndex];
+
+   suffix = ["none", "True", "False"][tabIndex]
 
    if (tabIndex > -1 && tabIndex < tabs.length)
-       for (var i =0; i<tabs.length; i++)
+       for (var i =0; i < tabs.length; i++)
            if (i == tabIndex)
-               tabs[i].classList.add("needs-filter__item_active");
+               tabs[i].classList.add("needs-filter__item_active")
            else 
-               tabs[i].style.textDecoration = "underline";
+               tabs[i].style.textDecoration = "underline"
 
    for (let v of document.getElementsByClassName(`is-military-${suffix}`))
-       (v as HTMLElement).style.display = "none";
+       (v as HTMLElement).style.display = "none"
 },
 document.getElementsByClassName("needs-filter__item") as HTMLCollectionOf<HTMLAnchorElement>);
 
 lib.go(pane => {
    function arrow(clas: string, path: string, linkPage: number | null) {
-       const [tag, color, href] = linkPage == null 
+       let [tag, color, href] = linkPage == null 
            ? ["span", "#ccc", ""]
-           : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
+           : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`]
        
        return `<${tag} class="${clas}" href="${href}">
            <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
                <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
            </svg>
-       </${tag}>`;
+       </${tag}>`
    }
-   const pages = [1, 2, 3],
-   curIdx = Math.max(0, pages.findIndex(p => location.search.indexOf(`page=${p}`) > -1));
+   let pages = [1, 2, 3],
+   curIdx = Math.max(0, pages.findIndex(p => location.search.includes(`page=${p}`)));
 
    [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) =>
        (card as HTMLElement).style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
 
-   var items = pages.map(p => p-1 == curIdx
+   let items = pages.map(p => p-1 == curIdx
        ? `<span class="pagination__item pagination__item_active">${p}</span>`
        : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
 
    pane.innerHTML = `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
    <div class="pagination__items-wr">${items.join('')}</div>
-   ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`;
-
+   ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`
 },
 document.getElementsByClassName("news__pagination")[0]);
 
 lib.go(() => {
-   const header = document.querySelector('header') as HTMLElement,
+   let header = document.querySelector('header') as HTMLElement,
    burgerBtn = document.getElementById('burger-btn') as HTMLButtonElement,
    mobileMenuWr = document.getElementById('menu_mobile-wr') as HTMLElement,
-   mobileMenu = document.getElementById('menu_mobile') as HTMLElement;
-   
-   for (const btn of document.querySelectorAll(".copy-wallet")) 
-       btn.addEventListener("click", async e => {
-           e.preventDefault();
-           const { innerText } = document.getElementById((e.currentTarget as HTMLElement)!.dataset.walletid!) as HTMLElement
-           await navigator.clipboard.writeText(innerText);
-           alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"));
-       });
+   mobileMenu = document.getElementById('menu_mobile') as HTMLElement
+
+   for (let btn of document.querySelectorAll(".copy-wallet")) 
+      btn.addEventListener("click", async e => {
+         e.preventDefault()
+         let { innerText } = document.getElementById((e.currentTarget as HTMLElement)!.dataset.walletid!) as HTMLElement
+         await navigator.clipboard.writeText(innerText)
+         alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"))
+      })
    
    window.addEventListener('resize', () => mobileMenuWr.style.top = `${header.offsetHeight}px`)
    window.addEventListener('load', () => mobileMenuWr.style.top = `${header.offsetHeight}px`)
    
    burgerBtn.addEventListener('click', function () {
-       this.classList.toggle('burger-btn_active')
-       document.body.classList.toggle('o_h')
-       mobileMenuWr.classList.toggle('menu_mobile_active')
-   });
+      this.classList.toggle('burger-btn_active')
+      document.body.classList.toggle('o_h')
+      mobileMenuWr.classList.toggle('menu_mobile_active')
+   })
    
    for (const item of mobileMenu.children)
-       if (item.classList.contains('dropdown'))
-           item.addEventListener('click', function (e) {
-               e.preventDefault()
-               this.classList.toggle('dropdown_open')
-           })
+      if (item.classList.contains('dropdown'))
+         item.addEventListener('click', function (e) {
+            e.preventDefault()
+            this.classList.toggle('dropdown_open')
+         })
 });
 
 lib.go((heroBg, heroContent) => {
-       const calcHeroBgOffset = () =>
-           heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
-               ? `${heroContent.offsetHeight}px`
-               : `0px`;
+   let calcHeroBgOffset = () =>
+      heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
+         ? `${heroContent.offsetHeight}px`
+         : `0px`;
 
-       window.onload = calcHeroBgOffset
-       window.onresize = calcHeroBgOffset
+   window.onload = calcHeroBgOffset
+   window.onresize = calcHeroBgOffset
 },
-   document.getElementById('hero__background'),
-   document.getElementById('hero__content')
-);
+document.getElementById('hero__background'),
+document.getElementById('hero__content'));
 
 lib.go(() => {
-    const modalTrigger = document.getElementById('modal-trigger') as HTMLElement
-    const modal = document.getElementById('modal') as HTMLElement
-    const modalContent = document.getElementById('modal__content') as HTMLElement
-    const modalCloseBtn = document.getElementById('modal__close-btn') as HTMLElement
+    let modalTrigger = document.getElementById('modal-trigger') as HTMLElement,
+    modal = document.getElementById('modal') as HTMLElement,
+    modalContent = document.getElementById('modal__content') as HTMLElement,
+    modalCloseBtn = document.getElementById('modal__close-btn') as HTMLElement
     modalTrigger.addEventListener('click', function () {
        modal.classList.toggle('open')
     })
@@ -365,41 +354,39 @@ lib.go(() => {
 });
 
 lib.go((triggers, contents) => {
-   for (const item of triggers)
-       item.addEventListener('click', e => {
-           e.preventDefault()
-           const id = e.currentTarget.getAttribute('href').replace('#', '')
-           for (var i = 0; i < triggers.length; i++) {
-               const meth = contents[i].id == id ? "add" : "remove"
-               triggers[i].classList[meth]('tabs-triggers__item_active')
-               contents[i].classList[meth]('tabs-content__item_active')
-           }
-       })
-   
-   const current = [...triggers].find(_=> location.search.indexOf(_.href.split('#')[1]) > -1);
-   if (current)
-       current.click();
+   for (let item of triggers)
+      item.addEventListener('click', e => {
+         e.preventDefault()
+
+         for (let i = 0; i < triggers.length; i++) {
+            let meth = contents[i].id == item.href.replace('#', '') ? "add" : "remove"
+            triggers[i].classList[meth]('tabs-triggers__item_active')
+            contents[i].classList[meth]('tabs-content__item_active')
+         }
+      });
+
+   [...triggers].find(({href}) => location.search.includes(href.split('#')[1]))?.click()
 },
-   document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<any>,
+   document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<HTMLAnchorElement>,
    document.getElementsByClassName('tabs-content__item'));
 
 const __slider = lib.go(slider => {
    let figures = slider.getElementsByTagName("figure"),
    index = -1,
-   interval = null;
+   interval = null
 
    slider.addEventListener("click", e => {
-        e.preventDefault();
-        location.href = figures[index].dataset.url
-    })
+      e.preventDefault()
+      location.href = figures[index].dataset.url
+   })
 
    function advance() {
-       index++;
-       if (index == figures.length)
-           index = 0;
+      index++
+      if (index == figures.length)
+         index = 0
        
-       for (let i = 0; i < figures.length; i++) 
-           figures[i].classList[i == index ? 'remove' : 'add']('hidd');
+      for (let i = 0; i < figures.length; i++) 
+         figures[i].classList[i == index ? 'remove' : 'add']('hidd');
    }
    const start = () => interval = setInterval(advance, 5000)
    start()
@@ -409,7 +396,7 @@ const __slider = lib.go(slider => {
      stop() { clearInterval(interval) }
    }
 },
-    document.getElementsByClassName("nslider")[0]);
+document.getElementsByClassName("nslider")[0]);
 
 lib.go(() => {
    for (const span of document.getElementsByClassName('numf')) {
@@ -486,63 +473,65 @@ lib.go((form, butt) => {
    document.getElementById("email-submit") as HTMLButtonElement);
 
 function handleThankVideo(wraps: HTMLElement) {
-    for (const wrap of wraps.getElementsByTagName("figure")) {
-        const pics = wrap.getElementsByTagName("picture"),
-        img = pics[pics.length-1],
-        video = img?.dataset?.video,
-        tspan = wrap.getElementsByTagName("span")[0],
-        title = tspan?.innerText
+   for (let wrap of wraps.getElementsByTagName("figure")) {
+      let pics = wrap.getElementsByTagName("picture"),
+      img = pics[pics.length - 1],
+      video = img?.dataset?.video,
+      [tspan] = wrap.getElementsByTagName("span"),
+      title = tspan?.innerText
  
-        if (!video || video == "null")
-            continue;
-        img.style.cursor = "pointer";
-        img.addEventListener("click", e => {
-            e.preventDefault()
-            const name = title?.trim() || wrap.dataset.title,
-            [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
-            [, width, height] = video.split('_'),
-            
-            wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
+      if (!video || video == "null")
+         continue;
    
-            wind?.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
-                <title>${name}: ${w1} ${w2}...</title></head><body>
-                <style>body { margin: 0; text-align: center; }</style>
-                <div data-new-window>
-                    <video controls autoplay muted playsinline style="width: 100%; height: auto;">
-                        <source src="${video}" type="video/mp4" />
-                    </video>
-                </div>
-            </body></html>`)
-        })
-    }
+      img.style.cursor = "pointer";
+      img.addEventListener("click", e => {
+         e.preventDefault()
+         let name = title?.trim() || wrap.dataset.title,
+         [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
+         [, width, height] = video.split('_'),
+            
+         wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
+   
+         wind?.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
+            <title>${name}: ${w1} ${w2}...</title></head><body>
+            <style>body { margin: 0; text-align: center; }</style>
+            <div data-new-window>
+               <video controls autoplay muted playsinline style="width: 100%; height: auto;">
+                  <source src="${video}" type="video/mp4" />
+               </video>
+            </div>
+         </body></html>`)
+      })
+   }
 }
 
 lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
-    handleThankVideo(wraps)
-    if (!link)
-        return;
-    let page = parseInt(link.dataset.thanknext)
-    let footH = document.getElementsByTagName("footer")[0].clientHeight
-    let fetching = false
+   handleThankVideo(wraps)
+   if (!link)
+      return;
+   let page = parseInt(link.dataset.thanknext),
+   [{ clientHeight }] = document.getElementsByTagName("footer"),
+   fetching = false
   
-    window.addEventListener("scroll", async () => {
-        const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight-footH)
-        if (endOfPage && page != null && !fetching) {
-            fetching = true
-            link.style.display = "none"
-            var html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
-            if (html.ok) {
-                var span = document.createElement("span")
-                span.innerHTML = await html.text()
-                handleThankVideo(span)
-                wraps.append(...span.childNodes)
-                page++
-            }
-            else
-                page = null
-            fetching = false
-        }
-    })
+   window.addEventListener("scroll", async () => {
+      let endOfPage = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight-clientHeight)
+
+      if (endOfPage && page != null && !fetching) {
+         fetching = true
+         link.style.display = "none"
+         let html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
+         if (html.ok) {
+            let span = document.createElement("span")
+            span.innerHTML = await html.text()
+            handleThankVideo(span)
+            wraps.append(...span.childNodes)
+            page++
+         }
+         else
+            page = null
+         fetching = false
+      }
+   })
 },
 document.getElementsByClassName("thanks")[0],
 document.getElementsByClassName("thanks-next-link")[0]);
@@ -585,30 +574,31 @@ lib.go(radios => {
 document.getElementsByClassName("radioval") as HTMLCollectionOf<HTMLButtonElement | HTMLFormElement>);
 
 lib.go(sendButt => {
-   const docform = document.getElementById("docform") as HTMLFormElement;
+   let docform = document.getElementById("docform") as HTMLFormElement;
    lib.listenInputs(docform);
 
    sendButt.addEventListener("click", async e => {
-       e.preventDefault();
-       
-       const [form1, form2] = 
-             "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
-               .map(key => document.querySelector(`[data-radioval="${key}"]`) as HTMLFormElement)
-               .filter(_ => _.style.display != "none"),
+      e.preventDefault();
+      let [form1, form2] = 
+         "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
+            .map(key => document.querySelector(`[data-radioval="${key}"]`) as HTMLFormElement)
+            .filter(_ => _.style.display != "none"),
 
-       [isValid, fields] = lib.validateWithAlert(
+      [isValid, fields] = lib.validateWithAlert(
            [form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename"],
            [form2, "postaddress postsurname postname postparto"],
            [docform, "doc"]);
-       if (!isValid) 
-           return;
+      if (!isValid) 
+         return;
 
-       const body = new FormData()
-       body.append("file", (document.getElementsByClassName("inp-doc")[0] as HTMLInputElement).files![0])
-       for (const nam in fields)
+      let body = new FormData(),
+      { files: [file] } = document.getElementsByClassName("inp-doc")[0] as HTMLInputElement
+       
+      body.append("file", file)
+      for (let nam in fields)
            body.append(nam, fields[nam] ?? "")
        
-       var [isSucc] = await lib.fetchMiniback("helpreq", 
+      let [isSucc] = await lib.fetchMiniback("helpreq", 
                        { method: "POST", body, mode: "cors" },
                        lib.freezeeInputs(sendButt, form1, form2, docform))
 

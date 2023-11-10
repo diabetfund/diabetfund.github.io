@@ -3,10 +3,7 @@ using System.Globalization;
 using System.Text.Json.Serialization;
 using static Lang.Id;
 
-record Lang(
-    CultureInfo Culture,
-    string Code,
-    string Suffix)
+record Lang(CultureInfo Culture, string Code, string Suffix)
 {
     public enum Id
     {
@@ -91,7 +88,7 @@ record Project(
     string? Document,
     string? PromoPoster) : Entity<ProjectTopic>
 {
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    [JsonIgnore]
     public bool DesktopOnly { get; set; }
 
     [JsonIgnore]
@@ -154,19 +151,6 @@ record Thank(
 
     [JsonIgnore]
     public string ModernAvatar => Avatar ?? "zero.webp";
-
-    [JsonIgnore]
-    public string Alt => Debug ? string.Join(", ", Alts()) : "";
-
-    IEnumerable<string?> Alts()
-    {
-        if (Tags is { })
-            foreach (var tag in Tags)
-                yield return Enum.GetName(tag);
-        yield return Key?.ToString();
-    }
-
-    public static bool Debug = false;
 }
 
 record Slide(string Pic) : Entity<string>
@@ -176,12 +160,15 @@ record Slide(string Pic) : Entity<string>
 
 record Wallet(string Address, bool IsCrypto) : Entity<string>;
 
-record NewsTopic(string Content, string LocaleDate) : Topic;
+record NewsTopic(string Content) : Topic;
 
 record News(DateOnly Date, string Pic) : Entity<NewsTopic>
 {
     [JsonIgnore]
     public string IsoDate => Date.ToString("o");
+
+    [JsonIgnore]
+    public string? LocaleDate { get; set; }
 }
 
 record StoneTopic(string CertificateIntro) : Topic;

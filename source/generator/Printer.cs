@@ -5,20 +5,23 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using static System.Linq.Expressions.Expression;
 
-interface ILocalized
+public interface ILocalized
 {
     object? GetLocalized(CultureInfo? culture);
 }
 
-public delegate string Printer(object? model, [CallerArgumentExpression("model")] string nameOrTemplate = "");
-
-public sealed class PrinterFactory
+public sealed class Printer(Func<string, string> readTemplate, CultureInfo? culture = null)
 {
-    public static Printer Create(Func<string, string> readTemplate, CultureInfo? culture = null)
-    {
-        ConcurrentDictionary<string, string> templates = [];
+    readonly ConcurrentDictionary<string, string> templates = [];
 
-        string Render(object? box, string template) => box switch
+    public string this[object? model, [CallerArgumentExpression("model")] string nameOrTemplate = ""] =>
+        Render(model,
+            nameOrTemplate.Length > 50 ? nameOrTemplate : templates.GetOrAdd(
+            nameOrTemplate.IndexOf('.') is > -1 and var i ? nameOrTemplate[..i] : nameOrTemplate,
+            (path, read) => read(path), readTemplate));
+
+    string Render(object? box, string template) =>
+        box switch
         {
             null => template,
             string content => template.Replace("@content", content),
@@ -30,24 +33,18 @@ public sealed class PrinterFactory
             _ => PrintModel(template, box)
         };
 
-        return (model, name) => Render(model,
-                name.Length > 50 ? name : templates.GetOrAdd(
-                    name.IndexOf('.') is > -1 and var i ? name[..i] : name,
-                    (path, read) => read(path), readTemplate));
-    }
-
     static string PrintModel(string result, object model)
     {
         var getScalars = scalarGetters.GetOrAdd(model.GetType(), type =>
             Lambda<Func<object, (string, object)[]>>(
-                    NewArrayInit(typeof((string, object)),
-                        from prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                        where prop.PropertyType.IsValueType || prop.PropertyType == typeof(string)
-                        select New(tupleCtor,
-                            Constant("@" + prop.Name),
-                            Convert(Property(Convert(arg, type), prop), typeof(object)))),
-                    arg)
-                .Compile());
+                NewArrayInit(typeof((string, object)),
+                    from prop in type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                    where prop.PropertyType.IsValueType || prop.PropertyType == typeof(string)
+                    select New(tupleCtor,
+                        Constant("@" + prop.Name),
+                        Convert(Property(Convert(arg, type), prop), typeof(object)))),
+                arg)
+            .Compile());
 
         foreach (var (key, val) in getScalars(model))
             result = result.Replace(key, val is null ? "null" : val.ToString());
@@ -59,5 +56,5 @@ public sealed class PrinterFactory
 
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
 
-    static readonly ParameterExpression arg = Parameter(typeof(object));  
+    static readonly ParameterExpression arg = Parameter(typeof(object));
 }
