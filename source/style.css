@@ -1106,7 +1106,7 @@ textarea {
   cursor:default !important;
 }
 .btn-pressed::before {
-  content: '✓';
+  content: '✓ ';
   color: white;
 }
 

@@ -107,7 +107,7 @@ void WriteFolder(Lang.Id langId)
         Out(page, "/" + page);
 
     foreach (var projectPage in projects)
-        Out(print[projectPage], "/fundraising/" + projectPage.Key, new { walletsTable});
+        Out(print[projectPage], "/fundraising/" + projectPage.Key, new { walletsTable });
 
     var otherNews = print[news.Take(2)];
     

@@ -174,3 +174,29 @@ record News(DateOnly Date, string Pic) : Entity<NewsTopic>
 record StoneTopic(string CertificateIntro) : Topic;
 
 record Stone(string MiniLeft, string MiniRight) : Entity<StoneTopic>;
+
+//////////
+
+public enum ProductType
+{
+    Glucometer,
+    Strip,
+    Needle,
+    SyringePen,
+    Syrigne,//p
+    Lancet,
+    Insulin,
+    InsulinPump,
+    InfusionQuickSet,
+    InfusionSureTSet,
+    InfusionSerter,
+    DeviceForInstallingInfusion,
+    Reservoir,
+    Sensor,
+    SensorTape,
+    Sweetener,
+    GlucoseFreeFood,
+    Vitamin,
+    MedicalGloves,
+    Antiseptics
+}

@@ -17,8 +17,10 @@ const lib = (() => {
    let _lang: Lang | null = null,
    cookLang = cookie("lang"),
 
-   allInputs = (form: HTMLElement) => 
-      [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")] as HTMLInputElement[]
+   allInputs = (form: HTMLElement) => [
+      ...form.getElementsByTagName("input"),
+      ...form.getElementsByTagName("textarea")
+   ] as HTMLInputElement[]
 
    return {
       inferLang: (href: string): Lang =>
@@ -81,23 +83,24 @@ const lib = (() => {
       },
   
       validateWithAlert(...formFiledPairs: [HTMLFormElement, string][]): [boolean, Record<string, string>] {
-         let res = {}, titles: string[] = []
+         let res = {},
+         titles: string[] = []
 
          for (let [form, fieldLine] of formFiledPairs)
-             for (let field of fieldLine.split(" ")) {
-                 let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
-                 if (inp) 
-                     if (inp && !inp.value) {
-                         titles.push(inp.title ?? inp.previousSibling?.textContent?.trim())
-                         inp.classList.add("inp-err")
-                     }
-                     else
-                         res[field] = inp.value
-             }
+            for (let field of fieldLine.split(" ")) {
+               let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
+               if (inp) 
+                  if (!inp.value) {
+                     titles.push(inp.title ?? inp.previousSibling?.textContent?.trim())
+                     inp.classList.add("inp-err")
+                  }
+                  else
+                     res[field] = inp.value
+            }
          if (titles.length > 0) {
-             let message = lib.translate("Data not filled", "Не заповнені дані", "Daten nicht ausgefüllt", "Dati non compilati", "Dane nie zostały wypełnione") 
-             alert(`\n${message}:\n- ` + titles.join("\n- "))
-             return [false, res]
+            let message = lib.translate("Data not filled", "Не заповнені дані", "Daten nicht ausgefüllt", "Dati non compilati", "Dane nie zostały wypełnione") 
+            alert(`\n${message}:\n- ` + titles.join("\n- "))
+            return [false, res]
          }
          return [true, res]
       },
@@ -105,14 +108,14 @@ const lib = (() => {
       freezeeInputs: (btn: HTMLButtonElement, ...forms: HTMLFormElement[]) => (disable: boolean) => {
          if (btn) {
             if (btn.disabled = disable) {
-               let {width, height} = btn.style
-               btn.setAttribute("title", btn.innerText)
+               let { width, height } = btn.style
+               btn.title = btn.innerText
                btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..")
                btn.style.width = width
                btn.style.height = height
             }
             else
-               btn.innerText = btn.getAttribute("title")!
+               btn.innerText = btn.title
 
             btn.classList[disable ? "add" : "remove"]("btn-disabled")
          }
@@ -143,7 +146,7 @@ const lib = (() => {
          let res
          if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
          try { res = f(...args) }
-         catch(e){ console.log(e); }
+         catch (e) { console.log(e) }
          return res
       }
    }
@@ -239,29 +242,30 @@ document.getElementsByClassName("needs-filter__item") as HTMLCollectionOf<HTMLAn
 
 lib.go(pane => {
    function arrow(clas: string, path: string, linkPage: number | null) {
-       let [tag, color, href] = linkPage == null 
-           ? ["span", "#ccc", ""]
-           : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`]
+      let [tag, color, href] = linkPage == null 
+         ? ["span", "#ccc", ""]
+         : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`]
        
-       return `<${tag} class="${clas}" href="${href}">
-           <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-               <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-           </svg>
-       </${tag}>`
+      return `<${tag} class="${clas}" href="${href}">
+         <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+         </svg>
+      </${tag}>`
    }
    let pages = [1, 2, 3],
    curIdx = Math.max(0, pages.findIndex(p => location.search.includes(`page=${p}`)));
 
    [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) =>
-       (card as HTMLElement).style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
+      (card as HTMLElement).style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
 
    let items = pages.map(p => p-1 == curIdx
-       ? `<span class="pagination__item pagination__item_active">${p}</span>`
-       : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
+      ? `<span class="pagination__item pagination__item_active">${p}</span>`
+      : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
 
-   pane.innerHTML = `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
-   <div class="pagination__items-wr">${items.join('')}</div>
-   ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`
+   pane.innerHTML =
+      `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
+         <div class="pagination__items-wr">${items.join('')}</div>
+       ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`
 },
 document.getElementsByClassName("news__pagination")[0]);
 
@@ -274,7 +278,9 @@ lib.go(() => {
    for (let btn of document.querySelectorAll(".copy-wallet")) 
       btn.addEventListener("click", async e => {
          e.preventDefault()
-         let { innerText } = document.getElementById((e.currentTarget as HTMLElement)!.dataset.walletid!) as HTMLElement
+         let { dataset: { walletid } } = e.currentTarget as HTMLElement, 
+         { innerText } = document.getElementById(walletid)
+
          await navigator.clipboard.writeText(innerText)
          alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"))
       })
@@ -298,9 +304,7 @@ lib.go(() => {
 
 lib.go((heroBg, heroContent) => {
    let calcHeroBgOffset = () =>
-      heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
-         ? `${heroContent.offsetHeight}px`
-         : `0px`;
+      heroBg.style.top = window.matchMedia('(max-width: 575px)').matches ? `${heroContent.offsetHeight}px` : `0px`;
 
    window.onload = calcHeroBgOffset
    window.onresize = calcHeroBgOffset
@@ -363,9 +367,10 @@ lib.go((triggers, contents) => {
             triggers[i].classList[meth]('tabs-triggers__item_active')
             contents[i].classList[meth]('tabs-content__item_active')
          }
-      });
+      })
 
-   [...triggers].find(({href}) => location.search.includes(href.split('#')[1]))?.click()
+   let cur = [...triggers].find(({href}) => location.search.includes(href.split('#')[1]))
+   cur?.click()
 },
    document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<HTMLAnchorElement>,
    document.getElementsByClassName('tabs-content__item'));
@@ -487,7 +492,8 @@ function handleThankVideo(wraps: HTMLElement) {
       img.addEventListener("click", e => {
          e.preventDefault()
          let name = title?.trim() || wrap.dataset.title,
-         [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '),
+         [{ innerText: quote }] = wrap.getElementsByTagName("blockquote"),
+         [w1, w2] = quote.split(' '),
          [, width, height] = video.split('_'),
             
          wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`)
@@ -537,48 +543,43 @@ document.getElementsByClassName("thanks")[0],
 document.getElementsByClassName("thanks-next-link")[0]);
 
 lib.go(radios => {
-   const lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {};
-   for (const item of radios) {
-       const [v1, v2] = item.dataset.radioval!.split(":"),
-       [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2]
+   let lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {}
+   for (let item of radios) {
+      let [v1, v2] = item.dataset.radioval!.split(":"),
+      [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2]
        
-       if (!(name in lookup))
-           lookup[name] = {};
-       if (!(val in lookup[name]))
-           lookup[name][val] = [null, null]
+      if (!(name in lookup))
+         lookup[name] = {}
+      if (!(val in lookup[name]))
+         lookup[name][val] = [null, null]
 
-       if (item instanceof HTMLButtonElement) {
-           lookup[name][val][0] = item
+      if (item instanceof HTMLButtonElement) {
+         lookup[name][val][0] = item
 
-           item.addEventListener("click", e => {
-               e.preventDefault()
-               for (const keyval in lookup[name]) {
-                  let [butt, div] = lookup[name][keyval]
-                   if (keyval == val) {
-                       div!.style.display = "flex"
-                       butt!.classList.add("btn-pressed")
-                   }
-                   else {
-                       div!.style.display = "none"
-                       butt!.classList.remove("btn-pressed")
-                   }
-               }
-           })
-       }
-       else {
-           lookup[name][val][1] = item
-           lib.listenInputs(item)
-       }
+         item.addEventListener("click", e => {
+            e.preventDefault()
+            for (let keyval in lookup[name]) {
+               let [butt, div] = lookup[name][keyval],
+               [display, act] = keyval == val ? ["flex", "add"] : ["none", "remove"]
+               div.style.display = display
+               butt.classList[act]("btn-pressed")
+            }
+         })
+      }
+      else {
+         lookup[name][val][1] = item
+         lib.listenInputs(item)
+      }
    }
 },
 document.getElementsByClassName("radioval") as HTMLCollectionOf<HTMLButtonElement | HTMLFormElement>);
 
 lib.go(sendButt => {
-   let docform = document.getElementById("docform") as HTMLFormElement;
-   lib.listenInputs(docform);
+   let docform = document.getElementById("docform") as HTMLFormElement
+   lib.listenInputs(docform)
 
    sendButt.addEventListener("click", async e => {
-      e.preventDefault();
+      e.preventDefault()
       let [form1, form2] = 
          "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
             .map(key => document.querySelector(`[data-radioval="${key}"]`) as HTMLFormElement)
