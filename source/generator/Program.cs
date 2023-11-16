@@ -16,9 +16,9 @@ List<T> ReadJ<T>(string? path = null) =>
         File.ReadAllText($"{rootPath}source/data/{path ?? typeof(T).Name}s.json"),
         jsonOptions)!;
 
-var (projects, news_, partners, thanks, slides, wallets, stones) =
-    (ReadJ<Project>("source-project"), ReadJ<News>("source-new"), ReadJ<Partner>(),
-     ReadJ<Thank>("source-thank"), ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
+var (projects, news_, partners, grates, slides, wallets, stones) =
+    (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(),
+     ReadJ<Thank>(), ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
 WriteFolder(Lang.Id.Українська);
 WriteFolder(Lang.Id.English);
@@ -67,7 +67,7 @@ void WriteFolder(Lang.Id langId)
     var founders = print[partners];
     
     var thanksMain =
-        from thank in thanks
+        from thank in grates
         let index = thank.MainIndex.GetValueOrDefault()
         where index > 0 orderby index
         select thank with { DesktopOnly = index > 3 };
@@ -82,16 +82,15 @@ void WriteFolder(Lang.Id langId)
         walletsTable,
         topProjects = ProjectCards(projects.Take(6), true)
     };
+    Out("newsList", "/news", print[news]);
+    Out("auction", "/auction", print[stones]);
+    Out("auctionDetail", "/detail");
     Out("center", "/center", common with { skipAbout = true });
     Out("aboutus", "/aboutus", common);
     Out("index", "", common);
     Out("projects", "/fundraising", ProjectCards(projects, false));
 
-    Out("newsList", "/news", print[news]);
-    Out("auction", "/auction", print[stones]);
-    Out("auctionDetail", "/detail");
-
-    _ = thanks.Chunk(40).Select((thanks, i) =>
+    foreach (var (thanks, i) in grates.Chunk(40).Select(ValueTuple.Create<Thank[], int>))
     {
         var content = print[thanks];
         File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
@@ -99,9 +98,7 @@ void WriteFolder(Lang.Id langId)
         var hasNext = thanks.Length == 40;
         var nextPage = hasNext ? i + 2 : (int?)null;
         Out("thankList", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
-        return i;
-    })
-    .ToList();
+    }
 
     foreach (var page in "about-diabetes contacts founding-documents fun recipient-quest".Split(' '))
         Out(page, "/" + page);

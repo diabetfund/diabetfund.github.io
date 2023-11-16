@@ -140,7 +140,7 @@ record Thank(
     int? MainIndex,
     DateOnly Date) : Entity<ThankTopic>
 {
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    [JsonIgnore]
     public bool DesktopOnly { get; set; }
 
     [JsonIgnore]
