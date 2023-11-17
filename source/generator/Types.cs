@@ -15,7 +15,7 @@ record Lang(CultureInfo Culture, string Code, string Suffix)
     }
 
     public readonly static FrozenDictionary<Id, Lang> All =
-        Array.ConvertAll([English, Українська, Deutsche, Polski, Italiana], lang =>
+        Array.ConvertAll([English, Українська, Deutsche, Polski], lang =>
         {
             var info = CultureInfo.GetCultureInfo((int)lang);
             var code = lang == Українська ? "ua" : info.TwoLetterISOLanguageName;
@@ -57,6 +57,7 @@ record Entity<TTopic> : ILocalized
     }
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ContentType
 {
     Funding,
@@ -67,6 +68,7 @@ enum ContentType
 
 record Partner : Entity<Topic>;
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ProjectType
 {
     Diabet,
@@ -119,6 +121,7 @@ record Project(
         id is "help-rehab" ? "/center" : $"/fundraising/{id}";
 }
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
     Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, Modulax, P999, Reservoir, Pods, Candies,
@@ -177,6 +180,7 @@ record Stone(string MiniLeft, string MiniRight) : Entity<StoneTopic>;
 
 //////////
 
+[JsonConverter(typeof(JsonStringEnumConverter))]
 public enum ProductType
 {
     Glucometer,

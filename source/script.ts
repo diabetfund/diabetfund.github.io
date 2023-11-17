@@ -363,13 +363,13 @@ lib.go((triggers, contents) => {
          e.preventDefault()
 
          for (let i = 0; i < triggers.length; i++) {
-            let meth = contents[i].id == item.href.replace('#', '') ? "add" : "remove"
+            let meth = contents[i].id == item.hash.replace('#', '') ? "add" : "remove"
             triggers[i].classList[meth]('tabs-triggers__item_active')
             contents[i].classList[meth]('tabs-content__item_active')
          }
       })
 
-   let cur = [...triggers].find(({href}) => location.search.includes(href.split('#')[1]))
+   let cur = [...triggers].find(({hash}) => location.search.includes(hash))
    cur?.click()
 },
    document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<HTMLAnchorElement>,

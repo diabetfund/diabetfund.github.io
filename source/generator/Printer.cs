@@ -42,8 +42,8 @@ public sealed class Printer(Func<string, string> readTemplate, CultureInfo? cult
                     where prop.PropertyType.IsValueType || prop.PropertyType == typeof(string)
                     select New(tupleCtor,
                         Constant("@" + prop.Name),
-                        Convert(Property(Convert(arg, type), prop), typeof(object)))),
-                arg)
+                        Convert(Property(Convert(modelParameter, type), prop), typeof(object)))),
+                modelParameter)
             .Compile());
 
         foreach (var (key, val) in getScalars(model))
@@ -56,5 +56,5 @@ public sealed class Printer(Func<string, string> readTemplate, CultureInfo? cult
 
     static readonly ConstructorInfo tupleCtor = typeof((string, object)).GetConstructors()[0];
 
-    static readonly ParameterExpression arg = Parameter(typeof(object));
+    static readonly ParameterExpression modelParameter = Parameter(typeof(object));
 }

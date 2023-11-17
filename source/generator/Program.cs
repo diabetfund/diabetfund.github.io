@@ -1,34 +1,18 @@
 ﻿using System.Text.Json;
-using System.Text.Json.Serialization;
 
-var version = 59;
+var version = 60;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
-JsonSerializerOptions jsonOptions = new()
-{
-    WriteIndented = true,
-    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-    Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-    Converters = { new JsonStringEnumConverter() }
-};
 
 List<T> ReadJ<T>(string? path = null) =>
     JsonSerializer.Deserialize<List<T>>(
-        File.ReadAllText($"{rootPath}source/data/{path ?? typeof(T).Name}s.json"),
-        jsonOptions)!;
+        File.ReadAllText($"{rootPath}source/data/{path ?? typeof(T).Name}s.json"))!;
 
 var (projects, news_, partners, grates, slides, wallets, stones) =
-    (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(),
-     ReadJ<Thank>(), ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
+    (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(), ReadJ<Thank>(),
+     ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
-WriteFolder(Lang.Id.Українська);
-WriteFolder(Lang.Id.English);
-WriteFolder(Lang.Id.Polski);
-WriteFolder(Lang.Id.Deutsche);
-
-void WriteFolder(Lang.Id langId)
+foreach(var (langId, (culture, lang, _)) in Lang.All)
 {
-    var (culture, lang, _) = Lang.All[langId];
-
     string Read(string path)
     {
         var full = $"{rootPath}source/{path}.html";

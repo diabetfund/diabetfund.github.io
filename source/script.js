@@ -20,19 +20,16 @@ const cookie = (key) => ({
     }
 });
 const lib = (() => {
-    let _lang = null;
-    let allInputs = (form) => [...form.getElementsByTagName("input"), ...form.getElementsByTagName("textarea")];
-    let cookLang = cookie("lang");
+    let _lang = null, cookLang = cookie("lang"), allInputs = (form) => [
+        ...form.getElementsByTagName("input"),
+        ...form.getElementsByTagName("textarea")
+    ];
     return {
-        inferLang(href) {
-            return href.indexOf('/en') > -1 ? "en"
-                : href.indexOf('/de') > -1 ? "de"
-                    : href.indexOf('/it') > -1 ? "it"
-                        : href.indexOf('/pl') > -1 ? "pl" : "ua";
-        },
-        get lang() {
-            return _lang !== null && _lang !== void 0 ? _lang : (_lang = lib.inferLang(location.href));
-        },
+        inferLang: (href) => href.indexOf('/en') > -1 ? "en"
+            : href.indexOf('/de') > -1 ? "de"
+                : href.indexOf('/it') > -1 ? "it"
+                    : href.indexOf('/pl') > -1 ? "pl" : "ua",
+        get lang() { return _lang !== null && _lang !== void 0 ? _lang : (_lang = lib.inferLang(location.href)); },
         translate(en, ua, de, it, pl) {
             switch (lib.lang) {
                 case "ua": return ua !== null && ua !== void 0 ? ua : en;
@@ -79,7 +76,7 @@ const lib = (() => {
                 for (let field of fieldLine.split(" ")) {
                     let inp = form.getElementsByClassName(`inp-${field}`)[0];
                     if (inp)
-                        if (inp && !inp.value) {
+                        if (!inp.value) {
                             titles.push((_a = inp.title) !== null && _a !== void 0 ? _a : (_c = (_b = inp.previousSibling) === null || _b === void 0 ? void 0 : _b.textContent) === null || _c === void 0 ? void 0 : _c.trim());
                             inp.classList.add("inp-err");
                         }
@@ -95,17 +92,16 @@ const lib = (() => {
         },
         freezeeInputs: (btn, ...forms) => (disable) => {
             if (btn) {
-                btn.classList[disable ? "add" : "remove"]("btn-disabled");
-                btn.disabled = disable;
-                if (disable) {
+                if (btn.disabled = disable) {
                     let { width, height } = btn.style;
-                    btn.setAttribute("title", btn.innerText);
+                    btn.title = btn.innerText;
                     btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..");
                     btn.style.width = width;
                     btn.style.height = height;
                 }
                 else
-                    btn.innerText = btn.getAttribute("title");
+                    btn.innerText = btn.title;
+                btn.classList[disable ? "add" : "remove"]("btn-disabled");
             }
             for (let form of forms)
                 for (let inp of allInputs(form))
@@ -131,10 +127,9 @@ const lib = (() => {
                         return true;
                     });
                 }
-                if ((yield aux()) || (yield aux()) || (yield aux()))
-                    return [true, response];
-                else
-                    return [false, null];
+                return (yield aux()) || (yield aux()) || (yield aux())
+                    ? [true, response]
+                    : [false, null];
             });
         },
         go(f, ...args) {
@@ -159,50 +154,32 @@ lib.go(() => {
 });
 lib.go(l => l.style.display = "none", document.getElementById("eu-lang-links"));
 lib.go(() => {
-    var _a;
-    let [langSwitch] = document.getElementsByClassName("lang-switcher");
-    let { euroLang: { val: eulang } } = lib;
-    for (let a of langSwitch.getElementsByTagName("a")) {
-        if (!a.href.includes('en') && eulang && !a.href.includes(eulang)) {
-            let title = (_a = { pl: "POL", de: "DEU", it: "ITA" }[eulang]) !== null && _a !== void 0 ? _a : "УКР";
-            a.href = '/' + eulang;
-            if (a.classList.contains("lang-switcher__link"))
-                a.innerHTML = ` ${title} `;
-        }
-        a.addEventListener("click", e => {
+    var _a, _b;
+    let [langSwitch] = document.getElementsByClassName("lang-switcher"), { lang, euroLang: { val: eulang } } = lib, title = (_a = { pl: "POL", de: "DEU", it: "ITA" }[eulang]) !== null && _a !== void 0 ? _a : "УКР";
+    for (let anchor of langSwitch.getElementsByTagName("a")) {
+        anchor.addEventListener("click", e => {
             e.preventDefault();
-            lib.cookLang = lib.inferLang(a.href);
-            location.href = a.href;
+            lib.cookLang = lib.inferLang(anchor.href);
+            location.href = anchor.href;
         });
+        if (!anchor.href.includes('en') && eulang && !anchor.href.includes(eulang)) {
+            anchor.href = '/' + eulang;
+            if (anchor.classList.contains("lang-switcher__link"))
+                anchor.innerHTML = ` ${title} `;
+        }
     }
     //! local
-    if (lib.lang != "en")
+    if (lang != "en")
         langSwitch.classList.add("lang-switcher__active");
     for (let link of document.getElementsByClassName('liqpay'))
         link.addEventListener("click", e => {
             e.preventDefault();
-            let d = e.currentTarget.dataset;
-            lib.sendLiqpay(d["liqpay-sig"], d["liqpay-data"], true);
+            let data = e.currentTarget.dataset;
+            lib.sendLiqpay(data["liqpay-sig"], data["liqpay-data"], true);
         });
     for (let el of document.getElementsByClassName('local')) {
-        let { ua, en, de, pl, it } = el.dataset;
-        switch (lib.lang) {
-            case "ua":
-                el.innerHTML = ua;
-                break;
-            case "de":
-                el.innerHTML = de !== null && de !== void 0 ? de : en;
-                break;
-            case "it":
-                el.innerHTML = it !== null && it !== void 0 ? it : en;
-                break;
-            case "pl":
-                el.innerHTML = pl !== null && pl !== void 0 ? pl : en;
-                break;
-            default:
-                el.innerHTML = en;
-                break;
-        }
+        let data = el.dataset;
+        el.innerHTML = (_b = data[lang]) !== null && _b !== void 0 ? _b : data.en;
     }
 });
 lib.go(() => {
@@ -233,30 +210,31 @@ lib.go(tabs => {
 }, document.getElementsByClassName("needs-filter__item"));
 lib.go(pane => {
     function arrow(clas, path, linkPage) {
-        const [tag, color, href] = linkPage == null
+        let [tag, color, href] = linkPage == null
             ? ["span", "#ccc", ""]
             : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`];
         return `<${tag} class="${clas}" href="${href}">
-           <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
-               <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-           </svg>
-       </${tag}>`;
+         <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
+            <path d="${path}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+         </svg>
+      </${tag}>`;
     }
-    const pages = [1, 2, 3], curIdx = Math.max(0, pages.findIndex(p => location.search.indexOf(`page=${p}`) > -1));
+    let pages = [1, 2, 3], curIdx = Math.max(0, pages.findIndex(p => location.search.includes(`page=${p}`)));
     [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) => card.style.display = i >= (6 * curIdx) && i < (6 * (curIdx + 1)) ? "block" : "none");
-    var items = pages.map(p => p - 1 == curIdx
+    let items = pages.map(p => p - 1 == curIdx
         ? `<span class="pagination__item pagination__item_active">${p}</span>`
         : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
-    pane.innerHTML = `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx == 0 ? null : curIdx - 1)}
-   <div class="pagination__items-wr">${items.join('')}</div>
-   ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx == pages.length - 1 ? null : curIdx + 1)}`;
+    pane.innerHTML =
+        `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx == 0 ? null : curIdx - 1)}
+         <div class="pagination__items-wr">${items.join('')}</div>
+       ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx == pages.length - 1 ? null : curIdx + 1)}`;
 }, document.getElementsByClassName("news__pagination")[0]);
 lib.go(() => {
-    const header = document.querySelector('header'), burgerBtn = document.getElementById('burger-btn'), mobileMenuWr = document.getElementById('menu_mobile-wr'), mobileMenu = document.getElementById('menu_mobile');
-    for (const btn of document.querySelectorAll(".copy-wallet"))
+    let header = document.querySelector('header'), burgerBtn = document.getElementById('burger-btn'), mobileMenuWr = document.getElementById('menu_mobile-wr'), mobileMenu = document.getElementById('menu_mobile');
+    for (let btn of document.querySelectorAll(".copy-wallet"))
         btn.addEventListener("click", (e) => __awaiter(this, void 0, void 0, function* () {
             e.preventDefault();
-            const { innerText } = document.getElementById(e.currentTarget.dataset.walletid);
+            let { dataset: { walletid } } = e.currentTarget, { innerText } = document.getElementById(walletid);
             yield navigator.clipboard.writeText(innerText);
             alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"));
         }));
@@ -275,17 +253,12 @@ lib.go(() => {
             });
 });
 lib.go((heroBg, heroContent) => {
-    const calcHeroBgOffset = () => heroBg.style.top = window.matchMedia('(max-width: 575px)').matches
-        ? `${heroContent.offsetHeight}px`
-        : `0px`;
+    let calcHeroBgOffset = () => heroBg.style.top = window.matchMedia('(max-width: 575px)').matches ? `${heroContent.offsetHeight}px` : `0px`;
     window.onload = calcHeroBgOffset;
     window.onresize = calcHeroBgOffset;
 }, document.getElementById('hero__background'), document.getElementById('hero__content'));
 lib.go(() => {
-    const modalTrigger = document.getElementById('modal-trigger');
-    const modal = document.getElementById('modal');
-    const modalContent = document.getElementById('modal__content');
-    const modalCloseBtn = document.getElementById('modal__close-btn');
+    let modalTrigger = document.getElementById('modal-trigger'), modal = document.getElementById('modal'), modalContent = document.getElementById('modal__content'), modalCloseBtn = document.getElementById('modal__close-btn');
     modalTrigger.addEventListener('click', function () {
         modal.classList.toggle('open');
     });
@@ -319,19 +292,17 @@ lib.go(() => {
     }
 });
 lib.go((triggers, contents) => {
-    for (const item of triggers)
+    for (let item of triggers)
         item.addEventListener('click', e => {
             e.preventDefault();
-            const id = e.currentTarget.getAttribute('href').replace('#', '');
-            for (var i = 0; i < triggers.length; i++) {
-                const meth = contents[i].id == id ? "add" : "remove";
+            for (let i = 0; i < triggers.length; i++) {
+                let meth = contents[i].id == item.hash.replace('#', '') ? "add" : "remove";
                 triggers[i].classList[meth]('tabs-triggers__item_active');
                 contents[i].classList[meth]('tabs-content__item_active');
             }
         });
-    const current = [...triggers].find(_ => location.search.indexOf(_.href.split('#')[1]) > -1);
-    if (current)
-        current.click();
+    let cur = [...triggers].find(({ hash }) => location.search.includes(hash));
+    cur === null || cur === void 0 ? void 0 : cur.click();
 }, document.getElementsByClassName('tabs-triggers__item'), document.getElementsByClassName('tabs-content__item'));
 const __slider = lib.go(slider => {
     let figures = slider.getElementsByTagName("figure"), index = -1, interval = null;
@@ -414,23 +385,23 @@ lib.go((form, butt) => {
 }, document.getElementsByClassName("user-form")[0], document.getElementById("email-submit"));
 function handleThankVideo(wraps) {
     var _a;
-    for (const wrap of wraps.getElementsByTagName("figure")) {
-        const pics = wrap.getElementsByTagName("picture"), img = pics[pics.length - 1], video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video, tspan = wrap.getElementsByTagName("span")[0], title = tspan === null || tspan === void 0 ? void 0 : tspan.innerText;
+    for (let wrap of wraps.getElementsByTagName("figure")) {
+        let pics = wrap.getElementsByTagName("picture"), img = pics[pics.length - 1], video = (_a = img === null || img === void 0 ? void 0 : img.dataset) === null || _a === void 0 ? void 0 : _a.video, [tspan] = wrap.getElementsByTagName("span"), title = tspan === null || tspan === void 0 ? void 0 : tspan.innerText;
         if (!video || video == "null")
             continue;
         img.style.cursor = "pointer";
         img.addEventListener("click", e => {
             e.preventDefault();
-            const name = (title === null || title === void 0 ? void 0 : title.trim()) || wrap.dataset.title, [w1, w2] = wrap.getElementsByTagName("blockquote")[0].innerText.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
+            let name = (title === null || title === void 0 ? void 0 : title.trim()) || wrap.dataset.title, [{ innerText: quote }] = wrap.getElementsByTagName("blockquote"), [w1, w2] = quote.split(' '), [, width, height] = video.split('_'), wind = window.open('', '_blank', `toolbar=no,menubar=no,status=yes,titlebar=0,resizable=yes,width=${width},height=${height}`);
             wind === null || wind === void 0 ? void 0 : wind.document.write(`<!doctype html><html><head><meta charset="UTF-8" />
-                <title>${name}: ${w1} ${w2}...</title></head><body>
-                <style>body { margin: 0; text-align: center; }</style>
-                <div data-new-window>
-                    <video controls autoplay muted playsinline style="width: 100%; height: auto;">
-                        <source src="${video}" type="video/mp4" />
-                    </video>
-                </div>
-            </body></html>`);
+            <title>${name}: ${w1} ${w2}...</title></head><body>
+            <style>body { margin: 0; text-align: center; }</style>
+            <div data-new-window>
+               <video controls autoplay muted playsinline style="width: 100%; height: auto;">
+                  <source src="${video}" type="video/mp4" />
+               </video>
+            </div>
+         </body></html>`);
         });
     }
 }
@@ -438,17 +409,15 @@ lib.go((wraps, link) => {
     handleThankVideo(wraps);
     if (!link)
         return;
-    let page = parseInt(link.dataset.thanknext);
-    let footH = document.getElementsByTagName("footer")[0].clientHeight;
-    let fetching = false;
+    let page = parseInt(link.dataset.thanknext), [{ clientHeight }] = document.getElementsByTagName("footer"), fetching = false;
     window.addEventListener("scroll", () => __awaiter(this, void 0, void 0, function* () {
-        const endOfPage = (window.innerHeight + window.pageYOffset) >= (document.body.offsetHeight - footH);
+        let endOfPage = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - clientHeight);
         if (endOfPage && page != null && !fetching) {
             fetching = true;
             link.style.display = "none";
-            var html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
+            let html = yield fetch(`/${lib.lang}/thanksChunk${page}.html`);
             if (html.ok) {
-                var span = document.createElement("span");
+                let span = document.createElement("span");
                 span.innerHTML = yield html.text();
                 handleThankVideo(span);
                 wraps.append(...span.childNodes);
@@ -461,9 +430,9 @@ lib.go((wraps, link) => {
     }));
 }, document.getElementsByClassName("thanks")[0], document.getElementsByClassName("thanks-next-link")[0]);
 lib.go(radios => {
-    const lookup = {};
-    for (const item of radios) {
-        const [v1, v2] = item.dataset.radioval.split(":"), [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
+    let lookup = {};
+    for (let item of radios) {
+        let [v1, v2] = item.dataset.radioval.split(":"), [name, val] = v2 == undefined ? [item.name, v1] : [v1, v2];
         if (!(name in lookup))
             lookup[name] = {};
         if (!(val in lookup[name]))
@@ -472,16 +441,10 @@ lib.go(radios => {
             lookup[name][val][0] = item;
             item.addEventListener("click", e => {
                 e.preventDefault();
-                for (const keyval in lookup[name]) {
-                    let [butt, div] = lookup[name][keyval];
-                    if (keyval == val) {
-                        div.style.display = "flex";
-                        butt.classList.add("btn-pressed");
-                    }
-                    else {
-                        div.style.display = "none";
-                        butt.classList.remove("btn-pressed");
-                    }
+                for (let keyval in lookup[name]) {
+                    let [butt, div] = lookup[name][keyval], [display, act] = keyval == val ? ["flex", "add"] : ["none", "remove"];
+                    div.style.display = display;
+                    butt.classList[act]("btn-pressed");
                 }
             });
         }
@@ -492,21 +455,21 @@ lib.go(radios => {
     }
 }, document.getElementsByClassName("radioval"));
 lib.go(sendButt => {
-    const docform = document.getElementById("docform");
+    let docform = document.getElementById("docform");
     lib.listenInputs(docform);
     sendButt.addEventListener("click", (e) => __awaiter(this, void 0, void 0, function* () {
         var _a;
         e.preventDefault();
-        const [form1, form2] = "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
+        let [form1, form2] = "recipient-type:0 recipient-type:1 contact-type:0 contact-type:1".split(" ")
             .map(key => document.querySelector(`[data-radioval="${key}"]`))
             .filter(_ => _.style.display != "none"), [isValid, fields] = lib.validateWithAlert([form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename"], [form2, "postaddress postsurname postname postparto"], [docform, "doc"]);
         if (!isValid)
             return;
-        const body = new FormData();
-        body.append("file", document.getElementsByClassName("inp-doc")[0].files[0]);
-        for (const nam in fields)
+        let body = new FormData(), { files: [file] } = document.getElementsByClassName("inp-doc")[0];
+        body.append("file", file);
+        for (let nam in fields)
             body.append(nam, (_a = fields[nam]) !== null && _a !== void 0 ? _a : "");
-        var [isSucc] = yield lib.fetchMiniback("helpreq", { method: "POST", body, mode: "cors" }, lib.freezeeInputs(sendButt, form1, form2, docform));
+        let [isSucc] = yield lib.fetchMiniback("helpreq", { method: "POST", body, mode: "cors" }, lib.freezeeInputs(sendButt, form1, form2, docform));
         if (isSucc) {
             if (confirm("Ваше повідомлення відправлено!"))
                 location.href = "/";
