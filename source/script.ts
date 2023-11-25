@@ -1,5 +1,4 @@
 
-type Lang = "en" | "ua" | "pl" | "de" | "it" 
 
 const cookie = (key: string) => ({
    get val(): string| null {
@@ -11,28 +10,42 @@ const cookie = (key: string) => ({
    set val(v) {
       document.cookie =  `${key}=${v}; expires=Fri, 3 Aug 2030 20:47:11 UTC; path=/`
    }
-});
+})
 
-const lib = (() => {
-   let _lang: Lang | null = null,
-   cookLang = cookie("lang"),
+type GoArgs<AX extends any[]> = { 
+   [I in keyof AX]: AX[I] extends `.${any}` ? HTMLElement[] :  HTMLElement
+}
 
-   allInputs = (form: HTMLElement) => [
-      ...form.getElementsByTagName("input"),
-      ...form.getElementsByTagName("textarea")
-   ] as HTMLInputElement[]
+function go<A extends any[]>(f: (...args: GoArgs<A>) => void, ...args: A) {
+   let res
+   for (let i = 0, cur = args[0]; i < args.length; i++, cur = args[i])
+      if (typeof cur == "string")
+         args[i] = cur.startsWith('.') ? [...document.querySelectorAll(cur)]
+           : document.querySelector(cur)
+
+   if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
+      try { res = f(...args as any) }
+      catch (e) { console.log(e) }
+   return res
+}
+
+type Lang = "en" | "ua" | "pl" | "de" | "it" 
+
+const Lang = (() => {
+   let _cur: Lang | null = null,
+   cook = cookie("lang")
 
    return {
-      inferLang: (href: string): Lang =>
+      infer: (href: string): Lang =>
          href.indexOf('/en') > -1 ? "en"
          : href.indexOf('/de') > -1 ? "de"
          : href.indexOf('/it') > -1 ? "it"
          : href.indexOf('/pl') > -1 ? "pl" : "ua",
     
-      get lang() { return _lang ??= lib.inferLang(location.href) },
+      get cur() { return _cur ??= Lang.infer(location.href) },
 
-      translate(en: string, ua: string|null, de?: string|null, it?: string|null, pl?: string|null) {
-         switch (lib.lang) {
+      trans(en: string, ua: string|null, de?: string|null, it?: string|null, pl?: string|null) {
+         switch (Lang.cur) {
             case "ua": return ua ?? en
             case "de": return de ?? en
             case "it": return it ?? en
@@ -41,146 +54,151 @@ const lib = (() => {
          }
       },
 
-      get cookLang() {
-         let w = cookLang.val
+      get cook() {
+         let w = cook.val
          return w && ["ua","en","de","it","pl"].indexOf(w) > -1 ? <Lang>w : null
       },
-
-      set cookLang(v) { cookLang.val = v },
-
-      euroLang: cookie("eulang"),
-  
-      sendLiqpay(sign: string, data: string, isNewWindow = false) {
-         let form = document.createElement("form")
-         if (!sign || sign == "null")
-             sign = lib.translate("8FCafqMc//6iKe9wB+eqZWs3FPc=", "TVNsm5bs8KyxZhkpsexBFHb8Mb8=")
-
-         if (!data || data == "null")
-             data = lib.translate( 
-                "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
-                "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="
-             )
-  
-         form.method = "POST"
-         form.action = "https://www.liqpay.ua/api/3/checkout"
-         form.innerHTML = `<input type="hidden" name="data" value="${data}"/>
-                 <input type="hidden" name="signature" value="${sign}"/>
-                 <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text"/>`
-         if (isNewWindow === true)
-             form.target = "_blank"
-  
-         document.getElementsByTagName("body")[0].appendChild(form)
-         form.submit()
-         form.remove()
+      set cook(v) {
+         cook.val = v
       },
 
-      listenInputs(formWrap: HTMLElement) {
-         let remError = (e: any) => e.currentTarget.classList.remove("inp-err")
-         for (let inp of allInputs(formWrap)) {
-             inp.addEventListener("keyup", remError)
-             inp.addEventListener("change", remError)
-         }            
-      },
-  
-      validateWithAlert(...formFiledPairs: [HTMLFormElement, string][]): [boolean, Record<string, string>] {
-         let res = {},
-         titles: string[] = []
-
-         for (let [form, fieldLine] of formFiledPairs)
-            for (let field of fieldLine.split(" ")) {
-               let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
-               if (inp) 
-                  if (!inp.value) {
-                     titles.push(inp.title ?? inp.previousSibling?.textContent?.trim())
-                     inp.classList.add("inp-err")
-                  }
-                  else
-                     res[field] = inp.value
-            }
-         if (titles.length > 0) {
-            let message = lib.translate("Data not filled", "Не заповнені дані", "Daten nicht ausgefüllt", "Dati non compilati", "Dane nie zostały wypełnione") 
-            alert(`\n${message}:\n- ` + titles.join("\n- "))
-            return [false, res]
-         }
-         return [true, res]
-      },
-
-      freezeeInputs: (btn: HTMLButtonElement, ...forms: HTMLFormElement[]) => (disable: boolean) => {
-         if (btn) {
-            if (btn.disabled = disable) {
-               let { width, height } = btn.style
-               btn.title = btn.innerText
-               btn.innerText = lib.translate("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..")
-               btn.style.width = width
-               btn.style.height = height
-            }
-            else
-               btn.innerText = btn.title
-
-            btn.classList[disable ? "add" : "remove"]("btn-disabled")
-         }
-         for (let form of forms)
-            for (let inp of allInputs(form))
-               inp.disabled = disable
-      },
-
-      async fetchMiniback(action: string, req: any, freezee: (v: boolean) => void) {
-         let response: any
-         async function aux() {
-            try {
-               freezee(true)
-               response = await fetch("https://minimail2.azurewebsites.net/" + action, req)
-               if (!response.ok) 
-                  return false
-            }
-            catch (error) { return false }
-            finally { freezee(false) }   
-            return true 
-         }
-         return await aux() || await aux() || await aux()
-            ? [true, response]
-            : [false, null]
-      },
-
-      go<T extends any[]>(f: (...args: T) => void, ...args: T) {
-         let res
-         if (args.length == 0 || (args[0] != undefined && args[0] != null && !(args[0].length === 0)))
-         try { res = f(...args) }
-         catch (e) { console.log(e) }
-         return res
-      }
+      euro: cookie("eulang"),
    }
 })();
 
-lib.go(() => {
-   let { lang, euroLang: {val: eulang} } = lib
+const lib = {
+   allInputs: (form: HTMLElement) => [
+      ...form.getElementsByTagName("input"),
+      ...form.getElementsByTagName("textarea")
+   ] as HTMLInputElement[],
 
-   if (lib.cookLang != lang)
-       lib.cookLang = lang
+   sendLiqpay(sign: string, data: string, isNewWindow = false) {
+      if (!sign || sign == "null")
+         sign = Lang.trans("8FCafqMc//6iKe9wB+eqZWs3FPc=", "TVNsm5bs8KyxZhkpsexBFHb8Mb8=")
 
-   if (lang  && lang != "en" && (!eulang || lang != eulang))
-        lib.euroLang.val = lang
-});
+      if (!data || data == "null")
+         data = Lang.trans(
+            "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOlwvXC9kaWFiZXQuZnVuZFwvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=",
+            "eyJhY3Rpb24iOiJwYXlkb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoiXHUwNDFmXHUwNDNlXHUwNDM2XHUwNDM1XHUwNDQwXHUwNDQyXHUwNDMyXHUwNDQzXHUwNDMyXHUwNDMwXHUwNDQyXHUwNDM4IFx1MDQzMiBcdTA0NDRcdTA0M2VcdTA0M2RcdTA0MzQiLCJyZXN1bHRfdXJsIjoiaHR0cHM6XC9cL2RpYWJldC5mdW5kXC91YSIsImxhbmd1YWdlIjoidWsiLCJ2ZXJzaW9uIjoiMyIsInB1YmxpY19rZXkiOiJpMzA3ODQ4MTUxNDMifQ=="
+         )
 
-lib.go(
-    l => l.style.display = "none",
-    document.getElementById("eu-lang-links"));
+      let form = document.createElement("form")
+      form.method = "POST"
+      form.action = "https://www.liqpay.ua/api/3/checkout"
+      form.innerHTML = `<input type="hidden" name="data" value="${data}"/>
+                 <input type="hidden" name="signature" value="${sign}"/>
+                 <input type="image" src="//static.liqpay.ua/buttons/p1ru.radius.png" name="btn_text"/>`
+      if (isNewWindow === true)
+         form.target = "_blank"
 
-lib.go(() => {
-   let [langSwitch] = document.getElementsByClassName("lang-switcher"),
-   { lang, euroLang: { val: eulang } } = lib,
+      document.getElementsByTagName("body")[0].appendChild(form)
+      form.submit()
+      form.remove()
+   },
+
+   listenInputs(formWrap: HTMLElement) {
+      let remError = (e: any) => e.currentTarget.classList.remove("inp-err")
+      for (let inp of lib.allInputs(formWrap)) {
+         inp.addEventListener("keyup", remError)
+         inp.addEventListener("change", remError)
+      }
+   },
+
+   validateWithAlert(...formFiledPairs: [HTMLFormElement, string][]): [boolean, Record<string, string>] {
+      let res = {},
+      titles: string[] = []
+
+      for (let [form, fieldLine] of formFiledPairs)
+         for (let field of fieldLine.split(" ")) {
+            let inp = form.getElementsByClassName(`inp-${field}`)[0] as HTMLInputElement
+            if (inp)
+               if (!inp.value) {
+                  titles.push(inp.title ?? inp.previousSibling?.textContent?.trim())
+                  inp.classList.add("inp-err")
+               }
+               else
+                  res[field] = inp.value
+         }
+      if (titles.length > 0) {
+         let message = Lang.trans("Data not filled", "Не заповнені дані", "Daten nicht ausgefüllt", "Dati non compilati", "Dane nie zostały wypełnione")
+         alert(`\n${message}:\n- ` + titles.join("\n- "))
+         return [false, res]
+      }
+      return [true, res]
+   },
+
+   freezeeInputs: (btn: HTMLButtonElement | null, ...forms: HTMLFormElement[]) => (disable: boolean) => {
+      if (btn) {
+         if (btn.disabled = disable) {
+            let { width, height } = btn.style
+            btn.title = btn.innerText
+            btn.innerText = Lang.trans("Sending..", "Вiдправка..", "Versenden..", "Spedizione..", "Załatwić..")
+            btn.style.width = width
+            btn.style.height = height
+         }
+         else
+            btn.innerText = btn.title
+
+         btn.classList[disable ? "add" : "remove"]("btn-disabled")
+      }
+      for (let form of forms)
+         for (let inp of lib.allInputs(form))
+            inp.disabled = disable
+   },
+
+   async fetchMiniback(action: string, req: any, freezee: (v: boolean) => void): Promise<[boolean, string | null]> {
+      let response: Response
+      async function aux() {
+         try {
+            freezee(true)
+            response = await fetch("https://minimail2.azurewebsites.net/" + action, req)
+            if (!response.ok)
+               return false
+         }
+         catch (error) {
+            return false
+         }
+         finally {
+            freezee(false)
+         }
+         return true
+      }
+
+      return await aux() || await aux() || await aux()
+         ? [true, await response.text()]
+         : [false, null]
+   }
+}
+
+go(() => {
+   let { cur, euro: {val: eulang} } = Lang
+
+   if (Lang.cook != cur)
+       Lang.cook = cur
+
+   if (cur  && cur != "en" && (!eulang || cur != eulang))
+        Lang.euro.val = cur
+})
+
+go(
+   l => l.style.display = "none",
+   "#eu-lang-links" as const)
+
+go(([langSwitch], payLinks, localItems) => {
+   let { cur: lang, euro: { val: eulang } } = Lang,
    title = { pl: "POL", de: "DEU", it: "ITA" }[eulang] ?? "УКР"
 
-   for (let anchor of langSwitch.getElementsByTagName("a")) {
-      anchor.addEventListener("click", e => {
+   for (let link of langSwitch.getElementsByTagName("a")) {
+      let { href } = link
+      link.addEventListener("click", e => {
          e.preventDefault()
-         lib.cookLang = lib.inferLang(anchor.href)
-         location.href = anchor.href
-      })  
-      if (!anchor.href.includes('en') && eulang && !anchor.href.includes(eulang)) {
-         anchor.href = '/' + eulang
-         if (anchor.classList.contains("lang-switcher__link"))
-         anchor.innerHTML = ` ${title} `
+         Lang.cook = Lang.infer(href)
+         location.href = href
+      })
+      if (!href.includes('en') && eulang && !href.includes(eulang)) {
+         link.href = '/' + eulang
+         if (link.classList.contains("lang-switcher__link"))
+            link.innerHTML = ` ${title} `
       }
    }
 
@@ -188,23 +206,23 @@ lib.go(() => {
    if (lang != "en")
       langSwitch.classList.add("lang-switcher__active")
 
-   for (let link of document.getElementsByClassName('liqpay'))
-      link.addEventListener("click", e => {
+   for (let link of payLinks)
+      link.addEventListener("click", function(e) {
          e.preventDefault()
-         let data = (e.currentTarget as HTMLElement)!.dataset
-         lib.sendLiqpay(data["liqpay-sig"], data["liqpay-data"], true)
+         lib.sendLiqpay(this.dataset["liqpay-sig"], this.dataset["liqpay-data"], true)
       })
 
-   for (let el of document.getElementsByClassName('local')) {
-      let data = (el as HTMLElement).dataset
-      el.innerHTML = data[lang] ?? data.en
-   }
-});
+   for (let el of localItems)
+      el.innerHTML = el.dataset[lang] ?? el.dataset.en
+},
+".lang-switcher" as const,
+'.liqpay' as const,
+'.local' as const)
 
-lib.go(() => {
+go(() => {
    let folders = ["center", "aboutus", "about-diabetes", "fundraising", "thanks", "fun" ],
 
-   curFolder = folders.findIndex(f => location.pathname.indexOf(f) > -1);
+   curFolder = folders.findIndex(f => location.pathname.includes(f));
    
    [...document.querySelectorAll(".menu > a")].forEach((a, i) => {
        if (i == curFolder)
@@ -219,14 +237,11 @@ lib.go(() => {
        if (i == curFolder)
            a.classList.add("footer__nav-item_active");
    });
-});
+})
 
-lib.go(tabs => {
+go(tabs => {
    let search = location.search,
-
-   tabIndex = Math.max(0, Array.prototype.findIndex.call(tabs, a => a.href.indexOf(search) > -1)),
-
-   suffix = ["none", "True", "False"][tabIndex]
+   tabIndex = Math.max(0, tabs.findIndex(a => (a as HTMLAnchorElement).href.indexOf(search) > -1))
 
    if (tabIndex > -1 && tabIndex < tabs.length)
        for (var i =0; i < tabs.length; i++)
@@ -235,16 +250,17 @@ lib.go(tabs => {
            else 
                tabs[i].style.textDecoration = "underline"
 
+   let suffix = ["none", "True", "False"][tabIndex]
    for (let v of document.getElementsByClassName(`is-military-${suffix}`))
        (v as HTMLElement).style.display = "none"
 },
-document.getElementsByClassName("needs-filter__item") as HTMLCollectionOf<HTMLAnchorElement>);
+".needs-filter__item" as const)
 
-lib.go(pane => {
+go(([pane], cols) => {
    function arrow(clas: string, path: string, linkPage: number | null) {
       let [tag, color, href] = linkPage == null 
          ? ["span", "#ccc", ""]
-         : ["a", "#01B53E", `/${lib.lang}/news/?page=${linkPage}`]
+         : ["a", "#01B53E", `/${Lang.cur}/news/?page=${linkPage}`]
        
       return `<${tag} class="${clas}" href="${href}">
          <svg width="8" height="14" viewBox="0 0 8 14" fill="none">
@@ -255,21 +271,22 @@ lib.go(pane => {
    let pages = [1, 2, 3],
    curIdx = Math.max(0, pages.findIndex(p => location.search.includes(`page=${p}`)));
 
-   [...document.querySelectorAll(".news__list > .col-md-6")].forEach((card, i) =>
-      (card as HTMLElement).style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
+   cols.forEach((card, i) =>
+      card.style.display = i >= (6*curIdx) && i < (6*(curIdx+1)) ? "block": "none" );
 
    let items = pages.map(p => p-1 == curIdx
       ? `<span class="pagination__item pagination__item_active">${p}</span>`
-      : `<a class="pagination__item" href="/${lib.lang}/news/?page=${p}">${p}</a>`);
+      : `<a class="pagination__item" href="/${Lang.cur}/news/?page=${p}">${p}</a>`);
 
    pane.innerHTML =
       `${arrow("pagination-btn_prev", "M6.15869 1.59766L1.65869 7.09766L6.15869 12.5977", curIdx==0 ? null : curIdx -1)}
          <div class="pagination__items-wr">${items.join('')}</div>
        ${arrow("pagination-btn_next", "M1.84131 12.4023L6.34131 6.90234L1.84131 1.40234", curIdx==pages.length-1 ? null : curIdx +1)}`
 },
-document.getElementsByClassName("news__pagination")[0]);
+".news__pagination" as const,
+".news__list > .col-md-6" as const)
 
-lib.go(() => {
+go(() => {
    let header = document.querySelector('header') as HTMLElement,
    burgerBtn = document.getElementById('burger-btn') as HTMLButtonElement,
    mobileMenuWr = document.getElementById('menu_mobile-wr') as HTMLElement,
@@ -282,7 +299,7 @@ lib.go(() => {
          { innerText } = document.getElementById(walletid)
 
          await navigator.clipboard.writeText(innerText)
-         alert(lib.translate("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"))
+         alert(Lang.trans("Copied to clipboard", "Скопійовано", "Kopiert", "Copiato", "Skopiowano"))
       })
    
    window.addEventListener('resize', () => mobileMenuWr.style.top = `${header.offsetHeight}px`)
@@ -300,19 +317,18 @@ lib.go(() => {
             e.preventDefault()
             this.classList.toggle('dropdown_open')
          })
-});
+})
 
-lib.go((heroBg, heroContent) => {
+go((heroBg, heroContent) => {
    let calcHeroBgOffset = () =>
       heroBg.style.top = window.matchMedia('(max-width: 575px)').matches ? `${heroContent.offsetHeight}px` : `0px`;
 
    window.onload = calcHeroBgOffset
    window.onresize = calcHeroBgOffset
 },
-document.getElementById('hero__background'),
-document.getElementById('hero__content'));
+'#hero__background' as const, '#hero__content' as const);
 
-lib.go(() => {
+go(() => {
     let modalTrigger = document.getElementById('modal-trigger') as HTMLElement,
     modal = document.getElementById('modal') as HTMLElement,
     modalContent = document.getElementById('modal__content') as HTMLElement,
@@ -357,7 +373,7 @@ lib.go(() => {
     }
 });
 
-lib.go((triggers, contents) => {
+go((triggers: HTMLAnchorElement[], contents) => {
    for (let item of triggers)
       item.addEventListener('click', e => {
          e.preventDefault()
@@ -369,13 +385,12 @@ lib.go((triggers, contents) => {
          }
       })
 
-   let cur = [...triggers].find(({hash}) => location.search.includes(hash))
-   cur?.click()
+   triggers.find(({hash}) => location.href.includes(hash))?.click()
 },
-   document.getElementsByClassName('tabs-triggers__item') as HTMLCollectionOf<HTMLAnchorElement>,
-   document.getElementsByClassName('tabs-content__item'));
+   '.tabs-triggers__item' as const,
+   '.tabs-content__item' as const)
 
-const __slider = lib.go(slider => {
+go(([slider]) => {
    let figures = slider.getElementsByTagName("figure"),
    index = -1,
    interval = null
@@ -393,17 +408,12 @@ const __slider = lib.go(slider => {
       for (let i = 0; i < figures.length; i++) 
          figures[i].classList[i == index ? 'remove' : 'add']('hidd');
    }
-   const start = () => interval = setInterval(advance, 5000)
-   start()
+   interval = setInterval(advance, 5000)
    advance()
-   return {
-     start, 
-     stop() { clearInterval(interval) }
-   }
 },
-document.getElementsByClassName("nslider")[0]);
+".nslider" as const)
 
-lib.go(() => {
+go(() => {
    for (const span of document.getElementsByClassName('numf')) {
        const num = parseInt((span as HTMLElement).innerText, 10);
        if (!isNaN(num) && num > -1)
@@ -421,12 +431,9 @@ lib.go(() => {
       curYear.innerHTML = (new Date()).getFullYear().toString();
    if (piskunovDisease)
        piskunovDisease.innerHTML = calcAges(new Date("06/06/2005").valueOf()).toString();
-});
+})
 
-lib.go((form, butt) => {
-   if (!form || !butt)
-       return;
-
+go((butt: HTMLButtonElement, [form]: HTMLFormElement[]) => {
    const setStatus = text => document.getElementById("my-form-status")!.innerHTML =text;
    lib.listenInputs(form);
 
@@ -437,7 +444,7 @@ lib.go((form, butt) => {
            return
 
         butt.disabled = true
-        let wrongMessage = lib.translate(
+        let wrongMessage = Lang.trans(
             "Something went wrong", "щось пішло не так",
             "etwas ist schief gelaufen", "qualcosa è andato storto", "coś poszło nie tak")
         try {
@@ -447,7 +454,7 @@ lib.go((form, butt) => {
               headers: { 'Accept': 'application/json' }
             })
             if (resp.ok)
-                setStatus("✔️ " + lib.translate(
+                setStatus("✔️ " + Lang.trans(
                     "Your message has been sent", "Ваше повідомлення відправлено!",
                     "Ihre Nachricht wurde gesendet!", "Il tuo messaggio è stato inviato!", "Twoja wiadomość została wysłana!"))
             else
@@ -474,8 +481,7 @@ lib.go((form, butt) => {
    });
 
 },
-   document.getElementsByClassName("user-form")[0] as HTMLFormElement,
-   document.getElementById("email-submit") as HTMLButtonElement);
+"#email-submit" as const, ".user-form" as const)
 
 function handleThankVideo(wraps: HTMLElement) {
    for (let wrap of wraps.getElementsByTagName("figure")) {
@@ -511,7 +517,7 @@ function handleThankVideo(wraps: HTMLElement) {
    }
 }
 
-lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
+go(([wraps]: HTMLDivElement[], [link]: HTMLAnchorElement[]) => {
    handleThankVideo(wraps)
    if (!link)
       return;
@@ -525,7 +531,7 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
       if (endOfPage && page != null && !fetching) {
          fetching = true
          link.style.display = "none"
-         let html = await fetch(`/${lib.lang}/thanksChunk${page}.html`)
+         let html = await fetch(`/${Lang.cur}/thanksChunk${page}.html`)
          if (html.ok) {
             let span = document.createElement("span")
             span.innerHTML = await html.text()
@@ -539,10 +545,11 @@ lib.go((wraps: HTMLDivElement, link: HTMLAnchorElement) => {
       }
    })
 },
-document.getElementsByClassName("thanks")[0],
-document.getElementsByClassName("thanks-next-link")[0]);
+".thanks" as const,
+".thanks-next-link" as const)
 
-lib.go(radios => {
+go((radios: Array<HTMLButtonElement | HTMLFormElement>) => {
+
    let lookup: Record<string, Record<string, [HTMLButtonElement | null, HTMLFormElement|null]>> = {}
    for (let item of radios) {
       let [v1, v2] = item.dataset.radioval!.split(":"),
@@ -572,10 +579,9 @@ lib.go(radios => {
       }
    }
 },
-document.getElementsByClassName("radioval") as HTMLCollectionOf<HTMLButtonElement | HTMLFormElement>);
+".radioval" as const)
 
-lib.go(sendButt => {
-   let docform = document.getElementById("docform") as HTMLFormElement
+go((sendButt: HTMLButtonElement, docform: HTMLFormElement, [docInput]: HTMLInputElement[]) => {
    lib.listenInputs(docform)
 
    sendButt.addEventListener("click", async e => {
@@ -588,14 +594,12 @@ lib.go(sendButt => {
       [isValid, fields] = lib.validateWithAlert(
            [form1, "surname name parto birth ages phone passserial passnumber passtaker passdate phone phonename"],
            [form2, "postaddress postsurname postname postparto"],
-           [docform, "doc"]);
+           [docform, "doc"])
       if (!isValid) 
          return;
 
-      let body = new FormData(),
-      { files: [file] } = document.getElementsByClassName("inp-doc")[0] as HTMLInputElement
-       
-      body.append("file", file)
+      let body = new FormData()
+      body.append("file", docInput.files[0])
       for (let nam in fields)
            body.append(nam, fields[nam] ?? "")
        
@@ -611,6 +615,8 @@ lib.go(sendButt => {
        }
        else
            alert("щось пішло не так")
-   });
+   })
 },
-document.getElementById("seld-recipiet") as HTMLButtonElement)
+"#seld-recipiet" as const,
+"#docform" as const,
+".inp-doc" as const)

@@ -69,26 +69,26 @@
     }
   },
   {
-    "Key": "viktor",
+    "Key": "vika",
     "Ua": {
-      "Title": "Кавунник Віктор",
-      "Brief": "Координатор гуманітарних вантажів"
+      "Title": "Вікторія Доценко",
+      "Brief": "Волонтерка, координатор соціальних проектів, засновниця фонду \"Віторія\""
     },
     "En": {
-      "Title": "Kavunnyk Victor",
-      "Brief": "Humanitarian cargo coordinator"
+      "Title": "Victoria Dotsenko",
+      "Brief": "Volunteer, social project coordinator, founder of the Vitoria Foundation"
     },
     "De": {
-      "Title": "Kawunnyk Victor",
-      "Brief": "Koordinator für humanitäre Fracht"
+      "Title": "Victoria Dotsenko",
+      "Brief": "Freiwilliger, Koordinator sozialer Projekte, Gründer der Vitoria Foundation"
     },
     "It": {
-      "Title": "Kavunnyk Victor",
-      "Brief": "Coordinatore del carico umanitario"
+      "Title": "Vittoria Dotsenko",
+      "Brief": "Volontario, coordinatore di progetti sociali, fondatore della Fondazione Vitoria"
     },
     "Pl": {
-      "Title": "Kawunnyk Wiktor",
-      "Brief": "Koordynator ładunków humanitarnych"
+      "Title": "Wiktoria Dotenko",
+      "Brief": "Wolontariuszka, koordynatorka projektów społecznych, założycielka Fundacji Vitoria"
     }
   },
   {
@@ -112,29 +112,6 @@
     "Pl": {
       "Title": "Peter Yanachkov",
       "Brief": "Dyrektor zarządzający Pierce Capital Partners"
-    }
-  },
-  {
-    "Key": "vasyl",
-    "Ua": {
-      "Title": "Андрейчук Василь",
-      "Brief": "Голова Департаменту із співробітництва та взаємодії з Обласними Державними Адміністраціями"
-    },
-    "En": {
-      "Title": "Andreychuk Vasyl",
-      "Brief": "Head of the Department for Cooperation and Interaction with Regional State Administrations"
-    },
-    "De": {
-      "Title": "Andreychuk Vasyl",
-      "Brief": "Leiter der Abteilung für Zusammenarbeit und Interaktion mit regionalen Staatsverwaltungen"
-    },
-    "It": {
-      "Title": "Andreychuk Vasyl",
-      "Brief": "Capo del Dipartimento per la Cooperazione e l'Interazione con le Amministrazioni Regionali dello Stato"
-    },
-    "Pl": {
-      "Title": "Andriejuk Wasyl",
-      "Brief": "Kierownik Departamentu Współpracy i Interakcji z Regionalnymi Administracjami Państwowymi"
     }
   },
   {
