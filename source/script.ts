@@ -1,5 +1,3 @@
-
-
 const cookie = (key: string) => ({
    get val(): string| null {
       let parts = ("; " + document.cookie).split(`; ${key}=`)

@@ -92,6 +92,29 @@
     }
   },
   {
+   "Key": "roman",
+   "Ua": {
+     "Title": "Роман Міщенко",
+     "Brief": "Начальник департаменту по співпраці та взаємодії з благодійними організаціями"
+   },
+   "En": {
+     "Title": "Roman Mishchenko",
+     "Brief": "Head of the department for cooperation and interaction with charitable organizations"
+   },
+   "De": {
+     "Title": "Roman Mischtschenko",
+     "Brief": "Leiter der Abteilung für Zusammenarbeit und Interaktion mit gemeinnützigen Organisationen"
+   },
+   "It": {
+     "Title": "Romano Mishchenko",
+     "Brief": "Responsabile del dipartimento per la cooperazione e l'interazione con organizzazioni di beneficenza"
+   },
+   "Pl": {
+     "Title": "Roman Miszczenko",
+     "Brief": "Kierownik działu współpracy i interakcji z organizacjami charytatywnymi"
+   }
+ },
+  {
     "Key": "yanochkov",
     "Ua": {
       "Title": "Peter Yanachkov",
