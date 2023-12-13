@@ -138,6 +138,29 @@
     }
   },
   {
+   "Key": "krasko",
+   "Ua": {
+     "Title": "Ольга Краско",
+     "Brief": "Репутаційний волонтер. Член робочої групи по захисту прав ветеранів в Національній Раді з відновлення України від наслідків війни."
+   },
+   "En": {
+     "Title": "Olga Krasko",
+     "Brief": "A reputable volunteer. Member of the working group on the protection of veterans' rights in the National Council for the Recovery of Ukraine from the Consequences of the War."
+   },
+   "De": {
+     "Title": "Olga Krasko",
+     "Brief": "Ein seriöser Freiwilliger. Mitglied der Arbeitsgruppe zum Schutz der Veteranenrechte im Nationalen Rat für die Wiederherstellung der Ukraine nach den Folgen des Krieges."
+   },
+   "It": {
+     "Title": "Olga Krasko",
+     "Brief": "A reputable volunteer. Member of the working group on the protection of veterans' rights in the National Council for the Recovery of Ukraine from the Consequences of the War."
+   },
+   "Pl": {
+     "Title": "Olga Krasko",
+     "Brief": "Renomowany wolontariusz. Członek grupy roboczej ds. ochrony praw weteranów w Krajowej Radzie Odzyskiwania Ukrainy od Następstw Wojny."
+   }
+ },
+  {
     "Key": "LUNTER",
     "Ua": {
       "Title": "Ondrej Lunter",
@@ -206,6 +229,29 @@
       "Brief": "Zastępca rady miejskiej miasta Gnuszta, obwód bansko-bystrycki i zastępca burmistrza miasta"
     }
   },
+  {
+   "Key": "viktoriia",
+   "Ua": {
+     "Title": "Fundacja Viktoriia",
+     "Brief": "Благодійна організація у м. Бидгощ (Польща). Займається допомогою нужденним українським біженцям та гуманітарним забезпеченням іноземних добровольчих батальйонів, які захищають Україну."
+   },
+   "En": {
+     "Title": "Fundacja Viktoriia",
+     "Brief": "Charitable organization in Bydgoszcz (Poland). Engaged in helping needy Ukrainian refugees and providing humanitarian support to foreign volunteer battalions defending Ukraine."
+   },
+   "De": {
+     "Title": "Fundacja Viktoriia",
+     "Brief": "Wohltätigkeitsorganisation in Bydgoszcz (Polen). Engagiert sich für die Unterstützung bedürftiger ukrainischer Flüchtlinge und leistet humanitäre Unterstützung für ausländische Freiwilligenbataillone, die die Ukraine verteidigen."
+   },
+   "It": {
+     "Title": "Fundacja Viktoriia",
+     "Brief": "Organizzazione di beneficenza a Bydgoszcz (Polonia). Impegnato nell'aiutare i rifugiati ucraini bisognosi e nel fornire sostegno umanitario ai battaglioni di volontari stranieri che difendono l'Ucraina."
+   },
+   "Pl": {
+     "Title": "Fundacja Viktoriia",
+     "Brief": "Organizacja charytatywna w Bydgoszczy. Zaangażowany w pomoc potrzebującym ukraińskim uchodźcom oraz udzielanie pomocy humanitarnej zagranicznym batalionom ochotniczym broniącym Ukrainy."
+   }
+ },
   {
     "Key": "dimplomati",
     "Ua": {
