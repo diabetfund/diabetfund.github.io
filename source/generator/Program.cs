@@ -74,7 +74,7 @@ foreach(var (langId, (culture, lang, _)) in Lang.All)
     Out("index", "", common);
     Out("projects", "/fundraising", ProjectCards(projects, false));
 
-    foreach (var (thanks, i) in grates.Chunk(40).Select(ValueTuple.Create<Thank[], int>))
+    foreach (var (i, thanks) in grates.Chunk(40).Index())
     {
         var content = print[thanks];
         File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);

@@ -1,25 +1,25 @@
 ﻿using System.Collections.Frozen;
 using System.Globalization;
 using System.Text.Json.Serialization;
-using static Lang.Id;
+using static LangId;
+
+enum LangId
+{
+    English = 1033,
+    Українська = 1058,
+    Deutsche = 1031,
+    Polski = 1045,
+    Italiana = 1040
+}
 
 record Lang(CultureInfo Culture, string Code, string Suffix)
 {
-    public enum Id
-    {
-        English = 1033,
-        Українська = 1058,
-        Deutsche = 1031,
-        Polski = 1045,
-        Italiana = 1040
-    }
-
-    public readonly static FrozenDictionary<Id, Lang> All =
+    public readonly static FrozenDictionary<LangId, Lang> All =
         Array.ConvertAll([English, Українська, Deutsche, Polski], lang =>
         {
             var info = CultureInfo.GetCultureInfo((int)lang);
             var code = lang == Українська ? "ua" : info.TwoLetterISOLanguageName;
-            return new KeyValuePair<Id, Lang>(lang, new(info, code, $" {char.ToUpper(code[0])}{code[1]}"));
+            return new KeyValuePair<LangId, Lang>(lang, new(info, code, $" {char.ToUpper(code[0])}{code[1]}"));
         })
         .ToFrozenDictionary();
 }
@@ -42,11 +42,11 @@ record Entity<TTopic> : ILocalized
     public TTopic? Pl { get; set; }
 
     public object? GetLocalized(CultureInfo? culture) =>
-        (Lang.Id?)culture?.LCID switch { Українська => Ua, Italiana => It, Deutsche => De, Polski => Pl, _ => En };
+        (LangId?)culture?.LCID switch { Українська => Ua, Italiana => It, Deutsche => De, Polski => Pl, _ => En };
 
     public void SetLocalized(CultureInfo culture, TTopic topic)
     {
-        switch ((Lang.Id)culture.LCID)
+        switch ((LangId)culture.LCID)
         {
             case Українська: Ua = topic; break;
             case Italiana: It = topic; break;
@@ -181,7 +181,7 @@ record Stone(string MiniLeft, string MiniRight) : Entity<StoneTopic>;
 //////////
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
-public enum ProductType
+enum ProductType
 {
     Glucometer,
     Strip,

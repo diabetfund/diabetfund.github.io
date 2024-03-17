@@ -47,7 +47,7 @@ public sealed class Printer(Func<string, string> readTemplate, CultureInfo? cult
             .Compile());
 
         foreach (var (key, val) in getScalars(model))
-            result = result.Replace(key, val is null ? "null" : val.ToString());
+            result = result.Replace(key, val?.ToString() ?? "null");
 
         return result;
     }
