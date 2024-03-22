@@ -92,6 +92,29 @@
     }
   },
   {
+    "Key": "dama",
+    "Ua": {
+      "Title": "Нерсесян Євгенія Юріївна",
+      "Brief": "Засновник та керівникч благодійного фонду \"УКРАЇНА ПОНАД УСЕ\""
+    },
+    "En": {
+      "Title": "Yevgenia Yurievna Nersesyan",
+      "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
+    },
+    "De": {
+      "Title": "Yevgenia Yurievna Nersesyan",
+      "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
+    },
+    "It": {
+      "Title": "Yevgenia Yurievna Nersesyan",
+      "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
+    },
+    "Pl": {
+      "Title": "Yevgenia Yurievna Nersesyan",
+      "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
+    }
+  },
+  {
    "Key": "roman",
    "Ua": {
      "Title": "Роман Міщенко",
@@ -252,6 +275,29 @@
      "Brief": "Organizacja charytatywna w Bydgoszczy. Zaangażowany w pomoc potrzebującym ukraińskim uchodźcom oraz udzielanie pomocy humanitarnej zagranicznym batalionom ochotniczym broniącym Ukrainy."
    }
  },
+ {
+  "Key": "ponaduse",
+  "Ua": {
+    "Title": "УКРАЇНА ПОНАД УСЕ",
+    "Brief": "Це об’єднання людей, які з перших днів повномасштабного російського вторгнення в Україну допомагають іншим."
+  },
+  "En": {
+    "Title": "UKRAINE ABOVE EVERYTHING",
+    "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
+  },
+  "De": {
+    "Title": "UKRAINE ABOVE EVERYTHING",
+    "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
+  },
+  "It": {
+    "Title": "UKRAINE ABOVE EVERYTHING",
+    "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
+  },
+  "Pl": {
+    "Title": "UKRAINE ABOVE EVERYTHING",
+    "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
+  }
+},
   {
     "Key": "dimplomati",
     "Ua": {
