@@ -2,64 +2,64 @@
    {
       "Pic": "c1",
       "Key": "help-rehab",
-      "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": "Rehabilitationszentrum in der Slowakei ➜",
-      "It": "Centro di riabilitazione in Slovacchia ➜",
-      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
+      "English": "Rehabilitation center in Slovakia ➜",
+      "Ukrainian": "Реабілітаційний центр у Словаччині ➜",
+      "German": "Rehabilitationszentrum in der Slowakei ➜",
+      "Italian": "Centro di riabilitazione in Slovacchia ➜",
+      "Polish": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "c2",
       "Key": "help-rehab",
-      "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": "Rehabilitationszentrum in der Slowakei ➜",
-      "It": "Centro di riabilitazione in Slovacchia ➜",
-      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
+      "English": "Rehabilitation center in Slovakia ➜",
+      "Ukrainian": "Реабілітаційний центр у Словаччині ➜",
+      "German": "Rehabilitationszentrum in der Slowakei ➜",
+      "Italian": "Centro di riabilitazione in Slovacchia ➜",
+      "Polish": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "c3",
       "Key": "help-rehab",
-      "En": "Rehabilitation center in Slovakia ➜",
-      "Ua": "Реабілітаційний центр у Словаччині ➜",
-      "De": "Rehabilitationszentrum in der Slowakei ➜",
-      "It": "Centro di riabilitazione in Slovacchia ➜",
-      "Pl": "Ośrodek rehabilitacyjny na Słowacji ➜"
+      "English": "Rehabilitation center in Slovakia ➜",
+      "Ukrainian": "Реабілітаційний центр у Словаччині ➜",
+      "German": "Rehabilitationszentrum in der Slowakei ➜",
+      "Italian": "Centro di riabilitazione in Slovacchia ➜",
+      "Polish": "Ośrodek rehabilitacyjny na Słowacji ➜"
    },
    {
       "Pic": "sensors",
       "Key": "dopomogti-sensorami-vimiryuvannya-glyukozi",
-      "En": "Helping with glucose sensors",
-      "Ua": "Допомога сенсорами вимірювання глюкози",
-      "De": "Hilfe zu Glukosemesssensoren",
-      "It": "Aiuto con i sensori di misurazione del glucosio",
-      "Pl": "Pomoc dotycząca czujników pomiaru glukozy"
+      "English": "Helping with glucose sensors",
+      "Ukrainian": "Допомога сенсорами вимірювання глюкози",
+      "German": "Hilfe zu Glukosemesssensoren",
+      "Italian": "Aiuto con i sensori di misurazione del glucosio",
+      "Polish": "Pomoc dotycząca czujników pomiaru glukozy"
    },
    {
       "Pic": "glokometer",
       "Key": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
-      "En": "Helping with glucometers",
-      "Ua": "Допомога глюкометрами й тест-смужками до них",
-      "De": "Helfen Sie ihnen mit Blutzuckermessgeräten und Teststreifen",
-      "It": "Aiutali con glucometri e strisce reattive per loro",
-      "Pl": "Pomoc z glukometrami i paskami testowymi do nich"
+      "English": "Helping with glucometers",
+      "Ukrainian": "Допомога глюкометрами й тест-смужками до них",
+      "German": "Helfen Sie ihnen mit Blutzuckermessgeräten und Teststreifen",
+      "Italian": "Aiutali con glucometri e strisce reattive per loro",
+      "Polish": "Pomoc z glukometrami i paskami testowymi do nich"
    },
    {
       "Pic": "sweetener",
       "Key": "dopomogti-cukrozaminnykom",
-      "En": "Helping with sweetener ➜",
-      "Ua": "Допомога цукрозамінником та сумішшю для випікання",
-      "De": "Hilfe mit Zuckerersatz und Backmischung",
-      "It": "Aiutatevi con il sostituto dello zucchero e la miscela per dolci",
-      "Pl": "Pomoc z substytutem cukru i mieszanką do pieczenia"
+      "English": "Helping with sweetener ➜",
+      "Ukrainian": "Допомога цукрозамінником та сумішшю для випікання",
+      "German": "Hilfe mit Zuckerersatz und Backmischung",
+      "Italian": "Aiutatevi con il sostituto dello zucchero e la miscela per dolci",
+      "Polish": "Pomoc z substytutem cukru i mieszanką do pieczenia"
    },
    {
       "Pic": "zsu",
       "Key": "assistance-to-zsu",
-      "En": "Assistance to military ➜",
-      "Ua": "Допомога ЗСУ ➜",
-      "De": "Hilfeleistung der Bundeswehr ➜",
-      "It": "Assistenza delle Forze Armate ➜",
-      "Pl": "Pomoc Sił Zbrojnych ➜"
+      "English": "Assistance to military ➜",
+      "Ukrainian": "Допомога ЗСУ ➜",
+      "German": "Hilfeleistung der Bundeswehr ➜",
+      "Italian": "Assistenza delle Forze Armate ➜",
+      "Polish": "Pomoc Sił Zbrojnych ➜"
    }
 ]

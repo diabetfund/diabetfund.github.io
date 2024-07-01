@@ -1,63 +1,37 @@
-﻿using System.Collections.Frozen;
+﻿using Simplicity.StaticSite;
+using Simplicity;
 using System.Globalization;
 using System.Text.Json.Serialization;
-using static LangId;
-
-enum LangId
-{
-    English = 1033,
-    Українська = 1058,
-    Deutsche = 1031,
-    Polski = 1045,
-    Italiana = 1040
-}
-
-record Lang(CultureInfo Culture, string Code, string Suffix)
-{
-    public readonly static FrozenDictionary<LangId, Lang> All =
-        Array.ConvertAll([English, Українська, Deutsche, Polski], lang =>
-        {
-            var info = CultureInfo.GetCultureInfo((int)lang);
-            var code = lang == Українська ? "ua" : info.TwoLetterISOLanguageName;
-            return new KeyValuePair<LangId, Lang>(lang, new(info, code, $" {char.ToUpper(code[0])}{code[1]}"));
-        })
-        .ToFrozenDictionary();
-}
 
 record Topic
 {
-    public string? Title { get; set; }
-    public string? Brief { get; set; }
+    public string? Title, Brief;
 }
 
-record Entity<TTopic> : ILocalized
+record Entity<T> : ILocalized
 {
-    public string? Key { get; set; }
-    public Guid? NotionId { get; set; }
-
-    public TTopic? En { get; set; }
-    public TTopic? Ua { get; set; }
-    public TTopic? De { get; set; }
-    public TTopic? It { get; set; }
-    public TTopic? Pl { get; set; }
-
+    public string? Key;
+    public T? English, Ukrainian, German, Polish, Italian;
+    
     public object? GetLocalized(CultureInfo? culture) =>
-        (LangId?)culture?.LCID switch { Українська => Ua, Italiana => It, Deutsche => De, Polski => Pl, _ => En };
+        GetTopicRef(culture?.LCID ?? 9);
 
-    public void SetLocalized(CultureInfo culture, TTopic topic)
+    public void SetLocalized(CultureInfo culture, T topic) =>
+        GetTopicRef(culture.LCID) = topic;
+
+    ref T? GetTopicRef(int id)
     {
-        switch ((LangId)culture.LCID)
+        switch (id)
         {
-            case Українська: Ua = topic; break;
-            case Italiana: It = topic; break;
-            case Deutsche: De = topic; break;
-            case Polski: Pl = topic; break;
-            default: En = topic; break;
+            case Language.Ukrainian: return ref Ukrainian;
+            case Language.German: return ref German;
+            case Language.Polish: return ref Polish;
+            case Language.Italian: return ref Italian;
+            default: return ref English;
         }
     }
 }
 
-[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ContentType
 {
     Funding,
@@ -68,7 +42,6 @@ enum ContentType
 
 record Partner : Entity<Topic>;
 
-[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ProjectType
 {
     Diabet,
@@ -76,22 +49,19 @@ enum ProjectType
     Military
 }
 
-record ProjectTopic(
-    string Content,
-    string? Result,
-    string? PromoVideo) : Topic;
-
-record Project(
-    ProjectType Type,
-    int Need,
-    int Funds,
-    string Pic,
-    string CardPic,
-    string? Document,
-    string? PromoPoster) : Entity<ProjectTopic>
+record ProjectTopic : Topic 
 {
+    public string? Content, Result, PromoVideo;
+}
+
+record Project : Entity<ProjectTopic>
+{
+    public ProjectType Type;
+    public int Need, Funds;
+    public string? Pic, CardPic, Document, PromoPoster;
+
     [JsonIgnore]
-    public bool DesktopOnly { get; set; }
+    public bool DesktopOnly;
 
     [JsonIgnore]
     public bool IsMilitary => Type == ProjectType.Military;
@@ -103,7 +73,7 @@ record Project(
     public bool IsInfinite => Need == 0;
 
     [JsonIgnore]
-    public bool HasResult => !string.IsNullOrEmpty(En?.Result);
+    public bool HasResult => !string.IsNullOrEmpty(English?.Result);
 
     [JsonIgnore]
     public string Url => UrlSegment(Key!);
@@ -115,13 +85,12 @@ record Project(
     public int Fullness => FundPerc switch { > 80 => 3, > 30 => 2, _ => 1 };
 
     [JsonIgnore]
-    public string MobilePic => Pic.Replace(".webp", "-mob.webp");
+    public string? MobilePic => Pic?.Replace(".webp", "-mob.webp");
 
     public static string UrlSegment(string id) =>
         id is "help-rehab" ? "/center" : $"/fundraising/{id}";
 }
 
-[JsonConverter(typeof(JsonStringEnumConverter))]
 enum ThankTag
 {
     Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, Modulax, P999, Reservoir, Pods, Candies,
@@ -135,16 +104,15 @@ record ThankTopic : Topic
     public string Sign => string.IsNullOrEmpty(Title) ? "" : "&nbsp;" + Title + "&nbsp;";
 }
 
-record Thank(
-    List<ThankTag>? Tags,
-    int? Altitude,
-    string? Video,
-    string? Avatar,
-    int? MainIndex,
-    DateOnly Date) : Entity<ThankTopic>
+record Thank : Entity<ThankTopic>
 {
+    public List<ThankTag>? Tags;
+    public int? Altitude, MainIndex;
+    public string? Video, Avatar;
+    public DateOnly Date;
+
     [JsonIgnore]
-    public bool DesktopOnly { get; set; }
+    public bool DesktopOnly;
 
     [JsonIgnore]
     public string ZeroOrAvatar =>
@@ -156,51 +124,41 @@ record Thank(
     public string ModernAvatar => Avatar ?? "zero.webp";
 }
 
-record Slide(string Pic) : Entity<string>
+record Slide : Entity<string>
 {
+    public string? Pic;
     public string Url => Project.UrlSegment(Key!);
 }
 
-record Wallet(string Address, bool IsCrypto) : Entity<string>;
-
-record NewsTopic(string Content) : Topic;
-
-record News(DateOnly Date, string Pic) : Entity<NewsTopic>
+record Wallet : Entity<string>
 {
+    public string? Address;
+    public bool IsCrypto;
+}
+
+record NewsTopic : Topic
+{
+    public string? Content;
+}
+
+record News : Entity<NewsTopic>
+{
+    public DateOnly Date;
+    public string? Pic;
+
     [JsonIgnore]
     public string IsoDate => Date.ToString("o");
 
     [JsonIgnore]
-    public string? LocaleDate { get; set; }
+    public string? LocaleDate;
 }
 
-record StoneTopic(string CertificateIntro) : Topic;
-
-record Stone(string MiniLeft, string MiniRight) : Entity<StoneTopic>;
-
-//////////
-
-[JsonConverter(typeof(JsonStringEnumConverter))]
-enum ProductType
+record StoneTopic : Topic
 {
-    Glucometer,
-    Strip,
-    Needle,
-    SyringePen,
-    Syrigne,//p
-    Lancet,
-    Insulin,
-    InsulinPump,
-    InfusionQuickSet,
-    InfusionSureTSet,
-    InfusionSerter,
-    DeviceForInstallingInfusion,
-    Reservoir,
-    Sensor,
-    SensorTape,
-    Sweetener,
-    GlucoseFreeFood,
-    Vitamin,
-    MedicalGloves,
-    Antiseptics
+    public string? CertificateIntro;
+}
+
+record Stone : Entity<StoneTopic>
+{
+    public string? MiniLeft, MiniRight;
 }

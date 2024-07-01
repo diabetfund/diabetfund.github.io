@@ -1,414 +1,415 @@
 [
   {
     "Key": "piskunov",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Едуард Піскунов",
       "Brief": "Засновник фонду, бізнесмен та філантроп, <span id='piskunov-disease'>17</span> років живе з діагнозом «інсулінозалежний»"
     },
-    "En": {
+    "English": {
       "Title": "Eduard Piskunov",
       "Brief": "The founder of the fund, a businessman and philanthropist, has been living with the diagnosis of \"insulin dependence\" for <span id='piskunov-disease'></span> years"
     },
-    "De": {
+    "German": {
       "Title": "Eduard Piskunow",
       "Brief": "Der Gründer des Fonds, Geschäftsmann und Philanthrop <span id='piskunov-disease'>17</span> lebt mit der Diagnose „insulinabhängig“"
     },
-    "It": {
+    "Italian": {
       "Title": "Eduard Piskunov",
       "Brief": "Il fondatore del fondo, uomo d'affari e filantropo, <span id='piskunov-disease'>17</span> convive con la diagnosi di \"insulino-dipendente\""
     },
-    "Pl": {
+    "Polish": {
       "Title": "Eduard Piskunow",
       "Brief": "Założyciel funduszu, biznesmen i filantrop, <span id='piskunov-disease'>17</span> żyje z diagnozą „insulinozależność”"
     }
   },
   {
     "Key": "logvin",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Анна Логвін",
       "Brief": "Співзасновник, керівник проектів допомоги дітям та малозабезпеченим сім'ям"
     },
-    "En": {
+    "English": {
       "Title": "Anna Logvin",
       "Brief": "Co-founder, head of the project to help children and low-income families"
     },
-    "De": {
+    "German": {
       "Title": "Anna Logvin",
       "Brief": "Mitbegründer und Leiter von Projekten zur Unterstützung von Kindern und Familien mit niedrigem Einkommen"
     },
-    "It": {
+    "Italian": {
       "Title": "Anna Logvin",
       "Brief": "Co-fondatore, responsabile di progetti a favore dei bambini e delle famiglie a basso reddito"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Anna Logwin",
       "Brief": "Współzałożyciel, kierownik projektów pomocy dzieciom i rodzinom o niskich dochodach"
     }
   },
   {
+    "Key": "golova",
+    "Ukrainian": {
+      "Title": "Черепехiн Станiслав",
+      "Brief": "Голова правління фонду."
+    },
+    "English": {
+      "Title": "Cherepakhin Stanislav",
+      "Brief": "Head of the Foundation Board."
+    },
+    "German": {
+      "Title": "Tscherepachin Stanislaw",
+      "Brief": "Vorsitzender des Stiftungsrates."
+    },
+    "Italian": {
+      "Title": "Tscherepachin Stanislaw",
+      "Brief": "A reputable volunteer. Member of the working group on the protection of veterans' rights in the National Council for the Recovery of Ukraine from the Consequences of the War."
+    },
+    "Polish": {
+      "Title": "Czerepachin Stanisław",
+      "Brief": "Przewodniczący Zarządu Fundacji."
+    }
+  },
+  {
     "Key": "boiko",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Тамара Бойко",
       "Brief": "Почесний член правління, представник Фонду на території Словаччини"
     },
-    "En": {
+    "English": {
       "Title": "Tamara Boyko",
       "Brief": "Honorary member of the board, representative of a charitable foundation in Slovakia"
     },
-    "De": {
+    "German": {
       "Title": "Tamara Boyko",
       "Brief": "Ehrenmitglied des Vorstands, Vertreter des Fonds auf dem Gebiet der Slowakei"
     },
-    "It": {
+    "Italian": {
       "Title": "Tamara Boyko",
       "Brief": "Membro onorario del consiglio, rappresentante del Fondo sul territorio della Slovacchia"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Tamara Bojko",
       "Brief": "Honorowy członek zarządu, przedstawiciel Funduszu na terenie Słowacji"
     }
   },
   {
     "Key": "vikad",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Вікторія Доценко",
       "Brief": "Волонтерка, координатор соціальних проектів, засновниця благодійного фонду \"Віторія\""
     },
-    "En": {
+    "English": {
       "Title": "Victoria Dotsenko",
       "Brief": "Volunteer, social project coordinator, founder of the \"Victoria\" charity foundation"
     },
-    "De": {
+    "German": {
       "Title": "Victoria Dotsenko",
       "Brief": "Freiwilliger, Koordinator sozialer Projekte, gründer der \"Victoria\" Charity Foundation"
     },
-    "It": {
+    "Italian": {
       "Title": "Vittoria Dotsenko",
       "Brief": "Volontario, coordinatore di progetti sociali, fondatore della fondazione \"Vitoria\""
     },
-    "Pl": {
+    "Polish": {
       "Title": "Wiktoria Dotenko",
       "Brief": "Wolontariuszka, koordynatorka projektów społecznych, założyciel fundacji charytatywnej \"Vitoria\""
     }
   },
   {
     "Key": "dama",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Нерсесян Євгенія Юріївна",
       "Brief": "Засновник та керівникч благодійного фонду \"УКРАЇНА ПОНАД УСЕ\""
     },
-    "En": {
+    "English": {
       "Title": "Yevgenia Yurievna Nersesyan",
       "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
     },
-    "De": {
+    "German": {
       "Title": "Yevgenia Yurievna Nersesyan",
       "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
     },
-    "It": {
+    "Italian": {
       "Title": "Yevgenia Yurievna Nersesyan",
       "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
     },
-    "Pl": {
+    "Polish": {
       "Title": "Yevgenia Yurievna Nersesyan",
       "Brief": "Founder and head of the charity fund \"UKRAINE ABOVE ALL\""
     }
   },
   {
    "Key": "roman",
-   "Ua": {
+   "Ukrainian": {
      "Title": "Роман Міщенко",
      "Brief": "Начальник департаменту по співпраці та взаємодії з благодійними організаціями"
    },
-   "En": {
+   "English": {
      "Title": "Roman Mishchenko",
      "Brief": "Head of the department for cooperation and interaction with charitable organizations"
    },
-   "De": {
+   "German": {
      "Title": "Roman Mischtschenko",
      "Brief": "Leiter der Abteilung für Zusammenarbeit und Interaktion mit gemeinnützigen Organisationen"
    },
-   "It": {
+   "Italian": {
      "Title": "Romano Mishchenko",
      "Brief": "Responsabile del dipartimento per la cooperazione e l'interazione con organizzazioni di beneficenza"
    },
-   "Pl": {
+   "Polish": {
      "Title": "Roman Miszczenko",
      "Brief": "Kierownik działu współpracy i interakcji z organizacjami charytatywnymi"
    }
  },
   {
     "Key": "yanochkov",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Peter Yanachkov",
       "Brief": "Керуючий директор Pierce Capital Partners"
     },
-    "En": {
+    "English": {
       "Title": "Peter Yanachkov",
       "Brief": "Managing director, Pierce Capital Partners"
     },
-    "De": {
+    "German": {
       "Title": "Peter Yanachkov",
       "Brief": "Geschäftsführer Pierce Capital Partners"
     },
-    "It": {
+    "Italian": {
       "Title": "Peter Yanachkov",
       "Brief": "Consigliere delegato Pierce Capital Partners"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Peter Yanachkov",
       "Brief": "Dyrektor zarządzający Pierce Capital Partners"
     }
   },
-  {
-   "Key": "krasko",
-   "Ua": {
-     "Title": "Ольга Краско",
-     "Brief": "Репутаційний волонтер. Член робочої групи по захисту прав ветеранів в Національній Раді з відновлення України від наслідків війни."
-   },
-   "En": {
-     "Title": "Olga Krasko",
-     "Brief": "A reputable volunteer. Member of the working group on the protection of veterans' rights in the National Council for the Recovery of Ukraine from the Consequences of the War."
-   },
-   "De": {
-     "Title": "Olga Krasko",
-     "Brief": "Ein seriöser Freiwilliger. Mitglied der Arbeitsgruppe zum Schutz der Veteranenrechte im Nationalen Rat für die Wiederherstellung der Ukraine nach den Folgen des Krieges."
-   },
-   "It": {
-     "Title": "Olga Krasko",
-     "Brief": "A reputable volunteer. Member of the working group on the protection of veterans' rights in the National Council for the Recovery of Ukraine from the Consequences of the War."
-   },
-   "Pl": {
-     "Title": "Olga Krasko",
-     "Brief": "Renomowany wolontariusz. Członek grupy roboczej ds. ochrony praw weteranów w Krajowej Radzie Odzyskiwania Ukrainy od Następstw Wojny."
-   }
- },
+  
   {
     "Key": "LUNTER",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Ondrej Lunter",
       "Brief": "Голова Банськобистрицького краю в Словаччині"
     },
-    "En": {
+    "English": {
       "Title": "Ondrej Lunter",
       "Brief": "Deputy head of the Banská Bystrica region in Slovakia"
     },
-    "De": {
+    "German": {
       "Title": "Ondrej Lunter",
       "Brief": "Leiter der Region Banská Bystrica in der Slowakei"
     },
-    "It": {
+    "Italian": {
       "Title": "Ondrej Lunter",
       "Brief": "Responsabile della regione di Banská Bystrica in Slovacchia"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Ondrej Lunter",
       "Brief": "Szef regionu Bańska Bystrzyca na Słowacji"
     }
   },
   {
     "Key": "bagacka",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Michal Bagacka",
       "Brief": "Депутат і член правління автономного регіону Банська Бистриця"
     },
-    "En": {
+    "English": {
       "Title": "Michal Bagacka",
       "Brief": "Deputy and member of the board of the autonomous region of Banska Bystrica"
     },
-    "De": {
+    "German": {
       "Title": "Michal Bagacka",
       "Brief": "Stellvertreter und Vorstandsmitglied der Autonomen Region Banská Bystrica"
     },
-    "It": {
+    "Italian": {
       "Title": "Michal Bagacka",
       "Brief": "Deputato e membro del consiglio della regione autonoma di Banska Bystrica"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Michal Bagacka",
       "Brief": "Zastępca i członek zarządu obwodu autonomicznego Bańska Bystrzyca"
     }
   },
   {
     "Key": "hnusta",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Hnusta Grigorij Samin",
       "Brief": "Депутат міської ради в м. Гнуштя Банськобистрицького краю та заступник голови міста"
     },
-    "En": {
+    "English": {
       "Title": "Hnusta Grigorij Samin",
       "Brief": "Deputy of the city council in the city of Gnushtia, Bansko-bystrytskyi region and deputy mayor of the city"
     },
-    "De": {
+    "German": {
       "Title": "Hnusta Grigorij Samin",
       "Brief": "Abgeordneter des Stadtrats der Stadt Gnushtia, Gebiet Bansko-bystrytskyi und stellvertretender Bürgermeister der Stadt"
     },
-    "It": {
+    "Italian": {
       "Title": "Hnusta Grigorij Samin",
       "Brief": "Deputato del consiglio comunale della città di Gnushtia, regione di Bansko-bystrytskyi e vicesindaco della città"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Hnusta Grigorij Samin",
       "Brief": "Zastępca rady miejskiej miasta Gnuszta, obwód bansko-bystrycki i zastępca burmistrza miasta"
     }
   },
   {
    "Key": "viktoriia-2",
-   "Ua": {
+   "Ukrainian": {
      "Title": "Fundacja Viktoriia",
      "Brief": "Благодійна організація у м. Бидгощ (Польща). Займається допомогою нужденним українським біженцям та гуманітарним забезпеченням іноземних добровольчих батальйонів, які захищають Україну."
    },
-   "En": {
+   "English": {
      "Title": "Fundacja Viktoriia",
      "Brief": "Charitable organization in Bydgoszcz (Poland). Engaged in helping needy Ukrainian refugees and providing humanitarian support to foreign volunteer battalions defending Ukraine."
    },
-   "De": {
+   "German": {
      "Title": "Fundacja Viktoriia",
      "Brief": "Wohltätigkeitsorganisation in Bydgoszcz (Polen). Engagiert sich für die Unterstützung bedürftiger ukrainischer Flüchtlinge und leistet humanitäre Unterstützung für ausländische Freiwilligenbataillone, die die Ukraine verteidigen."
    },
-   "It": {
+   "Italian": {
      "Title": "Fundacja Viktoriia",
      "Brief": "Organizzazione di beneficenza a Bydgoszcz (Polonia). Impegnato nell'aiutare i rifugiati ucraini bisognosi e nel fornire sostegno umanitario ai battaglioni di volontari stranieri che difendono l'Ucraina."
    },
-   "Pl": {
+   "Polish": {
      "Title": "Fundacja Viktoriia",
      "Brief": "Organizacja charytatywna w Bydgoszczy. Zaangażowany w pomoc potrzebującym ukraińskim uchodźcom oraz udzielanie pomocy humanitarnej zagranicznym batalionom ochotniczym broniącym Ukrainy."
    }
  },
  {
   "Key": "ponaduse",
-  "Ua": {
+  "Ukrainian": {
     "Title": "УКРАЇНА ПОНАД УСЕ",
     "Brief": "Це об’єднання людей, які з перших днів повномасштабного російського вторгнення в Україну допомагають іншим."
   },
-  "En": {
+  "English": {
     "Title": "UKRAINE ABOVE EVERYTHING",
     "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
   },
-  "De": {
+  "German": {
     "Title": "UKRAINE ABOVE EVERYTHING",
     "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
   },
-  "It": {
+  "Italian": {
     "Title": "UKRAINE ABOVE EVERYTHING",
     "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
   },
-  "Pl": {
+  "Polish": {
     "Title": "UKRAINE ABOVE EVERYTHING",
     "Brief": "This is an association of people who have been helping others since the first days of the full-scale Russian invasion of Ukraine."
   }
 },
   {
     "Key": "dimplomati",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Дипломати",
       "Brief": "Громадська організація займається створенням благодійних проєктів для допомоги громадянам, котрі постраждали від війни"
     },
-    "En": {
+    "English": {
       "Title": "Diplomats",
       "Brief": "The public organization is engaged in the creation of charity projects to help citizens affected by the war"
     },
-    "De": {
+    "German": {
       "Title": "Diplomaten",
       "Brief": "Die öffentliche Organisation engagiert sich in der Schaffung von Wohltätigkeitsprojekten, um den vom Krieg betroffenen Bürgern zu helfen"
     },
-    "It": {
+    "Italian": {
       "Title": "Diplomatici",
       "Brief": "L'organizzazione pubblica è impegnata nella realizzazione di progetti di beneficenza per aiutare i cittadini colpiti dalla guerra"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Dyplomaci",
       "Brief": "Organizacja społeczna zajmuje się tworzeniem projektów charytatywnych na rzecz pomocy obywatelom dotkniętym wojną"
     }
   },
   {
     "Key": "diabete",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Diabite",
       "Brief": "Дитячо-юнацький реабілітаційний центр спрямовує свою діяльність на лікування та організацію дозвілля для дітей з діабетом"
     },
-    "En": {
+    "English": {
       "Title": "Diabite",
       "Brief": "The Children and Youth Rehabilitation Center directs its activities to the treatment and organization of leisure time for children with diabetes"
     },
-    "De": {
+    "German": {
       "Title": "Diabite",
       "Brief": "Das Kinder- und Jugendrehabilitationszentrum richtet seine Aktivitäten auf die Behandlung und Freizeitgestaltung von Kindern mit Diabetes aus"
     },
-    "It": {
+    "Italian": {
       "Title": "Diabite",
       "Brief": "Il Centro di Riabilitazione per Bambini e Giovani indirizza le proprie attività al trattamento e all'organizzazione del tempo libero dei bambini affetti da diabete"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Diabite",
       "Brief": "Centrum Rehabilitacji Dzieci i Młodzieży ukierunkowuje swoją działalność na leczenie i organizację czasu wolnego dzieci chorych na cukrzycę"
     }
   },
   {
     "Key": "vyru",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Vyrų fondas",
       "Brief": "Благодійне об’єднання допомагає дітям та молоді з дитбудинків, зокрема організовує навчання для розвитку особистості"
     },
-    "En": {
+    "English": {
       "Title": "Vyrų fondas",
       "Brief": "The charitable association helps children and young people from orphanages, in particular, organizes training for personality development"
     },
-    "De": {
+    "German": {
       "Title": "Vyrų fondas",
       "Brief": "Der gemeinnützige Verein unterstützt insbesondere Kinder und Jugendliche aus Waisenhäusern und organisiert Schulungen zur Persönlichkeitsentwicklung"
     },
-    "It": {
+    "Italian": {
       "Title": "Vyrų fondas",
       "Brief": "L'associazione di beneficenza aiuta i bambini e i giovani degli orfanotrofi, in particolare, organizza corsi di formazione per lo sviluppo della personalità"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Vyrų fondas",
       "Brief": "Stowarzyszenie charytatywne pomaga dzieciom i młodzieży z domów dziecka, w szczególności organizuje szkolenia z zakresu rozwoju osobowości"
     }
   },
   {
     "Key": "pcoket",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Pocket Hero",
       "Brief": "Некомерційна організація займається створенням дитячого одягу із функціональними кишенями для особистих речей та безпечного носіння інсулінової помпи."
     },
-    "En": {
+    "English": {
       "Title": "Pocket Hero",
       "Brief": "The non-profit organization creates children's clothing with functional pockets for personal items and the safe carrying of an insulin pump."
     },
-    "De": {
+    "German": {
       "Title": "Pocket Hero",
       "Brief": "Die gemeinnützige Organisation stellt Kinderkleidung mit funktionellen Taschen für persönliche Gegenstände und dem sicheren Tragen einer Insulinpumpe her."
     },
-    "It": {
+    "Italian": {
       "Title": "Pocket Hero",
       "Brief": "L'organizzazione no-profit crea abbigliamento per bambini con tasche funzionali per oggetti personali e per il trasporto sicuro di una pompa per insulina."
     },
-    "Pl": {
+    "Polish": {
       "Title": "Pocket Hero",
       "Brief": "Organizacja non-profit tworzy odzież dziecięcą z funkcjonalnymi kieszeniami na przedmioty osobiste i bezpiecznym przenoszeniem pompy insulinowej."
     }
   },
   {
     "Key": "mandri",
-    "Ua": {
+    "Ukrainian": {
       "Title": "Мандрівник",
       "Brief": "Благодійний фонд"
     },
-    "En": {
+    "English": {
       "Title": "Mandrivnyk",
       "Brief": "Charity Fund"
     },
-    "De": {
+    "German": {
       "Title": "Mandriwnyk",
       "Brief": "Gemeinnützige Stiftung"
     },
-    "It": {
+    "Italian": {
       "Title": "Mandrivnyk",
       "Brief": "Fondazione caritatevole"
     },
-    "Pl": {
+    "Polish": {
       "Title": "Mandriwnyk",
       "Brief": "Fundacja Charytatywna"
     }

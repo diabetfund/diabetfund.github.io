@@ -1,25 +1,44 @@
-﻿using System.Text.Json;
+﻿using System.Globalization;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Simplicity;
+using Simplicity.StaticSite;
 
 var version = 60;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
+JsonSerializerOptions jsonOpts = new()
+{ 
+    IncludeFields=true,
+    Converters = { new JsonStringEnumConverter() }
+};
 
-List<T> ReadJ<T>(string? path = null) =>
-    JsonSerializer.Deserialize<List<T>>(
-        File.ReadAllText($"{rootPath}source/data/{path ?? typeof(T).Name}s.json"))!;
+List<T> ReadJ<T>()
+{
+    using var stream = File.OpenRead($"{rootPath}source/data/{typeof(T).Name}s.json");
+    return JsonSerializer.Deserialize<List<T>>(stream, jsonOpts)!;
+}
 
 var (projects, news_, partners, grates, slides, wallets, stones) =
     (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(), ReadJ<Thank>(),
      ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
-foreach(var (langId, (culture, lang, _)) in Lang.All)
+slides = slides.FindAll(_=>_.Key != "assistance-to-zsu");
+projects = projects.FindAll(_=> _.Type != ProjectType.Military);
+
+foreach(var langId in new[] { Language.English, Language.Ukrainian, Language.German, Language.Polish })
 {
+    var culture = CultureInfo.GetCultureInfo(langId);
+    var lang = culture.TwoLetterISOLanguageName;
+    if (lang == "uk")
+        lang = "ua";
+
     string Read(string path)
     {
-        var full = $"{rootPath}source/{path}.html";
+        string full = $"{rootPath}source/{path}.html";
         return File.ReadAllText(File.Exists(full) ? full : $"{rootPath}source/{lang}/{path}.html");
     }
 
-    var print = new Printer(Read, culture);
+    Printer print = new(Read, culture);
 
     void Out(string arg, string subPath, object? model = null)
     {
@@ -79,8 +98,8 @@ foreach(var (langId, (culture, lang, _)) in Lang.All)
         var content = print[thanks];
         File.WriteAllText($"{rootPath}/{lang}/thanksChunk{i + 1}.html", content);
 
-        var hasNext = thanks.Length == 40;
-        var nextPage = hasNext ? i + 2 : (int?)null;
+        bool hasNext = thanks.Length == 40;
+        int? nextPage = hasNext ? i + 2 : null;
         Out("thankList", i == 0 ? "/thanks" : $"/thanks-{i + 1}", new { content, nextPage, hasNext });
     }
 

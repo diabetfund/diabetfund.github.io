@@ -8,4 +8,10 @@
 	  <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="ConsoleApp1"> 
+      <HintPath>..\..\..\misc\ConsoleApp1\ConsoleApp1\bin\Debug\net9\ConsoleApp1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
