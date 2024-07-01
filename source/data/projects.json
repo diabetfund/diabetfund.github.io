@@ -1,8 +1,8 @@
 [
    {
      "Type": "Military",
-     "Need": 2600000,
-     "Funds": 720000,
+     "Need": 2600,
+     "Funds": 720,
      "Pic": "https://diabet.fund/img/proj/zsu.webp",
      "CardPic": "https://diabet.fund/img/proj/zsu-card.webp",
      "Key": "assistance-to-zsu",
@@ -40,8 +40,8 @@
    },
    {
      "Type": "Humanitary",
-     "Need": 4000000,
-     "Funds": 1254000,
+     "Need": 4000,
+     "Funds": 1254,
      "Pic": "https://diabet.fund/img/proj/rehub-center.webp",
      "CardPic": "https://diabet.fund/img/proj/rehub-center-card.webp",
      "Key": "help-rehab",
@@ -75,7 +75,7 @@
    {
      "Type": "Diabet",
      "Need": 0,
-     "Funds": 807000,
+     "Funds": 807,
      "Pic": "https://diabet.fund/img/proj/sensors.webp",
      "CardPic": "https://diabet.fund/img/proj/sensors-card.webp",
      "PromoPoster": "https://diabet.fund/img/proj/promo1_place.jpg",
@@ -115,7 +115,7 @@
    {
      "Type": "Diabet",
      "Need": 0,
-     "Funds": 5502000,
+     "Funds": 5502,
      "Pic": "https://diabet.fund/img/proj/gluk.webp",
      "CardPic": "https://diabet.fund/img/proj/gluk-card.webp",
      "Key": "dopomogti-glyukometrami-j-test-smuzhkami-do-nih",
@@ -154,7 +154,7 @@
    {
      "Type": "Diabet",
      "Need": 0,
-     "Funds": 500000,
+     "Funds": 500,
      "Pic": "https://diabet.fund/img/proj/insulin.webp",
      "CardPic": "https://diabet.fund/img/proj/insulin-card.webp",
      "Key": "dopomogti-insulinom",
@@ -192,7 +192,7 @@
    {
      "Type": "Humanitary",
      "Need": 0,
-     "Funds": 3020000,
+     "Funds": 3020,
      "Pic": "https://diabet.fund/img/proj/palettes.webp",
      "CardPic": "https://diabet.fund/img/proj/palettes-card.webp",
      "PromoPoster": "https://diabet.fund/img/proj/kupiansk_poster.jpg",
@@ -232,7 +232,7 @@
    {
      "Type": "Diabet",
      "Need": 0,
-     "Funds": 2002000,
+     "Funds": 2002,
      "Pic": "https://diabet.fund/img/proj/sweet.webp",
      "CardPic": "https://diabet.fund/img/proj/sweet-card.webp",
      "Key": "dopomogti-cukrozaminnykom",
@@ -264,8 +264,8 @@
    },
    {
      "Type": "Military",
-     "Need": 720000,
-     "Funds": 720000,
+     "Need": 720,
+     "Funds": 720,
      "Pic": "https://diabet.fund/img/proj/zsu-old.webp",
      "CardPic": "https://diabet.fund/img/proj/zsu-old-card.webp",
      "Key": "dopomogti-vijskovim-chastinam-a5717-a0998-a0284-a1277-a110888",
