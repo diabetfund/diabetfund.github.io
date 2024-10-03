@@ -24,6 +24,7 @@ var (projects, news_, partners, grates, slides, wallets, stones) =
 
 slides = slides.FindAll(_=>_.Key != "assistance-to-zsu");
 projects = projects.FindAll(_=> _.Type != ProjectType.Military);
+partners = partners.FindAll(_=> !_.Hide);
 
 foreach(var langId in new[] { Language.English, Language.Ukrainian, Language.German, Language.Polish })
 {

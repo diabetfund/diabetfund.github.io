@@ -11,6 +11,7 @@ record Topic
 record Entity<T> : ILocalized
 {
     public string? Key;
+    
     public T? English, Ukrainian, German, Polish, Italian;
     
     public object? GetLocalized(CultureInfo? culture) =>
@@ -40,7 +41,10 @@ enum ContentType
     Individual
 }
 
-record Partner : Entity<Topic>;
+record Partner : Entity<Topic> 
+{
+    public bool Hide;
+}
 
 enum ProjectType
 {

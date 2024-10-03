@@ -139,6 +139,7 @@
   },
   {
    "Key": "roman",
+   "Hide":true,
    "Ukrainian": {
      "Title": "Роман Міщенко",
      "Brief": "Начальник департаменту по співпраці та взаємодії з благодійними організаціями"
@@ -160,6 +161,52 @@
      "Brief": "Kierownik działu współpracy i interakcji z organizacjami charytatywnymi"
    }
  },
+ {
+  "Key": "bs1",
+  "Ukrainian": {
+    "Title": "Дєдогрюков Олег",
+    "Brief": "Начальник департаменту по співпраці та взаємодії з благодійними організаціями"
+  },
+  "English": {
+    "Title": "Dedogryukov Oleg",
+    "Brief": "Head of the department for cooperation and interaction with charitable organizations"
+  },
+  "German": {
+    "Title": "Dedogryukow Oleg",
+    "Brief": "Leiter der Abteilung für Zusammenarbeit und Interaktion mit gemeinnützigen Organisationen"
+  },
+  "Italian": {
+    "Title": "Dedogryukov Oleg",
+    "Brief": "Responsabile del dipartimento per la cooperazione e l'interazione con organizzazioni di beneficenza"
+  },
+  "Polish": {
+    "Title": "Dedogryukow Oleg",
+    "Brief": "Kierownik działu współpracy i interakcji z organizacjami charytatywnymi"
+  }
+},
+{
+  "Key": "bs2",
+  "Ukrainian": {
+    "Title": "Профатилов Олександр",
+    "Brief": "Голова відділу  логістики"
+  },
+  "English": {
+    "Title": "Oleksandr Profatilov",
+    "Brief": "Head of the logistics department"
+  },
+  "German": {
+    "Title": "Oleksandr Profatilov",
+    "Brief": "Leiter der Logistikabteilung"
+  },
+  "Italian": {
+    "Title": "Oleksandr Profatilov",
+    "Brief": "Responsabile del dipartimento logistico"
+  },
+  "Polish": {
+    "Title": "Oleksandr Profatiłow",
+    "Brief": "Kierownik działu logistyki"
+  }
+},
   {
     "Key": "yanochkov",
     "Ukrainian": {

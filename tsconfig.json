@@ -4,5 +4,12 @@
      "allowJs": false,
      "target": "es6"
    },
-   "files": ["./source/script.ts"]
+   "lib": [
+      "esnext",
+      "esnext.disposable", // Value is not accepted.
+      "dom"
+    ],
+   "files": [
+      "./source/script.ts"
+    ]
  }
