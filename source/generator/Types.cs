@@ -15,7 +15,7 @@ record Entity<T> : ILocalized
     public T? English, Ukrainian, German, Polish, Italian;
     
     public object? GetLocalized(CultureInfo? culture) =>
-        GetTopicRef(culture?.LCID ?? 9);
+        GetTopicRef(culture?.LCID ?? Language.English);
 
     public void SetLocalized(CultureInfo culture, T topic) =>
         GetTopicRef(culture.LCID) = topic;

@@ -207,6 +207,29 @@
     "Brief": "Kierownik działu logistyki"
   }
 },
+{
+  "Key": "marchenko",
+  "Ukrainian": {
+    "Title": "Марченко Вадим",
+    "Brief": "Волонтер,  голова технічного відділу забудови реабілітаційного центру"
+  },
+  "English": {
+    "Title": "Marchenko Vadym",
+    "Brief": "Volunteer, head of the technical department of the rehabilitation center's development"
+  },
+  "German": {
+    "Title": "Wadim Marchenko",
+    "Brief": "Freiwilliger, Leiter der technischen Abteilung für den Bau des Rehabilitationszentrums"
+  },
+  "Italian": {
+    "Title": "Vadim Marchenko",
+    "Brief": "Volontario, responsabile del dipartimento tecnico della costruzione del centro di riabilitazione"
+  },
+  "Polish": {
+    "Title": "Wadim Marczenko",
+    "Brief": "Wolontariusz, kierownik działu technicznego budowy ośrodka rehabilitacyjnego"
+  }
+},
   {
     "Key": "yanochkov",
     "Ukrainian": {
