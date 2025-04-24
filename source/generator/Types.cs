@@ -1,7 +1,7 @@
 ﻿using Simplicity.StaticSite;
-using Utilities;
 using System.Globalization;
 using System.Text.Json.Serialization;
+using Utilities;
 
 record Topic
 {
@@ -12,7 +12,7 @@ record Entity<T> : ILocalized
 {
     public string? Key;
     
-    public T? English, Ukrainian, German, Polish, Italian;
+    public T? En, Uk, De, Pl, It;
     
     public object? GetLocalized(CultureInfo? culture) =>
         GetTopicRef(culture?.LCID ?? Language.English);
@@ -24,11 +24,11 @@ record Entity<T> : ILocalized
     {
         switch (id)
         {
-            case Language.Ukrainian: return ref Ukrainian;
-            case Language.German: return ref German;
-            case Language.Polish: return ref Polish;
-            case Language.Italian: return ref Italian;
-            default: return ref English;
+            case Language.Ukrainian: return ref Uk;
+            case Language.German: return ref De;
+            case Language.Polish: return ref Pl;
+            case Language.Italian: return ref It;
+            default: return ref En;
         }
     }
 }
@@ -62,7 +62,7 @@ record Project : Entity<ProjectTopic>
 {
     public ProjectType Type;
     public int Need, Funds;
-    public string? Pic, CardPic, Document, PromoPoster;
+    public string? Uri, Pic, CardPic, Document, PromoPoster;
 
     [JsonIgnore]
     public bool DesktopOnly;
@@ -77,10 +77,11 @@ record Project : Entity<ProjectTopic>
     public bool IsInfinite => Need == 0;
 
     [JsonIgnore]
-    public bool HasResult => !string.IsNullOrEmpty(English?.Result);
+    public bool HasResult => !string.IsNullOrEmpty(En?.Result);
 
     [JsonIgnore]
-    public string Url => UrlSegment(Key!);
+    public string Url =>
+        Uri is "help-rehab" ? "/center" : $"/fundraising/{Uri}";
 
     [JsonIgnore]
     public int FundPerc => (int)((double)Funds / (double)Need * 100.0);
@@ -91,16 +92,18 @@ record Project : Entity<ProjectTopic>
     [JsonIgnore]
     public string? MobilePic => Pic?.Replace(".webp", "-mob.webp");
 
-    public static string UrlSegment(string id) =>
-        id is "help-rehab" ? "/center" : $"/fundraising/{id}";
+        
 }
 
-enum ThankTag
+[Flags]
+enum ThankTag : ulong
 {
-    Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, Modulax, P999, Reservoir, Pods, Candies,
-    Old, Man, Teen, Adult, Infant,
-    Cat, Compose, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality,
-    GB
+    None, Meter, Libre, Medtronic = 4, Strips = 8, Insulin = 16, Vitamin = 32, Modulax = 64,
+    P999 = 128, Reservoir = 256, Pods = 512, Candies = 1024,
+    Old = 2048, Man = 4096, Teen = 8192, Adult = 16384, Infant = 32768,
+    Cat = 65536, Compose = 131072, BedRidding = 262144, Collage = 524288, NoHead = 1048576, 
+    NoBody = 2097152, LowQuality = 4194304, HighQuality = 8388608,
+    GB = 16777216, Sweet = 33554432 
 }
 
 record ThankTopic : Topic
@@ -111,7 +114,7 @@ record ThankTopic : Topic
 
 record Thank : Entity<ThankTopic>
 {
-    public List<ThankTag>? Tags;
+    public ThankTag Tags;
     public int? Altitude, MainIndex;
     public string? Video, Avatar;
     public DateOnly Date;
@@ -132,7 +135,9 @@ record Thank : Entity<ThankTopic>
 record Slide : Entity<string>
 {
     public string? Pic;
-    public string Url => Project.UrlSegment(Key!);
+
+    [JsonIgnore]
+    public string? Url;
 }
 
 record Wallet : Entity<string>
@@ -149,7 +154,7 @@ record NewsTopic : Topic
 record News : Entity<NewsTopic>
 {
     public DateOnly Date;
-    public string? Pic;
+    public string? Url, Pic;
 
     [JsonIgnore]
     public string IsoDate => Date.ToString("o");

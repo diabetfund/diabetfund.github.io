@@ -396,7 +396,7 @@ function handleThankVideo(wraps) {
             <title>${name}: ${w1} ${w2}...</title></head><body>
             <style>body { margin: 0; text-align: center; }</style>
             <div data-new-window>
-               <video controls autoplay muted playsinline style="width: 100%; height: auto;">
+               <video autoplay="autoplay" loop="" controls muted playsinline style="width: 100%; height: auto;">
                   <source src="${video}" type="video/mp4" />
                </video>
             </div>

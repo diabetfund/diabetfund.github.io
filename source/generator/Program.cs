@@ -3,26 +3,36 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Utilities;
 using Simplicity.StaticSite;
+using System.Text.Unicode;
+using System.Text.Encodings.Web;
 
-var version = 60;
+var version = 61;
 var rootPath = Environment.CurrentDirectory.Split("source")[0];
-JsonSerializerOptions jsonOpts = new()
+JsonSerializerOptions jsonOptions = new()
 { 
-    IncludeFields=true,
+    IncludeFields = true,
+    Encoder = JavaScriptEncoder.Create(UnicodeRanges.All),
+    WriteIndented = true,
+    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     Converters = { new JsonStringEnumConverter() }
 };
 
 List<T> ReadJ<T>()
 {
     using var stream = File.OpenRead($"{rootPath}source/data/{typeof(T).Name}s.json");
-    return JsonSerializer.Deserialize<List<T>>(stream, jsonOpts)!;
+    return JsonSerializer.Deserialize<List<T>>(stream, jsonOptions)!;
 }
 
 var (projects, news_, partners, grates, slides, wallets, stones) =
     (ReadJ<Project>(), ReadJ<News>(), ReadJ<Partner>(), ReadJ<Thank>(),
      ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
-slides = slides.FindAll(_=>_.Key != "assistance-to-zsu");
+slides = (from slide in slides
+          where slide.Key != "AssZsu"
+          let project = projects.FirstOrDefault(_=> _.Key == slide.Key)
+          select slide with { Url = project.Url })
+          .ToList();
+
 projects = projects.FindAll(_=> _.Type != ProjectType.Military);
 partners = partners.FindAll(_=> !_.Hide);
 
@@ -108,10 +118,10 @@ foreach(var langId in new[] { Language.English, Language.Ukrainian, Language.Ger
         Out(page, "/" + page);
 
     foreach (var projectPage in projects)
-        Out(print[projectPage], "/fundraising/" + projectPage.Key, new { walletsTable });
+        Out(print[projectPage], "/fundraising/" + projectPage.Uri, new { walletsTable });
 
     var otherNews = print[news.Take(2)];
     
     foreach (var newsPage in news)
-        Out(print[newsPage], "/news/" + newsPage.Key, new { otherNews });
+        Out(print[newsPage], "/news/" + newsPage.Url, new { otherNews });
 }
