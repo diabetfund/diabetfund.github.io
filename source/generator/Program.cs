@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Simplicity;
+using Utilities;
 using Simplicity.StaticSite;
 
 var version = 60;

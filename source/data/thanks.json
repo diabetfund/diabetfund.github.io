@@ -99,7 +99,7 @@
        "Infant"
      ],
      "Altitude": 1,
-     "MainIndex": 1,
+     
      "Date": "2022-11-18",
      "Key": "53",
      "English": {
@@ -123,6 +123,7 @@
        "Brief": "Dobry wieczór! Przesyłka otrzymana. Jesteśmy bardzo wdzięczni Tobie, Eduardowi i Twojemu zespołowi, za nieocenioną pomoc osobom chorym na cukrzycę i za to, że teraz maleńkie paluszki mojej córki nie muszą być ciągle przekłuwane. Spokojnego nieba i niech Pan Cię chroni!!"
      }
    },
+  
    {
       "Tags": [],
       "Date": "2023-11-16",
@@ -253,6 +254,125 @@
         "Brief": "W imieniu mojej rodziny pragniemy serdecznie podziękować pani Shmid Shmidebach (która nie jest obojętna na naszych kochanych ludzi na Ukrainie); Eduardowi, Igorowi (którzy pokonują tysiące kilometrów, by nieść pomoc potrzebującym. Jesteście naszą dumą. Musimy brać z Was przykład) i osobiście każdemu pracownikowi FUNDACJI. (Robisz niesamowitą robotę. Wydawało mi się, że pomoc tysiącom jest nierealna. A jednak UDOWOLNIŁEŚ i pokazałeś, że to wszystko jest prawdziwe i realne. Dlatego kłaniam się Tobie. Dziękuję za pomoc dla mojego 3-letniego synka Córko. Teraz życie jest w porządku, a rodzice śpią dużo lepiej. Życzę Ci dużo zdrowia i jeszcze raz dziękuję za to, że nie tylko wszystkich wysłuchasz, ale POMOC ❤️"
       }
     },
+    {
+      "Tags": [
+        "GB"
+      ],
+      "MainIndex": 1,
+      "Video": "https://diabet.fund/img/fun/GB1_360_640.mp4",
+      "Avatar": "ava-116.webp",
+      "Date": "2025-04-24",
+      "Key": "GB1",
+      "English": {
+         "Title": "Viktoria",
+         "Brief": "Many thanks to all the employees of the Foundation, the girls who packed sweet gifts for our children\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9BA pleasant surprise for Christmas \uD83D\uDC4D\uD83C\uDF81\uD83C\uDF84\uD83C\uDF85⛄\uD83C\uDF80Thank you very much for your work!!!! It is priceless, like the happy childhood of our sweet children\uD83E\uDD17\uD83E\uDD17\uD83E\uDD17The happiness of a child has no boundaries☺️☺️☺️"
+       },
+       "Ukrainian": {
+         "Title": "Вiкторiя",
+         "Brief": "Велика подяка всім працівникам Фонду, дівчатам, які пакували солодкі подарунки для наших дітей\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9BПриємний сюрприз на Різдво \uD83D\uDC4D\uD83C\uDF81\uD83C\uDF84\uD83C\uDF85⛄\uD83C\uDF80Дуже дякуємо за вашу працю! !!! Воно безцінне, як щасливе дитинство наших милих дітей\uD83E\uDD17\uD83E\uDD17\uD83E\uDD17Щастя дитини немає меж☺️☺️☺️"
+       },
+       "German": {
+         "Title": "Viktoria",
+         "Brief": "Many thanks to all the employees of the Foundation, the girls who packed sweet gifts for our children\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9BA pleasant surprise for Christmas \uD83D\uDC4D\uD83C\uDF81\uD83C\uDF84\uD83C\uDF85⛄\uD83C\uDF80Thank you very much for your work!!!! It is priceless, like the happy childhood of our sweet children\uD83E\uDD17\uD83E\uDD17\uD83E\uDD17The happiness of a child has no boundaries☺️☺️☺️"
+       },
+       "Italian": {
+         "Title": "Viktoria",
+         "Brief": "Many thanks to all the employees of the Foundation, the girls who packed sweet gifts for our children\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9BA pleasant surprise for Christmas \uD83D\uDC4D\uD83C\uDF81\uD83C\uDF84\uD83C\uDF85⛄\uD83C\uDF80Thank you very much for your work!!!! It is priceless, like the happy childhood of our sweet children\uD83E\uDD17\uD83E\uDD17\uD83E\uDD17The happiness of a child has no boundaries☺️☺️☺️"
+       },
+       "Polish": {
+         "Title": "Viktoria",
+         "Brief": "Many thanks to all the employees of the Foundation, the girls who packed sweet gifts for our children\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4F\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDE4C\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9B\uD83D\uDC99\uD83D\uDC9BA pleasant surprise for Christmas \uD83D\uDC4D\uD83C\uDF81\uD83C\uDF84\uD83C\uDF85⛄\uD83C\uDF80Thank you very much for your work!!!! It is priceless, like the happy childhood of our sweet children\uD83E\uDD17\uD83E\uDD17\uD83E\uDD17The happiness of a child has no boundaries☺️☺️☺️"
+       }
+    },
+    {
+      "Tags": [
+        "GB"
+      ],
+      "MainIndex": 2,
+      "Video":"https://diabet.fund/img/fun/GB2_360_640.mp4",
+      "Avatar": "ava-146.webp",
+      "Date": "2025-04-24",
+      "Key": "GB2",
+      "English": {
+        "Title": "Nadia Schneider",
+        "Brief": "Good day! We express our great gratitude to the fund and individually to each person with the help of which our sweet children have the opportunity to receive such gifts \uD83C\uDF81 May God give you health and the prosperity of the fund. Thank you again \uD83E\uDD17 Everyone has equal sugar and a peaceful sky above their heads\uD83D\uDC9B\uD83D\uDC99"
+      },
+      "Ukrainian": {
+        "Title": "Надія Шнейдер",
+        "Brief": "Доброго дня! Висловлюємо свою Велику подяку фонду і окремо кожній Людині за допомогою якої наші солодкі дітки мають можливість отримати такі подаруночки \uD83C\uDF81Дай Бог здоров'я Вам і процвітання фонду. Дякуємо ще раз \uD83E\uDD17 Усім рівних цукрів і мирного неба над головою\uD83D\uDC9B\uD83D\uDC99"
+      },
+      "German": {
+        "Title": "Nadia Schneider",
+        "Brief": "Good day! We express our great gratitude to the fund and individually to each person with the help of which our sweet children have the opportunity to receive such gifts \uD83C\uDF81 May God give you health and the prosperity of the fund. Thank you again \uD83E\uDD17 Everyone has equal sugar and a peaceful sky above their heads\uD83D\uDC9B\uD83D\uDC99"
+      },
+      "Italian": {
+        "Title": "Nadia Schneider",
+        "Brief": "Good day! We express our great gratitude to the fund and individually to each person with the help of which our sweet children have the opportunity to receive such gifts \uD83C\uDF81 May God give you health and the prosperity of the fund. Thank you again \uD83E\uDD17 Everyone has equal sugar and a peaceful sky above their heads\uD83D\uDC9B\uD83D\uDC99"
+      },
+      "Polish": {
+        "Title": "Nadia Schneider",
+        "Brief": "Good day! We express our great gratitude to the fund and individually to each person with the help of which our sweet children have the opportunity to receive such gifts \uD83C\uDF81 May God give you health and the prosperity of the fund. Thank you again \uD83E\uDD17 Everyone has equal sugar and a peaceful sky above their heads\uD83D\uDC9B\uD83D\uDC99"
+      }
+    },
+    {
+      "Tags": [
+        "GB"
+      ],
+      "MainIndex": 3,
+      "Video":"https://diabet.fund/img/fun/GB3_480_480.mp4",
+      "Date": "2025-04-24",
+      "Key": "64",
+      "English": {
+        "Title": "Polina Karpan",
+        "Brief": "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
+      },
+      "Ukrainian": {
+        "Title": "Полiна Карпан",
+        "Brief": "Дуже дякуємо фонду та благодійникам за можливість краще компенсувати діабет для дітей та дорослих України. Особливе дякую Ігорю, Едуарду та Сергію за їх працю."
+      },
+      "German": {
+        "Title": "Polina Karpan",
+        "Brief": "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
+      },
+      "Italian": {
+        "Title": "Polina Karpan",
+        "Brief": "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
+      },
+      "Polish": {
+        "Title": "Polina Karpan",
+        "Brief": "We are very grateful to the foundation and benefactors for the opportunity to better compensate diabetes for children and adults of Ukraine. Special thanks to Ihor, Eduard and Serhiy for their work."
+      }
+    },
+
+    {
+      "Tags": [
+        "GB"
+      ],
+      "MainIndex": 4,
+      "Date": "2025-04-24",
+      "Key": "GB4",
+      "English": {
+        "Title": "",
+        "Brief": "Many thanks to the foundation for the help! I wish all the employees of the foundation, Igor and Eduard and their families health and prosperity! May God protect you!♥️♥️♥️"
+      },
+      "Ukrainian": {
+        "Title": "",
+        "Brief": "Велике спасибі фонду за допомогу! Бажаю всім працівникам фонду, Ігорю та Едуарду та їхнім родинам здоров’я та благополуччя! Бережи Вас Бог!♥️♥️♥️"
+      },
+      "German": {
+        "Title": "",
+        "Brief": "Vielen Dank an die Stiftung für die Hilfe! Ich wünsche allen Mitarbeitern der Stiftung, Igor und Eduard und ihren Familien Gesundheit und Wohlstand! Möge Gott euch beschützen! ♥️♥️♥️"
+      },
+      "Italian": {
+        "Title": "",
+        "Brief": "Grazie di cuore alla fondazione per l'aiuto! Auguro a tutti i dipendenti della fondazione, a Igor ed Eduard e alle loro famiglie salute e prosperità! Che Dio vi protegga! ♥️♥️♥️"
+      },
+      "Polish": {
+        "Title": "",
+        "Brief": "Wielkie podziękowania dla fundacji za pomoc! Życzę wszystkim pracownikom fundacji, Igorowi i Eduardowi oraz ich rodzinom zdrowia i pomyślności! Niech Bóg Was chroni!♥️♥️♥️"
+      }
+    },
+
     {
       "Tags": [],
       "Date": "2023-11-16",
@@ -4602,7 +4722,6 @@
        "Compose",
        "HighQuality"
      ],
-     "MainIndex": 3,
      "Date": "2023-03-13",
      "Key": "122",
      "English": {
@@ -5455,7 +5574,6 @@
      "Altitude": 1,
      "Video": "https://diabet.fund/img/fun/116_960_540.mp4",
      "Avatar": "ava-116.webp",
-     "MainIndex": 4,
      "Date": "2023-02-21",
      "Key": "116",
      "English": {
@@ -5490,7 +5608,7 @@
      "Date": "2023-04-19",
      "Key": "271",
      "English": {
-       "Title": "sofia Golota",
+       "Title": "Sofia Golota",
        "Brief": "Many thanks for the sensor to Edward, Anna, Sergey, Igor. I sincerely thank you for your work and your kind hearts. Thanks to you, we become kinder. All peace and health. Thank you \uD83D\uDE4F"
      },
      "Ukrainian": {
@@ -5498,15 +5616,15 @@
        "Brief": "Величезна подяка за сенсор Едуарду, Ганні, Сергію, Ігорю. Щиро дякую вам за вашу працю і ваші добрі серця. Завдяки вам і ми стаємо добрішими. Усім миру та здоров'я. Дякую \uD83D\uDE4F"
      },
      "German": {
-       "Title": "sofia Golota",
+       "Title": "Sofia Golota",
        "Brief": "Many thanks for the sensor to Edward, Anna, Sergey, Igor. I sincerely thank you for your work and your kind hearts. Thanks to you, we become kinder. All peace and health. Thank you \uD83D\uDE4F"
      },
      "Italian": {
-       "Title": "sofia Golota",
+       "Title": "Sofia Golota",
        "Brief": "Many thanks for the sensor to Edward, Anna, Sergey, Igor. I sincerely thank you for your work and your kind hearts. Thanks to you, we become kinder. All peace and health. Thank you \uD83D\uDE4F"
      },
      "Polish": {
-       "Title": "sofia Golota",
+       "Title": "Sofia Golota",
        "Brief": "Many thanks for the sensor to Edward, Anna, Sergey, Igor. I sincerely thank you for your work and your kind hearts. Thanks to you, we become kinder. All peace and health. Thank you \uD83D\uDE4F"
      }
    },
@@ -10400,36 +10518,7 @@
        "Brief": "Good day. Thank you for your help ❤️"
      }
    },
-   {
-     "Tags": [
-       "Libre",
-       "Infant",
-       "HighQuality"
-     ],
-     "MainIndex": 2,
-     "Date": "2022-11-18",
-     "Key": "64",
-     "English": {
-       "Title": "Polina Karpan",
-       "Brief": "Thank you very much Eduard and your team \uD83D\uDC9B\uD83D\uDC99"
-     },
-     "Ukrainian": {
-       "Title": "Полiна Карпан",
-       "Brief": "Дуже вам дякуємо Едуард та вашiй командi \uD83D\uDC9B\uD83D\uDC99"
-     },
-     "German": {
-       "Title": "Polina Karpan",
-       "Brief": "Thank you very much Eduard and your team \uD83D\uDC9B\uD83D\uDC99"
-     },
-     "Italian": {
-       "Title": "Polina Karpan",
-       "Brief": "Thank you very much Eduard and your team \uD83D\uDC9B\uD83D\uDC99"
-     },
-     "Polish": {
-       "Title": "Polina Karpan",
-       "Brief": "Thank you very much Eduard and your team \uD83D\uDC9B\uD83D\uDC99"
-     }
-   },
+  
    {
      "Tags": [
        "Sweet"

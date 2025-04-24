@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharitableGen", "CharitableGen.csproj", "{B96E3F0E-F74E-F274-2D63-7F0D78357C98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharitableGen", "generator\CharitableGen.csproj", "{BAA97EC1-1647-0B8A-2D5C-4CE2F8D02D8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B96E3F0E-F74E-F274-2D63-7F0D78357C98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B96E3F0E-F74E-F274-2D63-7F0D78357C98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B96E3F0E-F74E-F274-2D63-7F0D78357C98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B96E3F0E-F74E-F274-2D63-7F0D78357C98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA97EC1-1647-0B8A-2D5C-4CE2F8D02D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA97EC1-1647-0B8A-2D5C-4CE2F8D02D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA97EC1-1647-0B8A-2D5C-4CE2F8D02D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA97EC1-1647-0B8A-2D5C-4CE2F8D02D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {336391AA-6483-4618-9298-7F6BDD7DE3BE}
+		SolutionGuid = {5C26C3D9-A48B-4C70-9FD2-72C7B68E813F}
 	EndGlobalSection
 EndGlobal

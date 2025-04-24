@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="ConsoleApp1"> 
-      <HintPath>C:\git\misc\ConsoleApp1\ConsoleApp1\bin\Debug\net10.0\ConsoleApp1.dll</HintPath>
+    <Reference Include="Shared">
+      <HintPath>..\..\..\misc\ConsoleApp1\Shared\bin\Debug\net10.0\Shared.dll</HintPath>
     </Reference>
   </ItemGroup>
 

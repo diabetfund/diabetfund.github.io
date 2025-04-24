@@ -1,5 +1,5 @@
 const cookie = (key: string) => ({
-   get val(): string| null {
+   get val(): string| null | undefined {
       let parts = ("; " + document.cookie).split(`; ${key}=`)
       if (parts.length == 2)
          return parts.pop()?.split(";").shift()
@@ -145,7 +145,7 @@ const lib = {
    },
 
    async fetchMiniback(action: string, req: any, freezee: (v: boolean) => void): Promise<[boolean, string | null]> {
-      let response: Response
+      let response: Response | null = null
       async function aux() {
          try {
             freezee(true)
@@ -519,7 +519,7 @@ go(([wraps]: HTMLDivElement[], [link]: HTMLAnchorElement[]) => {
    handleThankVideo(wraps)
    if (!link)
       return;
-   let page = parseInt(link.dataset.thanknext),
+   let page: number | null= parseInt(link.dataset.thanknext),
    [{ clientHeight }] = document.getElementsByTagName("footer"),
    fetching = false
   
@@ -566,8 +566,8 @@ go((radios: Array<HTMLButtonElement | HTMLFormElement>) => {
             for (let keyval in lookup[name]) {
                let [butt, div] = lookup[name][keyval],
                [display, act] = keyval == val ? ["flex", "add"] : ["none", "remove"]
-               div.style.display = display
-               butt.classList[act]("btn-pressed")
+               div!.style.display = display
+               butt!.classList[act]("btn-pressed")
             }
          })
       }
@@ -597,7 +597,7 @@ go((sendButt: HTMLButtonElement, docform: HTMLFormElement, [docInput]: HTMLInput
          return;
 
       let body = new FormData()
-      body.append("file", docInput.files[0])
+      body.append("file", docInput!.files[0])
       for (let nam in fields)
            body.append(nam, fields[nam] ?? "")
        

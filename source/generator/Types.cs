@@ -1,5 +1,5 @@
 ﻿using Simplicity.StaticSite;
-using Simplicity;
+using Utilities;
 using System.Globalization;
 using System.Text.Json.Serialization;
 
@@ -99,7 +99,8 @@ enum ThankTag
 {
     Sweet, Meter, Libre, Medtronic, Strips, Insulin, Vitamin, Modulax, P999, Reservoir, Pods, Candies,
     Old, Man, Teen, Adult, Infant,
-    Cat, Compose, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality
+    Cat, Compose, BedRidding, Collage, NoHead, NoBody, LowQuality, HighQuality,
+    GB
 }
 
 record ThankTopic : Topic
