@@ -1,4 +1,4 @@
-﻿using Simplicity.StaticSite;
+﻿using Utilities.StaticSite;
 using System.Globalization;
 using System.Text.Json.Serialization;
 using Utilities;
@@ -48,8 +48,8 @@ record Partner : Entity<Topic>
 
 enum ProjectType
 {
-    Diabet,
-    Humanitary,
+    Diabetic,
+    Humanitarian,
     Military
 }
 

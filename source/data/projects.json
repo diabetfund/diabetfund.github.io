@@ -39,7 +39,7 @@
      }
    },
    {
-     "Type": "Humanitary",
+     "Type": "Humanitarian",
      "Need": 4000,
      "Funds": 1254,
      "Pic": "https://diabet.fund/img/proj/rehub-center.webp",
@@ -73,7 +73,7 @@
      }
    },
    {
-     "Type": "Diabet",
+     "Type": "Diabetic",
      "Need": 0,
      "Funds": 807,
      "Pic": "https://diabet.fund/img/proj/sensors.webp",
@@ -113,7 +113,7 @@
      }
    },
    {
-     "Type": "Diabet",
+     "Type": "Diabetic",
      "Need": 0,
      "Funds": 5502,
      "Pic": "https://diabet.fund/img/proj/gluk.webp",
@@ -152,7 +152,7 @@
      }
    },
    {
-     "Type": "Diabet",
+     "Type": "Diabetic",
      "Need": 0,
      "Funds": 500,
      "Pic": "https://diabet.fund/img/proj/insulin.webp",
@@ -191,7 +191,7 @@
      }
    },
    {
-     "Type": "Humanitary",
+     "Type": "Humanitarian",
      "Need": 0,
      "Funds": 3020,
      "Pic": "https://diabet.fund/img/proj/palettes.webp",
@@ -231,7 +231,7 @@
      }
    },
    {
-     "Type": "Diabet",
+     "Type": "Diabetic",
      "Need": 0,
      "Funds": 2002,
      "Pic": "https://diabet.fund/img/proj/sweet.webp",

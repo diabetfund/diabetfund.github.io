@@ -2,7 +2,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Utilities;
-using Simplicity.StaticSite;
+using Utilities.StaticSite;
 using System.Text.Unicode;
 using System.Text.Encodings.Web;
 
