@@ -8,13 +8,23 @@ record Topic
     public string? Title, Brief;
 }
 
-record Entity<T> : ILocalized
+abstract record Entity : ILocalized
 {
-    public string? Key;
-    
+    public ShortWord Key;
+    public DateOnly? Date;
+    public bool? IsArchived;
+
+    [JsonIgnore]
+    public string? Id => Key.ToString();
+
+    public abstract object? GetLocalized(CultureInfo? culture);
+}
+
+record Entity<T> : Entity
+{
     public T? En, Uk, De, Pl, It;
     
-    public object? GetLocalized(CultureInfo? culture) =>
+    public sealed override object? GetLocalized(CultureInfo? culture) =>
         GetTopicRef(culture?.LCID ?? Language.English);
 
     public void SetLocalized(CultureInfo culture, T topic) =>
@@ -41,10 +51,7 @@ enum ContentType
     Individual
 }
 
-record Partner : Entity<Topic> 
-{
-    public bool Hide;
-}
+record Partner : Entity<Topic>;
 
 enum ProjectType
 {
@@ -91,8 +98,6 @@ record Project : Entity<ProjectTopic>
 
     [JsonIgnore]
     public string? MobilePic => Pic?.Replace(".webp", "-mob.webp");
-
-        
 }
 
 [Flags]
@@ -117,7 +122,6 @@ record Thank : Entity<ThankTopic>
     public ThankTag Tags;
     public int? Altitude, MainIndex;
     public string? Video, Avatar;
-    public DateOnly Date;
 
     [JsonIgnore]
     public bool DesktopOnly;
@@ -153,11 +157,10 @@ record NewsTopic : Topic
 
 record News : Entity<NewsTopic>
 {
-    public DateOnly Date;
     public string? Url, Pic;
 
     [JsonIgnore]
-    public string IsoDate => Date.ToString("o");
+    public string IsoDate => Date!.Value.ToString("o");
 
     [JsonIgnore]
     public string? LocaleDate;

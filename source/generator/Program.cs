@@ -17,10 +17,12 @@ JsonSerializerOptions jsonOptions = new()
     Converters = { new JsonStringEnumConverter() }
 };
 
-List<T> ReadJ<T>()
+List<T> ReadJ<T>() where T : Entity
 {
     using var stream = File.OpenRead($"{rootPath}source/data/{typeof(T).Name}s.json");
-    return JsonSerializer.Deserialize<List<T>>(stream, jsonOptions)!;
+    var list = JsonSerializer.Deserialize<List<T>>(stream, jsonOptions)!;
+
+    return list.FindAll(_ => _.IsArchived is not true);
 }
 
 var (projects, news_, partners, grates, slides, wallets, stones) =
@@ -28,13 +30,9 @@ var (projects, news_, partners, grates, slides, wallets, stones) =
      ReadJ<Slide>(), ReadJ<Wallet>(), ReadJ<Stone>());
 
 slides = (from slide in slides
-          where slide.Key != "AssZsu"
-          let project = projects.FirstOrDefault(_=> _.Key == slide.Key)
+          join project in projects on slide.Key equals project.Key 
           select slide with { Url = project.Url })
           .ToList();
-
-projects = projects.FindAll(_=> _.Type != ProjectType.Military);
-partners = partners.FindAll(_=> !_.Hide);
 
 foreach(var langId in new[] { Language.English, Language.Ukrainian, Language.German, Language.Polish })
 {
@@ -69,7 +67,7 @@ foreach(var langId in new[] { Language.English, Language.Ukrainian, Language.Ger
 
     var news = news_.ConvertAll(item => item with
     {
-        LocaleDate = item.Date.ToString("dd MMM yyyy", culture.DateTimeFormat)
+        LocaleDate = item.Date!.Value.ToString("dd MMM yyyy", culture.DateTimeFormat)
     });
 
     var walletsTableContent = new
