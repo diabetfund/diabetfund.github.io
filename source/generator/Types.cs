@@ -10,12 +10,12 @@ record Topic
 
 abstract record Entity : ILocalized
 {
-    public ShortWord Key;
+    public string? Key;
     public DateOnly? Date;
     public bool? IsArchived;
 
     [JsonIgnore]
-    public string? Id => Key.ToString();
+    public string? Id => Key?.ToString();
 
     public abstract object? GetLocalized(CultureInfo? culture);
 }
