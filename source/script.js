@@ -67,9 +67,9 @@ const lib = {
     sendLiqpay(sign, data, isNewWindow = false) {
         let form = document.createElement("form");
         if (!sign || sign == "null")
-            sign = Lang.trans("whUgouW+4esoSpOMJXlkgAqKCI8=", "P5TSqLhuxFW/iogdY3q+KmWtplc=");
+            sign = Lang.trans("O4f4T4LcVAGTPhfAWnelgkTj068=", "5WNMpIL4UpBEvUGErGPM3TSjw8k=");
         if (!data || data == "null")
-            data = Lang.trans("eyJhY3Rpb24iOiJwYXlEb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J/QvtC20LXRgNGC0LLRg9Cy0LDRgtC4INCyINGE0L7QvdC0IiwicmVzdWx0X3VybCI6Imh0dHBzOi8vZGlhYmV0LmZ1bmQvdWEiLCJsYW5ndWFnZSI6InVrIiwidmVyc2lvbiI6IjMifQ==", "eyJhY3Rpb24iOiJwYXlEb25hdGUiLCJhbW91bnQiOiIxMDAiLCJjdXJyZW5jeSI6IlVTRCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOi8vZGlhYmV0LmZ1bmQvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMifQ==");
+            data = Lang.trans("eyJhY3Rpb24iOiJwYXlEb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVBSCIsImRlc2NyaXB0aW9uIjoi0J/QvtC20LXRgNGC0LLRg9Cy0LDRgtC4INCyINGE0L7QvdC0IiwicmVzdWx0X3VybCI6Imh0dHBzOi8vZGlhYmV0LmZ1bmQvdWEiLCJsYW5ndWFnZSI6InVrIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=", "eyJhY3Rpb24iOiJwYXlEb25hdGUiLCJhbW91bnQiOiI1MDAiLCJjdXJyZW5jeSI6IlVTRCIsImRlc2NyaXB0aW9uIjoiRG9uYXRlIHRvIHRoZSBmdW5kIiwicmVzdWx0X3VybCI6Imh0dHBzOi8vZGlhYmV0LmZ1bmQvZW4iLCJsYW5ndWFnZSI6ImVuIiwidmVyc2lvbiI6IjMiLCJwdWJsaWNfa2V5IjoiaTMwNzg0ODE1MTQzIn0=");
         form.method = "POST";
         form.action = "https://www.liqpay.ua/api/3/checkout";
         form.innerHTML = `<input type="hidden" name="data" value="${data}"/>
