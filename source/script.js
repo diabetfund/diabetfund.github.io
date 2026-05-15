@@ -182,7 +182,7 @@ go(([langSwitch], payLinks, localItems) => {
     for (let link of payLinks)
         link.addEventListener("click", e => {
             e.preventDefault();
-            lib.sendLiqpay(e.currentTarget.dataset["liqpay-sig"], e.currentTarget.dataset["liqpay-data"], true);
+            lib.sendLiqpay(link.dataset["liqpay-sig"], link.dataset["liqpay-data"], true);
         });
     for (let el of localItems)
         el.innerHTML = (_b = el.dataset[cur]) !== null && _b !== void 0 ? _b : el.dataset.en;
